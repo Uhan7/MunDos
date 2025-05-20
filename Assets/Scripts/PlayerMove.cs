@@ -32,6 +32,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         InputUpdate();
+        AnimUpdate();
     }
 
     private void FixedUpdate()
@@ -50,6 +51,12 @@ public class PlayerMove : MonoBehaviour
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
         if (Input.GetKeyDown(jumpKey)) jumpIsQueued = true;
+    }
+
+    void AnimUpdate()
+    {
+        if (getMoveLeftKey) transform.localScale = new Vector3(-1, 1, 1);
+        if (getMoveRightKey) transform.localScale = new Vector3(1, 1, 1);
     }
 
     // FixedUpdate Functions ---------------------------------------------------
