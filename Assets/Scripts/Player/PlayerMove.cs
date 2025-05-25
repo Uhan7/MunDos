@@ -8,13 +8,15 @@ public class PlayerMove : MonoBehaviour
     // Inputs
     [SerializeField] private KeyCode moveLeftKey = KeyCode.A;
     [SerializeField] private KeyCode moveRightKey = KeyCode.D;
+    [SerializeField] private KeyCode runKey = KeyCode.LeftShift;
     [SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
     // Horizontal Movement
-    [SerializeField] private float moveSpeed = 50f;
-    [SerializeField] private float maxSpeed = 8f;
-    [SerializeField] private float frictionX = 0.9f;
-    [SerializeField] private float frictionY = 1f;
+    [SerializeField] private float walkSpeed = 50f;
+    [SerializeField] private float maxWalkSpeed = 8f;
+
+    [SerializeField] private float runSpeed = 65f;
+    [SerializeField] private float maxRunSpeed = 11.5f;
 
     // Vertical Movement
     [SerializeField] private float jumpForce = 10f;
@@ -22,6 +24,7 @@ public class PlayerMove : MonoBehaviour
     // Flags
     private bool getMoveLeftKey;
     private bool getMoveRightKey;
+    private bool isRunning;
     private bool jumpIsQueued;
 
     private void Awake()
@@ -41,7 +44,6 @@ public class PlayerMove : MonoBehaviour
         Jump();
 
         LimitVelocity();
-        ApplyFriction();
     }
 
     // Update Functions --------------------------------------------------------
@@ -50,21 +52,26 @@ public class PlayerMove : MonoBehaviour
     {
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
+        isRunning = Input.GetKey(runKey);
         if (Input.GetKeyDown(jumpKey)) jumpIsQueued = true;
     }
 
     void AnimUpdate()
     {
-        if (getMoveLeftKey) transform.localScale = new Vector3(-1, 1, 1);
-        if (getMoveRightKey) transform.localScale = new Vector3(1, 1, 1);
+        // Hello future johann, change this to actually flip it using sprite renderer
+
+        //if (getMoveLeftKey) transform.localScale = new Vector3(-1, 1, 1);
+        //if (getMoveRightKey) transform.localScale = new Vector3(1, 1, 1);
     }
 
     // FixedUpdate Functions ---------------------------------------------------
 
     void HorizontalMovement()
     {
-        if (getMoveLeftKey) rb.AddForce(Vector2.left * moveSpeed, ForceMode2D.Force);
-        if (getMoveRightKey) rb.AddForce(Vector2.right * moveSpeed, ForceMode2D.Force);
+        float currentSpeed = isRunning ? runSpeed : walkSpeed;
+
+        if (getMoveLeftKey) rb.AddForce(Vector2.left * currentSpeed, ForceMode2D.Force);
+        if (getMoveRightKey) rb.AddForce(Vector2.right * currentSpeed, ForceMode2D.Force);
     }
 
     void Jump()
@@ -81,13 +88,10 @@ public class PlayerMove : MonoBehaviour
 
     void LimitVelocity()
     {
+        float maxSpeed = isRunning ? maxRunSpeed : maxWalkSpeed;
+
         if (rb.linearVelocityX > maxSpeed) rb.linearVelocity = new Vector2(maxSpeed, rb.linearVelocityY);
         if (rb.linearVelocityX < -maxSpeed) rb.linearVelocity = new Vector2(-maxSpeed, rb.linearVelocityY);
-    }
-
-    void ApplyFriction()
-    {
-        rb.linearVelocity = new Vector2(rb.linearVelocityX * frictionX, rb.linearVelocityY * frictionY);
     }
 
 }

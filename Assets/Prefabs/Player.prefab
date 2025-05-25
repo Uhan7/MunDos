@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 145061321992423402}
   - component: {fileID: 1032035995957007128}
   - component: {fileID: 3355373079698604710}
+  - component: {fileID: 9131497529617733427}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -171,6 +172,18 @@ MonoBehaviour:
   jumpKey: 32
   moveSpeed: 50
   maxSpeed: 8
-  frictionX: 0.9
-  frictionY: 1
   jumpForce: 12
+--- !u!114 &9131497529617733427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378671161854638220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adfa6c998a14243098ba4552883234b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorFriction: 0.9
+  airResistance: 1
