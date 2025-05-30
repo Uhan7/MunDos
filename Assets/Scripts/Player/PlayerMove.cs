@@ -5,6 +5,10 @@ public class PlayerMove : MonoBehaviour
     // Components
     private Rigidbody2D rb;
 
+    // References
+    [SerializeField] private GameObject floorChecker;
+    private FloorChecker floorCheckerScript;
+
     // Inputs
     [SerializeField] private KeyCode moveLeftKey = KeyCode.A;
     [SerializeField] private KeyCode moveRightKey = KeyCode.D;
@@ -30,6 +34,13 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        floorCheckerScript = floorChecker.GetComponent<FloorChecker>();
+    }
+
+    private void Start()
+    {
+        
     }
 
     void Update()
@@ -53,7 +64,7 @@ public class PlayerMove : MonoBehaviour
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
         isRunning = Input.GetKey(runKey);
-        if (Input.GetKeyDown(jumpKey)) jumpIsQueued = true;
+        if (Input.GetKeyDown(jumpKey) && floorCheckerScript.onGround) jumpIsQueued = true;
     }
 
     void AnimUpdate()
@@ -93,5 +104,4 @@ public class PlayerMove : MonoBehaviour
         if (rb.linearVelocityX > maxSpeed) rb.linearVelocity = new Vector2(maxSpeed, rb.linearVelocityY);
         if (rb.linearVelocityX < -maxSpeed) rb.linearVelocity = new Vector2(-maxSpeed, rb.linearVelocityY);
     }
-
 }
