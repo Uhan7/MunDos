@@ -9,7 +9,8 @@ public class DialogueTrigger : MonoBehaviour
 	public Dialogue dialogue;
 
     // Properties of this DialogueTrigger
-    public bool isTrigger;
+    public bool startFromTrigger;
+    [SerializeField] private bool startFromInteract;
     public bool sign;
     public bool repeatable;
     public GameObject nextDialogue;
@@ -22,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour
 
     // Current state of this DialogueTrigger
     private bool alreadyTriggered;
+    private bool canTriggerFromInteract;
 
     private void Awake()
     {
@@ -35,6 +37,12 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
+        if (canTriggerFromInteract && Input.GetKeyDown(KeyCode.F))
+        {
+            print("ok nerd");
+            TriggerDialogue();
+        }
+
         if (dialogueHolder.GetComponent<DialogueManager>().open == false && alreadyTriggered)
         {
             if (nextDialogue != null && timeTillNextDialogue > 0)
@@ -73,45 +81,25 @@ public class DialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!isTrigger) return;
+        if (startFromInteract) canTriggerFromInteract = true;
+
+        if (!startFromTrigger) return;
 
         if (col.gameObject.CompareTag("Player"))
         {
             TriggerDialogue();
-        }
-    }
-
-    private void OnTriggerStay2D (Collider2D col)
-    {
-        if (!isTrigger) return;
-
-        if (col.gameObject.CompareTag("Player"))
-        {
-            //if (stopPlayer && isTrigger)
-            //{
-            //    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().rb.linearVelocity *= 0.9f;
-            //    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().canMove = false;
-            //}
         }
     }
 
     public void OnTriggerExit2D(Collider2D col)
     {
-        if (!isTrigger) return;
+        if (startFromInteract) canTriggerFromInteract = false;
+
+        if (!startFromTrigger) return;
 
         if (col.gameObject.CompareTag("Player")) {
             if (sign && !destroyAfter) dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
             //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().canMove = true;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (isTrigger) return;
-
-        if (col.gameObject.CompareTag("Player"))
-        {
-            TriggerDialogue();
         }
     }
 
@@ -130,7 +118,7 @@ public class DialogueTrigger : MonoBehaviour
 
     //public void OnCollisionExit2D(Collision2D col)
     //{
-    //    if (isTrigger) return;
+    //    if (startFromTrigger) return;
 
     //    if (col.gameObject.CompareTag("Player"))
     //    {
