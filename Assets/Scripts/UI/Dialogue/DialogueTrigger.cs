@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     // Dialogue To Display with and Use
-    [SerializeField] private GameObject dialogueHolder;
+    private GameObject dialogueHolder;
 	public Dialogue dialogue;
 
     // Properties of this DialogueTrigger
@@ -30,7 +30,8 @@ public class DialogueTrigger : MonoBehaviour
         //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Common Dialogue Holder");
 
         // This should automatically find the active dialogue holder in scene,,, or idk !@?!?
-        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Dialogue Holder");
+        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Past Dialogue Holder");
+        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Present Dialogue Holder");
     }
 
     private void Start()

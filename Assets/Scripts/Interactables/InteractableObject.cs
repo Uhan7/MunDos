@@ -12,7 +12,11 @@ public class InteractableObject : MonoBehaviour
 
     public void ItemInteract(bool var)
     {
-        if (!itemInteractable) return;
+        if (!itemInteractable)
+        {
+            Interact();
+            return;
+        }
 
         if (var == false)
         {
