@@ -12,15 +12,15 @@ public class PlayerMove : MonoBehaviour
     // Inputs
     [SerializeField] private KeyCode moveLeftKey = KeyCode.A;
     [SerializeField] private KeyCode moveRightKey = KeyCode.D;
-    [SerializeField] private KeyCode runKey = KeyCode.LeftShift;
+    [SerializeField] private KeyCode walkKey = KeyCode.LeftShift;
     [SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
     // Horizontal Movement
-    [SerializeField] private float walkSpeed = 50f;
-    [SerializeField] private float maxWalkSpeed = 8f;
+    [SerializeField] private float runSpeed = 55f;
+    [SerializeField] private float maxRunSpeed = 9.5f;
 
-    [SerializeField] private float runSpeed = 65f;
-    [SerializeField] private float maxRunSpeed = 11.5f;
+    [SerializeField] private float walkSpeed = 20f;
+    [SerializeField] private float maxWalkSpeed = 4.5f;
 
     // Vertical Movement
     [SerializeField] private float jumpForce = 10f;
@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
     // Flags
     private bool getMoveLeftKey;
     private bool getMoveRightKey;
-    private bool isRunning;
+    private bool isWalking;
     private bool jumpIsQueued;
 
     private void Awake()
@@ -63,7 +63,7 @@ public class PlayerMove : MonoBehaviour
     {
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
-        isRunning = Input.GetKey(runKey);
+        isWalking = Input.GetKey(walkKey);
         if (Input.GetKeyDown(jumpKey) && floorCheckerScript.onGround) jumpIsQueued = true;
     }
 
@@ -79,7 +79,7 @@ public class PlayerMove : MonoBehaviour
 
     void HorizontalMovement()
     {
-        float currentSpeed = isRunning ? runSpeed : walkSpeed;
+        float currentSpeed = isWalking ? walkSpeed : runSpeed;
 
         if (getMoveLeftKey) rb.AddForce(Vector2.left * currentSpeed, ForceMode2D.Force);
         if (getMoveRightKey) rb.AddForce(Vector2.right * currentSpeed, ForceMode2D.Force);
@@ -99,7 +99,7 @@ public class PlayerMove : MonoBehaviour
 
     void LimitVelocity()
     {
-        float maxSpeed = isRunning ? maxRunSpeed : maxWalkSpeed;
+        float maxSpeed = isWalking ? maxWalkSpeed : maxRunSpeed;
 
         if (rb.linearVelocityX > maxSpeed) rb.linearVelocity = new Vector2(maxSpeed, rb.linearVelocityY);
         if (rb.linearVelocityX < -maxSpeed) rb.linearVelocity = new Vector2(-maxSpeed, rb.linearVelocityY);

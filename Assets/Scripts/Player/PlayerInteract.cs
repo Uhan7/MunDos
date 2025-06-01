@@ -25,6 +25,8 @@ public class PlayerInteract : MonoBehaviour
             case "NPC":
             case "Environment":
                 interactedObject = col.gameObject;
+
+                interactedObject.GetComponent<InteractableObject>().Interact();
                 break;
 
             default:
@@ -49,6 +51,6 @@ public class PlayerInteract : MonoBehaviour
     {
         if (interactedObject == null) return;
 
-        Debug.Log("Interacted with" + interactedObject);
+        Debug.Log("Interacted with " + interactedObject.GetComponentInParent<GameObject>().name);
     }
 }

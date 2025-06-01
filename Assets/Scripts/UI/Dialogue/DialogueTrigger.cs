@@ -29,7 +29,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Common Dialogue Holder");
 
-        // This should automatically find the active dialogue holder in scene
+        // This should automatically find the active dialogue holder in scene,,, or idk !@?!?
         if (dialogueHolder == null) dialogueHolder = GameObject.Find("Dialogue Holder");
     }
 

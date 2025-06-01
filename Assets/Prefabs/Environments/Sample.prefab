@@ -100,8 +100,9 @@ GameObject:
   - component: {fileID: 425690632317557230}
   - component: {fileID: 6032784306891628884}
   - component: {fileID: 8477523763192340737}
+  - component: {fileID: 1528294845344047079}
   m_Layer: 0
-  m_Name: No Item Dialogue
+  m_Name: No Item Interact
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +139,7 @@ MonoBehaviour:
   dialogue:
     character: {fileID: 3124949146848436715, guid: 4fa33f2a4e22c46fc879122d4ac4a3ac, type: 3}
     name: Player
-    soundToPlay: {fileID: 0}
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.03
     textPunctSpeed: 0.1
@@ -199,6 +200,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &1528294845344047079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7650008994765508638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2673fa9b627004f99976bbb4cf60225b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8441072216741933188
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,8 +223,9 @@ GameObject:
   - component: {fileID: 2163923109507624306}
   - component: {fileID: 3977356833104722117}
   - component: {fileID: 6804526198639091780}
+  - component: {fileID: 6756502235502307970}
   m_Layer: 0
-  m_Name: Item Dialogue
+  m_Name: Item Interact
   m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +262,7 @@ MonoBehaviour:
   dialogue:
     character: {fileID: 3124949146848436715, guid: 4fa33f2a4e22c46fc879122d4ac4a3ac, type: 3}
     name: Player
-    soundToPlay: {fileID: 0}
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.03
     textPunctSpeed: 0.1
@@ -309,3 +323,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &6756502235502307970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8441072216741933188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2673fa9b627004f99976bbb4cf60225b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
