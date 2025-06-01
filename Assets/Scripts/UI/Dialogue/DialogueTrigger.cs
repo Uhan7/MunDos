@@ -39,7 +39,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (canTriggerFromInteract && Input.GetKeyDown(KeyCode.F))
         {
-            print("ok nerd");
             TriggerDialogue();
         }
 
