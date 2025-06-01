@@ -8,13 +8,17 @@ public class PlayerInteract : MonoBehaviour
 
     [SerializeField] private GameObject interactableFeedbackObject;
 
+    private GameObject nearbyItem;
+    [SerializeField] private ItemData currentItemData;
+    [SerializeField] private string test;
+
     private void Update()
     {
-
         InteractableFeedback();
         if (Input.GetKeyDown(interactKey))
         {
-            Interact();
+            if (interactedObject != null) Interact();
+            if (nearbyItem != null) PickupItem();
         }
     }
 
@@ -25,8 +29,11 @@ public class PlayerInteract : MonoBehaviour
             case "NPC":
             case "Environment":
                 interactedObject = col.gameObject;
-
                 interactedObject.GetComponent<InteractableObject>().Interact();
+                break;
+
+            case "Item":
+                nearbyItem = col.gameObject;
                 break;
 
             default:
@@ -44,7 +51,7 @@ public class PlayerInteract : MonoBehaviour
 
     void InteractableFeedback()
     {
-        interactableFeedbackObject.SetActive(interactedObject != null);
+        interactableFeedbackObject.SetActive(interactedObject != null || nearbyItem != null);
     }
 
     void Interact()
@@ -52,5 +59,14 @@ public class PlayerInteract : MonoBehaviour
         if (interactedObject == null) return;
 
         Debug.Log("Interacted with " + interactedObject.GetComponentInParent<GameObject>().name);
+    }
+
+    void PickupItem()
+    {
+        Item actualItem = nearbyItem.GetComponent<Item>();
+
+        currentItemData = actualItem.GetData();
+
+        Destroy(nearbyItem);
     }
 }
