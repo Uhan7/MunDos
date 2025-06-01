@@ -27,7 +27,10 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Awake()
     {
-        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Common Dialogue Holder");
+        //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Common Dialogue Holder");
+
+        // This should automatically find the active dialogue holder in scene
+        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Dialogue Holder");
     }
 
     private void Start()
