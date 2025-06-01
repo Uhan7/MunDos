@@ -10,7 +10,6 @@ public class PlayerInteract : MonoBehaviour
 
     private GameObject nearbyItem;
     [SerializeField] private ItemData currentItemData;
-    [SerializeField] private string test;
 
     private void Update()
     {
@@ -29,7 +28,6 @@ public class PlayerInteract : MonoBehaviour
             case "NPC":
             case "Environment":
                 interactedObject = col.gameObject;
-                interactedObject.GetComponent<InteractableObject>().Interact();
                 break;
 
             case "Item":
@@ -58,7 +56,12 @@ public class PlayerInteract : MonoBehaviour
     {
         if (interactedObject == null) return;
 
-        Debug.Log("Interacted with " + interactedObject.GetComponentInParent<GameObject>().name);
+        if (currentItemData.itemName == "") interactedObject.GetComponent<InteractableObject>().Interact();
+        else
+        {
+            if (currentItemData.objectToInteractWith == interactedObject) interactedObject.GetComponent<InteractableObject>().ItemInteract(true);
+            else interactedObject.GetComponent<InteractableObject>().ItemInteract(false);
+        }
     }
 
     void PickupItem()
