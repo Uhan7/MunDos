@@ -60,15 +60,15 @@ public class PlayerInteract : MonoBehaviour
         if (currentItemData.itemName == "") nearbyObject.GetComponent<InteractableObject>().Interact();
         else
         {
+            bool match = false;
 
-            for (int i = 0; i < currentItemData.objectToInteractWith.)
-            //foreach (GameObject obj in currentItemData.objectToInteractWith.)
-            //{
-            //
-            //} 
+            foreach (GameObject obj in currentItemData.objectsToInteractWith)
+            {
+                if (obj == nearbyObject) nearbyObject.GetComponent<InteractableObject>().ItemInteract(true);
+                match = true;
+            }
 
-            if (currentItemData.objectToInteractWith == nearbyObject) nearbyObject.GetComponent<InteractableObject>().ItemInteract(true);
-            else nearbyObject.GetComponent<InteractableObject>().ItemInteract(false);
+            if (!match) nearbyObject.GetComponent<InteractableObject>().ItemInteract(false);
         }
     }
 
