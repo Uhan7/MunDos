@@ -28,11 +28,6 @@ public class DialogueTrigger : MonoBehaviour
     private void Awake()
     {
         //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Common Dialogue Holder");
-
-        // This should automatically find the active dialogue holder in scene,,, or idk !@?!?
-        //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Past Dialogue Holder");
-        //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Present Dialogue Holder");
-        //if (dialogueHolder == null) print("help");
     }
 
     private void Start()
