@@ -3,13 +3,12 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public ItemData data;
-
-    public GameObject objectToInteractWith;
+    public GameObject[] objectsToInteractWith;
 
     private void Start()
     {
         data.itemName = gameObject.name;
-        data.objectToInteractWith = objectToInteractWith;
+        data.objectsToInteractWith = objectsToInteractWith;
     }
 
     public ItemData GetData()
