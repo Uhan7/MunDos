@@ -3,30 +3,27 @@ using UnityEngine;
 public class FloorChecker : MonoBehaviour
 {
     public bool onGround;
+    private int groundContacts = 0;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        switch (col.gameObject.tag)
+        if (col.gameObject.tag == "Floor")
         {
-            case "Floor":
-            case "Somethin else idk":
-                onGround = true; break;
-
-            default:
-                break;
+            groundContacts++;
+            onGround = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        switch (col.gameObject.tag)
+        if (col.gameObject.tag == "Floor")
         {
-            case "Floor":
-            case "Somethin else idk":
-                onGround = false; break;
-
-            default:
-                break;
+            groundContacts--;
+            if (groundContacts <= 0)
+            {
+                groundContacts = 0;
+                onGround = false;
+            }
         }
     }
 }

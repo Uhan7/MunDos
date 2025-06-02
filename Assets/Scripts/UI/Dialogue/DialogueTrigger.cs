@@ -30,8 +30,9 @@ public class DialogueTrigger : MonoBehaviour
         //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Common Dialogue Holder");
 
         // This should automatically find the active dialogue holder in scene,,, or idk !@?!?
-        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Past Dialogue Holder");
-        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Present Dialogue Holder");
+        //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Past Dialogue Holder");
+        //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Present Dialogue Holder");
+        //if (dialogueHolder == null) print("help");
     }
 
     private void Start()
@@ -46,7 +47,7 @@ public class DialogueTrigger : MonoBehaviour
             TriggerDialogue();
         }
 
-        if (dialogueHolder.GetComponent<DialogueManager>().open == false && alreadyTriggered)
+        if (dialogueHolder != null && dialogueHolder.GetComponent<DialogueManager>().open == false && alreadyTriggered)
         {
             if (nextDialogue != null && timeTillNextDialogue > 0)
             {
@@ -76,7 +77,11 @@ public class DialogueTrigger : MonoBehaviour
 	{
         if (alreadyTriggered && !repeatable) return;
 
-		StartCoroutine(dialogueHolder.GetComponent<DialogueManager>().StartDialogue(dialogue));
+        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Past Dialogue Holder");
+        if (dialogueHolder == null) dialogueHolder = GameObject.Find("Present Dialogue Holder");
+        if (dialogueHolder == null) print("help");
+
+        StartCoroutine(dialogueHolder.GetComponent<DialogueManager>().StartDialogue(dialogue));
         if (destroyImmediate && !sign) Destroy(gameObject, .1f);
 
         alreadyTriggered = true;
