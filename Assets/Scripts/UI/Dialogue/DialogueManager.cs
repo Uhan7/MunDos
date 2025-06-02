@@ -10,9 +10,10 @@ public class DialogueManager : MonoBehaviour
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI dialogueText;
 	public TMP_FontAsset defaultFont;
-	public float textSpeed;
-	public float textPunctSpeed;
 	public GameObject nextIndicator;
+	[HideInInspector] public float textSpeed;
+	[HideInInspector] public float textPunctSpeed;
+	[SerializeField] private int lettersUntilSFX;
 
 	private Queue<string> sentences;
 
@@ -100,7 +101,7 @@ public class DialogueManager : MonoBehaviour
 		{
 			if (!skip && !canNext)
 			{
-				if (dialogueText.text.Length % 3 == 0)
+				if (dialogueText.text.Length % lettersUntilSFX == 0)
 					aSource.PlayOneShot(soundToPlay);
 
 				dialogueText.text += letter;
