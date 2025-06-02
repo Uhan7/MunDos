@@ -1,13 +1,17 @@
 using UnityEngine;
 
-// Holds functions for controlling button functionalities on the MAIN MENU 
+// Currently using this to hold all menu functions
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainMenuDisplay;
-    [SerializeField] private GameObject mainMenu_UI;
+    [SerializeField] private GameObject mainMenu_UI; // the menu you want to hide
     [SerializeField] private GameObject loadSave_UI;
     [SerializeField] private GameObject settings_UI;
     [SerializeField] private GameObject gameDisplay;
+
+    // FOR GAME
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject logScreen;
 
     public void toggleLoadSaveScreen()
     {
@@ -34,5 +38,15 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         // REMOVE FOR FINAL BUILD:
         UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    public void togglePauseScreen()
+    {
+        pauseScreen.SetActive(!pauseScreen.activeInHierarchy);
+    }
+
+    public void toggleLogScreen()
+    {
+        logScreen.SetActive(!logScreen.activeInHierarchy);
     }
 }
