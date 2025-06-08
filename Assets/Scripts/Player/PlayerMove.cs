@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    // Variables ---------------------------------------------------------------
+
     // Components
     private Rigidbody2D rb;
 
@@ -30,6 +32,8 @@ public class PlayerMove : MonoBehaviour
     private bool getMoveRightKey;
     private bool isWalking;
     private bool jumpIsQueued;
+
+    // Functions ---------------------------------------------------------------
 
     private void Awake()
     {
