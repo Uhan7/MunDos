@@ -4,7 +4,7 @@ public class PlayerInteract : MonoBehaviour
 {
 
     [SerializeField] private KeyCode interactKey;
-    private GameObject nearbyObject;
+    private GameObject nearbyEnvi;
 
     [SerializeField] private GameObject interactableFeedbackObject;
 
@@ -16,7 +16,7 @@ public class PlayerInteract : MonoBehaviour
         InteractableFeedback();
         if (Input.GetKeyDown(interactKey))
         {
-            if (nearbyObject != null) Interact();
+            if (nearbyEnvi != null) Interact();
             if (nearbyItem != null) PickupItem();
         }
     }
@@ -26,8 +26,8 @@ public class PlayerInteract : MonoBehaviour
         switch (col.gameObject.tag)
         {
             case "NPC":
-            case "Environment":
-                nearbyObject = col.gameObject;
+            case "Envi":
+                nearbyEnvi = col.gameObject;
                 break;
 
             case "Item":
@@ -42,7 +42,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject == nearbyObject) nearbyObject = null;
+        if (col.gameObject == nearbyEnvi) nearbyEnvi = null;
         if (col.gameObject == nearbyItem) nearbyItem = null;
     }
 
@@ -50,25 +50,25 @@ public class PlayerInteract : MonoBehaviour
 
     void InteractableFeedback()
     {
-        interactableFeedbackObject.SetActive(nearbyObject != null || nearbyItem != null);
+        interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null);
     }
 
     void Interact()
     {
-        if (nearbyObject == null) return;
+        if (nearbyEnvi == null) return;
 
-        if (currentItemData.itemName == "") nearbyObject.GetComponent<InteractableObject>().Interact();
+        if (currentItemData == null) nearbyEnvi.GetComponent<InteractableObject>().Interact();
         else
         {
             bool match = false;
 
             foreach (GameObject obj in currentItemData.objectsToInteractWith)
             {
-                if (obj == nearbyObject) nearbyObject.GetComponent<InteractableObject>().ItemInteract(true);
+                if (obj == nearbyEnvi) nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(true);
                 match = true;
             }
 
-            if (!match) nearbyObject.GetComponent<InteractableObject>().ItemInteract(false);
+            if (!match) nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(false);
         }
     }
 
