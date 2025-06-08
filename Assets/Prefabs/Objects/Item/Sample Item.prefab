@@ -100,14 +100,15 @@ MonoBehaviour:
     textPunctSpeed: 0.1
     sentences:
     - Brr brr patapim
-  startFromTrigger: 0
+  startFromTrigger: 1
   startFromInteract: 0
   sign: 0
   repeatable: 0
   nextDialogue: {fileID: 0}
+  timeTillDeactivate: 0.1
   timeTillNextDialogue: 0
   destroyImmediate: 0
-  destroyAfter: 0
+  destroyAfter: 1
   deactivateAfter: 0
 --- !u!1 &5286626165191592584
 GameObject:
@@ -121,6 +122,7 @@ GameObject:
   - component: {fileID: 9012634396522584475}
   - component: {fileID: 2155128010626252820}
   - component: {fileID: 2064214224646224916}
+  - component: {fileID: -3690064291442228492}
   m_Layer: 0
   m_Name: Sample Item
   m_TagString: Item
@@ -257,4 +259,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2035a028de1cb49c4ac0434a14bfbaa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToInteractWith: []
+  data:
+    itemName: 
+    objectsToInteractWith: []
+--- !u!114 &-3690064291442228492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286626165191592584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2673fa9b627004f99976bbb4cf60225b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInteractable: 0
+  toActivateOnInteract:
+  - {fileID: 5144117399549955517}
+  toDeactivateOnInteract: []
+  toActivateOnCorrectInteract: []
+  toDeactivateOnCorrectInteract: []

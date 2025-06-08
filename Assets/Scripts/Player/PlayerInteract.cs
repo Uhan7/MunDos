@@ -57,18 +57,24 @@ public class PlayerInteract : MonoBehaviour
     {
         if (nearbyEnvi == null) return;
 
-        if (currentItemData == null) nearbyEnvi.GetComponent<InteractableObject>().Interact();
+        if (currentItemData.itemName == "") nearbyEnvi.GetComponent<InteractableObject>().Interact();
         else
         {
             bool match = false;
 
             foreach (GameObject obj in currentItemData.objectsToInteractWith)
             {
-                if (obj == nearbyEnvi) nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(true);
-                match = true;
+                if (obj == nearbyEnvi)
+                {
+                    nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(true);
+                    match = true;
+                }
             }
 
-            if (!match) nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(false);
+            if (!match)
+            {
+                nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(false);
+            }
         }
     }
 

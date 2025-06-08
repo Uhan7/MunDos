@@ -3,7 +3,7 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
 
-    [SerializeField] private bool itemInteractable;
+    public bool itemInteractable; // Used in PlayerInteract.cs
 
     [SerializeField] private GameObject[] toActivateOnInteract;
     [SerializeField] private GameObject[] toDeactivateOnInteract;
@@ -44,6 +44,8 @@ public class InteractableObject : MonoBehaviour
         }
         else
         {
+            Debug.Log("Correct Interaction");
+
             if (toActivateOnCorrectInteract != null)
             {
                 foreach (GameObject obj in toActivateOnCorrectInteract)
@@ -59,7 +61,6 @@ public class InteractableObject : MonoBehaviour
                     obj.SetActive(false);
                 }
             }
-            Debug.Log("Correct Interaction");
         }
     }
 }
