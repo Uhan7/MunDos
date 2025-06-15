@@ -6,55 +6,68 @@ public class DialogueTrigger : MonoBehaviour
 {
     // Dialogue To Display with and Use
     private GameObject dialogueHolder;
-	public Dialogue dialogue;
+    [SerializeField] private Dialogue dialogue;
 
     // Properties of this DialogueTrigger
-    public bool startFromTrigger;
+    [SerializeField] private bool startOnEnable;
+    [SerializeField] private bool startFromTrigger;
     [SerializeField] private bool startFromInteract;
-    public bool sign;
-    public bool repeatable;
-    public GameObject nextDialogue;
-    public float timeTillDeactivate = 0.1f;
-    public float timeTillNextDialogue;
+    [SerializeField] private bool isSign;
+    [SerializeField] private GameObject nextDialogue;
+
+    // Timers
+    private const float DEACTIVATE_TIME = 0.1f;
+    private float deactivateTimer;
+    [SerializeField] private float nextDialogueTime = 0.5f;
+    private float nextDialogueTimer;
 
     // Destroying / Deactivating of this DialogueTrigger
-    public bool destroyImmediate;
-    public bool destroyAfter;
-    public bool deactivateAfter;
+    [SerializeField] private bool deactivateAfter;
 
-    // Current state of this DialogueTrigger
-    private bool alreadyTriggered;
+    // Flags
+    private bool dialogueIsTriggered;
 
     private void Awake()
     {
         //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Common Dialogue Holder");
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        
+        ResetFlags();
+
+        if (startOnEnable) TriggerDialogue();
     }
 
     private void Update()
     {
-        if (dialogueHolder != null && dialogueHolder.GetComponent<DialogueManager>().open == false && alreadyTriggered)
+        if (dialogueHolder != null && !dialogueHolder.GetComponent<DialogueManager>().open)
         {
-            if (nextDialogue != null && timeTillNextDialogue > 0)
-            {
-                StartOtherDialogue(nextDialogue);
-                // return;
-            }
+            //if (nextDialogue != null)
+            //{
+            //    if (finishedDialogue) nextDialogueTimer -= Time.deltaTime;
+            //    if (nextDialogueTimer <= 0 && !triggeredOtherDialogue) ActivateOtherDialogue(nextDialogue);
+            //}
 
-            if (destroyAfter)
+            if (!dialogueIsTriggered) return;
+
+            if (nextDialogue != null)
             {
+                nextDialogue.SetActive(false);
+                nextDialogueTimer -= Time.deltaTime;
+
+                // Constantly deactivate dialogue until you activate next one to ensure no overlaps
                 dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
 
-                // Because theres a diff destroy call if u call another shit
-                if (nextDialogue == null) Destroy(gameObject, .1f);
+                if (nextDialogueTimer <= 0)
+                {
+                    ActivateOtherDialogue(nextDialogue);
+                }
             }
 
-            if (deactivateAfter)
+            else if (deactivateAfter)
             {
+                dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
                 Deactivate();
             }
         }
@@ -62,17 +75,12 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
 	{
-        if (alreadyTriggered && !repeatable) return;
-
-        //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Past Dialogue Holder");
-        //if (dialogueHolder == null) dialogueHolder = GameObject.Find("Present Dialogue Holder");
         if (dialogueHolder == null) dialogueHolder = GameObject.Find("Dialogue Holder");
-        if (dialogueHolder == null) print("help");
+        if (dialogueHolder == null) print("ERROR: No Dialogue Holder Found");
 
         StartCoroutine(dialogueHolder.GetComponent<DialogueManager>().StartDialogue(dialogue));
-        if (destroyImmediate && !sign) Destroy(gameObject, .1f);
 
-        alreadyTriggered = true;
+        dialogueIsTriggered = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -90,48 +98,33 @@ public class DialogueTrigger : MonoBehaviour
         if (!startFromTrigger) return;
 
         if (col.gameObject.CompareTag("Protag")) {
-            if (sign && !destroyAfter) dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
-            if (sign && deactivateAfter) Deactivate();
-            //GameObject.FindGameObjectWithTag("Protag").GetComponent<PlayerMove>().canMove = true;
+            if (isSign) dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
+            if (isSign && deactivateAfter) Deactivate();
         }
     }
 
-    public void StartOtherDialogue(GameObject nextDialogue)
+    public void ActivateOtherDialogue(GameObject nextDialogue)
     {
-        nextDialogue.SetActive(false);
-        timeTillNextDialogue -= Time.deltaTime;
-        if (timeTillNextDialogue < 0)
-        {
-            nextDialogue.transform.position = GameObject.FindGameObjectWithTag("Protag").transform.position;
-            nextDialogue.SetActive(true);
+        nextDialogue.transform.position = GameObject.FindGameObjectWithTag("Protag").transform.position;
+        nextDialogue.SetActive(true);
 
-            if (destroyAfter) Destroy(gameObject, .1f);
-        }
+        if (deactivateAfter) gameObject.SetActive(false);
     }
 
     public void Deactivate()
     {
-        // if (stopPlayer) GameObject.Find("PlayerMove").GetComponent<PlayerMove>().canMove = true;
-        dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
+        // Only allow self deactivation when there are no Next Dialogues
+        if (nextDialogue != null) return;
 
-        gameObject.SetActive(false);
-
-        if (repeatable) alreadyTriggered = false;
+        deactivateTimer -= Time.deltaTime;
+        if (deactivateTimer <= 0) gameObject.SetActive(false);
     }
 
-    //public void OnCollisionExit2D(Collision2D col)
-    //{
-    //    if (startFromTrigger) return;
+    public void ResetFlags()
+    {
+        deactivateTimer = DEACTIVATE_TIME;
+        nextDialogueTimer = nextDialogueTime;
 
-    //    if (col.gameObject.CompareTag("Protag"))
-    //    {
-    //        if (sign && !destroyAfter) dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
-    //        else if (sign && destroyAfter)
-    //        {
-    //            dialogueHolder.GetComponent<DialogueManager>().EndDialogue();
-    //            Destroy(gameObject, .1f);
-    //        }
-    //    }
-    //}
-
+        dialogueIsTriggered = false;
+    }
 }

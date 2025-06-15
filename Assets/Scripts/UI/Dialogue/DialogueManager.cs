@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] public float textPunctSpeed;
 	[SerializeField] private int lettersUntilSFX;
 
-	private Queue<string> sentences;
+	public Queue<string> sentences;
 
 	private Animator anim;
 	public bool open;
