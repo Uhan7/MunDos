@@ -8,8 +8,8 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private GameObject[] toActivateOnInteract;
     [SerializeField] private GameObject[] toDeactivateOnInteract;
 
-    [SerializeField] private GameObject[] toActivateOnCorrectInteract;
-    [SerializeField] private GameObject[] toDeactivateOnCorrectInteract;
+    [SerializeField] private GameObject[] toActivateOnValidInteract;
+    [SerializeField] private GameObject[] toDeactivateOnValidInteract;
 
     public void Interact()
     {
@@ -46,17 +46,17 @@ public class InteractableObject : MonoBehaviour
         {
             Debug.Log("Correct Interaction");
 
-            if (toActivateOnCorrectInteract != null)
+            if (toActivateOnValidInteract != null)
             {
-                foreach (GameObject obj in toActivateOnCorrectInteract)
+                foreach (GameObject obj in toActivateOnValidInteract)
                 {
                     obj.SetActive(true);
                 }
             }
 
-            if (toDeactivateOnCorrectInteract != null)
+            if (toDeactivateOnValidInteract != null)
             {
-                foreach (GameObject obj in toDeactivateOnCorrectInteract)
+                foreach (GameObject obj in toDeactivateOnValidInteract)
                 {
                     obj.SetActive(false);
                 }
