@@ -22,7 +22,7 @@ public class Room : MonoBehaviour
         if (col.gameObject.tag != "Protag") return;
 
         roomCamera.SetActive(true);
-        exteriorBGAnim.Play(roomFadeOutClip);
+        if (exteriorBG != null) exteriorBGAnim.Play(roomFadeOutClip);
     }
 
     private void OnTriggerExit2D(Collider2D col)
@@ -30,6 +30,6 @@ public class Room : MonoBehaviour
         if (col.gameObject.tag != "Protag") return;
 
         roomCamera.SetActive(false);
-        exteriorBGAnim.Play(roomFadeInClip);
+        if (exteriorBG != null) exteriorBGAnim.Play(roomFadeInClip);
     }
 }
