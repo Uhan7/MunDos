@@ -17,6 +17,11 @@ public class Room : MonoBehaviour
         exteriorBGAnim = exteriorBG.GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        exteriorBG.SetActive(true); // Might leave it inactive on build
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag != "Protag") return;
