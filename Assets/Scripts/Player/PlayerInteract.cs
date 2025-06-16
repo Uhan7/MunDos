@@ -81,9 +81,8 @@ public class PlayerInteract : MonoBehaviour
     void PickupItem()
     {
         Item actualItem = nearbyItem.GetComponent<Item>();
-
         currentItemData = actualItem.GetData();
 
-        Destroy(nearbyItem);
+        actualItem.PickedUp();
     }
 }
