@@ -11,6 +11,8 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private GameObject[] toActivateOnValidInteract;
     [SerializeField] private GameObject[] toDeactivateOnValidInteract;
 
+    [SerializeField] private bool interactableOnlyOnce;
+
     public void Interact()
     {
         Debug.Log(gameObject + " did something.");
@@ -28,6 +30,8 @@ public class InteractableObject : MonoBehaviour
                 obj.SetActive(false);
             }
         }
+
+        if (interactableOnlyOnce) enabled = false;
     }
 
     public void ItemInteract(bool var)

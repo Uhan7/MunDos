@@ -14,12 +14,12 @@ public class Room : MonoBehaviour
 
     private void Awake()
     {
-        exteriorBGAnim = exteriorBG.GetComponent<Animator>();
+        if (exteriorBG != null) exteriorBGAnim = exteriorBG.GetComponent<Animator>();
     }
 
     private void Start()
     {
-        exteriorBG.SetActive(true); // Might leave it inactive on build
+        if (exteriorBG != null) exteriorBG.SetActive(true); // Might leave it inactive on build
     }
 
     private void OnTriggerEnter2D(Collider2D col)

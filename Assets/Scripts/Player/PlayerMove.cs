@@ -5,7 +5,7 @@ public class PlayerMove : MonoBehaviour
     // Variables ---------------------------------------------------------------
 
     // Components
-    private Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb; // Used in PlayerAnimator
 
     // References
     [SerializeField] private GameObject floorChecker;
