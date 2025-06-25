@@ -11,7 +11,6 @@ public class DialogueTrigger : MonoBehaviour
     // Properties of this DialogueTrigger
     [SerializeField] private bool startOnEnable;
     [SerializeField] private bool startFromTrigger;
-    [SerializeField] private bool startFromInteract;
     [SerializeField] private bool isSign;
     [SerializeField] private GameObject nextDialogue;
 
