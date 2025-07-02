@@ -139,12 +139,12 @@ public class PlayerInteract : MonoBehaviour
         playerItemIndex = FindEmptySlot();
 
         itemDatas[playerItemIndex] = actualItem.GetData();
-        SelectItem();
+        SetCurrentItem();
 
         actualItem.PickedUp();
     }
 
-    void SelectItem()
+    void SetCurrentItem()
     {
         currentItemData = itemDatas[playerItemIndex];
     }
@@ -152,7 +152,7 @@ public class PlayerInteract : MonoBehaviour
     void SelectItem(int index)
     {
         playerItemIndex = index;
-        currentItemData = itemDatas[playerItemIndex];
+        SetCurrentItem();
     }
 
     void SelectItem(string value)
@@ -173,6 +173,6 @@ public class PlayerInteract : MonoBehaviour
                 break;
         }
 
-        currentItemData = itemDatas[playerItemIndex];
+        SetCurrentItem();
     }
 }
