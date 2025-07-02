@@ -15,14 +15,13 @@ public class PlayerInteract : MonoBehaviour
 
     [Header("PlayerItems")]
     [SerializeField] private ItemData currentItemData;
-    [SerializeField] private ItemData item1Data;
-    [SerializeField] private ItemData item2Data;
+    [SerializeField] private ItemData[] itemDatas;
     [SerializeField] private int playerItemIndex;
 
     private void Start()
     {
-        playerItemIndex = 1;
-        currentItemData = item1Data;
+        playerItemIndex = 0;
+        currentItemData = itemDatas[playerItemIndex];
     }
 
     private void Update()
@@ -37,11 +36,10 @@ public class PlayerInteract : MonoBehaviour
 
         if (Input.GetKeyDown(swapItemKey))
         {
-            if (playerItemIndex == 1) playerItemIndex = 2;
-            else if (playerItemIndex == 2) playerItemIndex = 1;
+            playerItemIndex++;
+            if (playerItemIndex >= itemDatas.Length) playerItemIndex = 0;
 
-            if (playerItemIndex == 1) currentItemData = item1Data;
-            if (playerItemIndex == 2) currentItemData = item2Data;
+            currentItemData = itemDatas[playerItemIndex];
         }
     }
 
@@ -107,11 +105,18 @@ public class PlayerInteract : MonoBehaviour
     {
         Item actualItem = nearbyItem.GetComponent<Item>();
 
-        if (playerItemIndex == 1) item1Data = actualItem.GetData();
-        if (playerItemIndex == 2) item2Data = actualItem.GetData();
+        for (int i = 0; i < itemDatas.Length; i++)
+        {
+            if (itemDatas[playerItemIndex].itemName != "")
+            {
+                playerItemIndex++;
+                if (playerItemIndex >= itemDatas.Length) playerItemIndex = 0;
+            }
+        }
+
+        itemDatas[playerItemIndex] = actualItem.GetData();
         //currentItemData = actualItem.GetData();
-        if (playerItemIndex == 1) currentItemData = item1Data;
-        if (playerItemIndex == 2) currentItemData = item2Data;
+        currentItemData = itemDatas[playerItemIndex];
 
         actualItem.PickedUp();
     }
