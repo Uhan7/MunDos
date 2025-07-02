@@ -7,7 +7,13 @@ public class PlayerInteract : MonoBehaviour
 
     [Header("Key Inputs")]
     [SerializeField] private KeyCode interactKey;
-    [SerializeField] private KeyCode swapItemKey;
+    [SerializeField] private KeyCode previousItemKey;
+    [SerializeField] private KeyCode nextItemKey;
+    [SerializeField] private KeyCode item1Key;
+    [SerializeField] private KeyCode item2Key;
+    [SerializeField] private KeyCode item3Key;
+    [SerializeField] private KeyCode item4Key;
+    [SerializeField] private KeyCode item5Key;
 
     [Header("Nearby Objects")]
     [HideInInspector] private GameObject nearbyEnvi;
@@ -34,13 +40,22 @@ public class PlayerInteract : MonoBehaviour
             if (nearbyItem != null) PickupItem();
         }
 
-        if (Input.GetKeyDown(swapItemKey))
+        if (Input.GetKeyDown(previousItemKey))
         {
-            playerItemIndex++;
-            if (playerItemIndex >= itemDatas.Length) playerItemIndex = 0;
-
-            currentItemData = itemDatas[playerItemIndex];
+            SelectItem("PREVIOUS");
         }
+
+        if (Input.GetKeyDown(nextItemKey))
+        {
+            SelectItem("NEXT");
+        }
+
+        if (Input.GetKeyDown(item1Key)) SelectItem(0);
+        if (Input.GetKeyDown(item2Key)) SelectItem(1);
+        if (Input.GetKeyDown(item3Key)) SelectItem(2);
+        if (Input.GetKeyDown(item4Key)) SelectItem(3);
+        if (Input.GetKeyDown(item5Key)) SelectItem(4);
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -101,23 +116,63 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
+    int FindEmptySlot()
+    {
+        int index = playerItemIndex;
+
+        for (int i = 0; i < itemDatas.Length; i++)
+        {
+            if (itemDatas[index].itemName != "")
+            {
+                index++;
+                if (index >= itemDatas.Length) index = 0;
+            }
+        }
+
+        return index;
+    }
+
     void PickupItem()
     {
         Item actualItem = nearbyItem.GetComponent<Item>();
 
-        for (int i = 0; i < itemDatas.Length; i++)
-        {
-            if (itemDatas[playerItemIndex].itemName != "")
-            {
-                playerItemIndex++;
-                if (playerItemIndex >= itemDatas.Length) playerItemIndex = 0;
-            }
-        }
+        playerItemIndex = FindEmptySlot();
 
         itemDatas[playerItemIndex] = actualItem.GetData();
-        //currentItemData = actualItem.GetData();
-        currentItemData = itemDatas[playerItemIndex];
+        SelectItem();
 
         actualItem.PickedUp();
+    }
+
+    void SelectItem()
+    {
+        currentItemData = itemDatas[playerItemIndex];
+    }
+
+    void SelectItem(int index)
+    {
+        playerItemIndex = index;
+        currentItemData = itemDatas[playerItemIndex];
+    }
+
+    void SelectItem(string value)
+    {
+        switch (value)
+        {
+            case "PREVIOUS":
+                playerItemIndex--;
+                if (playerItemIndex < 0) playerItemIndex = itemDatas.Length - 1;
+                break;
+
+            case "NEXT":
+                playerItemIndex++;
+                if (playerItemIndex >= itemDatas.Length) playerItemIndex = 0;
+                break;
+
+            default:
+                break;
+        }
+
+        currentItemData = itemDatas[playerItemIndex];
     }
 }
