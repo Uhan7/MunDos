@@ -4,30 +4,29 @@ public class PlayerMove : MonoBehaviour
 {
     // Variables ---------------------------------------------------------------
 
-    // Components
+    [Header("Components")]
     [HideInInspector] public Rigidbody2D rb; // Used in PlayerAnimator
 
-    // References
+    [Header("References")]
     [SerializeField] private GameObject floorChecker;
     private FloorChecker floorCheckerScript;
 
-    // Inputs
+    [Header("Inputs")]
     [SerializeField] private KeyCode moveLeftKey = KeyCode.A;
     [SerializeField] private KeyCode moveRightKey = KeyCode.D;
     [SerializeField] private KeyCode walkKey = KeyCode.LeftShift;
     [SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
-    // Horizontal Movement
+    [Header("Horizontal Movement")]
     [SerializeField] private float runSpeed = 55f;
     [SerializeField] private float maxRunSpeed = 9.5f;
-
     [SerializeField] private float walkSpeed = 20f;
     [SerializeField] private float maxWalkSpeed = 4.5f;
 
-    // Vertical Movement
+    [Header("Vertical Movement")]
     [SerializeField] private float jumpForce = 10f;
 
-    // Flags
+    [Header("Flags")]
     private bool getMoveLeftKey;
     private bool getMoveRightKey;
     private bool isWalking;

@@ -2,22 +2,46 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-
-    [SerializeField] private KeyCode interactKey;
-    private GameObject nearbyEnvi;
-
+    [Header("GameObjects")]
     [SerializeField] private GameObject interactableFeedbackObject;
 
-    private GameObject nearbyItem;
+    [Header("Key Inputs")]
+    [SerializeField] private KeyCode interactKey;
+    [SerializeField] private KeyCode swapItemKey;
+
+    [Header("Nearby Objects")]
+    [HideInInspector] private GameObject nearbyEnvi;
+    [HideInInspector] private GameObject nearbyItem;
+
+    [Header("PlayerItems")]
     [SerializeField] private ItemData currentItemData;
+    [SerializeField] private ItemData item1Data;
+    [SerializeField] private ItemData item2Data;
+    [SerializeField] private int playerItemIndex;
+
+    private void Start()
+    {
+        playerItemIndex = 1;
+        currentItemData = item1Data;
+    }
 
     private void Update()
     {
         InteractableFeedback();
+
         if (Input.GetKeyDown(interactKey))
         {
             if (nearbyEnvi != null) Interact();
             if (nearbyItem != null) PickupItem();
+        }
+
+        if (Input.GetKeyDown(swapItemKey))
+        {
+            if (playerItemIndex == 1) playerItemIndex = 2;
+            else if (playerItemIndex == 2) playerItemIndex = 1;
+
+            if (playerItemIndex == 1) currentItemData = item1Data;
+            if (playerItemIndex == 2) currentItemData = item2Data;
         }
     }
 
@@ -82,7 +106,12 @@ public class PlayerInteract : MonoBehaviour
     void PickupItem()
     {
         Item actualItem = nearbyItem.GetComponent<Item>();
-        currentItemData = actualItem.GetData();
+
+        if (playerItemIndex == 1) item1Data = actualItem.GetData();
+        if (playerItemIndex == 2) item2Data = actualItem.GetData();
+        //currentItemData = actualItem.GetData();
+        if (playerItemIndex == 1) currentItemData = item1Data;
+        if (playerItemIndex == 2) currentItemData = item2Data;
 
         actualItem.PickedUp();
     }
