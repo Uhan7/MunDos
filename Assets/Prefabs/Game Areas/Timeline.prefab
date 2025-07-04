@@ -472,6 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46202d4a1ee3ac428b5a422d554dc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logScreen: {fileID: 2088289853057249553}
 --- !u!1 &2285451920318264266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,8 +1038,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 5832764983856188086}
+        m_TargetAssemblyTypeName: LogScreen, Assembly-CSharp
         m_MethodName: toggleLogScreen
         m_Mode: 1
         m_Arguments:
@@ -2502,6 +2503,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 630692551640796251}
     m_Modifications:
+    - target: {fileID: 661589232885408704, guid: a7cac72531a21564193b577199ff0513, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5832764983856188086}
+    - target: {fileID: 661589232885408704, guid: a7cac72531a21564193b577199ff0513, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleLogScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 661589232885408704, guid: a7cac72531a21564193b577199ff0513, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LogScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7248770106720575849, guid: a7cac72531a21564193b577199ff0513, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
