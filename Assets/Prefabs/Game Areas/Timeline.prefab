@@ -430,6 +430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5276002906993840374}
+  - component: {fileID: 5832764983856188086}
   m_Layer: 5
   m_Name: Log Screen
   m_TagString: Untagged
@@ -459,6 +460,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5832764983856188086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088289853057249553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46202d4a1ee3ac428b5a422d554dc02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2285451920318264266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,9 +1623,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: toggleLoadSaveScreen
+      - m_Target: {fileID: 5805377320606194004}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: toggleSaveScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1770,6 +1783,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d598a5f761a22c64ea7a257dfccb3318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveUI: {fileID: 3479412488519569557}
+  settingsUI: {fileID: 7113820483442964528}
 --- !u!1 &7570944479932323313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,8 +2117,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 5805377320606194004}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: toggleSettingsScreen
         m_Mode: 1
         m_Arguments:
@@ -2960,8 +2975,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6890025130024618526, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5805377320606194004}
+    - target: {fileID: 6890025130024618526, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: toggleLoadSaveScreen
+      value: toggleSaveScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6890025130024618526, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2975,6 +2998,11 @@ PrefabInstance:
 --- !u!4 &3433778115395821013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5467022540374022357, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+  m_PrefabInstance: {fileID: 7240098286732936448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3479412488519569557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6066529228611245461, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
   m_PrefabInstance: {fileID: 7240098286732936448}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &6781170243941927241 stripped
@@ -3145,8 +3173,16 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8515240546409287638, guid: 9aebf1f523d3639419dbb919ca7101ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5805377320606194004}
+    - target: {fileID: 8515240546409287638, guid: 9aebf1f523d3639419dbb919ca7101ad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: toggleSettingsScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515240546409287638, guid: 9aebf1f523d3639419dbb919ca7101ad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenuManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3156,5 +3192,10 @@ PrefabInstance:
 --- !u!4 &7106416831916015711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2269885092840552872, guid: 9aebf1f523d3639419dbb919ca7101ad, type: 3}
+  m_PrefabInstance: {fileID: 9016012949134850551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7113820483442964528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2280525705408332231, guid: 9aebf1f523d3639419dbb919ca7101ad, type: 3}
   m_PrefabInstance: {fileID: 9016012949134850551}
   m_PrefabAsset: {fileID: 0}
