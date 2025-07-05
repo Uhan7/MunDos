@@ -19,10 +19,10 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] private GameObject nearbyEnvi;
     [HideInInspector] private GameObject nearbyItem;
 
-    [Header("PlayerItems")]
-    public ItemData currentItemData;
-    [SerializeField] private ItemData[] itemDatas;
-    [SerializeField] private int playerItemIndex;
+    [Header("Playeritems Data")]
+    [SerializeField] public ItemData currentItemData; // Used in PlayeritemsManager
+    [SerializeField] public ItemData[] itemDatas; // Used in PlayeritemsManager
+    [SerializeField] private int playerItemIndex; // Used in PlayeritemsManager
 
     private void Start()
     {
