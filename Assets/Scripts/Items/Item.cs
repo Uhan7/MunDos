@@ -2,16 +2,23 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public ItemData data;
+    [Header("Item Data Variables")]
+    [SerializeField] public ItemData data;
 
     private void Start()
     {
         if (data.itemName == "") data.itemName = gameObject.name;
+        if (data.itemSprite == null) data.itemSprite = GetComponent<SpriteRenderer>().sprite;
     }
 
     public ItemData GetData()
     {
-        return data;
+        ItemData copy = new ItemData(data);
+
+        if (copy.itemName == "") copy.itemName = gameObject.name;
+        if (copy.itemSprite == null) copy.itemSprite = GetComponent<SpriteRenderer>().sprite;
+
+        return copy;
     }
 
     public void PickedUp()
