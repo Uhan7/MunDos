@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class InventoryUI : MonoBehaviour
 {
-    [SerializeField] GameObject InvSlots;
+    [SerializeField] GameObject InventorySlots;
     [SerializeField] private KeyCode openInventoryKey;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -11,12 +11,12 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetKeyDown(openInventoryKey))
         {
-            InvSlots.SetActive(!InvSlots.activeInHierarchy);
+            InventorySlots.SetActive(!InventorySlots.activeInHierarchy);
         }
     }
 
-    public void toggleInventorySlots()
+    public void ToggleInventorySlots()
     {
-        InvSlots.SetActive(!InvSlots.activeInHierarchy);
+        InventorySlots.SetActive(!InventorySlots.activeInHierarchy);
     }
 }
