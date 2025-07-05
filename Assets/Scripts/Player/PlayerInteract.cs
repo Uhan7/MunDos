@@ -20,7 +20,7 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] private GameObject nearbyItem;
 
     [Header("PlayerItems")]
-    [SerializeField] private ItemData currentItemData;
+    public ItemData currentItemData;
     [SerializeField] private ItemData[] itemDatas;
     [SerializeField] private int playerItemIndex;
 
