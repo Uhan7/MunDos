@@ -84,7 +84,7 @@ public class PlayerInteract : MonoBehaviour
         if (col.gameObject == nearbyItem) nearbyItem = null;
     }
 
-    // Update Functions --------------------------------------------------------
+    // Helper Functions --------------------------------------------------------
 
     void InteractableFeedback()
     {

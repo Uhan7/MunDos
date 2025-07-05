@@ -9,10 +9,6 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private KeyCode openInventoryKey;
     private bool open;
 
-    // Actual Items
-    //[SerializeField] private GameObject[] items;
-    // Try using GridCanvas or smth to organize... find that shit out...
-
     void Update()
     {
         AnimationsUpdate();
