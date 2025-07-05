@@ -20,15 +20,24 @@ public class PlayeritemsManager : MonoBehaviour
         InitialCache();
     }
 
+    private void Start()
+    {
+        InitialValues();
+    }
+
     // THIS IS TEMPORARY - don't put it in Update() since that's too expensive, wait for broadcast manager for dis.
     private void Update()
     {
         DebugsUpdate();
 
         // TEMP ---
+
         for (int i = 0; i < pastProtagScript.itemDatas.Length; i++)
         {
             if (pastProtagScript.itemDatas[i].itemName != "") pastPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = pastProtagScript.itemDatas[i].itemSprite;
+
+            if (pastProtagScript.playerItemIndex == i) pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+            else pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
         }
         // TEMP ---
     }
@@ -44,5 +53,13 @@ public class PlayeritemsManager : MonoBehaviour
     {
         pastProtagScript = pastProtag.GetComponent<PlayerInteract>();
         presentProtagScript = presentProtag.GetComponent<PlayerInteract>();
+    }
+
+    void InitialValues()
+    {
+        //foreach (GameObject slot in pastPlayeritemSlots) slot.SetActive(false);
+        //foreach (GameObject slot in presentPlayeritemSlots) slot.SetActive(false);
+
+        //ERM
     }
 }

@@ -5,7 +5,11 @@ public class InventoryUI : MonoBehaviour
 {
     [SerializeField] GameObject InventorySlots;
     [SerializeField] private KeyCode openInventoryKey;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Start()
+    {
+        InitializeValues();
+    }
 
     private void Update()
     {
@@ -15,8 +19,15 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    // Helper Functions --------------------------------------------------------
+
     public void ToggleInventorySlots()
     {
         InventorySlots.SetActive(!InventorySlots.activeInHierarchy);
+    }
+
+    void InitializeValues()
+    {
+        InventorySlots.SetActive(false);
     }
 }

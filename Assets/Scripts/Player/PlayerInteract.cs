@@ -22,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
     [Header("Playeritems Data")]
     [SerializeField] public ItemData currentItemData; // Used in PlayeritemsManager
     [SerializeField] public ItemData[] itemDatas; // Used in PlayeritemsManager
-    [SerializeField] private int playerItemIndex; // Used in PlayeritemsManager
+    [SerializeField] public int playerItemIndex; // Used in PlayeritemsManager
 
     private void Start()
     {
