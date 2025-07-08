@@ -6,30 +6,39 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+	[Header("Components")]
+	[HideInInspector] private Animator anim;
+	[HideInInspector] private AudioSource aSource;
+	[HideInInspector] private Queue<string> sentences;
+
+	[Header("References")]
 	public Image chara;
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI dialogueText;
 	public TMP_FontAsset defaultFont;
+	private AudioClip soundToPlay;
 	public GameObject nextIndicator;
+
+	[Header("Other Variables")] // I actly feel like we can remove this entirely, and utilize Dialogue.cs instead
 	[HideInInspector] public float textSpeed;
 	[HideInInspector] public float textPunctSpeed;
 	[SerializeField] private int lettersUntilSFX;
 
-	public Queue<string> sentences;
+	[Header("Flags")]
+	[HideInInspector] public bool open; // Used in Animator
+	[HideInInspector] private bool skip;
+	[HideInInspector] private bool canNext;
 
-	private Animator anim;
-	public bool open;
-	private bool skip;
-	private bool canNext;
-
-	private AudioSource aSource;
-	private AudioClip soundToPlay;
-
-	void Start()
-	{
+    private void Awake()
+    {
+		anim = GetComponent<Animator>();
 		aSource = GetComponent<AudioSource>();
 		sentences = new Queue<string>();
-		anim = GetComponent <Animator>();
+	}
+
+    void Start()
+	{
+
 	}
 
     private void Update()
