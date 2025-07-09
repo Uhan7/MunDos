@@ -3,21 +3,20 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private GameObject pastPauseMenu;
+    [SerializeField] private string pauseMenuName;
 
     [Header("Referenced Components")]
-    [HideInInspector] private PauseMenuManager pastPauseMenuScript;
+    [HideInInspector] private PauseMenuManager pauseMenuScript;
 
     private void Awake()
     {
         EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE, TogglePause);
-
-        pastPauseMenuScript = pastPauseMenu.GetComponent<PauseMenuManager>();
     }
 
     public void TogglePause()
     {
-        pastPauseMenuScript.active = !pastPauseMenuScript.active;
-        Time.timeScale = pastPauseMenuScript.active ? 0 : 1;
+        pauseMenuScript = GameObject.Find(pauseMenuName).GetComponent<PauseMenuManager>();
+        pauseMenuScript.active = !pauseMenuScript.active;
+        Time.timeScale = pauseMenuScript.active ? 0 : 1;
     }
 }
