@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EventNames
 {
-	public const string GAME_PAUSED = "GAME_PAUSED";
+	public const string TOGGLE_PAUSE = "TOGGLE_PAUSE";
 }
 
 

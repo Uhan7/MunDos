@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("References")]
+    [SerializeField] private GameObject pastPauseMenu;
+
+    [Header("Referenced Components")]
+    [HideInInspector] private PauseMenuManager pastPauseMenuScript;
+
+    private void Awake()
     {
-        
+        EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE, TogglePause);
+
+        pastPauseMenuScript = pastPauseMenu.GetComponent<PauseMenuManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TogglePause()
     {
-        
+        pastPauseMenuScript.active = !pastPauseMenuScript.active;
+        Time.timeScale = pastPauseMenuScript.active ? 0 : 1;
     }
 }

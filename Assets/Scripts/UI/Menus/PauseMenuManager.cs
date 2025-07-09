@@ -24,10 +24,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void TogglePause()
     {
-        //active = !active;
-        //Time.timeScale = active ? 0 : 1;
-
-        EventBroadcaster.Instance.PostEvent(EventNames.GAME_PAUSED);
+        EventBroadcaster.Instance.PostEvent(EventNames.TOGGLE_PAUSE);
     }
 
     public void toggleSettingsScreen()
