@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool startOnEnable;
     [SerializeField] private bool startFromTrigger;
     [SerializeField] private bool isSign;
-    [SerializeField] private bool willStopMovement;
+    [SerializeField] private bool willFocus;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private bool linksToOtherDialogue;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
@@ -90,7 +90,7 @@ public class DialogueTrigger : MonoBehaviour
 	{
         if (dialogueHolder == null) print("ERROR: No Dialogue Holder Found");
 
-        if (willStopMovement) ControlProtagMovement(false);
+        if (willFocus) Focus(false);
 
         dialogueIsTriggered = true;
         StartCoroutine(dialogueHolder.StartDialogue(dialogue));
@@ -113,7 +113,7 @@ public class DialogueTrigger : MonoBehaviour
     public void Deactivate()
     {
         protag = null;
-        if (willStopMovement) ControlProtagMovement(true);
+        if (willFocus) Focus(true);
 
         deactivateTimer -= Time.deltaTime;
         if (deactivateTimer <= 0) gameObject.SetActive(false);
@@ -134,7 +134,7 @@ public class DialogueTrigger : MonoBehaviour
         dialogueHolder = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
     }
 
-    void ControlProtagMovement(bool value)
+    void Focus(bool value)
     {
         if (protag == null)
         {
