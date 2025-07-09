@@ -19,9 +19,10 @@ public class PauseMenuManager : MonoBehaviour
         animator.SetBool("Active", active);
     }
 
-    public void togglePauseScreen()
+    public void TogglePause()
     {
         active = !active;
+        Time.timeScale = active ? 0 : 1;
     }
 
     public void toggleSettingsScreen()
