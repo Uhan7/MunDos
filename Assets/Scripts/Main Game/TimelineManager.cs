@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class TimelineManager : MonoBehaviour
 {
-    // Inputs
+    [Header("Key Inputs")]
     [SerializeField] private KeyCode switchTimelineKey;
 
-    // GameObjects
+    [Header("References")]
     [SerializeField] private GameObject pastTimeline;
     [SerializeField] private GameObject presentTimeline;
-
-    private int currentTimeline;
-    // 0 is Past and 1 is Present
-
-    // Transition Details
     [SerializeField] private GameObject presentTransition;
     [SerializeField] private GameObject pastTransition;
 
+    [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip transitionSound;
+
+    [Header("Flags")]
+    [HideInInspector] private int currentTimeline; // 0 is Past | 1 is Present
+    [HideInInspector] public bool canSwitch = true; // Used in GameManager.cs
 
     void Start()
     {
@@ -29,6 +29,8 @@ public class TimelineManager : MonoBehaviour
 
     void Update()
     {
+        if (!canSwitch) return;
+
         if (Input.GetKeyDown(switchTimelineKey)) StartCoroutine(SwitchTimeline(0.05f));
     }
 

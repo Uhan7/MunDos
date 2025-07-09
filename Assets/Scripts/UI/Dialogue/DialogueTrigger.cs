@@ -90,7 +90,7 @@ public class DialogueTrigger : MonoBehaviour
 	{
         if (dialogueHolder == null) print("ERROR: No Dialogue Holder Found");
 
-        if (willFocus) Focus(false);
+        if (willFocus) Focus(true);
 
         dialogueIsTriggered = true;
         StartCoroutine(dialogueHolder.StartDialogue(dialogue));
@@ -113,7 +113,7 @@ public class DialogueTrigger : MonoBehaviour
     public void Deactivate()
     {
         protag = null;
-        if (willFocus) Focus(true);
+        if (willFocus) Focus(false);
 
         deactivateTimer -= Time.deltaTime;
         if (deactivateTimer <= 0) gameObject.SetActive(false);
@@ -140,13 +140,5 @@ public class DialogueTrigger : MonoBehaviour
         param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
 
         EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
-
-        //if (protag == null)
-        //{
-        //    protag = GameObject.FindGameObjectWithTag(PROTAG_TAG);
-        //    protagMovementScript = protag.GetComponent<PlayerMove>();
-        //}
-
-        //protagMovementScript.canMove = value;
     }
 }

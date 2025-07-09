@@ -28,8 +28,9 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] public bool open; // Used in Animator
 	[HideInInspector] private bool skip;
 	[HideInInspector] private bool canNext;
+	[HideInInspector] public bool canClick; // Used in GameManager.cs
 
-    private void Awake()
+	private void Awake()
     {
 		InitializeComponents();
 	}
@@ -38,7 +39,7 @@ public class DialogueManager : MonoBehaviour
     {
 		anim.SetBool("Open", open);
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonUp(0) && canClick)
 		{
 			skip = true;
 			if (canNext) DisplayNextSentence();
