@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    [Header("References")]
+    private PlayerMove moveScript;
+
     [Header("GameObjects")]
     [SerializeField] private GameObject interactableFeedbackObject;
 
@@ -23,6 +26,11 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] public ItemData currentItemData; // Used in PlayeritemsManager
     [SerializeField] public ItemData[] itemDatas; // Used in PlayeritemsManager
     [SerializeField] public int playerItemIndex; // Used in PlayeritemsManager
+
+    private void Awake()
+    {
+        moveScript = GetComponent<PlayerMove>();
+    }
 
     private void Start()
     {
@@ -89,11 +97,12 @@ public class PlayerInteract : MonoBehaviour
     void InteractableFeedback()
     {
         interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null);
+        if (nearbyEnvi == null || !moveScript.canMove) interactableFeedbackObject.SetActive(false);
     }
 
     void Interact()
     {
-        if (nearbyEnvi == null) return;
+        if (nearbyEnvi == null || !moveScript.canMove) return;
 
         if (currentItemData.itemName == "") nearbyEnvi.GetComponent<InteractableObject>().Interact();
         else

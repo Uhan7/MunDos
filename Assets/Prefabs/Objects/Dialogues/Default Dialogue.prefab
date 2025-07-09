@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1317018446988142921}
   - component: {fileID: 8439490232393766861}
   m_Layer: 0
-  m_Name: Dialogue Trigger
+  m_Name: Default Dialogue
   m_TagString: Dialogue Zone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,19 +46,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 21300000, guid: dc99f5b83dc944550839ba63fa34b687, type: 3}
-    name: Sample NPC
-    soundToPlay: {fileID: 0}
+    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    name: Default Name
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.024
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - This is the default dialogue trigger attached to this NPC.
-    - Usually an NPC would also give the protag some dialogue...
+    - This is the default dialogue.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
+  willStopMovement: 0
   deactivateAfter: 1
+  linksToOtherDialogue: 0
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5

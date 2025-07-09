@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -21,10 +22,11 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool isSign;
     [SerializeField] private bool willStopMovement;
     [SerializeField] private bool deactivateAfter = true;
-    [SerializeField] private GameObject nextDialogue;
+    [SerializeField] private bool linksToOtherDialogue;
+    [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
+    [ShowIf("linksToOtherDialogue")] [SerializeField] private float nextDialogueTime = 0.5f;
 
     [Header("Timers")]
-    [SerializeField] private float nextDialogueTime = 0.5f;
     [HideInInspector] private float deactivateTimer;
     [HideInInspector] private float nextDialogueTimer;
 
@@ -110,8 +112,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Deactivate()
     {
-        if (nextDialogue != null) return;
-
         protag = null;
         if (willStopMovement) ControlProtagMovement(true);
 

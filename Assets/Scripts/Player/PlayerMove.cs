@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (canMove) InputUpdate();
+        InputUpdate();
         AnimUpdate();
     }
 
@@ -65,6 +65,16 @@ public class PlayerMove : MonoBehaviour
 
     void InputUpdate()
     {
+        if (!canMove)
+        {
+            getMoveLeftKey = false;
+            getMoveRightKey = false;
+            isWalking = false;
+            jumpIsQueued = false;
+
+            return;
+        }
+
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
         isWalking = Input.GetKey(walkKey);
