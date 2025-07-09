@@ -985,6 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueHolderName: 
   dialogue:
     character: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
     name: Santi
@@ -998,9 +999,9 @@ MonoBehaviour:
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
+  deactivateAfter: 0
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
-  deactivateAfter: 0
 --- !u!1 &369727672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
@@ -1921,6 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueHolderName: 
   dialogue:
     character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
     name: Liezel
@@ -1934,9 +1936,9 @@ MonoBehaviour:
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 1
+  deactivateAfter: 1
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
-  deactivateAfter: 1
 --- !u!4 &1005655896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8885746645249451939, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -2425,6 +2427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueHolderName: 
   dialogue:
     character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
     name: Liezel
@@ -2439,9 +2442,9 @@ MonoBehaviour:
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
+  deactivateAfter: 1
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0
-  deactivateAfter: 1
 --- !u!61 &1486542057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3047,6 +3050,10 @@ PrefabInstance:
       value: 0.024
       objectReference: {fileID: 0}
     - target: {fileID: 6894275162033542349, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogueHolderName
+      value: Dialogue Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894275162033542349, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.textPunctSpeed
       value: 0.18
       objectReference: {fileID: 0}
@@ -3065,6 +3072,10 @@ PrefabInstance:
     - target: {fileID: 8055836150143551405, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.name
       value: Guard 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055836150143551405, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogueHolderName
+      value: Dialogue Holder
       objectReference: {fileID: 0}
     - target: {fileID: 8055836150143551405, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -3268,6 +3279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueHolderName: 
   dialogue:
     character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
     name: Liezel
@@ -3281,9 +3293,9 @@ MonoBehaviour:
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
+  deactivateAfter: 1
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0
-  deactivateAfter: 1
 --- !u!61 &1931903599
 BoxCollider2D:
   m_ObjectHideFlags: 0

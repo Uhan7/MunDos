@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class PlayeritemsManager : MonoBehaviour
 {
-    //[Header("Components")]
-
     [Header("Protag References")]
     [SerializeField] private GameObject pastProtag;
     [SerializeField] private GameObject presentProtag;
