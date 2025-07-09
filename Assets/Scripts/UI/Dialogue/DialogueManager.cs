@@ -35,6 +35,11 @@ public class DialogueManager : MonoBehaviour
 		InitializeComponents();
 	}
 
+    private void Start()
+    {
+		canClick = true;
+    }
+
     private void Update()
     {
 		anim.SetBool("Open", open);

@@ -31,7 +31,7 @@ public class InteractableObject : MonoBehaviour
             }
         }
 
-        if (interactableOnlyOnce) enabled = false;
+        if (interactableOnlyOnce) GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public void ItemInteract(bool var)
