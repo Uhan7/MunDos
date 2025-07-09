@@ -136,12 +136,17 @@ public class DialogueTrigger : MonoBehaviour
 
     void Focus(bool value)
     {
-        if (protag == null)
-        {
-            protag = GameObject.FindGameObjectWithTag(PROTAG_TAG);
-            protagMovementScript = protag.GetComponent<PlayerMove>();
-        }
+        Parameters param = new Parameters();
+        param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
 
-        protagMovementScript.canMove = value;
+        EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
+
+        //if (protag == null)
+        //{
+        //    protag = GameObject.FindGameObjectWithTag(PROTAG_TAG);
+        //    protagMovementScript = protag.GetComponent<PlayerMove>();
+        //}
+
+        //protagMovementScript.canMove = value;
     }
 }

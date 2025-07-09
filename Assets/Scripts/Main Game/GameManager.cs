@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Constants")]
+    [SerializeField] private const string PROTAG_TAG = "Protag";
+
     [Header("References")]
     [SerializeField] private string pauseMenuName;
     [SerializeField] private string dialogueHolderName;
-    [SerializeField] private string protagTag;
 
     [Header("Referenced Components")]
     [HideInInspector] private PauseMenuManager pauseMenuScript;
@@ -14,7 +16,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE, TogglePause);
-        EventBroadcaster.Instance.AddObserver(EventNames.FOCUS_DIALOGUE, TogglePause);
+        EventBroadcaster.Instance.AddObserver(EventNames.FOCUS_DIALOGUE, FocusDialogue);
     }
 
     // Event Broadcasting Functions --------------------------------------------
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
 
     public void FocusDialogue(Parameters param)
     {
+        if (protagMoveScript == null) protagMoveScript = GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerMove>();
 
+        protagMoveScript.canMove = param.GetBoolExtra(ParamNames.IS_FOCUSING_DIALOGUE, false);
     }
 }
