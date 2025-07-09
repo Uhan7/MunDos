@@ -7,6 +7,11 @@ public class GameMenus : MonoBehaviour
     [SerializeField] private GameObject mainMenu_UI;
     [SerializeField] private GameObject gameDisplay;
 
+    private void Start()
+    {
+        Debug.Log(gameObject);
+    }
+
     public void goToMainMenu()
     {
         mainMenu_UI.SetActive(true);

@@ -96,13 +96,18 @@ public class PlayerInteract : MonoBehaviour
 
     void InteractableFeedback()
     {
+        if (!moveScript.canMove)
+        {
+            interactableFeedbackObject.SetActive(false);
+            return;
+        }
+
         interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null);
-        if (nearbyEnvi == null || !moveScript.canMove) interactableFeedbackObject.SetActive(false);
     }
 
     void Interact()
     {
-        if (nearbyEnvi == null || !moveScript.canMove) return;
+        if ((nearbyEnvi == null && nearbyItem == null) || !moveScript.canMove) return;
 
         if (currentItemData.itemName == "") nearbyEnvi.GetComponent<InteractableObject>().Interact();
         else
