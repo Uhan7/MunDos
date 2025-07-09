@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GameObject floorChecker;
-    private FloorChecker floorCheckerScript;
+    [HideInInspector] private FloorChecker floorCheckerScript;
 
     [Header("Inputs")]
     [SerializeField] private KeyCode moveLeftKey = KeyCode.A;
@@ -27,10 +27,11 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
 
     [Header("Flags")]
-    private bool getMoveLeftKey;
-    private bool getMoveRightKey;
-    private bool isWalking;
-    private bool jumpIsQueued;
+    [HideInInspector] public bool canMove = true; // Used in DialogueTrigger.cs
+    [HideInInspector] private bool getMoveLeftKey;
+    [HideInInspector] private bool getMoveRightKey;
+    [HideInInspector] private bool isWalking;
+    [HideInInspector] private bool jumpIsQueued;
 
     // Functions ---------------------------------------------------------------
 
@@ -43,12 +44,12 @@ public class PlayerMove : MonoBehaviour
 
     private void Start()
     {
-        
+        canMove = true;
     }
 
     void Update()
     {
-        InputUpdate();
+        if (canMove) InputUpdate();
         AnimUpdate();
     }
 
@@ -67,6 +68,7 @@ public class PlayerMove : MonoBehaviour
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
         isWalking = Input.GetKey(walkKey);
+
         if (Input.GetKeyDown(jumpKey) && floorCheckerScript.onGround) jumpIsQueued = true;
     }
 
@@ -92,7 +94,6 @@ public class PlayerMove : MonoBehaviour
     {
         if (jumpIsQueued)
         {
-            print("jump");
             rb.linearVelocityY = 0;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 

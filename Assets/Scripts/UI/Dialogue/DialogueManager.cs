@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private Queue<string> sentences;
 
 	[Header("References")]
-	[SerializeField] private Image chara;
+	[SerializeField] private Image character;
 	[SerializeField] private TextMeshProUGUI nameText;
 	[SerializeField] private TextMeshProUGUI dialogueText;
 	[SerializeField] private TMP_FontAsset defaultFont;
@@ -132,23 +132,23 @@ public class DialogueManager : MonoBehaviour
 
 	void InitializeDialogueValues(Dialogue dialogue)
     {
-		skip = false;
-		canNext = false;
+        skip = false;
+        canNext = false;
 
-		nameText.text = dialogue.name;
-		chara.sprite = dialogue.character;
-		soundToPlay = dialogue.soundToPlay;
-		textSpeed = dialogue.textSpeed;
-		textPunctSpeed = dialogue.textPunctSpeed;
+        nameText.text = dialogue.name;
+        character.sprite = dialogue.character;
+        soundToPlay = dialogue.soundToPlay;
+        textSpeed = dialogue.textSpeed;
+        textPunctSpeed = dialogue.textPunctSpeed;
 
-		if (dialogue.font == null) dialogueText.font = defaultFont;
-		else dialogueText.font = dialogue.font;
+        if (dialogue.font == null) dialogueText.font = defaultFont;
+        else dialogueText.font = dialogue.font;
 
-		nextIndicator.SetActive(false);
-		gameObject.SetActive(true);
-		open = true;
+        nextIndicator.SetActive(false);
+        gameObject.SetActive(true);
+        open = true;
 
-		dialogueText.text = " ";
-	}
+        dialogueText.text = " ";
+    }
 
 }

@@ -6,16 +6,20 @@ public class DialogueTrigger : MonoBehaviour
 {
     [Header("Constants")]
     [HideInInspector] private const float DEACTIVATE_TIME = 0.1f;
+    [HideInInspector] private const string PROTAG_TAG = "Protag";
 
     [Header("References")]
     [SerializeField] private string dialogueHolderName = "Dialogue Holder";
     [HideInInspector] private DialogueManager dialogueHolder;
     [SerializeField] private Dialogue dialogue;
+    [HideInInspector] private GameObject protag;
+    [HideInInspector] private PlayerMove protagMovementScript;
 
     [Header("Properties")]
     [SerializeField] private bool startOnEnable;
     [SerializeField] private bool startFromTrigger;
     [SerializeField] private bool isSign;
+    [SerializeField] private bool willStopMovement;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private GameObject nextDialogue;
 
@@ -61,7 +65,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (!startFromTrigger) return;
 
-        if (col.gameObject.CompareTag("Protag"))
+        if (col.gameObject.CompareTag(PROTAG_TAG))
         {
             TriggerDialogue();
         }
@@ -71,7 +75,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (!startFromTrigger) return;
 
-        if (col.gameObject.CompareTag("Protag"))
+        if (col.gameObject.CompareTag(PROTAG_TAG))
         {
             if (isSign) dialogueHolder.EndDialogue();
             if (isSign && deactivateAfter) Deactivate();
@@ -84,8 +88,9 @@ public class DialogueTrigger : MonoBehaviour
 	{
         if (dialogueHolder == null) print("ERROR: No Dialogue Holder Found");
 
-        dialogueIsTriggered = true;
+        if (willStopMovement) ControlProtagMovement(false);
 
+        dialogueIsTriggered = true;
         StartCoroutine(dialogueHolder.StartDialogue(dialogue));
     }
 
@@ -97,7 +102,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void ActivateOtherDialogue(GameObject nextDialogue)
     {
-        nextDialogue.transform.position = GameObject.FindGameObjectWithTag("Protag").transform.position;
+        nextDialogue.transform.position = GameObject.FindGameObjectWithTag(PROTAG_TAG).transform.position;
         nextDialogue.SetActive(true);
 
         if (deactivateAfter) gameObject.SetActive(false);
@@ -107,12 +112,17 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (nextDialogue != null) return;
 
+        protag = null;
+        if (willStopMovement) ControlProtagMovement(true);
+
         deactivateTimer -= Time.deltaTime;
         if (deactivateTimer <= 0) gameObject.SetActive(false);
     }
 
     public void ResetValues()
     {
+        protag = null;
+
         deactivateTimer = DEACTIVATE_TIME;
         nextDialogueTimer = nextDialogueTime;
 
@@ -122,5 +132,16 @@ public class DialogueTrigger : MonoBehaviour
     void InitializeReferences()
     {
         dialogueHolder = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
+    }
+
+    void ControlProtagMovement(bool value)
+    {
+        if (protag == null)
+        {
+            protag = GameObject.FindGameObjectWithTag(PROTAG_TAG);
+            protagMovementScript = protag.GetComponent<PlayerMove>();
+        }
+
+        protagMovementScript.canMove = value;
     }
 }
