@@ -2,18 +2,21 @@ using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
 {
+    [Header("Components")]
+    [HideInInspector] private Animator animator;
+
+    [Header("Window References")]
     [SerializeField] private GameObject saveUI;
     [SerializeField] private GameObject settingsUI;
 
-    private Animator animator;
-    private bool active = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Flags")]
+    [HideInInspector] public bool active = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         animator.SetBool("Active", active);
@@ -21,14 +24,17 @@ public class PauseMenuManager : MonoBehaviour
 
     public void TogglePause()
     {
-        active = !active;
-        Time.timeScale = active ? 0 : 1;
+        //active = !active;
+        //Time.timeScale = active ? 0 : 1;
+
+        EventBroadcaster.Instance.PostEvent(EventNames.GAME_PAUSED);
     }
 
     public void toggleSettingsScreen()
     {
         settingsUI.SetActive(!settingsUI.activeInHierarchy);
     }
+
     public void toggleSaveScreen()
     {
         saveUI.SetActive(!saveUI.activeInHierarchy);
