@@ -49,14 +49,14 @@ MonoBehaviour:
     name: Sample NPC
     soundToPlay: {fileID: 0}
     font: {fileID: 0}
-    textSpeed: 0.03
-    textPunctSpeed: 0.1
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
     sentences:
     - This is the default dialogue trigger attached to this NPC.
     - Usually an NPC would also give the protag some dialogue...
   startOnEnable: 1
   startFromTrigger: 0
-  startFromInteract: 0
   isSign: 0
   nextDialogue: {fileID: 7692233765174016914}
   nextDialogueTime: 0.5
@@ -319,6 +319,7 @@ MonoBehaviour:
   toDeactivateOnInteract: []
   toActivateOnValidInteract: []
   toDeactivateOnValidInteract: []
+  interactableOnlyOnce: 0
 --- !u!1 &7475890661137794651
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,11 +507,11 @@ MonoBehaviour:
     font: {fileID: 0}
     textSpeed: 0.03
     textPunctSpeed: 0.1
+    lettersUntilSFX: 3
     sentences:
     - Kinda like this!
   startOnEnable: 1
   startFromTrigger: 0
-  startFromInteract: 0
   isSign: 0
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0

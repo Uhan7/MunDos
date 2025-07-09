@@ -12,17 +12,17 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private Queue<string> sentences;
 
 	[Header("References")]
-	public Image chara;
-	public TextMeshProUGUI nameText;
-	public TextMeshProUGUI dialogueText;
-	public TMP_FontAsset defaultFont;
-	private AudioClip soundToPlay;
-	public GameObject nextIndicator;
+	[SerializeField] private Image chara;
+	[SerializeField] private TextMeshProUGUI nameText;
+	[SerializeField] private TextMeshProUGUI dialogueText;
+	[SerializeField] private TMP_FontAsset defaultFont;
+	[SerializeField] private GameObject nextIndicator;
 
-	[Header("Other Variables")] // I actly feel like we can remove this entirely, and utilize Dialogue.cs instead
-	[HideInInspector] public float textSpeed;
-	[HideInInspector] public float textPunctSpeed;
-	[SerializeField] private int lettersUntilSFX;
+	[Header("Other Variables")]
+	[HideInInspector] private float textSpeed;
+	[HideInInspector] private float textPunctSpeed;
+	[HideInInspector] private int lettersUntilSFX = 3;
+	[HideInInspector] private AudioClip soundToPlay;
 
 	[Header("Flags")]
 	[HideInInspector] public bool open; // Used in Animator
@@ -31,14 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-		anim = GetComponent<Animator>();
-		aSource = GetComponent<AudioSource>();
-		sentences = new Queue<string>();
-	}
-
-    void Start()
-	{
-
+		InitializeComponents();
 	}
 
     private void Update()
@@ -48,35 +41,15 @@ public class DialogueManager : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			skip = true;
-
-			if (canNext)
-			{
-				canNext = false;
-				skip = false;
-				nextIndicator.SetActive(false);
-				DisplayNextSentence();
-			}
+			if (canNext) DisplayNextSentence();
 		}
 	}
 
+	// Coroutines --------------------------------------------------------------
+
     public IEnumerator StartDialogue(Dialogue dialogue)
 	{
-		skip = false;
-		canNext = false;
-
-		nameText.text = dialogue.name;
-		chara.sprite = dialogue.character;
-		soundToPlay = dialogue.soundToPlay;
-		textSpeed = dialogue.textSpeed;
-		textPunctSpeed = dialogue.textPunctSpeed;
-		if (dialogue.font == null) dialogueText.font = defaultFont;
-		else dialogueText.font = dialogue.font;
-
-		nextIndicator.SetActive(false);
-		gameObject.SetActive(true);
-		open = true;
-
-		dialogueText.text = " ";
+		InitializeDialogueValues(dialogue);
 
 		yield return new WaitForSeconds(0.4f);
 		sentences.Clear();
@@ -89,39 +62,19 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
-	public void DisplayNextSentence()
-	{
-		if (sentences.Count == 0)
-		{
-			EndDialogue();
-			return;
-		}
-
-		string sentence = sentences.Dequeue();
-		StopAllCoroutines();
-		StartCoroutine(TypeSentence(sentence, textSpeed, textPunctSpeed));
-	}
-
-	IEnumerator TypeSentence(string sentence, float textSpeed, float textPunctSpeed)
+	IEnumerator TypeSentence(string sentence)
 	{
 		dialogueText.text = "";
-		yield return new WaitForSeconds(0.05f);
+
 		foreach (char letter in sentence.ToCharArray())
 		{
 			if (!skip && !canNext)
 			{
-				if (dialogueText.text.Length % lettersUntilSFX == 0)
-					aSource.PlayOneShot(soundToPlay);
-
 				dialogueText.text += letter;
+				if (dialogueText.text.Length % lettersUntilSFX == 0) aSource.PlayOneShot(soundToPlay);
 
 				float delay = (letter == '.' || letter == '?' || letter == '!' || letter == ',') ? textPunctSpeed : textSpeed;
-				float timer = 0f;
-				while (timer < delay && !skip)
-				{
-					timer += Time.deltaTime;
-					yield return null;
-				}
+				yield return new WaitForSeconds(delay);
 			}
 
 			if (skip)
@@ -133,18 +86,69 @@ public class DialogueManager : MonoBehaviour
 
 		if (dialogueText.text == sentence)
 		{
-			if (sentences.Count > 0)
-				nextIndicator.SetActive(true);
-			canNext = true;
+			FinishSentence();
 		}
 	}
 
-	public void EndDialogue()
+	// Helper Functions --------------------------------------------------------
+
+	public void DisplayNextSentence() // Used in DialogueTrigger.cs
+	{
+		canNext = false;
+		skip = false;
+		nextIndicator.SetActive(false);
+
+		if (sentences.Count == 0)
+		{
+			EndDialogue();
+			return;
+		}
+
+		string sentence = sentences.Dequeue();
+		StopAllCoroutines();
+		StartCoroutine(TypeSentence(sentence));
+	}
+
+	public void EndDialogue() // Used in DialogueTrigger.cs
 	{
 		skip = true;
 		open = false;
 		sentences.Clear();
 		StopAllCoroutines();
+	}
+
+	void FinishSentence()
+    {
+		if (sentences.Count > 0) nextIndicator.SetActive(true);
+		canNext = true;
+	}
+
+	void InitializeComponents()
+    {
+		anim = GetComponent<Animator>();
+		aSource = GetComponent<AudioSource>();
+		sentences = new Queue<string>();
+	}
+
+	void InitializeDialogueValues(Dialogue dialogue)
+    {
+		skip = false;
+		canNext = false;
+
+		nameText.text = dialogue.name;
+		chara.sprite = dialogue.character;
+		soundToPlay = dialogue.soundToPlay;
+		textSpeed = dialogue.textSpeed;
+		textPunctSpeed = dialogue.textPunctSpeed;
+
+		if (dialogue.font == null) dialogueText.font = defaultFont;
+		else dialogueText.font = dialogue.font;
+
+		nextIndicator.SetActive(false);
+		gameObject.SetActive(true);
+		open = true;
+
+		dialogueText.text = " ";
 	}
 
 }
