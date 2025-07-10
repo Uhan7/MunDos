@@ -10,24 +10,27 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Conditionals")]
     [ShowIf("checksConditionalObject")] [SerializeField] private GameObject[] conditionalObjectsToCheck;
-    [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnInteract;
-    [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnValidInteract;
+    [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnValidInteractOnly;
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateOnInteract;
     [SerializeField] private GameObject[] toDeactivateOnInteract;
 
+    [Header("Item Interactions")]
     [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toActivateOnValidInteract;
     [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnValidInteract;
     [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toActivateOnInvalidInteract;
     [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
 
+    [Header("Flags")]
+    [ShowIf("checksConditionalObject")] [HideInInspector] private bool alreadyChecked = false;
+
     public void Interact()
     {
-        Debug.Log(gameObject + " did something.");
-
         SetAll(toActivateOnInteract, true);
         SetAll(toDeactivateOnInteract, false);
+
+        if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddCheck();
 
         if (interactableOnlyOnce) GetComponent<BoxCollider2D>().enabled = false;
     }
@@ -49,6 +52,7 @@ public class InteractableObject : MonoBehaviour
         {
             SetAll(toActivateOnValidInteract, true);
             SetAll(toDeactivateOnValidInteract, false);
+            if (conditionalObjectsToCheck != null && checkOnValidInteractOnly) AddCheck();
         }
     }
 
@@ -56,5 +60,20 @@ public class InteractableObject : MonoBehaviour
     {
         if (objects == null) return;
         foreach (GameObject obj in objects) obj.SetActive(value);
+    }
+
+    void AddCheck()
+    {
+        if (alreadyChecked) return;
+
+        foreach (GameObject conditionalObject in conditionalObjectsToCheck)
+        {
+            ConditionalObject conditionalObjectScript = conditionalObject.GetComponent<ConditionalObject>();
+
+            conditionalObjectScript.currentChecks++;
+            if (conditionalObjectScript.currentChecks >= conditionalObjectScript.requiredChecks) conditionalObject.SetActive(true);
+        }
+
+        alreadyChecked = true;
     }
 }
