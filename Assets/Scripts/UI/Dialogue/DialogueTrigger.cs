@@ -88,7 +88,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
 	{
-        if (dialogueHolder == null) print("ERROR: No Dialogue Holder Found");
+        if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) dialogueHolder = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
+        if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) Debug.Log("<color=red>Error: Dialogue Holder not Found</color>");
 
         if (willFocus) Focus(true);
 
