@@ -10,6 +10,7 @@ public class Room : MonoBehaviour
     {
         if (col.gameObject.tag != "Protag") return;
 
+        roomCamera.GetComponent<CinemachineCamera>().Target.TrackingTarget = col.gameObject.transform;
         roomCamera.SetActive(true);
     }
 

@@ -23,9 +23,9 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] private GameObject nearbyItem;
 
     [Header("Playeritems Data")]
-    [SerializeField] public ItemData currentItemData; // Used in PlayeritemsManager
-    [SerializeField] public ItemData[] itemDatas; // Used in PlayeritemsManager
-    [SerializeField] public int playerItemIndex; // Used in PlayeritemsManager
+    [HideInInspector] public ItemData currentItemData; // Used in PlayeritemsManager
+    [HideInInspector] public ItemData[] itemDatas; // Used in PlayeritemsManager
+    [HideInInspector] public int playerItemIndex; // Used in PlayeritemsManager
 
     private void Awake()
     {
