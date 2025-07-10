@@ -24,6 +24,7 @@ public class Item : MonoBehaviour
     public void PickedUp()
     {
         GetComponent<InteractableObject>().Interact();
+        GetComponent<BoxCollider2D>().enabled = false;
 
         // Put anims here that will make it fade out or whatever
 

@@ -105,7 +105,7 @@ public class PlayerInteract : MonoBehaviour
 
     void Interact()
     {
-        if ((nearbyEnvi == null && nearbyItem == null) || !moveScript.canMove) return;
+        if ((nearbyEnvi == null) || !moveScript.canMove) return;
 
         if (currentItemData.itemName == "") nearbyEnvi.GetComponent<InteractableObject>().Interact();
         else
@@ -146,6 +146,8 @@ public class PlayerInteract : MonoBehaviour
 
     void PickupItem()
     {
+        if ((nearbyItem == null) || !moveScript.canMove) return;
+
         Item actualItem = nearbyItem.GetComponent<Item>();
 
         playerItemIndex = FindEmptySlot();
