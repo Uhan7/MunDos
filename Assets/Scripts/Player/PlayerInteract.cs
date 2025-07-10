@@ -82,8 +82,6 @@ public class PlayerInteract : MonoBehaviour
             default:
                 break;
         }
-
-        Debug.Log(nearbyEnvi);
     }
 
     private void OnTriggerExit2D(Collider2D col)

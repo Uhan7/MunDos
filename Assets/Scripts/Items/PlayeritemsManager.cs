@@ -3,19 +3,15 @@ using UnityEngine.UI;
 
 public class PlayeritemsManager : MonoBehaviour
 {
-    [Header("Protag References")]
-    [SerializeField] private GameObject pastProtag;
-    [SerializeField] private GameObject presentProtag;
-
-    [Header("Playeritem Slots References")]
+    [Header("References")]
+    [SerializeField] private PlayerInteract pastProtagScript;
+    [SerializeField] private PlayerInteract presentProtagScript;
     [SerializeField] private GameObject[] pastPlayeritemSlots;
     [SerializeField] private GameObject[] presentPlayeritemSlots;
-    [HideInInspector] private PlayerInteract pastProtagScript;
-    [HideInInspector] private PlayerInteract presentProtagScript;
 
     private void Awake()
     {
-        InitialCache();
+        //InitialCache();
     }
 
     private void Start()
@@ -26,37 +22,37 @@ public class PlayeritemsManager : MonoBehaviour
     // THIS IS TEMPORARY - don't put it in Update() since that's too expensive, wait for broadcast manager for dis.
     private void Update()
     {
-        DebugsUpdate();
-
         // TEMP ---
 
-        for (int i = 0; i < pastProtagScript.itemDatas.Length; i++)
-        {
-            if (pastProtagScript.itemDatas[i].itemName != "") pastPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = pastProtagScript.itemDatas[i].itemSprite;
+        if (pastProtagScript.gameObject.activeInHierarchy) {
+            for (int i = 0; i < pastProtagScript.itemDatas.Length; i++)
+            {
+                if (pastProtagScript.itemDatas[i].itemName != "") pastPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = pastProtagScript.itemDatas[i].itemSprite;
 
-            if (pastProtagScript.playerItemIndex == i) pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
-            else pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
+                if (pastProtagScript.playerItemIndex == i) pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+                else pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
+            }
         }
+
+        if (presentProtagScript.gameObject.activeInHierarchy) {
+            for (int i = 0; i < presentProtagScript.itemDatas.Length; i++)
+            {
+                if (presentProtagScript.itemDatas[i].itemName != "") presentPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = presentProtagScript.itemDatas[i].itemSprite;
+
+                if (presentProtagScript.playerItemIndex == i) presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+                else presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
+            }
+        }
+
         // TEMP ---
     }
 
     // Helper Functions --------------------------------------------------------
 
-    void DebugsUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.Equals)) Debug.Log(pastProtag.GetComponent<PlayerInteract>().currentItemData.itemName);
-    }
-
-    void InitialCache()
-    {
-        pastProtagScript = pastProtag.GetComponent<PlayerInteract>();
-        presentProtagScript = presentProtag.GetComponent<PlayerInteract>();
-    }
-
     void InitialValues()
     {
-        //foreach (GameObject slot in pastPlayeritemSlots) slot.SetActive(false);
-        //foreach (GameObject slot in presentPlayeritemSlots) slot.SetActive(false);
+        //foreach (GameObject slot in pastPlayeritemSlots) slot.GetComponent<InventorySlot>().IsSelected(false); ;
+        //foreach (GameObject slot in presentPlayeritemSlots) slot.GetComponent<InventorySlot>().IsSelected(false); ;
 
         //ERM
     }

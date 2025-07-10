@@ -7,7 +7,7 @@ public class InventorySlot : MonoBehaviour
     [HideInInspector] private Image imageComponent;
 
     [Header("ItemData Variables")]
-    [SerializeField] public ItemData data; // Used by InventoryManager.cs
+    [HideInInspector] public ItemData data; // Used by InventoryManager.cs
 
     [Header("Additional Slot Data")]
     [SerializeField] public Sprite defaultSprite;
@@ -15,12 +15,17 @@ public class InventorySlot : MonoBehaviour
 
     private void Awake()
     {
-        InitializeComponents();
+        if (gameObject.activeInHierarchy) InitializeComponents();
+    }
+
+    private void OnEnable()
+    {
+        if (imageComponent == null) InitializeComponents();
     }
 
     private void Start()
     {
-        InitializeValues();
+        
     }
 
     // Helper Functions --------------------------------------------------------
@@ -28,11 +33,6 @@ public class InventorySlot : MonoBehaviour
     private void InitializeComponents()
     {
         imageComponent = GetComponent<Image>();
-    }
-
-    private void InitializeValues()
-    {
-        defaultSprite = imageComponent.sprite;
     }
 
     public void IsSelected(bool value)
