@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Components")]
     [HideInInspector] public Rigidbody2D rb; // Used in Animator
+    [HideInInspector] private Animator anim;
 
     [Header("References")]
     [SerializeField] private GameObject floorChecker;
@@ -38,6 +39,7 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (GetComponent<Animator>() != null) anim = GetComponent<Animator>();
 
         floorCheckerScript = floorChecker.GetComponent<FloorChecker>();
     }
@@ -84,10 +86,11 @@ public class PlayerMove : MonoBehaviour
 
     void AnimUpdate()
     {
-        // Hello future johann, change this to actually flip it using sprite renderer
-
-        //if (getMoveLeftKey) transform.localScale = new Vector3(-1, 1, 1);
-        //if (getMoveRightKey) transform.localScale = new Vector3(1, 1, 1);
+        if (anim != null) anim.SetFloat("Speed", Mathf.Abs(rb.linearVelocityX));
+        // TEMP
+        if (getMoveLeftKey) GetComponent<SpriteRenderer>().flipX = true;
+        if (getMoveRightKey) GetComponent<SpriteRenderer>().flipX = false;
+        // TEMP
     }
 
     // FixedUpdate Functions ---------------------------------------------------
