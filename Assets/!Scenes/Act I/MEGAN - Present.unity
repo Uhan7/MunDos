@@ -363,6 +363,87 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 766124891}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &729736092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1429542910}
+    m_Modifications:
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: interactableOnlyOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: toDeactivateOnInteract.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toDeactivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1793033779}
+    - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_Name
+      value: Magic Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Is this a book?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!1001 &751462638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -574,11 +655,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 766124891}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1032313504 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8034374329919896082, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-  m_PrefabInstance: {fileID: 1429542908}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1077988277 stripped
 Transform:
@@ -1481,9 +1557,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2461079619452735314, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1299196293}
-    - targetCorrespondingSourceObject: {fileID: 8034374329919896082, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1974460992}
+      addedObject: {fileID: 1793033780}
     - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1426834464}
@@ -1638,6 +1714,16 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8377080888093370049, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
   m_PrefabInstance: {fileID: 1366058983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1793033779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 729736092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1793033780 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 729736092}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1865867904
 PrefabInstance:
@@ -1838,80 +1924,6 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1961009750}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1974460991
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1032313504}
-    m_Modifications:
-    - target: {fileID: 4810653292237545806, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: dialogue.name
-      value: Santi
-      objectReference: {fileID: 0}
-    - target: {fileID: 4810653292237545806, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: dialogue.character
-      value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
-    - target: {fileID: 4810653292237545806, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: A book?
-      objectReference: {fileID: 0}
-    - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_Name
-      value: Magic Book
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
---- !u!4 &1974460992 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
-  m_PrefabInstance: {fileID: 1974460991}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2019295880 stripped
 GameObject:
