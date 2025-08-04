@@ -1490,6 +1490,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 748031695511442356, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 850352392}
+    - targetCorrespondingSourceObject: {fileID: 3827805058514280027, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2127389740}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
 --- !u!4 &190561889 stripped
@@ -4528,7 +4531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toActivateOnValidInteract.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toActivateOnInvalidInteract.Array.size
@@ -4536,12 +4539,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toDeactivateOnValidInteract.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnValidInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 1600789671}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toActivateOnValidInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 894508809}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toActivateOnValidInteract.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1183932511}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnInvalidInteract.Array.data[0]'
       value: 
@@ -4550,6 +4561,18 @@ PrefabInstance:
       propertyPath: 'toDeactivateOnValidInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 392793528}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toDeactivateOnValidInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 859720282}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toDeactivateOnValidInteract.Array.data[2]'
+      value: 
+      objectReference: {fileID: 894508809}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toDeactivateOnValidInteract.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1183932511}
     - target: {fileID: 5224105977266933829, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5095,6 +5118,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 454485689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &455859365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3827805058514280027, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+  m_PrefabInstance: {fileID: 190561888}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &456681296
 PrefabInstance:
@@ -7029,6 +7057,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 320211176}
+    - targetCorrespondingSourceObject: {fileID: 3827805058514280027, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1370893635}
     - targetCorrespondingSourceObject: {fileID: 3827805058514280027, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1600789672}
@@ -9214,7 +9245,7 @@ PrefabInstance:
       objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Hole in Wall Dialogue
+      value: "It\u2019s dim, but I can see something huge just through this wall.."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9660,6 +9691,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2127389741}
+    - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
       objectReference: {fileID: 894508810}
@@ -9681,7 +9716,8 @@ PrefabInstance:
       objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
     - target: {fileID: 4810653292237545806, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Picked up Encoded Messages
+      value: A piece of paper? There are strange symbols written on it. Maybe Liezel
+        knows something about it.
       objectReference: {fileID: 0}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
@@ -12665,7 +12701,7 @@ PrefabInstance:
       objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Hole in Wall Dialogue
+      value: "It\u2019s dim, but I can see something huge just through this wall.."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13729,6 +13765,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1890057295}
     m_Modifications:
+    - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1370893636}
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: data.objectsToInteractWith.Array.size
       value: 1
@@ -13736,7 +13776,7 @@ PrefabInstance:
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'data.objectsToInteractWith.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 392793528}
     - target: {fileID: 4810653292237545806, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: (Pruners? I might be able to use this to cut something thick)
@@ -13943,6 +13983,85 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1825899020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1370893634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1344062539}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.299999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: Pruners Default DZ
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Protag
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 21300000, guid: d2811b6f7ece04be08cfd4e9ef6ea1a3, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: (Pruners? I might be able to use this to cut something thick)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &1370893635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1370893634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1370893636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1370893634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1373274408
 GameObject:
   m_ObjectHideFlags: 0
@@ -23916,6 +24035,86 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &2127389739
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 455859365}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.9599996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: Encoded Messages DZ
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: A piece of paper? There are strange symbols written on it. Maybe Liezel
+        knows something about it.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &2127389740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 2127389739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2127389741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 2127389739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2128544989
 PrefabInstance:
   m_ObjectHideFlags: 0
