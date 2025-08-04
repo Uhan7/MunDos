@@ -3071,7 +3071,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3516,7 +3516,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4638,14 +4638,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344062540}
     m_Modifications:
+    - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.3055556
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.9055555
+      objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: nextDialogue
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.name
-      value: Manong Guard
+      value: Guard 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
       value: 0
@@ -4689,6 +4701,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 686790589}
     - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7489209857254242614, guid: 729b905b05f684cd29b3d4f811d82b14, type: 3}
+    - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayer
       value: 11
       objectReference: {fileID: 0}
@@ -4706,7 +4722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2617188
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4714,7 +4730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.21
+      value: -5.02
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4751,6 +4767,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+    - {fileID: 5552020753192407099, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -5073,8 +5090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 21300000, guid: dc99f5b83dc944550839ba63fa34b687, type: 3}
-    name: Pare Guard
+    character: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
+    name: Guard 2
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.024
@@ -5343,14 +5360,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1344062540}
     m_Modifications:
+    - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.3055556
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.9055555
+      objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: nextDialogue
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.name
-      value: Pare Guard
+      value: Guard 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
       value: 0
@@ -5394,6 +5423,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 686790589}
     - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7489209857254242614, guid: 729b905b05f684cd29b3d4f811d82b14, type: 3}
+    - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayer
       value: 11
       objectReference: {fileID: 0}
@@ -5410,8 +5443,12 @@ PrefabInstance:
       value: Pare Guard (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2617188
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5419,7 +5456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.48
+      value: -5.03
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5456,6 +5493,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+    - {fileID: 5552020753192407099, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -5801,7 +5839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.name
-      value: Sample NPC
+      value: Liezel
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: willStopMovement
@@ -6009,8 +6047,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 21300000, guid: dc99f5b83dc944550839ba63fa34b687, type: 3}
-    name: Manong Guard
+    character: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
+    name: Guard 3
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.024
@@ -7528,6 +7566,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 133634446}
     m_Modifications:
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: interactableOnlyOnce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5224105977266933829, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -7836,8 +7878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 21300000, guid: dc99f5b83dc944550839ba63fa34b687, type: 3}
-    name: Manong Guard
+    character: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
+    name: Guard 3
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.024
@@ -8809,7 +8851,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9124,6 +9166,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7274000007832646111, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+    - {fileID: 8255003823690498600, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
@@ -12514,7 +12557,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &787731022
 Transform:
   m_ObjectHideFlags: 0
@@ -13633,7 +13676,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14434,7 +14477,8 @@ PrefabInstance:
       value: It's dim, but there's nothing in this hole anymore.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9076638287892590626, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -15564,7 +15608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2982693498951795286, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3027770031256724468, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_Type
@@ -15943,6 +15987,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5294116822329713661, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294116822329713661, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294116822329713661, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294116822329713661, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -16161,7 +16217,19 @@ PrefabInstance:
     - target: {fileID: 8086936817856243150, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b23f01447bc7f41ef8b9b9a638bae27d, type: 3}
+      objectReference: {fileID: -3687348052613884379, guid: 210e0ceabb9584d058d0419bf85761fc, type: 3}
+    - target: {fileID: 8086936817856243150, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086936817856243150, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086936817856243150, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8158667747842355459, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -19376,6 +19444,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 185174248}
     m_Modifications:
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Guard 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
     - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayer
       value: 11
@@ -19432,6 +19508,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23843,7 +23927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
@@ -23876,6 +23960,10 @@ PrefabInstance:
     - target: {fileID: 921583235566090806, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700373094998933769, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1715724158557694326, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -23995,7 +24083,7 @@ PrefabInstance:
       objectReference: {fileID: 2590456727276172604, guid: 9dba5c8b0b6754ad1833e5873bca1fa3, type: 3}
     - target: {fileID: 3924468680107003354, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: orthographic size
-      value: 7.25
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 4222244736492314373, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24065,6 +24153,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5967103600618987183, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967103600618987183, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967103600618987183, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6038361984629754466, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -24083,11 +24183,11 @@ PrefabInstance:
       objectReference: {fileID: 2590456727276172604, guid: 9dba5c8b0b6754ad1833e5873bca1fa3, type: 3}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.111115
+      value: 94.04
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -3.0500002
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24135,6 +24235,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Maskable
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -24286,7 +24390,8 @@ PrefabInstance:
       value: It's dim, but there's nothing in this hole anymore.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9076638287892590626, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -25255,8 +25360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 21300000, guid: dc99f5b83dc944550839ba63fa34b687, type: 3}
-    name: Pare Guard
+    character: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
+    name: Guard 2
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.024
@@ -25696,8 +25801,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 21300000, guid: dc99f5b83dc944550839ba63fa34b687, type: 3}
-    name: Manong Guard
+    character: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
+    name: Guard 3
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     font: {fileID: 0}
     textSpeed: 0.024
@@ -26331,8 +26436,12 @@ PrefabInstance:
       objectReference: {fileID: 363772227}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.name
-      value: Kuya Guard
+      value: Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -5752662323679165942, guid: 69569551538d741e4b1100d2919f9f91, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 2
@@ -26377,6 +26486,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 686790589}
     - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7489209857254242614, guid: 729b905b05f684cd29b3d4f811d82b14, type: 3}
+    - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayer
       value: 11
       objectReference: {fileID: 0}
@@ -26394,7 +26507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2617188
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26402,7 +26515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.96
+      value: -4.77
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26439,9 +26552,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+    - {fileID: 5552020753192407099, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      insertIndex: 1
+      insertIndex: -1
       addedObject: {fileID: 363772226}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -30436,7 +30550,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -30880,8 +30994,12 @@ PrefabInstance:
       value: 0.7024457
       objectReference: {fileID: 0}
     - target: {fileID: 5224105977266933829, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4846131621145423175, guid: d46ec8d246cad457ca11b5052a79f2ac, type: 3}
+    - target: {fileID: 5224105977266933829, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
@@ -30889,15 +31007,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.1799994
+      value: 3.65
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.56
+      value: -4.11
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31113,7 +31231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2100159409
 Transform:
   m_ObjectHideFlags: 0
@@ -31602,7 +31720,7 @@ SpriteRenderer:
   m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -31736,7 +31854,7 @@ SpriteRenderer:
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
