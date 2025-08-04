@@ -24,12 +24,15 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool willFocus;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private bool linksToOtherDialogue;
+    [SerializeField] private GameObject[] objectsToSpawnAfter;
+    [SerializeField] private float activateObjectTime = 0.5f;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private float nextDialogueTime = 0.5f;
 
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
     [HideInInspector] private float nextDialogueTimer;
+    [HideInInspector] private float activateObjectTimer;
 
     [Header("Flags")]
     private bool dialogueIsTriggered;
@@ -37,6 +40,11 @@ public class DialogueTrigger : MonoBehaviour
     private void Awake()
     {
         InitializeReferences();
+    }
+
+    private void Start()
+    {
+        activateObjectTimer = activateObjectTime;
     }
 
     private void OnEnable()
@@ -48,13 +56,30 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
+        //if (objectsToSpawnAfter.Length != 0)
+        //{
+        //    WaitForOtherDialogue();
+        //    if (activateObjectTimer <= 0) ActivateOtherObjects();
+        //}
+
         if (dialogueHolder == null || dialogueHolder.open || !dialogueIsTriggered) return;
+
+        if (objectsToSpawnAfter.Length != 0)
+        {
+            Debug.Log("test 1");
+            //WaitForOtherDialogue();
+            //if (activateObjectTimer <= 0)
+                ActivateOtherObjects();
+        }
 
         if (nextDialogue != null)
         {
             WaitForOtherDialogue();
 
-            if (nextDialogueTimer <= 0) ActivateOtherDialogue(nextDialogue);
+            if (nextDialogueTimer <= 0)
+            {
+                ActivateOtherDialogue(nextDialogue);
+            }
         }
 
         else if (deactivateAfter)
@@ -103,6 +128,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         dialogueHolder.EndDialogue();
         nextDialogueTimer -= Time.deltaTime;
+        activateObjectTimer -= Time.deltaTime;
     }
 
     public void ActivateOtherDialogue(GameObject nextDialogue)
@@ -111,6 +137,11 @@ public class DialogueTrigger : MonoBehaviour
         nextDialogue.SetActive(true);
 
         if (deactivateAfter) gameObject.SetActive(false);
+    }
+
+    void ActivateOtherObjects()
+    {
+        foreach (GameObject objs in objectsToSpawnAfter) objs.SetActive(true);
     }
 
     public void Deactivate()
