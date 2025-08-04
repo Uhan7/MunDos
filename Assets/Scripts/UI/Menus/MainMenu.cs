@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         // REMOVE FOR FINAL BUILD:
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 
     public void togglePauseScreen()
