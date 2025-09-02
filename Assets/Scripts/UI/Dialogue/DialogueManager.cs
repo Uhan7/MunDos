@@ -70,30 +70,37 @@ public class DialogueManager : MonoBehaviour
 
 	IEnumerator TypeSentence(string sentence)
 	{
-		dialogueText.text = "";
+		dialogueText.text = sentence;
+		dialogueText.maxVisibleCharacters = 0;
 
-		foreach (char letter in sentence.ToCharArray())
+		yield return null;
+
+		int totalVisibleCharacters = dialogueText.textInfo.characterCount;
+		int counter = 0;
+
+		while (counter <= totalVisibleCharacters)
 		{
-			if (!skip && !canNext)
+			if (skip)
 			{
-				dialogueText.text += letter;
-				if (dialogueText.text.Length % lettersUntilSFX == 0) aSource.PlayOneShot(soundToPlay);
+				dialogueText.maxVisibleCharacters = totalVisibleCharacters;
+				break;
+			}
 
-				float delay = (letter == '.' || letter == '?' || letter == '!' || letter == ',') ? textPunctSpeed : textSpeed;
+			dialogueText.maxVisibleCharacters = counter;
+
+			if (counter % lettersUntilSFX == 0 && counter > 0) aSource.PlayOneShot(soundToPlay);
+
+			if (counter > 0)
+			{
+				char c = dialogueText.text[dialogueText.textInfo.characterInfo[counter - 1].index];
+				float delay = (c == '.' || c == '?' || c == '!' || c == ',') ? textPunctSpeed : textSpeed;
 				yield return new WaitForSeconds(delay);
 			}
 
-			if (skip)
-			{
-				dialogueText.text = sentence;
-				break;
-			}
+			counter++;
 		}
 
-		if (dialogueText.text == sentence)
-		{
-			FinishSentence();
-		}
+		FinishSentence();
 	}
 
 	// Helper Functions --------------------------------------------------------
