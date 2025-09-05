@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
 	[Header("Components")]
 	[HideInInspector] private Animator anim;
-	[HideInInspector] private AudioSource aSource;
+	[SerializeField] private AudioSource aSource;
 	[HideInInspector] private Queue<string> sentences;
 
 	[Header("References")]
@@ -17,6 +17,9 @@ public class DialogueManager : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI dialogueText;
 	[SerializeField] private TMP_FontAsset defaultFont;
 	[SerializeField] private GameObject nextIndicator;
+
+	[Header("Other Scripts")]
+	[HideInInspector] private CameraEffectsManager cameraEffectsManager;
 
 	[Header("Other Variables")]
 	[HideInInspector] private float textSpeed;
@@ -93,6 +96,7 @@ public class DialogueManager : MonoBehaviour
 			if (counter > 0)
 			{
 				char c = dialogueText.text[dialogueText.textInfo.characterInfo[counter - 1].index];
+				if (c == '~') cameraEffectsManager.ShakeScreen();
 				float delay = (c == '.' || c == '?' || c == '!' || c == ',') ? textPunctSpeed : textSpeed;
 				yield return new WaitForSeconds(delay);
 			}
@@ -139,8 +143,8 @@ public class DialogueManager : MonoBehaviour
 	void InitializeComponents()
     {
 		anim = GetComponent<Animator>();
-		aSource = GetComponent<AudioSource>();
 		sentences = new Queue<string>();
+		cameraEffectsManager = GetComponent<CameraEffectsManager>();
 	}
 
 	void InitializeDialogueValues(Dialogue dialogue)
