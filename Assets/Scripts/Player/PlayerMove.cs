@@ -9,20 +9,20 @@ public class PlayerMove : MonoBehaviour
     [HideInInspector] private Animator anim;
 
     [Header("References")]
-    [SerializeField] private GameObject floorChecker;
-    [HideInInspector] private FloorChecker floorCheckerScript;
+    //[SerializeField] private GameObject floorChecker;
+    //[HideInInspector] private FloorChecker floorCheckerScript;
 
     [Header("Inputs")]
     [SerializeField] private KeyCode moveLeftKey = KeyCode.A;
     [SerializeField] private KeyCode moveRightKey = KeyCode.D;
-    [SerializeField] private KeyCode walkKey = KeyCode.LeftShift;
-    [SerializeField] private KeyCode jumpKey = KeyCode.Space;
+    //[SerializeField] private KeyCode walkKey = KeyCode.LeftShift;
+    //[SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
     [Header("Horizontal Movement")]
     [SerializeField] private float runSpeed = 55f;
     [SerializeField] private float maxRunSpeed = 9.5f;
-    [SerializeField] private float walkSpeed = 20f;
-    [SerializeField] private float maxWalkSpeed = 4.5f;
+    //[SerializeField] private float walkSpeed = 20f;
+    //[SerializeField] private float maxWalkSpeed = 4.5f;
 
     [Header("Vertical Movement")]
     [SerializeField] private float jumpForce = 10f;
@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (GetComponent<Animator>() != null) anim = GetComponent<Animator>();
 
-        floorCheckerScript = floorChecker.GetComponent<FloorChecker>();
+        //floorCheckerScript = floorChecker.GetComponent<FloorChecker>();
     }
 
     private void Start()
@@ -58,7 +58,7 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
         HorizontalMovement();
-        Jump();
+        //Jump();
 
         LimitVelocity();
     }
@@ -71,17 +71,17 @@ public class PlayerMove : MonoBehaviour
         {
             getMoveLeftKey = false;
             getMoveRightKey = false;
-            isWalking = false;
-            jumpIsQueued = false;
+            //isWalking = false;
+            //jumpIsQueued = false;
 
             return;
         }
 
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
-        isWalking = Input.GetKey(walkKey);
+        //isWalking = Input.GetKey(walkKey);
 
-        if (Input.GetKeyDown(jumpKey) && floorCheckerScript.onGround) jumpIsQueued = true;
+        //if (Input.GetKeyDown(jumpKey) && floorCheckerScript.onGround) jumpIsQueued = true;
     }
 
     void AnimUpdate()
@@ -97,12 +97,18 @@ public class PlayerMove : MonoBehaviour
 
     void HorizontalMovement()
     {
+        /*
         float currentSpeed = isWalking ? walkSpeed : runSpeed;
 
         if (getMoveLeftKey) rb.AddForce(Vector2.left * currentSpeed, ForceMode2D.Force);
         if (getMoveRightKey) rb.AddForce(Vector2.right * currentSpeed, ForceMode2D.Force);
+        */
+
+        if (getMoveLeftKey) rb.AddForce(Vector2.left * runSpeed, ForceMode2D.Force);
+        if (getMoveRightKey) rb.AddForce(Vector2.right * runSpeed, ForceMode2D.Force);
     }
 
+    /*
     void Jump()
     {
         if (jumpIsQueued)
@@ -113,12 +119,18 @@ public class PlayerMove : MonoBehaviour
             jumpIsQueued = false;
         }
     }
+    */
 
     void LimitVelocity()
     {
+        /*
         float maxSpeed = isWalking ? maxWalkSpeed : maxRunSpeed;
 
         if (rb.linearVelocityX > maxSpeed) rb.linearVelocity = new Vector2(maxSpeed, rb.linearVelocityY);
         if (rb.linearVelocityX < -maxSpeed) rb.linearVelocity = new Vector2(-maxSpeed, rb.linearVelocityY);
+        */
+
+        if (rb.linearVelocityX > maxRunSpeed) rb.linearVelocity = new Vector2(maxRunSpeed, rb.linearVelocityY);
+        if (rb.linearVelocityX < -maxRunSpeed) rb.linearVelocity = new Vector2(-maxRunSpeed, rb.linearVelocityY);
     }
 }
