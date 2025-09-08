@@ -73,13 +73,17 @@ public class DialogueManager : MonoBehaviour
 
 	IEnumerator TypeSentence(string sentence)
 	{
-		dialogueText.text = sentence;
+		// Gonna have to manually add new shi here, Replaces the <thing> with empty
+		string cleanSentence = sentence.Replace("<shake>", "").Replace("<flash>", "").Replace("<dim>", "");
+
+		dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
 
 		yield return null;
 
 		int totalVisibleCharacters = dialogueText.textInfo.characterCount;
 		int counter = 0;
+		int originalCounter = 0;
 
 		while (counter <= totalVisibleCharacters)
 		{
@@ -91,17 +95,24 @@ public class DialogueManager : MonoBehaviour
 
 			dialogueText.maxVisibleCharacters = counter;
 
+			if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith("<shake>"))
+			{
+				cameraEffectsManager.ShakeScreen();
+				originalCounter += 7;
+				continue;
+			}
+
 			if (counter % lettersUntilSFX == 0 && counter > 0) aSource.PlayOneShot(soundToPlay);
 
 			if (counter > 0)
 			{
 				char c = dialogueText.text[dialogueText.textInfo.characterInfo[counter - 1].index];
-				if (c == '~') cameraEffectsManager.ShakeScreen();
 				float delay = (c == '.' || c == '?' || c == '!' || c == ',') ? textPunctSpeed : textSpeed;
 				yield return new WaitForSeconds(delay);
 			}
 
 			counter++;
+			originalCounter++;
 		}
 
 		FinishSentence();
