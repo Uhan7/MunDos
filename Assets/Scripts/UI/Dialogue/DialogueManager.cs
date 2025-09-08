@@ -95,12 +95,30 @@ public class DialogueManager : MonoBehaviour
 
 			dialogueText.maxVisibleCharacters = counter;
 
+			// Manually putting the shi :( Will try to revise this soon real (tho not that big prio)
+
 			if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith("<shake>"))
 			{
 				cameraEffectsManager.ShakeScreen();
 				originalCounter += 7;
 				continue;
 			}
+
+			if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith("<flash>"))
+			{
+				cameraEffectsManager.Flash();
+				originalCounter += 7;
+				continue;
+			}
+
+			if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith("<dim>"))
+			{
+				cameraEffectsManager.Dim();
+				originalCounter += 5;
+				continue;
+			}
+
+			// End of manually putting shi
 
 			if (counter % lettersUntilSFX == 0 && counter > 0) aSource.PlayOneShot(soundToPlay);
 
