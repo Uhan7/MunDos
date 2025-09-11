@@ -72,13 +72,16 @@ public class PlayerInteract : MonoBehaviour
         {
             case "NPC":
             case "Envi":
-                if (nearbyEnvi != null) SetInteractableObjectOutline(false);
+                if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
                 nearbyEnvi = col.gameObject;
-                SetInteractableObjectOutline(true);
+                SetInteractableObjectOutline(nearbyEnvi, true);
                 break;
 
             case "Item":
+                if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
+                if (nearbyItem != null) SetInteractableObjectOutline(nearbyItem, false);
                 nearbyItem = col.gameObject;
+                SetInteractableObjectOutline(nearbyItem, true);
                 break;
 
             default:
@@ -88,7 +91,9 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (nearbyEnvi != null) SetInteractableObjectOutline(false);
+        if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
+        if (nearbyItem != null) SetInteractableObjectOutline(nearbyItem, false);
+
         if (col.gameObject == nearbyEnvi) nearbyEnvi = null;
         if (col.gameObject == nearbyItem) nearbyItem = null;
     }
@@ -197,11 +202,9 @@ public class PlayerInteract : MonoBehaviour
         SetCurrentItem();
     }
 
-    void SetInteractableObjectOutline(bool var)
+    void SetInteractableObjectOutline(GameObject obj, bool var)
     {
-        if (nearbyEnvi == null) return;
-
-        if (var == true) nearbyEnvi.GetComponent<InteractableObject>().spriteRenderer.sprite = nearbyEnvi.GetComponent<InteractableObject>().outlinedSprite;
-        else nearbyEnvi.GetComponent<InteractableObject>().spriteRenderer.sprite = nearbyEnvi.GetComponent<InteractableObject>().normalSprite;
+        if (var == true) obj.GetComponent<InteractableObject>().spriteRenderer.sprite = obj.GetComponent<InteractableObject>().outlinedSprite;
+        else obj.GetComponent<InteractableObject>().spriteRenderer.sprite = obj.GetComponent<InteractableObject>().normalSprite;
     }
 }
