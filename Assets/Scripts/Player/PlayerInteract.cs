@@ -72,7 +72,9 @@ public class PlayerInteract : MonoBehaviour
         {
             case "NPC":
             case "Envi":
+                if (nearbyEnvi != null) SetInteractableObjectOutline(false);
                 nearbyEnvi = col.gameObject;
+                SetInteractableObjectOutline(true);
                 break;
 
             case "Item":
@@ -86,6 +88,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
+        if (nearbyEnvi != null) SetInteractableObjectOutline(false);
         if (col.gameObject == nearbyEnvi) nearbyEnvi = null;
         if (col.gameObject == nearbyItem) nearbyItem = null;
     }
@@ -96,11 +99,15 @@ public class PlayerInteract : MonoBehaviour
     {
         if (!moveScript.canMove)
         {
-            interactableFeedbackObject.SetActive(false);
+            interactableFeedbackObject.SetActive(false); // change to make obj outline false
+            //SetInteractableObjectOutline(false);
             return;
         }
-
-        interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null);
+        // Set object outline to true of nearbyItem if it exists,
+        // else, set object outline of nearbyEnvi true instead,
+        // else, none of em are true (it should only be one at a time)
+        interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null); // change to be outline
+        //SetInteractableObjectOutline(nearbyEnvi != null);
     }
 
     void Interact()
@@ -188,5 +195,13 @@ public class PlayerInteract : MonoBehaviour
         }
 
         SetCurrentItem();
+    }
+
+    void SetInteractableObjectOutline(bool var)
+    {
+        if (nearbyEnvi == null) return;
+
+        if (var == true) nearbyEnvi.GetComponent<InteractableObject>().spriteRenderer.sprite = nearbyEnvi.GetComponent<InteractableObject>().outlinedSprite;
+        else nearbyEnvi.GetComponent<InteractableObject>().spriteRenderer.sprite = nearbyEnvi.GetComponent<InteractableObject>().normalSprite;
     }
 }

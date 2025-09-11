@@ -3,6 +3,12 @@ using NaughtyAttributes;
 
 public class InteractableObject : MonoBehaviour
 {
+
+    [Header("Feedback")]
+    [HideInInspector] public SpriteRenderer spriteRenderer; // Used in PlayerInteract.cs
+    [HideInInspector] public Sprite normalSprite; // Used in PlayerInteract.cs
+    [SerializeField] public Sprite outlinedSprite; // Used in PlayerInteract.cs
+
     [Header("Properties")]
     [SerializeField] public bool itemInteractable; // Used in PlayerInteract.cs
     [SerializeField] public bool checksConditionalObject;
@@ -24,6 +30,11 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Flags")]
     [ShowIf("checksConditionalObject")] [HideInInspector] private bool alreadyChecked = false;
+
+    private void Awake()
+    {
+        InitializeCache();
+    }
 
     public void Interact()
     {
@@ -75,5 +86,15 @@ public class InteractableObject : MonoBehaviour
         }
 
         alreadyChecked = true;
+    }
+
+    // Helper Functions --------------------------------------------------------
+
+    private void InitializeCache()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalSprite = spriteRenderer.sprite;
+
+        if (normalSprite == null) print("skibid");
     }
 }
