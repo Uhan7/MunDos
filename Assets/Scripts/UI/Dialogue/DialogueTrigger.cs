@@ -24,7 +24,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool willFocus;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private bool linksToOtherDialogue;
-    [SerializeField] private bool playClosingAnimation = false;
+    [SerializeField] private bool playClosingAnimation = true;
     [SerializeField] private GameObject[] objectsToSpawnAfter;
     [SerializeField] private float activateObjectTime = 0.5f;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
