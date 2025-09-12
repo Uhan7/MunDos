@@ -22,7 +22,8 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private CameraEffectsManager cameraEffectsManager;
 
 	[Header("Other Variables")]
-	[HideInInspector] private float textSpeed;
+    public bool playClosingAnimation = false;
+    [HideInInspector] private float textSpeed;
 	[HideInInspector] private float textPunctSpeed;
 	[HideInInspector] private int lettersUntilSFX = 3;
 	[HideInInspector] private AudioClip soundToPlay;
@@ -158,8 +159,16 @@ public class DialogueManager : MonoBehaviour
 	public void EndDialogue() // Used in DialogueTrigger.cs
 	{
 		skip = true;
-		open = false;
-		sentences.Clear();
+		if (playClosingAnimation)
+		{
+			open = false;
+			anim.SetBool("FullClose", true);
+		} else
+		{
+            open = false;
+            anim.SetBool("FullClose", false);
+        }
+			sentences.Clear();
 		StopAllCoroutines();
 	}
 

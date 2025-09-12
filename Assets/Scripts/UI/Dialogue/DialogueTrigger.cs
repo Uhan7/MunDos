@@ -24,6 +24,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool willFocus;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private bool linksToOtherDialogue;
+    [SerializeField] private bool playClosingAnimation = false;
     [SerializeField] private GameObject[] objectsToSpawnAfter;
     [SerializeField] private float activateObjectTime = 0.5f;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
@@ -114,6 +115,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
 	{
+        dialogueHolder.playClosingAnimation = playClosingAnimation;
+
         if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) dialogueHolder = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
         if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) Debug.LogError("Dialogue Holder not Found.");
 
