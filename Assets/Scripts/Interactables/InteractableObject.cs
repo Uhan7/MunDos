@@ -95,6 +95,6 @@ public class InteractableObject : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalSprite = spriteRenderer.sprite;
 
-        if (normalSprite == null) print("skibid");
+        if (outlinedSprite == null) outlinedSprite = normalSprite;
     }
 }
