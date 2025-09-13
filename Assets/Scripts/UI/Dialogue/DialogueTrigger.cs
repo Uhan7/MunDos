@@ -16,6 +16,15 @@ public class DialogueTrigger : MonoBehaviour
     [HideInInspector] private GameObject protag;
     [HideInInspector] private PlayerMove protagMovementScript;
 
+    [Header("Animation Properties")]
+    private bool closeAnim = true;
+    enum AnimOptions
+    {
+        defaultClose = 0,
+        playClose,
+        skipClose
+    };
+
     [Header("Properties")]
     [SerializeField] private bool startOnEnable;
     [SerializeField] private bool startOnEnableWithDelay;
@@ -24,7 +33,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool willFocus;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private bool linksToOtherDialogue;
-    [SerializeField] private bool playClosingAnimation = true;
+    [SerializeField] private AnimOptions playClosingAnimation = AnimOptions.defaultClose;
     [SerializeField] private GameObject[] objectsToSpawnAfter;
     [SerializeField] private float activateObjectTime = 0.5f;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
@@ -37,6 +46,8 @@ public class DialogueTrigger : MonoBehaviour
 
     [Header("Flags")]
     private bool dialogueIsTriggered;
+
+    
 
     private void Awake()
     {
@@ -115,7 +126,14 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
 	{
-        dialogueHolder.playClosingAnimation = playClosingAnimation;
+        if (playClosingAnimation == AnimOptions.defaultClose && linksToOtherDialogue)
+        {
+            closeAnim = false;
+        } else if (playClosingAnimation == AnimOptions.skipClose) {
+            closeAnim = false;
+        }
+
+        dialogueHolder.playClosingAnimation = closeAnim;
 
         if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) dialogueHolder = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
         if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) Debug.LogError("Dialogue Holder not Found.");
