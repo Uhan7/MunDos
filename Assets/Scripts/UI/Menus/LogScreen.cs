@@ -27,7 +27,7 @@ public class LogScreen : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences)
         {
-            dialogueToAdd = dialogue.name + "\n";
+            dialogueToAdd = "<b><u>" + dialogue.name + "</b></u>\n";
             dialogueToAdd = dialogueToAdd + sentence;
             fullLog.text += dialogueToAdd + "\n\n";
         }
