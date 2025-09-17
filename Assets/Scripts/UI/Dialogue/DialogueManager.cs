@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI dialogueText;
 	[SerializeField] private TMP_FontAsset defaultFont;
 	[SerializeField] private GameObject nextIndicator;
+	[SerializeField] private LogScreen dialogueLog;
 
 	[Header("Other Scripts")]
 	[HideInInspector] private CameraEffectsManager cameraEffectsManager;
@@ -60,6 +61,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator StartDialogue(Dialogue dialogue)
 	{
 		InitializeDialogueValues(dialogue);
+		dialogueLog.RecieveDialogue(dialogue);
 
 		yield return new WaitForSeconds(0.4f);
 		sentences.Clear();
