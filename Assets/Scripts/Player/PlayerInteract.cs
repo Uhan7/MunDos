@@ -104,15 +104,10 @@ public class PlayerInteract : MonoBehaviour
     {
         if (!moveScript.canMove)
         {
-            interactableFeedbackObject.SetActive(false); // change to make obj outline false
-            //SetInteractableObjectOutline(false);
+            interactableFeedbackObject.SetActive(false);
             return;
         }
-        // Set object outline to true of nearbyItem if it exists,
-        // else, set object outline of nearbyEnvi true instead,
-        // else, none of em are true (it should only be one at a time)
-        interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null); // change to be outline
-        //SetInteractableObjectOutline(nearbyEnvi != null);
+        interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null); // remove this soon
     }
 
     void Interact()

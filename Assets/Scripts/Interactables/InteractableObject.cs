@@ -11,12 +11,19 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Properties")]
     [SerializeField] public bool itemInteractable; // Used in PlayerInteract.cs
-    [SerializeField] public bool checksConditionalObject;
-    [SerializeField] private bool interactableOnlyOnce;
+    [SerializeField] private bool checksConditionalObject;
+    [SerializeField] private bool unlockInteractableObject;
+    [SerializeField] private bool lockInteractableObject;
 
     [Header("Conditionals")]
     [ShowIf("checksConditionalObject")] [SerializeField] private GameObject[] conditionalObjectsToCheck;
     [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnValidInteractOnly;
+
+    [Header("Locked Interactions")]
+    [ShowIf("unlockInteractableObject")] [SerializeField] private GameObject[] objectsToUnlock;
+    [ShowIf("lockInteractableObject")] [SerializeField] private GameObject[] objectsToLock;
+    [ShowIf("unlockInteractableObject")] [SerializeField] private bool unlockOnValidInteractOnly;
+    [ShowIf("lockInteractableObject")] [SerializeField] private bool lockOnValidInteractOnly;
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateOnInteract;
@@ -43,7 +50,8 @@ public class InteractableObject : MonoBehaviour
 
         if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddCheck();
 
-        if (interactableOnlyOnce) GetComponent<BoxCollider2D>().enabled = false;
+        if (objectsToUnlock != null && !unlockOnValidInteractOnly) UnlockObjects();
+        if (objectsToLock != null && !lockOnValidInteractOnly) LockObjects();
     }
 
     public void ItemInteract(bool var)
@@ -63,7 +71,10 @@ public class InteractableObject : MonoBehaviour
         {
             SetAll(toActivateOnValidInteract, true);
             SetAll(toDeactivateOnValidInteract, false);
+
             if (conditionalObjectsToCheck != null && checkOnValidInteractOnly) AddCheck();
+            if (objectsToUnlock != null && unlockOnValidInteractOnly) UnlockObjects();
+            if (objectsToLock != null && lockOnValidInteractOnly) LockObjects();
         }
     }
 
@@ -86,6 +97,26 @@ public class InteractableObject : MonoBehaviour
         }
 
         alreadyChecked = true;
+    }
+
+    void UnlockObjects()
+    {
+        foreach (GameObject lockedObject in objectsToUnlock)
+        {
+            LockableObject lockedObjectScript = lockedObject.GetComponent<LockableObject>();
+
+            lockedObjectScript.Lock(false);
+        }
+    }
+
+    void LockObjects()
+    {
+        foreach (GameObject lockedObject in objectsToLock)
+        {
+            LockableObject lockedObjectScript = lockedObject.GetComponent<LockableObject>();
+
+            lockedObjectScript.Lock(true);
+        }
     }
 
     // Helper Functions --------------------------------------------------------
