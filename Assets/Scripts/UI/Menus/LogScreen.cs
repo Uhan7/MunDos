@@ -18,11 +18,11 @@ public class LogScreen : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            scrollbar.value += 0.0001f;
+            scrollbar.value += 0.001f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            scrollbar.value -= 0.0001f;
+            scrollbar.value -= 0.001f;
         }
     }
     public void toggleLogScreen()
@@ -40,5 +40,10 @@ public class LogScreen : MonoBehaviour
             dialogueToAdd = dialogueToAdd + sentence;
             fullLog.text += dialogueToAdd + "\n\n";
         }
+    }
+
+    public void GoToMostRecentDialogue()
+    {
+        scrollbar.value = 0;
     }
 }
