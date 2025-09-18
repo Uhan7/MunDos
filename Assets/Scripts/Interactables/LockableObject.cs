@@ -5,7 +5,11 @@ public class LockableObject : MonoBehaviour
     [Header("Properties")]
     [SerializeField] private bool isLockedAtStart;
 
-    private void Start()
+    [Header("Variables")]
+    [SerializeField] public int requiredChecks = 1;
+    [HideInInspector] public int currentChecks = 0;
+
+    private void OnEnable()
     {
         Lock(isLockedAtStart);
     }

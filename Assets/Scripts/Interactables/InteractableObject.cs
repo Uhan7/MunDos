@@ -20,8 +20,8 @@ public class InteractableObject : MonoBehaviour
     [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnValidInteractOnly;
 
     [Header("Locked Interactions")]
-    [ShowIf("unlockInteractableObject")] [SerializeField] private GameObject[] objectsToUnlock;
-    [ShowIf("lockInteractableObject")] [SerializeField] private GameObject[] objectsToLock;
+    [ShowIf("unlockInteractableObject")] [SerializeField] private GameObject[] objectsToUnlockCheck;
+    [ShowIf("lockInteractableObject")] [SerializeField] private GameObject[] objectsToLockCheck;
     [ShowIf("unlockInteractableObject")] [SerializeField] private bool unlockOnValidInteractOnly;
     [ShowIf("lockInteractableObject")] [SerializeField] private bool lockOnValidInteractOnly;
 
@@ -36,7 +36,9 @@ public class InteractableObject : MonoBehaviour
     [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
 
     [Header("Flags")]
-    [ShowIf("checksConditionalObject")] [HideInInspector] private bool alreadyChecked = false;
+    [ShowIf("checksConditionalObject")] [HideInInspector] private bool alreadyCheckedConditional = false;
+    [ShowIf("unlockInteractableObject")] [HideInInspector] private bool alreadyCheckedUnlock = false;
+    [ShowIf("lockInteractableObject")] [HideInInspector] private bool alreadyCheckedLock = false;
 
     private void Awake()
     {
@@ -48,10 +50,10 @@ public class InteractableObject : MonoBehaviour
         SetAll(toActivateOnInteract, true);
         SetAll(toDeactivateOnInteract, false);
 
-        if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddCheck();
+        if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddConditionalCheck();
+        if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly) AddUnlockCheck();
+        if (objectsToLockCheck != null && !lockOnValidInteractOnly) AddLockCheck();
 
-        if (objectsToUnlock != null && !unlockOnValidInteractOnly) UnlockObjects();
-        if (objectsToLock != null && !lockOnValidInteractOnly) LockObjects();
     }
 
     public void ItemInteract(bool var)
@@ -72,9 +74,9 @@ public class InteractableObject : MonoBehaviour
             SetAll(toActivateOnValidInteract, true);
             SetAll(toDeactivateOnValidInteract, false);
 
-            if (conditionalObjectsToCheck != null && checkOnValidInteractOnly) AddCheck();
-            if (objectsToUnlock != null && unlockOnValidInteractOnly) UnlockObjects();
-            if (objectsToLock != null && lockOnValidInteractOnly) LockObjects();
+            if (conditionalObjectsToCheck != null && checkOnValidInteractOnly) AddConditionalCheck();
+            if (objectsToUnlockCheck != null && unlockOnValidInteractOnly) AddUnlockCheck();
+            if (objectsToLockCheck != null && lockOnValidInteractOnly) AddLockCheck();
         }
     }
 
@@ -84,9 +86,9 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject obj in objects) obj.SetActive(value);
     }
 
-    void AddCheck()
+    void AddConditionalCheck()
     {
-        if (alreadyChecked) return;
+        if (alreadyCheckedConditional) return;
 
         foreach (GameObject conditionalObject in conditionalObjectsToCheck)
         {
@@ -96,27 +98,37 @@ public class InteractableObject : MonoBehaviour
             if (conditionalObjectScript.currentChecks >= conditionalObjectScript.requiredChecks) conditionalObject.SetActive(true);
         }
 
-        alreadyChecked = true;
+        alreadyCheckedConditional = true;
     }
 
-    void UnlockObjects()
+    void AddUnlockCheck()
     {
-        foreach (GameObject lockedObject in objectsToUnlock)
-        {
-            LockableObject lockedObjectScript = lockedObject.GetComponent<LockableObject>();
+        if (alreadyCheckedUnlock) return;
 
-            lockedObjectScript.Lock(false);
+        foreach (GameObject lockObject in objectsToUnlockCheck)
+        {
+            LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
+
+            lockObjectScript.currentChecks++;
+            if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks) lockObjectScript.Lock(false);
         }
+
+        alreadyCheckedUnlock = true;
     }
 
-    void LockObjects()
+    void AddLockCheck()
     {
-        foreach (GameObject lockedObject in objectsToLock)
-        {
-            LockableObject lockedObjectScript = lockedObject.GetComponent<LockableObject>();
+        if (alreadyCheckedLock) return;
 
-            lockedObjectScript.Lock(true);
+        foreach (GameObject lockObject in objectsToLockCheck)
+        {
+            LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
+
+            lockObjectScript.currentChecks++;
+            if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks) lockObjectScript.Lock(true);
         }
+
+        alreadyCheckedLock = true;
     }
 
     // Helper Functions --------------------------------------------------------
