@@ -170,7 +170,7 @@ public class PlayerInteract : MonoBehaviour
         currentItemData = itemDatas[playerItemIndex];
     }
 
-    void SelectItem(int index)
+    public void SelectItem(int index)
     {
         playerItemIndex = index;
         SetCurrentItem();
