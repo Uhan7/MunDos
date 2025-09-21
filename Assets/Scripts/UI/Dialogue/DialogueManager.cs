@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     public bool playClosingAnimation = false;
     [HideInInspector] private float textSpeed;
 	[HideInInspector] private float textPunctSpeed;
-	[HideInInspector] private int lettersUntilSFX = 3;
+	[HideInInspector] private int lettersUntilSFX = 4;
 	[HideInInspector] private AudioClip soundToPlay;
 
 	[Header("Flags")]
@@ -123,7 +123,11 @@ public class DialogueManager : MonoBehaviour
 
 			// End of manually putting shi
 
-			if (counter % lettersUntilSFX == 0 && counter > 0) aSource.PlayOneShot(soundToPlay);
+			if (counter % lettersUntilSFX == 0 && counter > 0)
+			{
+				aSource.pitch = Random.Range(0.9f, 1.1f);
+				aSource.PlayOneShot(soundToPlay);
+			}
 
 			if (counter > 0)
 			{
