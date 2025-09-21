@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -25,8 +26,8 @@ public class Parameters
 	private Dictionary<string, ArrayList> arrayListData;
 	private Dictionary<string, object> objectListData;
 
-	//new types by eric
-	private Dictionary<string, Rect> rectData;
+	//new types
+	private Dictionary<string, Sprite> spriteData;
 
 
 	public Parameters()
@@ -41,7 +42,7 @@ public class Parameters
 		this.stringData = new Dictionary<string, string>();
 		this.arrayListData = new Dictionary<string, ArrayList>();
 		this.objectListData = new Dictionary<string, object>();
-		this.rectData = new Dictionary<string, Rect>();
+		this.spriteData = new Dictionary<string, Sprite>();
 	}
 
 	public void PutExtra(string paramName, bool value)
@@ -101,9 +102,9 @@ public class Parameters
 		this.objectListData.Add(paramName, value);
 	}
 
-	public void PutExtra(string paramName, Rect rect)
+	public void PutExtra(string paramName, Sprite sprite)
 	{
-		this.rectData.Add(paramName, rect);
+		this.spriteData.Add(paramName, sprite);
 	}
 
 	public int GetIntExtra(string paramName, int defaultValue)
@@ -240,12 +241,15 @@ public class Parameters
 		}
 	}
 	
-	public Rect GetRectExtra(string paramName) {
-		if(this.rectData.ContainsKey(paramName)) {
-			return this.rectData[paramName];
+	public Sprite GetSpriteData(string paramName)
+	{
+		if(this.spriteData.ContainsKey(paramName))
+		{
+			return this.spriteData[paramName];
 		}
-		else {
-			return new Rect();
+		else
+		{
+			return null;
 		}
 	}
 }

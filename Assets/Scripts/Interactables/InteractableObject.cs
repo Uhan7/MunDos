@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 using NaughtyAttributes;
 
 public class InteractableObject : MonoBehaviour
 {
+    [Header("Constants")]
+    [HideInInspector] private string ZOOMED_ENVI_BACKDROP_NAME = "Zoomed Envi Backdrop";
+    [HideInInspector] private string ZOOMED_ENVI_IMAGE_NAME = "Zoomed Envi Image";
 
     [Header("Feedback")]
     [HideInInspector] public SpriteRenderer spriteRenderer; // Used in PlayerInteract.cs
@@ -14,16 +18,26 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool checksConditionalObject;
     [SerializeField] private bool unlockInteractableObject;
     [SerializeField] private bool lockInteractableObject;
+    [SerializeField] private bool zoomInteract;
+    [SerializeField] private bool puzzleInteract;
 
-    [Header("Conditionals")]
+    [Header("Conditionals Interactions")]
     [ShowIf("checksConditionalObject")] [SerializeField] private GameObject[] conditionalObjectsToCheck;
     [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnValidInteractOnly;
 
-    [Header("Locked Interactions")]
+    [Header("Unlocked Interactions")]
     [ShowIf("unlockInteractableObject")] [SerializeField] private GameObject[] objectsToUnlockCheck;
-    [ShowIf("lockInteractableObject")] [SerializeField] private GameObject[] objectsToLockCheck;
     [ShowIf("unlockInteractableObject")] [SerializeField] private bool unlockOnValidInteractOnly;
+
+    [Header("Locked Interactions")]
+    [ShowIf("lockInteractableObject")] [SerializeField] private GameObject[] objectsToLockCheck;
     [ShowIf("lockInteractableObject")] [SerializeField] private bool lockOnValidInteractOnly;
+
+    [Header("Zoom Interactions")]
+    [ShowIf("zoomInteract")] [SerializeField] private Sprite zoomedEnviSprite;
+
+    [Header("Puzzle Interactions")]
+    [ShowIf("puzzleInteract")] [SerializeField] private GameObject puzzleObject;
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateOnInteract;
@@ -36,13 +50,24 @@ public class InteractableObject : MonoBehaviour
     [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
 
     [Header("Flags")]
-    [ShowIf("checksConditionalObject")] [HideInInspector] private bool alreadyCheckedConditional = false;
-    [ShowIf("unlockInteractableObject")] [HideInInspector] private bool alreadyCheckedUnlock = false;
-    [ShowIf("lockInteractableObject")] [HideInInspector] private bool alreadyCheckedLock = false;
+    [HideInInspector] private bool alreadyCheckedConditional = false;
+    [HideInInspector] private bool alreadyCheckedUnlock = false;
+    [HideInInspector] private bool alreadyCheckedLock = false;
+    [HideInInspector] private bool zoomingOnEnvi = false;
 
     private void Awake()
     {
         InitializeCache();
+    }
+
+    // Helper Functions --------------------------------------------------------
+
+    private void InitializeCache()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalSprite = spriteRenderer.sprite;
+
+        if (outlinedSprite == null) outlinedSprite = normalSprite;
     }
 
     public void Interact()
@@ -54,6 +79,7 @@ public class InteractableObject : MonoBehaviour
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly) AddUnlockCheck();
         if (objectsToLockCheck != null && !lockOnValidInteractOnly) AddLockCheck();
 
+        if (zoomInteract) ZoomInteract(zoomingOnEnvi);
     }
 
     public void ItemInteract(bool var)
@@ -78,6 +104,8 @@ public class InteractableObject : MonoBehaviour
             if (objectsToUnlockCheck != null && unlockOnValidInteractOnly) AddUnlockCheck();
             if (objectsToLockCheck != null && lockOnValidInteractOnly) AddLockCheck();
         }
+
+        if (zoomInteract) ZoomInteract(zoomingOnEnvi);
     }
 
     void SetAll(GameObject[] objects, bool value)
@@ -131,13 +159,12 @@ public class InteractableObject : MonoBehaviour
         alreadyCheckedLock = true;
     }
 
-    // Helper Functions --------------------------------------------------------
-
-    private void InitializeCache()
+    void ZoomInteract(bool value)
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        normalSprite = spriteRenderer.sprite;
+        Parameters param = new Parameters();
+        param.PutExtra(ParamNames.IS_ZOOMING_ENVI, !value);
+        param.PutExtra(ParamNames.ZOOM_ENVI_SPRITE, zoomedEnviSprite);
 
-        if (outlinedSprite == null) outlinedSprite = normalSprite;
+        EventBroadcaster.Instance.PostEvent(EventNames.ZOOM_ENVI, param);
     }
 }

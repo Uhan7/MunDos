@@ -8,6 +8,9 @@ public class EventNames
 
 	// For Focusing during Dialogue
 	public const string FOCUS_DIALOGUE = "FOCUS_DIALOGUE";
+
+	// For Zooming in on an Envi
+	public const string ZOOM_ENVI = "ZOOM_ENVI";
 }
 
 

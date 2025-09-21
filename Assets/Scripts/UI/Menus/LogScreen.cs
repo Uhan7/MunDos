@@ -4,25 +4,34 @@ using UnityEngine.UI;
 
 public class LogScreen : MonoBehaviour
 {
+    [Header("Key Inputs")]
+    [SerializeField] private KeyCode exitKey = KeyCode.Escape;
+
     [SerializeField] private GameObject logScreen;
     [SerializeField] private TextMeshProUGUI fullLog;
     [SerializeField] private Scrollbar scrollbar;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(exitKey)) toggleLogScreen();
+    }
+
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.W))
         {
-            scrollbar.value += 0.001f;
+            scrollbar.value += 0.005f;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            scrollbar.value -= 0.001f;
+            scrollbar.value -= 0.005f;
         }
     }
     public void toggleLogScreen()
@@ -37,7 +46,10 @@ public class LogScreen : MonoBehaviour
         foreach (string sentence in dialogue.sentences)
         {
             dialogueToAdd = "<b><u>" + dialogue.name + "</b></u>\n";
-            dialogueToAdd = dialogueToAdd + sentence;
+
+            string cleanSentence = sentence.Replace("<shake>", "").Replace("<flash>", "").Replace("<dim>", "");
+
+            dialogueToAdd = dialogueToAdd + cleanSentence;
             fullLog.text += dialogueToAdd + "\n\n";
         }
     }
