@@ -5,6 +5,7 @@ using NaughtyAttributes;
 public class InteractableObject : MonoBehaviour
 {
     [Header("Constants")]
+    [HideInInspector] private string PROTAG_TAG = "Protag";
     [HideInInspector] private string ZOOMED_ENVI_BACKDROP_NAME = "Zoomed Envi Backdrop";
     [HideInInspector] private string ZOOMED_ENVI_IMAGE_NAME = "Zoomed Envi Image";
 
@@ -20,6 +21,11 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool lockInteractableObject;
     [SerializeField] private bool zoomInteract;
     [SerializeField] private bool puzzleInteract;
+    [SerializeField] private bool protagHoverable;
+
+    [Header("Interactions")]
+    [SerializeField] private GameObject[] toActivateOnInteract;
+    [SerializeField] private GameObject[] toDeactivateOnInteract;
 
     [Header("Conditionals Interactions")]
     [ShowIf("checksConditionalObject")] [SerializeField] private GameObject[] conditionalObjectsToCheck;
@@ -39,9 +45,10 @@ public class InteractableObject : MonoBehaviour
     [Header("Puzzle Interactions")]
     [ShowIf("puzzleInteract")] [SerializeField] private GameObject puzzleObject;
 
-    [Header("Interactions")]
-    [SerializeField] private GameObject[] toActivateOnInteract;
-    [SerializeField] private GameObject[] toDeactivateOnInteract;
+    [Header("On Protag Hover")]
+    [ShowIf("protagHoverable")] [SerializeField] private GameObject exteriorFG;
+    [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toActivateOnProtagHover;
+    [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toDeactivateOnProtagHover;
 
     [Header("Item Interactions")]
     [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toActivateOnValidInteract;
@@ -58,6 +65,26 @@ public class InteractableObject : MonoBehaviour
     private void Awake()
     {
         InitializeCache();
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag != PROTAG_TAG) return;
+
+        if (exteriorFG != null) exteriorFG.GetComponent<Animator>().Play("room_fade_in");
+
+        SetAll(toActivateOnProtagHover, true);
+        SetAll(toDeactivateOnProtagHover, false);
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag != PROTAG_TAG) return;
+
+        if (exteriorFG != null) exteriorFG.GetComponent<Animator>().Play("room_fade_out");
+
+        SetAll(toActivateOnProtagHover, false);
+        SetAll(toDeactivateOnProtagHover, true);
     }
 
     // Helper Functions --------------------------------------------------------
