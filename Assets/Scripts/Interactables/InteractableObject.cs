@@ -9,7 +9,7 @@ public class InteractableObject : MonoBehaviour
     [HideInInspector] private string ZOOMED_ENVI_BACKDROP_NAME = "Zoomed Envi Backdrop";
     [HideInInspector] private string ZOOMED_ENVI_IMAGE_NAME = "Zoomed Envi Image";
 
-    [Header("Feedback")]
+    [Header("Components")]
     [HideInInspector] public SpriteRenderer spriteRenderer; // Used in PlayerInteract.cs
     [HideInInspector] public Sprite normalSprite; // Used in PlayerInteract.cs
     [SerializeField] public Sprite outlinedSprite; // Used in PlayerInteract.cs
@@ -47,6 +47,7 @@ public class InteractableObject : MonoBehaviour
 
     [Header("On Protag Hover")]
     [ShowIf("protagHoverable")] [SerializeField] private GameObject exteriorFG;
+    [ShowIf("protagHoverable")] [SerializeField] private bool animateInOnHover;
     [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toActivateOnProtagHover;
     [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toDeactivateOnProtagHover;
 
@@ -72,6 +73,7 @@ public class InteractableObject : MonoBehaviour
         if (col.gameObject.tag != PROTAG_TAG) return;
 
         if (exteriorFG != null) exteriorFG.GetComponent<Animator>().Play("room_fade_in");
+        if (animateInOnHover) GetComponent<Animator>().Play("object_fade_in_half");
 
         SetAll(toActivateOnProtagHover, true);
         SetAll(toDeactivateOnProtagHover, false);
@@ -82,6 +84,7 @@ public class InteractableObject : MonoBehaviour
         if (col.gameObject.tag != PROTAG_TAG) return;
 
         if (exteriorFG != null) exteriorFG.GetComponent<Animator>().Play("room_fade_out");
+        if (animateInOnHover) GetComponent<Animator>().Play("object_fade_out_half");
 
         SetAll(toActivateOnProtagHover, false);
         SetAll(toDeactivateOnProtagHover, true);
