@@ -168,7 +168,16 @@ public class DialogueTrigger : MonoBehaviour
     public void Deactivate()
     {
         protag = null;
-        if (willFocus) Focus(false);
+        if (willFocus)
+        {
+            Focus(false);
+
+            ZoomEnviManager[] zoomCanvasScripts = FindObjectsByType<ZoomEnviManager>(FindObjectsSortMode.None);
+            foreach (ZoomEnviManager zoomCanvasScript in zoomCanvasScripts)
+            {
+                if (zoomCanvasScript.activated) zoomCanvasScript.DeactivateZoomedEnvi();
+            }
+        }
 
         deactivateTimer -= Time.deltaTime;
         if (deactivateTimer <= 0) gameObject.SetActive(false);

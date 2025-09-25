@@ -12,17 +12,14 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private string pauseMenuName;
     [SerializeField] private string dialogueHolderName;
-    [SerializeField] private string zoomEnviContainerName;
 
     [Header("Referenced Components")]
     [HideInInspector] private PauseMenuManager pauseMenuScript;
     [HideInInspector] private DialogueManager dialogueHolderScript;
     [HideInInspector] private PlayerMove protagMoveScript;
-    [HideInInspector] private ZoomEnviManager zoomEnviManagerScript;
 
     [Header("Flags")]
     [HideInInspector] private bool isFocusingDialogue;
-    [HideInInspector] private bool isZoomingEnvi;
 
     private void Awake()
     {
@@ -30,7 +27,6 @@ public class GameManager : MonoBehaviour
 
         EventBroadcaster.Instance.AddObserver(EventNames.FOCUS_DIALOGUE, FocusDialogue);
         EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE, TogglePause);
-        EventBroadcaster.Instance.AddObserver(EventNames.ZOOM_ENVI, ZoomEnvi);
     }
 
     // Event Broadcasting Functions --------------------------------------------
@@ -42,8 +38,6 @@ public class GameManager : MonoBehaviour
 
         protagMoveScript.canMove = !isFocusingDialogue;
         timelineManagerScript.canSwitch = !isFocusingDialogue;
-
-        if (isZoomingEnvi && !isFocusingDialogue) zoomEnviManagerScript.DeactivateZoomedEnvi();
     }
 
     public void TogglePause()
@@ -59,21 +53,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = pauseMenuScript.active ? 0 : 1;
     }
 
-    public void ZoomEnvi(Parameters param)
-    {
-        SetComponents();
-
-        isZoomingEnvi = param.GetBoolExtra(ParamNames.IS_ZOOMING_ENVI, false);
-
-        if (isZoomingEnvi) zoomEnviManagerScript.ActivateZoomedEnvi(param.GetSpriteData(ParamNames.ZOOM_ENVI_SPRITE));
-        else zoomEnviManagerScript.DeactivateZoomedEnvi();
-    }
-
     void SetComponents()
     {
         protagMoveScript = GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerMove>();
         pauseMenuScript = GameObject.Find(pauseMenuName).GetComponent<PauseMenuManager>();
         dialogueHolderScript = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
-        zoomEnviManagerScript = GameObject.Find(zoomEnviContainerName).GetComponent<ZoomEnviManager>();
     }
 }

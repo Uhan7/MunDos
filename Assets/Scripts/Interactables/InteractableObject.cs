@@ -6,8 +6,6 @@ public class InteractableObject : MonoBehaviour
 {
     [Header("Constants")]
     [HideInInspector] private string PROTAG_TAG = "Protag";
-    [HideInInspector] private string ZOOMED_ENVI_BACKDROP_NAME = "Zoomed Envi Backdrop";
-    [HideInInspector] private string ZOOMED_ENVI_IMAGE_NAME = "Zoomed Envi Image";
 
     [Header("Components")]
     [HideInInspector] public SpriteRenderer spriteRenderer; // Used in PlayerInteract.cs
@@ -40,7 +38,7 @@ public class InteractableObject : MonoBehaviour
     [ShowIf("lockInteractableObject")] [SerializeField] private bool lockOnValidInteractOnly;
 
     [Header("Zoom Interactions")]
-    [ShowIf("zoomInteract")] [SerializeField] private Sprite zoomedEnviSprite;
+    [ShowIf("zoomInteract")] [SerializeField] private ZoomEnviManager zoomCanvas;
 
     [Header("Puzzle Interactions")]
     [ShowIf("puzzleInteract")] [SerializeField] private GameObject puzzleObject;
@@ -109,7 +107,7 @@ public class InteractableObject : MonoBehaviour
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly) AddUnlockCheck();
         if (objectsToLockCheck != null && !lockOnValidInteractOnly) AddLockCheck();
 
-        if (zoomInteract) ZoomInteract(zoomingOnEnvi);
+        if (zoomInteract) ZoomInteract(true);
     }
 
     public void ItemInteract(bool var)
@@ -135,7 +133,7 @@ public class InteractableObject : MonoBehaviour
             if (objectsToLockCheck != null && lockOnValidInteractOnly) AddLockCheck();
         }
 
-        if (zoomInteract) ZoomInteract(zoomingOnEnvi);
+        if (zoomInteract) ZoomInteract(true);
     }
 
     void SetAll(GameObject[] objects, bool value)
@@ -189,12 +187,9 @@ public class InteractableObject : MonoBehaviour
         alreadyCheckedLock = true;
     }
 
-    void ZoomInteract(bool value)
+    void ZoomInteract(bool var)
     {
-        Parameters param = new Parameters();
-        param.PutExtra(ParamNames.IS_ZOOMING_ENVI, !value);
-        param.PutExtra(ParamNames.ZOOM_ENVI_SPRITE, zoomedEnviSprite);
-
-        EventBroadcaster.Instance.PostEvent(EventNames.ZOOM_ENVI, param);
+        if (var == true) zoomCanvas.ActivateZoomedEnvi();
+        else zoomCanvas.DeactivateZoomedEnvi();
     }
 }
