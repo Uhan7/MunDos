@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class TimelineManager : MonoBehaviour
 {
-    [Header("Key Inputs")]
-    [SerializeField] private KeyCode switchTimelineKey;
+    [Header("Constants")]
+    [HideInInspector] private const string DIALOGUE_HOLDER_NAME = "Dialogue Holder";
 
     [Header("References")]
+    [HideInInspector] private DialogueManager dialogueHolder;
+
+    [Header("Key Inputs")]
+    [SerializeField] private KeyCode switchTimelineKey;
+    [SerializeField] private KeyCode interactKey;
+
+    [Header("Timelines")]
     [SerializeField] private GameObject pastTimeline;
     [SerializeField] private GameObject presentTimeline;
+
+    [Header("Visuals")]
     [SerializeField] private GameObject presentTransition;
     [SerializeField] private GameObject pastTransition;
 
@@ -31,7 +40,7 @@ public class TimelineManager : MonoBehaviour
     {
         if (!canSwitch) return;
 
-        if (Input.GetKeyDown(switchTimelineKey)) StartCoroutine(SwitchTimeline(0.05f));
+        if (Input.GetKeyDown(switchTimelineKey) && !Input.GetKey(interactKey)) StartCoroutine(SwitchTimeline(0.05f));
     }
 
     // Update Functions --------------------------------------------------------

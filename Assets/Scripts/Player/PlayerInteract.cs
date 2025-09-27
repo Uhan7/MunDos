@@ -9,6 +9,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private GameObject interactableFeedbackObject;
 
     [Header("Key Inputs")]
+    [SerializeField] private KeyCode switchTimelineKey;
     [SerializeField] private KeyCode interactKey;
     [SerializeField] private KeyCode previousItemKey;
     [SerializeField] private KeyCode nextItemKey;
@@ -42,7 +43,7 @@ public class PlayerInteract : MonoBehaviour
     {
         InteractableFeedback();
 
-        if (Input.GetKeyDown(interactKey))
+        if (Input.GetKeyDown(interactKey) && !Input.GetKey(switchTimelineKey))
         {
             if (nearbyEnvi != null) Interact();
             if (nearbyItem != null) PickupItem();

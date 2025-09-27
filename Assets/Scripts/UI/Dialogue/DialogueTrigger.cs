@@ -47,8 +47,6 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Flags")]
     private bool dialogueIsTriggered;
 
-    
-
     private void Awake()
     {
         InitializeReferences();

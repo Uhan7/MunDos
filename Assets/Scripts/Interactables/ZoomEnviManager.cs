@@ -15,10 +15,7 @@ public class ZoomEnviManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(deactivateKey))
-        {
-            DeactivateZoomedEnvi();
-        }
+        //if (Input.GetKeyDown(deactivateKey)) DeactivateZoomedEnvi();
     }
 
     // Helper Functions --------------------------------------------------------

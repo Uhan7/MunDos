@@ -77,7 +77,16 @@ public class DialogueManager : MonoBehaviour
 	IEnumerator TypeSentence(string sentence)
 	{
 		// Gonna have to manually add new shi here, Replaces the <thing> with empty
-		string cleanSentence = sentence.Replace("<shake>", "").Replace("<flash>", "").Replace("<dim>", "");
+		string cleanSentence = sentence
+			.Replace("<shake>", "")
+			.Replace("<flash>", "")
+			.Replace("<dim>", "")
+			.Replace("<startshake>", "")
+			.Replace("<startflash>", "")
+			.Replace("<startdim>", "")
+			.Replace("<endshake>", "")
+			.Replace("<endflash>", "")
+			.Replace("<enddim>", "");
 
 		dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
@@ -120,6 +129,8 @@ public class DialogueManager : MonoBehaviour
 				originalCounter += 5;
 				continue;
 			}
+
+			// CONTINUE THIS WITH THE LONG VERSIONS
 
 			// End of manually putting shi
 

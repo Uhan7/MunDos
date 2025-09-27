@@ -20,6 +20,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool zoomInteract;
     [SerializeField] private bool puzzleInteract;
     [SerializeField] private bool protagHoverable;
+    [SerializeField] private bool willFocus;
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateOnInteract;
@@ -109,6 +110,7 @@ public class InteractableObject : MonoBehaviour
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly) AddUnlockCheck();
         if (objectsToLockCheck != null && !lockOnValidInteractOnly) AddLockCheck();
 
+        if (willFocus) Focus(true);
     }
 
     public void ItemInteract(bool var)
@@ -136,6 +138,7 @@ public class InteractableObject : MonoBehaviour
             if (objectsToLockCheck != null && lockOnValidInteractOnly) AddLockCheck();
         }
 
+        if (willFocus) Focus(true);
     }
 
     void SetAll(GameObject[] objects, bool value)
@@ -193,5 +196,13 @@ public class InteractableObject : MonoBehaviour
     {
         if (var == true) zoomCanvas.ActivateZoomedEnvi();
         else zoomCanvas.DeactivateZoomedEnvi();
+    }
+
+    void Focus(bool value)
+    {
+        Parameters param = new Parameters();
+        param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
+
+        EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
     }
 }
