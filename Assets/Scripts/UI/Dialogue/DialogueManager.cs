@@ -37,8 +37,9 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private bool skip;
 	[HideInInspector] private bool canNext;
 	[HideInInspector] public bool canClick; // Used in GameManager.cs
+    [HideInInspector] public bool mainCharacterIsSpeaking; // Set in DialogueTrigger.cs
 
-	private void Awake()
+    private void Awake()
     {
 		InitializeComponents();
 	}
@@ -216,6 +217,7 @@ public class DialogueManager : MonoBehaviour
 		if (dialogue.character2 != null)
 		{
 			character2.sprite = dialogue.character2;
+			character2.color = Color.gray;
 		} else
 		{
 			character2.sprite = emptySprite;
@@ -223,6 +225,8 @@ public class DialogueManager : MonoBehaviour
 			soundToPlay = dialogue.soundToPlay;
         textSpeed = dialogue.textSpeed;
         textPunctSpeed = dialogue.textPunctSpeed;
+
+		UpdateSpeaker();
 
         if (dialogue.font == null) dialogueText.font = defaultFont;
         else dialogueText.font = dialogue.font;
@@ -234,4 +238,16 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = " ";
     }
 
+	public void UpdateSpeaker()
+	{
+		if (!mainCharacterIsSpeaking)
+		{
+			character.sprite = emptySprite;
+			character2.color = Color.white;
+		} else
+		{
+			character.sprite = character1Back.sprite;
+            character2.color = Color.gray;
+        }
+	}
 }
