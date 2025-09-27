@@ -103,11 +103,12 @@ public class InteractableObject : MonoBehaviour
         SetAll(toActivateOnInteract, true);
         SetAll(toDeactivateOnInteract, false);
 
+        if (zoomInteract) ZoomInteract(true);
+
         if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddConditionalCheck();
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly) AddUnlockCheck();
         if (objectsToLockCheck != null && !lockOnValidInteractOnly) AddLockCheck();
 
-        if (zoomInteract) ZoomInteract(true);
     }
 
     public void ItemInteract(bool var)
@@ -117,6 +118,8 @@ public class InteractableObject : MonoBehaviour
             Interact();
             return;
         }
+
+        if (zoomInteract) ZoomInteract(true);
 
         if (var == false)
         {
@@ -133,7 +136,6 @@ public class InteractableObject : MonoBehaviour
             if (objectsToLockCheck != null && lockOnValidInteractOnly) AddLockCheck();
         }
 
-        if (zoomInteract) ZoomInteract(true);
     }
 
     void SetAll(GameObject[] objects, bool value)
