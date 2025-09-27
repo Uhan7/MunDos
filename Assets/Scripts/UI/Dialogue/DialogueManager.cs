@@ -13,10 +13,13 @@ public class DialogueManager : MonoBehaviour
 
 	[Header("References")]
 	[SerializeField] private Image character;
+	[SerializeField] private Image character1Back;
+	[SerializeField] private Image character2;
 	[SerializeField] private TextMeshProUGUI nameText;
 	[SerializeField] private TextMeshProUGUI dialogueText;
 	[SerializeField] private TMP_FontAsset defaultFont;
 	[SerializeField] private GameObject nextIndicator;
+	[SerializeField] private Sprite emptySprite;
 	[SerializeField] private LogScreen dialogueLog;
 
 	[Header("Other Scripts")]
@@ -209,7 +212,15 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
         character.sprite = dialogue.character;
-        soundToPlay = dialogue.soundToPlay;
+        character1Back.sprite = dialogue.character;
+		if (dialogue.character2 != null)
+		{
+			character2.sprite = dialogue.character2;
+		} else
+		{
+			character2.sprite = emptySprite;
+		}
+			soundToPlay = dialogue.soundToPlay;
         textSpeed = dialogue.textSpeed;
         textPunctSpeed = dialogue.textPunctSpeed;
 

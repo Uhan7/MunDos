@@ -7,6 +7,7 @@ using TMPro;
 public class Dialogue
 {
 	public Sprite character;
+	public Sprite character2;
 	public string name = "Default Name";
 	public AudioClip soundToPlay;
 	public TMP_FontAsset font;
