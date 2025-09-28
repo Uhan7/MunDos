@@ -13,8 +13,6 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private string dialogueHolderName = "Dialogue Holder";
     [HideInInspector] private DialogueManager dialogueHolder;
     [SerializeField] private Dialogue dialogue;
-    [HideInInspector] private GameObject protag;
-    [HideInInspector] private PlayerMove protagMovementScript;
 
     [Header("Animation Properties")]
     private bool closeAnim = true;
@@ -27,7 +25,6 @@ public class DialogueTrigger : MonoBehaviour
 
     [Header("Properties")]
     [SerializeField] private bool startOnEnable;
-    [SerializeField] private bool startOnEnableWithDelay;
     [SerializeField] private bool startFromTrigger;
     [SerializeField] private bool isSign;
     [SerializeField] private bool willFocus;
