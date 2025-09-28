@@ -243,7 +243,7 @@ public class DialogueManager : MonoBehaviour
 		if (!mainCharacterIsSpeaking)
 		{
 			character.sprite = emptySprite;
-			character2.color = Color.white;
+            character2.color = Color.white;
 		} else
 		{
 			character.sprite = character1Back.sprite;

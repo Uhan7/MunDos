@@ -164,7 +164,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Deactivate()
     {
-        protag = null;
         if (willFocus)
         {
             Focus(false);
@@ -182,8 +181,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void ResetValues()
     {
-        protag = null;
-
         deactivateTimer = DEACTIVATE_TIME;
         nextDialogueTimer = nextDialogueTime;
 
