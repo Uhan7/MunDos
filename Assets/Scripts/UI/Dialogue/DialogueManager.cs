@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private CameraEffectsManager cameraEffectsManager;
 
 	[Header("Other Variables")]
-    public bool playClosingAnimation = false;
+    [HideInInspector] public bool playClosingAnimation = false;
     [HideInInspector] private float textSpeed;
 	[HideInInspector] private float textPunctSpeed;
 	[HideInInspector] private int lettersUntilSFX = 4;
