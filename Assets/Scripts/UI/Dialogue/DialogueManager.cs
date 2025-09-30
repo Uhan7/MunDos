@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
 	[Header("Components")]
 	[HideInInspector] private Animator anim;
 	[SerializeField] private AudioSource aSource;
+	[SerializeField] private AudioSource dSource;
 	[HideInInspector] private Queue<string> sentences;
 
 	[Header("References")]
@@ -140,8 +141,8 @@ public class DialogueManager : MonoBehaviour
 
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
-				aSource.pitch = Random.Range(0.9f, 1.1f);
-				aSource.PlayOneShot(soundToPlay);
+				dSource.pitch = Random.Range(0.9f, 1.1f);
+				dSource.PlayOneShot(soundToPlay);
 			}
 
 			if (counter > 0)
