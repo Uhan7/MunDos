@@ -188,9 +188,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.textSpeed
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
       value: 1
@@ -200,8 +208,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Yep
+      value: Actually...N<dim>o.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: <size=36><flash>BWHAA<shake>HAHAHA<dim>AHAHAH<shake>HHAHAAH<flash>AAHAHAH<shake>AHAHA!!!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -319,6 +335,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character
       value: 
       objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
@@ -326,6 +346,10 @@ PrefabInstance:
       propertyPath: dialogue.character2
       value: 
       objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: playClosingAnimation
       value: 2
@@ -344,7 +368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: rommellano real btw
+      value: Skbiidioitllet
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Name
@@ -407,6 +431,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
@@ -423,8 +451,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.audioPitchOffset
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: gay rights
+      value: gay rights...<shake>BOOM!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -572,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 119474369}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.name
-      value: Santi
+      value: Liezel
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: willStopMovement
@@ -587,6 +619,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
@@ -599,8 +635,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.audioPitchOffset
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Yep
+      value: Yep.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -694,6 +734,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
@@ -711,7 +755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: uhhhhhh
+      value: <flash>WOW!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -782,6 +826,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3598216047120412426, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907579299751792201, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924468680107003354, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: orthographic size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}

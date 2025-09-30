@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private float textPunctSpeed;
 	[HideInInspector] private int lettersUntilSFX = 4;
 	[HideInInspector] private AudioClip soundToPlay;
+	[HideInInspector] private float minPitch = 0.9f;
+	[HideInInspector] private float maxPitch = 1.1f;
 
 	[Header("Flags")]
 	[HideInInspector] public bool open; // Used in Animator
@@ -141,7 +143,7 @@ public class DialogueManager : MonoBehaviour
 
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
-				dSource.pitch = Random.Range(0.9f, 1.1f);
+				dSource.pitch = Random.Range(minPitch, maxPitch);
 				dSource.PlayOneShot(soundToPlay);
 			}
 
@@ -223,7 +225,13 @@ public class DialogueManager : MonoBehaviour
 		{
 			character2.sprite = emptySprite;
 		}
-			soundToPlay = dialogue.soundToPlay;
+
+		minPitch = 0.9f;
+		maxPitch = 1.1f;
+		minPitch += dialogue.audioPitchOffset;
+		maxPitch += dialogue.audioPitchOffset;
+
+		soundToPlay = dialogue.soundToPlay;
         textSpeed = dialogue.textSpeed;
         textPunctSpeed = dialogue.textPunctSpeed;
 
