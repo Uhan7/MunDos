@@ -35,6 +35,11 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private float minPitch = 0.9f;
 	[HideInInspector] private float maxPitch = 1.1f;
 
+	[Header("Effects Variables")]
+	[HideInInspector] private int totalVisibleCharacters;
+	[HideInInspector] private int counter;
+	[HideInInspector] private int originalCounter;
+
 	[Header("Flags")]
 	[HideInInspector] public bool open; // Used in Animator
 	[HideInInspector] private bool skip;
@@ -100,9 +105,9 @@ public class DialogueManager : MonoBehaviour
 
 		yield return null;
 
-		int totalVisibleCharacters = dialogueText.textInfo.characterCount;
-		int counter = 0;
-		int originalCounter = 0;
+		totalVisibleCharacters = dialogueText.textInfo.characterCount;
+		counter = 0;
+		originalCounter = 0;
 
 		while (counter <= totalVisibleCharacters)
 		{
@@ -114,28 +119,11 @@ public class DialogueManager : MonoBehaviour
 
 			dialogueText.maxVisibleCharacters = counter;
 
-			// Manually putting the shi :( Will try to revise this soon real (tho not that big prio)
+			// Depending on effect, we will play it (the conditional is inside)
 
-			if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith("<shake>"))
-			{
-				cameraEffectsManager.ShakeScreen();
-				originalCounter += 7;
-				continue;
-			}
-
-			if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith("<flash>"))
-			{
-				cameraEffectsManager.Flash();
-				originalCounter += 7;
-				continue;
-			}
-
-			if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith("<dim>"))
-			{
-				cameraEffectsManager.Dim();
-				originalCounter += 5;
-				continue;
-			}
+			DialogueCameraEffect(sentence, "<shake>", "ShakeScreen");
+			DialogueCameraEffect(sentence, "<flash>", "Flash");
+			DialogueCameraEffect(sentence, "<dim>", "Dim");
 
 			// CONTINUE THIS WITH THE LONG VERSIONS
 
@@ -258,5 +246,14 @@ public class DialogueManager : MonoBehaviour
 			character.sprite = character1Back.sprite;
             character2.color = Color.gray;
         }
+	}
+
+	void DialogueCameraEffect(string sentence, string substring, string functionName)
+    {
+		if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith(substring))
+		{
+			cameraEffectsManager.Invoke(functionName, 0f);
+			originalCounter += substring.Length;
+		}
 	}
 }
