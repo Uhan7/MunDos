@@ -182,7 +182,6 @@ MonoBehaviour:
   normalSprite: {fileID: 0}
   outlinedSprite: {fileID: 3843231544584785974, guid: cfb7971b5167d42369d8ec3315cb652b, type: 3}
   categoryManager: {fileID: 0}
-  category: 6
   itemInteractable: 0
   checksConditionalObject: 0
   unlockInteractableObject2: 0
@@ -192,7 +191,7 @@ MonoBehaviour:
   protagHoverable: 0
   willFocus: 0
   toActivateObjects: []
-  toActivateCategories: 7
+  toActivateCategory: 7
   toDeactivateOnInteract: []
   conditionalObjectsToCheck: []
   checkOnValidInteractOnly: 0
@@ -471,6 +470,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 986918955879770191, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1075744139}
+    - targetCorrespondingSourceObject: {fileID: 5177455612070497746, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1725094299}
   m_SourcePrefab: {fileID: 100100000, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
 --- !u!1001 &1492407865
 PrefabInstance:
@@ -536,6 +538,27 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 400569056}
   m_SourcePrefab: {fileID: 100100000, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+--- !u!1 &1725094291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5177455612070497746, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+  m_PrefabInstance: {fileID: 1400478248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1725094299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725094291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef12d4ff6e020ef4f81d3788b9246115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 10
+  lastActiveState: 0
+  changeRoot: 0
+  rootObject: {fileID: 0}
 --- !u!1 &1971349530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7583294004365924702, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}

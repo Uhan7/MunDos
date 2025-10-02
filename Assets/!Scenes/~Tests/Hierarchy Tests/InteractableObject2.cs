@@ -13,7 +13,6 @@ public class InteractableObject2 : MonoBehaviour
     [HideInInspector] public Sprite normalSprite; // Used in PlayerInteract.cs
     [SerializeField] public Sprite outlinedSprite; // Used in PlayerInteract.cs
     [HideInInspector] public CategoryManager categoryManager;
-    [SerializeField] public CategoryType category;
     //[SerializeField] public GameObject rootRoom;
 
     [Header("Properties")]
@@ -28,7 +27,7 @@ public class InteractableObject2 : MonoBehaviour
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateObjects;
-    [SerializeField] private CategoryType toActivateCategories;
+    [SerializeField] private CategoryType toActivateCategory;
 
     [SerializeField] private class RoomIdentifier : MonoBehaviour { }
     [SerializeField] private GameObject[] toDeactivateOnInteract;
@@ -112,7 +111,7 @@ public class InteractableObject2 : MonoBehaviour
     public void Interact()
     {
         SetAll(toActivateObjects, true);
-        categoryManager.SetCategoryActive(category, true);
+        categoryManager.SetCategoryActive(toActivateCategory, true);
         SetAll(toDeactivateOnInteract, false);
 
         if (zoomInteract) ZoomInteract(true);

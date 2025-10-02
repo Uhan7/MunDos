@@ -31,6 +31,10 @@ public class Category : MonoBehaviour
     void InitializeCache()
     {
         lastActiveState = true;
+        if(category == CategoryType.Player)
+        {
+            rootObject = this.gameObject;
+        }
         if (!rootObject)
         {
             if(!changeRoot) Debug.Log(this.gameObject.name + "root category not set");
@@ -45,12 +49,27 @@ public class Category : MonoBehaviour
         while (current != null)
         {
             Category category = current.GetComponent<Category>();
-            if ((category.category == value))
+            if (category != null)
             {
-                rootObject = category.gameObject;
-                break;
+                Debug.Log($"{gameObject.name}: Found Category on '{current.name}' with value: {category.category}");
+                if ((category.category == value))
+                {
+                    rootObject = category.gameObject;
+                    Debug.Log($"{gameObject.name}: Set rootObject to '{rootObject.name}' (Category: {value})");
+                    break;
+                }
             }
-            current = current.parent;
+            else
+            {
+                Debug.Log($"{gameObject.name}: No Category component on '{current.name}'");
+            }
+
+                current = current.parent;
+        }
+        if (rootObject == null)
+        {
+            Debug.LogWarning($"{gameObject.name}: Failed to find root with category {value}");
         }
     }
 }
+
