@@ -24,9 +24,23 @@ public class CameraShake : MonoBehaviour
         StartCoroutine(screenShake());
     }
 
-    private IEnumerator screenShake()
+    public void StartScreenShakeWrapper()
     {
-        // 1) Find the CinemachineBrain on the main camera
+        StartCoroutine(startScreenShake());
+    }
+
+    public void ScreenShakeWrapper(float shakeDuration)
+    {
+        StartCoroutine(screenShake(shakeDuration));
+    }
+
+    public void EndScreenShakeWrapper()
+    {
+        StartCoroutine(endScreenShake());
+    }
+
+    private IEnumerator startScreenShake()
+    {
         var brain = Camera.main?.GetComponent<CinemachineBrain>();
         if (brain == null)
         {
@@ -34,7 +48,6 @@ public class CameraShake : MonoBehaviour
             yield break;
         }
 
-        // 2) Get its ActiveVirtualCamera (an ICinemachineCamera)
         var activeCam = brain.ActiveVirtualCamera as CinemachineCamera;
         if (activeCam == null)
         {
@@ -42,7 +55,6 @@ public class CameraShake : MonoBehaviour
             yield break;
         }
 
-        // 3) Grab the Perlin noise component
         var perlin = activeCam.GetComponent<CinemachineBasicMultiChannelPerlin>();
         if (perlin == null)
         {
@@ -50,7 +62,33 @@ public class CameraShake : MonoBehaviour
             yield break;
         }
 
-        // 4) Shake over time
+        perlin.FrequencyGain = strengthMultiplier;
+        perlin.AmplitudeGain = strengthMultiplier * 2f;
+    }
+
+    private IEnumerator screenShake()
+    {
+        var brain = Camera.main?.GetComponent<CinemachineBrain>();
+        if (brain == null)
+        {
+            Debug.LogError("camera_shake: No CinemachineBrain found on Camera.main");
+            yield break;
+        }
+
+        var activeCam = brain.ActiveVirtualCamera as CinemachineCamera;
+        if (activeCam == null)
+        {
+            Debug.LogError("camera_shake: ActiveVirtualCamera is not a CinemachineVirtualCamera");
+            yield break;
+        }
+
+        var perlin = activeCam.GetComponent<CinemachineBasicMultiChannelPerlin>();
+        if (perlin == null)
+        {
+            Debug.LogError("camera_shake: No BasicMultiChannelPerlin on active vcam");
+            yield break;
+        }
+
         float elapsed = 0f;
         while (elapsed < shakeDuration)
         {
@@ -63,8 +101,77 @@ public class CameraShake : MonoBehaviour
             yield return null;
         }
 
-        // 5) Reset to zero so it stops
         perlin.FrequencyGain = 0f;
         perlin.AmplitudeGain = 0f;
     }
+
+    private IEnumerator screenShake(float shakeDuration)
+    {
+        var brain = Camera.main?.GetComponent<CinemachineBrain>();
+        if (brain == null)
+        {
+            Debug.LogError("camera_shake: No CinemachineBrain found on Camera.main");
+            yield break;
+        }
+
+        var activeCam = brain.ActiveVirtualCamera as CinemachineCamera;
+        if (activeCam == null)
+        {
+            Debug.LogError("camera_shake: ActiveVirtualCamera is not a CinemachineVirtualCamera");
+            yield break;
+        }
+
+        var perlin = activeCam.GetComponent<CinemachineBasicMultiChannelPerlin>();
+        if (perlin == null)
+        {
+            Debug.LogError("camera_shake: No BasicMultiChannelPerlin on active vcam");
+            yield break;
+        }
+
+        float elapsed = 0f;
+        while (elapsed < shakeDuration)
+        {
+            float t = elapsed / shakeDuration;
+            float strength = strengthCurve.Evaluate(t) * strengthMultiplier;
+            perlin.FrequencyGain = strength;
+            perlin.AmplitudeGain = strength * 2f;
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        perlin.FrequencyGain = 0f;
+        perlin.AmplitudeGain = 0f;
+    }
+
+    private IEnumerator endScreenShake()
+    {
+        StopAllCoroutines();
+
+        var brain = Camera.main?.GetComponent<CinemachineBrain>();
+        if (brain == null)
+        {
+            Debug.LogError("camera_shake: No CinemachineBrain found on Camera.main");
+            yield break;
+        }
+
+        var activeCam = brain.ActiveVirtualCamera as CinemachineCamera;
+        if (activeCam == null)
+        {
+            Debug.LogError("camera_shake: ActiveVirtualCamera is not a CinemachineVirtualCamera");
+            yield break;
+        }
+
+        var perlin = activeCam.GetComponent<CinemachineBasicMultiChannelPerlin>();
+        if (perlin == null)
+        {
+            Debug.LogError("camera_shake: No BasicMultiChannelPerlin on active vcam");
+            yield break;
+        }
+
+        perlin.FrequencyGain = 0f;
+        perlin.AmplitudeGain = 0f;
+
+    }
+
 }

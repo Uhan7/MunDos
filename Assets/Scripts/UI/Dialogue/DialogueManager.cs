@@ -91,14 +91,14 @@ public class DialogueManager : MonoBehaviour
 		// Gonna have to manually add new shi here, Replaces the <thing> with empty
 		string cleanSentence = sentence
 			.Replace("<shake>", "")
+			.Replace("<start_shake>", "")
+			.Replace("<end_shake>", "")
 			.Replace("<flash>", "")
+			.Replace("<start_flash>", "")
+			.Replace("<end_flash>", "")
 			.Replace("<dim>", "")
-			.Replace("<startshake>", "")
-			.Replace("<startflash>", "")
-			.Replace("<startdim>", "")
-			.Replace("<endshake>", "")
-			.Replace("<endflash>", "")
-			.Replace("<enddim>", "");
+			.Replace("<start_dim>", "")
+			.Replace("<end_dim>", "");
 
 		dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
@@ -122,8 +122,14 @@ public class DialogueManager : MonoBehaviour
 			// Depending on effect, we will play it (the conditional is inside)
 
 			DialogueCameraEffect(sentence, "<shake>", "ShakeScreen");
+			DialogueCameraEffect(sentence, "<start_shake>", "StartShakeScreen");
+			DialogueCameraEffect(sentence, "<end_shake>", "EndShakeScreen");
 			DialogueCameraEffect(sentence, "<flash>", "Flash");
+			DialogueCameraEffect(sentence, "<start_flash>", "StartFlash");
+			DialogueCameraEffect(sentence, "<end_flash>", "EndFlash");
 			DialogueCameraEffect(sentence, "<dim>", "Dim");
+			DialogueCameraEffect(sentence, "<start_dim>", "StartDim");
+			DialogueCameraEffect(sentence, "<end_dim>", "EndDim");
 
 			// CONTINUE THIS WITH THE LONG VERSIONS
 

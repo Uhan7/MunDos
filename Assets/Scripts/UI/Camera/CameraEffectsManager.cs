@@ -22,17 +22,48 @@ public class CameraEffectsManager : MonoBehaviour
         sfxSource.PlayOneShot(shakeSFX);
     }
 
+    public void StartShakeScreen()
+    {
+        mainCamera.GetComponent<CameraShake>().StartScreenShakeWrapper();
+        sfxSource.PlayOneShot(shakeSFX);
+    }
+
+    public void EndShakeScreen()
+    {
+        mainCamera.GetComponent<CameraShake>().EndScreenShakeWrapper();
+    }
+
     public void Flash()
     {
-        flashObject.SetActive(false);
-        flashObject.SetActive(true);
+        flashObject.GetComponent<Animator>().Play("image_fade_out_half");
         sfxSource.PlayOneShot(flashSFX);
+    }
+
+    public void StartFlash()
+    {
+        flashObject.GetComponent<Animator>().Play("image_fade_in_half");
+        sfxSource.PlayOneShot(flashSFX);
+    }
+
+    public void EndFlash()
+    {
+        flashObject.GetComponent<Animator>().Play("image_fade_out_half");
     }
 
     public void Dim()
     {
-        dimObject.SetActive(false);
-        dimObject.SetActive(true);
+        dimObject.GetComponent<Animator>().Play("image_fade_out_half");
         sfxSource.PlayOneShot(dimSFX);
+    }
+
+    public void StartDim()
+    {
+        dimObject.GetComponent<Animator>().Play("image_fade_in_half");
+        sfxSource.PlayOneShot(dimSFX);
+    }
+
+    public void EndDim()
+    {
+        dimObject.GetComponent<Animator>().Play("image_fade_out_half");
     }
 }
