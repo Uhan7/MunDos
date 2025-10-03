@@ -48,4 +48,16 @@ public class Fader : MonoBehaviour
             yield return null;
         }
     }
+
+    public void FadeSequence(float firstAlpha, float firstDuration, float secondAlpha, float secondDuration)
+    {
+        StartCoroutine(FadeSequenceRoutine(firstAlpha, firstDuration, secondAlpha, secondDuration));
+    }
+
+    private IEnumerator FadeSequenceRoutine(float firstAlpha, float firstDuration, float secondAlpha, float secondDuration)
+    {
+        yield return FadeTo(firstAlpha, firstDuration);
+        yield return FadeTo(secondAlpha, secondDuration);
+    }
+
 }

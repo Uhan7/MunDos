@@ -35,14 +35,15 @@ public class CameraEffectsManager : MonoBehaviour
 
     public void Flash()
     {
-        flashObject.GetComponent<Animator>().Play("image_fade_out_half");
+        //flashObject.GetComponent<Animator>().Play("image_fade_out_half");
+        flashObject.GetComponent<Fader>().FadeSequence(1, 0.05f, 0, 0.45f);
         sfxSource.PlayOneShot(flashSFX);
     }
 
     public void StartFlash()
     {
         //flashObject.GetComponent<Animator>().Play("image_fade_in_half");
-        flashObject.GetComponent<Fader>().FadeToWrapper(1, 1);
+        flashObject.GetComponent<Fader>().FadeToWrapper(1, 2);
         sfxSource.PlayOneShot(flashSFX);
     }
 
@@ -54,14 +55,15 @@ public class CameraEffectsManager : MonoBehaviour
 
     public void Dim()
     {
-        dimObject.GetComponent<Animator>().Play("image_fade_out_half");
+        //dimObject.GetComponent<Animator>().Play("image_fade_out_half");
+        dimObject.GetComponent<Fader>().FadeSequence(1, 0.05f, 0, 0.45f);
         sfxSource.PlayOneShot(dimSFX);
     }
 
     public void StartDim()
     {
         //dimObject.GetComponent<Animator>().Play("image_fade_in_half");
-        dimObject.GetComponent<Fader>().FadeToWrapper(1, 1);
+        dimObject.GetComponent<Fader>().FadeToWrapper(1, 2);
         sfxSource.PlayOneShot(dimSFX);
     }
 
