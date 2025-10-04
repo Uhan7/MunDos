@@ -9,55 +9,47 @@ public class Trigger : MonoBehaviour
     [HideInInspector] private const float DEACTIVATE_TIME = 0.1f;
     [HideInInspector] private const string PROTAG_TAG = "Protag";
 
-    [Header("Animation Properties")]
-    private bool closeAnim = true;
-    enum AnimOptions
-    {
-        defaultClose = 0,
-        playClose,
-        skipClose
-    };
-
     [Header("Properties")]
-    [SerializeField] private bool startOnEnable;
-    [SerializeField] private bool startFromTrigger = true;
-    [SerializeField] private bool willFocus;
+    [ShowIf("hasTimer")][SerializeField] private bool willFocus;
     [SerializeField] private bool deactivateAfter = true;
+    [SerializeField] private bool hasTimer = true;
     [SerializeField] private GameObject[] activateObjects;
     [SerializeField] private GameObject[] deactivateObjects;
-    [SerializeField] private bool isTriggered = false;
+    [HideInInspector] private bool hasActivatedObejcts = false;
+    [HideInInspector] private bool isTriggered = false;
+    [HideInInspector] private bool finishTrigger = false;
 
     [Header("Timers")]
-    [SerializeField] private float HoldTime = 1.5f;
-    [SerializeField] private float objectActiveTime = 1.0f;
-    [HideInInspector] private float countdownTimer;
+    [ShowIf("hasTimer")][SerializeField] private float timeToWait = 1.5f;
+    [ShowIf("hasTimer")][SerializeField] private float objectActiveStateAtTime = 1.0f;
+    [ShowIf("hasTimer")][HideInInspector] private float countdownTimer;
+    [ShowIf("hasTimer")][HideInInspector] private float delay = 0.5f;
 
     private void Start()
     {
-        countdownTimer = HoldTime;
+        countdownTimer = timeToWait;
     }
 
     private void OnEnable()
     {
         ResetValues();
-
-        if (startOnEnable) EnableTrigger();
     }
-
     private void Update()
     {
-        if (isTriggered)
+        if (finishTrigger) return;
+        if (hasTimer && isTriggered)
         {
             EnableTrigger();
         }
-        
-
+        else if (!hasTimer && isTriggered)
+        {
+            SetObjectStates();
+            finishTrigger = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!startFromTrigger) return;
-
         if (col.gameObject.CompareTag(PROTAG_TAG))
         {
             isTriggered = true;
@@ -66,8 +58,6 @@ public class Trigger : MonoBehaviour
 
     public void OnTriggerExit2D(Collider2D col)
     {
-        if (!startFromTrigger) return;
-
         if (col.gameObject.CompareTag(PROTAG_TAG))
         {
             if (deactivateAfter) Deactivate();
@@ -79,35 +69,29 @@ public class Trigger : MonoBehaviour
     void WaitForTimer()
     {
         countdownTimer -= Time.deltaTime;
+        //Debug.Log("timer: " + countdownTimer);
     }
     public void EnableTrigger()
 	{
         WaitForTimer();
         if (willFocus) Focus(true);
-        if (activateObjects.Length != 0 && countdownTimer <= objectActiveTime)
+        if(countdownTimer <= objectActiveStateAtTime && !hasActivatedObejcts)
         {
-            ActivateOtherObjects();
-        }
-        if (deactivateObjects.Length != 0 && countdownTimer <= objectActiveTime)
-        {
-            DeactivateOtherObjects();
+            SetObjectStates();
         }
 
         if (countdownTimer <= 0)
         {
             Focus(false);
+            finishTrigger = true;
         }
+    }
 
-    }
-    void ActivateOtherObjects()
+    private void SetObjectStates()
     {
-        Debug.Log("Activating Objects");
-        foreach (GameObject objs in activateObjects) objs.SetActive(true);
-    }
-    void DeactivateOtherObjects()
-    {
-        Debug.Log("Deactivating Objects");
-        foreach (GameObject objs in deactivateObjects) objs.SetActive(false);
+        if (activateObjects.Length != 0) foreach (GameObject objs in activateObjects) objs.SetActive(true);
+        if (deactivateObjects.Length != 0) foreach (GameObject objs in deactivateObjects) objs.SetActive(false);
+        hasActivatedObejcts = true;
     }
 
     public void Deactivate()
@@ -116,11 +100,14 @@ public class Trigger : MonoBehaviour
         {
             Focus(false);
         }
-        if (countdownTimer <= 0) gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void ResetValues()
     {
+        hasActivatedObejcts = false;
+        isTriggered = false;
+        finishTrigger = false;
     }
 
     void Focus(bool value)
