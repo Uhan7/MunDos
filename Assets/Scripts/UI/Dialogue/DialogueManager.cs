@@ -98,7 +98,8 @@ public class DialogueManager : MonoBehaviour
 			.Replace("<end_flash>", "")
 			.Replace("<dim>", "")
 			.Replace("<start_dim>", "")
-			.Replace("<end_dim>", "");
+			.Replace("<end_dim>", "")
+			.Replace("<end_all>", "");
 
 		dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
@@ -130,10 +131,7 @@ public class DialogueManager : MonoBehaviour
 			DialogueCameraEffect(sentence, "<dim>", "Dim");
 			DialogueCameraEffect(sentence, "<start_dim>", "StartDim");
 			DialogueCameraEffect(sentence, "<end_dim>", "EndDim");
-
-			// CONTINUE THIS WITH THE LONG VERSIONS
-
-			// End of manually putting shi
+			DialogueCameraEffect(sentence, "<end_all>", "EndAll");
 
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{

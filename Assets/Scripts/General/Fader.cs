@@ -51,6 +51,7 @@ public class Fader : MonoBehaviour
 
     public void FadeSequence(float firstAlpha, float firstDuration, float secondAlpha, float secondDuration)
     {
+        //StopCoroutine(FadeSequenceRoutine);
         StartCoroutine(FadeSequenceRoutine(firstAlpha, firstDuration, secondAlpha, secondDuration));
     }
 
@@ -59,5 +60,4 @@ public class Fader : MonoBehaviour
         yield return FadeTo(firstAlpha, firstDuration);
         yield return FadeTo(secondAlpha, secondDuration);
     }
-
 }
