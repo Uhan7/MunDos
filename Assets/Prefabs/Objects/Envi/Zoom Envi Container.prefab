@@ -159,6 +159,7 @@ MonoBehaviour:
   zoomInteract: 1
   puzzleInteract: 0
   protagHoverable: 0
+  willFocus: 0
   toActivateOnInteract:
   - {fileID: 7468867151094191869}
   toDeactivateOnInteract: []
@@ -491,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -706,7 +707,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &2336673061832046492
 MonoBehaviour:
@@ -811,8 +812,10 @@ MonoBehaviour:
   dialogueHolderName: Dialogue Holder
   dialogue:
     character: {fileID: 21300000, guid: d2811b6f7ece04be08cfd4e9ef6ea1a3, type: 3}
+    character2: {fileID: 0}
     name: Protag
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
     font: {fileID: 0}
     textSpeed: 0.024
     textPunctSpeed: 0.18
@@ -820,13 +823,13 @@ MonoBehaviour:
     sentences:
     - This is default Envi dialogue.
   startOnEnable: 1
-  startOnEnableWithDelay: 0
   startFromTrigger: 0
   isSign: 0
   willFocus: 1
   deactivateAfter: 1
   linksToOtherDialogue: 0
   playClosingAnimation: 1
+  mainCharacterIsSpeaking: 1
   objectsToSpawnAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 0}
