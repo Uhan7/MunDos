@@ -238,7 +238,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8, y: 3.8}
+  m_Size: {x: 1, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &4844786128696803958
 MonoBehaviour:
@@ -252,12 +252,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2673fa9b627004f99976bbb4cf60225b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  normalSprite: {fileID: 0}
+  outlinedSprite: {fileID: 0}
   itemInteractable: 0
   checksConditionalObject: 0
-  interactableOnlyOnce: 0
+  unlockInteractableObject: 0
+  lockInteractableObject: 0
+  zoomInteract: 0
+  puzzleInteract: 0
+  protagHoverable: 0
+  willFocus: 0
   toActivateOnInteract:
   - {fileID: 658745413927944185}
   toDeactivateOnInteract: []
+  conditionalObjectsToCheck: []
+  checkOnValidInteractOnly: 0
+  objectsToUnlockCheck: []
+  unlockOnValidInteractOnly: 0
+  objectsToLockCheck: []
+  lockOnValidInteractOnly: 0
+  zoomCanvas: {fileID: 0}
+  puzzleObject: {fileID: 0}
+  exteriorFG: {fileID: 0}
+  animateInOnHover: 0
+  toActivateOnProtagHover: []
+  toDeactivateOnProtagHover: []
   toActivateOnValidInteract: []
   toDeactivateOnValidInteract: []
   toActivateOnInvalidInteract: []
