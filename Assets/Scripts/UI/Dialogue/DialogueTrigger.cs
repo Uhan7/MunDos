@@ -74,7 +74,7 @@ public class DialogueTrigger : MonoBehaviour
 
         if (objectsToSpawnAfter.Length != 0)
         {
-            Debug.Log("test 1");
+            //Debug.Log("test 1");
             //WaitForOtherDialogue();
             //if (activateObjectTimer <= 0)
                 ActivateOtherObjects();
