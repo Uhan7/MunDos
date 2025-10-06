@@ -5,9 +5,6 @@ public class PlayerInteract : MonoBehaviour
     [Header("References")]
     private PlayerMove moveScript;
 
-    [Header("GameObjects")]
-    [SerializeField] private GameObject interactableFeedbackObject;
-
     [Header("Key Inputs")]
     [SerializeField] private KeyCode switchTimelineKey;
     [SerializeField] private KeyCode interactKey;
@@ -41,8 +38,6 @@ public class PlayerInteract : MonoBehaviour
 
     private void Update()
     {
-        InteractableFeedback();
-
         if (Input.GetKeyDown(interactKey) && !Input.GetKey(switchTimelineKey))
         {
             if (nearbyEnvi != null) Interact();
@@ -100,16 +95,6 @@ public class PlayerInteract : MonoBehaviour
     }
 
     // Helper Functions --------------------------------------------------------
-
-    void InteractableFeedback()
-    {
-        if (!moveScript.canMove)
-        {
-            interactableFeedbackObject.SetActive(false);
-            return;
-        }
-        interactableFeedbackObject.SetActive(nearbyEnvi != null || nearbyItem != null); // remove this soon
-    }
 
     void Interact()
     {
@@ -200,7 +185,19 @@ public class PlayerInteract : MonoBehaviour
 
     void SetInteractableObjectOutline(GameObject obj, bool var)
     {
-        if (var == true) obj.GetComponent<InteractableObject>().spriteRenderer.sprite = obj.GetComponent<InteractableObject>().outlinedSprite;
-        else obj.GetComponent<InteractableObject>().spriteRenderer.sprite = obj.GetComponent<InteractableObject>().normalSprite;
+        Sprite objSprite = obj.GetComponent<InteractableObject>().spriteRenderer.sprite;
+        Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
+        Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
+
+        if (var == true)
+        {
+            if (objOutlinedSprite != objNormalSprite) objSprite = objOutlinedSprite;
+            else obj.GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.6f, 0.6f, 1);
+        }
+        else
+        {
+            if (objOutlinedSprite != objNormalSprite) objSprite = objNormalSprite;
+            else obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        }
     }
 }
