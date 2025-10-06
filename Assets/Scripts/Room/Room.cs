@@ -5,7 +5,7 @@ using NaughtyAttributes;
 public class Room : MonoBehaviour
 {
     [SerializeField] private GameObject roomCamera;
-    [SerializeField] private bool isEnclosed;
+    // [SerializeField] private bool isEnclosed;
     [ShowIf("isEnclosed")] [SerializeField] private GameObject exteriorWalls;
 
     private void OnTriggerEnter2D(Collider2D col)
