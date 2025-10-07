@@ -59,7 +59,6 @@ public class PlayerInteract : MonoBehaviour
         if (Input.GetKeyDown(item3Key)) SelectItem(2);
         if (Input.GetKeyDown(item4Key)) SelectItem(3);
         if (Input.GetKeyDown(item5Key)) SelectItem(4);
-
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -70,14 +69,15 @@ public class PlayerInteract : MonoBehaviour
             case "Envi":
                 if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
                 nearbyEnvi = col.gameObject;
-                SetInteractableObjectOutline(nearbyEnvi, true);
+                if (moveScript.canMove) SetInteractableObjectOutline(nearbyEnvi, true);
                 break;
 
             case "Item":
                 if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
                 if (nearbyItem != null) SetInteractableObjectOutline(nearbyItem, false);
                 nearbyItem = col.gameObject;
-                SetInteractableObjectOutline(nearbyItem, true);
+
+                if (moveScript.canMove) SetInteractableObjectOutline(nearbyItem, true);
                 break;
 
             default:
@@ -119,6 +119,8 @@ public class PlayerInteract : MonoBehaviour
                 nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(false);
             }
         }
+
+        SetInteractableObjectOutline(nearbyEnvi, false);
     }
 
     int FindEmptySlot()
@@ -185,18 +187,18 @@ public class PlayerInteract : MonoBehaviour
 
     void SetInteractableObjectOutline(GameObject obj, bool var)
     {
-        Sprite objSprite = obj.GetComponent<InteractableObject>().spriteRenderer.sprite;
+        SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
         Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
         Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
 
         if (var == true)
         {
-            if (objOutlinedSprite != objNormalSprite) objSprite = objOutlinedSprite;
+            if (objOutlinedSprite != objNormalSprite) objSpriteRenderer.sprite = objOutlinedSprite;
             else obj.GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.6f, 0.6f, 1);
         }
         else
         {
-            if (objOutlinedSprite != objNormalSprite) objSprite = objNormalSprite;
+            if (objOutlinedSprite != objNormalSprite) objSpriteRenderer.sprite = objNormalSprite;
             else obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
     }
