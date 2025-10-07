@@ -59,6 +59,12 @@ public class PlayerInteract : MonoBehaviour
         if (Input.GetKeyDown(item3Key)) SelectItem(2);
         if (Input.GetKeyDown(item4Key)) SelectItem(3);
         if (Input.GetKeyDown(item5Key)) SelectItem(4);
+
+        // Debugs can go here ---
+
+        // awooga
+
+        // End of debugs ---
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -120,7 +126,7 @@ public class PlayerInteract : MonoBehaviour
             }
         }
 
-        SetInteractableObjectOutline(nearbyEnvi, false);
+        if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
     }
 
     int FindEmptySlot()
