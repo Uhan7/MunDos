@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         isFocusingDialogue = param.GetBoolExtra(ParamNames.IS_FOCUSING_DIALOGUE, false);
 
         protagMoveScript.canMove = !isFocusingDialogue;
+        protagMoveScript.canInput = !isFocusingDialogue;
         timelineManagerScript.canSwitch = !isFocusingDialogue;
     }
 
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
         dialogueHolderScript.canClick = !pauseMenuScript.active;
 
         protagMoveScript.canMove = (!pauseMenuScript.active && !isFocusingDialogue);
+        protagMoveScript.canInput = (!pauseMenuScript.active && !isFocusingDialogue);
         timelineManagerScript.canSwitch = (!pauseMenuScript.active && !isFocusingDialogue);
 
         Time.timeScale = pauseMenuScript.active ? 0 : 1;

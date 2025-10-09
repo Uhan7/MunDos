@@ -83,7 +83,7 @@ public class PlayerInteract : MonoBehaviour
                 if (nearbyItem != null) SetInteractableObjectOutline(nearbyItem, false);
                 nearbyItem = col.gameObject;
 
-                if (moveScript.canMove) SetInteractableObjectOutline(nearbyItem, true);
+                if (moveScript.canInput) SetInteractableObjectOutline(nearbyItem, true);
                 break;
 
             default:
@@ -104,7 +104,7 @@ public class PlayerInteract : MonoBehaviour
 
     void Interact()
     {
-        if ((nearbyEnvi == null) || !moveScript.canMove) return;
+        if ((nearbyEnvi == null) || !moveScript.canInput) return;
 
         if (currentItemData.itemName == "") nearbyEnvi.GetComponent<InteractableObject>().Interact();
         else
@@ -193,6 +193,8 @@ public class PlayerInteract : MonoBehaviour
 
     void SetInteractableObjectOutline(GameObject obj, bool var)
     {
+        if (!moveScript.canInput) return;
+
         SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
         Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
         Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;

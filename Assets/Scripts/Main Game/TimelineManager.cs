@@ -6,6 +6,7 @@ public class TimelineManager : MonoBehaviour
 {
     [Header("Constants")]
     [HideInInspector] private const string DIALOGUE_HOLDER_NAME = "Dialogue Holder";
+    [HideInInspector] private const string CURRENT_PROTAG_TAG = "Protag";
 
     [Header("References")]
     [HideInInspector] private DialogueManager dialogueHolder;
@@ -40,7 +41,13 @@ public class TimelineManager : MonoBehaviour
     {
         if (!canSwitch) return;
 
-        if (Input.GetKeyDown(switchTimelineKey) && !Input.GetKey(interactKey)) StartCoroutine(SwitchTimeline(0.05f));
+        if (Input.GetKeyDown(switchTimelineKey) && !Input.GetKey(interactKey))
+        {
+            PlayerMove playerMoveScript = GameObject.FindGameObjectWithTag(CURRENT_PROTAG_TAG).GetComponent<PlayerMove>();
+            if (!playerMoveScript.canInput) return;
+
+            StartCoroutine(SwitchTimeline(0.05f));
+        }
     }
 
     // Update Functions --------------------------------------------------------
@@ -51,7 +58,6 @@ public class TimelineManager : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
 
         // modify this area to have cooler effects and stuff
-
 
         if (currentTimeline == 0)
         {

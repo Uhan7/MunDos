@@ -29,8 +29,9 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Flags")]
     [HideInInspector] public bool canMove = true; // Used in DialogueTrigger.cs
-    [HideInInspector] private bool getMoveLeftKey;
-    [HideInInspector] private bool getMoveRightKey;
+    [HideInInspector] public bool canInput = true; // Used in DialogueTrigger.cs
+    [HideInInspector] public bool getMoveLeftKey; // Used in AutoMove.cs
+    [HideInInspector] public bool getMoveRightKey; // Used in AutoMove.cs
     [HideInInspector] private bool isWalking;
     [HideInInspector] private bool jumpIsQueued;
 
@@ -73,9 +74,9 @@ public class PlayerMove : MonoBehaviour
             getMoveRightKey = false;
             //isWalking = false;
             //jumpIsQueued = false;
-
-            return;
         }
+
+        if (!canInput) return;
 
         getMoveLeftKey = Input.GetKey(moveLeftKey);
         getMoveRightKey = Input.GetKey(moveRightKey);
