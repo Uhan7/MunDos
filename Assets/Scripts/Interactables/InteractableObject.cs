@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -27,34 +28,34 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private GameObject[] toDeactivateOnInteract;
 
     [Header("Conditionals Interactions")]
-    [ShowIf("checksConditionalObject")] [SerializeField] private GameObject[] conditionalObjectsToCheck;
-    [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnValidInteractOnly;
+    [ShowIf("checksConditionalObject")][SerializeField] private GameObject[] conditionalObjectsToCheck;
+    [ShowIf("checksConditionalObject")][SerializeField] private bool checkOnValidInteractOnly;
 
     [Header("Unlocked Interactions")]
-    [ShowIf("unlockInteractableObject")] [SerializeField] private GameObject[] objectsToUnlockCheck;
-    [ShowIf("unlockInteractableObject")] [SerializeField] private bool unlockOnValidInteractOnly;
+    [ShowIf("unlockInteractableObject")][SerializeField] private GameObject[] objectsToUnlockCheck;
+    [ShowIf("unlockInteractableObject")][SerializeField] private bool unlockOnValidInteractOnly;
 
     [Header("Locked Interactions")]
-    [ShowIf("lockInteractableObject")] [SerializeField] private GameObject[] objectsToLockCheck;
-    [ShowIf("lockInteractableObject")] [SerializeField] private bool lockOnValidInteractOnly;
+    [ShowIf("lockInteractableObject")][SerializeField] private GameObject[] objectsToLockCheck;
+    [ShowIf("lockInteractableObject")][SerializeField] private bool lockOnValidInteractOnly;
 
     [Header("Zoom Interactions")]
-    [ShowIf("zoomInteract")] [SerializeField] private ZoomEnviManager zoomCanvas;
+    [ShowIf("zoomInteract")][SerializeField] private ZoomEnviManager zoomCanvas;
 
     [Header("Puzzle Interactions")]
-    [ShowIf("puzzleInteract")] [SerializeField] private GameObject puzzleObject;
+    [ShowIf("puzzleInteract")][SerializeField] private GameObject puzzleObject;
 
     [Header("On Protag Hover")]
-    [ShowIf("protagHoverable")] [SerializeField] private GameObject exteriorFG;
-    [ShowIf("protagHoverable")] [SerializeField] private bool animateInOnHover;
-    [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toActivateOnProtagHover;
-    [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toDeactivateOnProtagHover;
+    [ShowIf("protagHoverable")][SerializeField] private GameObject exteriorFG;
+    [ShowIf("protagHoverable")][SerializeField] private bool animateInOnHover;
+    [ShowIf("protagHoverable")][SerializeField] private GameObject[] toActivateOnProtagHover;
+    [ShowIf("protagHoverable")][SerializeField] private GameObject[] toDeactivateOnProtagHover;
 
     [Header("Item Interactions")]
-    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toActivateOnValidInteract;
-    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnValidInteract;
-    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toActivateOnInvalidInteract;
-    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
+    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toActivateOnValidInteract;
+    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toDeactivateOnValidInteract;
+    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toActivateOnInvalidInteract;
+    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
 
     [Header("Flags")]
     [HideInInspector] private bool alreadyCheckedConditional = false;
@@ -101,20 +102,25 @@ public class InteractableObject : MonoBehaviour
 
     public void Interact()
     {
+        Debug.Log("In Interact");
         SetAll(toActivateOnInteract, true);
         SetAll(toDeactivateOnInteract, false);
 
         if (zoomInteract) ZoomInteract(true);
 
+        Debug.Log("checking objects to check");
         if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddConditionalCheck();
-        if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly) AddUnlockCheck();
-        if (objectsToLockCheck != null && !lockOnValidInteractOnly) AddLockCheck();
+        Debug.Log("checking objects to unlock");
+        if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly && unlockInteractableObject) AddUnlockCheck();
+        Debug.Log("checking objects to lock");
+        if (objectsToLockCheck != null && !lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
 
         if (willFocus) Focus(true);
     }
 
     public void ItemInteract(bool var)
     {
+        Debug.Log("In Item Interact");
         if (!itemInteractable)
         {
             Interact();
@@ -134,8 +140,8 @@ public class InteractableObject : MonoBehaviour
             SetAll(toDeactivateOnValidInteract, false);
 
             if (conditionalObjectsToCheck != null && checkOnValidInteractOnly) AddConditionalCheck();
-            if (objectsToUnlockCheck != null && unlockOnValidInteractOnly) AddUnlockCheck();
-            if (objectsToLockCheck != null && lockOnValidInteractOnly) AddLockCheck();
+            if (objectsToUnlockCheck != null && unlockOnValidInteractOnly && unlockInteractableObject) AddUnlockCheck();
+            if (objectsToLockCheck != null && lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
         }
 
         if (willFocus) Focus(true);
@@ -164,32 +170,54 @@ public class InteractableObject : MonoBehaviour
 
     void AddUnlockCheck()
     {
-        if (alreadyCheckedUnlock) return;
+
+        if (alreadyCheckedUnlock)
+        {
+            return;
+        }
 
         foreach (GameObject lockObject in objectsToUnlockCheck)
         {
             LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
+            CheckUnlock(lockObject, ref lockObjectScript);
 
-            lockObjectScript.currentChecks++;
-            if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks) lockObjectScript.Lock(false);
+
+            if (lockObjectScript != null)
+            {
+                lockObjectScript.currentChecks++;
+
+                if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
+                {
+                    lockObjectScript.Lock(false);
+                }
+            }
+
         }
-
         alreadyCheckedUnlock = true;
     }
-
     void AddLockCheck()
     {
         if (alreadyCheckedLock) return;
 
+
         foreach (GameObject lockObject in objectsToLockCheck)
         {
             LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
+            CheckUnlock(lockObject, ref lockObjectScript);
 
-            lockObjectScript.currentChecks++;
-            if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks) lockObjectScript.Lock(true);
+
+            if (lockObjectScript != null)
+            {
+                lockObjectScript.currentChecks++;
+
+                if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
+                {
+                    lockObjectScript.Lock(true);
+                }
+            }
+
+            alreadyCheckedLock = true;
         }
-
-        alreadyCheckedLock = true;
     }
 
     void ZoomInteract(bool var)
@@ -204,5 +232,23 @@ public class InteractableObject : MonoBehaviour
         param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
 
         EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
+    }
+
+    void CheckUnlock(GameObject lockObject, ref LockableObject lockObjectScript)
+    {
+
+        if (lockObjectScript == null)
+        {
+            Transform envi = lockObject.transform.GetChild(0);
+            lockObjectScript = envi.GetComponent<LockableObject>();
+            if (lockObjectScript == null)
+            {
+                Debug.LogError("Error finding LockableObejct of " + lockObject.name);
+            }
+
+        }
+        else
+        {
+        }
     }
 }
