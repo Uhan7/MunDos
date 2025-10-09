@@ -61,6 +61,7 @@ public class Trigger : MonoBehaviour
         if (col.gameObject.CompareTag(PROTAG_TAG))
         {
             if (deactivateAfter) Deactivate();
+            ResetValues();
         }
     }
 
