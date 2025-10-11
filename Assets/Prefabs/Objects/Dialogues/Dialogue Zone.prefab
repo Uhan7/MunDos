@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1317018446988142921}
   - component: {fileID: 8439490232393766861}
   - component: {fileID: 7546022773180628751}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Dialogue Zone
   m_TagString: Dialogue Zone
   m_Icon: {fileID: 0}
@@ -48,8 +48,10 @@ MonoBehaviour:
   dialogueHolderName: Dialogue Holder
   dialogue:
     character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    character2: {fileID: 0}
     name: Default Name
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
     font: {fileID: 0}
     textSpeed: 0.024
     textPunctSpeed: 0.18
@@ -63,6 +65,10 @@ MonoBehaviour:
   willFocus: 1
   deactivateAfter: 1
   linksToOtherDialogue: 0
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 1
+  objectsToSpawnAfter: []
+  activateObjectTime: 0.5
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
 --- !u!61 &7546022773180628751

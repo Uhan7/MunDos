@@ -4,22 +4,24 @@ public class AutoMove : MonoBehaviour
 {
     [Header("Constants")]
     [HideInInspector] private const string PROTAG_TAG = "Protag";
+    [HideInInspector] private const string NPC_TAG = "NPC";
+    [HideInInspector] private enum Direction { Left, Right };
 
     [Header("References")]
-    [SerializeField] private PlayerMove character;
+    [HideInInspector] private PlayerMove character;
 
-    [Header("Bool Tests")]
-    [SerializeField] private bool moveRight;
+    [Header("Properties")]
+    [SerializeField] private Direction moveDirection;
+    [SerializeField] private bool stopper;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        // This line is temporary cause other ppl need to auto move as well
-        if (col.gameObject.tag == PROTAG_TAG)
+        if (col.gameObject.tag == PROTAG_TAG || col.gameObject.tag == NPC_TAG)
         {
-            // This part is also obvs temporary since this literally just references the character
+            character = col.gameObject.GetComponent<PlayerMove>();
             character.canInput = false;
 
-            MoveCharacter('R');
+            MoveCharacter(moveDirection);
         }
     }
 
@@ -30,18 +32,17 @@ public class AutoMove : MonoBehaviour
 
     // Helper Functions --------------------------------------------------------
 
-    private void MoveCharacter(char direction)
+    private void MoveCharacter(Direction moveDirection)
     {
-        if (direction == 'R')
+        if (moveDirection == Direction.Right)
         {
             character.getMoveLeftKey = false;
             character.getMoveRightKey = true;
         }
-        else if (direction == 'L')
+        else if (moveDirection == Direction.Left)
         {
             character.getMoveLeftKey = true;
             character.getMoveRightKey = false;
         }
-        else Debug.Log("Not a direction");
     }
 }
