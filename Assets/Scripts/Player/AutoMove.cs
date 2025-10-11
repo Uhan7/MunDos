@@ -13,12 +13,20 @@ public class AutoMove : MonoBehaviour
 
     [Header("Properties")]
     [HideIf("stopper")] [SerializeField] private Direction moveDirection;
-    [HideIf("stopper")] [SerializeField] private bool NPCMovement;
     [SerializeField] private bool stopper;
+    [SerializeField] private bool NPCMovement;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == PROTAG_TAG || col.gameObject.tag == NPC_TAG)
+        if (NPCMovement && col.gameObject.tag == NPC_TAG)
+        {
+            character = col.gameObject.GetComponent<PlayerMove>();
+
+            if (stopper) StopCharacter();
+            else MoveCharacter(moveDirection);
+        }
+
+        else if (!NPCMovement && col.gameObject.tag == PROTAG_TAG)
         {
             character = col.gameObject.GetComponent<PlayerMove>();
 
