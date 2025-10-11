@@ -22,8 +22,14 @@ public class AutoMove : MonoBehaviour
         {
             character = col.gameObject.GetComponent<PlayerMove>();
 
-            if (stopper) StopCharacter();
-            else MoveCharacter(moveDirection);
+            if (stopper)
+            {
+                StopCharacter();
+            }
+            else
+            {
+                MoveCharacter(moveDirection);
+            }
         }
 
         else if (!NPCMovement && col.gameObject.tag == PROTAG_TAG)
