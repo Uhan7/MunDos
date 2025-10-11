@@ -1,4 +1,5 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class AutoMove : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class AutoMove : MonoBehaviour
     [HideInInspector] private PlayerMove character;
 
     [Header("Properties")]
-    [SerializeField] private Direction moveDirection;
+    [HideIf("stopper")] [SerializeField] private Direction moveDirection;
+    [HideIf("stopper")] [SerializeField] private bool NPCMovement;
     [SerializeField] private bool stopper;
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -19,21 +21,18 @@ public class AutoMove : MonoBehaviour
         if (col.gameObject.tag == PROTAG_TAG || col.gameObject.tag == NPC_TAG)
         {
             character = col.gameObject.GetComponent<PlayerMove>();
-            character.canInput = false;
 
-            MoveCharacter(moveDirection);
+            if (stopper) StopCharacter();
+            else MoveCharacter(moveDirection);
         }
-    }
-
-    private void Update()
-    {
-        
     }
 
     // Helper Functions --------------------------------------------------------
 
     private void MoveCharacter(Direction moveDirection)
     {
+        character.canInput = false;
+
         if (moveDirection == Direction.Right)
         {
             character.getMoveLeftKey = false;
@@ -44,5 +43,15 @@ public class AutoMove : MonoBehaviour
             character.getMoveLeftKey = true;
             character.getMoveRightKey = false;
         }
+    }
+
+    private void StopCharacter()
+    {
+        if (character.tag == PROTAG_TAG) character.canInput = true;
+
+        character.getMoveLeftKey = false;
+        character.getMoveRightKey = false;
+
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 }
