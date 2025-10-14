@@ -14,6 +14,8 @@ public class ObjectsManager : MonoBehaviour
     [SerializeField] private bool activateAndDeactivate;
     [SerializeField] private bool lockAndUnlock;
     [SerializeField] private float delayTime;
+    [ShowIf("isTrigger")][SerializeField] private bool resetAfter;
+    [ShowIf("isTrigger")][SerializeField] private bool deactivateAfter;
 
     [Header("GameObjects Reference")]
     [ShowIf("activateAndDeactivate")] [SerializeField] private GameObject[] objectsToActivate;
@@ -51,10 +53,15 @@ public class ObjectsManager : MonoBehaviour
         }
         if (lockAndUnlock && isTrigger)
         {
-            Debug.Log("Enter trigger");
             if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
             if (objectsToUnlock.Length > 0) StartCoroutine(UnlockAfterTime(delayTime));
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (resetAfter) ResetValues();
+        if (deactivateAfter) Deactivate();
     }
 
     // ----------- External Call Functions -----------
@@ -173,7 +180,31 @@ public class ObjectsManager : MonoBehaviour
         {
             Debug.LogError("Error, no child found for " + lockObject.name);
         }
-        
-        
+    }
+
+    void ResetValues()
+    {
+        alreadyCheckedLock = false;
+        alreadyCheckedUnlock = false;
+        foreach (var obj in objectsToLock)
+        {
+            LockableObject lockObjectScript = obj.GetComponent<LockableObject>();
+            if (lockObjectScript != null)
+            {
+                lockObjectScript.currentChecks = 0;
+            }
+        }
+        foreach (var obj in objectsToUnlock)
+        {
+            LockableObject lockObjectScript = obj.GetComponent<LockableObject>();
+            if (lockObjectScript != null)
+            {
+                lockObjectScript.currentChecks = 0;
+            }
+        }
+    }
+    void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }
