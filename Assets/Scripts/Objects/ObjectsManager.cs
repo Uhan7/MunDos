@@ -1,78 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class ObjectsManager : MonoBehaviour
 {
-    public GameObject[] toActivate;
-    public GameObject[] toDeactivate;
+    [Header("Constants")]
+    [HideInInspector] private const string PROTAG_TAG = "Protag";
 
-    public bool activateOnTrigger;
-    public bool activateOnCollision;
-    public bool activateOnEnable;
+    [Header("Properties")]
+    [SerializeField] private bool isOnEnable;
+    [SerializeField] private bool isTrigger;
+    [SerializeField] private bool activateAndDeactivate;
+    [SerializeField] private bool lockAndUnlock;
+    [SerializeField] private float delayTime;
 
-    public bool deactivateOnTrigger;
-    public bool deactivateOnCollision;
-    public bool deactivateOnEnable;
-
-    public float waitTime;
-
-    public bool deactivateThisObjectAfter;
-    public bool causeScreenShake;
+    [Header("GameObjects Reference")]
+    [ShowIf("activateAndDeactivate")] [SerializeField] private GameObject[] objectsToActivate;
+    [ShowIf("activateAndDeactivate")] [SerializeField] private GameObject[] objectsToDeactivate;
+    [ShowIf("lockAndUnlock")] [SerializeField] private GameObject[] objectsToLock;
+    [ShowIf("lockAndUnlock")] [SerializeField] private GameObject[] objectsToUnlock;
 
     private void OnEnable()
     {
-        if (activateOnEnable)
-            StartCoroutine(ActivateAfterTime(waitTime));
-
-        if (deactivateOnEnable)
-            StartCoroutine(DeactivateAfterTime(waitTime));
+        if (objectsToActivate.Length > 0 && isOnEnable) StartCoroutine(ActivateAfterTime(delayTime));
+        if (objectsToDeactivate.Length > 0 && isOnEnable) StartCoroutine(DeactivateAfterTime(delayTime));
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            if (activateOnTrigger)
-                StartCoroutine(ActivateAfterTime(waitTime));
+        if (!col.gameObject.CompareTag(PROTAG_TAG)) return;
 
-            if (deactivateOnTrigger)
-                StartCoroutine(DeactivateAfterTime(waitTime));
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            if (activateOnCollision)
-                StartCoroutine(ActivateAfterTime(waitTime));
-
-            if (deactivateOnCollision)
-                StartCoroutine(DeactivateAfterTime(waitTime));
-        }
+        if (objectsToActivate.Length > 0 && isTrigger) StartCoroutine(ActivateAfterTime(delayTime));
+        if (objectsToDeactivate.Length > 0 && isTrigger) StartCoroutine(DeactivateAfterTime(delayTime));
     }
 
     // ----------- External Call Functions -----------
 
     public void ActivateByCalling()
     {
-        StartCoroutine(ActivateAfterTime(waitTime));
+        StartCoroutine(ActivateAfterTime(delayTime));
     }
 
     public void DeactivateByCalling()
     {
-        StartCoroutine(DeactivateAfterTime(waitTime));
+        StartCoroutine(DeactivateAfterTime(delayTime));
     }
 
     public void DestroyByCalling()
     {
-        StartCoroutine(DestroyAfterTime(waitTime));
-    }
-
-    public void DeactivateSelfByCalling()
-    {
-        StartCoroutine(DeactivateSelfAfterTime(waitTime));
+        StartCoroutine(DestroyAfterTime(delayTime));
     }
 
     // ----------- Coroutine Logic -----------
@@ -80,36 +57,24 @@ public class ObjectsManager : MonoBehaviour
     IEnumerator ActivateAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        foreach (var obj in toActivate)
-            obj.SetActive(true);
+        foreach (var obj in objectsToActivate) obj.SetActive(true);
 
-        if (deactivateThisObjectAfter)
-            gameObject.SetActive(false);
-
-        //if (causeScreenShake) StartCoroutine(gameObject.GetComponent<camera_shake>().screenShake());
+        gameObject.SetActive(false);
     }
 
     IEnumerator DeactivateAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        foreach (var obj in toDeactivate)
-            obj.SetActive(false);
+        foreach (var obj in objectsToDeactivate) obj.SetActive(false);
 
-        //if (causeScreenShake) StartCoroutine(gameObject.GetComponent<camera_shake>().screenShake());
+        gameObject.SetActive(false);
     }
 
     IEnumerator DestroyAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        foreach (var obj in toDeactivate)
-            Destroy(obj);
+        foreach (var obj in objectsToDeactivate) Destroy(obj);
 
-        //if (causeScreenShake) StartCoroutine(gameObject.GetComponent<camera_shake>().screenShake());
-    }
-
-    IEnumerator DeactivateSelfAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
         gameObject.SetActive(false);
     }
 }
