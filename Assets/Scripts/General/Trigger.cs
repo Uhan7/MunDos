@@ -33,6 +33,7 @@ public class Trigger : MonoBehaviour
     private void OnEnable()
     {
         ResetValues();
+
     }
     private void Update()
     {
@@ -90,6 +91,7 @@ public class Trigger : MonoBehaviour
 
     private void SetObjectStates()
     {
+        if (hasActivatedObejcts) return;
         if (activateObjects.Length != 0) foreach (GameObject objs in activateObjects) objs.SetActive(true);
         if (deactivateObjects.Length != 0) foreach (GameObject objs in deactivateObjects) objs.SetActive(false);
         hasActivatedObejcts = true;
