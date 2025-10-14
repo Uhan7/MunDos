@@ -102,17 +102,13 @@ public class InteractableObject : MonoBehaviour
 
     public void Interact()
     {
-        Debug.Log("In Interact");
         SetAll(toActivateOnInteract, true);
         SetAll(toDeactivateOnInteract, false);
 
         if (zoomInteract) ZoomInteract(true);
 
-        Debug.Log("checking objects to check");
         if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddConditionalCheck();
-        Debug.Log("checking objects to unlock");
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly && unlockInteractableObject) AddUnlockCheck();
-        Debug.Log("checking objects to lock");
         if (objectsToLockCheck != null && !lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
 
         if (willFocus) Focus(true);
@@ -120,7 +116,6 @@ public class InteractableObject : MonoBehaviour
 
     public void ItemInteract(bool var)
     {
-        Debug.Log("In Item Interact");
         if (!itemInteractable)
         {
             Interact();
@@ -179,17 +174,27 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject lockObject in objectsToUnlockCheck)
         {
             LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
-            CheckUnlock(lockObject, ref lockObjectScript);
+            Debug.Log("To unlock Gamobject " + lockObjectScript.name);
+            
 
 
             if (lockObjectScript != null)
             {
-                lockObjectScript.currentChecks++;
+                //bool activeState = lockObject.activeSelf;
+                //Renderer lockObjectRenderer = lockObject.GetComponent<Renderer>();
+                //bool renderState = lockObjectRenderer != null && lockObjectRenderer.enabled;
+                //if (!activeState) lockObject.SetActive(true);
+                //if (renderState) lockObjectRenderer.enabled = false;
 
+                CheckUnlock(lockObject, ref lockObjectScript);
+                lockObjectScript.currentChecks++;
                 if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
                 {
                     lockObjectScript.Lock(false);
                 }
+
+                //if (!activeState) lockObject.SetActive(false);
+                //if (renderState) lockObjectRenderer.enabled = true;
             }
 
         }

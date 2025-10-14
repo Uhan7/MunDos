@@ -11,7 +11,6 @@ public class Trigger : MonoBehaviour
     [Header("Properties")]
     [SerializeField] private bool isOnEnable;
     [SerializeField] private bool deactivateAfter;
-    [SerializeField] private bool hasTimer;
     [SerializeField] private bool willFocus;
     [HideInInspector] private bool isTriggered = false;
     [HideInInspector] private bool finishTrigger = false;
@@ -21,7 +20,7 @@ public class Trigger : MonoBehaviour
     [SerializeField] private GameObject[] objectsToDeactivate;
 
     [Header("Timers")]
-    [ShowIf("hasTimer")][SerializeField] private float waitforSeconds = 1.0f;
+    [SerializeField] private float waitforSeconds = 0.0f;
 
     [Header("Flags")]
     [HideInInspector] private bool hasActivatedObejcts = false;
@@ -45,7 +44,7 @@ public class Trigger : MonoBehaviour
         if (willFocus) Focus(true);
         if (objectsToActivate.Length > 0) StartCoroutine(ActivateAfterTime(waitforSeconds));
         if (objectsToDeactivate.Length > 0) StartCoroutine(DeactivateAfterTime(waitforSeconds));
-        if (willFocus) Focus(false);
+        if (willFocus) StartCoroutine(Wait(waitforSeconds));
     }
 
     public void OnTriggerExit2D(Collider2D col)
@@ -62,14 +61,18 @@ public class Trigger : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         foreach (var obj in objectsToActivate) obj.SetActive(true);
-
     }
 
     IEnumerator DeactivateAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
         foreach (var obj in objectsToDeactivate) obj.SetActive(false);
+    }
 
+    IEnumerator Wait(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Focus(false);
     }
 
     public void Deactivate()
