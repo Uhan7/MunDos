@@ -51,7 +51,6 @@ public class ObjectsManager : MonoBehaviour
         }
         if (lockAndUnlock && isTrigger)
         {
-            Debug.Log("Enter trigger");
             if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
             if (objectsToUnlock.Length > 0) StartCoroutine(UnlockAfterTime(delayTime));
         }
