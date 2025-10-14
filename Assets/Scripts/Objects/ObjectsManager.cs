@@ -21,18 +21,40 @@ public class ObjectsManager : MonoBehaviour
     [ShowIf("lockAndUnlock")] [SerializeField] private GameObject[] objectsToLock;
     [ShowIf("lockAndUnlock")] [SerializeField] private GameObject[] objectsToUnlock;
 
+    [Header("Flags")]
+    [HideInInspector] private bool alreadyCheckedUnlock = false;
+    [HideInInspector] private bool alreadyCheckedLock = false;
+
+
     private void OnEnable()
     {
-        if (objectsToActivate.Length > 0 && isOnEnable) StartCoroutine(ActivateAfterTime(delayTime));
-        if (objectsToDeactivate.Length > 0 && isOnEnable) StartCoroutine(DeactivateAfterTime(delayTime));
+        if (activateAndDeactivate && isOnEnable)
+        {
+            if (objectsToActivate.Length > 0) StartCoroutine(ActivateAfterTime(delayTime));
+            if (objectsToDeactivate.Length > 0) StartCoroutine(DeactivateAfterTime(delayTime));
+        }
+        if (lockAndUnlock && isOnEnable)
+        {
+            if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
+            if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (!col.gameObject.CompareTag(PROTAG_TAG)) return;
 
-        if (objectsToActivate.Length > 0 && isTrigger) StartCoroutine(ActivateAfterTime(delayTime));
-        if (objectsToDeactivate.Length > 0 && isTrigger) StartCoroutine(DeactivateAfterTime(delayTime));
+        if (activateAndDeactivate && isTrigger)
+        {
+            if (objectsToActivate.Length > 0) StartCoroutine(ActivateAfterTime(delayTime));
+            if (objectsToDeactivate.Length > 0) StartCoroutine(DeactivateAfterTime(delayTime));
+        }
+        if (lockAndUnlock && isTrigger)
+        {
+            Debug.Log("Enter trigger");
+            if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
+            if (objectsToUnlock.Length > 0) StartCoroutine(UnlockAfterTime(delayTime));
+        }
     }
 
     // ----------- External Call Functions -----------
@@ -76,5 +98,82 @@ public class ObjectsManager : MonoBehaviour
         foreach (var obj in objectsToDeactivate) Destroy(obj);
 
         gameObject.SetActive(false);
+    }
+
+    IEnumerator LockAfterTime(float time)
+    {
+        if (alreadyCheckedLock)
+        {
+            yield break;
+        }
+
+        yield return new WaitForSeconds(time);
+        foreach (var obj in objectsToLock)
+        {
+            LockableObject lockObjectScript = obj.GetComponent<LockableObject>();
+            if (lockObjectScript == null)
+            {
+                continue;
+            }
+
+            CheckUnlock(obj, ref lockObjectScript);
+            lockObjectScript.currentChecks++;
+            if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
+            {
+                lockObjectScript.Lock(true);
+            }
+        }
+        alreadyCheckedLock = true;
+    }
+
+    IEnumerator UnlockAfterTime(float time)
+    {
+        if (alreadyCheckedUnlock)
+        {
+            yield break;
+        }
+
+        yield return new WaitForSeconds(time);
+        foreach (var obj in objectsToUnlock)
+        {
+            LockableObject lockObjectScript = obj.GetComponent<LockableObject>();
+            if (lockObjectScript == null)
+            {
+                continue;
+            }
+
+            CheckUnlock(obj, ref lockObjectScript);
+            lockObjectScript.currentChecks++;
+            if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
+            {
+                lockObjectScript.Lock(false);
+            }
+        }
+        alreadyCheckedUnlock = true;
+    }
+
+    // ----------- Helper Functions -----------
+    void CheckUnlock(GameObject lockObject, ref LockableObject lockObjectScript)
+    {
+        if (lockObjectScript != null)
+        {
+            return;
+        }
+
+        Transform envi = lockObject.transform.GetChild(0);
+        if (envi != null)
+        {
+            lockObjectScript = envi.GetComponent<LockableObject>();
+            if (lockObjectScript == null)
+            {
+                Debug.LogError("Error finding LockableObejct of " + lockObject.name);
+            }
+        }
+        else
+        {
+            Debug.LogError("Error, no child found for " + lockObject.name);
+        }
+        
+        
     }
 }
