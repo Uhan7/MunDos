@@ -6,95 +6,70 @@ using NaughtyAttributes;
 public class Trigger : MonoBehaviour
 {
     [Header("Constants")]
-    [HideInInspector] private const float DEACTIVATE_TIME = 0.1f;
     [HideInInspector] private const string PROTAG_TAG = "Protag";
 
     [Header("Properties")]
-    [ShowIf("hasTimer")][SerializeField] private bool willFocus;
-    [SerializeField] private bool deactivateAfter = true;
-    [SerializeField] private bool hasTimer = true;
-    [SerializeField] private GameObject[] activateObjects;
-    [SerializeField] private GameObject[] deactivateObjects;
-    [HideInInspector] private bool hasActivatedObejcts = false;
+    [SerializeField] private bool isOnEnable;
+    [SerializeField] private bool deactivateAfter;
+    [SerializeField] private bool hasTimer;
+    [SerializeField] private bool willFocus;
     [HideInInspector] private bool isTriggered = false;
     [HideInInspector] private bool finishTrigger = false;
 
-    [Header("Timers")]
-    [ShowIf("hasTimer")][SerializeField] private float timeToWait = 1.5f;
-    [ShowIf("hasTimer")][SerializeField] private float objectActiveStateAtTime = 1.0f;
-    [ShowIf("hasTimer")][HideInInspector] private float countdownTimer;
-    [ShowIf("hasTimer")][HideInInspector] private float delay = 0.5f;
+    [Header("GameObjects Reference")]
+    [SerializeField] private GameObject[] objectsToActivate;
+    [SerializeField] private GameObject[] objectsToDeactivate;
 
-    private void Start()
-    {
-        countdownTimer = timeToWait;
-    }
+    [Header("Timers")]
+    [ShowIf("hasTimer")][SerializeField] private float waitforSeconds = 1.0f;
+
+    [Header("Flags")]
+    [HideInInspector] private bool hasActivatedObejcts = false;
 
     private void OnEnable()
     {
-        ResetValues();
-
-    }
-    private void Update()
-    {
-        if (finishTrigger) return;
-        if (hasTimer && isTriggered)
+        if (isOnEnable)
         {
-            EnableTrigger();
+            if (willFocus) Focus(true);
+            if (objectsToActivate.Length > 0) StartCoroutine(ActivateAfterTime(waitforSeconds));
+            if (objectsToDeactivate.Length > 0) StartCoroutine(DeactivateAfterTime(waitforSeconds));
+            if (willFocus) Focus(false);
         }
-        else if (!hasTimer && isTriggered)
-        {
-            SetObjectStates();
-            finishTrigger = true;
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag(PROTAG_TAG))
-        {
-            isTriggered = true;
-        }
+        if (!col.gameObject.CompareTag(PROTAG_TAG)) return;
+        
+        if (willFocus) Focus(true);
+        if (objectsToActivate.Length > 0) StartCoroutine(ActivateAfterTime(waitforSeconds));
+        if (objectsToDeactivate.Length > 0) StartCoroutine(DeactivateAfterTime(waitforSeconds));
+        if (willFocus) Focus(false);
     }
 
     public void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag(PROTAG_TAG))
-        {
-            if (deactivateAfter) Deactivate();
-            ResetValues();
-        }
+        if (!col.gameObject.CompareTag(PROTAG_TAG)) return;
+
+        ResetValues();
+        if (deactivateAfter) Deactivate();
     }
 
     // Helper Functions --------------------------------------------------------
 
-    void WaitForTimer()
+    IEnumerator ActivateAfterTime(float time)
     {
-        countdownTimer -= Time.deltaTime;
-        //Debug.Log("timer: " + countdownTimer);
-    }
-    public void EnableTrigger()
-	{
-        WaitForTimer();
-        if (willFocus) Focus(true);
-        if(countdownTimer <= objectActiveStateAtTime && !hasActivatedObejcts)
-        {
-            SetObjectStates();
-        }
+        yield return new WaitForSeconds(time);
+        foreach (var obj in objectsToActivate) obj.SetActive(true);
 
-        if (countdownTimer <= 0)
-        {
-            Focus(false);
-            finishTrigger = true;
-        }
     }
 
-    private void SetObjectStates()
+    IEnumerator DeactivateAfterTime(float time)
     {
-        if (hasActivatedObejcts) return;
-        if (activateObjects.Length != 0) foreach (GameObject objs in activateObjects) objs.SetActive(true);
-        if (deactivateObjects.Length != 0) foreach (GameObject objs in deactivateObjects) objs.SetActive(false);
-        hasActivatedObejcts = true;
+        yield return new WaitForSeconds(time);
+        foreach (var obj in objectsToDeactivate) obj.SetActive(false);
+
     }
 
     public void Deactivate()
