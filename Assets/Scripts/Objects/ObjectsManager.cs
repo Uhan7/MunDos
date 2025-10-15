@@ -14,8 +14,8 @@ public class ObjectsManager : MonoBehaviour
     [SerializeField] private bool activateAndDeactivate;
     [SerializeField] private bool lockAndUnlock;
     [SerializeField] private float delayTime;
-    [ShowIf("isTrigger")][SerializeField] private bool resetAfter;
-    [ShowIf("isTrigger")][SerializeField] private bool deactivateAfter;
+    [SerializeField] private bool resetAfter;
+    [SerializeField] private bool deactivateAfter;
 
     [Header("GameObjects Reference")]
     [ShowIf("activateAndDeactivate")] [SerializeField] private GameObject[] objectsToActivate;
@@ -87,16 +87,12 @@ public class ObjectsManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         foreach (var obj in objectsToActivate) obj.SetActive(true);
-
-        gameObject.SetActive(false);
     }
 
     IEnumerator DeactivateAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
         foreach (var obj in objectsToDeactivate) obj.SetActive(false);
-
-        gameObject.SetActive(false);
     }
 
     IEnumerator DestroyAfterTime(float time)
