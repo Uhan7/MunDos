@@ -13,6 +13,7 @@ public class AutoMove : MonoBehaviour
 
     [Header("Properties")]
     [HideIf("stopper")] [SerializeField] private Direction moveDirection;
+    [HideIf("stopper")] [SerializeField] private bool singleUse;
     [SerializeField] private bool stopper;
     [SerializeField] private bool NPCMovement;
 
@@ -45,6 +46,8 @@ public class AutoMove : MonoBehaviour
 
     private void MoveCharacter(Direction moveDirection)
     {
+        if (!NPCMovement && character.tag == PROTAG_TAG && !character.canInput) return;
+
         character.canInput = false;
 
         if (moveDirection == Direction.Right)
@@ -61,11 +64,13 @@ public class AutoMove : MonoBehaviour
 
     private void StopCharacter()
     {
+        if (!NPCMovement && character.tag == PROTAG_TAG && character.canInput) return;
+
         if (character.tag == PROTAG_TAG) character.canInput = true;
 
         character.getMoveLeftKey = false;
         character.getMoveRightKey = false;
 
-        gameObject.transform.parent.gameObject.SetActive(false);
+        if (singleUse) gameObject.transform.parent.gameObject.SetActive(false);
     }
 }
