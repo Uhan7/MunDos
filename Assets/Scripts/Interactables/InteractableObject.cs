@@ -174,17 +174,9 @@ public class InteractableObject : MonoBehaviour
         foreach (GameObject lockObject in objectsToUnlockCheck)
         {
             LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
-            Debug.Log("To unlock Gamobject " + lockObjectScript.name);
-            
-
 
             if (lockObjectScript != null)
             {
-                //bool activeState = lockObject.activeSelf;
-                //Renderer lockObjectRenderer = lockObject.GetComponent<Renderer>();
-                //bool renderState = lockObjectRenderer != null && lockObjectRenderer.enabled;
-                //if (!activeState) lockObject.SetActive(true);
-                //if (renderState) lockObjectRenderer.enabled = false;
 
                 CheckUnlock(lockObject, ref lockObjectScript);
                 lockObjectScript.currentChecks++;
@@ -192,9 +184,6 @@ public class InteractableObject : MonoBehaviour
                 {
                     lockObjectScript.Lock(false);
                 }
-
-                //if (!activeState) lockObject.SetActive(false);
-                //if (renderState) lockObjectRenderer.enabled = true;
             }
 
         }
