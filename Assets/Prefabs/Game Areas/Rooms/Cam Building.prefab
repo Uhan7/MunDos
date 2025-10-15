@@ -1132,7 +1132,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 7.5
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1199,6 +1199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374662697952293845}
   - component: {fileID: 6185488602561542524}
+  - component: {fileID: 141597303869723167}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -1276,6 +1277,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &141597303869723167
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335433091131826467}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b7b3665fda3c4836974c1e6700d3b0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6173437226632343235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,13 +1995,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 8308861437481407393}
     m_Modifications:
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: isDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: exteriorFG
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5335433091131826467}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: protagHoverable
       value: 1
@@ -2219,6 +2246,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
+      propertyPath: isDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
+      propertyPath: exteriorFG
+      value: 
+      objectReference: {fileID: 5335433091131826467}
+    - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
+      propertyPath: isClosedDoor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: toActivateOnInteract.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2240,7 +2279,7 @@ PrefabInstance:
       objectReference: {fileID: 8650402908306771006}
     - target: {fileID: 8939352166545856951, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: m_Name
-      value: Sample Door
+      value: '[Door]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
