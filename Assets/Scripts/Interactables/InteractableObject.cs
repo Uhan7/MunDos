@@ -19,7 +19,6 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool unlockInteractableObject;
     [SerializeField] private bool lockInteractableObject;
     [SerializeField] private bool zoomInteract;
-    [SerializeField] private bool puzzleInteract;
     [SerializeField] private bool protagHoverable;
     [SerializeField] private bool willFocus;
 
@@ -42,11 +41,7 @@ public class InteractableObject : MonoBehaviour
     [Header("Zoom Interactions")]
     [ShowIf("zoomInteract")][SerializeField] private ZoomEnviManager zoomCanvas;
 
-    [Header("Puzzle Interactions")]
-    [ShowIf("puzzleInteract")][SerializeField] private GameObject puzzleObject;
-
     [Header("On Protag Hover")]
-    [ShowIf("protagHoverable")][SerializeField] private GameObject exteriorFG;
     [ShowIf("protagHoverable")][SerializeField] private bool animateInOnHover;
     [ShowIf("protagHoverable")][SerializeField] private GameObject[] toActivateOnProtagHover;
     [ShowIf("protagHoverable")][SerializeField] private GameObject[] toDeactivateOnProtagHover;
@@ -61,7 +56,6 @@ public class InteractableObject : MonoBehaviour
     [HideInInspector] private bool alreadyCheckedConditional = false;
     [HideInInspector] private bool alreadyCheckedUnlock = false;
     [HideInInspector] private bool alreadyCheckedLock = false;
-    [HideInInspector] private bool zoomingOnEnvi = false;
 
     private void Awake()
     {
@@ -72,7 +66,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (col.gameObject.tag != PROTAG_TAG) return;
 
-        if (exteriorFG != null) exteriorFG.GetComponent<Animator>().Play("room_fade_in");
+        // if (exteriorFG != null) exteriorFG.GetComponent<Animator>().Play("room_fade_in");
         if (animateInOnHover) GetComponent<Animator>().Play("object_fade_in_half");
 
         SetAll(toActivateOnProtagHover, true);
@@ -83,7 +77,6 @@ public class InteractableObject : MonoBehaviour
     {
         if (col.gameObject.tag != PROTAG_TAG) return;
 
-        if (exteriorFG != null) exteriorFG.GetComponent<Animator>().Play("room_fade_out");
         if (animateInOnHover) GetComponent<Animator>().Play("object_fade_out_half");
 
         SetAll(toActivateOnProtagHover, false);
@@ -248,7 +241,7 @@ public class InteractableObject : MonoBehaviour
             lockObjectScript = envi.GetComponent<LockableObject>();
             if (lockObjectScript == null)
             {
-                Debug.LogError("Error finding LockableObejct of " + lockObject.name);
+                // Debug.LogError("Error finding LockableObejct of " + lockObject.name);
             }
 
         }
