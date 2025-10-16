@@ -46,7 +46,7 @@ public class TimelineManager : MonoBehaviour
             PlayerMove playerMoveScript = GameObject.FindGameObjectWithTag(CURRENT_PROTAG_TAG).GetComponent<PlayerMove>();
             if (!playerMoveScript.canInput) return;
 
-            StartCoroutine(SwitchTimeline(0.05f));
+            StartCoroutine(SwitchTimeline(0.00f));
         }
     }
 
