@@ -11,6 +11,18 @@ public class TextPrompt : MonoBehaviour
     [SerializeField] private float timeUntilDeactivate;
     [SerializeField] private bool fullFadeIn;
 
+    private void OnDisable()
+    {
+        textPrompt.GetComponent<Animator>().Play("text_invisible", 0, 0f);
+        promptBackground.GetComponent<Animator>().Play("image_invisible", 0, 0f);
+    }
+
+    private void OnEnable()
+    {
+        textPrompt.GetComponent<Animator>().Play("text_invisible", 0, 0f);
+        promptBackground.GetComponent<Animator>().Play("image_invisible", 0, 0f);
+    }
+
     private void Start()
     {
         promptBackground.GetComponent<Animator>().Play("image_invisible");
