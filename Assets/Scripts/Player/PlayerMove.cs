@@ -53,7 +53,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         InputUpdate();
-        AnimUpdate();
+        if (anim != null) AnimUpdate();
     }
 
     private void FixedUpdate()
@@ -87,7 +87,7 @@ public class PlayerMove : MonoBehaviour
 
     void AnimUpdate()
     {
-        if (anim != null) anim.SetFloat("Speed", Mathf.Abs(rb.linearVelocityX));
+        anim.SetFloat("Speed", Mathf.Abs(rb.linearVelocityX));
         // TEMP
         if (getMoveLeftKey) GetComponent<SpriteRenderer>().flipX = true;
         if (getMoveRightKey) GetComponent<SpriteRenderer>().flipX = false;

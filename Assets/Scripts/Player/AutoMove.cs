@@ -5,16 +5,15 @@ public class AutoMove : MonoBehaviour
 {
     [Header("Constants")]
     [HideInInspector] private const string PROTAG_TAG = "Protag";
-    [HideInInspector] private const string NPC_TAG = "NPC";
+    [HideInInspector] private const string NPC_TAG = "NPC Zone";
     [HideInInspector] private enum Direction { Left, Right };
 
     [Header("References")]
     [HideInInspector] private PlayerMove character;
 
     [Header("Properties")]
-    [HideIf("stopper")] [SerializeField] private Direction moveDirection;
-    [HideIf("stopper")] [SerializeField] private bool singleUse;
-    [SerializeField] private bool stopper;
+    [SerializeField] private Direction moveDirection;
+    [SerializeField] private bool singleUse;
     [SerializeField] private bool NPCMovement;
     [SerializeField] private bool hideUI;
 
@@ -22,24 +21,35 @@ public class AutoMove : MonoBehaviour
     {
         if (NPCMovement && col.gameObject.tag == NPC_TAG)
         {
-            character = col.gameObject.GetComponent<PlayerMove>();
+            character = col.gameObject.GetComponentInParent<PlayerMove>();
 
-            if (stopper)
-            {
-                StopCharacter();
-            }
-            else
-            {
-                MoveCharacter(moveDirection);
-            }
+            col.gameObject.GetComponentInParent<LockableObject>().Lock(true);
+            MoveCharacter(moveDirection);
         }
 
         else if (!NPCMovement && col.gameObject.tag == PROTAG_TAG)
         {
             character = col.gameObject.GetComponent<PlayerMove>();
 
-            if (stopper) StopCharacter();
-            else MoveCharacter(moveDirection);
+            MoveCharacter(moveDirection);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (NPCMovement && col.gameObject.tag == NPC_TAG)
+        {
+            character = col.gameObject.GetComponentInParent<PlayerMove>();
+
+            col.gameObject.GetComponentInParent<LockableObject>().Lock(false);
+            StopCharacter();
+        }
+
+        else if (!NPCMovement && col.gameObject.tag == PROTAG_TAG)
+        {
+            character = col.gameObject.GetComponent<PlayerMove>();
+
+            StopCharacter();
         }
     }
 
@@ -74,7 +84,11 @@ public class AutoMove : MonoBehaviour
         character.getMoveLeftKey = false;
         character.getMoveRightKey = false;
 
-        if (singleUse) gameObject.transform.parent.gameObject.SetActive(false);
+        if (singleUse) gameObject.SetActive(false);
+        else {
+            if (moveDirection == Direction.Right) moveDirection = Direction.Left;
+            else if (moveDirection == Direction.Left) moveDirection = Direction.Right;
+        }
 
         if (hideUI) HideUI(false);
     }
