@@ -6,6 +6,9 @@ public class ParamNames
 	// For Focusing during Dialogue
 	public const string IS_FOCUSING_DIALOGUE = "IS_FOCUSING_DIALOGUE";
 
+	// For Hiding the UI
+	public const string IS_HIDING_UI = "IS_HIDING_UI";
+
 	// For Zooming in on Envis
 	public const string IS_ZOOMING_ENVI = "IS_ZOOMING_ENVI";
 	public const string ZOOM_ENVI_SPRITE = "ZOOM_ENVI_SPRITE";

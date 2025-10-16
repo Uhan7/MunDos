@@ -16,6 +16,7 @@ public class AutoMove : MonoBehaviour
     [HideIf("stopper")] [SerializeField] private bool singleUse;
     [SerializeField] private bool stopper;
     [SerializeField] private bool NPCMovement;
+    [SerializeField] private bool hideUI;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -60,6 +61,8 @@ public class AutoMove : MonoBehaviour
             character.getMoveLeftKey = true;
             character.getMoveRightKey = false;
         }
+
+        if (hideUI) HideUI(true);
     }
 
     private void StopCharacter()
@@ -72,5 +75,15 @@ public class AutoMove : MonoBehaviour
         character.getMoveRightKey = false;
 
         if (singleUse) gameObject.transform.parent.gameObject.SetActive(false);
+
+        if (hideUI) HideUI(false);
+    }
+
+    void HideUI(bool value)
+    {
+        Parameters param = new Parameters();
+        param.PutExtra(ParamNames.IS_HIDING_UI, value);
+
+        EventBroadcaster.Instance.PostEvent(EventNames.HIDE_UI, param);
     }
 }

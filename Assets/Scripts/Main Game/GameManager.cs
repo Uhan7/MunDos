@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private string pauseMenuName;
     [SerializeField] private string dialogueHolderName;
+    [SerializeField] private GameObject[] UIToHide;
 
     [Header("Referenced Components")]
     [HideInInspector] private PauseMenuManager pauseMenuScript;
@@ -19,13 +20,15 @@ public class GameManager : MonoBehaviour
     [HideInInspector] private PlayerMove protagMoveScript;
 
     [Header("Flags")]
-    [HideInInspector] private bool isFocusingDialogue;
+    [HideInInspector] private bool isFocusing;
+    [HideInInspector] private bool isHidingUI;
 
     private void Awake()
     {
         timelineManagerScript = GetComponent<TimelineManager>();
 
         EventBroadcaster.Instance.AddObserver(EventNames.FOCUS_DIALOGUE, FocusDialogue);
+        EventBroadcaster.Instance.AddObserver(EventNames.HIDE_UI, HideUI);
         EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE, TogglePause);
     }
 
@@ -34,11 +37,20 @@ public class GameManager : MonoBehaviour
     public void FocusDialogue(Parameters param)
     {
         SetComponents();
-        isFocusingDialogue = param.GetBoolExtra(ParamNames.IS_FOCUSING_DIALOGUE, false);
+        isFocusing = param.GetBoolExtra(ParamNames.IS_FOCUSING_DIALOGUE, false);
 
-        protagMoveScript.canMove = !isFocusingDialogue;
-        protagMoveScript.canInput = !isFocusingDialogue;
-        timelineManagerScript.canSwitch = !isFocusingDialogue;
+        protagMoveScript.canMove = !isFocusing;
+        protagMoveScript.canInput = !isFocusing;
+        timelineManagerScript.canSwitch = !isFocusing;
+    }
+
+    public void HideUI(Parameters param)
+    {
+        SetComponents();
+        isHidingUI = param.GetBoolExtra(ParamNames.IS_HIDING_UI, false);
+
+        foreach (GameObject obj in UIToHide) obj.SetActive(!isHidingUI);
+        timelineManagerScript.canSwitch = !isHidingUI;
     }
 
     public void TogglePause()
@@ -48,9 +60,9 @@ public class GameManager : MonoBehaviour
         pauseMenuScript.active = !pauseMenuScript.active;
         dialogueHolderScript.canClick = !pauseMenuScript.active;
 
-        protagMoveScript.canMove = (!pauseMenuScript.active && !isFocusingDialogue);
-        protagMoveScript.canInput = (!pauseMenuScript.active && !isFocusingDialogue);
-        timelineManagerScript.canSwitch = (!pauseMenuScript.active && !isFocusingDialogue);
+        protagMoveScript.canMove = (!pauseMenuScript.active && !isFocusing);
+        protagMoveScript.canInput = (!pauseMenuScript.active && !isFocusing);
+        timelineManagerScript.canSwitch = (!pauseMenuScript.active && !isFocusing);
 
         Time.timeScale = pauseMenuScript.active ? 0 : 1;
     }
