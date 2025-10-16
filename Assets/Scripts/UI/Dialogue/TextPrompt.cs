@@ -8,8 +8,9 @@ public class TextPrompt : MonoBehaviour
     [Header("Prompt Values")]
     [SerializeField] private GameObject promptBackground;
     [SerializeField] private GameObject textPrompt;
-    [SerializeField] private float timeUntilDeactivate;
+    [SerializeField] private bool deactivateAfter;
     [SerializeField] private bool fullFadeIn;
+    [SerializeField] private bool deactivateOnTimelineSwitch;
 
     private void OnDisable()
     {
@@ -45,5 +46,16 @@ public class TextPrompt : MonoBehaviour
         if (fullFadeIn) promptBackground.GetComponent<Animator>().Play("image_fade_out_full");
         else promptBackground.GetComponent<Animator>().Play("image_fade_out_half");
         textPrompt.GetComponent<Animator>().Play("text_fade_out_full");
+
+        if (deactivateAfter && col.gameObject.activeInHierarchy && !deactivateOnTimelineSwitch)
+        {
+            if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else if (deactivateAfter && deactivateOnTimelineSwitch)
+        {
+            if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
 }
