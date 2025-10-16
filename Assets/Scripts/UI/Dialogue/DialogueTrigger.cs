@@ -28,6 +28,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool startFromTrigger;
     [SerializeField] private bool isSign;
     [SerializeField] private bool willFocus;
+    [SerializeField] private bool willHideUI;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private bool linksToOtherDialogue;
     [SerializeField] private AnimOptions playClosingAnimation = AnimOptions.defaultClose;
@@ -136,6 +137,7 @@ public class DialogueTrigger : MonoBehaviour
         dialogueHolder.mainCharacterIsSpeaking = mainCharacterIsSpeaking;
 
         if (willFocus) Focus(true);
+        if (willHideUI) HideUI(true);
 
         dialogueIsTriggered = true;
         if (startFromTrigger && !isSign) GetComponent<BoxCollider2D>().enabled = false;
@@ -175,6 +177,8 @@ public class DialogueTrigger : MonoBehaviour
             }
         }
 
+        if (willHideUI) HideUI(false);
+
         deactivateTimer -= Time.deltaTime;
         if (deactivateTimer <= 0) gameObject.SetActive(false);
     }
@@ -198,5 +202,13 @@ public class DialogueTrigger : MonoBehaviour
         param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
 
         EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
+    }
+
+    void HideUI(bool value)
+    {
+        Parameters param = new Parameters();
+        param.PutExtra(ParamNames.IS_HIDING_UI, value);
+
+        EventBroadcaster.Instance.PostEvent(EventNames.HIDE_UI, param);
     }
 }
