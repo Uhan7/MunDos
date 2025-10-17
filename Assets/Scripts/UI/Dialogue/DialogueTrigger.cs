@@ -41,21 +41,15 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
     [HideInInspector] private float nextDialogueTimer;
-    [HideInInspector] private float activateObjectTimer;
 
     [Header("Flags")]
-    private bool dialogueIsTriggered;
+    [HideInInspector] private bool dialogueIsTriggered;
+    [HideInInspector] private bool alreadySpawnedObjects = false;
 
     private void Awake()
     {
         InitializeReferences();
     }
-
-    private void Start()
-    {
-        activateObjectTimer = activateObjectTime;
-    }
-
     private void OnEnable()
     {
         ResetValues();
@@ -73,12 +67,9 @@ public class DialogueTrigger : MonoBehaviour
 
         if (dialogueHolder == null || dialogueHolder.open || !dialogueIsTriggered) return;
 
-        if (objectsToSpawnAfter.Length != 0)
+        if (objectsToSpawnAfter.Length != 0 && !alreadySpawnedObjects)
         {
-            //Debug.Log("test 1");
-            //WaitForOtherDialogue();
-            //if (activateObjectTimer <= 0)
-                ActivateOtherObjects();
+            ActivateOtherObjects();
         }
 
         if (nextDialogue != null)
@@ -153,7 +144,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         dialogueHolder.EndDialogue();
         nextDialogueTimer -= Time.deltaTime;
-        activateObjectTimer -= Time.deltaTime;
     }
 
     public void ActivateOtherDialogue(GameObject nextDialogue)
@@ -167,6 +157,7 @@ public class DialogueTrigger : MonoBehaviour
     void ActivateOtherObjects()
     {
         foreach (GameObject objs in objectsToSpawnAfter) objs.SetActive(true);
+        alreadySpawnedObjects = true;
     }
 
     public void Deactivate()

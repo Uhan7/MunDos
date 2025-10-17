@@ -17,6 +17,13 @@ public class AutoMove : MonoBehaviour
     [SerializeField] private bool NPCMovement;
     [SerializeField] private bool hideUI;
 
+    private void OnEnable()
+    {
+        Collider2D col = GetComponent<Collider2D>();
+        col.enabled = false;
+        col.enabled = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (NPCMovement && col.gameObject.tag == NPC_TAG)
