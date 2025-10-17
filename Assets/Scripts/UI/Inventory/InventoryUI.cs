@@ -19,7 +19,7 @@ public class InventoryUI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(openInventoryKey) && !gameManager.isHidingUI)
+        if (Input.GetKeyDown(openInventoryKey) && !gameManager.isHidingUI && !gameManager.isPaused)
         {
             ToggleInventorySlots();
         }

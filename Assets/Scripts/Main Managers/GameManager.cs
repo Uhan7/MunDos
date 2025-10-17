@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     [Header("Flags")]
     [HideInInspector] private bool isFocusing;
     [HideInInspector] public bool isHidingUI;
-    [HideInInspector] private bool isPaused = false;
+    [HideInInspector] public bool isPaused = false;
 
     private void Awake()
     {
