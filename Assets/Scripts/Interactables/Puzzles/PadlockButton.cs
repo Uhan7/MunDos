@@ -17,6 +17,11 @@ public class PadlockButton : MonoBehaviour
         imageComponent = GetComponent<Image>();
     }
 
+    private void Start()
+    {
+        imageComponent.sprite = buttonSprites[currentIndex];
+    }
+
     public void AssignPadlock(Padlock parent)
     {
         padlock = parent;
