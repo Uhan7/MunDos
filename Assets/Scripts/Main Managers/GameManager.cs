@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Flags")]
     [HideInInspector] private bool isFocusing;
-    [HideInInspector] private bool isHidingUI;
+    [HideInInspector] public bool isHidingUI;
     [HideInInspector] private bool isPaused = false;
 
     private void Awake()
