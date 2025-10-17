@@ -96,6 +96,11 @@ public class DialogueTrigger : MonoBehaviour
             dialogueHolder.EndDialogue();
             Deactivate();
         }
+
+        else
+        {
+            if (willFocus) Focus(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
