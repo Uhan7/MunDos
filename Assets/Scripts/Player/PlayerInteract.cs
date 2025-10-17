@@ -8,6 +8,7 @@ public class PlayerInteract : MonoBehaviour
     [Header("Key Inputs")]
     [SerializeField] private KeyCode switchTimelineKey;
     [SerializeField] private KeyCode interactKey;
+    [SerializeField] private KeyCode otherInteractKey;
     [SerializeField] private KeyCode previousItemKey;
     [SerializeField] private KeyCode nextItemKey;
     [SerializeField] private KeyCode item1Key;
@@ -38,7 +39,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(interactKey) && !Input.GetKey(switchTimelineKey))
+        if ((Input.GetKeyDown(interactKey) || Input.GetKeyDown(otherInteractKey)) && !Input.GetKey(switchTimelineKey))
         {
             if (nearbyEnvi != null) Interact();
             if (nearbyItem != null) PickupItem();

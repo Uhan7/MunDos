@@ -41,6 +41,7 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private int originalCounter;
 
 	[Header("Flags")]
+	[HideInInspector] private bool wasClicked = false;
 	[HideInInspector] public bool open; // Used in Animator
 	[HideInInspector] private bool skip;
 	[HideInInspector] private bool canNext;
@@ -61,8 +62,9 @@ public class DialogueManager : MonoBehaviour
     {
 		anim.SetBool("Open", open);
 
-		if (Input.GetMouseButtonUp(0) && canClick)
+		if ((Input.GetKeyDown(KeyCode.Space) || wasClicked) && canClick)
 		{
+			wasClicked = false;
 			skip = true;
 			if (canNext) DisplayNextSentence();
 		}
@@ -260,4 +262,17 @@ public class DialogueManager : MonoBehaviour
 			originalCounter += substring.Length;
 		}
 	}
+
+	// Stupid Functions --------------------------------------------------------
+
+	public void RaycastTester()
+    {
+		print("Hover");
+    }
+
+	public void SetWasClicked(bool val)
+    {
+		wasClicked = val;
+    }
+
 }
