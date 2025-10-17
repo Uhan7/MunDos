@@ -165,6 +165,7 @@ Transform:
   - {fileID: 8786555769073752365}
   - {fileID: 7623454679454003575}
   - {fileID: 326348044561740102}
+  - {fileID: 7761594863871653225}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1040097798222114222
@@ -344,6 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuName: Pause Screen
   dialogueHolderName: Dialogue Holder
+  UIToHide: []
 --- !u!114 &1161671848227295739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +367,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   transitionSound: {fileID: 8300000, guid: 7e53470dfdd2a4f2a84b43dae60877f6, type: 3}
   canSwitch: 1
+  timelineUnlocked: 0
 --- !u!114 &8585359170152238897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5945ec49c9c23aa4594bf2e0c53e63c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pastMusicVol: {fileID: 0}
+  pastSFXVol: {fileID: 0}
+  pastDialogueVol: {fileID: 0}
+  presentMusicVol: {fileID: 0}
+  presentSFXVol: {fileID: 0}
+  presentDialogueVol: {fileID: 0}
 --- !u!1 &4193750169515002396
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,6 +640,37 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!1 &7118227469418616133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7761594863871653225}
+  m_Layer: 0
+  m_Name: Single Use Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7761594863871653225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7118227469418616133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3792571504194021166}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7417971027121341439
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,7 @@ public class TimelineManager : MonoBehaviour
     [Header("Flags")]
     [HideInInspector] private int currentTimeline; // 0 is Past | 1 is Present
     [HideInInspector] public bool canSwitch = true; // Used in GameManager.cs
+    [HideInInspector] public bool timelineUnlocked = false;
 
     void Start()
     {
@@ -39,7 +40,7 @@ public class TimelineManager : MonoBehaviour
 
     void Update()
     {
-        if (!canSwitch) return;
+        if (!canSwitch || !timelineUnlocked) return;
 
         if (Input.GetKeyDown(switchTimelineKey) && !Input.GetKey(interactKey))
         {
