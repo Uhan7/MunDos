@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [Header("Flags")]
     [HideInInspector] private bool isFocusing;
     [HideInInspector] private bool isHidingUI;
+    [HideInInspector] private bool isPaused = false;
 
     private void Awake()
     {
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(EventNames.FOCUS_DIALOGUE, FocusDialogue);
         EventBroadcaster.Instance.AddObserver(EventNames.HIDE_UI, HideUI);
         EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE, TogglePause);
+        EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE_BG, TogglePauseBackground);
     }
 
     // Event Broadcasting Functions --------------------------------------------
@@ -55,16 +57,22 @@ public class GameManager : MonoBehaviour
 
     public void TogglePause()
     {
+        TogglePauseBackground();
+        pauseMenuScript.active = !pauseMenuScript.active;
+    }
+
+    public void TogglePauseBackground()
+    {
         SetComponents();
 
-        pauseMenuScript.active = !pauseMenuScript.active;
-        dialogueHolderScript.canClick = !pauseMenuScript.active;
+        isPaused = !isPaused;
+        dialogueHolderScript.canClick = !isPaused;
 
-        protagMoveScript.canMove = (!pauseMenuScript.active && !isFocusing);
-        protagMoveScript.canInput = (!pauseMenuScript.active && !isFocusing);
-        timelineManagerScript.canSwitch = (!pauseMenuScript.active && !isFocusing);
+        protagMoveScript.canMove = (!isPaused && !isFocusing);
+        protagMoveScript.canInput = (!isPaused && !isFocusing);
+        timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
 
-        Time.timeScale = pauseMenuScript.active ? 0 : 1;
+        Time.timeScale = isPaused ? 0 : 1;
     }
 
     void SetComponents()

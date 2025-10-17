@@ -37,6 +37,7 @@ public class LogScreen : MonoBehaviour
     public void toggleLogScreen()
     {
         logScreen.SetActive(!logScreen.activeInHierarchy);
+        GoToMostRecentDialogue();
     }
 
     public void RecieveDialogue(Dialogue dialogue)
@@ -57,5 +58,10 @@ public class LogScreen : MonoBehaviour
     public void GoToMostRecentDialogue()
     {
         scrollbar.value = 0;
+    }
+
+    public void TogglePauseBackground()
+    {
+        EventBroadcaster.Instance.PostEvent(EventNames.TOGGLE_PAUSE_BG);
     }
 }
