@@ -15,7 +15,7 @@ public class Padlock : MonoBehaviour
     {
         string current = "";
 
-        foreach (var button in padlockButtons) current += button.GetCurrentChar();
+        foreach (var button in padlockButtons) current += button.currentIndex.ToString();
 
         if (current == correctCombination) Debug.Log("PASS!");
         else Debug.Log("Current: " + current);

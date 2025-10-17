@@ -216,9 +216,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 558018613006898524, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -400
+      objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
       value: '[Zoomable]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333012323108693581, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -301,7 +321,7 @@ MonoBehaviour:
   - {fileID: 760819442}
   - {fileID: 916424882}
   - {fileID: 1555854528}
-  correctCombination: CAB
+  correctCombination: 210
 --- !u!224 &760819439 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -335,7 +355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2819dac63b1ce42c7affa52f84721fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleChars: 410042004300
+  buttonSprites:
+  - {fileID: -4178046375966092550, guid: cc20ee66cb2684d34a25721a77f81c2a, type: 3}
+  - {fileID: -367945448865177592, guid: f590e6b02cfcc4deb9d773a3fb5e53f2, type: 3}
+  - {fileID: 3843231544584785974, guid: cfb7971b5167d42369d8ec3315cb652b, type: 3}
+  currentIndex: 0
 --- !u!114 &760819443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +453,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916424882
 MonoBehaviour:
@@ -443,7 +467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2819dac63b1ce42c7affa52f84721fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleChars: 410042004300
+  buttonSprites:
+  - {fileID: -4178046375966092550, guid: cc20ee66cb2684d34a25721a77f81c2a, type: 3}
+  - {fileID: -367945448865177592, guid: f590e6b02cfcc4deb9d773a3fb5e53f2, type: 3}
+  - {fileID: 3843231544584785974, guid: cfb7971b5167d42369d8ec3315cb652b, type: 3}
+  currentIndex: 0
 --- !u!114 &916424883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -574,8 +602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 400, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1555854528
 MonoBehaviour:
@@ -589,7 +617,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2819dac63b1ce42c7affa52f84721fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possibleChars: 410042004300
+  buttonSprites:
+  - {fileID: -4178046375966092550, guid: cc20ee66cb2684d34a25721a77f81c2a, type: 3}
+  - {fileID: -367945448865177592, guid: f590e6b02cfcc4deb9d773a3fb5e53f2, type: 3}
+  - {fileID: 3843231544584785974, guid: cfb7971b5167d42369d8ec3315cb652b, type: 3}
+  currentIndex: 0
 --- !u!114 &1555854529
 MonoBehaviour:
   m_ObjectHideFlags: 0
