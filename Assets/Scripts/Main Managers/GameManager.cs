@@ -51,8 +51,22 @@ public class GameManager : MonoBehaviour
         SetComponents();
         isHidingUI = param.GetBoolExtra(ParamNames.IS_HIDING_UI, false);
 
-        foreach (GameObject obj in UIToHide) obj.SetActive(!isHidingUI);
-        timelineManagerScript.canSwitch = !isHidingUI;
+        if (!isHidingUI)
+        {
+            foreach (GameObject obj in UIToHide)
+            {
+                obj.GetComponent<Animator>().SetTrigger("FadeIn");
+            }
+        } else
+        {
+            foreach (GameObject obj in UIToHide)
+            {
+                obj.GetComponent<Animator>().ResetTrigger("FadeIn");
+                obj.GetComponent<Animator>().SetTrigger("FadeOut");
+            }
+        }
+
+            timelineManagerScript.canSwitch = !isHidingUI;
     }
 
     public void TogglePause()
