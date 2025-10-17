@@ -6,16 +6,19 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] GameObject InventorySlots;
     [SerializeField] private KeyCode openInventoryKey;
 
+    private Animator animator;
+
     private void Start()
     {
         InitializeValues();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(openInventoryKey))
         {
-            InventorySlots.SetActive(!InventorySlots.activeInHierarchy);
+            ToggleInventorySlots();
         }
     }
 
@@ -23,6 +26,7 @@ public class InventoryUI : MonoBehaviour
 
     public void ToggleInventorySlots()
     {
+        animator.SetBool("isOpen", !animator.GetBool("isOpen"));
         InventorySlots.SetActive(!InventorySlots.activeInHierarchy);
     }
 
