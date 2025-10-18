@@ -34,6 +34,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private AnimOptions playClosingAnimation = AnimOptions.defaultClose;
     [SerializeField] private bool mainCharacterIsSpeaking = true;
     [SerializeField] private GameObject[] objectsToSpawnAfter;
+    [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
     [SerializeField] private float activateObjectTime = 0.5f;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private float nextDialogueTime = 0.5f;
@@ -45,6 +46,7 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Flags")]
     [HideInInspector] private bool dialogueIsTriggered;
     [HideInInspector] private bool alreadySpawnedObjects = false;
+    [HideInInspector] private bool alreadyCheckedConditional = false;
 
     private void Awake()
     {
@@ -67,10 +69,9 @@ public class DialogueTrigger : MonoBehaviour
 
         if (dialogueHolder == null || dialogueHolder.open || !dialogueIsTriggered) return;
 
-        if (objectsToSpawnAfter.Length != 0 && !alreadySpawnedObjects)
-        {
-            ActivateOtherObjects();
-        }
+        if (objectsToSpawnAfter.Length != 0 && !alreadySpawnedObjects) ActivateOtherObjects();
+
+        if (conditionalObjectsToCheckAfter.Length != 0 && !alreadyCheckedConditional) AddConditionalCheck();
 
         if (nextDialogue != null)
         {
@@ -152,6 +153,21 @@ public class DialogueTrigger : MonoBehaviour
         nextDialogue.SetActive(true);
 
         if (deactivateAfter) gameObject.SetActive(false);
+    }
+
+    public void AddConditionalCheck()
+    {
+        if (alreadyCheckedConditional) return;
+
+        foreach (GameObject conditionalObject in conditionalObjectsToCheckAfter)
+        {
+            ConditionalObject conditionalObjectScript = conditionalObject.GetComponent<ConditionalObject>();
+
+            conditionalObjectScript.currentChecks++;
+            if (conditionalObjectScript.currentChecks >= conditionalObjectScript.requiredChecks) conditionalObject.SetActive(true);
+        }
+
+        alreadyCheckedConditional = true;
     }
 
     void ActivateOtherObjects()
