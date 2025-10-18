@@ -1404,6 +1404,14 @@ PrefabInstance:
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: This is default Zoomable dialogue.
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: conditionalObjectsToCheckAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'conditionalObjectsToCheckAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 125443142}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2351,6 +2359,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1500205450}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215952936}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1265304120}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
@@ -2385,8 +2399,7 @@ MonoBehaviour:
   deactivateAfter: 0
   objectsToActivate:
   - {fileID: 1500205449}
-  objectsToDeactivate:
-  - {fileID: 125443142}
+  objectsToDeactivate: []
   objectsToLock: []
   objectsToUnlock: []
 --- !u!114 &475274956
@@ -2471,6 +2484,7 @@ MonoBehaviour:
   mainCharacterIsSpeaking: 1
   objectsToSpawnAfter:
   - {fileID: 989657909}
+  conditionalObjectsToCheckAfter: []
   activateObjectTime: 0
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
@@ -3174,7 +3188,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7439944717024231351, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 336873095}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 921583235566090806, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 911008801}
   m_SourcePrefab: {fileID: 100100000, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
 --- !u!4 &623050334 stripped
 Transform:
@@ -3685,6 +3702,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 1
   objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
   activateObjectTime: 0
   nextDialogue: {fileID: 1680929755}
   nextDialogueTime: 0.5
@@ -4022,6 +4040,7 @@ MonoBehaviour:
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
@@ -4111,6 +4130,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 896262363}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &911008799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 921583235566090806, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+  m_PrefabInstance: {fileID: 623050333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &911008801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911008799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2aba44924644ecca625f10c501ed1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &949697807
 GameObject:
   m_ObjectHideFlags: 0
@@ -4178,6 +4214,7 @@ MonoBehaviour:
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
@@ -5347,6 +5384,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
   m_PrefabInstance: {fileID: 1199742745}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1215952935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215952936}
+  - component: {fileID: 1215952937}
+  m_Layer: 0
+  m_Name: 2
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1215952936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215952935}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 475274954}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1215952937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215952935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    name: Default Name
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - Santi opens the book to tell Liezel about the Newspaper Clippings, Posters,
+      and Printing Press.
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0.5
+  nextDialogue: {fileID: 1265304119}
+  nextDialogueTime: 0.5
 --- !u!1001 &1249826965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5429,6 +5538,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1249826965}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1265304119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265304120}
+  - component: {fileID: 1265304121}
+  m_Layer: 0
+  m_Name: 3
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1265304120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265304119}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 475274954}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1265304121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265304119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    name: Default Name
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - Liezel understands that she must go to the Ruined Disidensiyang Giyala - Sumpagita
+      Outpost
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 0
+  objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0.5
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1001 &1267597692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5780,7 +5961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100836808320417522, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6185,7 +6366,7 @@ PrefabInstance:
       objectReference: {fileID: 193787907}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: conditionalObjectsToCheck.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
@@ -7802,6 +7983,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 1
   objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
   activateObjectTime: 0
   nextDialogue: {fileID: 475803343}
   nextDialogueTime: 0.5
@@ -7866,15 +8048,16 @@ MonoBehaviour:
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
-  willFocus: 0
-  willHideUI: 0
+  willFocus: 1
+  willHideUI: 1
   deactivateAfter: 1
-  linksToOtherDialogue: 0
-  playClosingAnimation: 0
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
   mainCharacterIsSpeaking: 1
   objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 1215952935}
   nextDialogueTime: 0.5
 --- !u!1001 &1501618426
 PrefabInstance:
@@ -8647,6 +8830,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 0
   objectsToSpawnAfter: []
+  conditionalObjectsToCheckAfter: []
   activateObjectTime: 0
   nextDialogue: {fileID: 1480307495}
   nextDialogueTime: 0.5
@@ -9104,6 +9288,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4.49
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: conditionalObjectsToCheckAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'conditionalObjectsToCheckAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 125443142}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Posters
@@ -9186,7 +9378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: conditionalObjectsToCheck.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
@@ -9427,6 +9619,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -4.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: conditionalObjectsToCheckAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'conditionalObjectsToCheckAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 125443142}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: 'Printing Press
@@ -9503,7 +9703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: conditionalObjectsToCheck.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
