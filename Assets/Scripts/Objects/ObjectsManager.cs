@@ -60,6 +60,9 @@ public class ObjectsManager : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
+        if (!col.gameObject.CompareTag(PROTAG_TAG)) return;
+
+        print("exited");
         if (resetAfter) ResetValues();
         if (deactivateAfter) Deactivate();
     }
@@ -73,12 +76,12 @@ public class ObjectsManager : MonoBehaviour
 
     public void DeactivateByCalling()
     {
-        StartCoroutine(DeactivateAfterTime(delayTime));
+        StartCoroutine(DeactivateAfterTime(delayTime + 0.02f));
     }
 
     public void DestroyByCalling()
     {
-        StartCoroutine(DestroyAfterTime(delayTime));
+        StartCoroutine(DestroyAfterTime(delayTime + 0.04f));
     }
 
     // ----------- Coroutine Logic -----------
