@@ -1023,10 +1023,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 623050336}
     m_Modifications:
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: itemInteractable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1034,17 +1030,9 @@ PrefabInstance:
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
       objectReference: {fileID: 2088461970}
-    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: toActivateOnValidInteract.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
       value: Specific Area On Ground
-      objectReference: {fileID: 0}
-    - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_text
@@ -3670,21 +3658,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1005869502}
     m_Modifications:
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: unlockInteractableObject
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: objectsToUnlockCheck.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: 'objectsToUnlockCheck.Array.data[0]'
-      value: 
-      objectReference: {fileID: 67368126}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -3748,7 +3724,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 688810450}
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!4 &688810448 stripped
 Transform:
@@ -3760,6 +3739,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 688810447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &688810450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688810449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLockedAtStart: 1
+  requiredChecks: 1
+  currentChecks: 0
 --- !u!1 &743249557
 GameObject:
   m_ObjectHideFlags: 0
@@ -7988,7 +7982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100836808320417522, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
