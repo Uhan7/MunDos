@@ -24,12 +24,15 @@ public class ObjectsManager : MonoBehaviour
     [ShowIf("lockAndUnlock")] [SerializeField] private GameObject[] objectsToUnlock;
 
     [Header("Flags")]
+    [HideInInspector] private bool alreadyEnabled = false;
     [HideInInspector] private bool alreadyCheckedUnlock = false;
     [HideInInspector] private bool alreadyCheckedLock = false;
 
 
     private void OnEnable()
     {
+        if (alreadyEnabled) return;
+
         if (activateAndDeactivate && isOnEnable)
         {
             if (objectsToActivate.Length > 0) StartCoroutine(ActivateAfterTime(delayTime));
@@ -40,6 +43,8 @@ public class ObjectsManager : MonoBehaviour
             if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
             if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
         }
+
+        alreadyEnabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
