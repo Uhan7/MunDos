@@ -223,6 +223,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2431165580744401747, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
   m_PrefabInstance: {fileID: 623050333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &35077110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 1442965474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &35795807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -439,6 +444,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1126896940340997301, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: toDeactivateOnInteract.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126896940340997301, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: 'toDeactivateOnInteract.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1407255252}
     - target: {fileID: 3366223756827624116, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -732,77 +745,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8034374329919896082, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 100310303}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &130175580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 130175581}
-  - component: {fileID: 130175582}
-  m_Layer: 0
-  m_Name: 4
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &130175581
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130175580}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515050562}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &130175582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130175580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueHolderName: Dialogue Holder
-  dialogue:
-    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 0}
-    name: Default Name
-    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - End of talking
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 1
-  deactivateAfter: 1
-  linksToOtherDialogue: 0
-  playClosingAnimation: 0
-  mainCharacterIsSpeaking: 1
-  objectsToSpawnAfter:
-  - {fileID: 989657909}
-  activateObjectTime: 0
-  nextDialogue: {fileID: 0}
-  nextDialogueTime: 0.5
 --- !u!1001 &134623857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1025,7 +967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650402908306771006, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8696352317246568468, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: Target.TrackingTarget
@@ -1033,7 +975,7 @@ PrefabInstance:
       objectReference: {fileID: 1667822741}
     - target: {fileID: 9100836808320417522, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1044,12 +986,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8804021321025864612, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 989657910}
-    - targetCorrespondingSourceObject: {fileID: 7008066446627084957, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1515050562}
-    - targetCorrespondingSourceObject: {fileID: 7008066446627084957, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1434634899}
     - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1442965475}
@@ -1059,6 +995,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2006521394}
+    - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1369075590}
+    - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1515050562}
+    - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1434634899}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
 --- !u!4 &161494519 stripped
@@ -1302,7 +1247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 151.26
+      value: 152.22
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2411,6 +2356,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 475274953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &475803343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475803344}
+  - component: {fileID: 475803345}
+  m_Layer: 0
+  m_Name: Magic Book-D4
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &475803344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475803343}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &475803345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475803343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    character2: {fileID: 0}
+    name: Default Name
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - End of talking
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 1
+  objectsToSpawnAfter:
+  - {fileID: 989657909}
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &489257154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,7 +2863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -2947,7 +2963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2679859293919452695, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.26
+      value: 42.22
       objectReference: {fileID: 0}
     - target: {fileID: 3388097926286646335, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3053,7 +3069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -71.0022
+      value: -70.99772
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3061,7 +3077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7650287615327346395, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: Loop
@@ -3272,76 +3288,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1372766158}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &644393336
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 644393337}
-  - component: {fileID: 644393338}
-  m_Layer: 0
-  m_Name: 3
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &644393337
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644393336}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515050562}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &644393338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644393336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueHolderName: Dialogue Holder
-  dialogue:
-    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    name: Default Name
-    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - More talking
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 1
-  deactivateAfter: 1
-  linksToOtherDialogue: 1
-  playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
-  objectsToSpawnAfter: []
-  activateObjectTime: 0
-  nextDialogue: {fileID: 130175580}
-  nextDialogueTime: 0.5
 --- !u!4 &647154446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8804021321025864612, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -3645,6 +3591,76 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5835760526340331820, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1121851625}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &743249557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743249558}
+  - component: {fileID: 743249559}
+  m_Layer: 0
+  m_Name: Magic Book-D1
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &743249558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743249557}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &743249559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743249557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    character2: {fileID: 0}
+    name: Default Name
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - This ting opened on its own
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToSpawnAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 1680929755}
+  nextDialogueTime: 0.5
 --- !u!4 &754780016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -4416,7 +4432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2936521768351962035, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7999992
+      value: 3.31
       objectReference: {fileID: 0}
     - target: {fileID: 2936521768351962035, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5755,6 +5771,9 @@ PrefabInstance:
       addedObject: {fileID: 81452727}
     - targetCorrespondingSourceObject: {fileID: 8804021321025864612, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1407255251}
+    - targetCorrespondingSourceObject: {fileID: 8804021321025864612, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1699396869}
     - targetCorrespondingSourceObject: {fileID: 8804021321025864612, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
@@ -6159,6 +6178,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1347060695}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1369075589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369075590}
+  m_Layer: 0
+  m_Name: Magic Book Dialogues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1369075590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369075589}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.369999, y: -4.73, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 743249558}
+  - {fileID: 1680929756}
+  - {fileID: 1480307496}
+  - {fileID: 475803344}
+  m_Father: {fileID: 1002273953}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1372766158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6753,13 +6807,104 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
   m_PrefabInstance: {fileID: 1401833211}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1407255250
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1287562270}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674147481024880380, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: deactivateAfter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936521768351962035, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936521768351962035, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936521768351962035, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2936521768351962035, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_Name
+      value: Interact Prompt 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872953807347953618, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+      propertyPath: m_text
+      value: '- Press <b>[F]</b> to Interact -'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+--- !u!4 &1407255251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+  m_PrefabInstance: {fileID: 1407255250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1407255252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
+  m_PrefabInstance: {fileID: 1407255250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1434634898
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1440167159}
+    m_TransformParent: {fileID: 1002273953}
     m_Modifications:
     - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7077,11 +7222,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1438905157}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1440167159 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7008066446627084957, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-  m_PrefabInstance: {fileID: 161494518}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1442965474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7096,6 +7236,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243799573292339554, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5013845285105705493, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -7171,6 +7315,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: toDeactivateOnInteract.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'objectsToUnlockCheck.Array.data[0]'
       value: 
       objectReference: {fileID: 1857482196}
@@ -7195,11 +7343,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2022522002}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 743249557}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
-      objectReference: {fileID: 989657909}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'toDeactivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 35077110}
+    - target: {fileID: 8426081892716971861, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_Name
+      value: Magic Book Dialogues
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7514374772871082792, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+    - {fileID: 8426081892716971861, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -7543,6 +7705,76 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: 780490224ec16824c8df81d250ffff09, type: 3}
   m_PrefabInstance: {fileID: 1473726670}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1480307495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480307496}
+  - component: {fileID: 1480307497}
+  m_Layer: 0
+  m_Name: Magic Book-D3
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1480307496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480307495}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480307497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480307495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    name: Default Name
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - More talking
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToSpawnAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 475803343}
+  nextDialogueTime: 0.5
 --- !u!1 &1500205449
 GameObject:
   m_ObjectHideFlags: 0
@@ -7868,7 +8100,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1440167159}
+    m_TransformParent: {fileID: 1002273953}
     m_Modifications:
     - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7921,18 +8153,18 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 1959445398}
+      objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: activateObjectTime
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: linksToOtherDialogue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToSpawnAfter.Array.size
@@ -7964,16 +8196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1959445399}
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 644393337}
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 130175581}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
@@ -8005,9 +8228,9 @@ MonoBehaviour:
   isTrigger: 0
   activateAndDeactivate: 1
   lockAndUnlock: 0
-  delayTime: 0.5
+  delayTime: 0.2
   resetAfter: 0
-  deactivateAfter: 0
+  deactivateAfter: 1
   objectsToActivate:
   - {fileID: 1515050563}
   objectsToDeactivate: []
@@ -8270,6 +8493,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2679859293919452695, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
   m_PrefabInstance: {fileID: 623050333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1680929755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680929756}
+  - component: {fileID: 1680929757}
+  m_Layer: 0
+  m_Name: Magic Book-D2
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1680929756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680929755}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680929757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680929755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
+    name: Default Name
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - Talking Talking
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToSpawnAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 1480307495}
+  nextDialogueTime: 0.5
 --- !u!1001 &1693706726
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9242,76 +9535,6 @@ MonoBehaviour:
   isLockedAtStart: 1
   requiredChecks: 1
   currentChecks: 0
---- !u!1 &1959445398
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1959445399}
-  - component: {fileID: 1959445400}
-  m_Layer: 0
-  m_Name: 2
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1959445399
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959445398}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1515050562}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1959445400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959445398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueHolderName: Dialogue Holder
-  dialogue:
-    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    name: Default Name
-    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - Talking Talking
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 1
-  deactivateAfter: 1
-  linksToOtherDialogue: 1
-  playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
-  objectsToSpawnAfter: []
-  activateObjectTime: 0
-  nextDialogue: {fileID: 644393336}
-  nextDialogueTime: 0.5
 --- !u!1 &1977944041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
