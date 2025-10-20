@@ -34,7 +34,6 @@ public class LogScreen : MonoBehaviour
     public void toggleLogScreen()
     {
         logScreen.SetActive(!logScreen.activeInHierarchy);
-        GoToMostRecentDialogue();
     }
 
     public void RecieveDialogue(Dialogue dialogue)
