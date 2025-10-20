@@ -20,11 +20,7 @@ public class LogScreen : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(exitKey)) toggleLogScreen();
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
         if (Input.GetKey(KeyCode.W))
         {
             scrollbar.value += 0.005f;
@@ -34,6 +30,7 @@ public class LogScreen : MonoBehaviour
             scrollbar.value -= 0.005f;
         }
     }
+
     public void toggleLogScreen()
     {
         logScreen.SetActive(!logScreen.activeInHierarchy);
@@ -46,7 +43,7 @@ public class LogScreen : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences)
         {
-            dialogueToAdd = "<b><u>" + dialogue.name + "</b></u>\n";
+            dialogueToAdd = "<b><u>" + dialogue.name.ToUpper() + "</b></u>\n";
 
             string cleanSentence = sentence.Replace("<shake>", "").Replace("<flash>", "").Replace("<dim>", "");
 
