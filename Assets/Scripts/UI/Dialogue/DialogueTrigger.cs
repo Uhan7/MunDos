@@ -33,7 +33,8 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool linksToOtherDialogue;
     [SerializeField] private AnimOptions playClosingAnimation = AnimOptions.defaultClose;
     [SerializeField] private bool mainCharacterIsSpeaking = true;
-    [SerializeField] private GameObject[] objectsToSpawnAfter;
+    [SerializeField] private GameObject[] objectsToActivateAfter;
+    [SerializeField] private GameObject[] objectsToDeactivateAfter;
     [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
     [SerializeField] private float activateObjectTime = 0.5f;
     [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
@@ -45,7 +46,8 @@ public class DialogueTrigger : MonoBehaviour
 
     [Header("Flags")]
     [HideInInspector] private bool dialogueIsTriggered;
-    [HideInInspector] private bool alreadySpawnedObjects = false;
+    [HideInInspector] private bool alreadyActivatedObjects = false;
+    [HideInInspector] private bool alreadyDeactivatedObjects = false;
     [HideInInspector] private bool alreadyCheckedConditional = false;
 
     private void Awake()
@@ -69,7 +71,8 @@ public class DialogueTrigger : MonoBehaviour
 
         if (dialogueHolder == null || dialogueHolder.open || !dialogueIsTriggered) return;
 
-        if (objectsToSpawnAfter.Length != 0 && !alreadySpawnedObjects) ActivateOtherObjects();
+        if (objectsToActivateAfter.Length != 0 && !alreadyActivatedObjects) ActivateOtherObjects();
+        if (objectsToDeactivateAfter.Length != 0 && !alreadyDeactivatedObjects) DeactivateOtherObjects();
 
         if (conditionalObjectsToCheckAfter.Length != 0 && !alreadyCheckedConditional) AddConditionalCheck();
 
@@ -172,8 +175,14 @@ public class DialogueTrigger : MonoBehaviour
 
     void ActivateOtherObjects()
     {
-        foreach (GameObject objs in objectsToSpawnAfter) objs.SetActive(true);
-        alreadySpawnedObjects = true;
+        foreach (GameObject objs in objectsToActivateAfter) objs.SetActive(true);
+        alreadyActivatedObjects = true;
+    }
+
+    void DeactivateOtherObjects()
+    {
+        foreach (GameObject objs in objectsToDeactivateAfter) objs.SetActive(false);
+        alreadyDeactivatedObjects = true;
     }
 
     public void Deactivate()

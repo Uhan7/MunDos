@@ -67,7 +67,6 @@ public class ObjectsManager : MonoBehaviour
     {
         if (!col.gameObject.CompareTag(PROTAG_TAG)) return;
 
-        print("exited");
         if (resetAfter) ResetValues();
         if (deactivateAfter) Deactivate();
     }
