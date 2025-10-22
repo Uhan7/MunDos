@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -101,7 +103,8 @@ public class DialogueManager : MonoBehaviour
 			.Replace("<dim>", "")
 			.Replace("<start_dim>", "")
 			.Replace("<end_dim>", "")
-			.Replace("<end_all>", "");
+			.Replace("<end_all>", "")
+			.Replace("<cut>", "");
 
 		dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
@@ -134,6 +137,7 @@ public class DialogueManager : MonoBehaviour
 			DialogueCameraEffect(sentence, "<start_dim>", "StartDim");
 			DialogueCameraEffect(sentence, "<end_dim>", "EndDim");
 			DialogueCameraEffect(sentence, "<end_all>", "EndAll");
+			CutOffDialogue(sentence);
 
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
@@ -260,6 +264,13 @@ public class DialogueManager : MonoBehaviour
 		{
 			cameraEffectsManager.Invoke(functionName, 0f);
 			originalCounter += substring.Length;
+		}
+	}
+	void CutOffDialogue(string sentence)
+    {
+		if (counter >= totalVisibleCharacters && sentence.Contains("<cut>"))
+		{
+			EndDialogue();
 		}
 	}
 
