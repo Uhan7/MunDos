@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 using Unity.VisualScripting;
+using System;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool zoomInteract;
     [SerializeField] private bool protagHoverable;
     [SerializeField] private bool willFocus;
+    [SerializeField] private bool isTeleporter;
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateOnInteract;
@@ -103,12 +105,28 @@ public class InteractableObject : MonoBehaviour
         if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddConditionalCheck();
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly && unlockInteractableObject) AddUnlockCheck();
         if (objectsToLockCheck != null && !lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
+        if (isTeleporter) GetTeleporter();
 
         if (willFocus) Focus(true);
     }
 
+    private void GetTeleporter()
+    {
+        Teleporter teleporter = this.GetComponent<Teleporter>();
+        if (teleporter != null)
+        {
+            teleporter.CanTeleport();
+            SetAll(toActivateOnProtagHover, false);
+            SetAll(toDeactivateOnProtagHover, true);
+        }
+        else
+        {
+        }
+    }
+
     public void ItemInteract(bool var)
     {
+        Debug.Log("Item interact");
         if (!itemInteractable)
         {
             Interact();
@@ -133,6 +151,7 @@ public class InteractableObject : MonoBehaviour
         }
 
         if (willFocus) Focus(true);
+        Debug.Log("End item interract");
     }
 
     void SetAll(GameObject[] objects, bool value)
