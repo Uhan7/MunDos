@@ -3283,11 +3283,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2348691492092013971, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
   m_PrefabInstance: {fileID: 398421323}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &401476717 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: 780490224ec16824c8df81d250ffff09, type: 3}
-  m_PrefabInstance: {fileID: 1693706726}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &412535281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4513,7 +4508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -76.49772
+      value: -76.5
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5029,7 +5024,8 @@ MonoBehaviour:
   linksToOtherDialogue: 0
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
-  objectsToSpawnAfter: []
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 0}
@@ -5114,11 +5110,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 688810450}
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
---- !u!4 &688810448 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-  m_PrefabInstance: {fileID: 688810447}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &688810449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -7368,7 +7359,8 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 0
-  objectsToSpawnAfter: []
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 1219612377}
@@ -11319,6 +11311,10 @@ PrefabInstance:
       value: Santi
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -12742,3 +12738,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 623050333}
   - {fileID: 59778768}
+  - {fileID: 688810447}
