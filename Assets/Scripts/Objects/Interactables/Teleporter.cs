@@ -30,11 +30,6 @@ public class Teleporter : MonoBehaviour
     [ShowIf("hasFade")][SerializeField] private float fadeHoldDuration = 0.2f;
     [ShowIf("hasFade")][SerializeField] public Image fadeImage;
 
-    private void Awake()
-    {
-        InitializeCache();
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag != PROTAG_TAG) return;
@@ -55,11 +50,6 @@ public class Teleporter : MonoBehaviour
     }
 
     // Helper Functions --------------------------------------------------------
-
-    private void InitializeCache()
-    {
-
-    }
 
     public void CanTeleport()
     {
@@ -92,6 +82,7 @@ public class Teleporter : MonoBehaviour
         //if (hasFade) yield return StartCoroutine(FadeScreen());
     }
 
+    /*
     private IEnumerator FadeScreen()
     {
         float startAlpha = fadeImage.color.a;
@@ -105,7 +96,8 @@ public class Teleporter : MonoBehaviour
             yield return null;
         }
         fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, targetAlpha);
-}
+    }
+    */
 
     public void DeactivateAfter()
     {
@@ -120,103 +112,3 @@ public class Teleporter : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
     }
 }
-
-
-//    void AddConditionalCheck()
-//    {
-//        if (alreadyCheckedConditional) return;
-
-//        foreach (GameObject conditionalObject in conditionalObjectsToCheck)
-//        {
-//            ConditionalObject conditionalObjectScript = conditionalObject.GetComponent<ConditionalObject>();
-
-//            conditionalObjectScript.currentChecks++;
-//            if (conditionalObjectScript.currentChecks >= conditionalObjectScript.requiredChecks) conditionalObject.SetActive(true);
-//        }
-
-//        alreadyCheckedConditional = true;
-//    }
-
-//    void AddUnlockCheck()
-//    {
-
-//        if (alreadyCheckedUnlock)
-//        {
-//            return;
-//        }
-
-//        foreach (GameObject lockObject in objectsToUnlockCheck)
-//        {
-//            LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
-
-//            if (lockObjectScript != null)
-//            {
-
-//                CheckUnlock(lockObject, ref lockObjectScript);
-//                lockObjectScript.currentChecks++;
-//                if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
-//                {
-//                    lockObjectScript.Lock(false);
-//                }
-//            }
-
-//        }
-//        alreadyCheckedUnlock = true;
-//    }
-//    void AddLockCheck()
-//    {
-//        if (alreadyCheckedLock) return;
-
-
-//        foreach (GameObject lockObject in objectsToLockCheck)
-//        {
-//            LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
-//            CheckUnlock(lockObject, ref lockObjectScript);
-
-
-//            if (lockObjectScript != null)
-//            {
-//                lockObjectScript.currentChecks++;
-
-//                if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
-//                {
-//                    lockObjectScript.Lock(true);
-//                }
-//            }
-
-//            alreadyCheckedLock = true;
-//        }
-//    }
-
-//    void ZoomInteract(bool var)
-//    {
-//        if (var == true) zoomCanvas.ActivateZoomedEnvi();
-//        else zoomCanvas.DeactivateZoomedEnvi();
-//    }
-
-//    void Focus(bool value)
-//    {
-//        Parameters param = new Parameters();
-//        param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
-
-//        EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
-//    }
-
-//    void CheckUnlock(GameObject lockObject, ref LockableObject lockObjectScript)
-//    {
-
-//        if (lockObjectScript == null)
-//        {
-//            Transform envi = lockObject.transform.GetChild(0);
-//            lockObjectScript = envi.GetComponent<LockableObject>();
-//            if (lockObjectScript == null)
-//            {
-//                // Debug.LogError("Error finding LockableObejct of " + lockObject.name);
-//            }
-
-//        }
-//        else
-//        {
-//        }
-//    }
-//}
