@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ZoomEnviManager : MonoBehaviour
@@ -13,6 +15,7 @@ public class ZoomEnviManager : MonoBehaviour
     [Header("Flags")]
     [HideInInspector] public bool activated = false; // Used in DialogueTrigger.cs (to sync with Focus)
 
+    public UnityEvent CallZoomEvniSubComponents;
     private void Update()
     {
         //if (Input.GetKeyDown(deactivateKey)) DeactivateZoomedEnvi();
@@ -26,6 +29,8 @@ public class ZoomEnviManager : MonoBehaviour
         zoomEnviImage.SetActive(true);
 
         activated = true;
+        Debug.Log("Invoking");
+        CallZoomEvniSubComponents.Invoke();
     }
 
     // I put this as a separate function since it might be executed differently soon
