@@ -59,7 +59,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &5298232031614097324
 MonoBehaviour:
@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: presentTransition
       value: 
       objectReference: {fileID: 6979940404822539605}
+    - target: {fileID: 1983910611221587295, guid: 05a40a24bdbee4088ad2bdd6a8b7abed, type: 3}
+      propertyPath: transitionObject
+      value: 
+      objectReference: {fileID: 5066857228442181586}
     - target: {fileID: 3004753732337028578, guid: 05a40a24bdbee4088ad2bdd6a8b7abed, type: 3}
       propertyPath: pastProtag
       value: 
@@ -439,6 +443,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05a40a24bdbee4088ad2bdd6a8b7abed, type: 3}
+--- !u!114 &1657609549506981761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1983910611221587295, guid: 05a40a24bdbee4088ad2bdd6a8b7abed, type: 3}
+  m_PrefabInstance: {fileID: 903331449624922846}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9b2097d35064862a784bac805c2ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1832698028364006238 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1578030148939614592, guid: 05a40a24bdbee4088ad2bdd6a8b7abed, type: 3}
@@ -489,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3136627323317243515, guid: fd5b4f429eb0c4f9282a37c8b2eed956, type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3653791634501755845, guid: fd5b4f429eb0c4f9282a37c8b2eed956, type: 3}
       propertyPath: m_Color.a
@@ -509,11 +524,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4813756827234060089, guid: fd5b4f429eb0c4f9282a37c8b2eed956, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -76.5
       objectReference: {fileID: 0}
     - target: {fileID: 4813756827234060089, guid: fd5b4f429eb0c4f9282a37c8b2eed956, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4813756827234060089, guid: fd5b4f429eb0c4f9282a37c8b2eed956, type: 3}
       propertyPath: m_LocalPosition.z
@@ -887,6 +902,30 @@ PrefabInstance:
     - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.8784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1657609549506981761}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneTransitionWrapper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTransitioner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Title Screen
       objectReference: {fileID: 0}
     - target: {fileID: 2871763582127950472, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_Sprite
@@ -2231,6 +2270,30 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.6431373
       objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1657609549506981761}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneTransitionWrapper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTransitioner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871024935872777486, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Title Screen
+      objectReference: {fileID: 0}
     - target: {fileID: 2871763582127950472, guid: 3dce6f84b617940b7a22bdbc124db85a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3497,6 +3560,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0150ea4fa2f4ff943903ff3b6a8c88a4, type: 3}
+--- !u!1 &5066857228442181586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2368590034078999825, guid: 0150ea4fa2f4ff943903ff3b6a8c88a4, type: 3}
+  m_PrefabInstance: {fileID: 7390402435365583555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5285230524663561300 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3447244874824992407, guid: 0150ea4fa2f4ff943903ff3b6a8c88a4, type: 3}
