@@ -16,6 +16,7 @@ public class AutoMove : MonoBehaviour
     [SerializeField] private bool singleUse;
     [SerializeField] private bool NPCMovement;
     [SerializeField] private bool hideUI;
+    [SerializeField] private string requiredName;
 
     private void OnEnable()
     {
@@ -26,6 +27,8 @@ public class AutoMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (requiredName != "" && requiredName != col.gameObject.transform.parent.name) return;
+
         if (NPCMovement && col.gameObject.tag == NPC_TAG)
         {
             character = col.gameObject.GetComponentInParent<PlayerMove>();
@@ -44,6 +47,8 @@ public class AutoMove : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
+        if (requiredName != "" && requiredName != col.gameObject.transform.parent.name) return;
+
         if (NPCMovement && col.gameObject.tag == NPC_TAG)
         {
             character = col.gameObject.GetComponentInParent<PlayerMove>();
