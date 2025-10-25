@@ -16,10 +16,6 @@ public class SceneTransitioner : MonoBehaviour
 
         transitionObject.SetActive(true);
         Invoke("GoToScene", transitionDelay);
-
-        if (SceneManager.GetActiveScene().name != "Title Screen")
-            EventBroadcaster.Instance.PostEvent(EventNames.TOGGLE_PAUSE);
-
     }
 
     private void GoToScene()
