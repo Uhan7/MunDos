@@ -42,7 +42,6 @@ public class ClickZoomable : MonoBehaviour
     [SerializeField] private GameObject[] toActivate;
     [SerializeField] private GameObject[] toDeactivate;
 
-    
     [Header("Flags")]
     [HideInInspector] public bool hasElements = false;
     [HideInInspector] public bool leaveCondition = false;
