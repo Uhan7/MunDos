@@ -442,6 +442,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2431165580744401747, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
   m_PrefabInstance: {fileID: 623050333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &24745477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24745478}
+  - component: {fileID: 24745479}
+  m_Layer: 0
+  m_Name: Magic Book-D10
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &24745478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24745477}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24745479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24745477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - '<i>(My help? What could a person from the past need help from the future for?)
+
+      </i>'
+    - "How do I know this isn\u2019t a trick?"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &35077110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -3488,6 +3563,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: toActivateOnInteract.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: toDeactivateOnInteract.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
@@ -3498,6 +3577,14 @@ PrefabInstance:
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 889618557}
+    - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 685438038}
+    - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'toDeactivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 763537606}
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: data.objectsToInteractWith.Array.size
       value: 1
@@ -4069,6 +4156,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &342145312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342145313}
+  - component: {fileID: 342145314}
+  m_Layer: 0
+  m_Name: Magic Book-D9
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &342145313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342145312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342145314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342145312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'If my magic worked correctly, yes. I know I am but a stranger to you, but
+      I need your help.
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1001 &346357856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5746,79 +5908,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &475803343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 475803344}
-  - component: {fileID: 475803345}
-  m_Layer: 0
-  m_Name: Magic Book-D4
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &475803344
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475803343}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1369075590}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &475803345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475803343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueHolderName: Dialogue Holder
-  dialogue:
-    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 0}
-    name: Default Name
-    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - End of talking
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 1
-  deactivateAfter: 1
-  linksToOtherDialogue: 0
-  playClosingAnimation: 0
-  mainCharacterIsSpeaking: 1
-  objectsToActivateAfter:
-  - {fileID: 989657909}
-  objectsToDeactivateAfter: []
-  conditionalObjectsToCheckAfter: []
-  activateObjectTime: 0
-  nextDialogue: {fileID: 0}
-  nextDialogueTime: 0.5
 --- !u!1 &489257154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6205,6 +6294,85 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8804021321025864612, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
   m_PrefabInstance: {fileID: 2033698048}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &527519533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527519534}
+  - component: {fileID: 527519535}
+  m_Layer: 0
+  m_Name: Magic Book-D13
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &527519534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527519533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527519535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527519533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(They seem suspicious of magic... So is it true that it had a hand in Giyala\u2019s
+      fall? I must learn more, at all costs.)</i>\r"
+    - "Please give me a chance. All I need is information. I am not sure what occurred
+      between my time and yours, and why magic has become so taboo for you.\r\n\r"
+    - "<dim>In my time, rumors of magic being evil and mysterious monster attacks
+      have just begun circulating.\r\n\r"
+    - "But magic is not a tool for harm, nor is it unknowable. If you help me, I
+      can teach you how magic can be used for good.\r\n\r"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &531502168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
@@ -8023,6 +8191,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: 780490224ec16824c8df81d250ffff09, type: 3}
   m_PrefabInstance: {fileID: 679933253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &685438038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 2095550239}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &685919760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8341,6 +8514,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &711230503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711230504}
+  - component: {fileID: 711230505}
+  m_Layer: 0
+  m_Name: Magic Book-D7
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &711230504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711230503}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &711230505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711230503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - ' So it does work! This is excellent. What is your name, stranger?'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &728629321
 GameObject:
   m_ObjectHideFlags: 0
@@ -8654,9 +8899,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 0}
-    name: Default Name
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
     font: {fileID: 0}
@@ -8664,7 +8909,97 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "The book\u2026! "
+    - <flash><i>(What the...))</i>
+    - <i>(Writing?))</i>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 1680929755}
+  nextDialogueTime: 0.5
+--- !u!4 &754780016 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+  m_PrefabInstance: {fileID: 161494518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &763537606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 180338015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &779785998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2448276020713636563, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+  m_PrefabInstance: {fileID: 1456874102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &791406932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791406933}
+  - component: {fileID: 791406934}
+  m_Layer: 0
+  m_Name: Magic Book-D21
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &791406933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791406932}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.119999, y: 0.7999997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791406934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791406932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(...! Sumpagita? The Disidensiya?) </i>
+    - If you give me more information, <b>I might be able to reach the same place</b>
+      from where I am.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -8678,18 +9013,8 @@ MonoBehaviour:
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0
-  nextDialogue: {fileID: 1680929755}
+  nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
---- !u!4 &754780016 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-  m_PrefabInstance: {fileID: 161494518}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &779785998 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2448276020713636563, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-  m_PrefabInstance: {fileID: 1456874102}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &805318182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9695,6 +10020,80 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
   m_PrefabInstance: {fileID: 201782595}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &920386220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920386221}
+  - component: {fileID: 920386222}
+  m_Layer: 0
+  m_Name: Magic Book-D17
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &920386221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920386220}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.119999, y: 0.7999997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920386222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920386220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - " I see. Well, there are ways that magic can help with such things, but that
+      will require quite a lengthy explanation. I am willing to share the information
+      with you if you wish to cooperate. \r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1001 &922880371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11044,6 +11443,83 @@ MonoBehaviour:
   - {fileID: 919884971}
   objectsToLock: []
   objectsToUnlock: []
+--- !u!1 &1098984289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1098984290}
+  - component: {fileID: 1098984291}
+  m_Layer: 0
+  m_Name: Magic Book-D11
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1098984290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098984289}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098984291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098984289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - " I can assure you that this book cannot do anything except act as a means
+      of communication between our times.\r"
+    - 'I assume you are a magic-user yourself, are you not? I am merely a <b>katalonan</b>.
+      I am not looking to do any arm.
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1001 &1120981410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11727,6 +12203,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1178097185}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1179306616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1179306617}
+  - component: {fileID: 1179306618}
+  m_Layer: 0
+  m_Name: Magic Book-D18
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1179306617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179306616}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1179306618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179306616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(... Shrewd, but alright, fine. Guess there\u2019s no harm in it for me.)</i>"
+    - <i>(And if I can find a way to help <b><color=#93ccea>Sumpagita</color></b>...)</i>
+    - Okay then. What do you want to know?
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1180417898
 GameObject:
   m_ObjectHideFlags: 0
@@ -13713,6 +14263,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357122546}
   m_CullTransparentMesh: 1
+--- !u!1 &1368205558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368205559}
+  - component: {fileID: 1368205560}
+  m_Layer: 0
+  m_Name: Magic Book-D22
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1368205559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368205558}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1368205560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368205558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(I don\u2019t exactly know how to describe this place. I should <b>look
+      around and investigate</b>.)\r\n</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1369075589
 GameObject:
   m_ObjectHideFlags: 0
@@ -13745,7 +14368,25 @@ Transform:
   - {fileID: 743249558}
   - {fileID: 1680929756}
   - {fileID: 1480307496}
-  - {fileID: 475803344}
+  - {fileID: 1529017496}
+  - {fileID: 1972181313}
+  - {fileID: 1734403793}
+  - {fileID: 711230504}
+  - {fileID: 1651929388}
+  - {fileID: 342145313}
+  - {fileID: 24745478}
+  - {fileID: 1098984290}
+  - {fileID: 1498801706}
+  - {fileID: 527519534}
+  - {fileID: 1989596618}
+  - {fileID: 1713363577}
+  - {fileID: 1545816115}
+  - {fileID: 920386221}
+  - {fileID: 1179306617}
+  - {fileID: 2117638098}
+  - {fileID: 1667317348}
+  - {fileID: 791406933}
+  - {fileID: 1368205559}
   m_Father: {fileID: 1002273953}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1372766158
@@ -15807,9 +16448,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    name: Default Name
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
     font: {fileID: 0}
@@ -15817,7 +16458,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - More talking
+    - "<i>(It\u2019s... <b><color=#93ccea>magic</color></b>? Who in the world would
+      make something like this and leave it here for anyone to find?)</i>"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -15826,12 +16468,12 @@ MonoBehaviour:
   deactivateAfter: 1
   linksToOtherDialogue: 1
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0
-  nextDialogue: {fileID: 475803343}
+  nextDialogue: {fileID: 1529017494}
   nextDialogueTime: 0.5
 --- !u!1 &1498725729
 GameObject:
@@ -16000,6 +16642,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498725729}
   m_CullTransparentMesh: 1
+--- !u!1 &1498801705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1498801706}
+  - component: {fileID: 1498801707}
+  m_Layer: 0
+  m_Name: Magic Book-D12
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1498801706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498801705}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1498801707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498801705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "I\u2019m no magic user, and it\u2019s still weird to see magic in the open
+      like this. I don\u2019t know if I can trust you."
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1500205449
 GameObject:
   m_ObjectHideFlags: 0
@@ -16619,8 +17334,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.name
+      value: ???
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: activateObjectTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.character2
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: linksToOtherDialogue
@@ -16631,12 +17358,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToSpawnAfter.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: The book!
+      value: 'The book...! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: 'It opened on its own, does that mean it worked? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[2]'
+      value: "I ought to write something quickly, before the person on the other
+        side leaves.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'objectsToSpawnAfter.Array.data[0]'
@@ -16749,6 +17489,150 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.2, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1529017494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529017496}
+  - component: {fileID: 1529017495}
+  m_Layer: 0
+  m_Name: Magic Book-D4
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1529017495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529017494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: ???
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - My name is <b>Liezel</b>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 1972181311}
+  nextDialogueTime: 0.5
+--- !u!4 &1529017496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529017494}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1545816114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545816115}
+  - component: {fileID: 1545816116}
+  m_Layer: 0
+  m_Name: Magic Book-D16
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1545816115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545816114}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1545816116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545816114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - More like just my town.
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1548093446
 GameObject:
   m_ObjectHideFlags: 0
@@ -17907,6 +18791,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1651929387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651929388}
+  - component: {fileID: 1651929389}
+  m_Layer: 0
+  m_Name: Magic Book-D8
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1651929388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651929387}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651929389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651929387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Santi. You said you\u2019re from the past?"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1656396482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6578602712689706575, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -18069,6 +19025,79 @@ Transform:
   - {fileID: 578485281}
   m_Father: {fileID: 1121851629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1667317347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1667317348}
+  - component: {fileID: 1667317349}
+  m_Layer: 0
+  m_Name: Magic Book-D20
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1667317348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667317347}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1667317349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667317347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "It\u2019s a ruin near Sumpagita forest. I heard it used to belong to an old
+      revolutionary group, the Disidensiyang Giyala."
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!4 &1667822741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2679859293919452695, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -18207,9 +19236,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueHolderName: Dialogue Holder
   dialogue:
-    character: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 1046472290338456136, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    name: Default Name
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: ???
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
     font: {fileID: 0}
@@ -18217,7 +19246,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - Talking Talking
+    - Hello there, please do not close this book.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -18226,7 +19255,7 @@ MonoBehaviour:
   deactivateAfter: 1
   linksToOtherDialogue: 1
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
@@ -18532,6 +19561,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1699396868}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1713363576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713363577}
+  - component: {fileID: 1713363578}
+  m_Layer: 0
+  m_Name: Magic Book-D15
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1713363577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713363576}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.119999, y: 0.7999997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713363578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713363576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - ' A what? Is that one of the issues your time is experiencing?'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1715480863
 GameObject:
   m_ObjectHideFlags: 0
@@ -18607,6 +19708,82 @@ MonoBehaviour:
   objectsToActivate: []
   objectsToDeactivate: []
   waitforSeconds: 1
+--- !u!1 &1734403792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734403793}
+  - component: {fileID: 1734403794}
+  m_Layer: 0
+  m_Name: Magic Book-D6
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1734403793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734403792}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734403794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734403792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(This is suspicious. Nobody would expose themselves as a magic-user these
+      days... But... if they\u2019re really from the past...)\r\n</i>"
+    - "<i>(Nevermind. Either way, this book is too close to the town. It\u2019s worth
+      investigating. I\u2019ll humor them.)\r\n</i>"
+    - Hi.
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1001 &1735792748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20253,6 +21430,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8461965534019749676, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
   m_PrefabInstance: {fileID: 623050333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1972181311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972181313}
+  - component: {fileID: 1972181312}
+  m_Layer: 0
+  m_Name: Magic Book-D5
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1972181312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972181311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'and it may be hard to believe but <u>I come from your past</u>. '
+    - "The book in your hands was \u201Csent\u201D to the future, your time, using
+      magic. "
+    - If you can see this, please write back.
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
+--- !u!4 &1972181313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972181311}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977944041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -20411,6 +21663,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1989596617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1989596618}
+  - component: {fileID: 1989596619}
+  m_Layer: 0
+  m_Name: Magic Book-D14
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1989596618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989596617}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.12, y: 0.79999995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1989596619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989596617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(Used for good... In spite of everything that happened, my family always
+      told me to \u201Ckeep an open mind\u201D about magic. Is this one of those
+      cases?)\r\n</i>"
+    - Well then, does one of those uses happen to be a solution for an <b><u>energy
+      problem</u></b>?
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1994502515
 GameObject:
   m_ObjectHideFlags: 0
@@ -21552,6 +22880,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8804021321025864612, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
   m_PrefabInstance: {fileID: 1401833211}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2117638097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2117638098}
+  - component: {fileID: 2117638099}
+  m_Layer: 0
+  m_Name: Magic Book-D19
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2117638098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117638097}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.119999, y: 0.7999997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1369075590}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2117638099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117638097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'How about we start with... Where you found this book?
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 1
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &2121255300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1728874648817772044, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
