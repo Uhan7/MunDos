@@ -5,6 +5,9 @@ public class PauseMenuManager : MonoBehaviour
     [Header("Components")]
     [HideInInspector] private Animator animator;
 
+    [Header("Key Inputs")]
+    [SerializeField] private KeyCode pauseKey;
+
     [Header("Window References")]
     [SerializeField] private GameObject saveUI;
     [SerializeField] private GameObject settingsUI;
@@ -20,6 +23,8 @@ public class PauseMenuManager : MonoBehaviour
     void Update()
     {
         animator.SetBool("Active", active);
+
+        if (Input.GetKeyDown(pauseKey)) TogglePause();
     }
 
     public void TogglePause()

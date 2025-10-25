@@ -6,6 +6,7 @@ public class LogScreen : MonoBehaviour
 {
     [Header("Key Inputs")]
     [SerializeField] private KeyCode exitKey = KeyCode.Escape;
+    [SerializeField] private KeyCode logKey;
 
     [SerializeField] private GameObject logScreen;
     [SerializeField] private TextMeshProUGUI fullLog;
@@ -19,13 +20,22 @@ public class LogScreen : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(exitKey)) toggleLogScreen();
+        if (Input.GetKeyDown(logKey))
+        {
+            toggleLogScreen();
+            TogglePauseBackground();
+        }
+        if (Input.GetKeyDown(exitKey))
+        {
+            toggleLogScreen();
+            TogglePauseBackground();
+        }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             scrollbar.value += 0.005f;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             scrollbar.value -= 0.005f;
         }

@@ -15,6 +15,10 @@ public class TimelineManager : MonoBehaviour
     [SerializeField] private KeyCode switchTimelineKey;
     [SerializeField] private KeyCode interactKey;
 
+    [Header("Settings")]
+    [SerializeField] private float cooldownTime = 1f;
+    [HideInInspector] private float cooldownTimer;
+
     [Header("Timelines")]
     [SerializeField] private GameObject pastTimeline;
     [SerializeField] private GameObject presentTimeline;
@@ -40,10 +44,14 @@ public class TimelineManager : MonoBehaviour
 
     void Update()
     {
+        TimerUpdate();
+
         if (!canSwitch || !timelineUnlocked) return;
 
-        if (Input.GetKeyDown(switchTimelineKey) && !Input.GetKey(interactKey))
+        if (Input.GetKeyDown(switchTimelineKey) && !Input.GetKey(interactKey) && cooldownTimer <= 0)
         {
+            cooldownTimer = cooldownTime;
+
             PlayerMove playerMoveScript = GameObject.FindGameObjectWithTag(CURRENT_PROTAG_TAG).GetComponent<PlayerMove>();
             if (!playerMoveScript.canInput) return;
 
@@ -52,6 +60,11 @@ public class TimelineManager : MonoBehaviour
     }
 
     // Update Functions --------------------------------------------------------
+
+    void TimerUpdate()
+    {
+        cooldownTimer -= Time.deltaTime;
+    }
 
     IEnumerator SwitchTimeline(float delayTime)
     {
