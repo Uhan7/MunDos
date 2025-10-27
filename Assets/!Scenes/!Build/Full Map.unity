@@ -182,8 +182,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
-  objectsToDeactivateAfter:
-  - {fileID: 300956018}
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 2046691177}
@@ -3789,7 +3788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -4969,6 +4968,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &359254598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 412535281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &359542204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8804021321025864612, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
@@ -5521,7 +5525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5529,7 +5533,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 687326440}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1850936723}
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!4 &412535282 stripped
 Transform:
@@ -5835,8 +5842,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
-  objectsToDeactivateAfter:
-  - {fileID: 300956018}
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 1583221802}
@@ -6892,8 +6898,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: yadda yadda
+      value: 'A preservation and protection sigil was drawn onto the wall of this
+        shed... I can remove it, the effects will wear off over time. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: There, try getting in again, Santi.
       objectReference: {fileID: 0}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -7571,7 +7594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -7696,7 +7719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -7930,7 +7953,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -76.5
+      value: -76.49777
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7938,7 +7961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7371262398874919753, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9051,7 +9074,8 @@ MonoBehaviour:
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
-  objectsToDeactivateAfter: []
+  objectsToDeactivateAfter:
+  - {fileID: 1850936722}
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 0}
@@ -10445,28 +10469,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.name
-      value: Liezel
+      value: Santi
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: " A preservation and protection sigil was drawn onto the wall of this
-        shed... I can remove it, <b>the effects will wear off over time</b>. \r"
+      value: "<i>(It\u2019s a shed. Huh? Why does it look so spotless?)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: There, try getting in again, Santi.
+      value: "<i>(... I can\u2019t get in. I could try breaking in...)</i>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[2]'
+      value: "<shake>Ow... Alright, that didn\u2019t work. But.. there\u2019s not
+        even a single scratch on it..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[3]'
+      value: "<shake>Ow... Alright, that didn\u2019t work. But.. there\u2019s not
+        even a single scratch on it..."
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -10476,6 +10509,10 @@ PrefabInstance:
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
       objectReference: {fileID: 564695076}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1850936722}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
@@ -10548,8 +10585,16 @@ PrefabInstance:
       value: Garden Spade DZ
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Liezel keeps item
+      value: A spade. This may come in handy.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13142,8 +13187,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
-  objectsToDeactivateAfter:
-  - {fileID: 300956018}
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 1711550}
@@ -17391,7 +17435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650402908306771006, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8696352317246568468, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: Priority.Enabled
@@ -17435,7 +17479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100836808320417522, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6185488602561542524, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -19495,8 +19539,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
-  objectsToDeactivateAfter:
-  - {fileID: 300956018}
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 1148206815}
@@ -19761,7 +19804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -21517,6 +21560,7 @@ MonoBehaviour:
     - 'About an ore called <b>Salakab</b>.
 
 '
+    - <start_shake><start_dim>THE END OF LEVEL 1 WOOOOOOOOOOOOOOOOOO<end_shake>
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -22110,6 +22154,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1847310435}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1850936722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 412535281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1850936723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850936722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 1
+  lockAndUnlock: 0
+  delayTime: 0.5
+  resetAfter: 0
+  deactivateAfter: 0
+  objectsToActivate:
+  - {fileID: 359254598}
+  objectsToDeactivate: []
+  objectsToLock: []
+  objectsToUnlock: []
 --- !u!1 &1857482196 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -22505,7 +22578,7 @@ PrefabInstance:
       objectReference: {fileID: 21787371}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -23043,7 +23116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -24106,8 +24179,7 @@ MonoBehaviour:
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
-  objectsToDeactivateAfter:
-  - {fileID: 300956018}
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0.5
   nextDialogue: {fileID: 454905680}
