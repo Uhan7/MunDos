@@ -3329,6 +3329,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1605272179}
+  - {fileID: 2119584591}
   - {fileID: 1148206817}
   - {fileID: 1711552}
   - {fileID: 2046691179}
@@ -4850,7 +4851,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   normalSprite: {fileID: 0}
   outlinedSprite: {fileID: 0}
-  itemInteractable: 0
+  itemInteractable: 1
   checksConditionalObject: 0
   unlockInteractableObject: 0
   lockInteractableObject: 0
@@ -4873,7 +4874,8 @@ MonoBehaviour:
   toDeactivateOnProtagHover: []
   toActivateOnValidInteract: []
   toDeactivateOnValidInteract: []
-  toActivateOnInvalidInteract: []
+  toActivateOnInvalidInteract:
+  - {fileID: 1728588567}
   toDeactivateOnInvalidInteract: []
 --- !u!61 &354557635
 BoxCollider2D:
@@ -6781,6 +6783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1728588568}
   - {fileID: 1038916715}
   - {fileID: 621443216}
   m_Father: {fileID: 354557633}
@@ -11443,7 +11446,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   normalSprite: {fileID: 0}
   outlinedSprite: {fileID: 0}
-  itemInteractable: 0
+  itemInteractable: 1
   checksConditionalObject: 0
   unlockInteractableObject: 1
   lockInteractableObject: 0
@@ -11467,7 +11470,8 @@ MonoBehaviour:
   toDeactivateOnProtagHover: []
   toActivateOnValidInteract: []
   toDeactivateOnValidInteract: []
-  toActivateOnInvalidInteract: []
+  toActivateOnInvalidInteract:
+  - {fileID: 2119584590}
   toDeactivateOnInvalidInteract: []
 --- !u!61 &979802440
 BoxCollider2D:
@@ -21146,6 +21150,78 @@ MonoBehaviour:
   isLockedAtStart: 1
   requiredChecks: 1
   currentChecks: 0
+--- !u!1 &1728588567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728588568}
+  - component: {fileID: 1728588569}
+  m_Layer: 0
+  m_Name: Default Invalid Interact
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1728588568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728588567}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 558344557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728588569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728588567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: 0}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - This item didn't do anything.
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0.5
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
 --- !u!1 &1733597992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7447424023814354619, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -24765,6 +24841,78 @@ MonoBehaviour:
   conditionalObjectsToCheckAfter: []
   activateObjectTime: 0
   nextDialogue: {fileID: 1667317347}
+  nextDialogueTime: 0.5
+--- !u!1 &2119584590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119584591}
+  - component: {fileID: 2119584592}
+  m_Layer: 0
+  m_Name: Default Invalid Interact
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2119584591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119584590}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 224929248}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119584592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119584590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueHolderName: Dialogue Holder
+  dialogue:
+    character: {fileID: -766158179369566821, guid: 43023e1e55b1c4b969570c5c23126194, type: 3}
+    character2: {fileID: 0}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - This item didn't do anything.
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  activateObjectTime: 0.5
+  nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
 --- !u!1 &2121255300 stripped
 GameObject:
