@@ -192,7 +192,7 @@ public class DialogueManager : MonoBehaviour
         }
 			sentences.Clear();
 		StopAllCoroutines();
-	}
+    }
 
 	void FinishSentence()
     {
