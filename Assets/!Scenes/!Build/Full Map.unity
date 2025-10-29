@@ -622,9 +622,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - '<i>(My help? What could a person from the past need help from the future for?)
-
-      </i>'
+    - <i>(My help? What could a person from the past need help from the future for?)</i>
     - "How do I know this isn\u2019t a trick?"
   startOnEnable: 1
   startFromTrigger: 0
@@ -633,7 +631,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -2386,7 +2384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -2394,8 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "<i>(What is this thing? It looks so rusty and dirty\u2026 How long
-        has it been here?)</i>"
+      value: Okay.
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -2652,7 +2649,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -2670,12 +2667,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: "<i>(Doesn\u2019t matter, maybe it\u2019s still there in Leizel\u2019s
+      value: "<i>(Doesn\u2019t matter, maybe it\u2019s still there in Liezel\u2019s
         time?)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
-      value: "Leizel, I found this emblem buried near the outpost. Maybe it\u2019s
+      value: "Liezel, I found this emblem buried near the outpost. Maybe it\u2019s
         there in your time?"
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -3105,7 +3102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[4]'
-      value: "<i>(The rest looks too faded to read\u2026 I hope Leizel isn\u2019t
+      value: "<i>(The rest looks too faded to read\u2026 I hope Liezel isn\u2019t
         one of these kinds of people\u2026)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -3699,7 +3696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[4]'
-      value: "<i> (And\u2026 The rest is cut off.)</i>"
+      value: "<i>(And\u2026 The rest is cut off.)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: conditionalObjectsToCheckAfter.Array.size
@@ -4035,7 +4032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -5351,10 +5348,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'If my magic worked correctly, yes. I know I am but a stranger to you, but
-      I need your help.
-
-'
+    - If my magic worked correctly, yes. I know I am but a stranger to you, but I
+      need your help.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -5362,7 +5357,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -5408,8 +5403,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "<i>(The Block Press Manual., printed on April 8 19XX. Is this for the
-        printing press? It has a curvy logo stamped on it. Let's see\u2026)</i>"
+      value: "<i>(The Block Press Manual, printed on <u>April 8 19XX</u>. Is this
+        for the printing press? It has a curvy logo stamped on it. Let's see\u2026)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -6333,6 +6328,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -6639,7 +6638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -7887,13 +7886,13 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "<i>(They seem suspicious of magic... So is it true that it had a hand in Giyala\u2019s
-      fall? I must learn more, at all costs.)</i>\r"
-    - "Please give me a chance. All I need is information. I am not sure what occurred
-      between my time and yours, and why magic has become so taboo for you.\r\n\r"
-    - "<dim>In my time, rumors of magic being evil and mysterious monster attacks
-      have just begun circulating.\r\n\r"
-    - "But magic is not a tool for harm, nor is it unknowable. If you help me, I
-      can teach you how magic can be used for good.\r\n\r"
+      fall? I must learn more, at all costs.)</i>"
+    - Please give me a chance. All I need is information. I am not sure what occurred
+      between my time and yours, and why magic has become so taboo for you.
+    - <dim>In my time, rumors of magic being evil and mysterious monster attacks
+      have just begun circulating.
+    - But magic is not a tool for harm, nor is it unknowable. If you help me, I can
+      teach you how magic can be used for good.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -7901,7 +7900,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -8936,7 +8935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -10687,7 +10686,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ' So it does work! This is excellent. What is your name, stranger?'
+    - So it does work! This is excellent. What is your name, stranger?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -10695,7 +10694,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -11043,7 +11042,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -11195,7 +11194,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(...! Sumpagita? The Disidensiya?) </i>
+    - <i>(...! Sumpagita? The Disidensiya?)</i>
     - If you give me more information, <b>I might be able to reach the same place</b>
       from where I am.
   startOnEnable: 1
@@ -11205,7 +11204,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -12471,9 +12470,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ' I see. Well, there are ways that magic can help with such things, but that
-      will require quite a lengthy explanation. '
-    - "I am willing to share the information with you if you wish to cooperate. \r\n"
+    - I see. Well, there are ways that magic can help with such things, but that
+      will require quite a lengthy explanation.
+    - I am willing to share the information with you if you wish to cooperate.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -12481,7 +12480,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -12795,7 +12794,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: "<i>(What is this? An award? \u201C<b>R. Lapuz</b>\u201D gave this on
-        July 22, 19XX\u2026 For four years of service to the organization.)</i>"
+        <u>July 22, 19XX</u>\u2026 For four years of service to the organization.)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -14224,12 +14223,10 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - " I can assure you that this book cannot do anything except act as a means
-      of communication between our times.\r"
-    - 'I assume you are a magic-user yourself, are you not? I am merely a <b>katalonan</b>.
-      I am not looking to do any arm.
-
-'
+    - "I can assure you that this book cannot do anything except act as a means of
+      communication between our times.\r"
+    - I assume you are a magic-user yourself, are you not? I am merely a <b>katalonan</b>.
+      I am not looking to do any harm.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -14237,7 +14234,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -15206,7 +15203,7 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "<i>(... Shrewd, but alright, fine. Guess there\u2019s no harm in it for me.)</i>"
-    - <i>(And if I can find a way to help <b><color=#93ccea>Sumpagita</color></b>...)</i>
+    - <i>(And if I can find a way to help <b><color=#cf4800>Sumpagita</color></b>...)</i>
     - Okay then. What do you want to know?
   startOnEnable: 1
   startFromTrigger: 0
@@ -15215,7 +15212,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -16023,7 +16020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -16031,8 +16028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "<i>(What is this thing? It looks so rusty and dirty\u2026 How long
-        has it been here?)</i>"
+      value: Okay.
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -17485,7 +17481,7 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "<i>(I don\u2019t exactly know how to describe this place. I should <b>look
-      around and investigate</b>.)\r\n</i>"
+      around and investigate</b>.)</i>"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -18298,7 +18294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -19678,7 +19674,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<i>(It\u2019s... <b><color=#93ccea>magic</color></b>? Who in the world would
+    - "<i>(It\u2019s... <b><color=#cf4800>magic</color></b>? Who in the world would
       make something like this and leave it here for anyone to find?)</i>"
   startOnEnable: 1
   startFromTrigger: 0
@@ -19687,7 +19683,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -19932,7 +19928,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -20808,7 +20804,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - My name is <b>Liezel</b>...
+    - My name is <b><u>Liezel</b></u>...
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -20816,7 +20812,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -20903,7 +20899,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -22283,7 +22279,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -22479,7 +22475,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -22714,7 +22710,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -22878,7 +22874,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -23251,7 +23247,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ' A what? Is that one of the issues your time is experiencing?'
+    - A what? Is that one of the issues your time is experiencing?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -23259,7 +23255,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -23471,9 +23467,9 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "<i>(This is suspicious. Nobody would expose themselves as a magic-user these
-      days... But... if they\u2019re really from the past...)\r\n</i>"
+      days... But... if they\u2019re really from the past...)</i>"
     - "<i>(Nevermind. Either way, this book is too close to the town. It\u2019s worth
-      investigating. I\u2019ll humor them.)\r\n</i>"
+      investigating. I\u2019ll humor them.)</i>"
     - Hi.
   startOnEnable: 1
   startFromTrigger: 0
@@ -23482,7 +23478,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -24285,7 +24281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: <i>(Did Disidensiya Giyala really win people over with these things?
+      value: <i>(Did the Disidensiyang Giyala really win people over with these things?
         I feel scared just looking at it.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -25337,7 +25333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(Wow! That is massive! What is this thing?) </i>
+      value: <i>(Wow! That is massive! What is this thing?)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -25646,7 +25642,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -25888,7 +25884,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'and it may be hard to believe but <u>I come from your past</u>. '
+    - '... and it may be hard to believe but <b><u>I come from your past</u></b>. '
     - "The book in your hands was \u201Csent\u201D to the future, your time, using
       magic. "
     - If you can see this, please write back.
@@ -25899,7 +25895,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -26138,7 +26134,7 @@ MonoBehaviour:
     sentences:
     - "<i>(Used for good... In spite of everything that happened, my family always
       told me to \u201Ckeep an open mind\u201D about magic. Is this one of those
-      cases?)\r\n</i>"
+      cases?)</i>"
     - Well then, does one of those uses happen to be a solution for an <b><u>energy
       problem</u></b>?
   startOnEnable: 1
@@ -26148,7 +26144,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -27494,7 +27490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -27512,12 +27508,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: "<i>(Doesn\u2019t matter, maybe it\u2019s still there in Leizel\u2019s
+      value: "<i>(Doesn\u2019t matter, maybe it\u2019s still there in Liezel\u2019s
         time?)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
-      value: "Leizel, I found this emblem buried near the outpost. Maybe it\u2019s
+      value: "Liezel, I found this emblem buried near the outpost. Maybe it\u2019s
         there in your time?"
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -27683,9 +27679,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'How about we start with... Where you found this book?
-
-'
+    - How about we start with... Where you found this book?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -27693,7 +27687,7 @@ MonoBehaviour:
   willHideUI: 1
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
