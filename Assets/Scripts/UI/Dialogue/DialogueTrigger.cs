@@ -8,9 +8,9 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Constants")]
     [HideInInspector] private const float DEACTIVATE_TIME = 0.1f;
     [HideInInspector] private const string PROTAG_TAG = "Protag";
+    [HideInInspector] private const string DIALOGUE_HOLDER_NAME = "Dialogue Holder";
 
     [Header("References")]
-    [SerializeField] private string dialogueHolderName = "Dialogue Holder";
     [HideInInspector] private DialogueManager dialogueHolder;
     [SerializeField] private Dialogue dialogue;
 
@@ -31,14 +31,15 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private bool willHideUI;
     [SerializeField] private bool deactivateAfter = true;
     [SerializeField] private bool linksToOtherDialogue;
+    [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
+    [ShowIf("linksToOtherDialogue")] [SerializeField] private float nextDialogueTime = 0.5f;
     [SerializeField] private AnimOptions playClosingAnimation = AnimOptions.defaultClose;
     [SerializeField] private bool mainCharacterIsSpeaking = true;
+
+    [Header("GameObject Modifications")]
     [SerializeField] private GameObject[] objectsToActivateAfter;
     [SerializeField] private GameObject[] objectsToDeactivateAfter;
     [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
-    [SerializeField] private float activateObjectTime = 0.5f;
-    [ShowIf("linksToOtherDialogue")] [SerializeField] private GameObject nextDialogue;
-    [ShowIf("linksToOtherDialogue")] [SerializeField] private float nextDialogueTime = 0.5f;
 
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
@@ -63,12 +64,6 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        //if (objectsToSpawnAfter.Length != 0)
-        //{
-        //    WaitForOtherDialogue();
-        //    if (activateObjectTimer <= 0) ActivateOtherObjects();
-        //}
-
         if (dialogueHolder == null || dialogueHolder.open || !dialogueIsTriggered) return;
 
         if (objectsToActivateAfter.Length != 0 && !alreadyActivatedObjects) ActivateOtherObjects();
@@ -130,7 +125,7 @@ public class DialogueTrigger : MonoBehaviour
             closeAnim = false;
         }
 
-        if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) dialogueHolder = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
+        if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) dialogueHolder = GameObject.Find(DIALOGUE_HOLDER_NAME).GetComponent<DialogueManager>();
         if (dialogueHolder == null || !dialogueHolder.gameObject.activeInHierarchy) Debug.LogError("Dialogue Holder not Found.");
 
         dialogueHolder.playClosingAnimation = closeAnim;
@@ -214,7 +209,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void InitializeReferences()
     {
-        dialogueHolder = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
+        dialogueHolder = GameObject.Find(DIALOGUE_HOLDER_NAME).GetComponent<DialogueManager>();
     }
 
     void Focus(bool value)

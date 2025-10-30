@@ -8,11 +8,15 @@ public class InteractableObject : MonoBehaviour
 {
     [Header("Constants")]
     [HideInInspector] private string PROTAG_TAG = "Protag";
+    [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
 
     [Header("Components")]
     [HideInInspector] public SpriteRenderer spriteRenderer; // Used in PlayerInteract.cs
     [HideInInspector] public Sprite normalSprite; // Used in PlayerInteract.cs
     [SerializeField] public Sprite outlinedSprite; // Used in PlayerInteract.cs
+
+    [Header("References")]
+    [HideInInspector] private AudioSource sfxSource;
 
     [Header("Properties")]
     [SerializeField] public bool itemInteractable; // Used in PlayerInteract.cs
@@ -54,6 +58,9 @@ public class InteractableObject : MonoBehaviour
     [ShowIf("itemInteractable")][SerializeField] private GameObject[] toActivateOnInvalidInteract;
     [ShowIf("itemInteractable")][SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
 
+    [Header("On Interact")]
+    [SerializeField] private AudioClip[] soundsToPlay;
+
     [Header("Flags")]
     [HideInInspector] private bool alreadyCheckedConditional = false;
     [HideInInspector] private bool alreadyCheckedUnlock = false;
@@ -93,10 +100,13 @@ public class InteractableObject : MonoBehaviour
         normalSprite = spriteRenderer.sprite;
 
         if (outlinedSprite == null) outlinedSprite = normalSprite;
+        sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
     }
 
     public void Interact()
     {
+        foreach (AudioClip clip in soundsToPlay) sfxSource.PlayOneShot(clip);
+
         SetAll(toActivateOnInteract, true);
         SetAll(toDeactivateOnInteract, false);
 
@@ -126,7 +136,8 @@ public class InteractableObject : MonoBehaviour
 
     public void ItemInteract(bool var)
     {
-        Debug.Log("Item interact");
+        foreach (AudioClip clip in soundsToPlay) sfxSource.PlayOneShot(clip);
+
         if (!itemInteractable)
         {
             Interact();
@@ -151,7 +162,6 @@ public class InteractableObject : MonoBehaviour
         }
 
         if (willFocus) Focus(true);
-        Debug.Log("End item interract");
     }
 
     void SetAll(GameObject[] objects, bool value)
@@ -178,10 +188,7 @@ public class InteractableObject : MonoBehaviour
     void AddUnlockCheck()
     {
 
-        if (alreadyCheckedUnlock)
-        {
-            return;
-        }
+        if (alreadyCheckedUnlock) return;
 
         foreach (GameObject lockObject in objectsToUnlockCheck)
         {
@@ -252,9 +259,6 @@ public class InteractableObject : MonoBehaviour
                 // Debug.LogError("Error finding LockableObejct of " + lockObject.name);
             }
 
-        }
-        else
-        {
         }
     }
 }
