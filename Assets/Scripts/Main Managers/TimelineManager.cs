@@ -28,13 +28,15 @@ public class TimelineManager : MonoBehaviour
     [SerializeField] private GameObject pastTransition;
 
     [Header("Audio")]
+    [SerializeField] private AudioSource pastBGMSource;
+    [SerializeField] private AudioSource presentBGMSource;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip transitionSound;
 
     [Header("Flags")]
     [HideInInspector] private int currentTimeline; // 0 is Past | 1 is Present
     [HideInInspector] public bool canSwitch = true; // Used in GameManager.cs
-    [HideInInspector] public bool timelineUnlocked = false;
+    [SerializeField] public bool timelineUnlocked = false;
 
     void Start()
     {
@@ -77,6 +79,7 @@ public class TimelineManager : MonoBehaviour
         {
             pastTimeline.SetActive(false);
             presentTimeline.SetActive(true);
+            SwitchBGMSource();
 
             currentTimeline = 1;
         }
@@ -84,6 +87,8 @@ public class TimelineManager : MonoBehaviour
         {
             pastTimeline.SetActive(true);
             presentTimeline.SetActive(false);
+
+            SwitchBGMSource();
 
             currentTimeline = 0;
         }
@@ -104,6 +109,20 @@ public class TimelineManager : MonoBehaviour
             pastTransition.SetActive(false);
             presentTransition.SetActive(true);
             audioSource.PlayOneShot(transitionSound);
+        }
+    }
+
+    void SwitchBGMSource()
+    {
+        if (currentTimeline == 0)
+        {
+            pastBGMSource.volume = 0;
+            presentBGMSource.volume = 1;
+        }
+        else
+        {
+            pastBGMSource.volume = 1;
+            presentBGMSource.volume = 0;
         }
     }
 }
