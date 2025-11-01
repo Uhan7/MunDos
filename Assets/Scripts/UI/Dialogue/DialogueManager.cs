@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator StartDialogue(Dialogue dialogue)
 	{
 		InitializeDialogueValues(dialogue);
-		dialogueLog.RecieveDialogue(dialogue);
+		dialogueLog.RecieveName(dialogue);
 
 		yield return new WaitForSeconds(0.4f);
 		sentences.Clear();
@@ -106,8 +106,11 @@ public class DialogueManager : MonoBehaviour
 			.Replace("<end_all>", "")
 			.Replace("<cut>", "");
 
-		dialogueText.text = cleanSentence;
+        dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
+
+		// Gives the sentence to the log screen
+        dialogueLog.RecieveDialogue(cleanSentence);
 
 		yield return null;
 

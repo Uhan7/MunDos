@@ -13,13 +13,13 @@ public class LogScreen : MonoBehaviour
     [SerializeField] private Scrollbar scrollbar;
 
     // Animation
-    private Animator animator;
     private bool active = false;
+
+    private string speakerName = "";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -51,19 +51,19 @@ public class LogScreen : MonoBehaviour
         logScreen.SetActive(!logScreen.activeInHierarchy);
     }
 
-    public void RecieveDialogue(Dialogue dialogue)
+    public void RecieveName(Dialogue dialogue)
+    {
+        speakerName = dialogue.name.ToUpper();
+    }
+
+    public void RecieveDialogue(string sentence)
     {
         string dialogueToAdd = "";
 
-        foreach (string sentence in dialogue.sentences)
-        {
-            dialogueToAdd = "<b><u>" + dialogue.name.ToUpper() + "</b></u>\n";
+        dialogueToAdd = "<b><u>" + speakerName + "</b></u>\n";
 
-            string cleanSentence = sentence.Replace("<shake>", "").Replace("<flash>", "").Replace("<dim>", "");
-
-            dialogueToAdd = dialogueToAdd + cleanSentence;
-            fullLog.text += dialogueToAdd + "\n\n";
-        }
+        dialogueToAdd = dialogueToAdd + sentence;
+        fullLog.text += dialogueToAdd + "\n\n";
     }
 
     public void GoToMostRecentDialogue()
