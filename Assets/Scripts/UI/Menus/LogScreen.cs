@@ -12,20 +12,24 @@ public class LogScreen : MonoBehaviour
     [SerializeField] private TextMeshProUGUI fullLog;
     [SerializeField] private Scrollbar scrollbar;
 
+    // Animation
+    private bool active = false;
+
+    private string speakerName = "";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(logKey))
+        if (Input.GetKeyDown(logKey) && !active)
         {
             toggleLogScreen();
             TogglePauseBackground();
         }
-        if (Input.GetKeyDown(exitKey))
+        if (Input.GetKeyDown(exitKey) && active)
         {
             toggleLogScreen();
             TogglePauseBackground();
@@ -43,22 +47,23 @@ public class LogScreen : MonoBehaviour
 
     public void toggleLogScreen()
     {
+        active = !active;
         logScreen.SetActive(!logScreen.activeInHierarchy);
     }
 
-    public void RecieveDialogue(Dialogue dialogue)
+    public void RecieveName(Dialogue dialogue)
+    {
+        speakerName = dialogue.name.ToUpper();
+    }
+
+    public void RecieveDialogue(string sentence)
     {
         string dialogueToAdd = "";
 
-        foreach (string sentence in dialogue.sentences)
-        {
-            dialogueToAdd = "<b><u>" + dialogue.name.ToUpper() + "</b></u>\n";
+        dialogueToAdd = "<b><u>" + speakerName + "</b></u>\n";
 
-            string cleanSentence = sentence.Replace("<shake>", "").Replace("<flash>", "").Replace("<dim>", "");
-
-            dialogueToAdd = dialogueToAdd + cleanSentence;
-            fullLog.text += dialogueToAdd + "\n\n";
-        }
+        dialogueToAdd = dialogueToAdd + sentence;
+        fullLog.text += dialogueToAdd + "\n\n";
     }
 
     public void GoToMostRecentDialogue()
