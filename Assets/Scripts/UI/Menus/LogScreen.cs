@@ -12,20 +12,24 @@ public class LogScreen : MonoBehaviour
     [SerializeField] private TextMeshProUGUI fullLog;
     [SerializeField] private Scrollbar scrollbar;
 
+    // Animation
+    private Animator animator;
+    private bool active = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(logKey))
+        if (Input.GetKeyDown(logKey) && !active)
         {
             toggleLogScreen();
             TogglePauseBackground();
         }
-        if (Input.GetKeyDown(exitKey))
+        if (Input.GetKeyDown(exitKey) && active)
         {
             toggleLogScreen();
             TogglePauseBackground();
@@ -43,6 +47,7 @@ public class LogScreen : MonoBehaviour
 
     public void toggleLogScreen()
     {
+        active = !active;
         logScreen.SetActive(!logScreen.activeInHierarchy);
     }
 
