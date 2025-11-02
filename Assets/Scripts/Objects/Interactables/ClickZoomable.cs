@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 using System.Collections.Generic;
 using UnityEngine.Rendering;
 using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
 
 [System.Serializable]
 public class PasswordElement
@@ -45,6 +46,7 @@ public class ClickZoomable : MonoBehaviour
     [Header("Flags")]
     [HideInInspector] public bool hasElements = false;
     [HideInInspector] public bool leaveCondition = false;
+    [HideInInspector] public bool wrongPasswordInput = false;
 
     private Coroutine mouseClickCoroutine;
 
@@ -93,39 +95,76 @@ public class ClickZoomable : MonoBehaviour
 
             foreach (var result in results)
             {
+                
                 if (!result.gameObject.CompareTag(CLICKABLE_CANVAS))
                 {
                     continue;
                 }
-                Debug.Log("clicked UI Element " + result.gameObject.name + " current order name " + passwordOrder[orderIndex].gameObjectName); ;
+                //Debug.Log("clicked UI Element " + result.gameObject.name + " current order name " + passwordOrder[orderIndex].gameObjectName); ;
+                Debug.Log("index " + orderIndex + " , total " + passwordOrderInput.Length.ToString());
 
-                if (result.gameObject.name == passwordOrder[orderIndex].gameObjectName)
+                SwapImage(result.gameObject);
+
+                if (result.gameObject.name != passwordOrder[orderIndex].gameObjectName)
                 {
-                    orderIndex++;
-                    if (orderIndex == passwordOrder.Count)
-                    {
-                        Debug.Log("Unlocked");
-                        SetAll(toActivate, true);
-                        SetAll(toDeactivate, false);
-                        OnExit();
-                    }
+                    wrongPasswordInput = true;
+                    Debug.Log("wrong password");
                 }
                 else if (result.gameObject == exitButton)
                 {
                     //leaveCondition = true;
                     OnExit();
                 }
+
+                if (orderIndex >= passwordOrderInput.Length - 1)
+                {
+                    if (wrongPasswordInput == false)
+                    {
+                        Debug.Log("Unlocked");
+                        SetAll(toActivate, true);
+                        SetAll(toDeactivate, false);
+                        OnExit();
+                    }
+                    else
+                    {
+                        orderIndex = 0;
+                        wrongPasswordInput = false;
+                        Debug.Log("Fail. Resetting");
+                        for (int i = 0; i < passwordOrderInput.Length; i++)
+                        {
+                            SwapImage(passwordOrderInput[i]);
+                        }
+                    }  
+                }
                 else
                 {
-                    orderIndex = 0;
-                    Debug.Log("Fail. Resetting");
+                    orderIndex++;
                 }
             }
         }
     }
+
+    void SwapImage(GameObject gameObject)
+    {
+        UnityEngine.UI.Image childImage = gameObject.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>();
+        UnityEngine.UI.Image parentImage = gameObject.GetComponent<UnityEngine.UI.Image>();
+        
+        if (childImage == null || parentImage == null)
+        {
+            Debug.Log(parentImage.name + " has missing sprites");
+        }
+        else
+        {
+            Debug.Log("Swapping");
+            Sprite temp = parentImage.sprite;
+            parentImage.sprite = childImage.sprite;
+            childImage.sprite = temp;
+            
+        }
+    }
+
     public void RunPasswordPuzzle()
     {
-        Debug.Log("In Run pass func");
         if (mouseClickCoroutine == null) mouseClickCoroutine = StartCoroutine(OnMouseClick());
 
         if (leaveCondition)
@@ -136,6 +175,7 @@ public class ClickZoomable : MonoBehaviour
 
     public void OnExit() // used in InteractableObject.cs
     {
+        Debug.Log("Exit");
         StopCoroutine(mouseClickCoroutine);
         zoomEnviBackdrop.SetActive(false);
         zoomEnviImage.SetActive(false);
@@ -148,8 +188,16 @@ public class ClickZoomable : MonoBehaviour
 
     void SetAll(GameObject[] objects, bool value)
     {
+        Debug.Log("Set all ");
         if (objects == null || objects.Length == 0) return;
-        foreach (GameObject obj in objects) obj.SetActive(value);
+        foreach (GameObject obj in objects)
+        {
+            if (obj == null)
+            {
+                continue;
+            }
+            obj.SetActive(value);
+        }
     }
 
 }
