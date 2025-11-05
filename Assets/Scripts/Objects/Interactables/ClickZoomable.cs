@@ -35,12 +35,11 @@ public class ClickZoomable : MonoBehaviour
     [SerializeField] private GameObject zoomEnviBackdrop;
     [SerializeField] private GameObject zoomEnviImage;
     [SerializeField] private GameObject[] passwordOrderInput;
+    [SerializeField] private GameObject selected;
     [SerializeField] private bool deactivateAfter = true;
 
-    [SerializeField] private GameObject selected;
-    [SerializeField] private GameObject[] selectedObjects;
+    [HideInInspector] private GameObject[] selectedObjects;
     [HideInInspector] private List<PasswordElement> passwordOrder = new List<PasswordElement>();
-    
     [HideInInspector] private int orderIndex = 0;
 
     [Header("Gameobjects")]
@@ -68,12 +67,6 @@ public class ClickZoomable : MonoBehaviour
 
                 passwordIndex++;
             }
-
-            foreach(GameObject gameObject in selectedObjects)
-            {
-                UnityEngine.UI.Image image = gameObject.GetComponent<UnityEngine.UI.Image>();
-                image.raycastTarget = false;
-            }
         }
         if (selected != null)
         {
@@ -83,6 +76,12 @@ public class ClickZoomable : MonoBehaviour
             {
                 selectedObjects[selectedObjIndex] = child.gameObject;
                 selectedObjIndex++;
+            }
+            foreach (GameObject gameObject in selectedObjects)
+            {
+                UnityEngine.UI.Image image = gameObject.GetComponent<UnityEngine.UI.Image>();
+                image.raycastTarget = false;
+                gameObject.SetActive(false);
             }
         }
         else Debug.LogError($"{selected.name} is null");
