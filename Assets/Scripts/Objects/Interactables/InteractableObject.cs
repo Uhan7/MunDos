@@ -167,7 +167,11 @@ public class InteractableObject : MonoBehaviour
     void SetAll(GameObject[] objects, bool value)
     {
         if (objects == null) return;
-        foreach (GameObject obj in objects) obj.SetActive(value);
+        foreach (GameObject obj in objects)
+        {
+            if (obj == null) continue;
+            obj.SetActive(value);
+        }
     }
 
     void AddConditionalCheck()

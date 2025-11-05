@@ -130,7 +130,7 @@ public class PlayerInteract : MonoBehaviour
         if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
     }
 
-    int FindEmptySlot()
+    public int FindEmptySlot()
     {
         int index = playerItemIndex;
 
@@ -159,7 +159,38 @@ public class PlayerInteract : MonoBehaviour
 
         actualItem.PickedUp();
     }
+    public void GiveItem(Item item)
+    {
+        playerItemIndex = FindEmptySlot();
+        itemDatas[playerItemIndex] = item.GetData();
+        SetCurrentItem();
+        item.PickedUp();
+    }
+    public bool TryRemoveItem(Item item)
+    {
+        int index = DoesItemExist(item);
+        if (index <= -1) return false;
 
+        itemDatas[index] = null;
+        if (index + 1 >= itemDatas.Length - 1) return true;
+        for (int i = index + 1; i < itemDatas.Length - 1; i++)
+        {
+            if (itemDatas[index] == null) continue;
+            itemDatas[index] = itemDatas[index + 1];
+        }
+        itemDatas[itemDatas.Length - 1] = null;
+        return true;
+    }
+    public int DoesItemExist(Item item)
+    {
+        int index = 0;
+        foreach (ItemData itemData in itemDatas)
+        {
+            if (item.GetData() == itemData) return index;
+            index++;
+        }
+        return -1;
+    }
     void SetCurrentItem()
     {
         currentItemData = itemDatas[playerItemIndex];
