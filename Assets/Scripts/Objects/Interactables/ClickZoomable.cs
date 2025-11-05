@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using UnityEngine.Rendering;
 using System.Collections;
 using Microsoft.Unity.VisualStudio.Editor;
-using Unity.VisualScripting;
 
 [System.Serializable]
 public class PasswordElement
@@ -37,17 +36,12 @@ public class ClickZoomable : MonoBehaviour
     [SerializeField] private GameObject[] passwordOrderInput;
     [SerializeField] private bool deactivateAfter = true;
 
-    [SerializeField] private GameObject selected;
-    [SerializeField] private GameObject[] selectedObjects;
     [HideInInspector] private List<PasswordElement> passwordOrder = new List<PasswordElement>();
-    
     [HideInInspector] private int orderIndex = 0;
 
     [Header("Gameobjects")]
     [SerializeField] private GameObject[] toActivate;
     [SerializeField] private GameObject[] toDeactivate;
-    [SerializeField] private GameObject[] toActivateOnInvalidInteract;
-    [SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
 
     [Header("Flags")]
     [HideInInspector] public bool hasElements = false;
@@ -60,44 +54,14 @@ public class ClickZoomable : MonoBehaviour
     {
         if (passwordOrderInput != null)
         {
-            int passwordIndex = 0;
+            int index = 0;
             foreach (GameObject gameObject in passwordOrderInput)
             {
                 string name = gameObject.name;
-                passwordOrder.Add(new PasswordElement(name, passwordIndex));
-
-                
-                //if (int.TryParse(gameObject.name, out int index))
-                //{
-                //    Debug.Log($"{gameObject.name} is at {index - 1}");
-                //    if (index >= 1 && index - 1 < selectedObjects.Length)
-                //    {
-                        
-                //        selectedObjects[index - 1] = gameObject;
-                //    }
-                //    else Debug.Log($"Error, {gameObject.name} is an invalid integer");
-                //}
-                //else Debug.Log($"Error, {gameObject.name} is not an integer");
-                passwordIndex++;
-            }
-
-            foreach(GameObject gameObject in selectedObjects)
-            {
-                UnityEngine.UI.Image image = gameObject.GetComponent<UnityEngine.UI.Image>();
-                image.raycastTarget = false;
+                passwordOrder.Add(new PasswordElement(name, index));
+                index++;
             }
         }
-        if (selected != null)
-        {
-            selectedObjects = new GameObject[selected.transform.childCount];
-            int selectedObjIndex = 0;
-            foreach (Transform child in selected.transform)
-            {
-                selectedObjects[selectedObjIndex] = child.gameObject;
-                selectedObjIndex++;
-            }
-        }
-        else Debug.LogError($"{selected.name} is null");
     }
     private IEnumerator OnMouseClick()
     {
@@ -112,17 +76,6 @@ public class ClickZoomable : MonoBehaviour
         }
         
     }
-
-    public void RunPasswordPuzzle()
-    {
-        if (mouseClickCoroutine == null) mouseClickCoroutine = StartCoroutine(OnMouseClick());
-
-        if (leaveCondition)
-        {
-            OnExit();
-        }
-    }
-
 
     // Helper Functions --------------------------------------------------------
 
@@ -142,16 +95,24 @@ public class ClickZoomable : MonoBehaviour
 
             foreach (var result in results)
             {
-                if (!result.gameObject.CompareTag(CLICKABLE_CANVAS)) continue;
+                
+                if (!result.gameObject.CompareTag(CLICKABLE_CANVAS))
+                {
+                    continue;
+                }
+                //Debug.Log("clicked UI Element " + result.gameObject.name + " current order name " + passwordOrder[orderIndex].gameObjectName); ;
+                Debug.Log("index " + orderIndex + " , total " + passwordOrderInput.Length.ToString());
 
-                SetLockStateParent(result.gameObject, false);
+                SwapImage(result.gameObject);
 
                 if (result.gameObject.name != passwordOrder[orderIndex].gameObjectName)
                 {
                     wrongPasswordInput = true;
+                    Debug.Log("wrong password");
                 }
                 else if (result.gameObject == exitButton)
                 {
+                    //leaveCondition = true;
                     OnExit();
                 }
 
@@ -159,6 +120,7 @@ public class ClickZoomable : MonoBehaviour
                 {
                     if (wrongPasswordInput == false)
                     {
+                        Debug.Log("Unlocked");
                         SetAll(toActivate, true);
                         SetAll(toDeactivate, false);
                         OnExit();
@@ -167,14 +129,10 @@ public class ClickZoomable : MonoBehaviour
                     {
                         orderIndex = 0;
                         wrongPasswordInput = false;
-
-                        Debug.Log("ActiateonInvalid");
-                        SetAll(toActivateOnInvalidInteract, true);
-                        SetAll(toDeactivateOnInvalidInteract, false);
-
-                        foreach (GameObject gameObject in passwordOrderInput)
+                        Debug.Log("Fail. Resetting");
+                        for (int i = 0; i < passwordOrderInput.Length; i++)
                         {
-                            SetLockStateParent(gameObject, true);
+                            SwapImage(passwordOrderInput[i]);
                         }
                     }  
                 }
@@ -186,46 +144,51 @@ public class ClickZoomable : MonoBehaviour
         }
     }
 
-    private void SetLockStateParent(GameObject gameObject, bool value)
+    void SwapImage(GameObject gameObject)
     {
-
-        if (int.TryParse(gameObject.name, out int index))
+        UnityEngine.UI.Image childImage = gameObject.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>();
+        UnityEngine.UI.Image parentImage = gameObject.GetComponent<UnityEngine.UI.Image>();
+        
+        if (childImage == null || parentImage == null)
         {
-            int newIndex = index - 1;
-
-            if (selectedObjects[newIndex] !=  null) 
-            {
-                Set(selectedObjects[newIndex], !value);
-            }
-            else Debug.LogError($"selected object {selectedObjects[newIndex].name} is null");
+            Debug.Log(parentImage.name + " has missing sprites");
         }
-        Set(gameObject, value);
-
-        //if (int.TryParse(gameObject.name, out int index))
-        //{
-        //    if (selectedObjects.ContainsKey(index - 1))
-        //    {
-        //        UnityEngine.UI.Image image = selectedObjects[index - 1].GetComponent<UnityEngine.UI.Image>();
-        //        image.enabled = !value;
-        //        image.raycastTarget = !value;
-
-        //        Debug.Log($"{selectedObjects[index - 1].name} index {index - 1} has value {selectedObjects[index - 1].active}");
-        //    }
-        //    else
-        //    {
-        //        Debug.LogError("Error finding object at index {index - 1}");
-        //    }
-        //}
-        //UnityEngine.UI.Image image = gameObject.GetComponent<UnityEngine.UI.Image>();
-        //image.enabled = value;
-        //image.raycastTarget = value;
-        //UnityEngine.UI.Button button = gameObject.GetComponent<Button>();
-        //button.interactable = value;
-
+        else
+        {
+            Debug.Log("Swapping");
+            Sprite temp = parentImage.sprite;
+            parentImage.sprite = childImage.sprite;
+            childImage.sprite = temp;
+            
+        }
     }
-    
+
+    public void RunPasswordPuzzle()
+    {
+        if (mouseClickCoroutine == null) mouseClickCoroutine = StartCoroutine(OnMouseClick());
+
+        if (leaveCondition)
+        {
+            OnExit();
+        }
+    }
+
+    public void OnExit() // used in InteractableObject.cs
+    {
+        Debug.Log("Exit");
+        StopCoroutine(mouseClickCoroutine);
+        zoomEnviBackdrop.SetActive(false);
+        zoomEnviImage.SetActive(false);
+        leaveCondition = false;
+        if (deactivateAfter)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
     void SetAll(GameObject[] objects, bool value)
     {
+        Debug.Log("Set all ");
         if (objects == null || objects.Length == 0) return;
         foreach (GameObject obj in objects)
         {
@@ -236,21 +199,5 @@ public class ClickZoomable : MonoBehaviour
             obj.SetActive(value);
         }
     }
-    void Set(GameObject gameObject, bool value)
-    {
-        if (gameObject == null) return;
-        gameObject.SetActive(value);
-    }
 
-    private void OnExit() // used in InteractableObject.cs
-    {
-        StopCoroutine(mouseClickCoroutine);
-        zoomEnviBackdrop.SetActive(false);
-        zoomEnviImage.SetActive(false);
-        leaveCondition = false;
-        if (deactivateAfter)
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
 }
