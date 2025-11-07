@@ -24,31 +24,49 @@ public class PlayeritemsManager : MonoBehaviour
     {
         // TEMP ---
 
-        if (pastProtagScript.gameObject.activeInHierarchy) {
-            for (int i = 0; i < pastProtagScript.itemDatas.Length; i++)
-            {
-                if (pastProtagScript.itemDatas[i].itemName != "") pastPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = pastProtagScript.itemDatas[i].itemSprite;
+        //if (pastProtagScript.gameObject.activeInHierarchy) {
+        //    for (int i = 0; i < pastProtagScript.itemDatas.Length; i++)
+        //    {
+        //        if (pastProtagScript.itemDatas[i].itemName != "") pastPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = pastProtagScript.itemDatas[i].itemSprite;
 
-                if (pastProtagScript.playerItemIndex == i) pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
-                else pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
-            }
-        }
+        //        if (pastProtagScript.playerItemIndex == i) pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+        //        else pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
+        //    }
+        //}
 
-        if (presentProtagScript.gameObject.activeInHierarchy) {
-            for (int i = 0; i < presentProtagScript.itemDatas.Length; i++)
-            {
-                if (presentProtagScript.itemDatas[i].itemName != "") presentPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = presentProtagScript.itemDatas[i].itemSprite;
+        //if (presentProtagScript.gameObject.activeInHierarchy) {
+        //    for (int i = 0; i < presentProtagScript.itemDatas.Length; i++)
+        //    {
+        //        if (presentProtagScript.itemDatas[i].itemName != "") presentPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = presentProtagScript.itemDatas[i].itemSprite;
 
-                if (presentProtagScript.playerItemIndex == i) presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
-                else presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
-            }
-        }
+        //        if (presentProtagScript.playerItemIndex == i) presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+        //        else presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
+        //    }
+        //}
+
+        if (pastProtagScript.GetWillUpdate()) CheckInventorySlots(pastProtagScript, pastPlayeritemSlots);
+        if (presentProtagScript.GetWillUpdate()) CheckInventorySlots(presentProtagScript, presentPlayeritemSlots);
 
         // TEMP ---
     }
 
+
+    
     // Helper Functions --------------------------------------------------------
 
+    void CheckInventorySlots(PlayerInteract player, GameObject[] itemSlots)
+    {
+        Debug.Log("updaed");
+        if (!player.gameObject.activeInHierarchy) return;
+        for (int i = 0; i < player.itemDatas.Length; i++)
+        {
+            if (player.itemDatas[i].itemName != "") itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
+
+            if (player.playerItemIndex == i) itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+            else itemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
+        }
+        player.WillUpdate(false);
+    }
     void InitialValues()
     {
         //foreach (GameObject slot in pastPlayeritemSlots) slot.GetComponent<InventorySlot>().IsSelected(false); ;

@@ -26,6 +26,9 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] public ItemData[] itemDatas; // Used in PlayeritemsManager
     [HideInInspector] public int playerItemIndex; // Used in PlayeritemsManager
 
+    [SerializeField] private bool willUpdate;
+    [SerializeField] public bool isEmpty;
+
     private void Awake()
     {
         moveScript = GetComponent<PlayerMove>();
@@ -35,6 +38,7 @@ public class PlayerInteract : MonoBehaviour
     {
         playerItemIndex = 0;
         currentItemData = itemDatas[playerItemIndex];
+
     }
 
     private void Update()
@@ -43,6 +47,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if (nearbyEnvi != null) Interact();
             if (nearbyItem != null) PickupItem();
+            willUpdate = true;
         }
 
         if (Input.GetKeyDown(previousItemKey))
@@ -99,6 +104,14 @@ public class PlayerInteract : MonoBehaviour
 
         if (col.gameObject == nearbyEnvi) nearbyEnvi = null;
         if (col.gameObject == nearbyItem) nearbyItem = null;
+    }
+    public void WillUpdate(bool value)
+    {
+        willUpdate = value;
+    }
+    public bool GetWillUpdate()
+    {
+        return willUpdate;
     }
 
     // Helper Functions --------------------------------------------------------
@@ -222,7 +235,7 @@ public class PlayerInteract : MonoBehaviour
 
         SetCurrentItem();
     }
-
+    
     void SetInteractableObjectOutline(GameObject obj, bool var)
     {
         if (!moveScript.canInput) return;
@@ -242,4 +255,5 @@ public class PlayerInteract : MonoBehaviour
             else obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
     }
+
 }
