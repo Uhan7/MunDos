@@ -93,7 +93,7 @@ public class TimelineManager : MonoBehaviour
         {
             pastTimeline.SetActive(false);
             presentTimeline.SetActive(true);
-            SwitchBGMSource();
+            StartCoroutine(FadeBGM(pastBGMSource, presentBGMSource, 2));
 
             currentTimeline = 1;
         }
@@ -102,7 +102,7 @@ public class TimelineManager : MonoBehaviour
             pastTimeline.SetActive(true);
             presentTimeline.SetActive(false);
 
-            SwitchBGMSource();
+            StartCoroutine(FadeBGM(presentBGMSource, pastBGMSource, 2));
 
             currentTimeline = 0;
         }
@@ -126,17 +126,24 @@ public class TimelineManager : MonoBehaviour
         }
     }
 
-    void SwitchBGMSource()
+    IEnumerator FadeBGM(AudioSource fadeOut, AudioSource fadeIn, float fadeDuration)
     {
-        if (currentTimeline == 0)
+        float time = 0f;
+        float startVolOut = fadeOut.volume;
+        float startVolIn = fadeIn.volume;
+
+        while (time < fadeDuration)
         {
-            pastBGMSource.volume = 0;
-            presentBGMSource.volume = SettingsInfo.musicVol;
+            time += Time.deltaTime;
+            float t = time / fadeDuration;
+
+            fadeOut.volume = Mathf.Lerp(startVolOut, 0f, t);
+            fadeIn.volume = Mathf.Lerp(startVolIn, SettingsInfo.musicVol, t);
+
+            yield return null;
         }
-        else
-        {
-            pastBGMSource.volume = SettingsInfo.musicVol;
-            presentBGMSource.volume = 0;
-        }
+
+        fadeOut.volume = 0f;
+        fadeIn.volume = SettingsInfo.musicVol;
     }
 }
