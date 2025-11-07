@@ -30,7 +30,8 @@ public class TimelineManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource pastBGMSource;
     [SerializeField] private AudioSource presentBGMSource;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource dialogueSFXSource;
     [SerializeField] private AudioClip transitionSound;
 
     [Header("Flags")]
@@ -47,6 +48,7 @@ public class TimelineManager : MonoBehaviour
     void Update()
     {
         TimerUpdate();
+        SettingsUpdate();
 
         if (!canSwitch || !timelineUnlocked) return;
 
@@ -62,6 +64,18 @@ public class TimelineManager : MonoBehaviour
     }
 
     // Update Functions --------------------------------------------------------
+
+    void SettingsUpdate()
+    {
+        pastBGMSource.volume = (currentTimeline == 0) ? SettingsInfo.musicVol : 0;
+        presentBGMSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
+        sfxSource.volume = SettingsInfo.SFXVol;
+        dialogueSFXSource.volume = SettingsInfo.dialogueVol;
+
+        // consider timeline stuff
+
+        // consider here the fade in stuff
+    }
 
     void TimerUpdate()
     {
@@ -102,13 +116,13 @@ public class TimelineManager : MonoBehaviour
         {
             pastTransition.SetActive(true);
             presentTransition.SetActive(false);
-            audioSource.PlayOneShot(transitionSound);
+            sfxSource.PlayOneShot(transitionSound);
         }
         else
         {
             pastTransition.SetActive(false);
             presentTransition.SetActive(true);
-            audioSource.PlayOneShot(transitionSound);
+            sfxSource.PlayOneShot(transitionSound);
         }
     }
 
@@ -117,11 +131,11 @@ public class TimelineManager : MonoBehaviour
         if (currentTimeline == 0)
         {
             pastBGMSource.volume = 0;
-            presentBGMSource.volume = 1;
+            presentBGMSource.volume = SettingsInfo.musicVol;
         }
         else
         {
-            pastBGMSource.volume = 1;
+            pastBGMSource.volume = SettingsInfo.musicVol;
             presentBGMSource.volume = 0;
         }
     }

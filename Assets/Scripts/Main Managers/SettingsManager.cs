@@ -22,19 +22,15 @@ public class SettingsManager : MonoBehaviour
     [HideIf("isTitleScreen")] [SerializeField] UnityEngine.UI.Slider presentMusicVol;
     [HideIf("isTitleScreen")] [SerializeField] UnityEngine.UI.Slider presentSFXVol;
     [HideIf("isTitleScreen")] [SerializeField] UnityEngine.UI.Slider presentDialogueVol;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         Sync();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void setMusicVol(float vol)
     {
+        print("called");
         SettingsInfo.musicVol = vol;
         if (!isTitleScreen)
         {

@@ -13,7 +13,11 @@ public class AudioSyncer : MonoBehaviour
 
     private AudioSource audioSource;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Start()
     {
         switch (audioType)
@@ -28,11 +32,5 @@ public class AudioSyncer : MonoBehaviour
                 audioSource.volume = SettingsInfo.dialogueVol;
                 break;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
