@@ -7,10 +7,13 @@ public class PadlockButton : MonoBehaviour
     [Header("References")]
     [HideInInspector] private Image imageComponent;
     [HideInInspector] private Padlock padlock;
+    [SerializeField] private ClickZoomable clickZoomable;
 
     [Header("Properties")]
     [SerializeField] private Sprite[] buttonSprites;
     [HideInInspector] public int currentIndex = 0; // Used in Padlock.cs
+
+
 
     private void Awake()
     {
@@ -32,6 +35,23 @@ public class PadlockButton : MonoBehaviour
         currentIndex = (currentIndex + 1) % buttonSprites.Length;
         imageComponent.sprite = buttonSprites[currentIndex];
 
-        padlock.CheckCombination();
+        if (padlock != null)
+        {
+            padlock.CheckCombination();
+        }
+    }
+
+    public void PressButton()
+    {
+        UnityEngine.UI.Button button = this.gameObject.GetComponent<UnityEngine.UI.Button>();
+        button.interactable = false;
+        if (clickZoomable != null)
+        {
+            clickZoomable.CheckCombination(this.gameObject);
+        }
+        else
+        {
+            Debug.LogError($"clickzoom of {this.gameObject.name} is null");
+        }
     }
 }

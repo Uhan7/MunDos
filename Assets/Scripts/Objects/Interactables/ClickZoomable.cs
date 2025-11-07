@@ -38,7 +38,6 @@ public class ClickZoomable : MonoBehaviour
     [SerializeField] private GameObject selected;
     [SerializeField] private bool deactivateAfter = true;
 
-    [HideInInspector] private GameObject[] selectedObjects;
     [HideInInspector] private List<PasswordElement> passwordOrder = new List<PasswordElement>();
     [HideInInspector] private int orderIndex = 0;
 
@@ -57,6 +56,7 @@ public class ClickZoomable : MonoBehaviour
 
     private void Start()
     {
+        orderIndex = 0;
         if (passwordOrderInput != null)
         {
             int passwordIndex = 0;
@@ -68,126 +68,125 @@ public class ClickZoomable : MonoBehaviour
                 passwordIndex++;
             }
         }
-        if (selected != null)
-        {
-            selectedObjects = new GameObject[selected.transform.childCount];
-            int selectedObjIndex = 0;
-            foreach (Transform child in selected.transform)
-            {
-                selectedObjects[selectedObjIndex] = child.gameObject;
-                selectedObjIndex++;
-            }
-            foreach (GameObject gameObject in selectedObjects)
-            {
-                UnityEngine.UI.Image image = gameObject.GetComponent<UnityEngine.UI.Image>();
-                image.raycastTarget = false;
-                gameObject.SetActive(false);
-            }
-        }
+
         else Debug.LogError($"{selected.name} is null");
     }
-    private IEnumerator OnMouseClick()
-    {
-        while (leaveCondition == false)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                HandleClick();
-            }
+    //private IEnumerator OnMouseClick()
+    //{
+    //    while (leaveCondition == false)
+    //    {
+    //        if (Input.GetMouseButtonDown(0))
+    //        {
+    //            HandleClick();
+    //        }
 
-            yield return null;
-        }
+    //        yield return null;
+    //    }
         
-    }
+    //}
 
-    public void RunPasswordPuzzle()
-    {
-        if (mouseClickCoroutine == null) mouseClickCoroutine = StartCoroutine(OnMouseClick());
+    //public void RunPasswordPuzzle()
+    //{
+    //    if (mouseClickCoroutine == null) mouseClickCoroutine = StartCoroutine(OnMouseClick());
 
-        if (leaveCondition)
-        {
-            OnExit();
-        }
-    }
+    //    if (leaveCondition)
+    //    {
+    //        OnExit();
+    //    }
+    //}
 
 
     // Helper Functions --------------------------------------------------------
 
-    private void HandleClick()
+    //private void HandleClick()
+    //{
+    //    PointerEventData pointerData = new PointerEventData(EventSystem.current)
+    //    {
+    //        position = Input.mousePosition
+    //    };
+    //    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+    //    var results = new System.Collections.Generic.List<RaycastResult>();
+    //    EventSystem.current.RaycastAll(pointerData, results);
+    //    if (results.Count > 0)
+    //    {
+    //        foreach (var result in results)
+    //        {
+    //            if (result.gameObject.name != passwordOrder[orderIndex].gameObjectName)
+    //            {
+    //                wrongPasswordInput = true;
+    //            }
+    //            //else if (result.gameObject == exitButton)
+    //            {
+    //                OnExit();
+    //            }
+    //        }
+    //    }
+    //}
+
+    public void CheckCombination(GameObject gameObject)
     {
-        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        Debug.Log($"CC index {orderIndex}");
+        if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
         {
-            position = Input.mousePosition
-        };
+            wrongPasswordInput = true;
+        }
 
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        var results = new System.Collections.Generic.List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerData, results);
-
-        if (results.Count > 0)
+        if (orderIndex >= passwordOrderInput.Length - 1)
         {
-
-            foreach (var result in results)
+           
+            if (wrongPasswordInput == false)
             {
-                if (!result.gameObject.CompareTag(CLICKABLE_CANVAS)) continue;
+                Debug.Log($"solved");
 
-                SetLockStateParent(result.gameObject, false);
+                SetAll(toActivate, true);
+                SetAll(toDeactivate, false);
+                OnExit();
+            }
+            else
+            {
+                Debug.Log($"resetting");
 
-                if (result.gameObject.name != passwordOrder[orderIndex].gameObjectName)
-                {
-                    wrongPasswordInput = true;
-                }
-                else if (result.gameObject == exitButton)
-                {
-                    OnExit();
-                }
+                orderIndex = 0;
+                wrongPasswordInput = false;
 
-                if (orderIndex >= passwordOrderInput.Length - 1)
-                {
-                    if (wrongPasswordInput == false)
-                    {
-                        SetAll(toActivate, true);
-                        SetAll(toDeactivate, false);
-                        OnExit();
-                    }
-                    else
-                    {
-                        orderIndex = 0;
-                        wrongPasswordInput = false;
-
-                        SetAll(toActivateOnInvalidInteract, true);
-                        SetAll(toDeactivateOnInvalidInteract, false);
-
-                        foreach (GameObject gameObject in passwordOrderInput)
-                        {
-                            SetLockStateParent(gameObject, true);
-                        }
-                    }  
-                }
-                else
-                {
-                    orderIndex++;
-                }
+                SetAll(toActivateOnInvalidInteract, true);
+                SetAll(toDeactivateOnInvalidInteract, false);
+                ResetButtons();
             }
         }
-    }
-
-    private void SetLockStateParent(GameObject gameObject, bool value)
-    {
-
-        if (int.TryParse(gameObject.name, out int index))
+        else
         {
-            int newIndex = index - 1;
-
-            if (selectedObjects[newIndex] !=  null) 
-            {
-                Set(selectedObjects[newIndex], !value);
-            }
-            else Debug.LogError($"selected object {selectedObjects[newIndex].name} is null");
+            orderIndex++;
         }
-        Set(gameObject, value);
+
     }
-    
+
+    private void ResetButtons()
+    {
+        foreach(var obj in passwordOrderInput)
+        {
+            UnityEngine.UI.Button button = obj.GetComponent<UnityEngine.UI.Button>();
+            Debug.Log($"resetting button {button.name}");
+
+            button.interactable = true;
+        }
+    }
+        //private void SetLockStateParent(GameObject gameObject, bool value)
+        //{
+
+        //    if (int.TryParse(gameObject.name, out int index))
+        //    {
+        //        int newIndex = index - 1;
+
+        //        if (selectedObjects[newIndex] !=  null) 
+        //        {
+        //            Set(selectedObjects[newIndex], !value);
+        //        }
+        //        else Debug.LogError($"selected object {selectedObjects[newIndex].name} is null");
+        //    }
+        //    Set(gameObject, value);
+        //}
+
     void SetAll(GameObject[] objects, bool value)
     {
         if (objects == null || objects.Length == 0) return;
@@ -200,14 +199,15 @@ public class ClickZoomable : MonoBehaviour
             obj.SetActive(value);
         }
     }
-    void Set(GameObject gameObject, bool value)
-    {
-        if (gameObject == null) return;
-        gameObject.SetActive(value);
-    }
+    //void Set(GameObject gameObject, bool value)
+    //{
+    //    if (gameObject == null) return;
+    //    gameObject.SetActive(value);
+    //}
 
     private void OnExit()
     {
+        orderIndex = 0;
         StopCoroutine(mouseClickCoroutine);
         zoomEnviBackdrop.SetActive(false);
         zoomEnviImage.SetActive(false);
