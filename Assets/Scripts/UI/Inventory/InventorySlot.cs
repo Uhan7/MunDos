@@ -14,8 +14,8 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] public Sprite defaultSprite;
     [SerializeField] public Sprite selectedSprite;
 
-    [SerializeField] public bool isClicked;
-    [SerializeField] public bool isZoomed;
+    [HideInInspector] public bool isClicked;
+    [HideInInspector] public bool isZoomed;
     [SerializeField] public GameObject zoomObject;
 
     private void Awake()
@@ -51,7 +51,6 @@ public class InventorySlot : MonoBehaviour
         isClicked = true;
         if (!isZoomed && isClicked)
         {
-            Debug.Log("not zoom and click");
             //UnityEngine.UI.Image image =  zoomCanvas.transform.GetChild(0).transform.GetChild(1).GetChild(0).GetComponent<UnityEngine.UI.Image>();
             zoomObject.GetComponent<UnityEngine.UI.Image>().sprite = this.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite;
             zoomObject.SetActive(true);
@@ -59,14 +58,11 @@ public class InventorySlot : MonoBehaviour
         }
         else if (isZoomed && isClicked)
         {
-            Debug.Log("zoom and click");
             zoomObject.SetActive(false);
             isZoomed = false;
         }
         else
         {
-            Debug.Log("else");
-            
             player.SelectItem(value);
         }
             

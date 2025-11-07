@@ -18,7 +18,7 @@ public class Item : MonoBehaviour
         if (copy.itemName == "") copy.itemName = gameObject.name;
 
         if (copy.itemSprite == null) copy.itemSprite = GetComponent<SpriteRenderer>().sprite;
-        Debug.Log($"Item>Getting Data name {copy.itemName}");
+        //Debug.Log($"Item>Getting Data name {copy.itemName}");
         return copy;
     }
 

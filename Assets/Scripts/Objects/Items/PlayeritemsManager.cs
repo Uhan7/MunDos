@@ -56,12 +56,13 @@ public class PlayeritemsManager : MonoBehaviour
 
     void CheckInventorySlots(PlayerInteract player, GameObject[] itemSlots)
     {
-        Debug.Log("updaed");
         if (!player.gameObject.activeInHierarchy) return;
         for (int i = 0; i < player.itemDatas.Length; i++)
         {
-            if (player.itemDatas[i].itemName != "") itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
-
+            if (player.itemDatas[i].itemName != "")
+            {
+                itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
+            }
             if (player.playerItemIndex == i) itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
             else itemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
         }
