@@ -71,10 +71,6 @@ public class TimelineManager : MonoBehaviour
         presentBGMSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
         sfxSource.volume = SettingsInfo.SFXVol;
         dialogueSFXSource.volume = SettingsInfo.dialogueVol;
-
-        // consider timeline stuff
-
-        // consider here the fade in stuff
     }
 
     void TimerUpdate()

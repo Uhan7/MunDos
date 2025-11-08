@@ -10,8 +10,8 @@ public class AudioSyncer : MonoBehaviour
     };
 
     [SerializeField] private AUDIO_TYPE audioType;
-
-    private AudioSource audioSource;
+    [HideInInspector] private AudioSource audioSource;
+    [SerializeField] private bool alwaysChangeOnSettings = false;
 
     private void Awake()
     {
@@ -33,4 +33,10 @@ public class AudioSyncer : MonoBehaviour
                 break;
         }
     }
+
+    private void Update()
+    {
+        if (alwaysChangeOnSettings) audioSource.volume = SettingsInfo.musicVol;
+    }
+
 }
