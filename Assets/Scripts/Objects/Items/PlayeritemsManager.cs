@@ -57,7 +57,7 @@ public class PlayeritemsManager : MonoBehaviour
     void CheckInventorySlots(PlayerInteract player, GameObject[] itemSlots)
     {
         if (!player.gameObject.activeInHierarchy) return;
-        for (int i = 0; i < player.itemDatas.Length; i++)
+        for (int i = 0; i < player.itemDatas.Length - 1; i++)
         {
             if (player.itemDatas[i].itemName != "")
             {

@@ -71,7 +71,7 @@ public class DialogueTrigger : MonoBehaviour
 
         if (conditionalObjectsToCheckAfter.Length != 0 && !alreadyCheckedConditional) AddConditionalCheck();
 
-        if (nextDialogue != null)
+        if (linksToOtherDialogue && nextDialogue != null)
         {
             WaitForOtherDialogue();
 

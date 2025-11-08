@@ -81,7 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 620356551
-  m_SortingLayer: 12
+  m_SortingLayer: 13
   m_SortingOrder: 0
   m_Sprite: {fileID: 2765948450344116620, guid: 1d6ac5684cdb94433a6b7356f75f74a2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d17d904cb414612bbb89bd3990647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventorySlots: {fileID: 0}
   switchTimelineKey: 9
   interactKey: 102
   otherInteractKey: 101
@@ -236,7 +237,12 @@ MonoBehaviour:
   - itemName: 
     itemSprite: {fileID: 0}
     objectsToInteractWith: []
+  - itemName: 
+    itemSprite: {fileID: 0}
+    objectsToInteractWith: []
   playerItemIndex: 0
+  willUpdate: 0
+  isEmpty: 0
 --- !u!1 &3636424146886701031
 GameObject:
   m_ObjectHideFlags: 0

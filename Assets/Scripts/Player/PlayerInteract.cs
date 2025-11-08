@@ -1,9 +1,11 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class PlayerInteract : MonoBehaviour
 {
     [Header("References")]
-    private PlayerMove moveScript;
+    [HideInInspector] private PlayerMove moveScript;
+    [SerializeField] private GameObject inventorySlots;
 
     [Header("Key Inputs")]
     [SerializeField] private KeyCode switchTimelineKey;
@@ -23,7 +25,7 @@ public class PlayerInteract : MonoBehaviour
 
     [Header("Playeritems Data")]
     [HideInInspector] public ItemData currentItemData; // Used in PlayeritemsManager
-    [HideInInspector] public ItemData[] itemDatas; // Used in PlayeritemsManager
+    [ReadOnly] public ItemData[] itemDatas; // Used in PlayeritemsManager
     [HideInInspector] public int playerItemIndex; // Used in PlayeritemsManager
 
     [SerializeField] private bool willUpdate;
@@ -50,14 +52,15 @@ public class PlayerInteract : MonoBehaviour
             willUpdate = true;
         }
 
-        if (Input.GetKeyDown(previousItemKey))
-        {
-            SelectItem("PREVIOUS");
-        }
+        /*
+        if (Input.GetKeyDown(previousItemKey)) SelectItem("PREVIOUS");
+        if (Input.GetKeyDown(nextItemKey)) SelectItem("NEXT");
+        */
 
-        if (Input.GetKeyDown(nextItemKey))
+        if (!inventorySlots.activeInHierarchy)
         {
-            SelectItem("NEXT");
+            SelectItem(5);
+            return;
         }
 
         if (Input.GetKeyDown(item1Key)) SelectItem(0);
@@ -147,7 +150,7 @@ public class PlayerInteract : MonoBehaviour
     {
         int index = playerItemIndex;
 
-        for (int i = 0; i < itemDatas.Length; i++)
+        for (int i = 0; i < itemDatas.Length - 1; i++)
         {
             if (itemDatas[index].itemName != "")
             {
@@ -165,6 +168,7 @@ public class PlayerInteract : MonoBehaviour
 
         Item actualItem = nearbyItem.GetComponent<Item>();
 
+        playerItemIndex = 0;
         playerItemIndex = FindEmptySlot();
 
         itemDatas[playerItemIndex] = actualItem.GetData();
