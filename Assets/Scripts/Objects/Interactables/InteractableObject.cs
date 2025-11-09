@@ -29,7 +29,6 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Extra Properties")]
     [SerializeField] private bool isTeleporter;
-    [SerializeField] private bool isOil;
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateOnInteract;
@@ -120,7 +119,6 @@ public class InteractableObject : MonoBehaviour
         if (objectsToLockCheck != null && !lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
 
         if (isTeleporter) GetTeleporter();
-        if (isOil) GetComponent<Oil>().Interact();
 
         if (willFocus) Focus(true);
     }

@@ -9,25 +9,12 @@ public class Oil : MonoBehaviour
     [HideIf("isFromPast")] [SerializeField] private float originalSalinity;
     [HideIf("isFromPast")] [SerializeField] private float pH;
     [HideIf("isFromPast")] [SerializeField] private float salinity;
-    [HideIf("isFromPast")] [SerializeField] private Oil pastTimelineOil;
     [ShowIf("isFromPast")] [SerializeField] private Oil presentTimelineOil;
-
-    [Header("Normal Interact")]
-    [SerializeField] private GameObject DZ;
-    [SerializeField] [TextArea(3, 10)] private string originalDZSentence = "A pH of <oil_ph> and Salinity of <oil_salinity>.";
-    [HideInInspector] private string DZSentence;
 
     [Header("Item Interact")]
     [SerializeField] private GameObject itemDZ;
     [SerializeField] [TextArea(3, 10)] private string originalItemDZSentence = "It changed to a pH of <oil_ph> and Salinity of <oil_salinity>.";
     [HideInInspector] private string itemDZSentence;
-
-    public void Interact()
-    {
-        DZSentence = originalDZSentence.Replace("<oil_ph>", pH.ToString()).Replace("<oil_salinity>", salinity.ToString());
-        DZ.GetComponent<DialogueTrigger>().dialogue.sentences[0] = DZSentence;
-        DZ.SetActive(true);
-    }
 
     public void ItemInteract(string itemName)
     {
@@ -68,8 +55,8 @@ public class Oil : MonoBehaviour
 
         pH = Mathf.Round(pH * 100) / 100;
         salinity = Mathf.Round(salinity * 100) / 100;
-        presentTimelineOil.pH = Mathf.Round(presentTimelineOil.pH * 100) / 100;
-        presentTimelineOil.salinity = Mathf.Round(presentTimelineOil.salinity * 100) / 100;
+        if (presentTimelineOil != null) presentTimelineOil.pH = Mathf.Round(presentTimelineOil.pH * 100) / 100;
+        if (presentTimelineOil != null) presentTimelineOil.salinity = Mathf.Round(presentTimelineOil.salinity * 100) / 100;
 
         itemDZSentence = originalItemDZSentence.Replace("<oil_ph>", pH.ToString()).Replace("<oil_salinity>", salinity.ToString());
         itemDZ.GetComponent<DialogueTrigger>().dialogue.sentences[0] = itemDZSentence;

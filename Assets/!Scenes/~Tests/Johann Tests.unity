@@ -124,11 +124,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1920871933}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &47970403 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6578602712689706575, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-  m_PrefabInstance: {fileID: 164745502}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &113081578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,10 +135,6 @@ PrefabInstance:
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: isOil
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: toActivateOnInteract.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6578602712689706575, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
@@ -218,11 +209,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 930856238254688421, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 113081578}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &113081581 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6578602712689706575, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-  m_PrefabInstance: {fileID: 113081578}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &113081582 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -245,10 +231,7 @@ MonoBehaviour:
   originalSalinity: 234
   pH: 67
   salinity: 69
-  pastTimelineOil: {fileID: 0}
   presentTimelineOil: {fileID: 1217131720}
-  DZ: {fileID: 113081581}
-  originalDZSentence: hm ok cool
   itemDZ: {fileID: 1789898137}
   originalItemDZSentence: this shud help santi methinks
 --- !u!4 &138623171 stripped
@@ -420,6 +403,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8885746645249451939, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1524860247}
+    - targetCorrespondingSourceObject: {fileID: 8885746645249451939, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1731732094}
     - targetCorrespondingSourceObject: {fileID: 8377080888093370049, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1217131719}
@@ -452,10 +438,6 @@ PrefabInstance:
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: isOil
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      propertyPath: toActivateOnInteract.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6578602712689706575, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
@@ -507,9 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: '
-
-'
+      value: adsfadsfasdf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -629,10 +609,7 @@ MonoBehaviour:
   originalSalinity: 234
   pH: 67
   salinity: 69
-  pastTimelineOil: {fileID: 0}
   presentTimelineOil: {fileID: 0}
-  DZ: {fileID: 47970403}
-  originalDZSentence: <oil_ph> and <oil_salinity>
   itemDZ: {fileID: 31503420}
   originalItemDZSentence: It changed to a pH of <oil_ph> and Salinity of <oil_salinity>.
 --- !u!1001 &1330337441
@@ -721,6 +698,14 @@ PrefabInstance:
       propertyPath: 'data.objectsToInteractWith.Array.data[0]'
       value: 
       objectReference: {fileID: 113081582}
+    - target: {fileID: 2155128010626252820, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.6899996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155128010626252820, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2502172
+      objectReference: {fileID: 0}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: Hibiscus Petal
@@ -778,6 +763,88 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
   m_PrefabInstance: {fileID: 1524860246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1731732093
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2133473478}
+    m_Modifications:
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: data.objectsToInteractWith.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155128010626252820, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.6899996
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155128010626252820, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2502172
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_Name
+      value: sdfigfadsjfkbg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.539999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012634396522584475, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1371664383153160446, guid: a1b08fc016a0f4746ab4083edefdb917, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+--- !u!4 &1731732094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+  m_PrefabInstance: {fileID: 1731732093}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1789898135
 PrefabInstance:
