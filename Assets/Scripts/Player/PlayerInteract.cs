@@ -1,5 +1,6 @@
-using UnityEngine;
 using NaughtyAttributes;
+using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] public bool isEmpty;
     [HideInInspector] private bool hasCheckedInventory;
 
+    [HideInInspector] public bool HasActiveItem;
+    [HideInInspector] public bool isClicked;
+    [HideInInspector] public bool isZoomed;
+    [HideInInspector] public int activeObjectIndex;
+
     private void Awake()
     {
         moveScript = GetComponent<PlayerMove>();
@@ -41,6 +47,7 @@ public class PlayerInteract : MonoBehaviour
     private void Start()
     {
         playerItemIndex = 0;
+        activeObjectIndex = -1;
         currentItemData = itemDatas[playerItemIndex];
         hasCheckedInventory = false;
     }
@@ -57,17 +64,17 @@ public class PlayerInteract : MonoBehaviour
         {
             hasCheckedInventory = false;
             if (Input.GetKeyDown(item1Key)) SelectValidItem(0);
-            if (Input.GetKeyDown(item2Key)) SelectValidItem(1);
-            if (Input.GetKeyDown(item3Key)) SelectValidItem(2);
-            if (Input.GetKeyDown(item4Key)) SelectValidItem(3);
-            if (Input.GetKeyDown(item5Key)) SelectValidItem(4);
+            else if (Input.GetKeyDown(item2Key)) SelectValidItem(1);
+            else if (Input.GetKeyDown(item3Key)) SelectValidItem(2);
+            else if (Input.GetKeyDown(item4Key)) SelectValidItem(3);
+            else if (Input.GetKeyDown(item5Key)) SelectValidItem(4);
         }
 
         else if (!inventorySlots.activeInHierarchy && !hasCheckedInventory)
         {
             SelectItem(5);
             hasCheckedInventory = true;
-
+            isZoomed = isClicked = false;
             return;
         }
 
@@ -122,6 +129,53 @@ public class PlayerInteract : MonoBehaviour
     public bool GetWillUpdate()
     {
         return willUpdate;
+    }
+
+    public void ToggleStates(int value)
+    {
+        //value + 1 to offset Background
+        InventorySlot inventorySlot = inventorySlots.transform.GetChild(value + 1).GetComponent<InventorySlot>();
+        if (inventorySlot == null) Debug.LogError($"{this.gameObject.name}'s inventoryslot not correctly set");
+        if (!SelectValidItem(value)) return;
+
+        //Select unselected item
+        if (!isZoomed && !isClicked)
+        {
+            isClicked = true;
+            activeObjectIndex = value;
+            WillUpdate(true);
+        }
+
+        //Zoom in on valid selected item
+        else if (!isZoomed && isClicked && value == activeObjectIndex)// Zoom in on valid item
+        {
+            inventorySlot.SetZoomObject();
+            inventorySlot.SetZoomState(true);
+            inventorySlot.OnZoom();
+            isZoomed = true;
+            WillUpdate(true);
+        }
+
+        //Zoom out of same item
+        else if (isZoomed && isClicked && (value == activeObjectIndex))// Zoom out of item
+        {
+            inventorySlot.SetZoomState(false);
+            isZoomed = false;
+            //isClicked = false;
+            WillUpdate(true);
+        }
+
+        //Zoom out when select different item
+        else if (isZoomed && isClicked && (value != activeObjectIndex))// Zoom out of item, click another item
+        {
+            InventorySlot previous = inventorySlots.transform.GetChild(activeObjectIndex + 1).GetComponent<InventorySlot>();
+            if (previous == null) Debug.LogError($"{this.gameObject.name}'s previous not correctly set");
+
+            previous.SetZoomState(false);
+            isClicked = false;
+            isZoomed = false;
+            WillUpdate(true);
+        }
     }
 
     // Helper Functions --------------------------------------------------------
@@ -227,6 +281,8 @@ public class PlayerInteract : MonoBehaviour
         willUpdate = true;
     }
 
+    
+
     public void SelectItem(int index)
     {
 
@@ -234,16 +290,18 @@ public class PlayerInteract : MonoBehaviour
         SetCurrentItem();
     }
 
-    public void SelectValidItem(int index)
+    public bool SelectValidItem(int index)
     {
-        
         if (itemDatas[index].itemName == "")
         {
-            return;
+            return false;
         }
+        HasActiveItem = true;
         playerItemIndex = index;
         SetCurrentItem();
+        return true;
     }
+
 
     void SelectItem(string value)
     {

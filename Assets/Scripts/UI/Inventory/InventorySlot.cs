@@ -5,8 +5,6 @@ public class InventorySlot : MonoBehaviour
 {
     [Header("Components")]
     [HideInInspector] private Image imageComponent;
-    [SerializeField] private GameManager gameManager;
-    [SerializeField] private PlayerInteract player;
     [SerializeField] public GameObject zoomObject;
 
     [Header("ItemData Variables")]
@@ -16,10 +14,9 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] public Sprite defaultSprite;
     [SerializeField] public Sprite selectedSprite;
 
-    [Header("Flags")]
-    [HideInInspector] public bool isClicked;
-    [HideInInspector] public bool isZoomed;
-    
+    [Header("Interactions")]
+    [SerializeField] private GameObject[] toActivateOnZoom;
+    [SerializeField] private GameObject[] toDeactivateOnZoom;
 
     private void Awake()
     {
@@ -33,10 +30,7 @@ public class InventorySlot : MonoBehaviour
 
     private void Start()
     {
-        if (gameManager == null) Debug.LogError($"Error {this.name}'s gameManager is null");
-        if (player == null) Debug.LogError($"Error {this.name}'s PlayerInteract is null");
         if (zoomObject == null) Debug.LogError($"Error {this.name}'s zoomObject is null");
-
     }
 
     // Helper Functions --------------------------------------------------------
@@ -51,35 +45,19 @@ public class InventorySlot : MonoBehaviour
         imageComponent.sprite = value ? selectedSprite : defaultSprite;
     }
     
-    public void ToggleStates(int value)
+    public void SetZoomObject()
     {
-        if (!isZoomed && !isClicked)
-        {
-            player.SelectValidItem(value);
-            player.WillUpdate(true);
-            isClicked = true;
-        }
-        else if (!isZoomed && isClicked)
-        {
-            //UnityEngine.UI.Image image =  zoomCanvas.transform.GetChild(0).transform.GetChild(1).GetChild(0).GetComponent<UnityEngine.UI.Image>();
-            zoomObject.GetComponent<UnityEngine.UI.Image>().sprite = this.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite;
-            player.WillUpdate(true);
-            SetZoom(true);
-        }
-        else if (isZoomed && isClicked)
-        {
-            SetZoom(false);
-            player.SelectItem(5);
-            player.WillUpdate(true);
-            isClicked = false;
-        }
-            
+        zoomObject.GetComponent<UnityEngine.UI.Image>().sprite = this.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite;
     }
-    public void SetZoom(bool value)
+    public void SetZoomState(bool value)
     {
         Focus(value);
         zoomObject.SetActive(value);
-        isZoomed = value;
+    }
+    public void OnZoom()
+    {
+        SetAll(toActivateOnZoom);
+        SetAll(toDeactivateOnZoom);
     }
     void Focus(bool value)
     {
@@ -87,5 +65,14 @@ public class InventorySlot : MonoBehaviour
         param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
 
         EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
+    }
+    void SetAll(GameObject[] objects, bool value)
+    {
+        if (objects == null) return;
+        foreach (GameObject obj in objects)
+        {
+            if (obj == null) continue;
+            obj.SetActive(value);
+        }
     }
 }
