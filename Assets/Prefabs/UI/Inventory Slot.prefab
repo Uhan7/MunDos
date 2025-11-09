@@ -124,11 +124,23 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8216685737477859502}
         m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
-        m_MethodName: IsSelected
-        m_Mode: 6
+        m_MethodName: ToggleStates
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InventorySlot, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -146,12 +158,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4a4e9ac7ee754b85b0ce4a957d01bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  player: {fileID: 0}
   data:
     itemName: 
     itemSprite: {fileID: 0}
     objectsToInteractWith: []
   defaultSprite: {fileID: 0}
   selectedSprite: {fileID: 3983591841344085157, guid: 2e2fdce4eefab344db8ef8982c4c87db, type: 3}
+  isClicked: 0
+  isZoomed: 0
+  zoomObject: {fileID: 0}
 --- !u!1 &2965289085372255841
 GameObject:
   m_ObjectHideFlags: 0
