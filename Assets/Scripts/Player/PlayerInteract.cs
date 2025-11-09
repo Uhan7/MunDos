@@ -140,15 +140,21 @@ public class PlayerInteract : MonoBehaviour
             {
                 if (obj == nearbyEnvi)
                 {
-                    nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(true);
-                    match = true;
+                    if (obj.GetComponent<Oil>() != null)
+                    {
+                        obj.GetComponent<Oil>().ItemInteract(currentItemData.itemName);
+                        match = true;
+                    }
+
+                    else
+                    {
+                        nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(true);
+                        match = true;
+                    }
                 }
             }
 
-            if (!match)
-            {
-                nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(false);
-            }
+            if (!match) nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(false);
         }
 
         if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
