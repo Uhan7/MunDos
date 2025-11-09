@@ -199,7 +199,7 @@ public class DialogueManager : MonoBehaviour
 
 	void FinishSentence()
     {
-		if (sentences.Count > 0) nextIndicator.SetActive(true);
+		nextIndicator.SetActive(true);
 		canNext = true;
 	}
 
