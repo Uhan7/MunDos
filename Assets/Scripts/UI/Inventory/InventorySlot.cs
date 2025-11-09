@@ -56,8 +56,8 @@ public class InventorySlot : MonoBehaviour
     }
     public void OnZoom()
     {
-        SetAll(toActivateOnZoom);
-        SetAll(toDeactivateOnZoom);
+        SetAll(toActivateOnZoom, true);
+        SetAll(toDeactivateOnZoom, false);
     }
     void Focus(bool value)
     {

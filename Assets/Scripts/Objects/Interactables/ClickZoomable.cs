@@ -123,14 +123,16 @@ public class ClickZoomable : MonoBehaviour
     //    }
     //}
 
+    //gameobject is a reference to the button itself
+    //Button interact and checking is done here
     public void CheckCombination(GameObject gameObject)
     {
-        Debug.Log($"CC index {orderIndex}");
+        
         if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
         {
             wrongPasswordInput = true;
         }
-
+        Debug.Log($"order Index {orderIndex}, passwordInput length {passwordOrderInput.Length - 1}");
         if (orderIndex >= passwordOrderInput.Length - 1)
         {
            
@@ -157,10 +159,16 @@ public class ClickZoomable : MonoBehaviour
         else
         {
             orderIndex++;
+            DeactivateButton(gameObject);
         }
 
     }
 
+    public void DeactivateButton(GameObject obj)
+    {
+        UnityEngine.UI.Button button = obj.GetComponent<UnityEngine.UI.Button>();
+        button.interactable = false;
+    }
     private void ResetButtons()
     {
         foreach(var obj in passwordOrderInput)
