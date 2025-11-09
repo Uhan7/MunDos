@@ -42,10 +42,7 @@ public class PlayerInteract : MonoBehaviour
     {
         playerItemIndex = 0;
         currentItemData = itemDatas[playerItemIndex];
-<<<<<<< HEAD
-=======
         hasCheckedInventory = false;
->>>>>>> 5e1ef6d8ff1de3158b2dbcfaa62254da65d26a44
     }
 
     private void Update()
