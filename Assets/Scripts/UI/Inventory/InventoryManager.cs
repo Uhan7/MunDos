@@ -12,9 +12,6 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         AnimationsUpdate();
-
-        InventoryItemsUpdate();
-
         if (Input.GetKeyDown(openInventoryKey))
         {
             open = !open;
@@ -27,10 +24,4 @@ public class InventoryManager : MonoBehaviour
     {
         inventory.GetComponent<Animator>().SetBool("Open", open);
     }
-
-    void InventoryItemsUpdate()
-    {
-
-    }
-
 }

@@ -32,9 +32,6 @@ public class InventoryUI : MonoBehaviour
     public void ToggleInventorySlots()
     {
         WillUpdate = true;
-        Debug.Log("````````````````````````````````````````");
-        Debug.Log($"Inventory slots is {!InventorySlots.activeInHierarchy}, animator is {!animator.GetBool("isOpen")}, Willupdate is now {WillUpdate}");
-        
         animator.SetBool("isOpen", !animator.GetBool("isOpen"));
         InventorySlots.SetActive(!InventorySlots.activeInHierarchy);
     }

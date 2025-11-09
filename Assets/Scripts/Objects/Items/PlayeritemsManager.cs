@@ -53,7 +53,6 @@ public class PlayeritemsManager : MonoBehaviour
 
         if (pastProtagScript.GetWillUpdate() || pastInventoryUI.WillUpdate)
         {
-            Debug.Log($"past will update {pastInventoryUI.WillUpdate}");
             return true;
         }
         return false;
@@ -76,7 +75,6 @@ public class PlayeritemsManager : MonoBehaviour
             }
             if (player.playerItemIndex == i)
             {
-                Debug.Log($"updating inven. Item {player.playerItemIndex}: {itemSlots[i].GetComponent<InventorySlot>().name} is selected");
                 itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
             }
             else itemSlots[i].GetComponent<InventorySlot>().IsSelected(false);

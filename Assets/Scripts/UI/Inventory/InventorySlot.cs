@@ -55,25 +55,23 @@ public class InventorySlot : MonoBehaviour
     {
         if (!isZoomed && !isClicked)
         {
-            Debug.Log($"isClicked {isClicked}");
+            player.SelectValidItem(value);
+            player.WillUpdate(true);
             isClicked = true;
         }
         else if (!isZoomed && isClicked)
         {
-            Debug.Log($"1 isZoomed {isZoomed}, isClicked {isClicked}");
             //UnityEngine.UI.Image image =  zoomCanvas.transform.GetChild(0).transform.GetChild(1).GetChild(0).GetComponent<UnityEngine.UI.Image>();
             zoomObject.GetComponent<UnityEngine.UI.Image>().sprite = this.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite;
+            player.WillUpdate(true);
             SetZoom(true);
         }
         else if (isZoomed && isClicked)
         {
-            Debug.Log($"2 isZoomed {isZoomed}, isClicked {isClicked}");
             SetZoom(false);
-        }
-        else
-        {
-            Debug.Log($"3 isZoomed {isZoomed}, isClicked {isClicked}");
-            player.SelectValidItem(value);
+            player.SelectItem(5);
+            player.WillUpdate(true);
+            isClicked = false;
         }
             
     }

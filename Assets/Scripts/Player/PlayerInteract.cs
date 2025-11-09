@@ -65,7 +65,6 @@ public class PlayerInteract : MonoBehaviour
 
         else if (!inventorySlots.activeInHierarchy && !hasCheckedInventory)
         {
-            Debug.Log($"not active in heirarchy");
             SelectItem(5);
             hasCheckedInventory = true;
 
@@ -179,7 +178,6 @@ public class PlayerInteract : MonoBehaviour
     void PickupItem()
     {
         if ((nearbyItem == null) || !moveScript.canMove) return;
-
         Item actualItem = nearbyItem.GetComponent<Item>();
 
         playerItemIndex = 0;
@@ -189,6 +187,7 @@ public class PlayerInteract : MonoBehaviour
         SetCurrentItem();
 
         actualItem.PickedUp();
+        SelectItem(5);
     }
     public void GiveItem(Item item)
     {
@@ -225,7 +224,6 @@ public class PlayerInteract : MonoBehaviour
     void SetCurrentItem()
     {
         currentItemData = itemDatas[playerItemIndex];
-        Debug.Log($"CurItemData at {playerItemIndex} is {itemDatas[playerItemIndex].itemName}");
         willUpdate = true;
     }
 
@@ -241,7 +239,6 @@ public class PlayerInteract : MonoBehaviour
         
         if (itemDatas[index].itemName == "")
         {
-            Debug.Log($"Error CurItemData empty");
             return;
         }
         playerItemIndex = index;
