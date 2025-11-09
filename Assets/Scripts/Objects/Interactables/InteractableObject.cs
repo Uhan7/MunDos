@@ -26,7 +26,10 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private bool zoomInteract;
     [SerializeField] private bool protagHoverable;
     [SerializeField] private bool willFocus;
+
+    [Header("Extra Properties")]
     [SerializeField] private bool isTeleporter;
+    [SerializeField] private bool isOil;
 
     [Header("Interactions")]
     [SerializeField] private GameObject[] toActivateOnInteract;
@@ -115,7 +118,9 @@ public class InteractableObject : MonoBehaviour
         if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddConditionalCheck();
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly && unlockInteractableObject) AddUnlockCheck();
         if (objectsToLockCheck != null && !lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
+
         if (isTeleporter) GetTeleporter();
+        if (isOil) GetComponent<Oil>().Interact();
 
         if (willFocus) Focus(true);
     }

@@ -12,7 +12,7 @@ public class DialogueTrigger : MonoBehaviour
 
     [Header("References")]
     [HideInInspector] private DialogueManager dialogueHolder;
-    [SerializeField] private Dialogue dialogue;
+    [SerializeField] public Dialogue dialogue; // Used in Oil.cs
 
     [Header("Animation Properties")]
     private bool closeAnim = true;

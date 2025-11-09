@@ -40,7 +40,6 @@ public class PlayerInteract : MonoBehaviour
     {
         playerItemIndex = 0;
         currentItemData = itemDatas[playerItemIndex];
-
     }
 
     private void Update()
