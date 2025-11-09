@@ -4,13 +4,13 @@ using NaughtyAttributes;
 public class Oil : MonoBehaviour
 {
     [Header("Oil Values")]
-    [SerializeField] private float originalPH;
-    [SerializeField] private float originalSalinity;
-    [SerializeField] private float pH;
-    [SerializeField] private float salinity;
     [SerializeField] private bool isFromPast;
-    [HideIf("isFromPast")] [SerializeField] private GameObject pastTimelineOil;
-    [ShowIf("isFromPast")] [SerializeField] private GameObject presentTimelineOil;
+    [HideIf("isFromPast")] [SerializeField] private float originalPH;
+    [HideIf("isFromPast")] [SerializeField] private float originalSalinity;
+    [HideIf("isFromPast")] [SerializeField] private float pH;
+    [HideIf("isFromPast")] [SerializeField] private float salinity;
+    [HideIf("isFromPast")] [SerializeField] private Oil pastTimelineOil;
+    [ShowIf("isFromPast")] [SerializeField] private Oil presentTimelineOil;
 
     [Header("Normal Interact")]
     [SerializeField] private GameObject DZ;
@@ -34,22 +34,42 @@ public class Oil : MonoBehaviour
         switch (itemName)
         {
             case "Orchid Sap":
+                if (isFromPast)
+                {
+                    Debug.LogError("Error in Oil.cs: Orchid Sap should NOT be isFromPast");
+                    return;
+                }
                 pH += 0.3f;
                 salinity -= 0.01f;
                 break;
 
             case "Hibiscus Sap":
-                pH -= 0.1f;
-                salinity += 0.03f;
+                if (!isFromPast)
+                {
+                    Debug.LogError("Error in Oil.cs: Hibiscus Sap should be isFromPast");
+                    return;
+                }
+                presentTimelineOil.pH -= 0.1f;
+                presentTimelineOil.salinity += 0.03f;
                 break;
 
             case "Hibiscus Petal":
-                pH = originalPH;
-                salinity = originalSalinity;
+                if (!isFromPast)
+                {
+                    Debug.LogError("Error in Oil.cs: Hibiscus Petal should be isFromPast");
+                    return;
+                }
+                presentTimelineOil.pH = originalPH;
+                presentTimelineOil.salinity = originalSalinity;
                 break;
 
             default: break;
         }
+
+        pH = Mathf.Round(pH * 100) / 100;
+        salinity = Mathf.Round(salinity * 100) / 100;
+        presentTimelineOil.pH = Mathf.Round(presentTimelineOil.pH * 100) / 100;
+        presentTimelineOil.salinity = Mathf.Round(presentTimelineOil.salinity * 100) / 100;
 
         itemDZSentence = originalItemDZSentence.Replace("<oil_ph>", pH.ToString()).Replace("<oil_salinity>", salinity.ToString());
         itemDZ.GetComponent<DialogueTrigger>().dialogue.sentences[0] = itemDZSentence;
