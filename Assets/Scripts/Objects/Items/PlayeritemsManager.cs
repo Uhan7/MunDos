@@ -8,6 +8,9 @@ public class PlayeritemsManager : MonoBehaviour
     [SerializeField] private PlayerInteract presentProtagScript;
     [SerializeField] private GameObject[] pastPlayeritemSlots;
     [SerializeField] private GameObject[] presentPlayeritemSlots;
+    [SerializeField] private InventoryUI pastInventoryUI;
+    [SerializeField] private InventoryUI presentInventoryUI;
+
 
     private void Awake()
     {
@@ -22,30 +25,16 @@ public class PlayeritemsManager : MonoBehaviour
     // THIS IS TEMPORARY - don't put it in Update() since that's too expensive, wait for broadcast manager for dis.
     private void Update()
     {
-        // TEMP ---
-
-        //if (pastProtagScript.gameObject.activeInHierarchy) {
-        //    for (int i = 0; i < pastProtagScript.itemDatas.Length; i++)
-        //    {
-        //        if (pastProtagScript.itemDatas[i].itemName != "") pastPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = pastProtagScript.itemDatas[i].itemSprite;
-
-        //        if (pastProtagScript.playerItemIndex == i) pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
-        //        else pastPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
-        //    }
-        //}
-
-        //if (presentProtagScript.gameObject.activeInHierarchy) {
-        //    for (int i = 0; i < presentProtagScript.itemDatas.Length; i++)
-        //    {
-        //        if (presentProtagScript.itemDatas[i].itemName != "") presentPlayeritemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = presentProtagScript.itemDatas[i].itemSprite;
-
-        //        if (presentProtagScript.playerItemIndex == i) presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
-        //        else presentPlayeritemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
-        //    }
-        //}
-
-        if (pastProtagScript.GetWillUpdate()) CheckInventorySlots(pastProtagScript, pastPlayeritemSlots);
-        if (presentProtagScript.GetWillUpdate()) CheckInventorySlots(presentProtagScript, presentPlayeritemSlots);
+        if (WillUpdatePast())
+        {
+            CheckInventorySlots(pastProtagScript, pastPlayeritemSlots);
+            pastInventoryUI.WillUpdate = false;
+        }
+        else if (willUpdatePresent())
+        {
+            CheckInventorySlots(presentProtagScript, presentPlayeritemSlots);
+            presentInventoryUI.WillUpdate = false;
+        }
 
         // TEMP ---
     }
@@ -54,19 +43,40 @@ public class PlayeritemsManager : MonoBehaviour
     
     // Helper Functions --------------------------------------------------------
 
+    bool WillUpdatePast()
+    {
+        if (pastProtagScript.GetWillUpdate() || pastInventoryUI.WillUpdate) return true;
+        return false;
+    }
+    bool willUpdatePresent()
+    {
+        if (presentProtagScript.GetWillUpdate() || presentInventoryUI.WillUpdate) return true;
+        return false;
+    }
+
     void CheckInventorySlots(PlayerInteract player, GameObject[] itemSlots)
     {
-        if (!player.gameObject.activeInHierarchy) return;
+        //if (!player.gameObject.activeInHierarchy) return;
         for (int i = 0; i < player.itemDatas.Length - 1; i++)
         {
             if (player.itemDatas[i].itemName != "")
             {
                 itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
             }
-            if (player.playerItemIndex == i) itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+            if (player.playerItemIndex == i)
+            {
+                Debug.Log($"updating inven. Item {itemSlots[i].GetComponent<InventorySlot>().name} is selected");
+                itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
+            }
             else itemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
         }
         player.WillUpdate(false);
+
+    }
+
+    void SetUpdate(bool value)
+    {
+
     }
     void InitialValues()
     {

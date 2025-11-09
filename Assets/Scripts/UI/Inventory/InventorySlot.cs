@@ -5,6 +5,7 @@ public class InventorySlot : MonoBehaviour
 {
     [Header("Components")]
     [HideInInspector] private Image imageComponent;
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerInteract player;
 
     [Header("ItemData Variables")]
@@ -30,6 +31,7 @@ public class InventorySlot : MonoBehaviour
 
     private void Start()
     {
+        if (gameManager == null) Debug.LogError($"Error {this.name}'s gameManager is null");
         if (player == null) Debug.LogError($"Error {this.name}'s PlayerInteract is null");
         if (zoomObject == null) Debug.LogError($"Error {this.name}'s zoomObject is null");
     }
@@ -48,23 +50,41 @@ public class InventorySlot : MonoBehaviour
     
     public void ToggleStates(int value)
     {
-        isClicked = true;
-        if (!isZoomed && isClicked)
+        if (!isZoomed && !isClicked)
         {
+            Debug.Log($"isClicked {isClicked}");
+            isClicked = true;
+        }
+        else if (!isZoomed && isClicked)
+        {
+            Debug.Log($"1 isZoomed {isZoomed}, isClicked {isClicked}");
             //UnityEngine.UI.Image image =  zoomCanvas.transform.GetChild(0).transform.GetChild(1).GetChild(0).GetComponent<UnityEngine.UI.Image>();
             zoomObject.GetComponent<UnityEngine.UI.Image>().sprite = this.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite;
-            zoomObject.SetActive(true);
-            isZoomed = true;
+            SetZoom(true);
         }
         else if (isZoomed && isClicked)
         {
-            zoomObject.SetActive(false);
-            isZoomed = false;
+            Debug.Log($"2 isZoomed {isZoomed}, isClicked {isClicked}");
+            SetZoom(false);
         }
         else
         {
-            player.SelectItem(value);
+            Debug.Log($"3 isZoomed {isZoomed}, isClicked {isClicked}");
+            player.SelectValidItem(value);
         }
             
+    }
+    public void SetZoom(bool value)
+    {
+        Focus(value);
+        zoomObject.SetActive(value);
+        isZoomed = value;
+    }
+    void Focus(bool value)
+    {
+        Parameters param = new Parameters();
+        param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
+
+        EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
     }
 }
