@@ -68,6 +68,7 @@ public class PlayerInteract : MonoBehaviour
             Debug.Log($"not active in heirarchy");
             SelectItem(5);
             hasCheckedInventory = true;
+
             return;
         }
 
