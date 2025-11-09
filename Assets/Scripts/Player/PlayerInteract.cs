@@ -28,8 +28,10 @@ public class PlayerInteract : MonoBehaviour
     [ReadOnly] public ItemData[] itemDatas; // Used in PlayeritemsManager
     [HideInInspector] public int playerItemIndex; // Used in PlayeritemsManager
 
+    [Header("Flags")]
     [SerializeField] private bool willUpdate;
     [SerializeField] public bool isEmpty;
+    [SerializeField] private bool hasCheckedInventory;
 
     private void Awake()
     {
@@ -40,33 +42,42 @@ public class PlayerInteract : MonoBehaviour
     {
         playerItemIndex = 0;
         currentItemData = itemDatas[playerItemIndex];
+<<<<<<< HEAD
+=======
+        hasCheckedInventory = false;
+>>>>>>> 5e1ef6d8ff1de3158b2dbcfaa62254da65d26a44
     }
 
     private void Update()
     {
         if ((Input.GetKeyDown(interactKey) || Input.GetKeyDown(otherInteractKey)) && !Input.GetKey(switchTimelineKey))
         {
+            willUpdate = true;
             if (nearbyEnvi != null) Interact();
             if (nearbyItem != null) PickupItem();
-            willUpdate = true;
+        }
+        if (inventorySlots.activeInHierarchy)
+        {
+            hasCheckedInventory = false;
+            if (Input.GetKeyDown(item1Key)) SelectValidItem(0);
+            if (Input.GetKeyDown(item2Key)) SelectValidItem(1);
+            if (Input.GetKeyDown(item3Key)) SelectValidItem(2);
+            if (Input.GetKeyDown(item4Key)) SelectValidItem(3);
+            if (Input.GetKeyDown(item5Key)) SelectValidItem(4);
+        }
+
+        else if (!inventorySlots.activeInHierarchy && !hasCheckedInventory)
+        {
+            Debug.Log($"not active in heirarchy");
+            SelectItem(5);
+            hasCheckedInventory = true;
+            return;
         }
 
         /*
         if (Input.GetKeyDown(previousItemKey)) SelectItem("PREVIOUS");
         if (Input.GetKeyDown(nextItemKey)) SelectItem("NEXT");
         */
-
-        if (!inventorySlots.activeInHierarchy)
-        {
-            SelectItem(5);
-            return;
-        }
-
-        if (Input.GetKeyDown(item1Key)) SelectItem(0);
-        if (Input.GetKeyDown(item2Key)) SelectItem(1);
-        if (Input.GetKeyDown(item3Key)) SelectItem(2);
-        if (Input.GetKeyDown(item4Key)) SelectItem(3);
-        if (Input.GetKeyDown(item5Key)) SelectItem(4);
 
         // Debugs can go here ---
 
@@ -210,10 +221,24 @@ public class PlayerInteract : MonoBehaviour
     void SetCurrentItem()
     {
         currentItemData = itemDatas[playerItemIndex];
+        Debug.Log($"CurItemData at {playerItemIndex} is {itemDatas[playerItemIndex].itemName}");
     }
 
     public void SelectItem(int index)
     {
+
+        playerItemIndex = index;
+        SetCurrentItem();
+    }
+
+    public void SelectValidItem(int index)
+    {
+        
+        if (itemDatas[index].itemName == "")
+        {
+            Debug.Log($"Error CurItemData empty");
+            return;
+        }
         playerItemIndex = index;
         SetCurrentItem();
     }
