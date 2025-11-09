@@ -29,9 +29,9 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] public int playerItemIndex; // Used in PlayeritemsManager
 
     [Header("Flags")]
-    [SerializeField] private bool willUpdate;
-    [SerializeField] public bool isEmpty;
-    [SerializeField] private bool hasCheckedInventory;
+    [HideInInspector] private bool willUpdate;
+    [HideInInspector] public bool isEmpty;
+    [HideInInspector] private bool hasCheckedInventory;
 
     private void Awake()
     {
@@ -226,6 +226,7 @@ public class PlayerInteract : MonoBehaviour
     {
         currentItemData = itemDatas[playerItemIndex];
         Debug.Log($"CurItemData at {playerItemIndex} is {itemDatas[playerItemIndex].itemName}");
+        willUpdate = true;
     }
 
     public void SelectItem(int index)

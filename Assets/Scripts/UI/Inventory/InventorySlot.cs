@@ -7,6 +7,7 @@ public class InventorySlot : MonoBehaviour
     [HideInInspector] private Image imageComponent;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private PlayerInteract player;
+    [SerializeField] public GameObject zoomObject;
 
     [Header("ItemData Variables")]
     [HideInInspector] public ItemData data; // Used by InventoryManager.cs
@@ -15,9 +16,10 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] public Sprite defaultSprite;
     [SerializeField] public Sprite selectedSprite;
 
+    [Header("Flags")]
     [HideInInspector] public bool isClicked;
     [HideInInspector] public bool isZoomed;
-    [SerializeField] public GameObject zoomObject;
+    
 
     private void Awake()
     {
@@ -34,6 +36,7 @@ public class InventorySlot : MonoBehaviour
         if (gameManager == null) Debug.LogError($"Error {this.name}'s gameManager is null");
         if (player == null) Debug.LogError($"Error {this.name}'s PlayerInteract is null");
         if (zoomObject == null) Debug.LogError($"Error {this.name}'s zoomObject is null");
+
     }
 
     // Helper Functions --------------------------------------------------------

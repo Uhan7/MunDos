@@ -6,10 +6,11 @@ public class PlayeritemsManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerInteract pastProtagScript;
     [SerializeField] private PlayerInteract presentProtagScript;
-    [SerializeField] private GameObject[] pastPlayeritemSlots;
-    [SerializeField] private GameObject[] presentPlayeritemSlots;
     [SerializeField] private InventoryUI pastInventoryUI;
     [SerializeField] private InventoryUI presentInventoryUI;
+    [SerializeField] private GameObject[] pastPlayeritemSlots;
+    [SerializeField] private GameObject[] presentPlayeritemSlots;
+    
 
 
     private void Awake()
@@ -19,6 +20,10 @@ public class PlayeritemsManager : MonoBehaviour
 
     private void Start()
     {
+        if (pastProtagScript == null) Debug.LogError($"{this.name}'s pastProtagScript null");
+        if (presentProtagScript == null) Debug.LogError($"{this.name}'s presentProtagScript null");
+        if (pastInventoryUI == null) Debug.LogError($"{this.name}'s pastInventoryUI null");
+        if (presentInventoryUI == null) Debug.LogError($"{this.name}'s presentInventoryUI null");
         InitialValues();
     }
 
@@ -45,7 +50,12 @@ public class PlayeritemsManager : MonoBehaviour
 
     bool WillUpdatePast()
     {
-        if (pastProtagScript.GetWillUpdate() || pastInventoryUI.WillUpdate) return true;
+
+        if (pastProtagScript.GetWillUpdate() || pastInventoryUI.WillUpdate)
+        {
+            Debug.Log($"past will update {pastInventoryUI.WillUpdate}");
+            return true;
+        }
         return false;
     }
     bool willUpdatePresent()
@@ -56,6 +66,7 @@ public class PlayeritemsManager : MonoBehaviour
 
     void CheckInventorySlots(PlayerInteract player, GameObject[] itemSlots)
     {
+        player.WillUpdate(false);
         //if (!player.gameObject.activeInHierarchy) return;
         for (int i = 0; i < player.itemDatas.Length - 1; i++)
         {
@@ -65,12 +76,12 @@ public class PlayeritemsManager : MonoBehaviour
             }
             if (player.playerItemIndex == i)
             {
-                Debug.Log($"updating inven. Item {itemSlots[i].GetComponent<InventorySlot>().name} is selected");
+                Debug.Log($"updating inven. Item {player.playerItemIndex}: {itemSlots[i].GetComponent<InventorySlot>().name} is selected");
                 itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);
             }
             else itemSlots[i].GetComponent<InventorySlot>().IsSelected(false);
         }
-        player.WillUpdate(false);
+        
 
     }
 
