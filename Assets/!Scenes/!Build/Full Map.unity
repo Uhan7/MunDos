@@ -10388,7 +10388,7 @@ PrefabInstance:
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 703205862}
+      objectReference: {fileID: 1469609666}
     - target: {fileID: 2617892784445921342, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_SortingLayerID
       value: 22122627
@@ -30315,6 +30315,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 859969435072071204, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1456874102}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1469609666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 2003190743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1475577398 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7529846265762437720, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -36379,6 +36384,7 @@ MonoBehaviour:
       contains information that might be of interest to you.
     - About an ore called <b>Salakab</b>.
     - <start_shake><start_dim>THE END OF LEVEL 1 WOOOOOOOOOOOOOOOOOO<end_shake>
+    - <end_dim> ok we go level 2 now... L2 envis are activated
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -42847,7 +42853,8 @@ MonoBehaviour:
   nextDialogueTime: 0.5
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
-  objectsToActivateAfter: []
+  objectsToActivateAfter:
+  - {fileID: 703205862}
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
 --- !u!1 &2088461970 stripped
