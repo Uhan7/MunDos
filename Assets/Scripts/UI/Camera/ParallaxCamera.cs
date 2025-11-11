@@ -13,7 +13,7 @@ public class ParallaxCamera : MonoBehaviour
         oldPosition = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 newPosition = transform.position;
         Vector2 delta = new Vector2(
