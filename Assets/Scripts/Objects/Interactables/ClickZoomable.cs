@@ -52,7 +52,6 @@ public class ClickZoomable : MonoBehaviour
     [HideInInspector] public bool leaveCondition = false;
     [HideInInspector] public bool wrongPasswordInput = false;
 
-    private Coroutine mouseClickCoroutine;
 
     private void Start()
     {
@@ -71,57 +70,9 @@ public class ClickZoomable : MonoBehaviour
 
         else Debug.LogError($"{selected.name} is null");
     }
-    //private IEnumerator OnMouseClick()
-    //{
-    //    while (leaveCondition == false)
-    //    {
-    //        if (Input.GetMouseButtonDown(0))
-    //        {
-    //            HandleClick();
-    //        }
-
-    //        yield return null;
-    //    }
-        
-    //}
-
-    //public void RunPasswordPuzzle()
-    //{
-    //    if (mouseClickCoroutine == null) mouseClickCoroutine = StartCoroutine(OnMouseClick());
-
-    //    if (leaveCondition)
-    //    {
-    //        OnExit();
-    //    }
-    //}
 
 
     // Helper Functions --------------------------------------------------------
-
-    //private void HandleClick()
-    //{
-    //    PointerEventData pointerData = new PointerEventData(EventSystem.current)
-    //    {
-    //        position = Input.mousePosition
-    //    };
-    //    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-    //    var results = new System.Collections.Generic.List<RaycastResult>();
-    //    EventSystem.current.RaycastAll(pointerData, results);
-    //    if (results.Count > 0)
-    //    {
-    //        foreach (var result in results)
-    //        {
-    //            if (result.gameObject.name != passwordOrder[orderIndex].gameObjectName)
-    //            {
-    //                wrongPasswordInput = true;
-    //            }
-    //            //else if (result.gameObject == exitButton)
-    //            {
-    //                OnExit();
-    //            }
-    //        }
-    //    }
-    //}
 
     //gameobject is a reference to the button itself
     //Button interact and checking is done here
@@ -216,7 +167,6 @@ public class ClickZoomable : MonoBehaviour
     private void OnExit()
     {
         orderIndex = 0;
-        StopCoroutine(mouseClickCoroutine);
         zoomEnviBackdrop.SetActive(false);
         zoomEnviImage.SetActive(false);
         leaveCondition = false;
