@@ -63,7 +63,7 @@ public class LogScreen : MonoBehaviour
         dialogueToAdd = "<b><u>" + speakerName + "</b></u>\n";
 
         dialogueToAdd = dialogueToAdd + sentence;
-        fullLog.text += dialogueToAdd + "\n\n";
+        fullLog.text += dialogueToAdd + "<size=\"26\">\n\n";
     }
 
     public void GoToMostRecentDialogue()
