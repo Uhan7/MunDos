@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string dialogueHolderName;
     [SerializeField] private GameObject[] UIToHide;
 
+    [Header("On Start")]
+    [SerializeField] private GameObject globalLight;
+    [SerializeField] private GameObject coolerLight;
+
     [Header("Referenced Components")]
     [HideInInspector] private PauseMenuManager pauseMenuScript;
     [HideInInspector] private DialogueManager dialogueHolderScript;
@@ -33,6 +37,12 @@ public class GameManager : MonoBehaviour
         EventBroadcaster.Instance.AddObserver(EventNames.HIDE_UI, HideUI);
         EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE, TogglePause);
         EventBroadcaster.Instance.AddObserver(EventNames.TOGGLE_PAUSE_BG, TogglePauseBackground);
+    }
+
+    private void Start()
+    {
+        globalLight.SetActive(false);
+        coolerLight.SetActive(true);
     }
 
     // Event Broadcasting Functions --------------------------------------------
