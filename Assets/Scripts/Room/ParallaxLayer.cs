@@ -3,12 +3,17 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class ParallaxLayer : MonoBehaviour
 {
-    [SerializeField] private float positionX;
-    [SerializeField] private float positionY;
+    [SerializeField] private float originalPositionX;
+    [SerializeField] private float originalPositionY;
 
     private void OnEnable()
     {
-        
+        ResetLocation();
+    }
+
+    public void ResetLocation()
+    {
+        transform.localPosition = new Vector2(originalPositionX, originalPositionY);
     }
 
     public float parallaxFactorX;
