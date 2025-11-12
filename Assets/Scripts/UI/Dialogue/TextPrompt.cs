@@ -1,4 +1,5 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class TextPrompt : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TextPrompt : MonoBehaviour
     [SerializeField] private GameObject promptBackground;
     [SerializeField] private GameObject textPrompt;
     [SerializeField] private bool deactivateAfter;
+    [ShowIf("deactivateAfter")] [SerializeField] private TextPrompt[] otherHitboxesToSyncDeactivate;
     [SerializeField] private bool fullFadeIn;
     [SerializeField] private bool deactivateOnTimelineSwitch;
 
@@ -49,13 +51,20 @@ public class TextPrompt : MonoBehaviour
 
         if (deactivateAfter && col.gameObject.activeInHierarchy && !deactivateOnTimelineSwitch)
         {
-            if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
-            GetComponent<BoxCollider2D>().enabled = false;
+            DisableHitbox();
         }
         else if (deactivateAfter && deactivateOnTimelineSwitch)
         {
-            if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
-            GetComponent<BoxCollider2D>().enabled = false;
+            DisableHitbox();
         }
+    }
+
+    public void DisableHitbox()
+    {
+
+        if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        if (otherHitboxesToSyncDeactivate != null) foreach (TextPrompt otherHitbox in otherHitboxesToSyncDeactivate) if (otherHitbox.gameObject.GetComponent<BoxCollider2D>().enabled == true) otherHitbox.DisableHitbox();
     }
 }
