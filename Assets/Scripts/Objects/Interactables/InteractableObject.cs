@@ -35,33 +35,35 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] private GameObject[] toDeactivateOnInteract;
 
     [Header("Conditionals Interactions")]
-    [ShowIf("checksConditionalObject")][SerializeField] private GameObject[] conditionalObjectsToCheck;
-    [ShowIf("checksConditionalObject")][SerializeField] private bool checkOnValidInteractOnly;
+    [ShowIf("checksConditionalObject")] [SerializeField] private GameObject[] conditionalObjectsToCheck;
+    [ShowIf("checksConditionalObject")] [SerializeField] private bool checkOnValidInteractOnly;
 
     [Header("Unlocked Interactions")]
-    [ShowIf("unlockInteractableObject")][SerializeField] private GameObject[] objectsToUnlockCheck;
-    [ShowIf("unlockInteractableObject")][SerializeField] private bool unlockOnValidInteractOnly;
+    [ShowIf("unlockInteractableObject")] [SerializeField] private GameObject[] objectsToUnlockCheck;
+    [ShowIf("unlockInteractableObject")] [SerializeField] private bool unlockOnValidInteractOnly;
 
     [Header("Locked Interactions")]
-    [ShowIf("lockInteractableObject")][SerializeField] private GameObject[] objectsToLockCheck;
-    [ShowIf("lockInteractableObject")][SerializeField] private bool lockOnValidInteractOnly;
+    [ShowIf("lockInteractableObject")] [SerializeField] private GameObject[] objectsToLockCheck;
+    [ShowIf("lockInteractableObject")] [SerializeField] private bool lockOnValidInteractOnly;
 
     [Header("Zoom Interactions")]
-    [ShowIf("zoomInteract")][SerializeField] private ZoomEnviManager zoomCanvas;
+    [ShowIf("zoomInteract")] [SerializeField] private ZoomEnviManager zoomCanvas;
 
     [Header("On Protag Hover")]
-    [ShowIf("protagHoverable")][SerializeField] private bool animateInOnHover;
-    [ShowIf("protagHoverable")][SerializeField] private GameObject[] toActivateOnProtagHover;
-    [ShowIf("protagHoverable")][SerializeField] private GameObject[] toDeactivateOnProtagHover;
+    [ShowIf("protagHoverable")] [SerializeField] private bool animateInOnHover;
+    [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toActivateOnProtagHover;
+    [ShowIf("protagHoverable")] [SerializeField] private GameObject[] toDeactivateOnProtagHover;
 
     [Header("Item Interactions")]
-    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toActivateOnValidInteract;
-    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toDeactivateOnValidInteract;
-    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toActivateOnInvalidInteract;
-    [ShowIf("itemInteractable")][SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
+    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toActivateOnValidInteract;
+    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnValidInteract;
+    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toActivateOnInvalidInteract;
+    [ShowIf("itemInteractable")] [SerializeField] private GameObject[] toDeactivateOnInvalidInteract;
 
     [Header("On Interact")]
     [SerializeField] private AudioClip[] soundsToPlay;
+    [ShowIf("itemInteractable")] [SerializeField] private AudioClip[] soundsToPlayOnValidInteract;
+    [ShowIf("itemInteractable")] [SerializeField] private AudioClip[] soundsToPlayOnInvalidInteract;
 
     [Header("Flags")]
     [HideInInspector] private bool alreadyCheckedConditional = false;
