@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,11 +16,16 @@ public class SceneTransitioner : MonoBehaviour
         sceneName = _sceneName;
 
         transitionObject.SetActive(true);
-        Invoke("GoToScene", transitionDelay);
+        StartCoroutine(GoToScene());
     }
 
-    private void GoToScene()
+    private IEnumerator GoToScene()
     {
-        SceneManager.LoadScene(sceneName);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
     }
 }

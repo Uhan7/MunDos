@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -43,6 +44,8 @@ public class GameManager : MonoBehaviour
     {
         globalLight.SetActive(false);
         coolerLight.SetActive(true);
+
+        Time.timeScale = 1;
     }
 
     // Event Broadcasting Functions --------------------------------------------
