@@ -3,6 +3,14 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class ParallaxLayer : MonoBehaviour
 {
+    [SerializeField] private float positionX;
+    [SerializeField] private float positionY;
+
+    private void OnEnable()
+    {
+        
+    }
+
     public float parallaxFactorX;
     public float parallaxFactorY;
 
