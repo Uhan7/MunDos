@@ -30,8 +30,7 @@ public class ParallaxBackground : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             ParallaxLayer layer = transform.GetChild(i).GetComponent<ParallaxLayer>();
-            if (layer != null)
-                parallaxLayers.Add(layer);
+            if (layer != null) parallaxLayers.Add(layer);
         }
     }
 

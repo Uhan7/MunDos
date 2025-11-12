@@ -16,6 +16,7 @@ public class ObjectsManager : MonoBehaviour
     [SerializeField] private float delayTime;
     [SerializeField] private bool resetAfter;
     [SerializeField] private bool deactivateAfter;
+    [SerializeField] private bool repeatable;
 
     [Header("GameObjects Reference")]
     [ShowIf("activateAndDeactivate")] [SerializeField] private GameObject[] objectsToActivate;
@@ -31,7 +32,7 @@ public class ObjectsManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (alreadyEnabled) return;
+        if (alreadyEnabled && !repeatable) return;
 
         if (activateAndDeactivate && isOnEnable)
         {
