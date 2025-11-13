@@ -28,8 +28,8 @@ public class TimelineManager : MonoBehaviour
     [SerializeField] private GameObject pastTransition;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource[] pastBGMSources;
-    [SerializeField] private AudioSource[] presentBGMSources;
+    [SerializeField] private Room[] pastRooms;
+    [SerializeField] private Room[] presentRooms;
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource dialogueSFXSource;
     [SerializeField] private AudioClip transitionSound;
@@ -67,8 +67,14 @@ public class TimelineManager : MonoBehaviour
 
     void SettingsUpdate()
     {
-        // foreach (AudioSource bgmSource in pastBGMSources) bgmSource.volume = (currentTimeline == 0) ? SettingsInfo.musicVol : 0;
-        // foreach (AudioSource bgmSource in presentBGMSources) bgmSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
+        foreach (Room room in pastRooms)
+        {
+            if (room.roomCamera.activeInHierarchy) room.connectedAudioSource.volume = (currentTimeline == 0) ? SettingsInfo.musicVol : 0;
+        }
+        foreach (Room room in presentRooms)
+        {
+            if (room.roomCamera.gameObject.activeInHierarchy) room.connectedAudioSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
+        }
         sfxSource.volume = SettingsInfo.SFXVol;
         dialogueSFXSource.volume = SettingsInfo.dialogueVol;
     }

@@ -5,8 +5,8 @@ using NaughtyAttributes;
 
 public class Room : MonoBehaviour
 {
-    [SerializeField] private GameObject roomCamera;
-    [SerializeField] public AudioSource connectedAudioSource; // Used in BGMsManager.cs
+    [SerializeField] public GameObject roomCamera; // Used in TimelineManager.cs
+    [SerializeField] public AudioSource connectedAudioSource; // Used in BGMsManager.cs and TimelineManager.cs
     [SerializeField] private BGMsManager bgmsManager;
     [SerializeField] private GameObject[] parallaxObjects;
     [SerializeField] private bool showFirst;
