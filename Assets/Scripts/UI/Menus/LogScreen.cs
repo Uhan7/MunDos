@@ -25,7 +25,7 @@ public class LogScreen : MonoBehaviour
             toggleLogScreen();
             TogglePauseBackground();
         }
-        if (Input.GetKeyDown(logKey) && active)
+        else if (Input.GetKeyDown(logKey) && active)
         {
             toggleLogScreen();
             TogglePauseBackground();
