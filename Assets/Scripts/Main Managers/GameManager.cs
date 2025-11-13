@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
         {
             foreach (GameObject obj in UIToHide)
             {
+                obj.GetComponent<Animator>().ResetTrigger("FadeOut");
                 obj.GetComponent<Animator>().SetTrigger("FadeIn");
             }
         } else
