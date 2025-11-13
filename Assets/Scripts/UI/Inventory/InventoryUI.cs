@@ -34,7 +34,6 @@ public class InventoryUI : MonoBehaviour
     {
         WillUpdate = true;
         animator.SetBool("isOpen", !animator.GetBool("isOpen"));
-        InventorySlots.SetActive(!InventorySlots.activeInHierarchy);
     }
 
     void InitializeValues()
