@@ -11,6 +11,11 @@ public class ParallaxLayer : MonoBehaviour
         ResetLocation();
     }
 
+    private void OnDisable()
+    {
+        transform.localPosition = new Vector2(originalPositionX, originalPositionY);
+    }
+
     public void ResetLocation()
     {
         transform.localPosition = new Vector2(originalPositionX, originalPositionY);
