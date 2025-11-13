@@ -7,6 +7,7 @@ public class PlayerInteract : MonoBehaviour
     [Header("References")]
     [HideInInspector] private PlayerMove moveScript;
     [SerializeField] private GameObject inventorySlots;
+    [SerializeField] private InventoryUI inventoryUI;
 
     [Header("Key Inputs")]
     [SerializeField] private KeyCode switchTimelineKey;
@@ -257,6 +258,9 @@ public class PlayerInteract : MonoBehaviour
 
         actualItem.PickedUp();
         SelectItem(5);
+
+        // Jiggles inventory button
+        inventoryUI.FlashButton();
     }
     public void GiveItem(Item item)
     {

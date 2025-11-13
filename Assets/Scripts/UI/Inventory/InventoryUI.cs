@@ -6,6 +6,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] GameObject gameMan;
     [SerializeField] GameObject InventorySlots;
     [SerializeField] private KeyCode openInventoryKey;
+    [SerializeField] Animator invButtonAnimator;
 
     [HideInInspector] private Animator animator;
     [HideInInspector] private GameManager gameManager;
@@ -44,5 +45,10 @@ public class InventoryUI : MonoBehaviour
     public void SetIsOpenFalse()
     {
         animator.SetBool("isOpen", false);
+    }
+
+    public void FlashButton()
+    {
+        invButtonAnimator.SetTrigger("Flash");
     }
 }
