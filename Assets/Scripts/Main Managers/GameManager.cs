@@ -80,11 +80,13 @@ public class GameManager : MonoBehaviour
             }
         }
 
-            timelineManagerScript.canSwitch = !isHidingUI;
+        timelineManagerScript.canSwitch = !isHidingUI;
     }
 
     public void TogglePause()
     {
+        if (isHidingUI) return;
+
         TogglePauseBackground();
         pauseMenuScript.active = !pauseMenuScript.active;
     }

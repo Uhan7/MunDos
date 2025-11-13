@@ -8,6 +8,7 @@ public class LogScreen : MonoBehaviour
     [SerializeField] private KeyCode exitKey = KeyCode.Escape;
     [SerializeField] private KeyCode logKey;
 
+    [SerializeField] private GameManager gameManagerReference;
     [SerializeField] private GameObject logScreen;
     [SerializeField] private TextMeshProUGUI fullLog;
     [SerializeField] private Scrollbar scrollbar;
@@ -17,11 +18,6 @@ public class LogScreen : MonoBehaviour
 
     private string speakerName = "";
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(logKey) && !active)
@@ -29,7 +25,7 @@ public class LogScreen : MonoBehaviour
             toggleLogScreen();
             TogglePauseBackground();
         }
-        if (Input.GetKeyDown(exitKey) && active)
+        if (Input.GetKeyDown(exitKey) || Input.GetKeyDown(exitKey) && active)
         {
             toggleLogScreen();
             TogglePauseBackground();
@@ -47,6 +43,8 @@ public class LogScreen : MonoBehaviour
 
     public void toggleLogScreen()
     {
+        if (gameManagerReference.isHidingUI) return;
+
         active = !active;
         logScreen.SetActive(!logScreen.activeInHierarchy);
     }
@@ -73,6 +71,8 @@ public class LogScreen : MonoBehaviour
 
     public void TogglePauseBackground()
     {
+        if (gameManagerReference.isHidingUI) return;
+
         EventBroadcaster.Instance.PostEvent(EventNames.TOGGLE_PAUSE_BG);
     }
 }
