@@ -12,6 +12,7 @@ public class AudioSyncer : MonoBehaviour
     [SerializeField] private AUDIO_TYPE audioType;
     [HideInInspector] private AudioSource audioSource;
     [SerializeField] private bool alwaysChangeOnSettings = false;
+    [SerializeField] private bool onAtStart = false;
 
     private void Awake()
     {
@@ -23,7 +24,8 @@ public class AudioSyncer : MonoBehaviour
         switch (audioType)
         {
             case AUDIO_TYPE.BGM:
-                audioSource.volume = SettingsInfo.musicVol;
+                if (!onAtStart) audioSource.volume = 0;
+                else audioSource.volume = SettingsInfo.musicVol;
                 break;
             case AUDIO_TYPE.SFX:
                 audioSource.volume = SettingsInfo.SFXVol;

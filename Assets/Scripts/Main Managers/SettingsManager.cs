@@ -30,7 +30,6 @@ public class SettingsManager : MonoBehaviour
 
     public void setMusicVol(float vol)
     {
-        print("called");
         SettingsInfo.musicVol = vol;
         if (!isTitleScreen)
         {

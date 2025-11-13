@@ -143,6 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioType: 1
+  alwaysChangeOnSettings: 0
+  onAtStart: 0
 --- !u!1 &598446523335399273
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,8 +180,7 @@ Transform:
   - {fileID: 4424082584282229380}
   - {fileID: 8786555769073752365}
   - {fileID: 7623454679454003575}
-  - {fileID: 1188416565657407079}
-  - {fileID: 326348044561740102}
+  - {fileID: 3800647635358009892}
   - {fileID: 7761594863871653225}
   - {fileID: 8016429404255549753}
   m_Father: {fileID: 0}
@@ -373,6 +374,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioType: 2
+  alwaysChangeOnSettings: 0
+  onAtStart: 0
+--- !u!1 &1171785446309789059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3800647635358009892}
+  m_Layer: 0
+  m_Name: BGM Containers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3800647635358009892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171785446309789059}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1188416565657407079}
+  - {fileID: 326348044561740102}
+  m_Father: {fileID: 3792571504194021166}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3886689398886720417
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +458,8 @@ MonoBehaviour:
   pauseMenuName: Pause Screen
   dialogueHolderName: Dialogue Holder
   UIToHide: []
+  globalLight: {fileID: 0}
+  coolerLight: {fileID: 0}
   isHidingUI: 0
   isPaused: 0
 --- !u!114 &1161671848227295739
@@ -443,8 +481,10 @@ MonoBehaviour:
   presentTimeline: {fileID: 0}
   presentTransition: {fileID: 0}
   pastTransition: {fileID: 0}
-  pastBGMSource: {fileID: 8435400448813939742}
-  presentBGMSource: {fileID: 7395490199422964741}
+  pastBGMSources:
+  - {fileID: 8435400448813939742}
+  presentBGMSources:
+  - {fileID: 7395490199422964741}
   sfxSource: {fileID: 4229941635627418775}
   dialogueSFXSource: {fileID: 1578030148939614592}
   transitionSound: {fileID: 8300000, guid: 7e53470dfdd2a4f2a84b43dae60877f6, type: 3}
@@ -484,7 +524,7 @@ GameObject:
   - component: {fileID: 7395490199422964741}
   - component: {fileID: 4715473524522930110}
   m_Layer: 0
-  m_Name: Present BGM Source
+  m_Name: Present [Area] BGM Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -498,12 +538,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4193750169515002396}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3792571504194021166}
+  m_Father: {fileID: 3800647635358009892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7395490199422964741
 AudioSource:
@@ -615,6 +655,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioType: 0
+  alwaysChangeOnSettings: 0
+  onAtStart: 0
 --- !u!1 &5060774786281712198
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,6 +859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pastProtagScript: {fileID: 0}
   presentProtagScript: {fileID: 0}
+  pastInventoryUI: {fileID: 0}
+  presentInventoryUI: {fileID: 0}
   pastPlayeritemSlots:
   - {fileID: 0}
   - {fileID: 0}
@@ -841,7 +885,7 @@ GameObject:
   - component: {fileID: 8435400448813939742}
   - component: {fileID: 1833980081857560149}
   m_Layer: 0
-  m_Name: Past BGM Source
+  m_Name: Past [Area] BGM Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,12 +899,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8853175810284636088}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3792571504194021166}
+  m_Father: {fileID: 3800647635358009892}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8435400448813939742
 AudioSource:
@@ -972,3 +1016,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioType: 0
+  alwaysChangeOnSettings: 0
+  onAtStart: 0

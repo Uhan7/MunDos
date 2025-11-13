@@ -28,8 +28,8 @@ public class TimelineManager : MonoBehaviour
     [SerializeField] private GameObject pastTransition;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource pastBGMSource;
-    [SerializeField] private AudioSource presentBGMSource;
+    [SerializeField] private AudioSource[] pastBGMSources;
+    [SerializeField] private AudioSource[] presentBGMSources;
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource dialogueSFXSource;
     [SerializeField] private AudioClip transitionSound;
@@ -67,8 +67,8 @@ public class TimelineManager : MonoBehaviour
 
     void SettingsUpdate()
     {
-        pastBGMSource.volume = (currentTimeline == 0) ? SettingsInfo.musicVol : 0;
-        presentBGMSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
+        // foreach (AudioSource bgmSource in pastBGMSources) bgmSource.volume = (currentTimeline == 0) ? SettingsInfo.musicVol : 0;
+        // foreach (AudioSource bgmSource in presentBGMSources) bgmSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
         sfxSource.volume = SettingsInfo.SFXVol;
         dialogueSFXSource.volume = SettingsInfo.dialogueVol;
     }
@@ -89,7 +89,6 @@ public class TimelineManager : MonoBehaviour
         {
             pastTimeline.SetActive(false);
             presentTimeline.SetActive(true);
-            StartCoroutine(FadeBGM(pastBGMSource, presentBGMSource, 2));
 
             currentTimeline = 1;
         }
@@ -97,8 +96,6 @@ public class TimelineManager : MonoBehaviour
         {
             pastTimeline.SetActive(true);
             presentTimeline.SetActive(false);
-
-            StartCoroutine(FadeBGM(presentBGMSource, pastBGMSource, 2));
 
             currentTimeline = 0;
         }
