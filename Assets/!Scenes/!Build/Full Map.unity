@@ -757,9 +757,10 @@ MonoBehaviour:
   salinity: 0
   presentTimelineOil: {fileID: 0}
   originalOrchidSapDZSentence: +pH | -Salinity
-  originalTubeDZSentence: 'Current pH: <b><oil_ph></b>
+  originalTubeDZSentence: 'Current pH: <b><oil_ph></b> | Current Salinity: <b><oil_salinity>%</b>
 
-    Current Salinity: <b><oil_salinity></b>'
+    Required
+    pH: <b>9.3</b> | Required Salinity: <b>0.87%</b>'
   originalHibiscusSapDZSentence: Original Hibiscus Sap Sentence.
   originalHibiscusPetalDZSentence: Original Hibiscus Petal Sentence.
   DZ: {fileID: 767765663}
@@ -905,9 +906,10 @@ MonoBehaviour:
   salinity: 0
   presentTimelineOil: {fileID: 0}
   originalOrchidSapDZSentence: +pH | -Salinity
-  originalTubeDZSentence: 'Current pH: <b><oil_ph></b>
+  originalTubeDZSentence: 'Current pH: <b><oil_ph></b> | Current Salinity: <b><oil_salinity>%</b>
 
-    Current Salinity: <b><oil_salinity></b>'
+    Required
+    pH: <b>9.3</b> | Required Salinity: <b>0.87%</b>'
   originalHibiscusSapDZSentence: Original Hibiscus Sap Sentence.
   originalHibiscusPetalDZSentence: Original Hibiscus Petal Sentence.
   DZ: {fileID: 440796823}
@@ -4137,6 +4139,117 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9100836808320417522, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 161494518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &162880133
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 939353779}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: '[Envi]-D2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Protag
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 21300000, guid: d2811b6f7ece04be08cfd4e9ef6ea1a3, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playClosingAnimation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: boom shakalaka
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 367592529}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 753049856}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &162880134 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 162880133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &162880135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 162880133}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &167740517 stripped
 GameObject:
@@ -10591,6 +10704,22 @@ PrefabInstance:
       propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
       value: 
       objectReference: {fileID: 1925745182}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: data.objectsToInteractWith.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1265484005}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[1]'
+      value: 
+      objectReference: {fileID: 877516891}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1995805430}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: L2 Hibiscus Petal
@@ -12461,6 +12590,22 @@ PrefabInstance:
       propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
       value: 
       objectReference: {fileID: 1925745182}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: data.objectsToInteractWith.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[0]'
+      value: 
+      objectReference: {fileID: 18786413}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1686152508}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[2]'
+      value: 
+      objectReference: {fileID: 14632669}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: L2 Orchid Sap
@@ -20621,6 +20766,42 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.23
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 162880135}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: watch me open this bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 367592529}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[1]'
+      value: 
+      objectReference: {fileID: 345427062}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 753049856}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Metal Box w/ Note
@@ -20692,6 +20873,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4605098388668104130, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 162880134}
     - targetCorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 367592530}
@@ -20733,7 +20917,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753049856}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -23696,6 +23880,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.3742957}
   m_EdgeRadius: 0
+--- !u!4 &939353779 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4605098388668104130, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 753049853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &955701895
 GameObject:
   m_ObjectHideFlags: 0
@@ -24156,6 +24345,22 @@ PrefabInstance:
       propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
       value: 
       objectReference: {fileID: 1925745182}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: data.objectsToInteractWith.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1265484005}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[1]'
+      value: 
+      objectReference: {fileID: 877516891}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1995805430}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: L2 Hibiscus Sap
@@ -40520,9 +40725,10 @@ MonoBehaviour:
   salinity: 0
   presentTimelineOil: {fileID: 0}
   originalOrchidSapDZSentence: +pH | -Salinity
-  originalTubeDZSentence: 'Current pH: <b><oil_ph></b>
+  originalTubeDZSentence: 'Current pH: <b><oil_ph></b> | Current Salinity: <b><oil_salinity>%</b>
 
-    Current Salinity: <b><oil_salinity></b>'
+    Required
+    pH: <b>9.3</b> | Required Salinity: <b>0.87%</b>'
   originalHibiscusSapDZSentence: Original Hibiscus Sap Sentence.
   originalHibiscusPetalDZSentence: Original Hibiscus Petal Sentence.
   DZ: {fileID: 991896818}
@@ -44866,6 +45072,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1005869503}
     m_Modifications:
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: data.objectsToInteractWith.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[0]'
+      value: 
+      objectReference: {fileID: 18786413}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1686152508}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[2]'
+      value: 
+      objectReference: {fileID: 14632669}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: L2 Oil Tube
