@@ -8,9 +8,10 @@ public class PauseMenuManager : MonoBehaviour
     [Header("Key Inputs")]
     [SerializeField] private KeyCode pauseKey;
 
-    [Header("Window References")]
+    [Header("References")]
     [SerializeField] private GameObject saveUI;
     [SerializeField] private GameObject settingsUI;
+    [SerializeField] private GameManager gameManager;
 
     [Header("Flags")]
     [HideInInspector] public bool active = false;
@@ -24,12 +25,31 @@ public class PauseMenuManager : MonoBehaviour
     {
         animator.SetBool("Active", active);
 
-        if (Input.GetKeyDown(pauseKey)) TogglePause();
+        if (Input.GetKeyDown(pauseKey) && gameManager.canPause) PauseScreenOn();
+        else if (Input.GetKeyDown(pauseKey) && !gameManager.canPause) PauseScreenOff();
     }
 
     public void TogglePause()
     {
         EventBroadcaster.Instance.PostEvent(EventNames.TOGGLE_PAUSE);
+    }
+
+    public void PauseScreenOn()
+    {
+        if (gameManager.canPause && !active)
+        {
+            gameManager.canPause = false;
+            TogglePause();
+        }
+    }
+
+    public void PauseScreenOff()
+    {
+        if (active)
+        {
+            gameManager.canPause = true;
+            TogglePause();
+        }
     }
 
     public void toggleSettingsScreen()

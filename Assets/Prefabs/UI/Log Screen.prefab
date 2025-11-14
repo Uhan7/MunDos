@@ -49,11 +49,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46202d4a1ee3ac428b5a422d554dc02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxSource: {fileID: 0}
   exitKey: 27
   logKey: 108
+  gameManagerReference: {fileID: 0}
   logScreen: {fileID: 4670983029946485732}
   fullLog: {fileID: 7496426804815229164}
   scrollbar: {fileID: 3725715266971436012}
+  logOpenSFX: {fileID: 0}
+  logCloseSFX: {fileID: 0}
 --- !u!1 &814423542846766315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,19 +1049,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7857044446811579793}
         m_TargetAssemblyTypeName: LogScreen, Assembly-CSharp
-        m_MethodName: toggleLogScreen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7857044446811579793}
-        m_TargetAssemblyTypeName: LogScreen, Assembly-CSharp
-        m_MethodName: TogglePauseBackground
+        m_MethodName: LogScreenOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

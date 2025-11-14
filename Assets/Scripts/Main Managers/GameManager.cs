@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] private bool isFocusing;
     [HideInInspector] public bool isHidingUI;
     [HideInInspector] public bool isPaused = false;
+    [HideInInspector] public bool canPause = true;
 
     private void Awake()
     {

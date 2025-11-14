@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,15 +26,13 @@ public class LogScreen : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(logKey) && !active)
+        if (Input.GetKeyDown(logKey) && gameManagerReference.canPause)
         {
-            toggleLogScreen();
-            TogglePauseBackground();
+            LogScreenOn();
         }
-        else if (Input.GetKeyDown(logKey) && active)
+        else if (Input.GetKeyDown(logKey) && !gameManagerReference.canPause)
         {
-            toggleLogScreen();
-            TogglePauseBackground();
+            LogScreenOff();
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -52,8 +51,32 @@ public class LogScreen : MonoBehaviour
 
         active = !active;
         logScreen.SetActive(!logScreen.activeInHierarchy);
+        if (active)
+        {
+            StartCoroutine(UpdateMostRecent());
+        }
 
         if (sfxSource != null) sfxSource.PlayOneShot(active ? logOpenSFX : logCloseSFX);
+    }
+
+    public void LogScreenOn()
+    {
+        if (gameManagerReference.canPause && !active)
+        {
+            gameManagerReference.canPause = false;
+            toggleLogScreen();
+            TogglePauseBackground();
+        }
+    }
+
+    public void LogScreenOff()
+    {
+        if (active)
+        {
+            gameManagerReference.canPause = true;
+            toggleLogScreen();
+            TogglePauseBackground();
+        }
     }
 
     public void RecieveName(Dialogue dialogue)
@@ -74,6 +97,12 @@ public class LogScreen : MonoBehaviour
     public void GoToMostRecentDialogue()
     {
         scrollbar.value = 0;
+    }
+
+    private IEnumerator UpdateMostRecent()
+    {
+        yield return new WaitForEndOfFrame();
+        GoToMostRecentDialogue();
     }
 
     public void TogglePauseBackground()
