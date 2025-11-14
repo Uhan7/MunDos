@@ -76,6 +76,7 @@ public class DialogueManager : MonoBehaviour
 		{
 			wasClicked = false;
 			skip = true;
+			aSource.PlayOneShot(continueDialogueSFX);
 			if (canNext) DisplayNextSentence();
 		}
 	}
@@ -178,8 +179,6 @@ public class DialogueManager : MonoBehaviour
 		skip = false;
 		nextIndicator.SetActive(false);
 
-		aSource.PlayOneShot(continueDialogueSFX);
-
 		if (sentences.Count == 0)
 		{
 			EndDialogue();
@@ -204,6 +203,7 @@ public class DialogueManager : MonoBehaviour
             anim.SetBool("FullClose", false);
         }
 			sentences.Clear();
+
 		StopAllCoroutines();
     }
 
