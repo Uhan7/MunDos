@@ -14759,7 +14759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5336392643312973195, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: requiredName
-      value: L2 Antiquarian
+      value: L2 Antiquarian (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5336392643312973195, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: moveDirection
@@ -16049,7 +16049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -45815,6 +45815,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1925745183}
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1925745192}
   m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
 --- !u!4 &1925745181 stripped
 Transform:
@@ -45838,7 +45841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOnEnable: 0
+  isOnEnable: 1
   isTrigger: 0
   activateAndDeactivate: 1
   lockAndUnlock: 0
@@ -45851,6 +45854,20 @@ MonoBehaviour:
   - {fileID: 2095247838}
   objectsToLock: []
   objectsToUnlock: []
+--- !u!114 &1925745192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925745182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a24936d6624640a197d8d61c75d5a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredChecks: 3
+  currentChecks: 0
 --- !u!4 &1934183773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8308861437481407393, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}

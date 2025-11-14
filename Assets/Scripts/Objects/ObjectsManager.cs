@@ -42,7 +42,7 @@ public class ObjectsManager : MonoBehaviour
         if (lockAndUnlock && isOnEnable)
         {
             if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
-            if (objectsToLock.Length > 0) StartCoroutine(LockAfterTime(delayTime));
+            if (objectsToUnlock.Length > 0) StartCoroutine(UnlockAfterTime(delayTime));
         }
 
         alreadyEnabled = true;

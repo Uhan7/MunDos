@@ -26,6 +26,7 @@ public class Item : MonoBehaviour
     {
         GetComponent<InteractableObject>().Interact();
         GetComponent<BoxCollider2D>().enabled = false;
-        Destroy(gameObject);
+        GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        Destroy(gameObject, 0.5f);
     }
 }
