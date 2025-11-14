@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string pauseMenuName;
     [SerializeField] private string dialogueHolderName;
     [SerializeField] private GameObject[] UIToHide;
+    [SerializeField] private AudioSource audioSource;
 
     [Header("On Start")]
     [SerializeField] private GameObject globalLight;
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour
     [HideInInspector] private PauseMenuManager pauseMenuScript;
     [HideInInspector] private DialogueManager dialogueHolderScript;
     [HideInInspector] private PlayerMove protagMoveScript;
+
+    [Header("Extra Effects")]
+    [SerializeField] private AudioClip pauseOpenSFX;
+    [SerializeField] private AudioClip pauseCloseSFX;
 
     [Header("Flags")]
     [HideInInspector] private bool isFocusing;
@@ -97,6 +102,7 @@ public class GameManager : MonoBehaviour
         if (isHidingUI) return;
 
         TogglePauseBackground();
+
         pauseMenuScript.active = !pauseMenuScript.active;
     }
 
@@ -110,6 +116,8 @@ public class GameManager : MonoBehaviour
         protagMoveScript.canMove = (!isPaused && !isFocusing);
         protagMoveScript.canInput = (!isPaused && !isFocusing);
         timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
+
+        audioSource.PlayOneShot(isPaused ? pauseOpenSFX : pauseCloseSFX);
 
         Time.timeScale = isPaused ? 0 : 1;
     }

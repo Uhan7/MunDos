@@ -458,8 +458,11 @@ MonoBehaviour:
   pauseMenuName: Pause Screen
   dialogueHolderName: Dialogue Holder
   UIToHide: []
+  audioSource: {fileID: 0}
   globalLight: {fileID: 0}
   coolerLight: {fileID: 0}
+  pauseOpenSFX: {fileID: 8300000, guid: 178fbeb1d16b54010827e9885fef2880, type: 3}
+  pauseCloseSFX: {fileID: 8300000, guid: a15e9b0e9f8fb431faf6223d2e6ce549, type: 3}
   isHidingUI: 0
   isPaused: 0
 --- !u!114 &1161671848227295739
@@ -481,13 +484,12 @@ MonoBehaviour:
   presentTimeline: {fileID: 0}
   presentTransition: {fileID: 0}
   pastTransition: {fileID: 0}
-  pastBGMSources:
-  - {fileID: 8435400448813939742}
-  presentBGMSources:
-  - {fileID: 7395490199422964741}
+  pastRooms: []
+  presentRooms: []
   sfxSource: {fileID: 4229941635627418775}
   dialogueSFXSource: {fileID: 1578030148939614592}
-  transitionSound: {fileID: 8300000, guid: 7e53470dfdd2a4f2a84b43dae60877f6, type: 3}
+  transitionSoundToPast: {fileID: 8300000, guid: d8d45091ad8f3446394636d44825dde9, type: 3}
+  transitionSoundToPresent: {fileID: 8300000, guid: d7e6224a80f3c48d6885f01b47085e51, type: 3}
   canSwitch: 1
   timelineUnlocked: 0
 --- !u!114 &8585359170152238897
