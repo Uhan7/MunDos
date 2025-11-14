@@ -40,7 +40,7 @@ public class Oil : MonoBehaviour
     {
         switch (itemName)
         {
-            case "Orchid Sap":
+            case "L2 Orchid Sap":
                 if (isFromPast)
                 {
                     Debug.LogError("Error in Oil.cs: Orchid Sap should NOT be isFromPast");
@@ -52,7 +52,7 @@ public class Oil : MonoBehaviour
                 DZSentence = originalOrchidSapDZSentence;
                 break;
 
-            case "Oil Tube":
+            case "L2 Oil Tube":
                 if (isFromPast)
                 {
                     Debug.LogError("Error in Oil.cs: Oil Tube should NOT be isFromPast");
@@ -64,7 +64,7 @@ public class Oil : MonoBehaviour
                 if (pH == desiredPH && salinity == desiredSalinity) PuzzleFinish();
                 break;
 
-            case "Hibiscus Sap":
+            case "L2 Hibiscus Sap":
                 if (!isFromPast)
                 {
                     Debug.LogError("Error in Oil.cs: Hibiscus Sap should be isFromPast");
@@ -76,7 +76,7 @@ public class Oil : MonoBehaviour
                 DZSentence = originalHibiscusSapDZSentence;
                 break;
 
-            case "Hibiscus Petal":
+            case "L2 Hibiscus Petal":
                 if (!isFromPast)
                 {
                     Debug.LogError("Error in Oil.cs: Hibiscus Petal should be isFromPast");
@@ -89,6 +89,7 @@ public class Oil : MonoBehaviour
                 break;
 
             default:
+                print(itemName + " is not included in Oil.cs Switch-Case.");
                 break;
         }
 
