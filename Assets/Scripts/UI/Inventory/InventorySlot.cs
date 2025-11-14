@@ -88,6 +88,23 @@ public class InventorySlot : MonoBehaviour
     {
         Focus(value);
         zoomObject.SetActive(value);
+        Sprite sprite = zoomObject.GetComponent<UnityEngine.UI.Image>().sprite;
+        //RectTransform rectTransform = sprite.GetComponent<RectTransform>();
+        ////image.preserveAspect = true;
+        //Vector2 imageSize = rectTransform.sizeDelta;
+        //float factor;
+        //if (imageSize.y >= imageSize.x)
+        //{
+        //    factor = (SCREEN_WIDTH * ZOOM_PERCENTAGE) / imageSize.y;
+        //}
+        //else
+        //{
+        //    factor = (SCREEN_HEIGHT * ZOOM_PERCENTAGE) / imageSize.x;
+        //}
+
+        //imageSize.x = imageSize.x * factor;
+        //imageSize.y = imageSize.y * factor;
+        //rectTransform.sizeDelta = new Vector2(imageSize.x, imageSize.y);
     }
     public void OnZoom()
     {
