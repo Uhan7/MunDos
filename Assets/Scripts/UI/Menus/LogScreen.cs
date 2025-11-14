@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class LogScreen : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private AudioSource sfxSource;
+
     [Header("Key Inputs")]
     [SerializeField] private KeyCode exitKey = KeyCode.Escape;
     [SerializeField] private KeyCode logKey;
@@ -12,6 +15,8 @@ public class LogScreen : MonoBehaviour
     [SerializeField] private GameObject logScreen;
     [SerializeField] private TextMeshProUGUI fullLog;
     [SerializeField] private Scrollbar scrollbar;
+    [SerializeField] private AudioClip logOpenSFX;
+    [SerializeField] private AudioClip logCloseSFX;
 
     // Animation
     private bool active = false;
@@ -47,6 +52,8 @@ public class LogScreen : MonoBehaviour
 
         active = !active;
         logScreen.SetActive(!logScreen.activeInHierarchy);
+
+        if (sfxSource != null) sfxSource.PlayOneShot(active ? logOpenSFX : logCloseSFX);
     }
 
     public void RecieveName(Dialogue dialogue)
