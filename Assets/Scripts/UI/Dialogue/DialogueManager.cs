@@ -34,8 +34,8 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private float textPunctSpeed;
 	[HideInInspector] private int lettersUntilSFX = 4;
 	[HideInInspector] private AudioClip soundToPlay;
-	[HideInInspector] private float minPitch = 0.9f;
-	[HideInInspector] private float maxPitch = 1.1f;
+	[SerializeField] private float minPitch = 0.9f;
+	[SerializeField] private float maxPitch = 1.1f;
 
 	[Header("Effects Variables")]
 	[HideInInspector] private int totalVisibleCharacters;
