@@ -29,7 +29,7 @@ public class ZoomEnviManager : MonoBehaviour
         zoomEnviImage.SetActive(true);
 
         activated = true;
-        Debug.Log("Invoking");
+        //Debug.Log("Invoking");
         CallZoomEvniSubComponents.Invoke();
     }
 

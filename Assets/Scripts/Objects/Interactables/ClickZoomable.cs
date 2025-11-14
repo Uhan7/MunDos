@@ -9,6 +9,7 @@ using UnityEngine.Rendering;
 using System.Collections;
 // using Microsoft.Unity.VisualStudio.Editor;
 using Unity.VisualScripting;
+using NaughtyAttributes;
 
 [System.Serializable]
 public class PasswordElement
@@ -31,12 +32,12 @@ public class ClickZoomable : MonoBehaviour
     [SerializeField] private KeyCode deactivateKey;
 
     [Header("Components")]
-    [SerializeField] private GameObject exitButton;
-    [SerializeField] private GameObject zoomEnviBackdrop;
-    [SerializeField] private GameObject zoomEnviImage;
-    [SerializeField] private GameObject[] passwordOrderInput;
-    [SerializeField] private GameObject selected;
+    [SerializeField] private bool isSingleEnvi;
+    [ShowIf("isSingleEnvi")][SerializeField] private GameObject exitButton;
+    [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviBackdrop;
+    [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviImage;
     [SerializeField] private bool deactivateAfter = true;
+    [SerializeField] private GameObject[] passwordOrderInput;
 
     [HideInInspector] private List<PasswordElement> passwordOrder = new List<PasswordElement>();
     [HideInInspector] private int orderIndex = 0;
@@ -67,8 +68,6 @@ public class ClickZoomable : MonoBehaviour
                 passwordIndex++;
             }
         }
-
-        else Debug.LogError($"{selected.name} is null");
     }
 
 
