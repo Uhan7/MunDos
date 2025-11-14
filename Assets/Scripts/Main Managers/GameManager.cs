@@ -103,6 +103,8 @@ public class GameManager : MonoBehaviour
 
         TogglePauseBackground();
 
+        audioSource.PlayOneShot(!isPaused ? pauseOpenSFX : pauseCloseSFX);
+
         pauseMenuScript.active = !pauseMenuScript.active;
     }
 
@@ -116,8 +118,6 @@ public class GameManager : MonoBehaviour
         protagMoveScript.canMove = (!isPaused && !isFocusing);
         protagMoveScript.canInput = (!isPaused && !isFocusing);
         timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
-
-        audioSource.PlayOneShot(isPaused ? pauseOpenSFX : pauseCloseSFX);
 
         Time.timeScale = isPaused ? 0 : 1;
     }
