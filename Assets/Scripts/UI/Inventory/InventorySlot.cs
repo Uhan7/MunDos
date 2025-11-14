@@ -5,6 +5,16 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
+    [Header("Zoom Components")]
+    [HideInInspector] float SCREEN_WIDTH;
+    [HideInInspector] float SCREEN_HEIGHT;
+    [HideInInspector] float REFERENCE_WIDTH = 1080;
+    [HideInInspector] float REFERENCE_HEIGHT = 1920;
+    [HideInInspector] float REFERENCE_RATIO;
+    [HideInInspector] float ASPECT_RATIO;
+    [HideInInspector] float ZOOM_PERCENTAGE = 0.70f;
+
+
     [Header("Components")]
     [HideInInspector] private Image imageComponent;
     [SerializeField] public GameObject zoomObject;
@@ -33,10 +43,28 @@ public class InventorySlot : MonoBehaviour
 
     private void Update()
     {
-
+        if (Screen.width != SCREEN_WIDTH) 
+        {
+            SCREEN_WIDTH = Screen.width;
+            test = true;
+        }
+        if (Screen.height != SCREEN_HEIGHT) 
+        {
+            SCREEN_HEIGHT = Screen.height;
+            test = true;
+        }
+        if (test) 
+        { 
+            Debug.Log($"screen width {SCREEN_WIDTH} height {SCREEN_HEIGHT}, % width {SCREEN_WIDTH * ZOOM_PERCENTAGE}, height {SCREEN_HEIGHT * ZOOM_PERCENTAGE}"); 
+            test = false; 
+            ASPECT_RATIO = REFERENCE_WIDTH / REFERENCE_HEIGHT;
+        }
     }
     private void Start()
     {
+        REFERENCE_RATIO = REFERENCE_WIDTH / REFERENCE_HEIGHT;
+        SCREEN_WIDTH = Screen.width;
+        SCREEN_HEIGHT = Screen.height;
         if (zoomObject == null) Debug.LogError($"Error {this.name}'s zoomObject is null");
     }
 
