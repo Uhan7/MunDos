@@ -34,6 +34,7 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private float textPunctSpeed;
 	[HideInInspector] private int lettersUntilSFX = 4;
 	[HideInInspector] private AudioClip soundToPlay;
+	[SerializeField] private AudioClip continueDialogueSFX;
 	[SerializeField] private float minPitch = 0.9f;
 	[SerializeField] private float maxPitch = 1.1f;
 
@@ -176,6 +177,8 @@ public class DialogueManager : MonoBehaviour
 		canNext = false;
 		skip = false;
 		nextIndicator.SetActive(false);
+
+		aSource.PlayOneShot(continueDialogueSFX);
 
 		if (sentences.Count == 0)
 		{

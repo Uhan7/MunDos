@@ -32,7 +32,8 @@ public class TimelineManager : MonoBehaviour
     [SerializeField] private Room[] presentRooms;
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource dialogueSFXSource;
-    [SerializeField] private AudioClip transitionSound;
+    [SerializeField] private AudioClip transitionSoundToPast;
+    [SerializeField] private AudioClip transitionSoundToPresent;
 
     [Header("Flags")]
     [HideInInspector] private int currentTimeline; // 0 is Past | 1 is Present
@@ -115,13 +116,13 @@ public class TimelineManager : MonoBehaviour
         {
             pastTransition.SetActive(true);
             presentTransition.SetActive(false);
-            sfxSource.PlayOneShot(transitionSound);
+            sfxSource.PlayOneShot(transitionSoundToPast);
         }
         else
         {
             pastTransition.SetActive(false);
             presentTransition.SetActive(true);
-            sfxSource.PlayOneShot(transitionSound);
+            sfxSource.PlayOneShot(transitionSoundToPresent);
         }
     }
 
