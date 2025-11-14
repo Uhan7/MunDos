@@ -9,7 +9,6 @@ public class DialogueTrigger : MonoBehaviour
     [HideInInspector] private const float DEACTIVATE_TIME = 0.1f;
     [HideInInspector] private const string PROTAG_TAG = "Protag";
     [HideInInspector] private const string DIALOGUE_HOLDER_NAME = "Dialogue Holder";
-    [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
 
     [Header("References")]
     [HideInInspector] private DialogueManager dialogueHolder;
@@ -41,7 +40,6 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject[] objectsToActivateAfter;
     [SerializeField] private GameObject[] objectsToDeactivateAfter;
     [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
-    [SerializeField] private AudioClip[] soundsToPlayAfter;
 
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
@@ -52,7 +50,6 @@ public class DialogueTrigger : MonoBehaviour
     [HideInInspector] private bool alreadyActivatedObjects = false;
     [HideInInspector] private bool alreadyDeactivatedObjects = false;
     [HideInInspector] private bool alreadyCheckedConditional = false;
-    [HideInInspector] private bool alreadyPlayedSounds = false;
 
     private void Awake()
     {
@@ -71,8 +68,8 @@ public class DialogueTrigger : MonoBehaviour
 
         if (objectsToActivateAfter.Length != 0 && !alreadyActivatedObjects) ActivateOtherObjects();
         if (objectsToDeactivateAfter.Length != 0 && !alreadyDeactivatedObjects) DeactivateOtherObjects();
+
         if (conditionalObjectsToCheckAfter.Length != 0 && !alreadyCheckedConditional) AddConditionalCheck();
-        if (soundsToPlayAfter.Length != 0 && !alreadyPlayedSounds) PlaySounds();
 
         if (linksToOtherDialogue && nextDialogue != null)
         {
@@ -169,17 +166,6 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         alreadyCheckedConditional = true;
-    }
-
-    public void PlaySounds()
-    {
-        if (alreadyPlayedSounds) return;
-
-        AudioSource audioSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
-
-        foreach (AudioClip sound in soundsToPlayAfter) audioSource.PlayOneShot(sound);
-
-        alreadyPlayedSounds = true;
     }
 
     void ActivateOtherObjects()
