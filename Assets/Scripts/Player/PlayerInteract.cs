@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -36,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] private bool hasCheckedInventory;
 
     [HideInInspector] public bool HasActiveItem;
-    [HideInInspector] public bool isClicked;
+    [HideInInspector] public bool isSelected;
     [HideInInspector] public bool isZoomed;
     [HideInInspector] public int activeObjectIndex;
 
@@ -64,18 +65,18 @@ public class PlayerInteract : MonoBehaviour
         if (inventorySlots.activeInHierarchy)
         {
             hasCheckedInventory = false;
-            if (Input.GetKeyDown(item1Key)) SelectValidItem(0);
-            else if (Input.GetKeyDown(item2Key)) SelectValidItem(1);
-            else if (Input.GetKeyDown(item3Key)) SelectValidItem(2);
-            else if (Input.GetKeyDown(item4Key)) SelectValidItem(3);
-            else if (Input.GetKeyDown(item5Key)) SelectValidItem(4);
+            if (Input.GetKeyDown(item1Key)) KeyPress(0);
+            else if (Input.GetKeyDown(item2Key)) KeyPress(1);
+            else if (Input.GetKeyDown(item3Key)) KeyPress(2);
+            else if (Input.GetKeyDown(item4Key)) KeyPress(3);
+            else if (Input.GetKeyDown(item5Key)) KeyPress(4);
         }
 
         else if (!inventorySlots.activeInHierarchy && !hasCheckedInventory)
         {
             SelectItem(5);
             hasCheckedInventory = true;
-            isZoomed = isClicked = false;
+            isZoomed = isSelected = false;
             ResetStates();
             return;
         }
@@ -142,15 +143,15 @@ public class PlayerInteract : MonoBehaviour
         if (inventorySlot == null) Debug.LogError($"{this.gameObject.name}'s inventoryslot not correctly set");
 
         //Select unselected item
-        if (!isZoomed && !isClicked)
+        if (!isZoomed && !isSelected)
         {
-            isClicked = true;
+            isSelected = true;
             activeObjectIndex = value;
             WillUpdate(true);
         }
 
         //Zoom in on valid selected item
-        else if (!isZoomed && isClicked && value == activeObjectIndex)
+        else if (!isZoomed && isSelected && value == activeObjectIndex)
         {
             inventorySlot.SetZoomObject();
             inventorySlot.SetZoomState(true);
@@ -160,7 +161,7 @@ public class PlayerInteract : MonoBehaviour
         }
 
         //Cancel Zoom in and select other item
-        else if (!isZoomed && isClicked && value != activeObjectIndex)
+        else if (!isZoomed && isSelected && value != activeObjectIndex)
         {
             inventorySlot.SetZoomObject();
             inventorySlot.SetZoomState(false);
@@ -171,22 +172,22 @@ public class PlayerInteract : MonoBehaviour
         }
 
         //Zoom out of same item
-        else if (isZoomed && isClicked && value == activeObjectIndex)
+        else if (isZoomed && isSelected && value == activeObjectIndex)
         {
             inventorySlot.SetZoomState(false);
             isZoomed = false;
-            //isClicked = false;
+            //isSelected = false;
             WillUpdate(true);
         }
 
         //Zoom out then select different item
-        else if (isZoomed && isClicked && value != activeObjectIndex)// Zoom out of item, click another item
+        else if (isZoomed && isSelected && value != activeObjectIndex)// Zoom out of item, click another item
         {
             InventorySlot previous = inventorySlots.transform.GetChild(activeObjectIndex + 1).GetComponent<InventorySlot>();
             if (previous == null) Debug.LogError($"{this.gameObject.name}'s previous not correctly set");
 
             previous.SetZoomState(false);
-            //isClicked = false;
+            //isSelected = false;
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
@@ -237,11 +238,11 @@ public class PlayerInteract : MonoBehaviour
         {
             if (itemDatas[index].itemName != "")
             {
+                
                 index++;
                 if (index >= itemDatas.Length) index = 0;
             }
         }
-
         return index;
     }
 
@@ -300,8 +301,6 @@ public class PlayerInteract : MonoBehaviour
         willUpdate = true;
     }
 
-    
-
     public void SelectItem(int index)
     {
 
@@ -316,11 +315,23 @@ public class PlayerInteract : MonoBehaviour
             return false;
         }
         HasActiveItem = true;
+        isSelected = true;
         playerItemIndex = index;
         SetCurrentItem();
         return true;
     }
-
+    void KeyPress(int index)
+    {
+        if (playerItemIndex == index && isSelected)
+        {
+            SelectItem(5);
+            ResetStates();
+        }
+        else
+        {
+            SelectValidItem(index);
+        }
+    }
 
     void SelectItem(string value)
     {
@@ -368,7 +379,7 @@ public class PlayerInteract : MonoBehaviour
         if (activeObjectIndex == 5) return;
         InventorySlot activeItem = inventorySlots.transform.GetChild(activeObjectIndex + 1).GetComponent<InventorySlot>();
         if (activeItem) activeItem.SetZoomState(false);
-        isClicked = false;
+        isSelected = false;
         isZoomed = false;
         activeObjectIndex = 5;
         WillUpdate(true);
