@@ -48,6 +48,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveObserver(EventNames.FOCUS_DIALOGUE);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.HIDE_UI);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.TOGGLE_PAUSE);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.TOGGLE_PAUSE_BG);
+    }
+
     // Event Broadcasting Functions --------------------------------------------
 
     public void FocusDialogue(Parameters param)

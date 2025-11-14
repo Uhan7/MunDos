@@ -69,11 +69,11 @@ public class TimelineManager : MonoBehaviour
     {
         foreach (Room room in pastRooms)
         {
-            if (room.roomCamera.activeInHierarchy) room.connectedAudioSource.volume = (currentTimeline == 0) ? SettingsInfo.musicVol : 0;
+            if (room.roomCamera.activeInHierarchy && room.connectedAudioSource != null) room.connectedAudioSource.volume = (currentTimeline == 0) ? SettingsInfo.musicVol : 0;
         }
         foreach (Room room in presentRooms)
         {
-            if (room.roomCamera.gameObject.activeInHierarchy) room.connectedAudioSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
+            if (room.roomCamera.gameObject.activeInHierarchy && room.connectedAudioSource != null) room.connectedAudioSource.volume = (currentTimeline == 1) ? SettingsInfo.musicVol : 0;
         }
         sfxSource.volume = SettingsInfo.SFXVol;
         dialogueSFXSource.volume = SettingsInfo.dialogueVol;
