@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class InventoryUI : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private AudioSource sfxSource;
+
     [SerializeField] GameObject gameMan;
     [SerializeField] GameObject InventorySlots;
     [SerializeField] private KeyCode openInventoryKey;
@@ -11,6 +14,9 @@ public class InventoryUI : MonoBehaviour
     [HideInInspector] private Animator animator;
     [HideInInspector] private GameManager gameManager;
     [HideInInspector] public bool WillUpdate;
+
+    [SerializeField] private AudioClip inventoryOpenSFX;
+    [SerializeField] private AudioClip inventoryCloseSFX;
 
     private void Start()
     {
@@ -34,6 +40,7 @@ public class InventoryUI : MonoBehaviour
     {
         WillUpdate = true;
         animator.SetBool("isOpen", !animator.GetBool("isOpen"));
+        if (sfxSource != null) sfxSource.PlayOneShot(animator.GetBool("isOpen") ? inventoryOpenSFX : inventoryCloseSFX);
     }
 
     void InitializeValues()
