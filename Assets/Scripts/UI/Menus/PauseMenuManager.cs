@@ -45,7 +45,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void PauseScreenOff()
     {
-        if (active)
+        if (active && IsAllWindowsClosed())
         {
             gameManager.canPause = true;
             TogglePause();
@@ -60,5 +60,11 @@ public class PauseMenuManager : MonoBehaviour
     public void toggleSaveScreen()
     {
         saveUI.SetActive(!saveUI.activeInHierarchy);
+    }
+
+    // Helper functions ---------------------------------
+    private bool IsAllWindowsClosed()
+    {
+        return !(saveUI.activeInHierarchy || settingsUI.activeInHierarchy);
     }
 }
