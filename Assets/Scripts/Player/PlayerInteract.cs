@@ -158,6 +158,7 @@ public class PlayerInteract : MonoBehaviour
             inventorySlot.OnZoom();
             isZoomed = true;
             WillUpdate(true);
+            print("2");
         }
 
         //Cancel Zoom in and select other item
@@ -169,6 +170,7 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
+            print("3");
         }
 
         //Zoom out of same item
@@ -176,8 +178,9 @@ public class PlayerInteract : MonoBehaviour
         {
             inventorySlot.SetZoomState(false);
             isZoomed = false;
-            //isSelected = false;
+            isSelected = false;
             WillUpdate(true);
+            print("4");
         }
 
         //Zoom out then select different item
@@ -191,6 +194,7 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
+            print("5");
         }
     }
 
@@ -432,7 +436,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    void ResetStates()
+    public void ResetStates()
     {
         if (activeObjectIndex == 5) return;
         InventorySlot activeItem = inventorySlots.transform.GetChild(activeObjectIndex + 1).GetComponent<InventorySlot>();
