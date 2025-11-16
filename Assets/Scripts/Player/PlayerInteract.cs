@@ -273,14 +273,13 @@ public class PlayerInteract : MonoBehaviour
     public bool TryRemoveItem(Item item)
     {
         int index = DoesItemExist(item);
-        if (index <= -1) return false;
+        if (index <= -1 || index > 5) return false;
 
         itemDatas[index] = null;
-        if (index + 1 >= itemDatas.Length - 1) return true;
+        if (index  >= itemDatas.Length - 1) return true;
         for (int i = index + 1; i < itemDatas.Length - 1; i++)
         {
-            if (itemDatas[index] == null) continue;
-            itemDatas[index] = itemDatas[index + 1];
+            itemDatas[i] = itemDatas[i + 1];
         }
         itemDatas[itemDatas.Length - 1] = null;
         return true;
