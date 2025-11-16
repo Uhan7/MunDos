@@ -26,6 +26,8 @@ public class LogScreen : MonoBehaviour
 
     private void Update()
     {
+        if (gameManagerReference.isHidingUI) return;
+
         if (Input.GetKeyDown(logKey) && gameManagerReference.canPause)
         {
             LogScreenOn();

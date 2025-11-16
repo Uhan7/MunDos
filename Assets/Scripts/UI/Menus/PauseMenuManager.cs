@@ -25,6 +25,8 @@ public class PauseMenuManager : MonoBehaviour
     {
         animator.SetBool("Active", active);
 
+        if (gameManager.isHidingUI) return;
+
         if (Input.GetKeyDown(pauseKey) && gameManager.canPause) PauseScreenOn();
         else if (Input.GetKeyDown(pauseKey) && !gameManager.canPause) PauseScreenOff();
     }
