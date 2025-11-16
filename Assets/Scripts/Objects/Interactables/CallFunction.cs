@@ -93,7 +93,7 @@ public class CallFunction : MonoBehaviour
 
     private void Disable()
     {
-        //Debug.Log("Disabling");
+        Debug.Log("Disabling");
         Focus(false);
         hasInvoked = false;
         this.gameObject.SetActive(false);
