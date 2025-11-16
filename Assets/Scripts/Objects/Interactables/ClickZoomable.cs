@@ -37,7 +37,8 @@ public class ClickZoomable : MonoBehaviour
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject exitButton;
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviBackdrop;
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviImage;
-    [SerializeField] private bool deactivateAfter = true;
+    [SerializeField] private bool deactivateAfter;
+    [SerializeField] private bool disableInteractionAfter;
 
     [HideInInspector] private List<PasswordElement> passwordOrder = new List<PasswordElement>();
     [HideInInspector] private List<string> inputOrder = new List<string>();
@@ -80,11 +81,14 @@ public class ClickZoomable : MonoBehaviour
     {
         if (inputOrder.Contains(gameObject.name))
         {
-            //Debug.Log($"Alredy have {gameObject.name}");
             return;
         }
         inputOrder.Add(gameObject.name);
-        SetInteractableObjectOutline(gameObject, true);
+        if (!isSingleEnvi)
+        {
+            SetInteractableObjectOutline(gameObject, true);
+        }
+        
         if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
         {
             wrongPasswordInput = true;
@@ -95,15 +99,12 @@ public class ClickZoomable : MonoBehaviour
            
             if (wrongPasswordInput == false)
             {
-                //Debug.Log($"solved");
-
                 SetAll(toActivate, true);
                 SetAll(toDeactivate, false);
                 OnExit();
             }
             else
             {
-                //Debug.Log($"resetting");
 
                 orderIndex = 0;
                 wrongPasswordInput = false;
@@ -140,8 +141,6 @@ public class ClickZoomable : MonoBehaviour
         foreach(var obj in passwordOrderInput)
         {
             UnityEngine.UI.Button button = obj.GetComponent<UnityEngine.UI.Button>();
-            Debug.Log($"resetting button {button.name}");
-
             button.interactable = true;
         }
     }
@@ -178,14 +177,22 @@ public class ClickZoomable : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
+
+        if (disableInteractionAfter)
+        {
+            foreach (var obj in passwordOrderInput)
+            {
+                obj.GetComponent<InteractableObject>().enabled = false;
+            }
+        }
     }
     
     void SetInteractableObjectOutline(GameObject obj, bool var)
     {
 
-        if (obj == null) Debug.LogError($"{obj.name} is null");
+        if (obj == null) Debug.LogError($"obj {obj.name} is null");
         SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
-        if (objSpriteRenderer == null) Debug.LogError($"{objSpriteRenderer.name} is null");
+        if (objSpriteRenderer == null) Debug.LogError($"Sprite render {objSpriteRenderer.name} is null");
         Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
         Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
 
@@ -200,4 +207,5 @@ public class ClickZoomable : MonoBehaviour
             else obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
     }
+
 }

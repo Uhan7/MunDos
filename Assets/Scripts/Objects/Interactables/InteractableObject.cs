@@ -109,7 +109,7 @@ public class InteractableObject : MonoBehaviour
 
     public void Interact()
     {
-        Debug.Log("Interacting");
+        //Debug.Log("Interacting");
         foreach (AudioClip clip in soundsToPlay) sfxSource.PlayOneShot(clip);
 
         SetAll(toActivateOnInteract, true);
@@ -251,7 +251,7 @@ public class InteractableObject : MonoBehaviour
         else zoomCanvas.DeactivateZoomedEnvi();
     }
 
-    public void Focus(bool value)
+    void Focus(bool value)
     {
         Parameters param = new Parameters();
         param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);

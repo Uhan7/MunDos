@@ -70,7 +70,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (!canMove)
         {
-            print("ova here");
+            //print("ova here");
             getMoveLeftKey = false;
             getMoveRightKey = false;
             //isWalking = false;

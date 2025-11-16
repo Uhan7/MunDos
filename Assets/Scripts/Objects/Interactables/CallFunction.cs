@@ -27,7 +27,6 @@ public class CallFunction : MonoBehaviour
 
     private void Start()
     {
-        if (toCall == null) Debug.Log($"{this.name}'s callFunc is empty");
         hasInvoked = false;
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -36,7 +35,11 @@ public class CallFunction : MonoBehaviour
 
         if (onTrigger)
         {
-            if (willFocus) Focus(true);
+            if (willFocus)
+            {
+                Focus(true);
+            }
+            
             if (activatedByKeyPress)
             {
                 CheckKeyPress();
@@ -55,7 +58,10 @@ public class CallFunction : MonoBehaviour
     {
         if (onEnable) 
         {
-            if (willFocus) Focus(true);
+            if (willFocus)
+            {
+                Focus(true);
+            }
             if (activatedByKeyPress) 
             {
                 CheckKeyPress();
@@ -80,12 +86,12 @@ public class CallFunction : MonoBehaviour
 
     IEnumerator WaitForKeyPress()
     {
+        Focus(true);
         yield return new WaitForSeconds(0.2f);
         while (!Input.GetKeyDown(interactKey))
         {
             yield return null;
         }
-        Debug.Log("Will call invoke");
         hasInvoked = true;
         toCall.Invoke();
         Disable();
@@ -93,7 +99,6 @@ public class CallFunction : MonoBehaviour
 
     private void Disable()
     {
-        Debug.Log("Disabling");
         Focus(false);
         hasInvoked = false;
         this.gameObject.SetActive(false);
