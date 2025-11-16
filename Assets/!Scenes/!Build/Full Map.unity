@@ -1594,6 +1594,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &24627967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 804186729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &24745477
 GameObject:
   m_ObjectHideFlags: 0
@@ -10008,9 +10013,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 336681350}
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 336681349}
   m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
 --- !u!4 &336681347 stripped
 Transform:
@@ -10022,20 +10024,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
   m_PrefabInstance: {fileID: 336681346}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &336681349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336681348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a24936d6624640a197d8d61c75d5a9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredChecks: 3
-  currentChecks: 0
 --- !u!114 &336681350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10058,7 +10046,7 @@ MonoBehaviour:
   repeatable: 0
   objectsToActivate: []
   objectsToDeactivate:
-  - {fileID: 2095247838}
+  - {fileID: 1925745182}
   objectsToLock: []
   objectsToUnlock: []
 --- !u!4 &336681351 stripped
@@ -10515,6 +10503,14 @@ PrefabInstance:
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 1657758033}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: data.objectsToInteractWith.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1407777875}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: L2 Sealed Bottle
@@ -16299,6 +16295,11 @@ MonoBehaviour:
   originalPositionY: 2.2272
   parallaxFactorX: -0.5
   parallaxFactorY: 0
+--- !u!1 &557519259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 1550390005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &558344556
 GameObject:
   m_ObjectHideFlags: 0
@@ -23993,6 +23994,14 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1407777875}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'playeritemNamesToRemove.Array.data[0]'
       value: L2 Orchid Sap
       objectReference: {fileID: 0}
@@ -24000,6 +24009,10 @@ PrefabInstance:
       propertyPath: 'playeritemNamesToRemove.Array.data[1]'
       value: L2 Oil Tube
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1686152508}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27209,7 +27222,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 1550390007}
+      objectReference: {fileID: 557519259}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37726,6 +37739,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 24627967}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.name
       value: Liezel
       objectReference: {fileID: 0}
@@ -38708,10 +38725,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1407777876}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!4 &1407777874 stripped
 Transform:
@@ -38723,21 +38737,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1407777873}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1407777876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407777875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLockedAtStart: 1
-  requiredChecks: 1
-  currentChecks: 0
 --- !u!1001 &1409576694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43033,12 +43032,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1550390009}
     - targetCorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1550390008}
@@ -43074,6 +43076,31 @@ MonoBehaviour:
 
     Conditional
     Check By:'
+--- !u!114 &1550390009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557519259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 1
+  lockAndUnlock: 0
+  delayTime: 0.5
+  resetAfter: 0
+  deactivateAfter: 0
+  repeatable: 0
+  objectsToActivate:
+  - {fileID: 1550390007}
+  objectsToDeactivate: []
+  objectsToLock: []
+  objectsToUnlock: []
 --- !u!1001 &1558744872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53078,7 +53105,7 @@ PrefabInstance:
       addedObject: {fileID: 1925745183}
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1925745192}
+      addedObject: {fileID: 1925745201}
   m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
 --- !u!4 &1925745181 stripped
 Transform:
@@ -53115,7 +53142,7 @@ MonoBehaviour:
   - {fileID: 2095247838}
   objectsToLock: []
   objectsToUnlock: []
---- !u!114 &1925745192
+--- !u!114 &1925745201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

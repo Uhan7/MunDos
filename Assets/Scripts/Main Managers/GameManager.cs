@@ -54,6 +54,13 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Equals)) Time.timeScale += 0.25f;
+        if (Input.GetKeyDown(KeyCode.Minus)) Time.timeScale -= 0.25f;
+        if (Input.GetKeyDown(KeyCode.Alpha0)) Time.timeScale = 1f;
+    }
+
     private void OnDestroy()
     {
         EventBroadcaster.Instance.RemoveObserver(EventNames.FOCUS_DIALOGUE);
