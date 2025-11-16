@@ -69,10 +69,13 @@ public class PlayeritemsManager : MonoBehaviour
         //if (!player.gameObject.activeInHierarchy) return;
         for (int i = 0; i < player.itemDatas.Length - 1; i++)
         {
+            
             if (player.itemDatas[i].itemName != "")
             {
                 itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
+                Debug.Log($"PIM: itemslots {i}: {player.itemDatas[i].itemName}");
             }
+            else Debug.Log($"PIM: itemslots {i}: empty");
             if (player.playerItemIndex == i)
             {
                 itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);

@@ -270,19 +270,51 @@ public class PlayerInteract : MonoBehaviour
         SetCurrentItem();
         item.PickedUp();
     }
-    public bool TryRemoveItem(Item item)
-    {
-        int index = DoesItemExist(item);
-        if (index <= -1 || index > 5) return false;
+    //public bool TryRemoveItem(Item item)
+    //{
+    //    int index = DoesItemExist(item);
+    //    if (index <= -1 || index > 5) return false;
 
-        itemDatas[index] = null;
-        if (index  >= itemDatas.Length - 1) return true;
-        for (int i = index + 1; i < itemDatas.Length - 1; i++)
+    //    itemDatas[index] = null;
+    //    if (index  >= itemDatas.Length - 1) return true;
+    //    for (int i = index + 1; i < itemDatas.Length - 1; i++)
+    //    {
+    //        itemDatas[i] = itemDatas[i + 1];
+    //    }
+    //    itemDatas[itemDatas.Length - 1] = null;
+    //    return true;
+    //}
+    public void TryRemoveItem(Item item)
+    {
+        if (item == null)
         {
-            itemDatas[i] = itemDatas[i + 1];
+            Debug.LogWarning($"TryRemoveItem: {item} is null");
+            return;
         }
-        itemDatas[itemDatas.Length - 1] = null;
-        return true;
+        int index = HasItemName(item);
+        Debug.Log($"Item {item.name} at index {index}");
+        if (index <= -1 || index > itemDatas.Length || index >= 5) return;
+
+        
+        
+        
+        isSelected = isZoomed = false;
+        playerItemIndex = 5;
+
+        InventorySlot activeItem = inventorySlots.transform.GetChild(activeObjectIndex + 1).GetComponent<InventorySlot>();
+        if (activeItem) activeItem.SetZoomState(false);
+
+        
+        itemDatas[index].itemSprite = null;
+
+        itemDatas[index].itemName = "";
+        WillUpdate(true);
+        //if (index >= itemDatas.Length - 1) return;
+        //for (int i = index + 1; i < itemDatas.Length - 1; i++)
+        //{
+        //    itemDatas[i] = itemDatas[i + 1];
+        //}
+        //itemDatas[itemDatas.Length - 1] = null;
     }
     public int DoesItemExist(Item item)
     {
@@ -290,6 +322,17 @@ public class PlayerInteract : MonoBehaviour
         foreach (ItemData itemData in itemDatas)
         {
             if (item.GetData() == itemData) return index;
+            index++;
+        }
+        return -1;
+    }
+
+    public int HasItemName(Item item)
+    {
+        int index = 0;
+        foreach (ItemData itemData in itemDatas)
+        {
+            if (item.GetData().itemName == itemData.itemName) return index;
             index++;
         }
         return -1;
