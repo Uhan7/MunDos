@@ -40,7 +40,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject[] objectsToActivateAfter;
     [SerializeField] private GameObject[] objectsToDeactivateAfter;
     [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
-    [SerializeField] private int[] playeritemIndicesToRemove;
+    [SerializeField] private string[] playeritemNamesToRemove;
 
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
@@ -71,7 +71,7 @@ public class DialogueTrigger : MonoBehaviour
         if (objectsToActivateAfter.Length != 0 && !alreadyActivatedObjects) ActivateOtherObjects();
         if (objectsToDeactivateAfter.Length != 0 && !alreadyDeactivatedObjects) DeactivateOtherObjects();
         if (conditionalObjectsToCheckAfter.Length != 0 && !alreadyCheckedConditional) AddConditionalCheck();
-        if (playeritemIndicesToRemove.Length != 0 && !alreadyRemovedPlayeritems) RemovePlayerItems();
+        if (playeritemNamesToRemove.Length != 0 && !alreadyRemovedPlayeritems) RemovePlayerItems();
 
         if (linksToOtherDialogue && nextDialogue != null)
         {
@@ -182,7 +182,7 @@ public class DialogueTrigger : MonoBehaviour
 
     void RemovePlayerItems()
     {
-        foreach (int playeritemIndex in playeritemIndicesToRemove) GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>().ClearItem(playeritemIndex);
+        foreach (string playeritemName in playeritemNamesToRemove) GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>().ClearItem(playeritemName);
         alreadyRemovedPlayeritems = true;
     }
 

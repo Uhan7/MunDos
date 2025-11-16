@@ -264,11 +264,17 @@ public class PlayerInteract : MonoBehaviour
         inventoryUI.FlashButton();
     }
 
-    public void ClearItem(int index)
+    public void ClearItem(string playeritemName)
     {
-        itemDatas[index].itemName = "";
-        itemDatas[index].itemSprite = null;
-        itemDatas[index].objectsToInteractWith = null;
+        for (int i = 0; i < 5; i++)
+        {
+            if (itemDatas[i].itemName == playeritemName)
+            {
+                itemDatas[i].itemName = "";
+                itemDatas[i].itemSprite = null;
+                itemDatas[i].objectsToInteractWith = null;
+            }
+        }
 
         willUpdate = true;
     }
