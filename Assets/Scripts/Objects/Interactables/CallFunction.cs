@@ -1,3 +1,5 @@
+using NaughtyAttributes;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,17 +9,24 @@ public class CallFunction : MonoBehaviour
     [HideInInspector] private const string PROTAG_TAG = "Protag";
 
     [Header("References")]
-    [SerializeField] public GameObject[] itemsToAdd;
-    [SerializeField] public UnityEvent callFunc;
+
+    [SerializeField] private bool activatedByKeyPress;
+    [ShowIf("activatedByKeyPress")][SerializeField] private KeyCode interactKey = KeyCode.F;
+    [SerializeField] public UnityEvent toCall;
+    [ShowIf("activatedByKeyPress")][SerializeField] private bool activateBeforeKeyPress;
+    [ShowIf("activateBeforeKeyPress")][SerializeField] public UnityEvent toCallRegardless;
+
 
     [Header("Properties")]
-    [SerializeField] private bool onEnable;
+    [SerializeField] private bool onEnable = true;
     [SerializeField] private bool onTrigger;
-    [SerializeField] private bool disableAfter;
+    [SerializeField] private bool disableAfter = true;
+    [HideInInspector] private bool hasInvoked;
 
     private void Start()
     {
-        if (callFunc == null) Debug.Log($"{this.name}'s callFunc is empty");
+        if (toCall == null) Debug.Log($"{this.name}'s callFunc is empty");
+        hasInvoked = false;
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -25,16 +34,51 @@ public class CallFunction : MonoBehaviour
 
         if (onTrigger)
         {
-            callFunc.Invoke();
+            if (activatedByKeyPress)
+            {
+                CheckKeyPress();
+            }
+            else if (!activatedByKeyPress) toCall.Invoke();
+            if (disableAfter)
+            {
+                if (activatedByKeyPress && hasInvoked) Disable();
+                else if (!activatedByKeyPress) Disable();
+
+            }
         }
-        if (disableAfter) this.enabled = false;
     }
+
     private void OnEnable()
     {
-        if (onEnable)
+        Debug.Log($"CF: isactive");
+        if (onEnable) 
         {
-            callFunc.Invoke();
+            Debug.Log($"CF: invoking");
+            if (activatedByKeyPress) 
+            {
+                CheckKeyPress();
+            }
+            else if (!activatedByKeyPress) toCall.Invoke();
+            if (disableAfter)
+            {
+                if (activatedByKeyPress && hasInvoked) Disable();
+                else if (!activatedByKeyPress) Disable();
+            }
         }
-        if (disableAfter) this.enabled = false;
+    }
+
+    private void CheckKeyPress()
+    {
+        if (toCallRegardless != null) toCallRegardless.Invoke();
+        if (Input.GetKeyDown(interactKey))
+        {
+            toCall.Invoke();
+            hasInvoked = true;
+        }
+    }
+    private void Disable()
+    {
+        this.gameObject.SetActive(false);
+        hasInvoked = false;
     }
 }

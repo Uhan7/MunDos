@@ -109,6 +109,7 @@ public class InteractableObject : MonoBehaviour
 
     public void Interact()
     {
+        Debug.Log("Interacting");
         foreach (AudioClip clip in soundsToPlay) sfxSource.PlayOneShot(clip);
 
         SetAll(toActivateOnInteract, true);
@@ -172,8 +173,10 @@ public class InteractableObject : MonoBehaviour
     void SetAll(GameObject[] objects, bool value)
     {
         if (objects == null) return;
+
         foreach (GameObject obj in objects)
         {
+            Debug.Log($"activating {obj.name}");
             if (obj == null) continue;
             obj.SetActive(value);
         }
