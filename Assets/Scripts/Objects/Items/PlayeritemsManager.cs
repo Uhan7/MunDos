@@ -10,7 +10,8 @@ public class PlayeritemsManager : MonoBehaviour
     [SerializeField] private InventoryUI presentInventoryUI;
     [SerializeField] private GameObject[] pastPlayeritemSlots;
     [SerializeField] private GameObject[] presentPlayeritemSlots;
-    
+
+    [SerializeField] private Sprite itemlessImage;
 
 
     private void Awake()
@@ -69,13 +70,9 @@ public class PlayeritemsManager : MonoBehaviour
         //if (!player.gameObject.activeInHierarchy) return;
         for (int i = 0; i < player.itemDatas.Length - 1; i++)
         {
-            
-            if (player.itemDatas[i].itemName != "")
-            {
-                itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
-                Debug.Log($"PIM: itemslots {i}: {player.itemDatas[i].itemName}");
-            }
-            else Debug.Log($"PIM: itemslots {i}: empty");
+            if (player.itemDatas[i].itemName != "") itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
+            else itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = itemlessImage;
+
             if (player.playerItemIndex == i)
             {
                 itemSlots[i].GetComponent<InventorySlot>().IsSelected(true);

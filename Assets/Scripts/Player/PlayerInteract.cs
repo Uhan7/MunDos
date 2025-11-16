@@ -88,7 +88,10 @@ public class PlayerInteract : MonoBehaviour
 
         // Debugs can go here ---
 
-        // awooga
+        if (Input.GetKeyDown(KeyCode.Minus))
+        {
+            ClearItem(0);
+        }
 
         // End of debugs ---
     }
@@ -263,6 +266,16 @@ public class PlayerInteract : MonoBehaviour
         // Jiggles inventory button
         inventoryUI.FlashButton();
     }
+
+    public void ClearItem(int index)
+    {
+        itemDatas[index].itemName = "";
+        itemDatas[index].itemSprite = null;
+        itemDatas[index].objectsToInteractWith = null;
+
+        willUpdate = true;
+    }
+
     public void GiveItem(Item item)
     {
         playerItemIndex = FindEmptySlot();
