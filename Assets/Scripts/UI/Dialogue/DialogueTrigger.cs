@@ -40,6 +40,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject[] objectsToActivateAfter;
     [SerializeField] private GameObject[] objectsToDeactivateAfter;
     [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
+    [SerializeField] private int[] playeritemIndicesToRemove;
 
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
@@ -50,6 +51,7 @@ public class DialogueTrigger : MonoBehaviour
     [HideInInspector] private bool alreadyActivatedObjects = false;
     [HideInInspector] private bool alreadyDeactivatedObjects = false;
     [HideInInspector] private bool alreadyCheckedConditional = false;
+    [HideInInspector] private bool alreadyRemovedPlayeritems = false;
 
     private void Awake()
     {
@@ -68,8 +70,8 @@ public class DialogueTrigger : MonoBehaviour
 
         if (objectsToActivateAfter.Length != 0 && !alreadyActivatedObjects) ActivateOtherObjects();
         if (objectsToDeactivateAfter.Length != 0 && !alreadyDeactivatedObjects) DeactivateOtherObjects();
-
         if (conditionalObjectsToCheckAfter.Length != 0 && !alreadyCheckedConditional) AddConditionalCheck();
+        if (playeritemIndicesToRemove.Length != 0 && !alreadyRemovedPlayeritems) RemovePlayerItems();
 
         if (linksToOtherDialogue && nextDialogue != null)
         {
@@ -155,8 +157,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void AddConditionalCheck()
     {
-        if (alreadyCheckedConditional) return;
-
         foreach (GameObject conditionalObject in conditionalObjectsToCheckAfter)
         {
             ConditionalObject conditionalObjectScript = conditionalObject.GetComponent<ConditionalObject>();
@@ -178,6 +178,12 @@ public class DialogueTrigger : MonoBehaviour
     {
         foreach (GameObject objs in objectsToDeactivateAfter) objs.SetActive(false);
         alreadyDeactivatedObjects = true;
+    }
+
+    void RemovePlayerItems()
+    {
+        foreach (int playeritemIndex in playeritemIndicesToRemove) GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>().ClearItem(playeritemIndex);
+        alreadyRemovedPlayeritems = true;
     }
 
     public void Deactivate()

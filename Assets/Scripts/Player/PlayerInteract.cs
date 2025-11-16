@@ -88,10 +88,7 @@ public class PlayerInteract : MonoBehaviour
 
         // Debugs can go here ---
 
-        if (Input.GetKeyDown(KeyCode.Minus))
-        {
-            ClearItem(0);
-        }
+        // awooga
 
         // End of debugs ---
     }
