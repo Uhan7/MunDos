@@ -181,6 +181,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1711552
 Transform:
   m_ObjectHideFlags: 0
@@ -913,8 +914,19 @@ MonoBehaviour:
   originalHibiscusSapDZSentence: Original Hibiscus Sap Sentence.
   originalHibiscusPetalDZSentence: Original Hibiscus Petal Sentence.
   DZ: {fileID: 767765663}
-  otherOils: []
+  otherOils:
+  - {fileID: 1265484008}
+  - {fileID: 877516894}
+  - {fileID: 1995805433}
+  - {fileID: 18786415}
+  - {fileID: 1686152510}
+  - {fileID: 14632671}
   correctDZ: {fileID: 127083939}
+--- !u!61 &14632671 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 14632667}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &14632672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 930856238254688421, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -1086,8 +1098,19 @@ MonoBehaviour:
   originalHibiscusSapDZSentence: Original Hibiscus Sap Sentence.
   originalHibiscusPetalDZSentence: Original Hibiscus Petal Sentence.
   DZ: {fileID: 440796823}
-  otherOils: []
+  otherOils:
+  - {fileID: 1265484008}
+  - {fileID: 877516894}
+  - {fileID: 1995805433}
+  - {fileID: 18786415}
+  - {fileID: 1686152510}
+  - {fileID: 14632671}
   correctDZ: {fileID: 1096793192}
+--- !u!61 &18786415 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 18786411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &18786416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 930856238254688421, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -1642,6 +1665,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &26128372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4530,6 +4554,22 @@ PrefabInstance:
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: correct oil values.
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 336681348}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1925745182}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7413,6 +7453,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &221790002 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7146540890380449405, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
@@ -9856,6 +9897,175 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+--- !u!1001 &336681346
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1005869504}
+    m_Modifications:
+    - target: {fileID: 2034884095999480211, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_text
+      value: Antiquarian
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034884095999480211, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_fontSize
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034884095999480211, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 3825917228853779581, guid: 715adfd12147dc1479155bff01c07e0a, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: <i>(I don't need to give this to him.)</i>
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1857989759}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: toActivateOnValidInteract.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'toActivateOnValidInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 765903958}
+    - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_Name
+      value: L2 Antiquarian (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 765903957}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 336681350}
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 336681349}
+  m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+--- !u!4 &336681347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 336681346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &336681348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 336681346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &336681349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336681348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a24936d6624640a197d8d61c75d5a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredChecks: 3
+  currentChecks: 0
+--- !u!114 &336681350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336681348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 1
+  lockAndUnlock: 0
+  delayTime: 0
+  resetAfter: 0
+  deactivateAfter: 0
+  repeatable: 0
+  objectsToActivate: []
+  objectsToDeactivate:
+  - {fileID: 2095247838}
+  objectsToLock: []
+  objectsToUnlock: []
+--- !u!4 &336681351 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 336681346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &336873094
 GameObject:
   m_ObjectHideFlags: 0
@@ -10280,6 +10490,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &345427060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11863,6 +12074,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &380386788
 Transform:
   m_ObjectHideFlags: 0
@@ -13383,6 +13595,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &454905682
 Transform:
   m_ObjectHideFlags: 0
@@ -15486,6 +15699,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &520342531
 Transform:
   m_ObjectHideFlags: 0
@@ -15696,6 +15910,22 @@ PrefabInstance:
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: correct oil values.
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 336681348}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1925745182}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15793,6 +16023,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &531502168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
@@ -15851,6 +16082,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 928749891}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: 'Liezel asks Santi if he told anyone about the Sealed Bottle [8]'
       objectReference: {fileID: 0}
@@ -15862,6 +16101,11 @@ PrefabInstance:
 --- !u!4 &535271167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 535271166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &535271168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 535271166}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &548565453
@@ -18154,6 +18398,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &622717876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -20282,6 +20527,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &647154446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8804021321025864612, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -20365,6 +20611,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &659134715
 Transform:
   m_ObjectHideFlags: 0
@@ -21117,6 +21364,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &676404305
 Transform:
   m_ObjectHideFlags: 0
@@ -21188,6 +21436,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &679135525
 Transform:
   m_ObjectHideFlags: 0
@@ -21618,6 +21867,7 @@ MonoBehaviour:
   objectsToDeactivateAfter:
   - {fileID: 1850936722}
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &690209932
 GameObject:
   m_ObjectHideFlags: 0
@@ -22363,6 +22613,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &728629321
 GameObject:
   m_ObjectHideFlags: 0
@@ -22870,6 +23121,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &743596963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2149728999047176841, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -22946,6 +23198,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &751308787
 GameObject:
   m_ObjectHideFlags: 0
@@ -23647,6 +23900,121 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 180338015}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &765903956
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 336681351}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: Valid Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Protag
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willStopMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 21300000, guid: d2811b6f7ece04be08cfd4e9ef6ea1a3, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: wow cool oil bro thas correct
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: oh also u don't need the sap and oil tube anymore
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[2]'
+      value: now dip the bottle in the right oil thing to open it vro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playeritemNamesToRemove.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'playeritemNamesToRemove.Array.data[0]'
+      value: L2 Orchid Sap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'playeritemNamesToRemove.Array.data[1]'
+      value: L2 Oil Tube
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &765903957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 765903956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &765903958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 765903956}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &767765661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23816,6 +24184,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &797050977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -24327,6 +24696,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!224 &817660300 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -25668,6 +26038,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 930856238254688421, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 877516889}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &877516894 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 877516889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &877516896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26638,6 +27013,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &922880371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26919,6 +27295,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &936791361
 GameObject:
   m_ObjectHideFlags: 0
@@ -29410,6 +29787,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 14632668}
+    - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1407777874}
     - targetCorrespondingSourceObject: {fileID: 8034374329919896082, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 345427061}
@@ -29431,6 +29811,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1925745181}
+    - targetCorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 336681347}
     - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1914079314}
@@ -29843,6 +30226,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1038916715
 Transform:
   m_ObjectHideFlags: 0
@@ -29928,6 +30312,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1049371924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30362,6 +30747,22 @@ PrefabInstance:
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: correct oil values.
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 336681348}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1925745182}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30450,6 +30851,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1101005732
 GameObject:
   m_ObjectHideFlags: 0
@@ -31692,6 +32094,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1148206815
 GameObject:
   m_ObjectHideFlags: 0
@@ -31747,6 +32150,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1148206817
 Transform:
   m_ObjectHideFlags: 0
@@ -32240,6 +32644,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1180075943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32787,6 +33192,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1217035062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -32877,6 +33283,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1223477063
 GameObject:
   m_ObjectHideFlags: 0
@@ -33511,6 +33918,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1249826965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34121,6 +34529,7 @@ MonoBehaviour:
   - {fileID: 472905002}
   - {fileID: 2069915925}
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1265484003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34285,6 +34694,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 930856238254688421, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1265484003}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1265484008 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 1265484003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1265484010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34390,6 +34804,7 @@ MonoBehaviour:
   - {fileID: 1822226739}
   - {fileID: 892107358}
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1273409883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35078,6 +35493,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 859969435072071204, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1287562268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1289978500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289978501}
+  - component: {fileID: 1289978503}
+  - component: {fileID: 1289978502}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1289978501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289978500}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1978951363}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1289978502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289978500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b3b713d3e9427d95225fc72ada10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: 'Activated By:
+
+    L2-DZ10->1
+
+    Locked/Unlocked By:
+
+
+    Conditional
+    Check By:'
+--- !u!114 &1289978503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289978500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    character2: {fileID: 0}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - also I wont need these shih anymore (hibiscus sap and hibiscus petal)
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove:
+  - L2 Hibiscus Sap
+  - L2 Hibiscus Petal
 --- !u!1 &1291817259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -36523,6 +37033,7 @@ MonoBehaviour:
   - {fileID: 989657909}
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1369066659
 GameObject:
   m_ObjectHideFlags: 0
@@ -38078,6 +38589,155 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1403814750}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1407777873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1005869501}
+    m_Modifications:
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: unlockInteractableObject
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: objectsToUnlockCheck.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'objectsToUnlockCheck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 462237165}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'objectsToUnlockCheck.Array.data[1]'
+      value: 
+      objectReference: {fileID: 455085986}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: toActivateOnValidInteract.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: soundsToPlayOnValidInteract.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toActivateOnValidInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2007007450}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'soundsToPlayOnValidInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 827ef83ddf1734e20ab8e50b6f318359, type: 3}
+    - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_Name
+      value: L2 Oiled Soil Correct
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090292814008328854, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090292814008328854, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 3825917228853779581, guid: 715adfd12147dc1479155bff01c07e0a, type: 3}
+    - target: {fileID: 7090292814008328854, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.soundToPlay
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
+    - target: {fileID: 7090292814008328854, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "<i>(I can\u2019t gather the oil with this.)</i>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_text
+      value: Correct Oil
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_fontSize
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.870007
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1407777876}
+  m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+--- !u!4 &1407777874 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 1407777873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1407777875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 1407777873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1407777876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407777875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLockedAtStart: 1
+  requiredChecks: 1
+  currentChecks: 0
 --- !u!1001 &1409576694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40599,6 +41259,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1550390006}
+    - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1978951363}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
 --- !u!4 &1456874103 stripped
@@ -40793,6 +41456,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1484470961
 GameObject:
   m_ObjectHideFlags: 0
@@ -40992,6 +41656,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1500205449
 GameObject:
   m_ObjectHideFlags: 0
@@ -41063,6 +41728,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1501618426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41706,6 +42372,7 @@ MonoBehaviour:
   - {fileID: 922880373}
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1515050561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42077,6 +42744,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1529017496
 Transform:
   m_ObjectHideFlags: 0
@@ -42162,6 +42830,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1548093446
 GameObject:
   m_ObjectHideFlags: 0
@@ -42304,7 +42973,7 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1289978500}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.name
       value: Liezel
@@ -42327,7 +42996,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: linksToOtherDialogue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playClosingAnimation
@@ -42357,7 +43026,7 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 928749891}
+      objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
       value: L2-DZ10
@@ -42860,6 +43529,7 @@ MonoBehaviour:
   objectsToDeactivateAfter:
   - {fileID: 300956018}
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1583221804
 Transform:
   m_ObjectHideFlags: 0
@@ -43366,6 +44036,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1605272179
 Transform:
   m_ObjectHideFlags: 0
@@ -44265,6 +44936,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1634939932
 Transform:
   m_ObjectHideFlags: 0
@@ -44814,6 +45486,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1653154069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5111076803883494474, guid: cab41bf5f90644f71a832ee33f684ad4, type: 3}
@@ -45194,6 +45867,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1667822741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2679859293919452695, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -45372,6 +46046,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1681900533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5862742895019406501, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -45662,8 +46337,19 @@ MonoBehaviour:
   originalHibiscusSapDZSentence: Original Hibiscus Sap Sentence.
   originalHibiscusPetalDZSentence: Original Hibiscus Petal Sentence.
   DZ: {fileID: 991896818}
-  otherOils: []
+  otherOils:
+  - {fileID: 1265484008}
+  - {fileID: 877516894}
+  - {fileID: 1995805433}
+  - {fileID: 18786415}
+  - {fileID: 1686152510}
+  - {fileID: 14632671}
   correctDZ: {fileID: 523556040}
+--- !u!61 &1686152510 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 1686152506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1686152511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 930856238254688421, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -46501,6 +47187,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1715091760
 GameObject:
   m_ObjectHideFlags: 0
@@ -46877,6 +47564,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1733597992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7447424023814354619, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -46974,6 +47662,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1735277247
 GameObject:
   m_ObjectHideFlags: 0
@@ -48023,6 +48712,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1771711327
 GameObject:
   m_ObjectHideFlags: 0
@@ -50673,7 +51363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: data.objectsToInteractWith.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'data.objectsToInteractWith.Array.data[0]'
@@ -50687,6 +51377,10 @@ PrefabInstance:
       propertyPath: 'data.objectsToInteractWith.Array.data[2]'
       value: 
       objectReference: {fileID: 14632669}
+    - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'data.objectsToInteractWith.Array.data[3]'
+      value: 
+      objectReference: {fileID: 336681348}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: L2 Oil Tube
@@ -50697,7 +51391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6000042
+      value: 4.16
       objectReference: {fileID: 0}
     - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_LocalPosition.y
@@ -51004,6 +51698,7 @@ MonoBehaviour:
   - {fileID: 1049371926}
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &1874039146
 GameObject:
   m_ObjectHideFlags: 0
@@ -52336,7 +53031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.22
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
@@ -52977,6 +53672,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1961234762
 Transform:
   m_ObjectHideFlags: 0
@@ -53171,6 +53867,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &1972181313
 Transform:
   m_ObjectHideFlags: 0
@@ -53330,6 +54027,38 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1120981410}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1978951362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1978951363}
+  m_Layer: 0
+  m_Name: Won't Need items DZ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1978951363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978951362}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1289978501}
+  m_Father: {fileID: 1456874103}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1979798489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53874,6 +54603,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1001 &1992101609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54148,6 +54878,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 930856238254688421, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1995805428}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1995805433 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 1995805428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1995805435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54403,6 +55138,14 @@ PrefabInstance:
       propertyPath: 'soundsToPlay.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 8c6f8941bdd274721bdf4b234e854316, type: 3}
+    - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: toActivateOnInteract.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 535271168}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
       value: L2 Kulonium Fragment
@@ -54413,7 +55156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.449996
+      value: -8.84
       objectReference: {fileID: 0}
     - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_LocalPosition.y
@@ -54471,6 +55214,11 @@ PrefabInstance:
 --- !u!4 &2007007449 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+  m_PrefabInstance: {fileID: 2007007448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2007007450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
   m_PrefabInstance: {fileID: 2007007448}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2011430080 stripped
@@ -54569,6 +55317,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &2014895644
 Transform:
   m_ObjectHideFlags: 0
@@ -55574,6 +56323,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &2046691179
 Transform:
   m_ObjectHideFlags: 0
@@ -56251,6 +57001,7 @@ MonoBehaviour:
   - {fileID: 703205862}
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &2088461970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
@@ -56744,6 +57495,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!4 &2113488629
 Transform:
   m_ObjectHideFlags: 0
@@ -56829,6 +57581,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &2117710292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -56909,6 +57662,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
 --- !u!1 &2121255300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1728874648817772044, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
