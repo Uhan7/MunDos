@@ -176,7 +176,7 @@ public class InteractableObject : MonoBehaviour
 
         foreach (GameObject obj in objects)
         {
-            Debug.Log($"activating {obj.name}");
+            //Debug.Log($"activating {obj.name}");
             if (obj == null) continue;
             obj.SetActive(value);
         }
@@ -251,7 +251,7 @@ public class InteractableObject : MonoBehaviour
         else zoomCanvas.DeactivateZoomedEnvi();
     }
 
-    void Focus(bool value)
+    public void Focus(bool value)
     {
         Parameters param = new Parameters();
         param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);

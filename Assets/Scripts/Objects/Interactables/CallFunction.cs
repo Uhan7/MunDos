@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System.Collections;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
@@ -21,6 +22,7 @@ public class CallFunction : MonoBehaviour
     [SerializeField] private bool onEnable = true;
     [SerializeField] private bool onTrigger;
     [SerializeField] private bool disableAfter = true;
+    [SerializeField] private bool willFocus = true;
     [HideInInspector] private bool hasInvoked;
 
     private void Start()
@@ -34,51 +36,74 @@ public class CallFunction : MonoBehaviour
 
         if (onTrigger)
         {
+            if (willFocus) Focus(true);
             if (activatedByKeyPress)
             {
                 CheckKeyPress();
             }
             else if (!activatedByKeyPress) toCall.Invoke();
-            if (disableAfter)
-            {
-                if (activatedByKeyPress && hasInvoked) Disable();
-                else if (!activatedByKeyPress) Disable();
+        }
+        if (disableAfter)
+        {
+            if (activatedByKeyPress && hasInvoked) Disable();
+            else if (!activatedByKeyPress) Disable();
 
-            }
         }
     }
 
     private void OnEnable()
     {
-        Debug.Log($"CF: isactive");
         if (onEnable) 
         {
-            Debug.Log($"CF: invoking");
+            if (willFocus) Focus(true);
             if (activatedByKeyPress) 
             {
                 CheckKeyPress();
             }
             else if (!activatedByKeyPress) toCall.Invoke();
-            if (disableAfter)
+        }
+        if (disableAfter)
+        {
+            if (activatedByKeyPress && hasInvoked)
             {
-                if (activatedByKeyPress && hasInvoked) Disable();
-                else if (!activatedByKeyPress) Disable();
+                Disable();
             }
+            else if (!activatedByKeyPress) Disable();
         }
     }
-
+     
     private void CheckKeyPress()
     {
         if (toCallRegardless != null) toCallRegardless.Invoke();
-        if (Input.GetKeyDown(interactKey))
-        {
-            toCall.Invoke();
-            hasInvoked = true;
-        }
+        StartCoroutine(WaitForKeyPress());
     }
+
+    IEnumerator WaitForKeyPress()
+    {
+        yield return new WaitForSeconds(0.2f);
+        while (!Input.GetKeyDown(interactKey))
+        {
+            yield return null;
+        }
+        Debug.Log("Will call invoke");
+        hasInvoked = true;
+        toCall.Invoke();
+        Disable();
+    }
+
     private void Disable()
     {
-        this.gameObject.SetActive(false);
+        //Debug.Log("Disabling");
+        Focus(false);
         hasInvoked = false;
+        this.gameObject.SetActive(false);
+    }
+
+    void Focus(bool value)
+    {
+        Parameters param = new Parameters();
+        param.PutExtra(ParamNames.IS_FOCUSING_DIALOGUE, value);
+
+        EventBroadcaster.Instance.PostEvent(EventNames.FOCUS_DIALOGUE, param);
     }
 }

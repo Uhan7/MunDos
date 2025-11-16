@@ -39,6 +39,7 @@ public class ClickZoomable2 : MonoBehaviour
     [SerializeField] private bool deactivateAfter = true;
 
     [HideInInspector] private List<PasswordElement2> passwordOrder = new List<PasswordElement2>();
+    [HideInInspector] private List<string> inputOrder = new List<string>();
     [HideInInspector] private int orderIndex = 0;
 
     [Header("Gameobjects")]
@@ -76,13 +77,19 @@ public class ClickZoomable2 : MonoBehaviour
     //Button interact and checking is done here
     public void CheckCombination(GameObject gameObject)
     {
-           
+        if (inputOrder.Contains(gameObject.name))
+        {
+            //Debug.Log($"Alredy have {gameObject.name}");
+            return;
+        }
+        inputOrder.Add(gameObject.name);
+        SetInteractableObjectOutline(gameObject, true);
         if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
         {
             wrongPasswordInput = true;
             Debug.Log($"soft wrong input");
         }
-        Debug.Log($"order Index of {gameObject.name}: {orderIndex}, passwordInput length {passwordOrderInput.Length - 1}");
+        Debug.Log($"Detected input of {gameObject.name}. Input index: {orderIndex}");
         if (orderIndex >= passwordOrderInput.Length - 1)
         {
            
@@ -103,6 +110,11 @@ public class ClickZoomable2 : MonoBehaviour
 
                 SetAll(toActivateOnInvalidInteract, true);
                 SetAll(toDeactivateOnInvalidInteract, false);
+                inputOrder.Clear();
+                foreach(var obj in passwordOrderInput)
+                {
+                    SetInteractableObjectOutline (obj, false);
+                }
                 //ResetButtons();
             }
         }
@@ -152,6 +164,25 @@ public class ClickZoomable2 : MonoBehaviour
         if (deactivateAfter)
         {
             this.gameObject.SetActive(false);
+        }
+    }
+
+    void SetInteractableObjectOutline(GameObject obj, bool var)
+    {
+
+        SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
+        Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
+        Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
+
+        if (var == true)
+        {
+            if (objOutlinedSprite != objNormalSprite) objSpriteRenderer.sprite = objOutlinedSprite;
+            else obj.GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.6f, 0.6f, 1);
+        }
+        else
+        {
+            if (objOutlinedSprite != objNormalSprite) objSpriteRenderer.sprite = objNormalSprite;
+            else obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
     }
 }
