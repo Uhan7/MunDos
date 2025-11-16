@@ -32,14 +32,15 @@ public class ClickZoomable : MonoBehaviour
     [SerializeField] private KeyCode deactivateKey;
 
     [Header("Components")]
+    [SerializeField] private GameObject[] passwordOrderInput;
     [SerializeField] private bool isSingleEnvi;
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject exitButton;
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviBackdrop;
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviImage;
     [SerializeField] private bool deactivateAfter = true;
-    [SerializeField] private GameObject[] passwordOrderInput;
 
     [HideInInspector] private List<PasswordElement> passwordOrder = new List<PasswordElement>();
+    [HideInInspector] private List<string> inputOrder = new List<string>();
     [HideInInspector] private int orderIndex = 0;
 
     [Header("Gameobjects")]
@@ -77,18 +78,24 @@ public class ClickZoomable : MonoBehaviour
     //Button interact and checking is done here
     public void CheckCombination(GameObject gameObject)
     {
-        
+        if (inputOrder.Contains(gameObject.name))
+        {
+            //Debug.Log($"Alredy have {gameObject.name}");
+            return;
+        }
+        inputOrder.Add(gameObject.name);
+        SetInteractableObjectOutline(gameObject, true);
         if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
         {
             wrongPasswordInput = true;
         }
-        Debug.Log($"order Index {orderIndex}, passwordInput length {passwordOrderInput.Length - 1}");
+        //Debug.Log($"order Index {orderIndex}, passwordInput length {passwordOrderInput.Length - 1}");
         if (orderIndex >= passwordOrderInput.Length - 1)
         {
            
             if (wrongPasswordInput == false)
             {
-                Debug.Log($"solved");
+                //Debug.Log($"solved");
 
                 SetAll(toActivate, true);
                 SetAll(toDeactivate, false);
@@ -96,20 +103,29 @@ public class ClickZoomable : MonoBehaviour
             }
             else
             {
-                Debug.Log($"resetting");
+                //Debug.Log($"resetting");
 
                 orderIndex = 0;
                 wrongPasswordInput = false;
 
                 SetAll(toActivateOnInvalidInteract, true);
                 SetAll(toDeactivateOnInvalidInteract, false);
-                ResetButtons();
+                inputOrder.Clear();
+
+                if (isSingleEnvi) ResetButtons();
+                else
+                {
+                    foreach (var obj in passwordOrderInput)
+                    {
+                        SetInteractableObjectOutline(obj, false);
+                    }
+                }
             }
         }
         else
         {
             orderIndex++;
-            DeactivateButton(gameObject);
+            if (isSingleEnvi) DeactivateButton(gameObject);
         }
 
     }
@@ -129,21 +145,6 @@ public class ClickZoomable : MonoBehaviour
             button.interactable = true;
         }
     }
-        //private void SetLockStateParent(GameObject gameObject, bool value)
-        //{
-
-        //    if (int.TryParse(gameObject.name, out int index))
-        //    {
-        //        int newIndex = index - 1;
-
-        //        if (selectedObjects[newIndex] !=  null) 
-        //        {
-        //            Set(selectedObjects[newIndex], !value);
-        //        }
-        //        else Debug.LogError($"selected object {selectedObjects[newIndex].name} is null");
-        //    }
-        //    Set(gameObject, value);
-        //}
 
     void SetAll(GameObject[] objects, bool value)
     {
@@ -166,12 +167,37 @@ public class ClickZoomable : MonoBehaviour
     private void OnExit()
     {
         orderIndex = 0;
-        zoomEnviBackdrop.SetActive(false);
-        zoomEnviImage.SetActive(false);
+        if (isSingleEnvi)
+        {
+            zoomEnviBackdrop.SetActive(false);
+            zoomEnviImage.SetActive(false);
+        }
+        
         leaveCondition = false;
         if (deactivateAfter)
         {
             this.gameObject.SetActive(false);
+        }
+    }
+    
+    void SetInteractableObjectOutline(GameObject obj, bool var)
+    {
+
+        if (obj == null) Debug.LogError($"{obj.name} is null");
+        SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
+        if (objSpriteRenderer == null) Debug.LogError($"{objSpriteRenderer.name} is null");
+        Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
+        Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
+
+        if (var == true)
+        {
+            if (objOutlinedSprite != objNormalSprite) objSpriteRenderer.sprite = objOutlinedSprite;
+            else obj.GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.6f, 0.6f, 1);
+        }
+        else
+        {
+            if (objOutlinedSprite != objNormalSprite) objSpriteRenderer.sprite = objNormalSprite;
+            else obj.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
     }
 }
