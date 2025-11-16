@@ -41,6 +41,9 @@ public class AutoMove : MonoBehaviour
         {
             character = col.gameObject.GetComponent<PlayerMove>();
 
+            character.gameObject.GetComponent<PlayerInteract>().SelectItem(5);
+            character.gameObject.GetComponent<PlayerInteract>().ResetStates();
+
             MoveCharacter(moveDirection);
         }
     }
@@ -60,7 +63,6 @@ public class AutoMove : MonoBehaviour
         else if (!NPCMovement && col.gameObject.tag == PROTAG_TAG)
         {
             character = col.gameObject.GetComponent<PlayerMove>();
-
             StopCharacter();
         }
     }

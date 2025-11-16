@@ -31,9 +31,6 @@ public class InventorySlot : MonoBehaviour
         if (imageComponent == null) InitializeComponents();
     }
 
-    private void Update()
-    {
-    }
     private void Start()
     {
         if (zoomObject == null) Debug.LogError($"Error {this.name}'s zoomObject is null");
