@@ -65,7 +65,7 @@ public class DialogueManager : MonoBehaviour
     {
 		anim.SetBool("Open", open);
 
-		if ((Input.GetKey(KeyCode.BackQuote) || wasClicked) && canClick)
+		if ((Input.GetKey(KeyCode.BackQuote) || wasClicked) && canClick && SettingsInfo.debugMode)
 		{
 			wasClicked = false;
 			skip = true;
