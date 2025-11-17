@@ -93,4 +93,10 @@ public class SettingsManager : MonoBehaviour
         SFXVol.value = SettingsInfo.SFXVol;
         dialogueVol.value = SettingsInfo.dialogueVol;
     }
+
+    public void ToggleDebugMode()
+    {
+        SettingsInfo.debugMode = !SettingsInfo.debugMode;
+        print("Debug Mode set to: " + SettingsInfo.debugMode);
+    }
 }
