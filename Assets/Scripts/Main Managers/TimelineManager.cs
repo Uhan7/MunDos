@@ -52,6 +52,7 @@ public class TimelineManager : MonoBehaviour
         SettingsUpdate();
 
         if (!canSwitch || !timelineUnlocked) return;
+        if (Input.GetKey(KeyCode.P) || Input.GetKey(KeyCode.L)) return;
 
         if (Input.GetKeyDown(switchTimelineKey) && !Input.GetKey(interactKey) && cooldownTimer <= 0)
         {
