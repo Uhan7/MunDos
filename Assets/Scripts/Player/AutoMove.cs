@@ -48,6 +48,29 @@ public class AutoMove : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (requiredName != "" && requiredName != col.gameObject.transform.parent.name) return;
+
+        if (NPCMovement && col.gameObject.tag == NPC_TAG)
+        {
+            character = col.gameObject.GetComponentInParent<PlayerMove>();
+
+            col.gameObject.GetComponentInParent<LockableObject>().Lock(true);
+            MoveCharacter(moveDirection);
+        }
+
+        else if (!NPCMovement && col.gameObject.tag == PROTAG_TAG)
+        {
+            character = col.gameObject.GetComponent<PlayerMove>();
+
+            character.gameObject.GetComponent<PlayerInteract>().SelectItem(5);
+            character.gameObject.GetComponent<PlayerInteract>().ResetStates();
+
+            MoveCharacter(moveDirection);
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D col)
     {
         if (requiredName != "" && requiredName != col.gameObject.transform.parent.name) return;
