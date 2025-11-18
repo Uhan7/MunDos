@@ -157,6 +157,7 @@ public class PlayerInteract : MonoBehaviour
             inventorySlot.SetZoomState(true);
             inventorySlot.OnZoom();
             isZoomed = true;
+            GetComponent<Animator>().Play("object_fade_in_half");
             WillUpdate(true);
             print("2");
         }
@@ -169,6 +170,7 @@ public class PlayerInteract : MonoBehaviour
             inventorySlot.OnZoom();
             isZoomed = false;
             activeObjectIndex = value;
+            GetComponent<Animator>().Play("object_fade_out_half");
             WillUpdate(true);
             print("3");
         }
@@ -179,6 +181,7 @@ public class PlayerInteract : MonoBehaviour
             inventorySlot.SetZoomState(false);
             isZoomed = false;
             isSelected = false;
+            GetComponent<Animator>().Play("object_fade_out_half");
             WillUpdate(true);
             print("4");
         }

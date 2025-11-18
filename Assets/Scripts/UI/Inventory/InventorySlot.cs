@@ -8,6 +8,7 @@ public class InventorySlot : MonoBehaviour
     [Header("Components")]
     [HideInInspector] private Image imageComponent;
     [SerializeField] public GameObject zoomObject;
+    [SerializeField] private GameObject backDrop;
 
     [Header("ItemData Variables")]
     [HideInInspector] public ItemData data; // Used by InventoryManager.cs
@@ -56,6 +57,7 @@ public class InventorySlot : MonoBehaviour
     {
         Focus(value);
         zoomObject.SetActive(value);
+        backDrop.SetActive(value);
     }
     public void OnZoom()
     {
