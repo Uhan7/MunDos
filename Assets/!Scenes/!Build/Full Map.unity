@@ -1839,7 +1839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26659811}
   m_Layer: 0
-  m_Name: Success
+  m_Name: Tree Puzzle Success
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1859,7 +1859,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1660124353}
-  m_Father: {fileID: 753837358}
+  m_Father: {fileID: 617917452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &31584701
 GameObject:
@@ -10219,6 +10219,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -11171,87 +11175,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &248508625
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 248508626}
-  - component: {fileID: 248508627}
-  m_Layer: 0
-  m_Name: Key
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &248508626
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248508625}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1795937364}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &248508627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248508625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18133ce92ce6d6347a566f70b92ae123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activatedByKeyPress: 1
-  interactKey: 102
-  toCall:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1795937365}
-        m_TargetAssemblyTypeName: ZoomEnviManager, Assembly-CSharp
-        m_MethodName: DeactivateZoomedEnvi
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  activateBeforeKeyPress: 1
-  toCallRegardless:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 753837359}
-        m_TargetAssemblyTypeName: ClickZoomable, Assembly-CSharp
-        m_MethodName: CheckCombination
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 622717876}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onEnable: 1
-  onTrigger: 0
-  disableAfter: 1
-  willFocus: 1
 --- !u!1001 &253142864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22108,6 +22031,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -27084,7 +27011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -28118,7 +28045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -106.00678
+      value: -106
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28154,7 +28081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -34073,6 +34000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 753837358}
   - component: {fileID: 753837359}
+  - component: {fileID: 753837360}
   m_Layer: 0
   m_Name: L2 Carved Trees with Magical Symbols
   m_TagString: Untagged
@@ -34098,7 +34026,6 @@ Transform:
   - {fileID: 1808278180}
   - {fileID: 223040127}
   - {fileID: 1849113345}
-  - {fileID: 26659811}
   - {fileID: 1686735967}
   m_Father: {fileID: 1005869501}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34119,14 +34046,13 @@ MonoBehaviour:
   - {fileID: 1646273790}
   - {fileID: 852033065}
   - {fileID: 2003765414}
-  - {fileID: 622717876}
   - {fileID: 1821042786}
   isSingleEnvi: 0
   exitButton: {fileID: 0}
   zoomEnviBackdrop: {fileID: 0}
   zoomEnviImage: {fileID: 0}
-  deactivateAfter: 1
-  disableInteractionAfter: 0
+  deactivateAfter: 0
+  disableInteractionAfter: 1
   toActivate:
   - {fileID: 1660124352}
   toDeactivate: []
@@ -34136,6 +34062,21 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+--- !u!114 &753837360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753837357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b3b713d3e9427d95225fc72ada10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: ' child envis are unlocked by:
+
+    L2-DZ10'
 --- !u!4 &754780016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -42384,6 +42325,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5825211778200383178, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 795918091}
+    - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 26659811}
     - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1914079314}
@@ -61283,16 +61227,20 @@ MonoBehaviour:
   isOnEnable: 1
   isTrigger: 0
   activateAndDeactivate: 1
-  lockAndUnlock: 0
+  lockAndUnlock: 1
   delayTime: 0.5
   resetAfter: 0
-  deactivateAfter: 0
+  deactivateAfter: 1
   repeatable: 0
   objectsToActivate:
   - {fileID: 1550390007}
   objectsToDeactivate: []
   objectsToLock: []
-  objectsToUnlock: []
+  objectsToUnlock:
+  - {fileID: 852033065}
+  - {fileID: 1646273790}
+  - {fileID: 1821042786}
+  - {fileID: 2003765414}
 --- !u!114 &1550390010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70476,6 +70424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2 Carved Tree 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2243799573292339554, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5013845285105705493, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.879995
@@ -70555,13 +70507,14 @@ PrefabInstance:
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 248508625}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8898067167016396066, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 248508626}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
@@ -70572,17 +70525,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1795937363}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1795937365 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 804437671070608610, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-  m_PrefabInstance: {fileID: 1795937363}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578b8d42ed70f4023a083dd2ab0f4cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1799027971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5733273902596726346, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -71189,6 +71131,10 @@ PrefabInstance:
     - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: willFocus
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -72831,6 +72777,10 @@ PrefabInstance:
     - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: willFocus
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size

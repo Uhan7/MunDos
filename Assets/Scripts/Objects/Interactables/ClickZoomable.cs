@@ -180,8 +180,11 @@ public class ClickZoomable : MonoBehaviour
 
         if (disableInteractionAfter)
         {
+            
             foreach (var obj in passwordOrderInput)
             {
+                SetInteractableObjectOutline(obj, false);
+                obj.GetComponent<BoxCollider2D>().enabled = false;
                 obj.GetComponent<InteractableObject>().enabled = false;
             }
         }
@@ -208,4 +211,8 @@ public class ClickZoomable : MonoBehaviour
         }
     }
 
+    IEnumerator WaitForTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }
 }
