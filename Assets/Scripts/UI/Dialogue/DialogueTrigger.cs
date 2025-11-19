@@ -149,7 +149,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void ActivateOtherDialogue(GameObject nextDialogue)
     {
-        nextDialogue.transform.position = GameObject.FindGameObjectWithTag(PROTAG_TAG).transform.position;
+        // nextDialogue.transform.position = GameObject.FindGameObjectWithTag(PROTAG_TAG).transform.position;
         nextDialogue.SetActive(true);
 
         if (deactivateAfter) gameObject.SetActive(false);
