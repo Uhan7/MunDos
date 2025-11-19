@@ -156,10 +156,8 @@ public class InteractableObject : MonoBehaviour
         if (var == false)
         {
             isInvalidObject = true;
-            zoomInteract = false;
             SetAll(toActivateOnInvalidInteract, true);
             SetAll(toDeactivateOnInvalidInteract, false);
-            zoomInteract = true;
         }
         else
         {
