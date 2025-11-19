@@ -170,13 +170,21 @@ public class DialogueTrigger : MonoBehaviour
 
     void ActivateOtherObjects()
     {
-        foreach (GameObject objs in objectsToActivateAfter) objs.SetActive(true);
+        foreach (GameObject objs in objectsToActivateAfter)
+        {
+            if (objs == null) continue;
+            objs.SetActive(true);
+        }
         alreadyActivatedObjects = true;
     }
 
     void DeactivateOtherObjects()
     {
-        foreach (GameObject objs in objectsToDeactivateAfter) objs.SetActive(false);
+        foreach (GameObject objs in objectsToDeactivateAfter)
+        {
+            if (objs == null) continue;
+            objs.SetActive(false);
+        }
         alreadyDeactivatedObjects = true;
     }
 
