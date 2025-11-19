@@ -78,7 +78,7 @@ public class DialogueManager : MonoBehaviour
 			skip = true;
 			if (canNext)
 			{
-				aSource.PlayOneShot(continueDialogueSFX);
+				if (continueDialogueSFX != null) aSource.PlayOneShot(continueDialogueSFX);
 				DisplayNextSentence();
 			}
 		}
