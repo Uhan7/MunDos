@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
 
         TogglePauseBackground();
 
-        audioSource.PlayOneShot(!isPaused ? pauseOpenSFX : pauseCloseSFX);
+        audioSource.PlayOneShot(isPaused ? pauseOpenSFX : pauseCloseSFX);
 
         pauseMenuScript.active = !pauseMenuScript.active;
     }
