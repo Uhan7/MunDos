@@ -66,6 +66,7 @@ public class InteractableObject : MonoBehaviour
     [ShowIf("itemInteractable")] [SerializeField] private AudioClip[] soundsToPlayOnInvalidInteract;
 
     [Header("Flags")]
+    [HideInInspector] private bool isInvalidObject = false;
     [HideInInspector] private bool alreadyCheckedConditional = false;
     [HideInInspector] private bool alreadyCheckedUnlock = false;
     [HideInInspector] private bool alreadyCheckedLock = false;
@@ -150,12 +151,15 @@ public class InteractableObject : MonoBehaviour
             return;
         }
 
-        if (zoomInteract) ZoomInteract(true);
+        if (zoomInteract && var) ZoomInteract(true);
 
         if (var == false)
         {
+            isInvalidObject = true;
+            zoomInteract = false;
             SetAll(toActivateOnInvalidInteract, true);
             SetAll(toDeactivateOnInvalidInteract, false);
+            zoomInteract = true;
         }
         else
         {
