@@ -9,10 +9,12 @@ public class DialogueTrigger : MonoBehaviour
     [HideInInspector] private const float DEACTIVATE_TIME = 0.1f;
     [HideInInspector] private const string PROTAG_TAG = "Protag";
     [HideInInspector] private const string DIALOGUE_HOLDER_NAME = "Dialogue Holder";
+    [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
 
     [Header("References")]
-    [HideInInspector] private DialogueManager dialogueHolder;
     [SerializeField] public Dialogue dialogue; // Used in Oil.cs
+    [HideInInspector] private DialogueManager dialogueHolder;
+    [HideInInspector] private AudioSource sfxSource;
 
     [Header("Animation Properties")]
     private bool closeAnim = true;
@@ -45,6 +47,9 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
     [HideInInspector] private float nextDialogueTimer;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] soundsToPlayBefore;
 
     [Header("Flags")]
     [HideInInspector] private bool dialogueIsTriggered;
@@ -138,6 +143,8 @@ public class DialogueTrigger : MonoBehaviour
 
         dialogueIsTriggered = true;
         if (startFromTrigger && !isSign) GetComponent<BoxCollider2D>().enabled = false;
+
+        if (soundsToPlayBefore.Length > 0) foreach (AudioClip clip in soundsToPlayBefore) sfxSource.PlayOneShot(clip);
         StartCoroutine(dialogueHolder.StartDialogue(dialogue));
     }
 
@@ -224,6 +231,7 @@ public class DialogueTrigger : MonoBehaviour
     void InitializeReferences()
     {
         dialogueHolder = GameObject.Find(DIALOGUE_HOLDER_NAME).GetComponent<DialogueManager>();
+        sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
     }
 
     void Focus(bool value)
