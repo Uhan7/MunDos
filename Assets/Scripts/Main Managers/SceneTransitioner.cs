@@ -27,5 +27,7 @@ public class SceneTransitioner : MonoBehaviour
         {
             yield return null;
         }
+        yield return new WaitForSeconds(0.1f);
+        transitionObject.SetActive(false);
     }
 }
