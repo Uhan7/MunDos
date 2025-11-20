@@ -143,8 +143,6 @@ public class InteractableObject : MonoBehaviour
 
     public void ItemInteract(bool var)
     {
-        foreach (AudioClip clip in soundsToPlay) sfxSource.PlayOneShot(clip);
-
         if (!itemInteractable)
         {
             Interact();
@@ -155,12 +153,14 @@ public class InteractableObject : MonoBehaviour
 
         if (var == false)
         {
+            foreach (AudioClip clip in soundsToPlayOnInvalidInteract) sfxSource.PlayOneShot(clip);
             isInvalidObject = true;
             SetAll(toActivateOnInvalidInteract, true);
             SetAll(toDeactivateOnInvalidInteract, false);
         }
         else
         {
+            foreach (AudioClip clip in soundsToPlayOnValidInteract) sfxSource.PlayOneShot(clip);
             SetAll(toActivateOnValidInteract, true);
             SetAll(toDeactivateOnValidInteract, false);
 
