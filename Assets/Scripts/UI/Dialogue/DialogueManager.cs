@@ -189,6 +189,19 @@ public class DialogueManager : MonoBehaviour
 				DialogueAudioEffect(sentence, "<SFX_liezel_wondering>");
 			}
 
+			// Antiquarian
+			{
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_frustrated_grunt>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_normal_suspicious>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_ominous_chuckle_1>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_ominous_chuckle_2>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_proud>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_satisfied>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_snicker>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_surprised_gasp>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_thinking>");
+			}
+
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
 				dSource.pitch = Random.Range(minPitch, maxPitch);

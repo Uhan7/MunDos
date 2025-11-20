@@ -42,6 +42,17 @@ public class CameraEffectsManager : MonoBehaviour
     [SerializeField] private AudioClip liezelThinkingSFX;
     [SerializeField] private AudioClip liezelWonderingSFX;
 
+    [Header("Voices SFX: Antiquarian")]
+    [SerializeField] private AudioClip antiquarianFrustratedGruntSFX;
+    [SerializeField] private AudioClip antiquarianNormalSuspiciousSFX;
+    [SerializeField] private AudioClip antiquarianOminousChuckle1SFX;
+    [SerializeField] private AudioClip antiquarianOminousChuckle2SFX;
+    [SerializeField] private AudioClip antiquarianProudSFX;
+    [SerializeField] private AudioClip antiquarianSatisfiedSFX;
+    [SerializeField] private AudioClip antiquarianSnickerSFX;
+    [SerializeField] private AudioClip antiquarianSurprisedGaspSFX;
+    [SerializeField] private AudioClip antiquarianThinkingSFX;
+
     // Helper Functions --------------------------------------------------------
 
     public void ShakeScreen()
@@ -153,6 +164,17 @@ public class CameraEffectsManager : MonoBehaviour
             case "<SFX_liezel_shock_gasp>": sfxSource.PlayOneShot(liezelShockGaspSFX); break;
             case "<SFX_liezel_thinking>": sfxSource.PlayOneShot(liezelThinkingSFX); break;
             case "<SFX_liezel_wondering>": sfxSource.PlayOneShot(liezelWonderingSFX); break;
+
+            // Antiquarian
+            case "<SFX_antiquarian_frustrated_grunt>": sfxSource.PlayOneShot(antiquarianFrustratedGruntSFX); break;
+            case "<SFX_antiquarian_normal_suspicious>": sfxSource.PlayOneShot(antiquarianNormalSuspiciousSFX); break;
+            case "<SFX_antiquarian_ominous_chuckle_1>": sfxSource.PlayOneShot(antiquarianOminousChuckle1SFX); break;
+            case "<SFX_antiquarian_ominous_chuckle_2>": sfxSource.PlayOneShot(antiquarianOminousChuckle2SFX); break;
+            case "<SFX_antiquarian_proud>": sfxSource.PlayOneShot(antiquarianProudSFX); break;
+            case "<SFX_antiquarian_satisfied>": sfxSource.PlayOneShot(antiquarianSatisfiedSFX); break;
+            case "<SFX_antiquarian_snicker>": sfxSource.PlayOneShot(antiquarianSnickerSFX); break;
+            case "<SFX_antiquarian_surprised_gasp>": sfxSource.PlayOneShot(antiquarianSurprisedGaspSFX); break;
+            case "<SFX_antiquarian_thinking>": sfxSource.PlayOneShot(antiquarianThinkingSFX); break;
 
             default: break;
         }
