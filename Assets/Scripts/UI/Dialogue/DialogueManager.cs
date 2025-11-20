@@ -157,37 +157,7 @@ public class DialogueManager : MonoBehaviour
 			CutOffDialogue(sentence);
 
 			// Character voices
-
-			// Santi
-			{
-				DialogueAudioEffect(sentence, "<SFX_santi_concerned>");
-				DialogueAudioEffect(sentence, "<SFX_santi_frustrated>");
-				DialogueAudioEffect(sentence, "<SFX_santi_happy>");
-				DialogueAudioEffect(sentence, "<SFX_santi_oh>");
-				DialogueAudioEffect(sentence, "<SFX_santi_questioning>");
-				DialogueAudioEffect(sentence, "<SFX_santi_relieved>");
-				DialogueAudioEffect(sentence, "<SFX_santi_satisfied>");
-				DialogueAudioEffect(sentence, "<SFX_santi_shock_gasp>");
-				DialogueAudioEffect(sentence, "<SFX_santi_sigh>");
-				DialogueAudioEffect(sentence, "<SFX_santi_thinking>");
-				DialogueAudioEffect(sentence, "<SFX_santi_wondering>");
-			}
-
-            // Liezel
-            {
-				DialogueAudioEffect(sentence, "<SFX_liezel_concerned>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_discovery>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_frustrated>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_happy>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_oh>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_questioning>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_relieved>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_satisfied_(aha!)>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_satisfied_(ha!)>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_shock_gasp>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_thinking>");
-				DialogueAudioEffect(sentence, "<SFX_liezel_wondering>");
-			}
+			DialogueAudioEffect(sentence, "<SFX_santi_concerned>");
 
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
