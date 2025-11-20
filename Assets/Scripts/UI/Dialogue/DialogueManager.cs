@@ -202,6 +202,28 @@ public class DialogueManager : MonoBehaviour
 				DialogueAudioEffect(sentence, "<SFX_antiquarian_thinking>");
 			}
 
+			// Ate Guard
+			{
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_frustrated_grunt>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_normal_suspicious>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_ominous_chuckle_1>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_ominous_chuckle_2>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_proud>");
+				DialogueAudioEffect(sentence, "<SFX_antiquarian_satisfied>");
+			}
+
+			// Distressed Woman
+			{
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_annoyed>");
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_crying_1>");
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_crying_2>");
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_disgust>");
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_frustrated>");
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_normal>");
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_sigh>");
+				DialogueAudioEffect(sentence, "<SFX_distressed_woman_surprised_gasp>");
+			}
+
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
 				dSource.pitch = Random.Range(minPitch, maxPitch);

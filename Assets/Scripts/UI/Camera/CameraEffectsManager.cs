@@ -53,6 +53,24 @@ public class CameraEffectsManager : MonoBehaviour
     [SerializeField] private AudioClip antiquarianSurprisedGaspSFX;
     [SerializeField] private AudioClip antiquarianThinkingSFX;
 
+    [Header("Voices SFX: Ate Guard")]
+    [SerializeField] private AudioClip ateGuardNormalSFX;
+    [SerializeField] private AudioClip ateGuardProudSFX;
+    [SerializeField] private AudioClip ateGuardSigh2SFX;
+    [SerializeField] private AudioClip ateGuardSighSFX;
+    [SerializeField] private AudioClip ateGuardSurprisedGaspSFX;
+    [SerializeField] private AudioClip ateGuardThinkingSFX;
+
+    [Header("Voices SFX: Distressed Woman")]
+    [SerializeField] private AudioClip distressedWomanAnnoyedSFX;
+    [SerializeField] private AudioClip distressedWomanCrying1SFX;
+    [SerializeField] private AudioClip distressedWomanCrying2SFX;
+    [SerializeField] private AudioClip distressedWomanDisgustSFX;
+    [SerializeField] private AudioClip distressedWomanFrustratedSFX;
+    [SerializeField] private AudioClip distressedWomanNormalSFX;
+    [SerializeField] private AudioClip distressedWomanSighSFX;
+    [SerializeField] private AudioClip distressedWomanSurprisedGaspSFX;
+
     // Helper Functions --------------------------------------------------------
 
     public void ShakeScreen()
@@ -175,6 +193,24 @@ public class CameraEffectsManager : MonoBehaviour
             case "<SFX_antiquarian_snicker>": sfxSource.PlayOneShot(antiquarianSnickerSFX); break;
             case "<SFX_antiquarian_surprised_gasp>": sfxSource.PlayOneShot(antiquarianSurprisedGaspSFX); break;
             case "<SFX_antiquarian_thinking>": sfxSource.PlayOneShot(antiquarianThinkingSFX); break;
+
+            // Ate Guard
+            case "<SFX_ate_guard_normal>": sfxSource.PlayOneShot(ateGuardNormalSFX); break;
+            case "<SFX_ate_guard_proud>": sfxSource.PlayOneShot(ateGuardProudSFX); break;
+            case "<SFX_ate_guard_sigh_2>": sfxSource.PlayOneShot(ateGuardSigh2SFX); break;
+            case "<SFX_ate_guard_sigh>": sfxSource.PlayOneShot(ateGuardSighSFX); break;
+            case "<SFX_ate_guard_surprised_gasp>": sfxSource.PlayOneShot(ateGuardSurprisedGaspSFX); break;
+            case "<SFX_ate_guard_thinking>": sfxSource.PlayOneShot(ateGuardThinkingSFX); break;
+
+            // Distressed Woman
+            case "<SFX_distressed_woman_annoyed>": sfxSource.PlayOneShot(distressedWomanAnnoyedSFX); break;
+            case "<SFX_distressed_woman_crying_1>": sfxSource.PlayOneShot(distressedWomanCrying1SFX); break;
+            case "<SFX_distressed_woman_crying_2>": sfxSource.PlayOneShot(distressedWomanCrying2SFX); break;
+            case "<SFX_distressed_woman_disgust>": sfxSource.PlayOneShot(distressedWomanDisgustSFX); break;
+            case "<SFX_distressed_woman_frustrated>": sfxSource.PlayOneShot(distressedWomanFrustratedSFX); break;
+            case "<SFX_distressed_woman_normal>": sfxSource.PlayOneShot(distressedWomanNormalSFX); break;
+            case "<SFX_distressed_woman_sigh>": sfxSource.PlayOneShot(distressedWomanSighSFX); break;
+            case "<SFX_distressed_woman_surprised_gasp>": sfxSource.PlayOneShot(distressedWomanSurprisedGaspSFX); break;
 
             default: break;
         }
