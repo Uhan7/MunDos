@@ -245,6 +245,19 @@ public class DialogueManager : MonoBehaviour
 				DialogueAudioEffect(sentence, "<SFX_manong_guard_thinking>");
 			}
 
+			// Pare Guard
+			{
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_frustrated_sigh>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_frustrated_ugh>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_proud>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_satisfied_1>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_satisfied_2>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_satisfied_mhm_3>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_surprised_1>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_surprised_2>");
+				DialogueAudioEffect(sentence, "<SFX_pare_guard_thinking>");
+			}
+
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
 				dSource.pitch = Random.Range(minPitch, maxPitch);

@@ -78,6 +78,17 @@ public class CameraEffectsManager : MonoBehaviour
     [SerializeField] private AudioClip manongGuardSighSFX;
     [SerializeField] private AudioClip manongGuardThinkingSFX;
 
+    [Header("Voices SFX: Pare Guard")]
+    [SerializeField] private AudioClip pareGuardFrustratedSighSFX;
+    [SerializeField] private AudioClip pareGuardFrustratedUghSFX;
+    [SerializeField] private AudioClip pareGuardProudSFX;
+    [SerializeField] private AudioClip pareGuardSatisfied1SFX;
+    [SerializeField] private AudioClip pareGuardSatisfied2SFX;
+    [SerializeField] private AudioClip pareGuardSatisfiedMhm3SFX;
+    [SerializeField] private AudioClip pareGuardSurprised1SFX;
+    [SerializeField] private AudioClip pareGuardSurprised2SFX;
+    [SerializeField] private AudioClip pareGuardThinkingSFX;
+
     // Helper Functions --------------------------------------------------------
 
     public void ShakeScreen()
@@ -225,6 +236,17 @@ public class CameraEffectsManager : MonoBehaviour
             case "<SFX_manong_guard_proud>": sfxSource.PlayOneShot(manongGuardProudSFX); break;
             case "<SFX_manong_guard_sigh>": sfxSource.PlayOneShot(manongGuardSighSFX); break;
             case "<SFX_manong_guard_thinking>": sfxSource.PlayOneShot(manongGuardThinkingSFX); break;
+
+            // Pare Guard
+            case "<SFX_pare_guard_frustrated_sigh>": sfxSource.PlayOneShot(pareGuardFrustratedSighSFX); break;
+            case "<SFX_pare_guard_frustrated_ugh>": sfxSource.PlayOneShot(pareGuardFrustratedUghSFX); break;
+            case "<SFX_pare_guard_proud>": sfxSource.PlayOneShot(pareGuardProudSFX); break;
+            case "<SFX_pare_guard_satisfied_1>": sfxSource.PlayOneShot(pareGuardSatisfied1SFX); break;
+            case "<SFX_pare_guard_satisfied_2>": sfxSource.PlayOneShot(pareGuardSatisfied2SFX); break;
+            case "<SFX_pare_guard_satisfied_mhm_3>": sfxSource.PlayOneShot(pareGuardSatisfiedMhm3SFX); break;
+            case "<SFX_pare_guard_surprised_1>": sfxSource.PlayOneShot(pareGuardSurprised1SFX); break;
+            case "<SFX_pare_guard_surprised_2>": sfxSource.PlayOneShot(pareGuardSurprised2SFX); break;
+            case "<SFX_pare_guard_thinking>": sfxSource.PlayOneShot(pareGuardThinkingSFX); break;
 
             default: break;
         }
