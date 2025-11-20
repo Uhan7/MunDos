@@ -71,6 +71,13 @@ public class CameraEffectsManager : MonoBehaviour
     [SerializeField] private AudioClip distressedWomanSighSFX;
     [SerializeField] private AudioClip distressedWomanSurprisedGaspSFX;
 
+    [Header("Voices SFX: Manong Guard")]
+    [SerializeField] private AudioClip manongGuardFrustratedSFX;
+    [SerializeField] private AudioClip manongGuardNormalSFX;
+    [SerializeField] private AudioClip manongGuardProudSFX;
+    [SerializeField] private AudioClip manongGuardSighSFX;
+    [SerializeField] private AudioClip manongGuardThinkingSFX;
+
     // Helper Functions --------------------------------------------------------
 
     public void ShakeScreen()
@@ -211,6 +218,13 @@ public class CameraEffectsManager : MonoBehaviour
             case "<SFX_distressed_woman_normal>": sfxSource.PlayOneShot(distressedWomanNormalSFX); break;
             case "<SFX_distressed_woman_sigh>": sfxSource.PlayOneShot(distressedWomanSighSFX); break;
             case "<SFX_distressed_woman_surprised_gasp>": sfxSource.PlayOneShot(distressedWomanSurprisedGaspSFX); break;
+
+            // Manong Guard
+            case "<SFX_manong_guard_frustrated>": sfxSource.PlayOneShot(manongGuardFrustratedSFX); break;
+            case "<SFX_manong_guard_normal>": sfxSource.PlayOneShot(manongGuardNormalSFX); break;
+            case "<SFX_manong_guard_proud>": sfxSource.PlayOneShot(manongGuardProudSFX); break;
+            case "<SFX_manong_guard_sigh>": sfxSource.PlayOneShot(manongGuardSighSFX); break;
+            case "<SFX_manong_guard_thinking>": sfxSource.PlayOneShot(manongGuardThinkingSFX); break;
 
             default: break;
         }
