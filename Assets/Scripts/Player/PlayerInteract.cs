@@ -95,13 +95,19 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.tag != "NPC" &&
+            col.gameObject.tag != "Envi" &&
+            col.gameObject.tag != "Item") return;
+
         switch (col.gameObject.tag)
         {
             case "NPC":
             case "Envi":
                 if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
                 nearbyEnvi = col.gameObject;
-                if (moveScript.canMove) SetInteractableObjectOutline(nearbyEnvi, true);
+
+                if (moveScript.canMove && moveScript.canInput) SetInteractableObjectOutline(nearbyEnvi, true);
+                else SetInteractableObjectOutline(nearbyEnvi, false);
                 break;
 
             case "Item":
@@ -109,7 +115,39 @@ public class PlayerInteract : MonoBehaviour
                 if (nearbyItem != null) SetInteractableObjectOutline(nearbyItem, false);
                 nearbyItem = col.gameObject;
 
-                if (moveScript.canInput) SetInteractableObjectOutline(nearbyItem, true);
+                if (moveScript.canMove && moveScript.canInput) SetInteractableObjectOutline(nearbyItem, true);
+                else SetInteractableObjectOutline(nearbyItem, false);
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.gameObject.tag != "NPC" &&
+            col.gameObject.tag != "Envi" &&
+            col.gameObject.tag != "Item") return;
+
+        switch (col.gameObject.tag)
+        {
+            case "NPC":
+            case "Envi":
+                if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
+                nearbyEnvi = col.gameObject;
+
+                if (moveScript.canMove && moveScript.canInput) SetInteractableObjectOutline(nearbyEnvi, true);
+                else SetInteractableObjectOutline(nearbyEnvi, false);
+                break;
+
+            case "Item":
+                if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
+                if (nearbyItem != null) SetInteractableObjectOutline(nearbyItem, false);
+                nearbyItem = col.gameObject;
+
+                if (moveScript.canMove && moveScript.canInput) SetInteractableObjectOutline(nearbyItem, true);
+                else SetInteractableObjectOutline(nearbyItem, false);
                 break;
 
             default:
@@ -206,6 +244,8 @@ public class PlayerInteract : MonoBehaviour
     {
         if ((nearbyEnvi == null) || !moveScript.canInput) return;
 
+        if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
+
         if (currentItemData.itemName == "") nearbyEnvi.GetComponent<InteractableObject>().Interact();
         else
         {
@@ -231,8 +271,6 @@ public class PlayerInteract : MonoBehaviour
 
             if (!match) nearbyEnvi.GetComponent<InteractableObject>().ItemInteract(false);
         }
-
-        if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
     }
 
     public int FindEmptySlot()
