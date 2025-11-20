@@ -137,12 +137,7 @@ public class PlayerInteract : MonoBehaviour
                 if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
                 nearbyEnvi = col.gameObject;
 
-                print("stay with me !!!");
-
-                if (moveScript.canMove && moveScript.canInput) {
-                    print("fr");
-                    SetInteractableObjectOutline(nearbyEnvi, true);
-                }
+                if (moveScript.canMove && moveScript.canInput) SetInteractableObjectOutline(nearbyEnvi, true);
                 else SetInteractableObjectOutline(nearbyEnvi, false);
                 break;
 
