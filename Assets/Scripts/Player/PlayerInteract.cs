@@ -95,9 +95,9 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag != "NPC" &&
-            col.gameObject.tag != "Envi" &&
-            col.gameObject.tag != "Item") return;
+        if (!col.CompareTag("NPC") &&
+            !col.CompareTag("Envi") &&
+            !col.CompareTag("Item")) return;
 
         switch (col.gameObject.tag)
         {
@@ -126,9 +126,9 @@ public class PlayerInteract : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.gameObject.tag != "NPC" &&
-            col.gameObject.tag != "Envi" &&
-            col.gameObject.tag != "Item") return;
+        if (!col.CompareTag("NPC") &&
+            !col.CompareTag("Envi") &&
+            !col.CompareTag("Item")) return;
 
         switch (col.gameObject.tag)
         {
@@ -137,7 +137,12 @@ public class PlayerInteract : MonoBehaviour
                 if (nearbyEnvi != null) SetInteractableObjectOutline(nearbyEnvi, false);
                 nearbyEnvi = col.gameObject;
 
-                if (moveScript.canMove && moveScript.canInput) SetInteractableObjectOutline(nearbyEnvi, true);
+                print("stay with me !!!");
+
+                if (moveScript.canMove && moveScript.canInput) {
+                    print("fr");
+                    SetInteractableObjectOutline(nearbyEnvi, true);
+                }
                 else SetInteractableObjectOutline(nearbyEnvi, false);
                 break;
 
@@ -163,6 +168,7 @@ public class PlayerInteract : MonoBehaviour
         if (col.gameObject == nearbyEnvi) nearbyEnvi = null;
         if (col.gameObject == nearbyItem) nearbyItem = null;
     }
+
     public void WillUpdate(bool value)
     {
         willUpdate = value;
@@ -457,8 +463,6 @@ public class PlayerInteract : MonoBehaviour
     
     void SetInteractableObjectOutline(GameObject obj, bool var)
     {
-        if (!moveScript.canInput) return;
-
         SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
         Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
         Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
