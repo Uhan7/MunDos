@@ -10,23 +10,10 @@ public class CameraEffectsManager : MonoBehaviour
     [SerializeField] private GameObject flashObject;
     [SerializeField] private GameObject dimObject;
 
-    [Header("Visual Effects SFX")]
+    [Header("Other Variables")]
     [SerializeField] private AudioClip shakeSFX;
     [SerializeField] private AudioClip flashSFX;
     [SerializeField] private AudioClip dimSFX;
-
-    [Header("Voices SFX")]
-    [SerializeField] private AudioClip santiConcernedSFX;
-    [SerializeField] private AudioClip santiFrustratedSFX;
-    [SerializeField] private AudioClip santiHappySFX;
-    [SerializeField] private AudioClip santiOhSFX;
-    [SerializeField] private AudioClip santiQuestioningSFX;
-    [SerializeField] private AudioClip santiRelievedSFX;
-    [SerializeField] private AudioClip santiSatisfiedSFX;
-    [SerializeField] private AudioClip santiGaspSFX;
-    [SerializeField] private AudioClip santiSighSFX;
-    [SerializeField] private AudioClip santiThinkingSFX;
-    [SerializeField] private AudioClip santiWonderingSFX;
 
     // Helper Functions --------------------------------------------------------
 
@@ -107,14 +94,5 @@ public class CameraEffectsManager : MonoBehaviour
         flashObject.GetComponent<Image>().color = new Color(Color.white.r, Color.white.g, Color.white.b, 0);
         dimObject.GetComponent<Image>().color = new Color(Color.white.r, Color.white.g, Color.white.b, 0);
         mainCamera.GetComponent<CameraShake>().EndScreenShakeWrapper();
-    }
-
-    public void PlaySFX(string audioClipName)
-    {
-        switch (audioClipName)
-        {
-            case "<SFX_santi_concerned>": sfxSource.PlayOneShot(santiConcernedSFX); break;
-            default: break;
-        }
     }
 }

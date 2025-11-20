@@ -5,7 +5,6 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Text.RegularExpressions;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -119,9 +118,7 @@ public class DialogueManager : MonoBehaviour
 			.Replace("<end_all>", "")
 			.Replace("<cut>", "");
 
-		cleanSentence = Regex.Replace(sentence, @"<SFX_[^ >]+>", "");
-
-		dialogueText.text = cleanSentence;
+        dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
 
 		// Gives the sentence to the log screen
@@ -144,6 +141,7 @@ public class DialogueManager : MonoBehaviour
 			dialogueText.maxVisibleCharacters = counter;
 
 			// Depending on effect, we will play it (the conditional is inside)
+
 			DialogueCameraEffect(sentence, "<shake>", "ShakeScreen");
 			DialogueCameraEffect(sentence, "<start_shake>", "StartShakeScreen");
 			DialogueCameraEffect(sentence, "<end_shake>", "EndShakeScreen");
@@ -155,9 +153,6 @@ public class DialogueManager : MonoBehaviour
 			DialogueCameraEffect(sentence, "<end_dim>", "EndDim");
 			DialogueCameraEffect(sentence, "<end_all>", "EndAll");
 			CutOffDialogue(sentence);
-
-			// Character voices
-			DialogueAudioEffect(sentence, "<SFX_santi_concerned>");
 
 			if (counter % lettersUntilSFX == 0 && counter > 0)
 			{
@@ -287,16 +282,6 @@ public class DialogueManager : MonoBehaviour
 			originalCounter += substring.Length;
 		}
 	}
-
-	void DialogueAudioEffect(string sentence, string substring)
-	{
-		if (originalCounter < sentence.Length && sentence.Substring(originalCounter).StartsWith(substring))
-		{
-			cameraEffectsManager.PlaySFX(substring);
-			originalCounter += substring.Length;
-		}
-	}
-
 	void CutOffDialogue(string sentence)
     {
 		if (counter >= totalVisibleCharacters && sentence.Contains("<cut>"))
