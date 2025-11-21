@@ -107,7 +107,7 @@ public class ClickZoomable : MonoBehaviour
             }
             else
             {
-
+                Debug.Log("CZ: Fail puzzle. Resetting");
                 orderIndex = 0;
                 wrongPasswordInput = false;
 
@@ -167,6 +167,7 @@ public class ClickZoomable : MonoBehaviour
 
     private void OnExit()
     {
+        Debug.Log("On Exit");
         orderIndex = 0;
         if (isSingleEnvi)
         {
@@ -182,7 +183,7 @@ public class ClickZoomable : MonoBehaviour
 
         if (disableInteractionAfter)
         {
-            
+            Debug.Log("CZ: Deactivate after");
             foreach (var obj in passwordOrderInput)
             {
                 SetInteractableObjectOutline(obj, false);

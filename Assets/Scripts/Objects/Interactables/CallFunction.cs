@@ -58,6 +58,7 @@ public class CallFunction : MonoBehaviour
     {
         if (onEnable) 
         {
+            Debug.Log("activated!");
             if (willFocus)
             {
                 Focus(true);
