@@ -197,7 +197,6 @@ public class PlayerInteract : MonoBehaviour
             inventorySlot.OnZoom();
             isZoomed = true;
             WillUpdate(true);
-            print("2");
         }
 
         //Cancel Zoom in and select other item
@@ -209,7 +208,6 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
-            print("3");
         }
 
         //Zoom out of same item
@@ -220,7 +218,6 @@ public class PlayerInteract : MonoBehaviour
             isSelected = false;
             GetComponent<Animator>().Play("object_fade_out_half");
             WillUpdate(true);
-            print("4");
         }
 
         //Zoom out then select different item
@@ -234,7 +231,6 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
-            print("5");
         }
     }
 

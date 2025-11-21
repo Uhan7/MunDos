@@ -206,6 +206,8 @@ public class InteractableObject : MonoBehaviour
 
         foreach (GameObject lockObject in objectsToUnlockCheck)
         {
+            if (lockObject == null) continue;
+
             LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
 
             if (lockObjectScript != null)
@@ -229,6 +231,8 @@ public class InteractableObject : MonoBehaviour
 
         foreach (GameObject lockObject in objectsToLockCheck)
         {
+            if (lockObject == null) continue;
+
             LockableObject lockObjectScript = lockObject.GetComponent<LockableObject>();
             CheckUnlock(lockObject, ref lockObjectScript);
 
