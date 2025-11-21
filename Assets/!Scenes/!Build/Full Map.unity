@@ -3004,6 +3004,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 54113059}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &54681072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514374772871082792, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 1849113344}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &56683246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -4232,7 +4237,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: b5e9bd5fd5c6b41128a64957aff53a73, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: objectsToUnlockCheck.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
@@ -4245,7 +4250,7 @@ PrefabInstance:
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'objectsToUnlockCheck.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1689242495}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -11023,7 +11028,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: willFocus
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: zoomInteract
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -11034,9 +11043,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: e2ea3717277c0403d8aa5c8f1cd24b70, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: toActivateOnInteract.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 417802593}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1723385801}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -18728,7 +18745,7 @@ PrefabInstance:
       objectReference: {fileID: 4386704143804324277, guid: 98ce14a2cc1ccd54297b518e972eb85f, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: checksConditionalObject
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -18756,7 +18773,7 @@ PrefabInstance:
       objectReference: {fileID: 519826037}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: conditionalObjectsToCheck.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toDeactivateOnInteract.Array.data[0]'
@@ -18765,7 +18782,7 @@ PrefabInstance:
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
       value: 
-      objectReference: {fileID: 996966435}
+      objectReference: {fileID: 0}
     - target: {fileID: 8898067167016396066, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -22004,7 +22021,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 35929c7e86b5f4c02aa58147467c3dae, type: 3}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: objectsToUnlockCheck.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: toActivateOnInteract.Array.size
@@ -22061,7 +22078,7 @@ PrefabInstance:
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'objectsToUnlockCheck.Array.data[11]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1524033213}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'objectsToUnlockCheck.Array.data[12]'
       value: 
@@ -24786,7 +24803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: willFocus
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: zoomInteract
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -24798,12 +24819,16 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8eed7addbe8514fdda2f1dc4c7ee7c9d, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 554669504}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2073124584}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -38641,7 +38666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
-      value: Guarded Door (3)
+      value: L2 Guarded Door (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_IsActive
@@ -47796,6 +47821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L2 Shiny Axe (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2243799573292339554, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Size.x
       value: 1.61232
@@ -47836,6 +47865,10 @@ PrefabInstance:
       propertyPath: dialogue.character
       value: 
       objectReference: {fileID: -2273764402948009021, guid: a258177e3ef6c1142819ad5a36074c40, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 3
@@ -47930,8 +47963,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4386704143804324277, guid: 98ce14a2cc1ccd54297b518e972eb85f, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: checksConditionalObject
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: checkOnValidInteractOnly
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'soundsToPlay.Array.data[0]'
@@ -59091,6 +59132,11 @@ Transform:
   - {fileID: 546867776}
   m_Father: {fileID: 376447212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1308631764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514374772871082792, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 1808278179}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1319400228
 GameObject:
   m_ObjectHideFlags: 0
@@ -60383,6 +60429,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1359310345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514374772871082792, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 1795937363}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1365855527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68112,6 +68163,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &1524033213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 283624258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1526293361
 GameObject:
   m_ObjectHideFlags: 0
@@ -74290,7 +74346,10 @@ MonoBehaviour:
 
     Locked/Unlocked By:
 
+    WAS
     L2-DZ3
+
+    IS NOW L2 Solomon Manuscript Envi (first instance)
 
     Conditional
     Check By:'
@@ -75826,6 +75885,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1721136869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1723385801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514374772871082792, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 223040126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724185846
 PrefabInstance:
@@ -79229,6 +79293,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: zoomInteract
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -79239,7 +79307,7 @@ PrefabInstance:
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1359310345}
     - target: {fileID: 8898067167016396066, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -79866,7 +79934,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: willFocus
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: zoomInteract
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -79877,9 +79949,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 5bf6010597d79408e923e55fc626ac60, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: toActivateOnInteract.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 1256980578}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1308631764}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -81760,7 +81840,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: willFocus
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: zoomInteract
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -81771,9 +81855,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 3b933ac9b328b4d99bd613663e3fb8b0, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: toActivateOnInteract.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 594641875}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 54681072}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -86415,6 +86507,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1979798489}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1981625111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 658745413927944185, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 2095247836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1986572712
 GameObject:
   m_ObjectHideFlags: 0
@@ -88599,7 +88696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: May I have a look?
+      value: -temp end-
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -88613,7 +88710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -88627,6 +88724,10 @@ PrefabInstance:
       propertyPath: 'objectsToActivateAfter.Array.data[2]'
       value: 
       objectReference: {fileID: 581241754}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[3]'
+      value: 
+      objectReference: {fileID: 345427062}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -91445,6 +91546,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2073124584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7514374772871082792, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 499096797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2075141067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1774476415494809402, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -92227,7 +92333,7 @@ PrefabInstance:
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 2145466952}
+      objectReference: {fileID: 1981625111}
     - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Name
       value: L2 Antiquarian (1)
