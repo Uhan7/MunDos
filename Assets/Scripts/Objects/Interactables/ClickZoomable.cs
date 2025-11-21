@@ -79,6 +79,7 @@ public class ClickZoomable : MonoBehaviour
     //Button interact and checking is done here
     public void CheckCombination(GameObject gameObject)
     {
+        Debug.Log($"CZ: checking {gameObject.name}, matching order {gameObject.name == passwordOrder[orderIndex].gameObjectName}");
         if (inputOrder.Contains(gameObject.name))
         {
             return;
@@ -99,6 +100,7 @@ public class ClickZoomable : MonoBehaviour
            
             if (wrongPasswordInput == false)
             {
+                Debug.Log("CZ: Correctly solved puzzle");
                 SetAll(toActivate, true);
                 SetAll(toDeactivate, false);
                 OnExit();

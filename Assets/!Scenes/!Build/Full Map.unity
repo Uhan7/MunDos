@@ -11216,6 +11216,14 @@ PrefabInstance:
       propertyPath: dialogue.textSpeed
       value: 0.022
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 417802593}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Tree 4
@@ -11286,7 +11294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: zoomInteract
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -11298,12 +11306,12 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e2ea3717277c0403d8aa5c8f1cd24b70, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 417802593}
+      objectReference: {fileID: 1723385801}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -11324,17 +11332,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 223040126}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &223040128 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 804437671070608610, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-  m_PrefabInstance: {fileID: 223040126}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578b8d42ed70f4023a083dd2ab0f4cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &224218827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4020112279527485376, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -21359,25 +21356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18133ce92ce6d6347a566f70b92ae123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatedByKeyPress: 1
+  activatedByKeyPress: 0
   interactKey: 102
   toCall:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 223040128}
-        m_TargetAssemblyTypeName: ZoomEnviManager, Assembly-CSharp
-        m_MethodName: DeactivateZoomedEnvi
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  activateBeforeKeyPress: 1
-  toCallRegardless:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 753837359}
@@ -21392,6 +21373,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  activateBeforeKeyPress: 0
+  toCallRegardless:
+    m_PersistentCalls:
+      m_Calls: []
   onEnable: 1
   onTrigger: 0
   disableAfter: 1
@@ -25273,6 +25258,14 @@ PrefabInstance:
       propertyPath: dialogue.textSpeed
       value: 0.022
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 554669504}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Tree 1
@@ -25343,7 +25336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: zoomInteract
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -25355,12 +25348,12 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8eed7addbe8514fdda2f1dc4c7ee7c9d, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 554669504}
+      objectReference: {fileID: 2073124584}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -25381,17 +25374,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 499096797}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &499096799 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 804437671070608610, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-  m_PrefabInstance: {fileID: 499096797}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578b8d42ed70f4023a083dd2ab0f4cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &505182277
 GameObject:
   m_ObjectHideFlags: 0
@@ -27107,24 +27089,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18133ce92ce6d6347a566f70b92ae123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatedByKeyPress: 1
+  activatedByKeyPress: 0
   interactKey: 102
   toCall:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 499096799}
-        m_TargetAssemblyTypeName: ZoomEnviManager, Assembly-CSharp
-        m_MethodName: DeactivateZoomedEnvi
-        m_Mode: 1
+      - m_Target: {fileID: 753837359}
+        m_TargetAssemblyTypeName: ClickZoomable, Assembly-CSharp
+        m_MethodName: CheckCombination
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 852033065}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  activateBeforeKeyPress: 1
+  activateBeforeKeyPress: 0
   toCallRegardless:
     m_PersistentCalls:
       m_Calls:
@@ -28572,25 +28554,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18133ce92ce6d6347a566f70b92ae123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatedByKeyPress: 1
+  activatedByKeyPress: 0
   interactKey: 102
   toCall:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1849113346}
-        m_TargetAssemblyTypeName: ZoomEnviManager, Assembly-CSharp
-        m_MethodName: DeactivateZoomedEnvi
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  activateBeforeKeyPress: 1
-  toCallRegardless:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 753837359}
@@ -28605,6 +28571,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  activateBeforeKeyPress: 0
+  toCallRegardless:
+    m_PersistentCalls:
+      m_Calls: []
   onEnable: 1
   onTrigger: 0
   disableAfter: 1
@@ -30716,7 +30686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -57577,24 +57547,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18133ce92ce6d6347a566f70b92ae123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activatedByKeyPress: 1
+  activatedByKeyPress: 0
   interactKey: 102
   toCall:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1808278181}
-        m_TargetAssemblyTypeName: ZoomEnviManager, Assembly-CSharp
-        m_MethodName: DeactivateZoomedEnvi
-        m_Mode: 1
+      - m_Target: {fileID: 753837359}
+        m_TargetAssemblyTypeName: ClickZoomable, Assembly-CSharp
+        m_MethodName: CheckCombination
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1646273790}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  activateBeforeKeyPress: 1
+  activateBeforeKeyPress: 0
   toCallRegardless:
     m_PersistentCalls:
       m_Calls:
@@ -80799,6 +80769,14 @@ PrefabInstance:
       propertyPath: dialogue.textSpeed
       value: 0.022
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1256980578}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Tree 3
@@ -80869,7 +80847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: zoomInteract
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -80881,12 +80859,12 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5bf6010597d79408e923e55fc626ac60, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 1256980578}
+      objectReference: {fileID: 1308631764}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -80907,17 +80885,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1808278179}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1808278181 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 804437671070608610, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-  m_PrefabInstance: {fileID: 1808278179}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578b8d42ed70f4023a083dd2ab0f4cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1810601428 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -82737,6 +82704,14 @@ PrefabInstance:
       propertyPath: dialogue.textSpeed
       value: 0.022
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 594641875}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Tree 5
@@ -82807,7 +82782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: zoomInteract
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
@@ -82819,12 +82794,12 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 3b933ac9b328b4d99bd613663e3fb8b0, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 594641875}
+      objectReference: {fileID: 54681072}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -82845,17 +82820,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1849113344}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1849113346 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 804437671070608610, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-  m_PrefabInstance: {fileID: 1849113344}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 578b8d42ed70f4023a083dd2ab0f4cd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1850936722 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
