@@ -5088,6 +5088,88 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &107072104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107072105}
+  - component: {fileID: 107072106}
+  m_Layer: 0
+  m_Name: 6
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &107072105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107072104}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 605948875}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107072106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107072104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    character2: {fileID: 0}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(I won't be needing this <u>Emblem</u> anymore.)</i>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter:
+  - {fileID: 73479498}
+  - {fileID: 741176008}
+  - {fileID: 2017489043}
+  - {fileID: 1843589644}
+  - {fileID: 659636023}
+  objectsToDeactivateAfter:
+  - {fileID: 1876604112}
+  - {fileID: 21787371}
+  - {fileID: 1822226739}
+  - {fileID: 892107358}
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove:
+  - DG Emblem
+  soundsToPlayBefore: []
 --- !u!1 &109353170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1488329602184275242, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -10252,7 +10334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6105215147069015140, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: runSpeed
-      value: 100
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6105215147069015140, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: maxRunSpeed
@@ -28576,6 +28658,9 @@ PrefabInstance:
       addedObject: {fileID: 1266438032}
     - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 107072105}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1049371925}
     - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
@@ -31161,7 +31246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -112.05567
+      value: -112.049164
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -57429,22 +57514,13 @@ MonoBehaviour:
   willFocus: 1
   willHideUI: 0
   deactivateAfter: 1
-  linksToOtherDialogue: 0
-  nextDialogue: {fileID: 0}
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 107072104}
   nextDialogueTime: 0.5
-  playClosingAnimation: 0
+  playClosingAnimation: 2
   mainCharacterIsSpeaking: 1
-  objectsToActivateAfter:
-  - {fileID: 73479498}
-  - {fileID: 741176008}
-  - {fileID: 2017489043}
-  - {fileID: 1843589644}
-  - {fileID: 659636023}
-  objectsToDeactivateAfter:
-  - {fileID: 1876604112}
-  - {fileID: 21787371}
-  - {fileID: 1822226739}
-  - {fileID: 892107358}
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
   conditionalObjectsToCheckAfter: []
   playeritemNamesToRemove: []
   soundsToPlayBefore: []
@@ -76730,7 +76806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6105215147069015140, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: runSpeed
-      value: 125
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6105215147069015140, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: maxRunSpeed

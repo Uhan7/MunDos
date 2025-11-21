@@ -106,7 +106,9 @@ public class DialogueManager : MonoBehaviour
 	IEnumerator TypeSentence(string sentence)
 	{
 		// Gonna have to manually add new shi here, Replaces the <thing> with empty
-		string cleanSentence = sentence
+		string cleanSentence = Regex.Replace(sentence, @"<SFX_[^ >]+>", "");
+
+		cleanSentence = cleanSentence
 			.Replace("<shake>", "")
 			.Replace("<start_shake>", "")
 			.Replace("<end_shake>", "")
@@ -118,8 +120,6 @@ public class DialogueManager : MonoBehaviour
 			.Replace("<end_dim>", "")
 			.Replace("<end_all>", "")
 			.Replace("<cut>", "");
-
-		cleanSentence = Regex.Replace(sentence, @"<SFX_[^ >]+>", "");
 
 		dialogueText.text = cleanSentence;
 		dialogueText.maxVisibleCharacters = 0;
