@@ -50,6 +50,7 @@ public class DialogueTrigger : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioClip[] soundsToPlayBefore;
+    [SerializeField] private AudioClip[] soundsToPlayAfter;
 
     [Header("Flags")]
     [HideInInspector] private bool dialogueIsTriggered;
@@ -203,6 +204,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Deactivate()
     {
+        if (soundsToPlayAfter.Length > 0) foreach (AudioClip clip in soundsToPlayAfter) sfxSource.PlayOneShot(clip);
+
         if (willFocus)
         {
             Focus(false);
@@ -217,7 +220,10 @@ public class DialogueTrigger : MonoBehaviour
         if (willHideUI) HideUI(false);
 
         deactivateTimer -= Time.deltaTime;
-        if (deactivateTimer <= 0) gameObject.SetActive(false);
+        if (deactivateTimer <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public void ResetValues()
