@@ -2071,13 +2071,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 26659811}
+  - component: {fileID: 26659812}
   m_Layer: 0
   m_Name: Tree Puzzle Success
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &26659811
 Transform:
   m_ObjectHideFlags: 0
@@ -2094,6 +2095,31 @@ Transform:
   - {fileID: 1660124353}
   m_Father: {fileID: 617917452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &26659812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26659810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 1
+  lockAndUnlock: 0
+  delayTime: 0.5
+  resetAfter: 0
+  deactivateAfter: 0
+  repeatable: 0
+  objectsToActivate:
+  - {fileID: 1660124352}
+  objectsToDeactivate: []
+  objectsToLock: []
+  objectsToUnlock: []
 --- !u!1 &30550420 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -31736,7 +31762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.44444
+      value: -110.44883
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38465,10 +38491,10 @@ MonoBehaviour:
   deactivateAfter: 0
   disableInteractionAfter: 1
   toActivate:
-  - {fileID: 1660124352}
+  - {fileID: 26659810}
   toDeactivate: []
   toActivateOnInvalidInteract:
-  - {fileID: 1975146486}
+  - {fileID: 1686735966}
   toDeactivateOnInvalidInteract: []
   hasElements: 0
   leaveCondition: 0
@@ -75176,13 +75202,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1686735967}
+  - component: {fileID: 1686735968}
   m_Layer: 0
   m_Name: Fail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1686735967
 Transform:
   m_ObjectHideFlags: 0
@@ -75199,6 +75226,31 @@ Transform:
   - {fileID: 1975146487}
   m_Father: {fileID: 753837358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1686735968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686735966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 1
+  lockAndUnlock: 0
+  delayTime: 0.5
+  resetAfter: 0
+  deactivateAfter: 0
+  repeatable: 0
+  objectsToActivate:
+  - {fileID: 1975146486}
+  objectsToDeactivate: []
+  objectsToLock: []
+  objectsToUnlock: []
 --- !u!1 &1687515746
 GameObject:
   m_ObjectHideFlags: 0
