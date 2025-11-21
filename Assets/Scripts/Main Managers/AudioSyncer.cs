@@ -38,7 +38,14 @@ public class AudioSyncer : MonoBehaviour
 
     private void Update()
     {
-        if (alwaysChangeOnSettings) audioSource.volume = SettingsInfo.musicVol;
+        if (alwaysChangeOnSettings)
+        {
+            switch (audioType)
+            {
+                case AUDIO_TYPE.BGM: audioSource.volume = SettingsInfo.musicVol; break;
+                case AUDIO_TYPE.SFX: audioSource.volume = SettingsInfo.SFXVol; break;
+                case AUDIO_TYPE.DIALOGUE: audioSource.volume = SettingsInfo.dialogueVol; break;
+            }
+        }
     }
-
 }
