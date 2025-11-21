@@ -43,6 +43,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject[] objectsToDeactivateAfter;
     [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
     [SerializeField] private string[] playeritemNamesToRemove;
+    [SerializeField] private bool repeatable;
 
     [Header("Timers")]
     [HideInInspector] private float deactivateTimer;
@@ -183,7 +184,7 @@ public class DialogueTrigger : MonoBehaviour
             if (objs == null) continue;
             objs.SetActive(true);
         }
-        alreadyActivatedObjects = true;
+        if (!repeatable) alreadyActivatedObjects = true;
     }
 
     void DeactivateOtherObjects()
@@ -193,7 +194,7 @@ public class DialogueTrigger : MonoBehaviour
             if (objs == null) continue;
             objs.SetActive(false);
         }
-        alreadyDeactivatedObjects = true;
+        if (!repeatable) alreadyDeactivatedObjects = true;
     }
 
     void RemovePlayerItems()
