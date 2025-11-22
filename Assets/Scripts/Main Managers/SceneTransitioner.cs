@@ -11,11 +11,20 @@ public class SceneTransitioner : MonoBehaviour
 
     [HideInInspector] private string sceneName;
 
+    private Animator transitionAnimator;
+
+    private void Start()
+    {
+        transitionAnimator = transitionObject.GetComponent<Animator>();  
+    }
+
     public void SceneTransitionWrapper(string _sceneName)
     {
+        transitionObject.SetActive(true);
+        transitionAnimator.SetBool("Loading", true);
+
         sceneName = _sceneName;
 
-        transitionObject.SetActive(true);
         StartCoroutine(GoToScene());
     }
 
@@ -27,7 +36,7 @@ public class SceneTransitioner : MonoBehaviour
         {
             yield return null;
         }
-        yield return new WaitForSeconds(0.1f);
-        transitionObject.SetActive(false);
     }
+
+
 }

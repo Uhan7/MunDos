@@ -5605,7 +5605,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1826497072}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.name
       value: Liezel
@@ -5620,7 +5620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: linksToOtherDialogue
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
@@ -5651,8 +5651,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[4]'
-      value: "<SFX_liezel_thinking>(Then again, Servillano\u2019s main reason for
-        writing is to express his feelings through poetic means.)"
+      value: "<SFX_liezel_thinking><i>(Then again, Servillano\u2019s main reason
+        for writing is to express his feelings through poetic means.)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[5]'
@@ -36381,7 +36381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -37119,7 +37119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5066857228442181586, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5072619723861528992, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: player
@@ -37393,6 +37393,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7048334348284048725, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6b96d5d97896abb40bdb08cc7c15abeb, type: 2}
     - target: {fileID: 7056195635800006280, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -37419,7 +37423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -37751,6 +37755,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8625748527193698867, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2063826154672905881, guid: aa96dc731578742beb561f37ee925e12, type: 3}
+    - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8762271121672025792, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -40102,7 +40122,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <SFX_liezel_happy>Well, I never said I was particularly bad at it.
+    - Well, I never said I was particularly bad at it.
     - <SFX_liezel_wondering>I will, however, admit I had help. It was not originally
       my intention to make a book that crossed time and space.
     - "I only wanted to divine the truth behind the \u201Cmagic attacks\u201D. Instead...
@@ -56036,11 +56056,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1914575499}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &974470956 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 1979798489}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &974546555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57816,6 +57831,11 @@ MonoBehaviour:
   isLockedAtStart: 1
   requiredChecks: 1
   currentChecks: 0
+--- !u!1 &990095002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 1979798489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &991896816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66367,7 +66387,7 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 933276125}
+      objectReference: {fileID: 455875747}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.name
       value: Liezel
@@ -105844,7 +105864,7 @@ MonoBehaviour:
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter:
-  - {fileID: 974470956}
+  - {fileID: 990095002}
   objectsToDeactivateAfter: []
   repeatable: 0
   conditionalObjectsToCheckAfter: []
