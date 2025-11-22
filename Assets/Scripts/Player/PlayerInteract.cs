@@ -146,7 +146,7 @@ public class PlayerInteract : MonoBehaviour
                 if (nearbyItem != null) SetInteractableObjectOutline(nearbyItem, false);
                 nearbyItem = col.gameObject;
 
-                if (moveScript.canMove && moveScript.canInput) SetInteractableObjectOutline(nearbyItem, true);
+                if (moveScript.canMove && moveScript.canInput && nearbyEnvi == null) SetInteractableObjectOutline(nearbyItem, true);
                 else SetInteractableObjectOutline(nearbyItem, false);
                 break;
 
