@@ -26579,7 +26579,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 35929c7e86b5f4c02aa58147467c3dae, type: 3}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: objectsToUnlockCheck.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: toActivateOnInteract.Array.size
@@ -26596,7 +26596,7 @@ PrefabInstance:
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'objectsToUnlockCheck.Array.data[2]'
       value: 
-      objectReference: {fileID: 1291817259}
+      objectReference: {fileID: 987390533}
     - target: {fileID: -3690064291442228492, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: 'objectsToUnlockCheck.Array.data[3]'
       value: 
@@ -36683,7 +36683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -57110,6 +57110,7 @@ GameObject:
   - component: {fileID: 987390537}
   - component: {fileID: 987390536}
   - component: {fileID: 987390535}
+  - component: {fileID: 987390539}
   m_Layer: 0
   m_Name: L2 Rusty Axe
   m_TagString: Item
@@ -57294,6 +57295,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &987390539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987390533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLockedAtStart: 1
+  requiredChecks: 1
+  currentChecks: 0
 --- !u!1001 &988407844
 PrefabInstance:
   m_ObjectHideFlags: 0
