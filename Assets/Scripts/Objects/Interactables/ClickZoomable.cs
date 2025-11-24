@@ -80,40 +80,40 @@ public class ClickZoomable : MonoBehaviour
     //Button interact and checking is done here
     public void CheckCombination(GameObject gameObject)
     {
-        Debug.Log($"CZ: checking {gameObject.name}, matching order {gameObject.name == passwordOrder[orderIndex].gameObjectName}");
+        //Debug.Log($"CZ: checking {gameObject.name}, matching order {gameObject.name == passwordOrder[orderIndex].gameObjectName}");
         if (inputOrder.Contains(gameObject.name))
         {
             return;
         }
         inputOrder.Add(gameObject.name);
+
         if (!isSingleEnvi)
         {
             SetInteractableObjectOutline(gameObject, true);
             if (hasActivatedState)
             {
                 SetActiveState(gameObject, true);
-                gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
-            }
-
-            if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
+        }
+        if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
         {
             wrongPasswordInput = true;
         }
+
         //Debug.Log($"order Index {orderIndex}, passwordInput length {passwordOrderInput.Length - 1}");
         if (orderIndex >= passwordOrderInput.Length - 1)
         {
            
             if (wrongPasswordInput == false)
             {
-                Debug.Log("CZ: Correctly solved puzzle");
+                //Debug.Log("CZ: Correctly solved puzzle");
                 SetAll(toActivate, true);
                 SetAll(toDeactivate, false);
                 OnExit();
             }
             else
             {
-                Debug.Log("CZ: Fail puzzle. Resetting");
+                //Debug.Log("CZ: Fail puzzle. Resetting");
                 orderIndex = 0;
                 wrongPasswordInput = false;
 
@@ -127,11 +127,7 @@ public class ClickZoomable : MonoBehaviour
                     foreach (var obj in passwordOrderInput)
                     {
                         SetInteractableObjectOutline(obj, false);
-                        if (hasActivatedState)
-                        {
-                            SetActiveState(obj, false);
-                            obj.GetComponent<SpriteRenderer>().enabled = true;
-                        }
+                        if (hasActivatedState) SetActiveState(obj, false);
                     }
                 }
             }
@@ -173,27 +169,20 @@ public class ClickZoomable : MonoBehaviour
 
     void SetActiveState(GameObject obj, bool value)
     {
-        Transform childTransform = obj.transform.Find("Active");
-        if (childTransform == null)
-        {
-            Debug.LogWarning($"{childTransform.name}'s active is null");
-        }
-        else
-        {
-            Debug.Log($"found {childTransform.name}");
-            childTransform.gameObject.SetActive(value);
-        }
+        Transform childTransformActive = obj.transform.Find("Active");
+        Transform childTransformSymbol = obj.transform.Find("Symbol");
+
+        if (childTransformActive == null) Debug.LogError($"{childTransformActive.name}'s active is null");
+        else childTransformActive.gameObject.SetActive(value);
+
+        
+        if (childTransformSymbol == null) Debug.LogError($"{childTransformSymbol.name}'s active is null");
+        else childTransformSymbol.gameObject.SetActive(!value);
     }
 
-    //void Set(GameObject gameObject, bool value)
-    //{
-    //    if (gameObject == null) return;
-    //    gameObject.SetActive(value);
-    //}
 
     private void OnExit()
     {
-        Debug.Log("On Exit");
         orderIndex = 0;
         if (isSingleEnvi)
         {
@@ -209,7 +198,6 @@ public class ClickZoomable : MonoBehaviour
 
         if (disableInteractionAfter)
         {
-            Debug.Log("CZ: Deactivate after");
             foreach (var obj in passwordOrderInput)
             {
                 SetInteractableObjectOutline(obj, false);
