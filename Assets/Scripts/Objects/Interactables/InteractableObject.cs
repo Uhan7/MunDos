@@ -243,7 +243,7 @@ public class InteractableObject : MonoBehaviour
                 if (lockObjectScript.currentChecks >= lockObjectScript.requiredChecks)
                 {
                     lockObjectScript.Lock(true);
-                    lockObjectScript.gameObject.GetComponent<SpriteRenderer>().sprite = normalSprite;
+                    lockObjectScript.gameObject.GetComponent<SpriteRenderer>().sprite = lockObjectScript.gameObject.GetComponent<InteractableObject>().normalSprite;
                 }
             }
 

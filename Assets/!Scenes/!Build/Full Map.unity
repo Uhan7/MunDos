@@ -17784,6 +17784,30 @@ PrefabInstance:
       value: some other dilly dallying default dialogue
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: lockInteractableObject
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: lockOnValidInteractOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: objectsToLockCheck.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'objectsToLockCheck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 680828483}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'objectsToLockCheck.Array.data[1]'
+      value: 
+      objectReference: {fileID: 904274715}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'objectsToLockCheck.Array.data[2]'
+      value: 
+      objectReference: {fileID: 559891938}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 285176774}
@@ -33335,6 +33359,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 559891940}
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 559891944}
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!4 &559891936 stripped
 Transform:
@@ -33378,6 +33405,21 @@ MonoBehaviour:
   DZ: {fileID: 1352849304}
   otherOils: []
   correctDZ: {fileID: 0}
+--- !u!114 &559891944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559891938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLockedAtStart: 0
+  requiredChecks: 1
+  currentChecks: 0
 --- !u!1001 &561772963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43600,6 +43642,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 680828485}
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 680828489}
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!4 &680828481 stripped
 Transform:
@@ -43643,6 +43688,21 @@ MonoBehaviour:
   DZ: {fileID: 1941855319}
   otherOils: []
   correctDZ: {fileID: 0}
+--- !u!114 &680828489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680828483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLockedAtStart: 0
+  requiredChecks: 1
+  currentChecks: 0
 --- !u!1001 &681207412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55307,6 +55367,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 904274717}
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 904274721}
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!4 &904274713 stripped
 Transform:
@@ -55350,6 +55413,21 @@ MonoBehaviour:
   DZ: {fileID: 432709736}
   otherOils: []
   correctDZ: {fileID: 0}
+--- !u!114 &904274721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904274715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLockedAtStart: 0
+  requiredChecks: 1
+  currentChecks: 0
 --- !u!1001 &904396570
 PrefabInstance:
   m_ObjectHideFlags: 0
