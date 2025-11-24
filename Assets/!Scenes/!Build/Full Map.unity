@@ -5758,11 +5758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -6023,7 +6023,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5689517657370756421, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4605098388668104130, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1826497071}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
@@ -6040,6 +6043,11 @@ Transform:
 --- !u!1 &86772461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 86772459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &86772462 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4605098388668104130, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 86772459}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &88377398 stripped
@@ -17945,8 +17953,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "<SFX_santi_questioning>What if it was one of his coworkers? Friends?<dim>Oh\u2026
-        What if it\u2019s you..."
+      value: "<SFX_santi_questioning>What if it was one of his coworkers? Friends?<dim>
+        Oh\u2026 What if it\u2019s you..."
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -38645,7 +38653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -39687,7 +39695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -86415,9 +86423,6 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 5689517657370756421, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4605098388668104130, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1826497071}
     - targetCorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1794414430}
@@ -86429,11 +86434,6 @@ PrefabInstance:
 --- !u!4 &1491982625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-  m_PrefabInstance: {fileID: 1491982624}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1491982626 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4605098388668104130, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 1491982624}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491982627 stripped
@@ -104179,7 +104179,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1491982626}
+    m_TransformParent: {fileID: 86772462}
     m_Modifications:
     - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -104269,9 +104269,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 670704465}
+      objectReference: {fileID: 1491982629}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 86772461}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
