@@ -92,7 +92,7 @@ public class ClickZoomable : MonoBehaviour
             if (hasActivatedState)
             {
                 SetActiveState(gameObject, true);
-                //gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
             }
 
@@ -130,7 +130,7 @@ public class ClickZoomable : MonoBehaviour
                         if (hasActivatedState)
                         {
                             SetActiveState(obj, false);
-                            //obj.GetComponent<SpriteRenderer>().enabled = true;
+                            obj.GetComponent<SpriteRenderer>().enabled = true;
                         }
                     }
                 }
@@ -173,25 +173,23 @@ public class ClickZoomable : MonoBehaviour
 
     void SetActiveState(GameObject obj, bool value)
     {
-        Transform childTransformActive = obj.transform.Find("Active");
-        Transform childTransformSymbol = obj.transform.Find("Symbol");
-
-        if (childTransformActive == null) Debug.LogError($"{childTransformActive.name}'s active is null");
-        else
+        Transform childTransform = obj.transform.Find("Active");
+        if (childTransform == null)
         {
-            //Debug.Log($"found {childTransformActive.name}");
-            childTransformActive.gameObject.SetActive(value);
+            Debug.LogWarning($"{childTransform.name}'s active is null");
         }
-
-        
-        if (childTransformSymbol == null) Debug.LogError($"{childTransformSymbol.name}'s active is null");
         else
         {
-            //Debug.Log($"found {childTransformSymbol.name}");
-            childTransformSymbol.gameObject.SetActive(!value);
+            Debug.Log($"found {childTransform.name}");
+            childTransform.gameObject.SetActive(value);
         }
     }
 
+    //void Set(GameObject gameObject, bool value)
+    //{
+    //    if (gameObject == null) return;
+    //    gameObject.SetActive(value);
+    //}
 
     private void OnExit()
     {
