@@ -33,6 +33,7 @@ public class ClickZoomable : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private GameObject[] passwordOrderInput;
+    [HideIf("isSingleEnvi")][SerializeField] private bool hasActivatedState;
     [SerializeField] private bool isSingleEnvi;
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject exitButton;
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviBackdrop;
@@ -88,9 +89,14 @@ public class ClickZoomable : MonoBehaviour
         if (!isSingleEnvi)
         {
             SetInteractableObjectOutline(gameObject, true);
-        }
-        
-        if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
+            if (hasActivatedState)
+            {
+                SetActiveState(gameObject, true);
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            }
+            }
+
+            if (gameObject.name != passwordOrder[orderIndex].gameObjectName)
         {
             wrongPasswordInput = true;
         }
@@ -121,6 +127,11 @@ public class ClickZoomable : MonoBehaviour
                     foreach (var obj in passwordOrderInput)
                     {
                         SetInteractableObjectOutline(obj, false);
+                        if (hasActivatedState)
+                        {
+                            SetActiveState(obj, false);
+                            obj.GetComponent<SpriteRenderer>().enabled = true;
+                        }
                     }
                 }
             }
@@ -159,6 +170,21 @@ public class ClickZoomable : MonoBehaviour
             obj.SetActive(value);
         }
     }
+
+    void SetActiveState(GameObject obj, bool value)
+    {
+        Transform childTransform = obj.transform.Find("Active");
+        if (childTransform == null)
+        {
+            Debug.LogWarning($"{childTransform.name}'s active is null");
+        }
+        else
+        {
+            Debug.Log($"found {childTransform.name}");
+            childTransform.gameObject.SetActive(value);
+        }
+    }
+
     //void Set(GameObject gameObject, bool value)
     //{
     //    if (gameObject == null) return;
