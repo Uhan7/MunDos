@@ -204,12 +204,12 @@ public class DialogueManager : MonoBehaviour
 
 			// Ate Guard
 			{
-				DialogueAudioEffect(sentence, "<SFX_antiquarian_frustrated_grunt>");
-				DialogueAudioEffect(sentence, "<SFX_antiquarian_normal_suspicious>");
-				DialogueAudioEffect(sentence, "<SFX_antiquarian_ominous_chuckle_1>");
-				DialogueAudioEffect(sentence, "<SFX_antiquarian_ominous_chuckle_2>");
-				DialogueAudioEffect(sentence, "<SFX_antiquarian_proud>");
-				DialogueAudioEffect(sentence, "<SFX_antiquarian_satisfied>");
+				DialogueAudioEffect(sentence, "<SFX_ate_guard_normal>");
+				DialogueAudioEffect(sentence, "<SFX_ate_guard_proud>");
+				DialogueAudioEffect(sentence, "<SFX_ate_guard_sigh_2>");
+				DialogueAudioEffect(sentence, "<SFX_ate_guard_sigh>");
+				DialogueAudioEffect(sentence, "<SFX_ate_guard_surprised_gasp>");
+				DialogueAudioEffect(sentence, "<SFX_ate_guard_thinking>");
 			}
 
 			// Distressed Woman

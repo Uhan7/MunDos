@@ -18,6 +18,9 @@ public class type_out_text : MonoBehaviour
     [SerializeField] private float textSpeed;
     [SerializeField] private float textPunctSpeed;
 
+    [SerializeField] private float minimumPitch = 0.95f;
+    [SerializeField] private float maximumPitch = 1.05f;
+
     private void Awake()
     {
         text = GetComponent<TextMeshProUGUI>();
@@ -33,7 +36,11 @@ public class type_out_text : MonoBehaviour
         text.text = "";
         foreach (char letter in sentence)
         {
-            if (text.text.Length % playPerLetter == 0 && letter != ' ') aSource.PlayOneShot(soundToPlay);
+            if (text.text.Length % playPerLetter == 0 && letter != ' ')
+            {
+                aSource.pitch = Random.Range(minimumPitch, maximumPitch);
+                aSource.PlayOneShot(soundToPlay);
+            }
             text.text += letter;
             if (letter == '.' || letter == '?' || letter == ',') yield return new WaitForSeconds(textPunctSpeed);
             else yield return new WaitForSeconds(textSpeed);

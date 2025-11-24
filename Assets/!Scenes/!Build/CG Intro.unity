@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 2
-  fadeOutDelay: 8
+  fadeOutDelay: 9
   fadeOutDuration: 2
   disableOnFadeOut: 0
 --- !u!1 &112900704
@@ -453,6 +453,7 @@ GameObject:
   - component: {fileID: 112900707}
   - component: {fileID: 112900706}
   - component: {fileID: 112900708}
+  - component: {fileID: 112900709}
   m_Layer: 5
   m_Name: Bottom Text
   m_TagString: Untagged
@@ -593,10 +594,28 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
   textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
+--- !u!114 &112900709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112900704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInDuration: 0.5
+  fadeOutDelay: 3.3
+  fadeOutDuration: 1.5
+  disableOnFadeOut: 0
 --- !u!1 &114096870
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +757,7 @@ GameObject:
   - component: {fileID: 120636471}
   - component: {fileID: 120636470}
   - component: {fileID: 120636472}
+  - component: {fileID: 120636473}
   m_Layer: 5
   m_Name: Bottom Text
   m_TagString: Untagged
@@ -878,10 +898,28 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
   textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
+--- !u!114 &120636473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120636468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInDuration: 0.5
+  fadeOutDelay: 3.3
+  fadeOutDuration: 1.5
+  disableOnFadeOut: 0
 --- !u!1 &166327441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,10 +1073,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.035
+  textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &166327446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,9 +1091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 0.3
-  fadeOutDelay: 2
-  fadeOutDuration: 0.75
+  fadeInDuration: 0.5
+  fadeOutDelay: 3.3
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &276425804
 GameObject:
@@ -1242,12 +1282,13 @@ MonoBehaviour:
   - 0
   - 0
   pageHoldTime:
-  - 6.55
-  - 6.55
-  - 6.55
-  - 6.55
-  - 6.55
-  - 6.55
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13.4
+  sceneNameToLoad: Title Screen
 --- !u!4 &430793470
 Transform:
   m_ObjectHideFlags: 0
@@ -1366,7 +1407,7 @@ MonoBehaviour:
   m_text: Once upon a time,
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a800e58a6acc50f43b509b71aec5c244, type: 2}
-  m_sharedMaterial: {fileID: 2850622436385921256, guid: 07ca5373d54c149e9a88796b1edd6916, type: 2}
+  m_sharedMaterial: {fileID: 6903799060321616271, guid: a800e58a6acc50f43b509b71aec5c244, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1457,10 +1498,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.035
+  textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &658496214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,9 +1516,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 0.3
-  fadeOutDelay: 3.65
-  fadeOutDuration: 0.75
+  fadeInDuration: 0.5
+  fadeOutDelay: 6.6
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &707773117
 GameObject:
@@ -1800,8 +1843,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1291845631
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.29803923}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1882,7 +1925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 1.5
+  fadeInDuration: 2
   fadeOutDelay: 1
   fadeOutDuration: 1.5
   disableOnFadeOut: 1
@@ -2039,10 +2082,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.028
+  textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &911003004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2055,9 +2100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 0
-  fadeOutDelay: 2.05
-  fadeOutDuration: 0.6
+  fadeInDuration: 0.5
+  fadeOutDelay: 3.3
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &961930922
 GameObject:
@@ -2477,10 +2522,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.025
+  textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &1250915872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2494,8 +2541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 0.5
-  fadeOutDelay: 1.6
-  fadeOutDuration: 0.5
+  fadeOutDelay: 3.3
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &1260325402
 GameObject:
@@ -2650,10 +2697,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.025
-  textPunctSpeed: 0.15
+  textSpeed: 0.03
+  textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &1260325407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2667,8 +2716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 0.5
-  fadeOutDelay: 3.2
-  fadeOutDuration: 0.5
+  fadeOutDelay: 6.6
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &1300517950
 GameObject:
@@ -2823,10 +2872,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
   textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &1300517955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2839,9 +2890,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 0.3
-  fadeOutDelay: 2.75
-  fadeOutDuration: 0.9
+  fadeInDuration: 0.5
+  fadeOutDelay: 6.6
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &1336505894
 GameObject:
@@ -2992,7 +3043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 2
-  fadeOutDelay: 8
+  fadeOutDelay: 9
   fadeOutDuration: 2
   disableOnFadeOut: 0
 --- !u!1 &1418336008
@@ -3007,6 +3058,7 @@ GameObject:
   - component: {fileID: 1418336011}
   - component: {fileID: 1418336010}
   - component: {fileID: 1418336012}
+  - component: {fileID: 1418336013}
   m_Layer: 5
   m_Name: Upper Text
   m_TagString: Untagged
@@ -3147,10 +3199,28 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.035
+  textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
+--- !u!114 &1418336013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418336008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInDuration: 0.5
+  fadeOutDelay: 6.6
+  fadeOutDuration: 1.5
+  disableOnFadeOut: 0
 --- !u!1 &1443313578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,6 +3308,7 @@ GameObject:
   - component: {fileID: 1456335032}
   - component: {fileID: 1456335031}
   - component: {fileID: 1456335033}
+  - component: {fileID: 1456335034}
   m_Layer: 5
   m_Name: Upper Text
   m_TagString: Untagged
@@ -3378,10 +3449,28 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.035
+  textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
+--- !u!114 &1456335034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456335029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInDuration: 0.5
+  fadeOutDelay: 6.6
+  fadeOutDuration: 1.5
+  disableOnFadeOut: 0
 --- !u!1 &1639503213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,7 +3620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 2
-  fadeOutDelay: 8
+  fadeOutDelay: 9
   fadeOutDuration: 2
   disableOnFadeOut: 0
 --- !u!1 &1640817410
@@ -3817,7 +3906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 2
-  fadeOutDelay: 8
+  fadeOutDelay: 9
   fadeOutDuration: 2
   disableOnFadeOut: 0
 --- !u!1 &1982995357
@@ -3969,8 +4058,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 2
-  fadeOutDelay: 8
-  fadeOutDuration: 2
+  fadeOutDelay: 9
+  fadeOutDuration: 2.5
   disableOnFadeOut: 0
 --- !u!1 &2045367668
 GameObject:
@@ -4125,10 +4214,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
   textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &2045367673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4141,9 +4232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 0
-  fadeOutDelay: 3.7
-  fadeOutDuration: 0.6
+  fadeInDuration: 0.5
+  fadeOutDelay: 6.6
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &2089470490
 GameObject:
@@ -4298,10 +4389,12 @@ MonoBehaviour:
   aSource: {fileID: 1045278305}
   perCharacter: 1
   perWord: 0
-  soundToPlay: {fileID: 8300000, guid: 39282d28da5214f08b2731705426afaa, type: 3}
+  soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
   playPerLetter: 3
-  textSpeed: 0.025
+  textSpeed: 0.03
   textPunctSpeed: 0.2
+  minimumPitch: 0.95
+  maximumPitch: 1.05
 --- !u!114 &2089470495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4314,9 +4407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4194c6a7ba08942309f63895d6b90496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 0.3
-  fadeOutDelay: 1.2
-  fadeOutDuration: 0.9
+  fadeInDuration: 0.5
+  fadeOutDelay: 3.3
+  fadeOutDuration: 1.5
   disableOnFadeOut: 0
 --- !u!1 &2130233422
 GameObject:
@@ -4467,7 +4560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInDuration: 2
-  fadeOutDelay: 8
+  fadeOutDelay: 9
   fadeOutDuration: 2
   disableOnFadeOut: 0
 --- !u!1660057539 &9223372036854775807

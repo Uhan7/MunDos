@@ -15,6 +15,11 @@ public class FadeFromObject : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnEnable()
+    {
+        UpdateAlpha(0);
+    }
+
     void Update()
     {
         if (targetSource == null) return;

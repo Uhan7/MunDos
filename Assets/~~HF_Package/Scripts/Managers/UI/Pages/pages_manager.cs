@@ -14,6 +14,8 @@ public class pages_manager : MonoBehaviour
     [SerializeField] private float[] blankWaitTime;
     [SerializeField] private float[] pageHoldTime;
 
+    [SerializeField] private string sceneNameToLoad;
+
     public void UpdateArraySizes()
     {
         if (page.Length != pagesCount)
@@ -81,6 +83,6 @@ public class pages_manager : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene("Title Screen");
+        SceneManager.LoadScene(sceneNameToLoad);
     }
 }
