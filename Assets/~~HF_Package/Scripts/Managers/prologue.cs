@@ -8,7 +8,7 @@ public class prologue : MonoBehaviour
     public AudioSource aSource;
     public GameObject skippingText;
     public Image skipMeter;
-    [SerializeField] private string titleScreenSceneName;
+    [SerializeField] private string sceneToGoName;
 
     private float skipHoldTime = 3f;
     private float escapeHeldDuration = 0f;
@@ -98,6 +98,6 @@ public class prologue : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene(titleScreenSceneName);
+        SceneManager.LoadScene(sceneToGoName);
     }
 }
