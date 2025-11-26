@@ -121,7 +121,7 @@ public class ClickZoomable : MonoBehaviour
                 SetAll(toDeactivateOnInvalidInteract, false);
                 inputOrder.Clear();
 
-                if (isSingleEnvi) ResetButtons();
+                if (isSingleEnvi) ResetButtons(gameObject);
                 else
                 {
                     foreach (var obj in passwordOrderInput)
@@ -145,15 +145,16 @@ public class ClickZoomable : MonoBehaviour
         UnityEngine.UI.Button button = obj.GetComponent<UnityEngine.UI.Button>();
         button.interactable = false;
     }
-    private void ResetButtons()
+    private void ResetButtons(GameObject lastButton)
     {
         foreach(var obj in passwordOrderInput)
         {
             UnityEngine.UI.Button button = obj.GetComponent<UnityEngine.UI.Button>();
             button.interactable = true;
+            button.OnPointerExit(null);
         }
     }
-
+    //
     void SetAll(GameObject[] objects, bool value)
     {
         if (objects == null || objects.Length == 0) return;
