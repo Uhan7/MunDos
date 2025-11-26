@@ -35,6 +35,7 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] private bool willUpdate;
     [HideInInspector] public bool isEmpty;
     [HideInInspector] private bool hasCheckedInventory;
+    [HideInInspector] public bool canInput;
 
     [HideInInspector] public bool HasActiveItem;
     [HideInInspector] public bool isSelected;
@@ -52,11 +53,16 @@ public class PlayerInteract : MonoBehaviour
         activeObjectIndex = 5;
         currentItemData = itemDatas[playerItemIndex];
         hasCheckedInventory = false;
+        canInput = true;
     }
 
     private void Update()
     {
-        if ((Input.GetKeyDown(interactKey) || Input.GetKeyDown(otherInteractKey)) && !Input.GetKey(switchTimelineKey))
+        if (!canInput)
+        {
+            return;
+        }
+        else if ((Input.GetKeyDown(interactKey) || Input.GetKeyDown(otherInteractKey)) && !Input.GetKey(switchTimelineKey))
         {
             willUpdate = true;
             if (nearbyEnvi != null) Interact();
@@ -175,6 +181,7 @@ public class PlayerInteract : MonoBehaviour
 
     public void ToggleStates(int value)
     {
+        if (!canInput) return;
         if (!SelectValidItem(value)) return;
         
         //value + 1 to offset Background
@@ -348,7 +355,6 @@ public class PlayerInteract : MonoBehaviour
             return;
         }
         int index = HasItemName(item);
-        Debug.Log($"Item {item.name} at index {index}");
         if (index <= -1 || index > itemDatas.Length || index >= 5) return;
 
         

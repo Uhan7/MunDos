@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] private PauseMenuManager pauseMenuScript;
     [HideInInspector] private DialogueManager dialogueHolderScript;
     [HideInInspector] private PlayerMove protagMoveScript;
+    [HideInInspector] private PlayerInteract playerInteractScript;
 
     [Header("Extra Effects")]
     [SerializeField] private AudioClip pauseOpenSFX;
@@ -128,6 +129,7 @@ public class GameManager : MonoBehaviour
         protagMoveScript.canMove = (!isPaused && !isFocusing);
         protagMoveScript.canInput = (!isPaused && !isFocusing);
         timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
+        playerInteractScript.canInput = (!isPaused && !isFocusing);
 
         Time.timeScale = isPaused ? 0 : 1;
     }
@@ -137,5 +139,6 @@ public class GameManager : MonoBehaviour
         protagMoveScript = GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerMove>();
         pauseMenuScript = GameObject.Find(pauseMenuName).GetComponent<PauseMenuManager>();
         dialogueHolderScript = GameObject.Find(dialogueHolderName).GetComponent<DialogueManager>();
+        playerInteractScript = GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>();
     }
 }
