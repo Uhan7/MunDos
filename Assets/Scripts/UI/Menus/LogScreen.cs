@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +13,21 @@ public class LogScreen : MonoBehaviour
     [SerializeField] private KeyCode exitKey = KeyCode.Escape;
     [SerializeField] private KeyCode logKey;
 
+    [Header("References")]
     [SerializeField] private GameManager gameManagerReference;
     [SerializeField] private GameObject logScreen;
+
+    [Header("Parts")]
     [SerializeField] private TextMeshProUGUI fullLog;
     [SerializeField] private Scrollbar scrollbar;
+
+    [Header("Audio")]
     [SerializeField] private AudioClip logOpenSFX;
     [SerializeField] private AudioClip logCloseSFX;
+
+    [Header("Limits")]
+    [SerializeField] private List<string> storedDialogues = new();
+    [SerializeField] private int maxDialoguesToStore = 100;
 
     // Animation
     private bool active = false;
@@ -94,7 +104,14 @@ public class LogScreen : MonoBehaviour
         dialogueToAdd = "<b><u>" + speakerName + "</b></u>\n";
 
         dialogueToAdd = dialogueToAdd + sentence;
-        fullLog.text += dialogueToAdd + "<size=\"26\">\n\n";
+        storedDialogues.Add(dialogueToAdd);
+        if (storedDialogues.Count > 100) storedDialogues.RemoveAt(0);
+
+        fullLog.text = "";
+        foreach (string dialogueLine in storedDialogues)
+        {
+            fullLog.text += dialogueLine + "<size=\"26\">\n\n";
+        }
     }
 
     public void GoToMostRecentDialogue()
