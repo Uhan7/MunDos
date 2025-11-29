@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip pauseCloseSFX;
 
     [Header("Flags")]
-    [HideInInspector] private bool isFocusing;
+    [HideInInspector] public bool isFocusing;
     [HideInInspector] public bool isHidingUI;
     [HideInInspector] public bool isPaused = false;
     [HideInInspector] public bool canPause = true;
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
         protagMoveScript.canMove = (!isPaused && !isFocusing);
         protagMoveScript.canInput = (!isPaused && !isFocusing);
         timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
-        playerInteractScript.canInput = (!isPaused && !isFocusing);
+        playerInteractScript.canInput = (!isPaused);
 
         Time.timeScale = isPaused ? 0 : 1;
     }

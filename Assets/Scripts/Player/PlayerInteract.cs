@@ -7,6 +7,7 @@ public class PlayerInteract : MonoBehaviour
 {
     [Header("References")]
     [HideInInspector] private PlayerMove moveScript;
+    [SerializeField] private GameManager gameManagerScript;
     [SerializeField] private GameObject inventorySlots;
     [SerializeField] private InventoryUI inventoryUI;
 
@@ -179,7 +180,7 @@ public class PlayerInteract : MonoBehaviour
         return willUpdate;
     }
 
-    public void ToggleStates(int value)
+    public void ToggleStates(int value) // This is for the inventory
     {
         if (!canInput) return;
         if (!SelectValidItem(value)) return;
@@ -191,6 +192,8 @@ public class PlayerInteract : MonoBehaviour
         //Select unselected item
         if (!isZoomed && !isSelected)
         {
+            if (gameManagerScript.isFocusing) return; // This is to not layer the zooms
+
             isSelected = true;
             activeObjectIndex = value;
             WillUpdate(true);
@@ -199,6 +202,8 @@ public class PlayerInteract : MonoBehaviour
         //Zoom in on valid selected item
         else if (!isZoomed && isSelected && value == activeObjectIndex)
         {
+            if (gameManagerScript.isFocusing) return; // This is to not layer the zooms
+
             inventorySlot.SetZoomObject();
             inventorySlot.SetZoomState(true);
             inventorySlot.OnZoom();
@@ -209,6 +214,8 @@ public class PlayerInteract : MonoBehaviour
         //Cancel Zoom in and select other item
         else if (!isZoomed && isSelected && value != activeObjectIndex)
         {
+            if (gameManagerScript.isFocusing) return; // This is to not layer the zooms
+
             inventorySlot.SetZoomObject();
             inventorySlot.SetZoomState(false);
             inventorySlot.OnZoom();
