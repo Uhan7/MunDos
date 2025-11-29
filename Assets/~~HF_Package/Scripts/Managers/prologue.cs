@@ -8,6 +8,9 @@ public class prologue : MonoBehaviour
     public AudioSource aSource;
     public GameObject skippingText;
     public Image skipMeter;
+
+    [SerializeField] private KeyCode skipKey;
+
     [SerializeField] private string sceneToGoName;
 
     private float skipHoldTime = 3f;
@@ -44,7 +47,7 @@ public class prologue : MonoBehaviour
     {
         if (hasSkipped) return;
 
-        bool holdingEscape = Input.GetKey(KeyCode.Escape);
+        bool holdingEscape = Input.GetKey(skipKey);
 
         if (holdingEscape)
         {
