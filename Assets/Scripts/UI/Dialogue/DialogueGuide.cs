@@ -42,7 +42,6 @@ public class DialogueGuide : MonoBehaviour
         // typeOfDialogue : The kind of object this dialogue is attached to.
     [SerializeField] DialogueType typeOfDialogue;
 
-
     // STATE OF DIALOGUE
     [Header("State of Dialogue")]
         // isDone : Refers to if we consider the dialogue to be finished for the next submission, regardless of if it's
@@ -51,5 +50,10 @@ public class DialogueGuide : MonoBehaviour
         // beingRevised : If the dialogue is currently under the process of being revised, meaning if we expect it
         //                to change it soon. 
     [SerializeField] public bool beingRevised;
+
+    // OTHER NOTES
+    //[Header("Other")]
+    [TextArea(1, 12)]
+    [SerializeField] private string notes = "Add other notes here.";
 }
 
