@@ -11,30 +11,20 @@ public class SaveManager : MonoBehaviour
     private void Start()
     {
         LoadGame();
-        // Automatically load the game when it starts
+        // Automatically load the game when it starts but maybe change soon..
     }
 
     public void SaveGame()
     {
         SaveData data = new SaveData();
-
-        // PLAYER
-        // data.playerPosition = Player.Instance.transform.position;
-        // data.inventoryItemIDs = Player.Instance.GetInventoryItemIDs();
-
-        // OBJECTS
         data.objectStates = new List<ObjectSaveData>();
 
-        foreach (ObjectState env in FindObjectsOfType<ObjectState>(true))
+        foreach (ObjectState obj in FindObjectsOfType<ObjectState>(true))
         {
-            UniqueID uid = env.GetComponent<UniqueID>();
+            UniqueID uid = obj.GetComponent<UniqueID>();
             if (uid == null) continue;
 
-            data.objectStates.Add(new ObjectSaveData
-            {
-                objectID = uid.ID,
-                isActive = env.gameObject.activeSelf
-            });
+            data.objectStates.Add(obj.CaptureState());
         }
 
         string json = JsonUtility.ToJson(data);
@@ -44,6 +34,8 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Game Saved");
     }
 
+
+
     public void LoadGame()
     {
         if (!PlayerPrefs.HasKey(SAVE_KEY))
@@ -52,32 +44,24 @@ public class SaveManager : MonoBehaviour
             return;
         }
 
-        SaveData data = JsonUtility.FromJson<SaveData>(
-            PlayerPrefs.GetString(SAVE_KEY)
-        );
+        SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(SAVE_KEY));
 
-        // PLAYER
-        // Player.Instance.transform.position = data.playerPosition;
-        // Player.Instance.SetInventoryFromIDs(data.inventoryItemIDs);
-
-        // OBJECTS
         foreach (ObjectSaveData saved in data.objectStates)
         {
-            ObjectState obj = FindEnvByID(saved.objectID);
-            if (obj != null)
-                obj.gameObject.SetActive(saved.isActive);
+            ObjectState obj = FindObjByID(saved.objectID);
+            if (obj != null) obj.RestoreState(saved);
         }
 
         Debug.Log("Game Loaded");
     }
 
-    ObjectState FindEnvByID(string id)
+
+    ObjectState FindObjByID(string id)
     {
-        foreach (ObjectState env in FindObjectsOfType<ObjectState>(true))
+        foreach (ObjectState obj in FindObjectsOfType<ObjectState>(true))
         {
-            UniqueID uid = env.GetComponent<UniqueID>();
-            if (uid != null && uid.ID == id)
-                return env;
+            UniqueID uid = obj.GetComponent<UniqueID>();
+            if (uid != null && uid.ID == id) return obj;
         }
         return null;
     }
