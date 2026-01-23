@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(UniqueID))]
 public class ObjectState : MonoBehaviour
 {
     [Header("Variables To Save")]

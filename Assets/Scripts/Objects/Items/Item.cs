@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Item : MonoBehaviour
@@ -27,6 +28,12 @@ public class Item : MonoBehaviour
         GetComponent<InteractableObject>().Interact();
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
-        Destroy(gameObject, 0.5f);
+        StartCoroutine(DeactivateSelf(0.5f));
+    }
+
+    IEnumerator DeactivateSelf(float time)
+    {
+        yield return new WaitForSeconds(time);
+        gameObject.SetActive(false);
     }
 }
