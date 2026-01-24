@@ -147,4 +147,10 @@ public class TimelineManager : MonoBehaviour
         fadeOut.volume = 0f;
         fadeIn.volume = SettingsInfo.musicVol;
     }
+
+    // Helper (Get) Function --------------------------------------------------------
+    public int GetCurrentTimeline() // Used in SlotHander
+    {
+        return currentTimeline;
+    }
 }
