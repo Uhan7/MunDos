@@ -13,7 +13,6 @@ public class ObjectState : MonoBehaviour
         data.objectID = GetComponent<UniqueID>().ID;
 
         if (saveActiveState) data.isActive = gameObject.activeSelf;
-        print("sibotiled");
         if (savePosition)
         {
             data.position = transform.position;

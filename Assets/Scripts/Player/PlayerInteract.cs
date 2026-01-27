@@ -5,6 +5,7 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerInteract : MonoBehaviour
 {
+
     [Header("References")]
     [HideInInspector] private PlayerMove moveScript;
     [SerializeField] private GameManager gameManagerScript;
@@ -304,6 +305,12 @@ public class PlayerInteract : MonoBehaviour
     {
         if ((nearbyItem == null) || !moveScript.canMove) return;
         Item actualItem = nearbyItem.GetComponent<Item>();
+
+        if (name == "Santi" && actualItem.GetData().timeline == global::Timeline.Past)
+        {
+            print("sily error with timeline items");
+            return;
+        }
 
         playerItemIndex = 0;
         playerItemIndex = FindEmptySlot();

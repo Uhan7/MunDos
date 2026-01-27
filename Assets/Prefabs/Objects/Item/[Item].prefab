@@ -149,6 +149,8 @@ GameObject:
   - component: {fileID: 2155128010626252820}
   - component: {fileID: 2064214224646224916}
   - component: {fileID: -3690064291442228492}
+  - component: {fileID: 1307326573408928611}
+  - component: {fileID: 5679046618273382092}
   m_Layer: 0
   m_Name: '[Item]'
   m_TagString: Item
@@ -288,6 +290,7 @@ MonoBehaviour:
   data:
     itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
 --- !u!114 &-3690064291442228492
 MonoBehaviour:
@@ -332,6 +335,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6553e7b710e6b404ebae08462873efae, type: 3}
   soundsToPlayOnValidInteract: []
   soundsToPlayOnInvalidInteract: []
+--- !u!114 &1307326573408928611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286626165191592584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &5679046618273382092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5286626165191592584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
 --- !u!1 &8255003823690498600
 GameObject:
   m_ObjectHideFlags: 0

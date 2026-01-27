@@ -369,6 +369,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1317018446988142921}
+  - component: {fileID: 5601625967113159134}
+  - component: {fileID: 8334190765461079659}
   m_Layer: 12
   m_Name: Text Prompt Container
   m_TagString: Dialogue Zone
@@ -393,6 +395,33 @@ Transform:
   - {fileID: 6528027007498316544}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5601625967113159134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &8334190765461079659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
 --- !u!1 &7146540890380449405
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +434,8 @@ GameObject:
   - component: {fileID: 1178071667505540165}
   - component: {fileID: 1674147481024880380}
   - component: {fileID: 5315755147569325063}
+  - component: {fileID: 6862532081702231175}
+  - component: {fileID: 6897864555409458304}
   m_Layer: 0
   m_Name: Text Prompt Hitbox
   m_TagString: Untagged
@@ -488,6 +519,7 @@ MonoBehaviour:
   promptBackground: {fileID: 3404748216267005459}
   textPrompt: {fileID: 672892619309118441}
   deactivateAfter: 1
+  otherHitboxesToSyncDeactivate: []
   fullFadeIn: 0
   deactivateOnTimelineSwitch: 0
 --- !u!212 &5315755147569325063
@@ -532,7 +564,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1760145593
-  m_SortingLayer: 19
+  m_SortingLayer: 20
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.6179246, g: 0.8654445, b: 1, a: 0.2}
@@ -545,3 +577,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6862532081702231175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7146540890380449405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &6897864555409458304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7146540890380449405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0

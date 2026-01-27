@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1317018446988142921}
   - component: {fileID: 8439490232393766861}
+  - component: {fileID: 9032494519262131888}
+  - component: {fileID: 3852124311795067560}
   m_Layer: 0
   m_Name: Default Dialogue
   m_TagString: Dialogue Zone
@@ -69,6 +71,35 @@ MonoBehaviour:
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
+  repeatable: 0
   conditionalObjectsToCheckAfter: []
   playeritemNamesToRemove: []
   soundsToPlayBefore: []
+  soundsToPlayAfter: []
+--- !u!114 &9032494519262131888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &3852124311795067560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0

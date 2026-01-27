@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ItemData
 {
+
     // Variables
     public string itemName;
     public Sprite itemSprite;
+    public Timeline timeline;
     public GameObject[] objectsToInteractWith;
 
     // Constructors
@@ -16,6 +18,7 @@ public class ItemData
     {
         itemName = other.itemName;
         itemSprite = other.itemSprite;
+        timeline = other.timeline;
         objectsToInteractWith = other.objectsToInteractWith;
     }
 }

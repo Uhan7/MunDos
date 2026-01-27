@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1317018446988142921}
   - component: {fileID: 7546022773180628751}
   - component: {fileID: 2666843365012501414}
+  - component: {fileID: 1255655020756724457}
+  - component: {fileID: 332948110333578315}
   m_Layer: 0
   m_Name: Trigger Zone
   m_TagString: Dialogue Zone
@@ -91,10 +93,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d4266f042329748ba5b963b31c1591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startOnEnable: 0
-  startFromTrigger: 0
-  willFocus: 1
+  isOnEnable: 0
   deactivateAfter: 1
-  activateObejcts: []
-  deactivateObejcts: []
-  ObjectTime: 0.5
+  willFocus: 1
+  objectsToActivate: []
+  objectsToDeactivate: []
+  waitforSeconds: 0
+--- !u!114 &1255655020756724457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &332948110333578315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0

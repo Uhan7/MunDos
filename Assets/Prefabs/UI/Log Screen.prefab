@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5648593837705046514}
   - component: {fileID: 7857044446811579793}
+  - component: {fileID: 8115247382446396548}
+  - component: {fileID: -8380921879082792368}
   m_Layer: 5
   m_Name: Log Screen
   m_TagString: Untagged
@@ -58,6 +60,35 @@ MonoBehaviour:
   scrollbar: {fileID: 3725715266971436012}
   logOpenSFX: {fileID: 0}
   logCloseSFX: {fileID: 0}
+  storedDialogues: []
+  maxDialoguesToStore: 100
+--- !u!114 &8115247382446396548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18770872633285855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0db19eeb-913c-4c8d-a6af-de1080dd1990
+--- !u!114 &-8380921879082792368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18770872633285855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
 --- !u!1 &814423542846766315
 GameObject:
   m_ObjectHideFlags: 0

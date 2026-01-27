@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1317018446988142921}
   - component: {fileID: 8439490232393766861}
   - component: {fileID: -849532441889075232}
+  - component: {fileID: 5614764092275623337}
+  - component: {fileID: 5918549697423580097}
   m_Layer: 0
   m_Name: Sign Dialogue
   m_TagString: Dialogue Zone
@@ -45,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueHolderName: Dialogue Holder
   dialogue:
     character: {fileID: 21300000, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
     character2: {fileID: 0}
@@ -65,14 +66,17 @@ MonoBehaviour:
   willHideUI: 0
   deactivateAfter: 0
   linksToOtherDialogue: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
+  repeatable: 0
   conditionalObjectsToCheckAfter: []
-  activateObjectTime: 0.5
-  nextDialogue: {fileID: 0}
-  nextDialogueTime: 0.5
+  playeritemNamesToRemove: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
 --- !u!61 &-849532441889075232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -119,3 +123,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5614764092275623337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &5918549697423580097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5994212485817288540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0

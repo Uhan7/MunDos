@@ -6,6 +6,7 @@ using UnityEngine;
 public class SaveData
 {
     public List<ObjectSaveData> objectStates;
+    public List<PlayerItemSaveData> playerItems;
 }
 
 [Serializable]
@@ -19,4 +20,12 @@ public class ObjectSaveData
 
     // If need to check object's position
     public Vector3 position;
+}
+
+[Serializable]
+public class PlayerItemSaveData
+{
+    public Timeline protagTimeline;
+    public List<ItemData> itemDatas;
+    public int playerItemIndex;
 }

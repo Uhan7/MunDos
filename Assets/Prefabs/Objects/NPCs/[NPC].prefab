@@ -119,6 +119,8 @@ GameObject:
   - component: {fileID: 6957315813317659666}
   - component: {fileID: 2002005214240357814}
   - component: {fileID: 1581249434304573448}
+  - component: {fileID: 3517015953674005397}
+  - component: {fileID: 5669459890485483776}
   m_Layer: 11
   m_Name: '[NPC]'
   m_TagString: NPC
@@ -186,7 +188,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -640156287
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dc99f5b83dc944550839ba63fa34b687, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -286,6 +288,9 @@ MonoBehaviour:
   toActivateOnInvalidInteract:
   - {fileID: 310680489855159974}
   toDeactivateOnInvalidInteract: []
+  soundsToPlay: []
+  soundsToPlayOnValidInteract: []
+  soundsToPlayOnInvalidInteract: []
 --- !u!114 &6105215147069015140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +391,33 @@ MonoBehaviour:
   isLockedAtStart: 0
   requiredChecks: 1
   currentChecks: 0
+--- !u!114 &3517015953674005397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584715439278868687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &5669459890485483776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6584715439278868687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 1
 --- !u!1 &7475890661137794651
 GameObject:
   m_ObjectHideFlags: 0

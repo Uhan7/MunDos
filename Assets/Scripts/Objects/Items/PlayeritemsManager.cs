@@ -70,6 +70,7 @@ public class PlayeritemsManager : MonoBehaviour
         //if (!player.gameObject.activeInHierarchy) return;
         for (int i = 0; i < player.itemDatas.Length - 1; i++)
         {
+            print(player.itemDatas.Length);
             if (player.itemDatas[i].itemName != "") itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = player.itemDatas[i].itemSprite;
             else itemSlots[i].transform.GetChild(0).GetComponent<Image>().sprite = itemlessImage;
 

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3355373079698604710}
   - component: {fileID: 9131497529617733427}
   - component: {fileID: 8947019693498976949}
+  - component: {fileID: 4531334058512182652}
+  - component: {fileID: 222472717998276353}
   m_Layer: 3
   m_Name: Sample Protag
   m_TagString: Protag
@@ -206,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23d17d904cb414612bbb89bd3990647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerScript: {fileID: 0}
   inventorySlots: {fileID: 0}
   inventoryUI: {fileID: 0}
   switchTimelineKey: 9
@@ -219,34 +222,76 @@ MonoBehaviour:
   item4Key: 52
   item5Key: 53
   currentItemData:
+    itemID: 
     itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
   itemDatas:
-  - itemName: 
+  - itemID: 
+    itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
-  - itemName: 
+  - itemID: 
+    itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
-  - itemName: 
+  - itemID: 
+    itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
-  - itemName: 
+  - itemID: 
+    itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
-  - itemName: 
+  - itemID: 
+    itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
-  - itemName: 
+  - itemID: 
+    itemName: 
     itemSprite: {fileID: 0}
+    timeline: 0
     objectsToInteractWith: []
   playerItemIndex: 0
   isEmpty: 0
+  canInput: 0
   HasActiveItem: 0
   isSelected: 0
   isZoomed: 0
   activeObjectIndex: 0
+--- !u!114 &4531334058512182652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378671161854638220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &222472717998276353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378671161854638220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 1
 --- !u!1 &3636424146886701031
 GameObject:
   m_ObjectHideFlags: 0

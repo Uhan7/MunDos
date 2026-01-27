@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(UniqueID))]
 public class Item : MonoBehaviour
 {
     [Header("Item Data Variables")]
@@ -17,9 +18,11 @@ public class Item : MonoBehaviour
         ItemData copy = new ItemData(data);
 
         if (copy.itemName == "") copy.itemName = gameObject.name;
-
         if (copy.itemSprite == null) copy.itemSprite = GetComponent<SpriteRenderer>().sprite;
         //Debug.Log($"Item>Getting Data name {copy.itemName}");
+
+        Debug.Log($"{gameObject.name} | ItemData instance ID: {data.GetHashCode()}");
+
         return copy;
     }
 

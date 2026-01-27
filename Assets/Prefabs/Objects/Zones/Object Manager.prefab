@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5186593200432863493}
   - component: {fileID: 6587384961181787571}
   - component: {fileID: 1534501200210616043}
+  - component: {fileID: 6010647767150175281}
+  - component: {fileID: 758900111739136346}
   m_Layer: 0
   m_Name: Object Manager
   m_TagString: Untagged
@@ -98,7 +100,35 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
+  repeatable: 0
   objectsToActivate: []
   objectsToDeactivate: []
   objectsToLock: []
   objectsToUnlock: []
+--- !u!114 &6010647767150175281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2348691492092013971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &758900111739136346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2348691492092013971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
