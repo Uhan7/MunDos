@@ -121,9 +121,9 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(saveKey)) SaveGame();
-        if (Input.GetKeyDown(loadKey)) LoadGame();
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(saveKey)) SaveGame();
+    //    if (Input.GetKeyDown(loadKey)) LoadGame();
+    //}
 }

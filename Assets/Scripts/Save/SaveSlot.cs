@@ -11,7 +11,7 @@ public class SaveSlot : MonoBehaviour
     private Image screenshotSlot;
     private Image ribbonSprite;
 
-    private bool isSelected = false;
+    [SerializeField] private bool isSelected = false;
     [HideInInspector] public bool slotIsFull = false;
     [HideInInspector] public int timelineSaved = 0; // 0 past | 1 present
 
@@ -33,6 +33,7 @@ public class SaveSlot : MonoBehaviour
 
     public void SetRibbon(Sprite newRibbon)
     {
+        if (!ribbon.activeInHierarchy) ribbon.SetActive(true);
         ribbonSprite.sprite = newRibbon;
     }
 

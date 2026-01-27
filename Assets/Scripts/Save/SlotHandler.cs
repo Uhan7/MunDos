@@ -56,6 +56,7 @@ public class SlotHandler : MonoBehaviour
 
         int currentTimeline = timelineManager.GetCurrentTimeline();
         allSaveSlots[selectedSlot].timelineSaved = currentTimeline;
+        if (ribbonSprites[currentTimeline] == null) Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         allSaveSlots[selectedSlot].SetRibbon(ribbonSprites[currentTimeline]);
 
         // SCREEN SCREENSHOT HERE
