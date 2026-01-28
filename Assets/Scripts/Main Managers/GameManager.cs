@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool isPaused = false;
     [HideInInspector] public bool canPause = true;
 
+    [Header("Debug")]
+    [SerializeField] private bool overrideDebugMode = false;
+
     private void Awake()
     {
         timelineManagerScript = GetComponent<TimelineManager>();
@@ -57,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (SettingsInfo.debugMode == false) return;
+        if (SettingsInfo.debugMode == false && overrideDebugMode == false) return;
 
         if (Input.GetKeyDown(KeyCode.Equals)) Time.timeScale += 0.25f;
         if (Input.GetKeyDown(KeyCode.Minus)) Time.timeScale -= 0.25f;
