@@ -11,6 +11,9 @@ public class SaveManager : MonoBehaviour
     [SerializeField] private PlayerInteract pastPlayer;
     [SerializeField] private PlayerInteract presentPlayer;
 
+    [Header("References")]
+    [SerializeField] private TimelineManager timelineManager;
+
     private void Start()
     {
         // LoadGame();
@@ -30,24 +33,29 @@ public class SaveManager : MonoBehaviour
         data.playerItems.Add(CapturePlayer(pastPlayer, Timeline.Past));
         data.playerItems.Add(CapturePlayer(presentPlayer, Timeline.Present));
 
+        // Progression Flags
+        data.timelineUnlocked = timelineManager.timelineUnlocked;
+
+        // Actual Save
         PlayerPrefs.SetString(SAVE_KEY, JsonUtility.ToJson(data));
         PlayerPrefs.Save();
 
         Debug.Log("Game Saved");
+        Debug.Log("Save size (chars): " + JsonUtility.ToJson(data).Length);
+        Debug.Log("Save size (bytes approx): " + System.Text.Encoding.UTF8.GetByteCount(JsonUtility.ToJson(data)));
     }
 
 
     public void LoadGame()
     {
+        // If none, load normal
         if (!PlayerPrefs.HasKey(SAVE_KEY))
         {
             Debug.Log("No Save Found! Loading as normal.");
             return;
         }
 
-        SaveData data = JsonUtility.FromJson<SaveData>(
-            PlayerPrefs.GetString(SAVE_KEY)
-        );
+        SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(SAVE_KEY));
 
         // Physical Objects
         foreach (ObjectSaveData saved in data.objectStates)
@@ -57,13 +65,14 @@ public class SaveManager : MonoBehaviour
         }
 
         // Logical/Data
-        
         foreach (PlayerItemSaveData playerItem in data.playerItems)
         {
             if (playerItem.protagTimeline == Timeline.Past) RestorePlayer(pastPlayer, playerItem);
             else if (playerItem.protagTimeline == Timeline.Present) RestorePlayer(presentPlayer, playerItem);
         }
-        
+
+        // Progression Flags
+        timelineManager.timelineUnlocked = data.timelineUnlocked;
 
         Debug.Log("Game Loaded");
     }
@@ -75,6 +84,7 @@ public class SaveManager : MonoBehaviour
         foreach (ObjectState obj in FindObjectsOfType<ObjectState>(true))
         {
             UniqueID uid = obj.GetComponent<UniqueID>();
+            if (uid == null) print("null obj !!");
             if (uid != null && uid.ID == id) return obj;
         }
         return null;

@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 
 using UnityEditor;
-using UnityEditor.SceneManagement;
+// using UnityEditor.SceneManagement;
 
 [DisallowMultipleComponent]
 public class UniqueID : MonoBehaviour
@@ -14,7 +14,7 @@ public class UniqueID : MonoBehaviour
     private void OnValidate()
     {
         if (PrefabUtility.IsPartOfPrefabAsset(this)) return;
-        if (PrefabStageUtility.GetPrefabStage(gameObject) != null) return;
+   //     if (PrefabStageUtility.GetPrefabStage(gameObject) != null) return;
 
         if (string.IsNullOrEmpty(id)) id = Guid.NewGuid().ToString();
     }

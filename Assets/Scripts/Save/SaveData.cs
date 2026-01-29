@@ -7,6 +7,8 @@ public class SaveData
 {
     public List<ObjectSaveData> objectStates;
     public List<PlayerItemSaveData> playerItems;
+
+    public bool timelineUnlocked; // Temporary fix,,, make a dictionary of this eventually
 }
 
 [Serializable]
