@@ -25,6 +25,10 @@ public class SettingsManager : MonoBehaviour
 
     void Start()
     {
+        SettingsInfo.musicVol = PlayerPrefs.GetFloat("MUSIC_VOL", 0.75f);
+        SettingsInfo.SFXVol = PlayerPrefs.GetFloat("SFX_VOL", 0.75f);
+        SettingsInfo.SFXVol = PlayerPrefs.GetFloat("DIALOGUE_VOL", 1f);
+
         Sync();
     }
 
@@ -39,6 +43,8 @@ public class SettingsManager : MonoBehaviour
         {
             musicVol.value = vol;
         }
+
+        SaveSettings();
     }
     public void setSFXVol(float vol)
     {
@@ -51,6 +57,8 @@ public class SettingsManager : MonoBehaviour
         {
             SFXVol.value = vol;
         }
+
+        SaveSettings();
     }
     public void setDialogueVol(float vol)
     {
@@ -63,12 +71,21 @@ public class SettingsManager : MonoBehaviour
         {
             dialogueVol.value = vol;
         }
+
+        SaveSettings();
     }
 
     public void Sync()
     {
         if (!isTitleScreen) StartCoroutine(SyncSettings());
         else StartCoroutine(SyncTitleSettings());
+    }
+
+    public void SaveSettings()
+    {
+        PlayerPrefs.SetFloat("MUSIC_VOL", SettingsInfo.musicVol);
+        PlayerPrefs.SetFloat("SFX_VOL", SettingsInfo.SFXVol);
+        PlayerPrefs.SetFloat("DIALOGUE_VOL", SettingsInfo.SFXVol);
     }
 
     IEnumerator SyncSettings()

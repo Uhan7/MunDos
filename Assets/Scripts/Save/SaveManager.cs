@@ -18,6 +18,10 @@ public class SaveManager : MonoBehaviour
     {
         // LoadGame();
         // Automatically load the game when it starts but maybe change soon..
+        if (SettingsInfo.fromContinue)
+        {
+            LoadGame();
+        }
     }
 
     public void SaveGame()
