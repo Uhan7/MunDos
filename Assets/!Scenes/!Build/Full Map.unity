@@ -11045,7 +11045,7 @@ PrefabInstance:
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: 'Bakery Owner hints towards Rommel always going towards the eastern
-        most side of town, and sulks about him never giving their bread a try.
+        most side of town, and sulks about him never giving their bread a try. (
 
 '
       objectReference: {fileID: 0}
@@ -11124,7 +11124,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 658745413927944185, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1197196970}
   m_SourcePrefab: {fileID: 100100000, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
 --- !u!4 &147141281 stripped
 Transform:
@@ -24664,7 +24667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -31852,6 +31855,10 @@ PrefabInstance:
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
       value: L3 Letter with Stamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3714461931801894458, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
@@ -45303,11 +45310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toDeactivateOnInteract.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
@@ -48973,7 +48980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -50955,7 +50962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -67272,7 +67279,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2348691492092013971, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 828944816}
   m_SourcePrefab: {fileID: 100100000, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
 --- !u!4 &828944810 stripped
 Transform:
@@ -67284,6 +67294,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2348691492092013971, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
   m_PrefabInstance: {fileID: 828944809}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &828944816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828944811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b3b713d3e9427d95225fc72ada10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: activated by mean backer 2
 --- !u!1001 &829074026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75293,13 +75316,33 @@ PrefabInstance:
       value: 037d26f6-fc3c-43ad-97d5-e68ddc0fd4be
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      propertyPath: toActivateOnValidInteract.Array.size
+      propertyPath: toActivateOnInteract.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 193181407}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: toActivateOnValidInteract.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: toActivateOnInvalidInteract.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'toActivateOnValidInteract.Array.data[0]'
       value: 
       objectReference: {fileID: 487027187}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'toActivateOnValidInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 193181407}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'toActivateOnInvalidInteract.Array.data[1]'
+      value: 
+      objectReference: {fileID: 583751928}
     - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Name
       value: L3 Anika
@@ -76208,7 +76251,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - lets opeen dis
+    - a safe. Dunno what it does
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -90559,6 +90602,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1197196965 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 658745413927944185, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 147141280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1197196970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197196965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b3b713d3e9427d95225fc72ada10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: 'activates unlock rommel''s '
 --- !u!1 &1197339799
 GameObject:
   m_ObjectHideFlags: 0
