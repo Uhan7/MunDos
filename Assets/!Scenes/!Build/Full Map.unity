@@ -463,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalScale.x
-      value: 40
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.x
@@ -519,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2914,6 +2914,10 @@ PrefabInstance:
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: delayTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
+      propertyPath: isOnEnable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: lockAndUnlock
@@ -6837,6 +6841,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1697128038}
+    - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2015082398}
     - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1911702450}
@@ -11035,6 +11042,13 @@ PrefabInstance:
       propertyPath: id
       value: 372cddab-bf5f-4205-a4f7-62180dce2a4a
       objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: 'Bakery Owner hints towards Rommel always going towards the eastern
+        most side of town, and sulks about him never giving their bread a try.
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
       value: d05fea90-3868-406c-ba39-e97ede1fa503
@@ -14468,6 +14482,10 @@ PrefabInstance:
       value: 54e7a85a-224d-4b67-a80f-bf1dd3822d4d
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: Santi and Liezel discuss about going back to house/musuem
       objectReference: {fileID: 0}
@@ -15073,7 +15091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Journal 2
+      value: L3 Journal2
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
@@ -15511,11 +15529,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8599306978574813024, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
   m_PrefabInstance: {fileID: 193181397}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &193181406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
-  m_PrefabInstance: {fileID: 193181397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &193181407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -15533,7 +15546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d799d4aee26a944bed2dbd08d1f00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deactivateKey: 0
+  deactivateKey: 102
   passwordOrderInput:
   - {fileID: 1906220185}
   - {fileID: 157968824}
@@ -15549,8 +15562,9 @@ MonoBehaviour:
   toActivate:
   - {fileID: 31796234}
   - {fileID: 1214352638}
+  - {fileID: 323470705}
   toDeactivate:
-  - {fileID: 193181406}
+  - {fileID: 193181407}
   toActivateOnInvalidInteract:
   - {fileID: 193181405}
   toDeactivateOnInvalidInteract: []
@@ -20813,9 +20827,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "The Tour Guide (3) says it\u2019s the bakery\u2019s anniversary and
-        it has been booming for a long time."
+      value: "(Tour Guide Interact) \nTour Guide says it\u2019s the Bakery\u2019s
+        anniversary and it has been booming for centuries (hinting player needs to
+        swap to Liezel\u2019s time)"
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -23374,7 +23393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Journal 1
+      value: L3 Journal1
       objectReference: {fileID: 0}
     - target: {fileID: 3714461931801894458, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
@@ -23899,6 +23918,98 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8308861437481407393, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1230985941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &300146706
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1793570943}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741798054155553635, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: id
+      value: 4a97be5b-7bb6-469a-b780-b68cfead98df
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404549752580450967, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: id
+      value: c6eea257-9caa-4cac-b110-07994097c563
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "Santi and Liezel discuss about going back to Rommel\u2019s House/Museum
+        [12]"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: Liezel mentions the Locked Safe With Arrows .
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_Name
+      value: L3-DZ12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+--- !u!1 &300146707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 300146706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &300146708 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 300146706}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &300956018
 GameObject:
@@ -24487,6 +24598,108 @@ Transform:
   - {fileID: 234185021}
   m_Father: {fileID: 730680610}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &308197095
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1833568536}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2741798054155553635, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: id
+      value: e1feaebe-2ef7-491a-bb05-76e565df930d
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404549752580450967, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: id
+      value: 9dde5a05-d21f-4a1b-b567-8d85479c2e18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Santi asks Liezel for help.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 28430660}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[1]'
+      value: 
+      objectReference: {fileID: 828944811}
+    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_Name
+      value: Single Use DZ11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_Name
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1617635742}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+--- !u!4 &308197096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 308197095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &308197097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 308197095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &308617278
 GameObject:
   m_ObjectHideFlags: 0
@@ -24815,6 +25028,11 @@ BoxCollider2D:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1132048457}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &323470705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 398359536}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &324064391
 PrefabInstance:
@@ -31651,6 +31869,29 @@ PrefabInstance:
       propertyPath: id
       value: b9c95953-928a-42a3-bf09-b90c455e7d03
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: 'Letter with Stamp gives large hint that there is something behind the
+        paintings
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2015082400}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1649061931}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Letter with Stamp
@@ -31673,11 +31914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.11
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.3500004
+      value: 8.65
       objectReference: {fileID: 0}
     - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32620,6 +32861,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &411991785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411991786}
+  - component: {fileID: 411991788}
+  - component: {fileID: 411991787}
+  m_Layer: 0
+  m_Name: '[Envi] Image (1)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &411991786
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411991785}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2015082399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -65.3}
+  m_SizeDelta: {x: 500, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &411991787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411991785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c7f86cbb853454feea53e14e5c0996ab, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &411991788
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411991785}
+  m_CullTransparentMesh: 1
 --- !u!1001 &412535281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36708,7 +37024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: willFocus
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: deactivateAfter
@@ -38132,8 +38448,29 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 300146707}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: Santi gives locket to Anika
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: "Anika tells Santi  \u201CNo matter the price\u201D, which is a phrase
+        mentioned by Rommel a lot. \r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playeritemNamesToRemove.Array.size
@@ -46081,31 +46418,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: willFocus
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 267110389}
+      objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: deactivateAfter
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: linksToOtherDialogue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: 'Santi tries to go right but there is crowd blocking the bakery [9]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: "The Tour Guide (3) says it\u2019s the bakery\u2019s anniversary and
+        it has been booming for a long time."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -48631,7 +48973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -50537,7 +50879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.43412
+      value: -110.44778
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50609,7 +50951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -52868,10 +53210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Bakery Owner hints towards Rommel always going towards the eastern
-        most side of town, and sulks about him never giving their bread a try.
-
-'
+      value: sample text
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -66851,6 +67190,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1833568536}
     m_Modifications:
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
+      propertyPath: delayTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: isOnEnable
       value: 1
       objectReference: {fileID: 0}
@@ -74906,7 +75249,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2033698050}
+    m_TransformParent: {fileID: 1224791853}
     m_Modifications:
     - target: {fileID: 1581249434304573448, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: isLockedAtStart
@@ -74959,11 +75302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -74975,15 +75318,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -79685,7 +80028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Journal 3
+      value: L3 Journal3
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
@@ -85735,8 +86078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "The Tour Guide (3) says it\u2019s the bakery\u2019s anniversary and
-        it has been booming for a long time."
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -91942,6 +92284,11 @@ MonoBehaviour:
   isDone: 1
   beingRevised: 0
   notes: Add other notes here.
+--- !u!4 &1224791853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+  m_PrefabInstance: {fileID: 1833568535}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226925937
 GameObject:
   m_ObjectHideFlags: 0
@@ -93618,7 +93965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: m_Name
-      value: L3 Tour Guide to Bakery
+      value: L3 Tour Guide Moves to Bakery
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: m_IsActive
@@ -93633,7 +93980,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 1865344189}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: deactivateAfter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
@@ -93642,13 +93997,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Tour Guide says it\u2019s the Bakery\u2019s anniversary and it has
-        been booming for centuries (hinting player needs to swap to Liezel\u2019s
+      value: "(Auto activate) Tour Guide says it\u2019s the Bakery\u2019s anniversary
+        and it has been booming for centuries (hinting player needs to swap to Liezel\u2019s
         time)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
@@ -97332,7 +97695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 41e8bd1b-7723-4499-a682-b9c4938f67e8
+  id: f3f621f5-6415-4a47-b55c-07780ccc0978
 --- !u!114 &1294692543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97363,10 +97726,10 @@ MonoBehaviour:
   willFocus: 1
   willHideUI: 0
   deactivateAfter: 1
-  linksToOtherDialogue: 1
-  nextDialogue: {fileID: 1865344189}
+  linksToOtherDialogue: 0
+  nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -105811,7 +106174,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Portrait 4
+      value: L3 Portrait4
       objectReference: {fileID: 0}
     - target: {fileID: 3714461931801894458, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
@@ -116032,111 +116395,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1776628955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1548818202
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1548818203}
-  - component: {fileID: 1548818206}
-  - component: {fileID: 1548818205}
-  - component: {fileID: 1548818204}
-  m_Layer: 0
-  m_Name: 2
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1548818203
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548818202}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1849662420}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1548818204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548818202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveActiveState: 1
-  savePosition: 0
---- !u!114 &1548818205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548818202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 2ba47725-fb81-4b50-90a3-75aea04b6ee1
---- !u!114 &1548818206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548818202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    character: {fileID: 21300000, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 0}
-    name: Default Name
-    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - Santi asks Liezel for help.
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 0
-  deactivateAfter: 1
-  linksToOtherDialogue: 0
-  nextDialogue: {fileID: 0}
-  nextDialogueTime: 0.5
-  playClosingAnimation: 0
-  mainCharacterIsSpeaking: 1
-  objectsToActivateAfter:
-  - {fileID: 28430660}
-  - {fileID: 828944811}
-  objectsToDeactivateAfter: []
-  repeatable: 0
-  conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
-  soundsToPlayBefore: []
-  soundsToPlayAfter: []
 --- !u!1001 &1550390005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -117813,7 +118071,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Portrait 3
+      value: L3 Portrait3
       objectReference: {fileID: 0}
     - target: {fileID: 3714461931801894458, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
@@ -120603,6 +120861,101 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1617635741
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 308197096}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647750694612382870, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: id
+      value: a61cbda5-2283-4b43-ae91-c0e9c7ac7139
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_Name
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 308197097}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: 'Tour Guide (4) explains the history of Rommel and his heirs and tells
+        the story of the order in which they commemorated Rommel Lapuz [11]'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+--- !u!4 &1617635742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+  m_PrefabInstance: {fileID: 1617635741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1618500272 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -122433,6 +122786,11 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 323536159363765360, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
   m_PrefabInstance: {fileID: 1075449073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1649061931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 1697128037}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1649681068
 GameObject:
@@ -125759,7 +126117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Portrait 1
+      value: L3 Portrait1
       objectReference: {fileID: 0}
     - target: {fileID: 3714461931801894458, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
@@ -134795,12 +135153,18 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946784265}
     - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 828944810}
     - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 28430661}
+    - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 308197096}
     - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1849662420}
@@ -136063,18 +136427,18 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 1548818202}
+      objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: linksToOtherDialogue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Tour Guide (3) explains the history of Rommel and his heirs and tells
+      value: 'Tour Guide (4) explains the history of Rommel and his heirs and tells
         the story of the order in which they commemorated Rommel Lapuz [11]'
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
@@ -136091,10 +136455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1548818203}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!1 &1849662419 stripped
@@ -137499,7 +137860,7 @@ PrefabInstance:
       objectReference: {fileID: 200186250}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
-      value: L3 Santi Asks Lizel's Help
+      value: L3 Santi Asks Liezel's Help
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -140675,7 +141036,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Portrait 2
+      value: L3 Portrait2
       objectReference: {fileID: 0}
     - target: {fileID: 3714461931801894458, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
@@ -146434,7 +146795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.4399986
+      value: 71.5
       objectReference: {fileID: 0}
     - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_LocalPosition.y
@@ -149624,6 +149985,153 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: bb5d3234-9933-454a-bd81-c13ce1651c16
+--- !u!1001 &2015082397
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 86423951}
+    m_Modifications:
+    - target: {fileID: 558018613006898524, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 140.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230984084398345898, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_Name
+      value: L3 Portrait1 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3714461931801894458, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: id
+      value: 5aa00fab-7006-4d0d-8fb5-de13684586e6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337117906600688069, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346630092607017282, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: id
+      value: 759bd64b-a857-4350-a78f-0017b2313c6e
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061493601044972228, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: id
+      value: 05355429-45dd-4c3d-9a13-0af9f181d071
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_text
+      value: 'Portrait 1: Mayor who loved travelling'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_fontSize
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: id
+      value: cd3e7bb3-9fb3-462c-be2b-51e8023b1462
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640102151652040996, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: id
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: unlockInteractableObject
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToUnlockCheck.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToUnlockCheck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1567014450}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411991786}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+--- !u!4 &2015082398 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7985317210300853117, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 2015082397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2015082399 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 2015082397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2015082400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 2015082397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2015889183
 GameObject:
   m_ObjectHideFlags: 0
@@ -151668,13 +152176,13 @@ PrefabInstance:
       addedObject: {fileID: 1982764901}
     - targetCorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 946784265}
-    - targetCorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1296554570}
     - targetCorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1916245915}
+    - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 300146708}
     - targetCorrespondingSourceObject: {fileID: 2151886267966668858, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1928189435}
