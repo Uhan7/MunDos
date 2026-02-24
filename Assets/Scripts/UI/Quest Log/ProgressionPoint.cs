@@ -14,7 +14,7 @@ public class ProgressionPoint : MonoBehaviour
     // Variables ---------------------------------------------------------------
 
     [Header("Constants")]
-    [HideInInspector] private const string QUEST_LOG_HOLDER_NAME = "Quest Log Holder";
+    [HideInInspector] private const string QUEST_LOG_HOLDER_NAME = "Quest Log";
 
     [Header("References")]
     [HideInInspector] private QuestLogManager questLogManager;

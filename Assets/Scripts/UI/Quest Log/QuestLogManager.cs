@@ -9,7 +9,29 @@ public class QuestLogManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI actualQuestText;
     [SerializeField] private TextMeshProUGUI guideText;
 
+    [Header("Anim Reference")]
+    [SerializeField] private GameObject questLogButton;
+    [SerializeField] private DialogueManager dialogueManager; // To make quest log close once a dialogue starts
+
+        // Animator
+    private Animator animator;
+    private Animator buttonAnimator;
+    private bool isOpen = false;
+
     // Main Functions ----------------------------------------------------------
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        buttonAnimator = questLogButton.GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (dialogueManager.open && isOpen)
+        {
+            ToggleQuestLog();
+        }
+    }
 
     // Helper Functions --------------------------------------------------------
 
@@ -17,5 +39,20 @@ public class QuestLogManager : MonoBehaviour
     {
         actualQuestText.text = newQuest;
         guideText.text = newGuide;
+
+        FlashQuestButton();
+    }
+
+        // UI Anims
+    public void ToggleQuestLog()
+    {
+        isOpen = !isOpen;
+        animator.SetBool("isOpen", isOpen);
+    }
+
+    public void FlashQuestButton()
+    {
+        buttonAnimator.ResetTrigger("Flash");
+        buttonAnimator.SetTrigger("Flash");
     }
 }
