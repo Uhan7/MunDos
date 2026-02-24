@@ -6,6 +6,7 @@ public class ObjectState : MonoBehaviour
     [Header("Variables To Save")]
     public bool saveActiveState = true;
     public bool savePosition = false;
+    public bool saveColliderState = false;
 
     public ObjectSaveData CaptureState()
     {
@@ -13,17 +14,16 @@ public class ObjectState : MonoBehaviour
         data.objectID = GetComponent<UniqueID>().ID;
 
         if (saveActiveState) data.isActive = gameObject.activeSelf;
-        if (savePosition)
-        {
-            data.position = transform.position;
-            print(data.position);
-        }
+        if (savePosition) data.position = transform.position;
+        if (saveColliderState) data.colliderState = GetComponent<Collider2D>().enabled;
+
         return data;
     }
 
     public void RestoreState(ObjectSaveData data)
     {
-        if (savePosition) transform.position = data.position;
         if (saveActiveState) gameObject.SetActive(data.isActive);
+        if (savePosition) transform.position = data.position;
+        if (saveColliderState) GetComponent<Collider2D>().enabled = data.colliderState;
     }
 }

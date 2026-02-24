@@ -63,8 +63,8 @@ public class TextPrompt : MonoBehaviour
     {
 
         if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
-        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
 
-        if (otherHitboxesToSyncDeactivate != null) foreach (TextPrompt otherHitbox in otherHitboxesToSyncDeactivate) if (otherHitbox.gameObject.GetComponent<BoxCollider2D>().enabled == true) otherHitbox.DisableHitbox();
+        if (otherHitboxesToSyncDeactivate != null) foreach (TextPrompt otherHitbox in otherHitboxesToSyncDeactivate) if (otherHitbox.gameObject.GetComponent<Collider2D>().enabled == true) otherHitbox.DisableHitbox();
     }
 }

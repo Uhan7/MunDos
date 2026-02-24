@@ -22,6 +22,9 @@ public class ObjectSaveData
 
     // If need to check object's position
     public Vector3 position;
+
+    // If need to check object's colliders
+    public bool colliderState;
 }
 
 [Serializable]
