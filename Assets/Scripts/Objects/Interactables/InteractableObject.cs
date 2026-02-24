@@ -67,9 +67,9 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Flags")]
     [HideInInspector] private bool isInvalidObject = false;
-    [HideInInspector] private bool alreadyCheckedConditional = false;
-    [HideInInspector] private bool alreadyCheckedUnlock = false;
-    [HideInInspector] private bool alreadyCheckedLock = false;
+    [HideInInspector] public bool alreadyCheckedConditional = false; // For ObjectState.cs
+    [HideInInspector] public bool alreadyCheckedUnlock = false; // For ObjectState.cs
+    [HideInInspector] public bool alreadyCheckedLock = false; // For ObjectState.cs
 
     private void Awake()
     {

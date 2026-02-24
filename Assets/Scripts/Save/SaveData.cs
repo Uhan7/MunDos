@@ -8,7 +8,7 @@ public class SaveData
     public List<ObjectSaveData> objectStates;
     public List<PlayerItemSaveData> playerItems;
 
-    public bool timelineUnlocked; // Temporary fix,,, make a dictionary of this eventually
+    public bool timelineUnlocked; // Temporary fix,,, make a dictionary of this (Game States) eventually
 }
 
 [Serializable]
@@ -17,14 +17,19 @@ public class ObjectSaveData
     // Envi, Item, NPC, Room, DZ, Timeline, Bascally everything lol
     public string objectID;
 
-    // If need to check if an object is active
+    // Basic Object Stuff
     public bool isActive;
-
-    // If need to check object's position
     public Vector3 position;
-
-    // If need to check object's colliders
     public bool colliderState;
+
+    // Stored Checks
+    public int conditionalObjectChecks;
+    public int lockableObjectChecks;
+
+    // Already Checked Flags
+    public bool interactableAlreadyCheckedConditionals;
+    public bool interactableAlreadyCheckedUnlock;
+    public bool interactableAlreadyCheckedLock;
 }
 
 [Serializable]

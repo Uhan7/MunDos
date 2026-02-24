@@ -1,4 +1,5 @@
 using UnityEngine;
+using NaughtyAttributes;
 
 public class LockableObject : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class LockableObject : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField] public int requiredChecks = 1;
-    [HideInInspector] public int currentChecks = 0;
+    [ReadOnly, SerializeField] public int currentChecks = 0;
 
     [Header("Flags")]
     [HideInInspector] private bool isAlreadyLocked = false;
