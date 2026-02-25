@@ -39,6 +39,7 @@ public class SaveManager : MonoBehaviour
 
         // Progression Flags
         data.timelineUnlocked = timelineManager.timelineUnlocked;
+        data.currentTimeline = timelineManager.currentTimeline;
 
         // Actual Save
         PlayerPrefs.SetString(SAVE_KEY, JsonUtility.ToJson(data));
@@ -77,6 +78,7 @@ public class SaveManager : MonoBehaviour
 
         // Progression Flags
         timelineManager.timelineUnlocked = data.timelineUnlocked;
+        timelineManager.currentTimeline = data.currentTimeline;
 
         Debug.Log("Game Loaded");
     }

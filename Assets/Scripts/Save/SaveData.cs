@@ -9,6 +9,7 @@ public class SaveData
     public List<PlayerItemSaveData> playerItems;
 
     public bool timelineUnlocked; // Temporary fix,,, make a dictionary of this (Game States) eventually
+    public int currentTimeline; // another temporary, 0 is past and 1 is present
 }
 
 [Serializable]

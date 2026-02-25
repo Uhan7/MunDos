@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class TimelineManager : MonoBehaviour
 {
@@ -36,14 +37,14 @@ public class TimelineManager : MonoBehaviour
     [SerializeField] private AudioClip transitionSoundToPresent;
 
     [Header("Flags")]
-    [HideInInspector] private int currentTimeline; // 0 is Past | 1 is Present
+    [SerializeField] public int currentTimeline = 1; // 0 is Past | 1 is Present -- Used for Save
     [HideInInspector] public bool canSwitch = true; // Used in GameManager.cs
     [SerializeField] public bool timelineUnlocked = false;
 
     void Start()
     {
-        if (pastTimeline.activeInHierarchy) currentTimeline = 0;
-        else currentTimeline = 1;
+        // if (pastTimeline.activeInHierarchy) currentTimeline = 0;
+        // else currentTimeline = 1;
     }
 
     void Update()

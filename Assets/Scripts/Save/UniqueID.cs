@@ -1,28 +1,72 @@
 using UnityEngine;
-
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
+#if UNITY_EDITOR
 using UnityEditor;
-// using UnityEditor.SceneManagement;
+#endif
 
-[DisallowMultipleComponent]
+[DisallowMultipleComponent] [ExecuteAlways]
 public class UniqueID : MonoBehaviour
 {
     [SerializeField] private string id;
+
     public string ID => id;
+
+    public void GenerateNewID()
+    {
+        id = Guid.NewGuid().ToString();
+    }
+
+
+    /*
+
+    Bru fuk all this lol
+
+    private void Awake()
+    {
+        EnsureIDExists();
+    }
+
+    private void EnsureIDExists()
+    {
+        if (!string.IsNullOrEmpty(id))
+            return;
+
+        GenerateNewID();
+    }
+
+    public void GenerateNewID()
+    {
+        id = Guid.NewGuid().ToString();
+#if UNITY_EDITOR
+        MarkDirty();
+#endif
+
+    }
+
 
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        if (PrefabUtility.IsPartOfPrefabAsset(this)) return;
-        //     if (PrefabStageUtility.GetPrefabStage(gameObject) != null) return;
+        if (PrefabUtility.IsPartOfPrefabAsset(this))
+        {
+            id = string.Empty;
+            return;
+        }
 
-        if (string.IsNullOrEmpty(id)) id = Guid.NewGuid().ToString();
+        EnsureIDExists();
+    }
 
-        UniqueID[] potentialDuplicates = FindObjectsOfType<UniqueID>();
-        foreach (var otherObj in potentialDuplicates) if (otherObj.ID == id) id = Guid.NewGuid().ToString();
+    private void MarkDirty()
+    {
+        if (!Application.isPlaying)
+        {
+            EditorUtility.SetDirty(this);
+        }
     }
 #endif
+
+    */
+
+
 }
