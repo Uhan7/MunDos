@@ -3,6 +3,7 @@ using UnityEditor;
 
 public static class RegenerateIDs
 {
+#if UNITY_EDITOR
     [MenuItem("Tools/Unique ID/Regenerate All IDs In Scene")]
     public static void RegenerateAllIDs()
     {
@@ -19,4 +20,5 @@ public static class RegenerateIDs
             count++;
         }
     }
+#endif
 }
