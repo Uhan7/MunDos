@@ -23,9 +23,15 @@ public class ObjectSaveData
     public Vector3 position;
     public bool colliderState;
 
-    // Stored Checks
+    // Conditional
     public int conditionalObjectChecks;
+
+    // Lock
+    public bool isLockedAtStart;
+    public bool isAlreadyLocked;
     public int lockableObjectChecks;
+    public bool hasStoredLockValue;
+    public bool storedLockValue;
 
     // Already Checked Flags
     public bool interactableAlreadyCheckedConditionals;

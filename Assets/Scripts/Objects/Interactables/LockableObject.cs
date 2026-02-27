@@ -4,24 +4,28 @@ using NaughtyAttributes;
 public class LockableObject : MonoBehaviour
 {
     [Header("Properties")]
-    [SerializeField] private bool isLockedAtStart;
+    [SerializeField] public bool isLockedAtStart; // Used in ObjectState.cs
 
     [Header("Variables")]
     [SerializeField] public int requiredChecks = 1;
     [ReadOnly, SerializeField] public int currentChecks = 0;
 
     [Header("Flags")]
-    [HideInInspector] private bool isAlreadyLocked = false;
-    [HideInInspector] private bool hasStoredLockValue = false;
-    [HideInInspector] private bool storedLockValue = false;
+    [HideInInspector] public bool isAlreadyLocked = false; // Used in ObjectState.cs
+    [HideInInspector] public bool hasStoredLockValue = false; // Used in ObjectState.cs
+    [HideInInspector] public bool storedLockValue = false; // Used in ObjectState.cs
 
-    private void OnEnable()
+    private void Awake()
     {
         if (!isAlreadyLocked)
         {
             Lock(isLockedAtStart);
             isAlreadyLocked = true;
         }
+    }
+
+    private void OnEnable()
+    {
         if(hasStoredLockValue && currentChecks >= requiredChecks)
         {
             Lock(storedLockValue);
