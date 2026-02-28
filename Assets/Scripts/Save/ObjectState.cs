@@ -34,11 +34,20 @@ public class ObjectState : MonoBehaviour
         ConditionalObject conditional = GetComponent<ConditionalObject>();
         LockableObject lockable = GetComponent<LockableObject>();
         InteractableObject interactable = GetComponent<InteractableObject>();
+        Collider2D col = GetComponent<Collider2D>();
 
         if (interactable != null || lockable != null) saveColliderState = true;
+        if (col != null) saveColliderState = true;
 
         if (savePosition) data.position = transform.position;
         if (conditional != null) data.conditionalObjectChecks = conditional.currentChecks;
+        if (interactable != null)
+        {
+            data.interactableAlreadyCheckedConditionals = interactable.alreadyCheckedConditional;
+            data.interactableAlreadyCheckedUnlock = interactable.alreadyCheckedUnlock;
+            data.interactableAlreadyCheckedLock = interactable.alreadyCheckedLock;
+        }
+        if (saveColliderState) data.colliderState = GetComponent<Collider2D>().enabled;
         if (lockable != null)
         {
             data.isLockedAtStart = lockable.isLockedAtStart;
@@ -47,16 +56,8 @@ public class ObjectState : MonoBehaviour
             data.hasStoredLockValue = lockable.hasStoredLockValue;
             data.storedLockValue = lockable.storedLockValue;
         }
-        if (interactable != null)
-        {
-            data.interactableAlreadyCheckedConditionals = interactable.alreadyCheckedConditional;
-            data.interactableAlreadyCheckedUnlock = interactable.alreadyCheckedUnlock;
-            data.interactableAlreadyCheckedLock = interactable.alreadyCheckedLock;
-        }
-        if (saveActiveState) data.isActive = gameObject.activeSelf;
-        if (saveColliderState) data.colliderState = GetComponent<Collider2D>().enabled;
 
-        if (gameObject.name == "L1-DZ9") Debug.Log($"Saving {name} | Checks: {conditional?.currentChecks}");
+        if (saveActiveState) data.isActive = gameObject.activeSelf;
 
         return data;
     }
@@ -73,6 +74,13 @@ public class ObjectState : MonoBehaviour
 
         if (savePosition) transform.position = data.position;
         if (conditional != null) conditional.currentChecks = data.conditionalObjectChecks;
+        if (interactable != null)
+        {
+            interactable.alreadyCheckedConditional = data.interactableAlreadyCheckedConditionals;
+            interactable.alreadyCheckedUnlock = data.interactableAlreadyCheckedUnlock;
+            interactable.alreadyCheckedLock = data.interactableAlreadyCheckedLock;
+        }
+        if (saveColliderState) GetComponent<Collider2D>().enabled = data.colliderState;
         if (lockable != null)
         {
             lockable.isLockedAtStart = data.isLockedAtStart;
@@ -81,15 +89,7 @@ public class ObjectState : MonoBehaviour
             lockable.hasStoredLockValue = data.hasStoredLockValue;
             lockable.storedLockValue = data.storedLockValue;
         }
-        if (interactable != null)
-        {
-            interactable.alreadyCheckedConditional = data.interactableAlreadyCheckedConditionals;
-            interactable.alreadyCheckedUnlock = data.interactableAlreadyCheckedUnlock;
-            interactable.alreadyCheckedLock = data.interactableAlreadyCheckedLock;
-        }
-        if (saveActiveState) gameObject.SetActive(data.isActive);
-        if (saveColliderState) GetComponent<Collider2D>().enabled = data.colliderState;
 
-        if (gameObject.name == "L1-DZ9") Debug.Log($"Loading {name} | Checks: {data.conditionalObjectChecks}");
+        if (saveActiveState) gameObject.SetActive(data.isActive);
     }
 }
