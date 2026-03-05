@@ -136,6 +136,7 @@ public class GameManager : MonoBehaviour
         timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
         playerInteractScript.canInput = (!isPaused);
 
+        SettingsInfo.timePaused = isPaused;
         Time.timeScale = isPaused ? 0 : 1;
     }
 

@@ -42,7 +42,7 @@ public class PauseMenuManager : MonoBehaviour
         if (gameManager.canPause && !active)
         {
             gameManager.canPause = false;
-            TogglePause();
+            if (!SettingsInfo.timePaused) TogglePause();
         }
     }
 
@@ -51,7 +51,7 @@ public class PauseMenuManager : MonoBehaviour
         if (active && IsAllWindowsClosed())
         {
             gameManager.canPause = true;
-            TogglePause();
+            if (SettingsInfo.timePaused) TogglePause();
         }
     }
 
