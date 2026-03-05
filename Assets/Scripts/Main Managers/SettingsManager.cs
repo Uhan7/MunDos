@@ -27,7 +27,7 @@ public class SettingsManager : MonoBehaviour
     {
         SettingsInfo.musicVol = PlayerPrefs.GetFloat("MUSIC_VOL", 0.75f);
         SettingsInfo.SFXVol = PlayerPrefs.GetFloat("SFX_VOL", 0.75f);
-        SettingsInfo.SFXVol = PlayerPrefs.GetFloat("DIALOGUE_VOL", 1f);
+        SettingsInfo.dialogueVol = PlayerPrefs.GetFloat("DIALOGUE_VOL", 1f);
 
         Sync();
     }
@@ -85,7 +85,7 @@ public class SettingsManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("MUSIC_VOL", SettingsInfo.musicVol);
         PlayerPrefs.SetFloat("SFX_VOL", SettingsInfo.SFXVol);
-        PlayerPrefs.SetFloat("DIALOGUE_VOL", SettingsInfo.SFXVol);
+        PlayerPrefs.SetFloat("DIALOGUE_VOL", SettingsInfo.dialogueVol);
     }
 
     IEnumerator SyncSettings()
