@@ -23,6 +23,10 @@ public class PauseMenuManager : MonoBehaviour
 
     void Update()
     {
+        if (active && !SettingsInfo.timePaused)
+        {
+            active = false;
+        }
         animator.SetBool("Active", active);
 
         if (gameManager.isHidingUI) return;
@@ -39,6 +43,12 @@ public class PauseMenuManager : MonoBehaviour
 
     public void PauseScreenOn()
     {
+        if (!active && SettingsInfo.timePaused)
+        {
+            Debug.LogError("Time and pause mismatch 1: [PauseScreenOn()] Trying to activate pause screen but time is paused.");
+            active = true;
+            EventBroadcaster.Instance.PostEvent(EventNames.TOGGLE_PAUSE_BG);
+        }
         if (gameManager.canPause && !active)
         {
             gameManager.canPause = false;
@@ -48,6 +58,12 @@ public class PauseMenuManager : MonoBehaviour
 
     public void PauseScreenOff()
     {
+        if (active && !SettingsInfo.timePaused)
+        {
+            Debug.LogError("Time and pause mismatch 2: [PauseScreenOff()] Trying to deactivate pause screen but time is already unpaused.");
+            gameManager.canPause = true;
+            TogglePause();
+        }
         if (active && IsAllWindowsClosed())
         {
             gameManager.canPause = true;
