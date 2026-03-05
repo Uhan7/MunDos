@@ -640,6 +640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114096872}
   - component: {fileID: 114096871}
+  - component: {fileID: 114096873}
   m_Layer: 0
   m_Name: BGM Source
   m_TagString: Untagged
@@ -759,6 +760,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114096873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114096870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febff8d5b41f6af4785d05a6d60d5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioType: 0
+  alwaysChangeOnSettings: 1
+  onAtStart: 0
 --- !u!1 &120636468
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,6 +2281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045278306}
   - component: {fileID: 1045278305}
+  - component: {fileID: 1045278307}
   m_Layer: 0
   m_Name: SFX Source
   m_TagString: Untagged
@@ -2384,6 +2401,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1045278307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045278304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febff8d5b41f6af4785d05a6d60d5b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioType: 1
+  alwaysChangeOnSettings: 0
+  onAtStart: 0
 --- !u!1 &1250915867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4588,7 +4620,7 @@ SceneRoots:
   - {fileID: 1718457866}
   - {fileID: 276425808}
   - {fileID: 707773120}
-  - {fileID: 114096872}
   - {fileID: 430793470}
   - {fileID: 1640817412}
+  - {fileID: 114096872}
   - {fileID: 1045278306}
