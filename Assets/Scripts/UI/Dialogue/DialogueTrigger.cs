@@ -54,11 +54,11 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private AudioClip[] soundsToPlayAfter;
 
     [Header("Flags")]
-    [HideInInspector] private bool dialogueIsTriggered;
-    [HideInInspector] private bool alreadyActivatedObjects = false;
-    [HideInInspector] private bool alreadyDeactivatedObjects = false;
-    [HideInInspector] private bool alreadyCheckedConditional = false;
-    [HideInInspector] private bool alreadyRemovedPlayeritems = false;
+    [HideInInspector] public bool dialogueIsTriggered; // Used in ObjectState.cs
+    [HideInInspector] public bool alreadyActivatedObjects = false; // Used in ObjectState.cs
+    [HideInInspector] public bool alreadyDeactivatedObjects = false; // Used in ObjectState.cs
+    [HideInInspector] public bool alreadyCheckedConditional = false; // Used in ObjectState.cs
+    [HideInInspector] public bool alreadyRemovedPlayeritems = false; // Used in ObjectState.cs
 
     private void Awake()
     {
@@ -148,6 +148,8 @@ public class DialogueTrigger : MonoBehaviour
 
         if (soundsToPlayBefore.Length > 0) foreach (AudioClip clip in soundsToPlayBefore) sfxSource.PlayOneShot(clip);
         StartCoroutine(dialogueHolder.StartDialogue(dialogue));
+
+        print(gameObject.name + " is speaking!!! listen, look, and listen and learn");
     }
 
     void WaitForOtherDialogue()

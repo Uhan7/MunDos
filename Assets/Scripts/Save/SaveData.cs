@@ -18,9 +18,13 @@ public class ObjectSaveData
     // Envi, Item, NPC, Room, DZ, Timeline, Bascally everything lol
     public string objectID;
 
-    // Basic Object Stuff
+    // GameObject
     public bool isActive;
+
+    // Transform
     public Vector3 position;
+
+    // Collider
     public bool colliderState;
 
     // Conditional
@@ -33,10 +37,22 @@ public class ObjectSaveData
     public bool hasStoredLockValue;
     public bool storedLockValue;
 
-    // Already Checked Flags
+    // Interactable
     public bool interactableAlreadyCheckedConditionals;
     public bool interactableAlreadyCheckedUnlock;
     public bool interactableAlreadyCheckedLock;
+
+    // DialogueTrigger
+    public bool dialogueIsTriggered;
+    public bool dialogueAlreadyActivatedObjects;
+    public bool dialogueAlreadyDeactivatedObjects;
+    public bool dialogueAlreadyCheckedConditional;
+    public bool dialogueAlreadyRemovedPlayeritems;
+
+    // ObjectsManager
+    public bool objectManagerAlreadyEnabled;
+    public bool objectManagerAlreadyCheckedUnlock;
+    public bool objectManagerAlreadyCheckedLock;
 }
 
 [Serializable]

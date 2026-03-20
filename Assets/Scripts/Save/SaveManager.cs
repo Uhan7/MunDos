@@ -14,7 +14,7 @@ public class SaveManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private TimelineManager timelineManager;
 
-    private void Start()
+    private void Awake()
     {
         // LoadGame();
         // Automatically load the game when it starts but maybe change soon..
@@ -26,7 +26,7 @@ public class SaveManager : MonoBehaviour
 
     public void SaveGame()
     {
-        SaveData data = new SaveData();
+        SaveData data = new();
 
         // Physical Objects
         data.objectStates = new List<ObjectSaveData>();

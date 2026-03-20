@@ -67,7 +67,7 @@ public class InteractableObject : MonoBehaviour
 
     [Header("Flags")]
     [HideInInspector] private bool isInvalidObject = false;
-    [HideInInspector] public bool alreadyCheckedConditional = false; // For ObjectState.cs
+    [ReadOnly, SerializeField] public bool alreadyCheckedConditional = false; // For ObjectState.cs
     [HideInInspector] public bool alreadyCheckedUnlock = false; // For ObjectState.cs
     [HideInInspector] public bool alreadyCheckedLock = false; // For ObjectState.cs
 
@@ -118,7 +118,7 @@ public class InteractableObject : MonoBehaviour
 
         if (zoomInteract) ZoomInteract(true);
 
-        if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly) AddConditionalCheck();
+        if (conditionalObjectsToCheck != null && !checkOnValidInteractOnly && checksConditionalObject) AddConditionalCheck();
         if (objectsToUnlockCheck != null && !unlockOnValidInteractOnly && unlockInteractableObject) AddUnlockCheck();
         if (objectsToLockCheck != null && !lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
 
@@ -164,7 +164,7 @@ public class InteractableObject : MonoBehaviour
             SetAll(toActivateOnValidInteract, true);
             SetAll(toDeactivateOnValidInteract, false);
 
-            if (conditionalObjectsToCheck != null && checkOnValidInteractOnly) AddConditionalCheck();
+            if (conditionalObjectsToCheck != null && checkOnValidInteractOnly && checksConditionalObject) AddConditionalCheck();
             if (objectsToUnlockCheck != null && unlockOnValidInteractOnly && unlockInteractableObject) AddUnlockCheck();
             if (objectsToLockCheck != null && lockOnValidInteractOnly && lockInteractableObject) AddLockCheck();
         }

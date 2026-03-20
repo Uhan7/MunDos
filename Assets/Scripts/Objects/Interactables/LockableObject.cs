@@ -8,6 +8,8 @@ public class LockableObject : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField] public int requiredChecks = 1;
+
+    [Header("Counters")]
     [ReadOnly, SerializeField] public int currentChecks = 0;
 
     [Header("Flags")]

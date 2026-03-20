@@ -25,9 +25,9 @@ public class ObjectsManager : MonoBehaviour
     [ShowIf("lockAndUnlock")] [SerializeField] private GameObject[] objectsToUnlock;
 
     [Header("Flags")]
-    [HideInInspector] private bool alreadyEnabled = false;
-    [HideInInspector] private bool alreadyCheckedUnlock = false;
-    [HideInInspector] private bool alreadyCheckedLock = false;
+    [HideInInspector] public bool alreadyEnabled = false; // Used in ObjectState.cs
+    [HideInInspector] public bool alreadyCheckedLock = false; // Used in ObjectState.cs
+    [HideInInspector] public bool alreadyCheckedUnlock = false; // Used in ObjectState.cs
 
 
     private void OnEnable()

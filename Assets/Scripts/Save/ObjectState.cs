@@ -6,48 +6,35 @@ public class ObjectState : MonoBehaviour
     // Variables ---------------------------------------------------------------
     [Header("Variables To Save")]
     public bool saveActiveState = true;
-    public bool savePosition = false;
-    public bool saveColliderState = false;
-
-    // [Header("Required Variables References")]
-    // private ConditionalObject conditional;
-    // private LockableObject lockable;
-    // private InteractableObject interactable;
+    public bool savePosition = false; // Probably only to NPCs and Protags
 
     // Functions ---------------------------------------------------------------
-    private void Awake()
-    {
-        ConditionalObject conditional = GetComponent<ConditionalObject>();
-        LockableObject lockable = GetComponent<LockableObject>();
-        InteractableObject interactable = GetComponent<InteractableObject>();
-        Collider2D col = GetComponent<Collider2D>();
-
-        if (interactable != null || lockable != null) saveColliderState = true;
-        if (col != null) saveColliderState = true;
-    }
-
     public ObjectSaveData CaptureState()
     {
         ObjectSaveData data = new ObjectSaveData();
         data.objectID = GetComponent<UniqueID>().ID;
 
-        ConditionalObject conditional = GetComponent<ConditionalObject>();
-        LockableObject lockable = GetComponent<LockableObject>();
         InteractableObject interactable = GetComponent<InteractableObject>();
         Collider2D col = GetComponent<Collider2D>();
+        ConditionalObject conditional = GetComponent<ConditionalObject>();
+        LockableObject lockable = GetComponent<LockableObject>();
+        DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+        ObjectsManager objectsManager = GetComponent<ObjectsManager>();
 
-        if (interactable != null || lockable != null) saveColliderState = true;
-        if (col != null) saveColliderState = true;
-
-        if (savePosition) data.position = transform.position;
-        if (conditional != null) data.conditionalObjectChecks = conditional.currentChecks;
         if (interactable != null)
         {
             data.interactableAlreadyCheckedConditionals = interactable.alreadyCheckedConditional;
             data.interactableAlreadyCheckedUnlock = interactable.alreadyCheckedUnlock;
             data.interactableAlreadyCheckedLock = interactable.alreadyCheckedLock;
         }
-        if (saveColliderState) data.colliderState = GetComponent<Collider2D>().enabled;
+        if (col != null)
+        {
+            data.colliderState = col.enabled;
+        }
+        if (conditional != null)
+        {
+            data.conditionalObjectChecks = conditional.currentChecks;
+        }
         if (lockable != null)
         {
             data.isLockedAtStart = lockable.isLockedAtStart;
@@ -56,7 +43,22 @@ public class ObjectState : MonoBehaviour
             data.hasStoredLockValue = lockable.hasStoredLockValue;
             data.storedLockValue = lockable.storedLockValue;
         }
+        if (dialogueTrigger != null)
+        {
+            data.dialogueIsTriggered = dialogueTrigger.dialogueIsTriggered;
+            data.dialogueAlreadyActivatedObjects = dialogueTrigger.alreadyActivatedObjects;
+            data.dialogueAlreadyCheckedConditional = dialogueTrigger.alreadyCheckedConditional;
+            data.dialogueAlreadyDeactivatedObjects = dialogueTrigger.alreadyDeactivatedObjects;
+            data.dialogueAlreadyRemovedPlayeritems = dialogueTrigger.alreadyRemovedPlayeritems;
+        }
+        if (objectsManager != null)
+        {
+            data.objectManagerAlreadyEnabled = objectsManager.alreadyEnabled;
+            data.objectManagerAlreadyCheckedLock = objectsManager.alreadyCheckedLock;
+            data.objectManagerAlreadyCheckedUnlock = objectsManager.alreadyCheckedUnlock;
+        }
 
+        if (savePosition) data.position = transform.position;
         if (saveActiveState) data.isActive = gameObject.activeSelf;
 
         return data;
@@ -64,23 +66,27 @@ public class ObjectState : MonoBehaviour
 
     public void RestoreState(ObjectSaveData data)
     {
-        ConditionalObject conditional = GetComponent<ConditionalObject>();
-        LockableObject lockable = GetComponent<LockableObject>();
         InteractableObject interactable = GetComponent<InteractableObject>();
         Collider2D col = GetComponent<Collider2D>();
+        ConditionalObject conditional = GetComponent<ConditionalObject>();
+        LockableObject lockable = GetComponent<LockableObject>();
+        DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+        ObjectsManager objectsManager = GetComponent<ObjectsManager>();
 
-        if (interactable != null || lockable != null) saveColliderState = true;
-        if (col != null) saveColliderState = true;
-
-        if (savePosition) transform.position = data.position;
-        if (conditional != null) conditional.currentChecks = data.conditionalObjectChecks;
         if (interactable != null)
         {
             interactable.alreadyCheckedConditional = data.interactableAlreadyCheckedConditionals;
             interactable.alreadyCheckedUnlock = data.interactableAlreadyCheckedUnlock;
             interactable.alreadyCheckedLock = data.interactableAlreadyCheckedLock;
         }
-        if (saveColliderState) GetComponent<Collider2D>().enabled = data.colliderState;
+        if (col != null)
+        {
+            col.enabled = data.colliderState;
+        }
+        if (conditional != null)
+        {
+            conditional.currentChecks = data.conditionalObjectChecks;
+        }
         if (lockable != null)
         {
             lockable.isLockedAtStart = data.isLockedAtStart;
@@ -89,7 +95,22 @@ public class ObjectState : MonoBehaviour
             lockable.hasStoredLockValue = data.hasStoredLockValue;
             lockable.storedLockValue = data.storedLockValue;
         }
+        if (dialogueTrigger != null)
+        {
+            dialogueTrigger.dialogueIsTriggered = data.dialogueIsTriggered;
+            dialogueTrigger.alreadyActivatedObjects = data.dialogueAlreadyActivatedObjects;
+            dialogueTrigger.alreadyCheckedConditional = data.dialogueAlreadyCheckedConditional;
+            dialogueTrigger.alreadyDeactivatedObjects = data.dialogueAlreadyDeactivatedObjects;
+            dialogueTrigger.alreadyRemovedPlayeritems = data.dialogueAlreadyRemovedPlayeritems;
+        }
+        if (objectsManager != null)
+        {
+            objectsManager.alreadyEnabled = data.objectManagerAlreadyEnabled;
+            objectsManager.alreadyCheckedLock = data.objectManagerAlreadyCheckedLock;
+            objectsManager.alreadyCheckedUnlock = data.objectManagerAlreadyCheckedUnlock;
+        }
 
+        if (savePosition) transform.position = data.position;
         if (saveActiveState) gameObject.SetActive(data.isActive);
     }
 }
