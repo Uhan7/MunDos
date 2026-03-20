@@ -3,21 +3,31 @@ using System.Collections.Generic;
 
 public class SaveManager : MonoBehaviour
 {
-    const string SAVE_KEY = "SAVE_DATA";
+    [Header("Constants")]
+    [HideInInspector] private const string SAVE_KEY = "SAVE_DATA";
+    [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
 
+    [Header("Keycodes (Debug)")]
     [SerializeField] private KeyCode saveKey = KeyCode.Alpha6;
     [SerializeField] private KeyCode loadKey = KeyCode.Alpha7;
 
+    [Header("References")]
+    [HideInInspector] private AudioSource sfxSource;
+    [SerializeField] private TimelineManager timelineManager;
     [SerializeField] private PlayerInteract pastPlayer;
     [SerializeField] private PlayerInteract presentPlayer;
 
-    [Header("References")]
-    [SerializeField] private TimelineManager timelineManager;
+    [Header("Audio Stuff")]
+    [SerializeField] private AudioClip saveSFX;
+    [SerializeField] private AudioClip loadSFX;
 
     private void Awake()
     {
         // LoadGame();
         // Automatically load the game when it starts but maybe change soon..
+
+        sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
+
         if (SettingsInfo.fromContinue)
         {
             LoadGame();
@@ -48,11 +58,15 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Game Saved");
         Debug.Log("Save size (chars): " + JsonUtility.ToJson(data).Length);
         Debug.Log("Save size (bytes approx): " + System.Text.Encoding.UTF8.GetByteCount(JsonUtility.ToJson(data)));
+
+        sfxSource.PlayOneShot(saveSFX); // Plays last to let players know it saved
     }
 
 
     public void LoadGame()
     {
+        sfxSource.PlayOneShot(loadSFX); // Plays first to let players know it loading
+
         // If none, load normal
         if (!PlayerPrefs.HasKey(SAVE_KEY))
         {
