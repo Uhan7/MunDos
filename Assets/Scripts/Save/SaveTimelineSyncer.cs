@@ -22,6 +22,8 @@ public class SaveTimelineSyncer : MonoBehaviour
         allSaveSlots.Add(slot4.GetComponent<SaveSlot>());
         allSaveSlots.Add(slot5.GetComponent<SaveSlot>());
         allSaveSlots.Add(slot6.GetComponent<SaveSlot>());
+
+        slotHandler = GetComponent<SlotHandler>();
     }
     private IEnumerator SyncSlotUI()
     {

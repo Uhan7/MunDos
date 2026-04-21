@@ -28,7 +28,10 @@ public class SettingsManager : MonoBehaviour
         SettingsInfo.musicVol = PlayerPrefs.GetFloat("MUSIC_VOL", 0.75f);
         SettingsInfo.SFXVol = PlayerPrefs.GetFloat("SFX_VOL", 0.75f);
         SettingsInfo.dialogueVol = PlayerPrefs.GetFloat("DIALOGUE_VOL", 1f);
+    }
 
+    private void OnEnable()
+    {
         Sync();
     }
 

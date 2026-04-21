@@ -33,6 +33,9 @@ public class SaveSlot : MonoBehaviour
 
     public void SetRibbon(Sprite newRibbon)
     {
+        if (ribbon == null) Debug.Log("RIBBON IS NULL");
+        if (newRibbon == null) Debug.Log("NEW RIBBON IS NULL");
+
         if (!ribbon.activeInHierarchy) ribbon.SetActive(true);
         ribbonSprite.sprite = newRibbon;
     }

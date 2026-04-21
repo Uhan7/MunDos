@@ -36,11 +36,11 @@ public class SlotHandler : MonoBehaviour
         // TEMPORARY
         allSaveSlots[0].slotIsFull = (PlayerPrefs.GetInt("SAVE_SLOT_ISFULL", 0) != 0);
         allSaveSlots[0].timelineSaved = PlayerPrefs.GetInt("SAVE_SLOT_TIMELINE", 1);
-        if (allSaveSlots[0].slotIsFull)
-        {
-            allSaveSlots[0].ribbon.SetActive(true);
-            allSaveSlots[0].SetRibbon(ribbonSprites[allSaveSlots[0].timelineSaved]);
-        }
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(SettingRibbons());
     }
 
     public void SelectSlot(int slotNum)
@@ -84,5 +84,20 @@ public class SlotHandler : MonoBehaviour
     public void SetContinue(bool FromContinue)
     {
         SettingsInfo.fromContinue = FromContinue;
+    }
+
+    private IEnumerator SettingRibbons()
+    {
+        yield return new WaitForEndOfFrame();
+
+        if (allSaveSlots[0].slotIsFull)
+        {
+            allSaveSlots[0].ribbon.SetActive(true);
+            if (ribbonSprites[allSaveSlots[0].timelineSaved] == null)
+            {
+                Debug.Log("Ribbon png is null");
+            }
+            allSaveSlots[0].SetRibbon(ribbonSprites[allSaveSlots[0].timelineSaved]);
+        }
     }
 }
