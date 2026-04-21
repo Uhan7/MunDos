@@ -32,8 +32,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] public bool canInput = true; // Used in DialogueTrigger.cs
     [HideInInspector] public bool getMoveLeftKey; // Used in AutoMove.cs
     [HideInInspector] public bool getMoveRightKey; // Used in AutoMove.cs
-    [HideInInspector] private bool isWalking;
-    [HideInInspector] private bool jumpIsQueued;
+    //[HideInInspector] private bool isWalking;
+    //[HideInInspector] private bool jumpIsQueued;
 
     // Functions ---------------------------------------------------------------
 

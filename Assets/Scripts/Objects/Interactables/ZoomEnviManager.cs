@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class ZoomEnviManager : MonoBehaviour
 {
-    [Header("Keybinds")]
-    [SerializeField] private KeyCode deactivateKey;
-
     [Header("Components")]
     [SerializeField] private GameObject zoomEnviBackdrop;
     [SerializeField] private GameObject zoomEnviImage;
@@ -36,6 +33,7 @@ public class ZoomEnviManager : MonoBehaviour
     // I put this as a separate function since it might be executed differently soon
     public void DeactivateZoomedEnvi() // used in InteractableObject.cs
     {
+        print("deactivate zoom called");
         zoomEnviBackdrop.SetActive(false);
         zoomEnviImage.SetActive(false);
 

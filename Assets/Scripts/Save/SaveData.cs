@@ -41,6 +41,7 @@ public class ObjectSaveData
     public bool interactableAlreadyCheckedConditionals;
     public bool interactableAlreadyCheckedUnlock;
     public bool interactableAlreadyCheckedLock;
+    public bool interactableIsFocusing;
 
     // DialogueTrigger
     public bool dialogueIsTriggered;
@@ -53,6 +54,15 @@ public class ObjectSaveData
     public bool objectManagerAlreadyEnabled;
     public bool objectManagerAlreadyCheckedUnlock;
     public bool objectManagerAlreadyCheckedLock;
+
+    // ZoomEnviManager
+    public bool zoomEnviManagerActivated;
+
+    // Game Manager (this should actually be elsewhere but ourgh idc)
+    public bool gameManagerIsFocusing;
+    public bool gameManagerIsHidingUI;
+    public bool gameManagerIsPaused;
+    public bool gameManagerCanPause;
 }
 
 [Serializable]

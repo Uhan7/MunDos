@@ -20,6 +20,8 @@ public class ObjectState : MonoBehaviour
         LockableObject lockable = GetComponent<LockableObject>();
         DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
         ObjectsManager objectsManager = GetComponent<ObjectsManager>();
+        GameManager gameManager = GetComponent<GameManager>();
+        ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
 
         if (interactable != null)
         {
@@ -57,6 +59,17 @@ public class ObjectState : MonoBehaviour
             data.objectManagerAlreadyCheckedLock = objectsManager.alreadyCheckedLock;
             data.objectManagerAlreadyCheckedUnlock = objectsManager.alreadyCheckedUnlock;
         }
+        if (zoomEnviManager != null)
+        {
+            data.zoomEnviManagerActivated = zoomEnviManager.activated;
+        }
+        if (gameManager != null)
+        {
+            data.gameManagerCanPause = gameManager.canPause;
+            data.gameManagerIsFocusing = gameManager.isFocusing;
+            data.gameManagerIsHidingUI = gameManager.isHidingUI;
+            data.gameManagerIsPaused = gameManager.isPaused;
+        }
 
         if (savePosition) data.position = transform.position;
         if (saveActiveState) data.isActive = gameObject.activeSelf;
@@ -72,6 +85,8 @@ public class ObjectState : MonoBehaviour
         LockableObject lockable = GetComponent<LockableObject>();
         DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
         ObjectsManager objectsManager = GetComponent<ObjectsManager>();
+        ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
+        GameManager gameManager = GetComponent<GameManager>();
 
         if (interactable != null)
         {
@@ -108,6 +123,17 @@ public class ObjectState : MonoBehaviour
             objectsManager.alreadyEnabled = data.objectManagerAlreadyEnabled;
             objectsManager.alreadyCheckedLock = data.objectManagerAlreadyCheckedLock;
             objectsManager.alreadyCheckedUnlock = data.objectManagerAlreadyCheckedUnlock;
+        }
+        if (zoomEnviManager != null)
+        {
+            zoomEnviManager.activated = data.zoomEnviManagerActivated;
+        }
+        if (gameManager != null)
+        {
+            gameManager.canPause = data.gameManagerCanPause;
+            gameManager.isFocusing = data.gameManagerIsFocusing;
+            gameManager.isHidingUI = data.gameManagerIsHidingUI;
+            gameManager.isPaused = data.gameManagerIsPaused;
         }
 
         if (savePosition) transform.position = data.position;
