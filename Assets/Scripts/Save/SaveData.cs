@@ -6,7 +6,7 @@ using UnityEngine;
 public class SaveData
 {
     public List<ObjectSaveData> objectStates;
-    public List<PlayerItemSaveData> playerItems;
+    public List<PlayerSaveData> players;
 
     public bool timelineUnlocked; // Temporary fix,,, make a dictionary of this (Game States) eventually
     public int currentTimeline; // another temporary, 0 is past and 1 is present
@@ -58,6 +58,14 @@ public class ObjectSaveData
     // ZoomEnviManager
     public bool zoomEnviManagerActivated;
 
+    // DialogueManager
+    public bool dialogueManagerWasClicked;
+    public bool dialogueManagerOpen;
+    public bool dialogueManagerSkip;
+    public bool dialogueManagerCanNext;
+    public bool dialogueManagerCanClick;
+    public bool dialogueManagerMainCharacterIsSpeaking;
+
     // Game Manager (this should actually be elsewhere but ourgh idc)
     public bool gameManagerIsFocusing;
     public bool gameManagerIsHidingUI;
@@ -66,9 +74,26 @@ public class ObjectSaveData
 }
 
 [Serializable]
-public class PlayerItemSaveData
+public class PlayerSaveData
 {
+    // Current Timeline (will load this timeline on load)
     public Timeline protagTimeline;
+
+    // Player Items
     public List<ItemData> itemDatas;
     public int playerItemIndex;
+
+    // Player Movement Flags
+    public bool moveCanInput;
+    public bool moveCanMove;
+
+    // Player Interaction Flags
+    public bool interactWillUpdate;
+    public bool interactIsEmpty;
+    public bool interactHasCheckedInventory;
+    public bool interactCanInput;
+    public bool interactHasActiveItem;
+    public bool interactIsSelected;
+    public bool interactIsZoomed;
+    public int interactActiveObjectIndex;
 }

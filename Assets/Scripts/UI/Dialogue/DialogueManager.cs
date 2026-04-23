@@ -45,14 +45,14 @@ public class DialogueManager : MonoBehaviour
 	[HideInInspector] private int originalCounter;
 
 	[Header("Flags")]
-	[HideInInspector] private bool wasClicked = false;
-	[HideInInspector] public bool open; // Used in Animator
-	[HideInInspector] private bool skip;
-	[HideInInspector] private bool canNext;
-	[HideInInspector] public bool canClick; // Used in GameManager.cs
-    [HideInInspector] public bool mainCharacterIsSpeaking; // Set in DialogueTrigger.cs
+	[HideInInspector] public bool wasClicked = false; // Used in SaveData.cs
+	[HideInInspector] public bool open; // Used in Animator and SaveData.cs
+	[HideInInspector] public bool skip; // Used in SaveData.cs
+	[HideInInspector] public bool canNext; // Used in SaveData.cs
+	[HideInInspector] public bool canClick; // Used in GameManager.cs and SaveData.cs
+	[HideInInspector] public bool mainCharacterIsSpeaking; // Set in DialogueTrigger.cs and SaveData.cs
 
-    private void Awake()
+	private void Awake()
     {
 		InitializeComponents();
 	}

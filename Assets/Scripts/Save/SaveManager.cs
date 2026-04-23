@@ -14,8 +14,10 @@ public class SaveManager : MonoBehaviour
     [Header("References")]
     [HideInInspector] private AudioSource sfxSource;
     [SerializeField] private TimelineManager timelineManager;
-    [SerializeField] private PlayerInteract pastPlayer;
-    [SerializeField] private PlayerInteract presentPlayer;
+    [SerializeField] private PlayerInteract pastPlayerInteract;
+    [SerializeField] private PlayerInteract presentPlayerInteract;
+    [SerializeField] private PlayerMove pastPlayerMove;
+    [SerializeField] private PlayerMove presentPlayerMove;
 
     [Header("Audio Stuff")]
     [SerializeField] private AudioClip saveSFX;
@@ -43,9 +45,9 @@ public class SaveManager : MonoBehaviour
         foreach (ObjectState obj in FindObjectsOfType<ObjectState>(true)) data.objectStates.Add(obj.CaptureState());
 
         // Logical/Data
-        data.playerItems = new List<PlayerItemSaveData>();
-        data.playerItems.Add(CapturePlayer(pastPlayer, Timeline.Past));
-        data.playerItems.Add(CapturePlayer(presentPlayer, Timeline.Present));
+        data.players = new List<PlayerSaveData>();
+        data.players.Add(CapturePlayer(pastPlayerInteract, pastPlayerMove, Timeline.Past));
+        data.players.Add(CapturePlayer(presentPlayerInteract, presentPlayerMove, Timeline.Present));
 
         // Progression Flags
         data.timelineUnlocked = timelineManager.timelineUnlocked;
@@ -84,10 +86,10 @@ public class SaveManager : MonoBehaviour
         }
 
         // Logical/Data
-        foreach (PlayerItemSaveData playerItem in data.playerItems)
+        foreach (PlayerSaveData playerSaveData in data.players)
         {
-            if (playerItem.protagTimeline == Timeline.Past) RestorePlayer(pastPlayer, playerItem);
-            else if (playerItem.protagTimeline == Timeline.Present) RestorePlayer(presentPlayer, playerItem);
+            if (playerSaveData.protagTimeline == Timeline.Past) RestorePlayer(pastPlayerInteract, pastPlayerMove, playerSaveData);
+            else if (playerSaveData.protagTimeline == Timeline.Present) RestorePlayer(presentPlayerInteract, presentPlayerMove, playerSaveData);
         }
 
         // Progression Flags
@@ -110,50 +112,59 @@ public class SaveManager : MonoBehaviour
         return null;
     }
 
-    ItemData FindItemByID(string id)
+    PlayerSaveData CapturePlayer(PlayerInteract playerInteract, PlayerMove playerMove, Timeline protagTimeline)
     {
-        foreach (Item item in FindObjectsOfType<Item>(true))
-        {
-            UniqueID uid = item.GetComponent<UniqueID>();
-            if (uid != null && uid.ID == id)
-            {
-                return item.GetData();
-            }
-        }
-        return null;
-    }
-
-
-    PlayerItemSaveData CapturePlayer(PlayerInteract player, Timeline protagTimeline)
-    {
-        PlayerItemSaveData data = new PlayerItemSaveData();
-
-        data.protagTimeline = protagTimeline;
-        data.playerItemIndex = player.playerItemIndex;
+        PlayerSaveData data = new PlayerSaveData();
         data.itemDatas = new List<ItemData>();
 
-        foreach (ItemData item in player.itemDatas)
-        {
-            data.itemDatas.Add(new ItemData(item));
-        }
+        // Timeline
+        data.protagTimeline = protagTimeline;
 
+        // Items
+        data.playerItemIndex = playerInteract.playerItemIndex;
+        foreach (ItemData item in playerInteract.itemDatas) data.itemDatas.Add(new ItemData(item));
+
+        // Player Move
+        data.moveCanInput = playerMove.canInput;
+        data.moveCanMove = playerMove.canMove;
+
+        // Player Interact
+        data.interactWillUpdate = playerInteract.willUpdate;
+        data.interactIsEmpty = playerInteract.isEmpty;
+        data.interactHasCheckedInventory = playerInteract.hasCheckedInventory;
+        data.interactCanInput = playerInteract.canInput;
+        data.interactHasActiveItem = playerInteract.hasActiveItem;
+        data.interactIsSelected = playerInteract.isSelected;
+        data.interactIsZoomed = playerInteract.isZoomed;
+        data.interactActiveObjectIndex = playerInteract.activeObjectIndex;
 
         return data;
     }
 
-    void RestorePlayer(PlayerInteract player, PlayerItemSaveData data)
+    void RestorePlayer(PlayerInteract playerInteract, PlayerMove playerMove, PlayerSaveData data)
     {
-        player.playerItemIndex = data.playerItemIndex;
+        // Items
+        playerInteract.playerItemIndex = data.playerItemIndex;
+        for (int i = 0; i < data.itemDatas.Count; i++) playerInteract.itemDatas[i] = new ItemData(data.itemDatas[i]);
 
-        for (int i = 0; i < data.itemDatas.Count; i++)
-        {
-            player.itemDatas[i] = new ItemData(data.itemDatas[i]);
-        }
+        // Player Move
+        playerMove.canInput = data.moveCanInput;
+        playerMove.canMove = data.moveCanMove;
+
+        // Player Interact
+        playerInteract.willUpdate = data.interactWillUpdate;
+        playerInteract.isEmpty = data.interactIsEmpty;
+        playerInteract.hasCheckedInventory = data.interactHasCheckedInventory;
+        playerInteract.canInput = data.interactCanInput;
+        playerInteract.hasActiveItem = data.interactHasActiveItem;
+        playerInteract.isSelected = data.interactIsSelected;
+        playerInteract.isZoomed = data.interactIsZoomed;
+        playerInteract.activeObjectIndex = data.interactActiveObjectIndex;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(saveKey)) SaveGame();
-        if (Input.GetKeyDown(loadKey)) LoadGame();
+        // if (Input.GetKeyDown(saveKey)) SaveGame();
+        // if (Input.GetKeyDown(loadKey)) LoadGame();
     }
 }

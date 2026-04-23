@@ -28,8 +28,8 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
 
     [Header("Flags")]
-    [SerializeField] public bool canMove = true; // Used in DialogueTrigger.cs
-    [SerializeField] public bool canInput = true; // Used in DialogueTrigger.cs
+    [SerializeField] public bool canMove = true; // Used in DialogueTrigger.cs and SaveData.cs
+    [SerializeField] public bool canInput = true; // Used in DialogueTrigger.cs and SaveData.cs
     [HideInInspector] public bool getMoveLeftKey; // Used in AutoMove.cs
     [HideInInspector] public bool getMoveRightKey; // Used in AutoMove.cs
     //[HideInInspector] private bool isWalking;

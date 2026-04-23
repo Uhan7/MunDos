@@ -34,15 +34,14 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector] public int playerItemIndex; // Used in PlayeritemsManager
 
     [Header("Flags")]
-    [HideInInspector] private bool willUpdate;
-    [HideInInspector] public bool isEmpty;
-    [HideInInspector] private bool hasCheckedInventory;
-    [HideInInspector] public bool canInput;
-
-    [HideInInspector] public bool HasActiveItem;
-    [HideInInspector] public bool isSelected;
-    [HideInInspector] public bool isZoomed;
-    [HideInInspector] public int activeObjectIndex;
+    [HideInInspector] public bool willUpdate; // Used in SaveData.cs
+    [HideInInspector] public bool isEmpty; // Used in SaveData.cs
+    [HideInInspector] public bool hasCheckedInventory; // Used in SaveData.cs
+    [HideInInspector] public bool canInput; // Used in SaveData.cs
+    [HideInInspector] public bool hasActiveItem; // Used in SaveData.cs
+    [HideInInspector] public bool isSelected; // Used in SaveData.cs
+    [HideInInspector] public bool isZoomed; // Used in SaveData.cs
+    [HideInInspector] public int activeObjectIndex; // Used in SaveData.cs
 
     private void Awake()
     {
@@ -432,7 +431,7 @@ public class PlayerInteract : MonoBehaviour
         {
             return false;
         }
-        HasActiveItem = true;
+        hasActiveItem = true;
         isSelected = true;
         playerItemIndex = index;
         SetCurrentItem();

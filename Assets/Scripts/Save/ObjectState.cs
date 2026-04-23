@@ -20,8 +20,9 @@ public class ObjectState : MonoBehaviour
         LockableObject lockable = GetComponent<LockableObject>();
         DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
         ObjectsManager objectsManager = GetComponent<ObjectsManager>();
-        GameManager gameManager = GetComponent<GameManager>();
         ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
+        DialogueManager dialogueManager = GetComponent<DialogueManager>();
+        GameManager gameManager = GetComponent<GameManager>();
 
         if (interactable != null)
         {
@@ -63,6 +64,15 @@ public class ObjectState : MonoBehaviour
         {
             data.zoomEnviManagerActivated = zoomEnviManager.activated;
         }
+        if (dialogueManager != null)
+        {
+            data.dialogueManagerWasClicked = dialogueManager.wasClicked;
+            data.dialogueManagerOpen = dialogueManager.open;
+            data.dialogueManagerSkip = dialogueManager.skip;
+            data.dialogueManagerCanNext = dialogueManager.canNext;
+            data.dialogueManagerCanClick = dialogueManager.canClick;
+            data.dialogueManagerMainCharacterIsSpeaking = dialogueManager.mainCharacterIsSpeaking;
+        }
         if (gameManager != null)
         {
             data.gameManagerCanPause = gameManager.canPause;
@@ -86,6 +96,7 @@ public class ObjectState : MonoBehaviour
         DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
         ObjectsManager objectsManager = GetComponent<ObjectsManager>();
         ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
+        DialogueManager dialogueManager = GetComponent<DialogueManager>();
         GameManager gameManager = GetComponent<GameManager>();
 
         if (interactable != null)
@@ -127,6 +138,15 @@ public class ObjectState : MonoBehaviour
         if (zoomEnviManager != null)
         {
             zoomEnviManager.activated = data.zoomEnviManagerActivated;
+        }
+        if (dialogueManager != null)
+        {
+            dialogueManager.wasClicked = data.dialogueManagerWasClicked;
+            dialogueManager.open = data.dialogueManagerOpen;
+            dialogueManager.skip = data.dialogueManagerSkip;
+            dialogueManager.canNext = data.dialogueManagerCanNext;
+            dialogueManager.canClick = data.dialogueManagerCanClick;
+            dialogueManager.mainCharacterIsSpeaking = data.dialogueManagerMainCharacterIsSpeaking;
         }
         if (gameManager != null)
         {
