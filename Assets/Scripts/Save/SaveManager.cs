@@ -8,6 +8,7 @@ public class SaveManager : MonoBehaviour
     [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
 
     [Header("Keycodes (Debug)")]
+    [Tooltip("Keybinds may not work properly."), SerializeField] private bool allowKeybinds;
     [SerializeField] private KeyCode saveKey = KeyCode.Alpha6;
     [SerializeField] private KeyCode loadKey = KeyCode.Alpha7;
 
@@ -164,7 +165,9 @@ public class SaveManager : MonoBehaviour
 
     private void Update()
     {
-        // if (Input.GetKeyDown(saveKey)) SaveGame();
-        // if (Input.GetKeyDown(loadKey)) LoadGame();
+        if (!allowKeybinds) return;
+
+        if (Input.GetKeyDown(saveKey)) SaveGame();
+        if (Input.GetKeyDown(loadKey)) LoadGame();
     }
 }

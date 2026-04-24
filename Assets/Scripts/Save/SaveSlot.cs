@@ -15,7 +15,7 @@ public class SaveSlot : MonoBehaviour
     [HideInInspector] public bool slotIsFull = false;
     [HideInInspector] public int timelineSaved = 0; // 0 past | 1 present
 
-    void Start()
+    void Awake()
     {
         screenshotSlot = GetComponent<Image>();
         ribbonSprite = ribbon.GetComponent<Image>();
@@ -37,7 +37,7 @@ public class SaveSlot : MonoBehaviour
         if (newRibbon == null) Debug.Log("NEW RIBBON IS NULL");
 
         if (!ribbon.activeInHierarchy) ribbon.SetActive(true);
-        ribbonSprite.sprite = newRibbon;
+        if (ribbonSprite != null) ribbonSprite.sprite = newRibbon;
     }
 
     public void SetScreenshot(Sprite newBackground)

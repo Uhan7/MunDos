@@ -182,8 +182,12 @@ public class PlayerInteract : MonoBehaviour
 
     public void ToggleStates(int value) // This is for the inventory
     {
-        if (!canInput) return;
-        if (!SelectValidItem(value)) return;
+        //if (!canInput) return;
+        if (SelectValidItem(value) == false)
+        {
+            print("item name is blank, valid item: " + SelectValidItem(value));
+            return;
+        }
         
         //value + 1 to offset Background
         InventorySlot inventorySlot = inventorySlots.transform.GetChild(value + 1).GetComponent<InventorySlot>();
@@ -192,29 +196,43 @@ public class PlayerInteract : MonoBehaviour
         //Select unselected item
         if (!isZoomed && !isSelected)
         {
-            if (gameManagerScript.isFocusing) return; // This is to not layer the zooms
+            if (gameManagerScript.isFocusing)
+            {
+                print("1 but is focusing");
+                return; // This is to not layer the zooms
+            }
 
             isSelected = true;
             activeObjectIndex = value;
             WillUpdate(true);
+
+            print("1");
         }
 
         //Zoom in on valid selected item
         else if (!isZoomed && isSelected && value == activeObjectIndex)
         {
-            if (gameManagerScript.isFocusing) return; // This is to not layer the zooms
+            if (gameManagerScript.isFocusing){
+                print("2 but is focusing");
+                return; // This is to not layer the zooms
+            }
 
             inventorySlot.SetZoomObject();
             inventorySlot.SetZoomState(true);
             inventorySlot.OnZoom();
             isZoomed = true;
             WillUpdate(true);
+
+            print("2");
         }
 
         //Cancel Zoom in and select other item
         else if (!isZoomed && isSelected && value != activeObjectIndex)
         {
-            if (gameManagerScript.isFocusing) return; // This is to not layer the zooms
+            if (gameManagerScript.isFocusing){
+                print("3 but is focusing");
+                return; // This is to not layer the zooms
+            }
 
             inventorySlot.SetZoomObject();
             inventorySlot.SetZoomState(false);
@@ -222,6 +240,8 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
+
+            print("3");
         }
 
         //Zoom out of same item
@@ -232,6 +252,8 @@ public class PlayerInteract : MonoBehaviour
             isSelected = false;
             GetComponent<Animator>().Play("object_fade_out_half");
             WillUpdate(true);
+
+            print("4");
         }
 
         //Zoom out then select different item
@@ -245,6 +267,12 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
+
+            print("5");
+        }
+        else
+        {
+            print("something else bro gg ur fucked");
         }
     }
 
@@ -307,7 +335,13 @@ public class PlayerInteract : MonoBehaviour
 
         if (name == "Santi" && actualItem.GetData().timeline == global::Timeline.Past)
         {
-            print("sily error with timeline items");
+            Debug.LogWarning("Santi is trying to get an item from the Past");
+            return;
+        }
+
+        if (name == "Liezel" && actualItem.GetData().timeline == global::Timeline.Present)
+        {
+            Debug.LogWarning("Liezel is trying to get an item from the Present");
             return;
         }
 
@@ -427,14 +461,14 @@ public class PlayerInteract : MonoBehaviour
 
     public bool SelectValidItem(int index)
     {
-        if (itemDatas[index].itemName == "")
-        {
-            return false;
-        }
+        // If item name is blank, return false. Otherwise set the stuff then return true.
+        if (itemDatas[index].itemName == "") return false;
+
         hasActiveItem = true;
         isSelected = true;
         playerItemIndex = index;
         SetCurrentItem();
+
         return true;
     }
     void KeyPress(int index)
