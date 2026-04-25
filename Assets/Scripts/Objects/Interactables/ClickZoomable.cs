@@ -40,6 +40,7 @@ public class ClickZoomable : MonoBehaviour
     [ShowIf("isSingleEnvi")][SerializeField] private GameObject zoomEnviImage;
     [SerializeField] private bool deactivateAfter;
     [SerializeField] private bool disableInteractionAfter;
+    [SerializeField] private bool toActivateOnAnyClick = false;
 
     [HideInInspector] private List<PasswordElement> passwordOrder = new List<PasswordElement>();
     [HideInInspector] private List<string> inputOrder = new List<string>();
@@ -81,6 +82,12 @@ public class ClickZoomable : MonoBehaviour
     public void CheckCombination(GameObject gameObject)
     {
         //Debug.Log($"CZ: checking {gameObject.name}, matching order {gameObject.name == passwordOrder[orderIndex].gameObjectName}");
+        if (toActivateOnAnyClick)
+        {
+            SetAll(toActivate, true);
+            SetAll(toDeactivate, false);
+            OnExit();
+        }
         if (inputOrder.Contains(gameObject.name))
         {
             return;
