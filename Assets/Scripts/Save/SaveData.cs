@@ -49,6 +49,10 @@ public class ObjectSaveData
     public bool dialogueAlreadyDeactivatedObjects;
     public bool dialogueAlreadyCheckedConditional;
     public bool dialogueAlreadyRemovedPlayeritems;
+    public bool dialogueAlreadyGavePlayeritems;
+
+    // Auto Move Zone
+    public AutoMove.Direction autoMoveZoneDirection;
 
     // ObjectsManager
     public bool objectManagerAlreadyEnabled;

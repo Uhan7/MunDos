@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
+using Unity.Cinemachine;
 
 public class SaveManager : MonoBehaviour
 {
@@ -54,17 +56,17 @@ public class SaveManager : MonoBehaviour
         data.timelineUnlocked = timelineManager.timelineUnlocked;
         data.currentTimeline = timelineManager.currentTimeline;
 
-        // Actual Save
-        PlayerPrefs.SetString(SAVE_KEY, JsonUtility.ToJson(data));
-        PlayerPrefs.Save();
-
-        Debug.Log("Game Saved");
-        Debug.Log("Save size (chars): " + JsonUtility.ToJson(data).Length);
-        Debug.Log("Save size (bytes approx): " + System.Text.Encoding.UTF8.GetByteCount(JsonUtility.ToJson(data)));
-
         sfxSource.PlayOneShot(saveSFX); // Plays last to let players know it saved
-    }
 
+        // Actual Save
+        string json = JsonUtility.ToJson(data);
+        PlayerPrefs.SetString(SAVE_KEY, json);
+        PlayerPrefs.Save();
+        Debug.Log("Game Saved!");
+        Debug.Log("Save size (chars): " + json.Length);
+        Debug.Log("Save size (bytes): " + System.Text.Encoding.UTF8.GetByteCount(json));
+
+    }
 
     public void LoadGame()
     {
@@ -78,6 +80,11 @@ public class SaveManager : MonoBehaviour
         }
 
         SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(SAVE_KEY));
+
+        // Set up Camera Stuff
+        var brain = Camera.main.GetComponent<CinemachineBrain>();
+        var originalBlend = brain.DefaultBlend;
+        brain.DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f);
 
         // Physical Objects
         foreach (ObjectSaveData saved in data.objectStates)
@@ -97,10 +104,15 @@ public class SaveManager : MonoBehaviour
         timelineManager.timelineUnlocked = data.timelineUnlocked;
         timelineManager.currentTimeline = data.currentTimeline;
 
+        // Then Camera Cut
+        StartCoroutine(RestoreBlend(brain, originalBlend));
+
+        // Load Debug
+        string json = PlayerPrefs.GetString(SAVE_KEY);
         Debug.Log("Game Loaded");
+        Debug.Log("Loaded save size (chars): " + json.Length);
+        Debug.Log("Loaded save size (bytes): " + System.Text.Encoding.UTF8.GetByteCount(json));
     }
-
-
 
     ObjectState FindObjByID(string id)
     {
@@ -161,6 +173,12 @@ public class SaveManager : MonoBehaviour
         playerInteract.isSelected = data.interactIsSelected;
         playerInteract.isZoomed = data.interactIsZoomed;
         playerInteract.activeObjectIndex = data.interactActiveObjectIndex;
+    }
+
+    IEnumerator RestoreBlend(CinemachineBrain brain, CinemachineBlendDefinition original)
+    {
+        yield return null; // wait 1 frame
+        brain.DefaultBlend = original;
     }
 
     private void Update()

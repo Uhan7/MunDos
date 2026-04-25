@@ -19,6 +19,7 @@ public class ObjectState : MonoBehaviour
         ConditionalObject conditional = GetComponent<ConditionalObject>();
         LockableObject lockable = GetComponent<LockableObject>();
         DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+        AutoMove autoMoveZone = GetComponent<AutoMove>();
         ObjectsManager objectsManager = GetComponent<ObjectsManager>();
         ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
@@ -53,6 +54,11 @@ public class ObjectState : MonoBehaviour
             data.dialogueAlreadyCheckedConditional = dialogueTrigger.alreadyCheckedConditional;
             data.dialogueAlreadyDeactivatedObjects = dialogueTrigger.alreadyDeactivatedObjects;
             data.dialogueAlreadyRemovedPlayeritems = dialogueTrigger.alreadyRemovedPlayeritems;
+            data.dialogueAlreadyGavePlayeritems = dialogueTrigger.alreadyGavePlayeritems;
+        }
+        if (autoMoveZone != null)
+        {
+            data.autoMoveZoneDirection = autoMoveZone.moveDirection;
         }
         if (objectsManager != null)
         {
@@ -94,6 +100,7 @@ public class ObjectState : MonoBehaviour
         ConditionalObject conditional = GetComponent<ConditionalObject>();
         LockableObject lockable = GetComponent<LockableObject>();
         DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+        AutoMove autoMoveZone = GetComponent<AutoMove>();
         ObjectsManager objectsManager = GetComponent<ObjectsManager>();
         ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
@@ -128,6 +135,11 @@ public class ObjectState : MonoBehaviour
             dialogueTrigger.alreadyCheckedConditional = data.dialogueAlreadyCheckedConditional;
             dialogueTrigger.alreadyDeactivatedObjects = data.dialogueAlreadyDeactivatedObjects;
             dialogueTrigger.alreadyRemovedPlayeritems = data.dialogueAlreadyRemovedPlayeritems;
+            dialogueTrigger.alreadyGavePlayeritems = data.dialogueAlreadyGavePlayeritems;
+        }
+        if (autoMoveZone != null)
+        {
+            autoMoveZone.moveDirection = data.autoMoveZoneDirection;
         }
         if (objectsManager != null)
         {

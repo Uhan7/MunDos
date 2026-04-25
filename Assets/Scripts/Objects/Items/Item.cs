@@ -28,6 +28,8 @@ public class Item : MonoBehaviour
 
     public void PickedUp()
     {
+        if (!gameObject.activeSelf) return;
+
         GetComponent<InteractableObject>().Interact();
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);

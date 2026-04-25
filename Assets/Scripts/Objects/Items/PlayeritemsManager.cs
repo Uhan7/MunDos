@@ -66,6 +66,9 @@ public class PlayeritemsManager : MonoBehaviour
 
     void CheckInventorySlots(PlayerInteract player, GameObject[] itemSlots)
     {
+        if (player == null) return;
+        if (itemSlots.Length <= 0) return;
+
         player.WillUpdate(false);
         //if (!player.gameObject.activeInHierarchy) return;
         for (int i = 0; i < player.itemDatas.Length - 1; i++)

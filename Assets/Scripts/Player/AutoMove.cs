@@ -6,13 +6,13 @@ public class AutoMove : MonoBehaviour
     [Header("Constants")]
     [HideInInspector] private const string PROTAG_TAG = "Protag";
     [HideInInspector] private const string NPC_TAG = "NPC Zone";
-    [HideInInspector] private enum Direction { Left, Right };
+    [HideInInspector] public enum Direction { Left, Right }; // Used in SaveData.cs (kinda. Gives an error if this is private)
 
     [Header("References")]
     [HideInInspector] private PlayerMove character;
 
     [Header("Properties")]
-    [SerializeField] private Direction moveDirection;
+    [SerializeField] public Direction moveDirection; // Used in SaveData.cs
     [SerializeField] private bool singleUse;
     [SerializeField] private bool NPCMovement;
     [SerializeField] private bool hideUI;

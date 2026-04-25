@@ -111,7 +111,11 @@ public class InteractableObject : MonoBehaviour
     public void Interact()
     {
         //Debug.Log("Interacting");
-        foreach (AudioClip clip in soundsToPlay) sfxSource.PlayOneShot(clip);
+        foreach (AudioClip clip in soundsToPlay)
+        {
+            if (clip == null) continue;
+            if (sfxSource != null) sfxSource.PlayOneShot(clip);
+        }
 
         SetAll(toActivateOnInteract, true);
         SetAll(toDeactivateOnInteract, false);
