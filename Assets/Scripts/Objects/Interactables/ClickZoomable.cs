@@ -74,6 +74,13 @@ public class ClickZoomable : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(deactivateKey))
+        {
+            OnExit();
+        }
+    }
 
     // Helper Functions --------------------------------------------------------
 
