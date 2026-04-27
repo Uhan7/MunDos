@@ -19365,6 +19365,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!1001 &193787905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23572,7 +23573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: deactivateAfter
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: activateAndDeactivate
@@ -28898,7 +28899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1378671161854638220, guid: 453882e13cc734438aa890a4cc1a50f3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4531334058512182652, guid: 453882e13cc734438aa890a4cc1a50f3, type: 3}
       propertyPath: id
@@ -30830,6 +30831,10 @@ PrefabInstance:
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
       value: Single Use DZ11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -35688,6 +35693,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &354338400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51614,6 +51620,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 121612889}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &509035512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 308197095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &511306120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57964,6 +57975,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &578485284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63629,7 +63641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -64521,7 +64533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3458381924419999152, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3525349679690981018, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
@@ -65823,7 +65835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.44219
+      value: -110.45255
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -65903,7 +65915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -79714,7 +79726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Name
-      value: '!L3 Maid2'
+      value: L3 Maid2
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_IsActive
@@ -79807,7 +79819,8 @@ PrefabInstance:
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
       objectReference: {fileID: 35220513}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1581249434304573448, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -81896,6 +81909,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &753837360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89756,7 +89770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: objectsToActivate.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: objectsToDeactivate.Array.size
@@ -89774,6 +89788,10 @@ PrefabInstance:
       propertyPath: 'objectsToActivate.Array.data[2]'
       value: 
       objectReference: {fileID: 461121571}
+    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
+      propertyPath: 'objectsToActivate.Array.data[3]'
+      value: 
+      objectReference: {fileID: 509035512}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: 'objectsToDeactivate.Array.data[0]'
       value: 
@@ -105839,10 +105857,10 @@ MonoBehaviour:
   willFocus: 1
   willHideUI: 0
   deactivateAfter: 1
-  linksToOtherDialogue: 1
+  linksToOtherDialogue: 0
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
-  playClosingAnimation: 0
+  playClosingAnimation: 1
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -113967,6 +113985,14 @@ PrefabInstance:
       propertyPath: id
       value: 7b515441-e75e-4068-89e1-6d16bb7e91db
       objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: toDeactivateOnInteract.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toDeactivateOnInteract.Array.data[0]'
+      value: 
+      objectReference: {fileID: 18395892}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
       value: L3 Banner of Bakery Anniversary
@@ -122223,7 +122249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100836808320417522, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9211805081898885604, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
@@ -176958,7 +176984,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7792594930357534735}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[1]'
       value: 
@@ -176966,7 +176992,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4060541269711509722}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
       value: 
@@ -208517,6 +208543,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &456031467490837320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210068,13 +210095,13 @@ MonoBehaviour:
   - {fileID: 2075845619966466357}
   - {fileID: 6366318567984874250}
   hasActivatedState: 0
-  isSingleEnvi: 0
+  isSingleEnvi: 1
   exitButton: {fileID: 0}
-  zoomEnviBackdrop: {fileID: 0}
-  zoomEnviImage: {fileID: 0}
+  zoomEnviBackdrop: {fileID: 1065120098257635760}
+  zoomEnviImage: {fileID: 1065120098257635759}
   deactivateAfter: 1
-  disableInteractionAfter: 1
-  toActivateOnAnyClick: 1
+  disableInteractionAfter: 0
+  toActivateOnAnyClick: 0
   toActivate:
   - {fileID: 2182595493934871102}
   - {fileID: 5811765240717333249}
@@ -210085,6 +210112,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &1515912414037694067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210122,6 +210150,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!1 &1532015224585562409
 GameObject:
   m_ObjectHideFlags: 0
@@ -211635,6 +211664,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.58
       objectReference: {fileID: 0}
+    - target: {fileID: 6133988339138595216, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 
@@ -213020,7 +213053,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3360323697135687492}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -214718,6 +214751,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &4312781297443495537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215854,6 +215888,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &4798608083032594785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217783,13 +217818,13 @@ MonoBehaviour:
   - {fileID: 2155281834153014324}
   - {fileID: 171000655444822293}
   hasActivatedState: 0
-  isSingleEnvi: 0
+  isSingleEnvi: 1
   exitButton: {fileID: 0}
-  zoomEnviBackdrop: {fileID: 0}
-  zoomEnviImage: {fileID: 0}
+  zoomEnviBackdrop: {fileID: 2487952035311302824}
+  zoomEnviImage: {fileID: 2487952035311302823}
   deactivateAfter: 1
-  disableInteractionAfter: 1
-  toActivateOnAnyClick: 1
+  disableInteractionAfter: 0
+  toActivateOnAnyClick: 0
   toActivate:
   - {fileID: 2182595493934871102}
   - {fileID: 5811765240717333249}
@@ -217800,6 +217835,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &6168130173086839992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219476,13 +219512,13 @@ MonoBehaviour:
   - {fileID: 3159345899500257204}
   - {fileID: 4960342629244495584}
   hasActivatedState: 0
-  isSingleEnvi: 0
+  isSingleEnvi: 1
   exitButton: {fileID: 0}
-  zoomEnviBackdrop: {fileID: 0}
-  zoomEnviImage: {fileID: 0}
+  zoomEnviBackdrop: {fileID: 171842989958359817}
+  zoomEnviImage: {fileID: 171842989958359816}
   deactivateAfter: 1
-  disableInteractionAfter: 1
-  toActivateOnAnyClick: 1
+  disableInteractionAfter: 0
+  toActivateOnAnyClick: 0
   toActivate:
   - {fileID: 2182595493934871102}
   - {fileID: 5811765240717333249}
@@ -219493,6 +219529,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &7458666395202901758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220697,13 +220734,13 @@ MonoBehaviour:
   - {fileID: 6246503307739512514}
   - {fileID: 4771383089763388923}
   hasActivatedState: 0
-  isSingleEnvi: 0
+  isSingleEnvi: 1
   exitButton: {fileID: 0}
-  zoomEnviBackdrop: {fileID: 0}
-  zoomEnviImage: {fileID: 0}
+  zoomEnviBackdrop: {fileID: 7039153252229882389}
+  zoomEnviImage: {fileID: 7039153252229882388}
   deactivateAfter: 1
-  disableInteractionAfter: 1
-  toActivateOnAnyClick: 1
+  disableInteractionAfter: 0
+  toActivateOnAnyClick: 0
   toActivate:
   - {fileID: 2182595493934871102}
   - {fileID: 5811765240717333249}
@@ -220714,6 +220751,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!114 &8246202618336213090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221459,6 +221497,7 @@ MonoBehaviour:
   hasElements: 0
   leaveCondition: 0
   wrongPasswordInput: 0
+  hasFirstPress: 0
 --- !u!1 &8790210949100938375
 GameObject:
   m_ObjectHideFlags: 0

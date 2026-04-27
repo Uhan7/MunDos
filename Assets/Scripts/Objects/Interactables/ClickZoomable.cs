@@ -56,6 +56,7 @@ public class ClickZoomable : MonoBehaviour
     [HideInInspector] public bool hasElements = false;
     [HideInInspector] public bool leaveCondition = false;
     [HideInInspector] public bool wrongPasswordInput = false;
+    [HideInInspector] public bool hasFirstPress = false;
 
 
     private void Start()
@@ -78,7 +79,14 @@ public class ClickZoomable : MonoBehaviour
     {
         if (Input.GetKeyDown(deactivateKey))
         {
-            OnExit();
+            Debug.Log("press f");
+            if (hasFirstPress)
+            {
+                Debug.Log("will exit");
+                OnExit();
+                return;
+            }
+            hasFirstPress = true;
         }
     }
 
@@ -206,32 +214,40 @@ public class ClickZoomable : MonoBehaviour
         }
         
         leaveCondition = false;
-        if (deactivateAfter)
+        if (!hasFirstPress && deactivateAfter)
         {
             this.gameObject.SetActive(false);
         }
 
-        if (disableInteractionAfter)
+        if (!hasFirstPress && disableInteractionAfter)
         {
             foreach (var obj in passwordOrderInput)
             {
                 SetInteractableObjectOutline(obj, false);
-                obj.GetComponent<BoxCollider2D>().enabled = false;
-                obj.GetComponent<InteractableObject>().enabled = false;
+                if (obj.GetComponent<BoxCollider2D>() != null)
+                {
+                    obj.GetComponent<BoxCollider2D>().enabled = false;
+                    
+                }
+                if (obj.GetComponent<InteractableObject>() != null)
+                {
+                    obj.GetComponent<InteractableObject>().enabled = false;
+                }
             }
         }
+        hasFirstPress = false;
     }
     
-    void SetInteractableObjectOutline(GameObject obj, bool var)
+    void SetInteractableObjectOutline(GameObject obj, bool value)
     {
 
         if (obj == null) Debug.LogError($"obj {obj.name} is null");
         SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
-        if (objSpriteRenderer == null) Debug.LogError($"Sprite render {objSpriteRenderer.name} is null");
+        if (objSpriteRenderer == null) return;//Debug.LogError($"Sprite render {objSpriteRenderer.name} is null");
         Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
         Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
 
-        if (var == true)
+        if (value == true)
         {
             if (objOutlinedSprite != objNormalSprite) objSpriteRenderer.sprite = objOutlinedSprite;
             else obj.GetComponent<SpriteRenderer>().color = new Color(0.6f, 0.6f, 0.6f, 1);
