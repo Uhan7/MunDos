@@ -77,17 +77,20 @@ public class ClickZoomable : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(deactivateKey))
-        {
-            Debug.Log("press f");
-            if (hasFirstPress)
-            {
-                Debug.Log("will exit");
-                OnExit();
-                return;
-            }
-            hasFirstPress = true;
-        }
+        //if (Input.GetKeyDown(deactivateKey))
+        //{
+        //    if (hasFirstPress)
+        //    {
+        //        if (isSingleEnvi) ResetButtons();
+        //        OnExit();
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        hasFirstPress = true;
+        //    }
+
+        //}
     }
 
     // Helper Functions --------------------------------------------------------
@@ -99,6 +102,7 @@ public class ClickZoomable : MonoBehaviour
         //Debug.Log($"CZ: checking {gameObject.name}, matching order {gameObject.name == passwordOrder[orderIndex].gameObjectName}");
         if (toActivateOnAnyClick)
         {
+            if (isSingleEnvi) ResetButtons();
             SetAll(toActivate, true);
             SetAll(toDeactivate, false);
             OnExit();
@@ -122,7 +126,7 @@ public class ClickZoomable : MonoBehaviour
             wrongPasswordInput = true;
         }
 
-        //Debug.Log($"order Index {orderIndex}, passwordInput length {passwordOrderInput.Length - 1}");
+        //ebug.Log($"order Index {orderIndex}, passwordInput length {passwordOrderInput.Length - 1}");
         if (orderIndex >= passwordOrderInput.Length - 1)
         {
            
@@ -135,15 +139,8 @@ public class ClickZoomable : MonoBehaviour
             }
             else
             {
-                //Debug.Log("CZ: Fail puzzle. Resetting");
-                orderIndex = 0;
-                wrongPasswordInput = false;
-
-                SetAll(toActivateOnInvalidInteract, true);
-                SetAll(toDeactivateOnInvalidInteract, false);
-                inputOrder.Clear();
-
-                if (isSingleEnvi) ResetButtons(gameObject);
+               //Debug.Log("CZ: Fail puzzle. Resetting");
+                if (isSingleEnvi) ResetButtons();
                 else
                 {
                     foreach (var obj in passwordOrderInput)
@@ -152,6 +149,15 @@ public class ClickZoomable : MonoBehaviour
                         if (hasActivatedState) SetActiveState(obj, false);
                     }
                 }
+
+                orderIndex = 0;
+                wrongPasswordInput = false;
+
+                SetAll(toActivateOnInvalidInteract, true);
+                SetAll(toDeactivateOnInvalidInteract, false);
+                inputOrder.Clear();
+
+                
             }
         }
         else
@@ -167,14 +173,22 @@ public class ClickZoomable : MonoBehaviour
         UnityEngine.UI.Button button = obj.GetComponent<UnityEngine.UI.Button>();
         button.interactable = false;
     }
-    private void ResetButtons(GameObject lastButton)
+    private void ResetButtons()
     {
         foreach(var obj in passwordOrderInput)
         {
             UnityEngine.UI.Button button = obj.GetComponent<UnityEngine.UI.Button>();
+            //CanvasGroup canvasGroup = button.GetComponentInParent<CanvasGroup>();
+            //if (canvasGroup != null)
+            //{
+            //    canvasGroup.interactable = true;
+            //}
             button.interactable = true;
+
+            //ExecuteEvents.Execute(button.gameObject, new BaseEventData(EventSystem.current), ExecuteEvents.deselectHandler);
             button.OnPointerExit(null);
         }
+        Canvas.ForceUpdateCanvases();
     }
     //
     void SetAll(GameObject[] objects, bool value)
@@ -243,7 +257,7 @@ public class ClickZoomable : MonoBehaviour
 
         if (obj == null) Debug.LogError($"obj {obj.name} is null");
         SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
-        if (objSpriteRenderer == null) return;//Debug.LogError($"Sprite render {objSpriteRenderer.name} is null");
+        if (objSpriteRenderer == null) Debug.LogError($"Sprite render {objSpriteRenderer.name} is null");
         Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
         Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
 
