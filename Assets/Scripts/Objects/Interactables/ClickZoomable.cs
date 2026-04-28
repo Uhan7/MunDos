@@ -228,12 +228,12 @@ public class ClickZoomable : MonoBehaviour
         }
         
         leaveCondition = false;
-        if (!hasFirstPress && deactivateAfter)
+        if (deactivateAfter)
         {
             this.gameObject.SetActive(false);
         }
 
-        if (!hasFirstPress && disableInteractionAfter)
+        if (disableInteractionAfter)
         {
             foreach (var obj in passwordOrderInput)
             {
@@ -257,7 +257,7 @@ public class ClickZoomable : MonoBehaviour
 
         if (obj == null) Debug.LogError($"obj {obj.name} is null");
         SpriteRenderer objSpriteRenderer = obj.GetComponent<SpriteRenderer>();
-        if (objSpriteRenderer == null) Debug.LogError($"Sprite render {objSpriteRenderer.name} is null");
+        if (objSpriteRenderer == null) return;//Debug.LogError($"Sprite render {objSpriteRenderer.name} is null");
         Sprite objOutlinedSprite = obj.GetComponent<InteractableObject>().outlinedSprite;
         Sprite objNormalSprite = obj.GetComponent<InteractableObject>().normalSprite;
 
