@@ -9,6 +9,6 @@ public class GameManagerSaveData : ComponentSaveData
 
     public GameManagerSaveData()
     {
-        type = "DialogueManager";
+        type = "GameManager";
     }
 }

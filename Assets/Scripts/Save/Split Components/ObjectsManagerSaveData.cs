@@ -2,9 +2,9 @@
 
 public class ObjectsManagerSaveData : ComponentSaveData
 {
-    public bool objectManagerAlreadyEnabled;
-    public bool objectManagerAlreadyCheckedUnlock;
-    public bool objectManagerAlreadyCheckedLock;
+    public bool objectsManagerAlreadyEnabled;
+    public bool objectsManagerAlreadyCheckedUnlock;
+    public bool objectsManagerAlreadyCheckedLock;
 
     public ObjectsManagerSaveData()
     {

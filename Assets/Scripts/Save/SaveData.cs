@@ -24,56 +24,8 @@ public class ObjectSaveData
     // Transform
     public Vector3 position;
 
-    // Interactable
-    public bool interactableAlreadyCheckedConditionals;
-    public bool interactableAlreadyCheckedUnlock;
-    public bool interactableAlreadyCheckedLock;
-
-    // Collider
-    public bool colliderState;
-
-    // Conditional
-    public int conditionalObjectChecks;
-
-    // Lock
-    public bool isLockedAtStart;
-    public bool isAlreadyLocked;
-    public int lockableObjectChecks;
-    public bool hasStoredLockValue;
-    public bool storedLockValue;
-
-    // DialogueTrigger
-    public bool dialogueIsTriggered;
-    public bool dialogueAlreadyActivatedObjects;
-    public bool dialogueAlreadyDeactivatedObjects;
-    public bool dialogueAlreadyCheckedConditional;
-    public bool dialogueAlreadyRemovedPlayeritems;
-    public bool dialogueAlreadyGavePlayeritems;
-
-    // Auto Move Zone
-    public AutoMove.Direction autoMoveZoneDirection;
-
-    // ObjectsManager
-    public bool objectManagerAlreadyEnabled;
-    public bool objectManagerAlreadyCheckedUnlock;
-    public bool objectManagerAlreadyCheckedLock;
-
-    // ZoomEnviManager
-    public bool zoomEnviManagerActivated;
-
-    // DialogueManager
-    public bool dialogueManagerWasClicked;
-    public bool dialogueManagerOpen;
-    public bool dialogueManagerSkip;
-    public bool dialogueManagerCanNext;
-    public bool dialogueManagerCanClick;
-    public bool dialogueManagerMainCharacterIsSpeaking;
-
-    // Game Manager (this should actually be elsewhere but ourgh idc)
-    public bool gameManagerIsFocusing;
-    public bool gameManagerIsHidingUI;
-    public bool gameManagerIsPaused;
-    public bool gameManagerCanPause;
+    // Other Components
+    public List<ComponentSaveData> components = new();
 }
 
 [Serializable]

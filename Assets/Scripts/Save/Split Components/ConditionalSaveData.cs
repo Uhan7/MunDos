@@ -2,7 +2,7 @@
 
 public class ConditionalSaveData : ComponentSaveData
 {
-    public bool conditionalState;
+    public int conditionalObjectChecks;
 
     public ConditionalSaveData()
     {

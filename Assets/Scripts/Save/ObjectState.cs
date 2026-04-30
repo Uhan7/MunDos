@@ -27,64 +27,85 @@ public class ObjectState : MonoBehaviour
 
         if (interactable != null)
         {
-            data.interactableAlreadyCheckedConditionals = interactable.alreadyCheckedConditional;
-            data.interactableAlreadyCheckedUnlock = interactable.alreadyCheckedUnlock;
-            data.interactableAlreadyCheckedLock = interactable.alreadyCheckedLock;
+            var comp = new InteractableSaveData();
+            comp.alreadyCheckedConditional = interactable.alreadyCheckedConditional;
+            comp.alreadyCheckedUnlock = interactable.alreadyCheckedUnlock;
+            comp.alreadyCheckedLock = interactable.alreadyCheckedLock;
+            data.components.Add(comp);
         }
         if (col != null)
         {
-            data.colliderState = col.enabled;
+            var comp = new ColliderSaveData();
+            comp.colliderState = col.enabled;
+
+            data.components.Add(comp);
         }
         if (conditional != null)
         {
-            data.conditionalObjectChecks = conditional.currentChecks;
+            var comp = new ConditionalSaveData();
+            comp.conditionalObjectChecks = conditional.currentChecks;
+            data.components.Add(comp);
         }
         if (lockable != null)
         {
-            data.isLockedAtStart = lockable.isLockedAtStart;
-            data.isAlreadyLocked = lockable.isAlreadyLocked;
-            data.lockableObjectChecks = lockable.currentChecks;
-            data.hasStoredLockValue = lockable.hasStoredLockValue;
-            data.storedLockValue = lockable.storedLockValue;
+            var comp = new LockableSaveData();
+            comp.isLockedAtStart = lockable.isLockedAtStart;
+            comp.isAlreadyLocked = lockable.isAlreadyLocked;
+            comp.lockableObjectChecks = lockable.currentChecks;
+            comp.hasStoredLockValue = lockable.hasStoredLockValue;
+            comp.storedLockValue = lockable.storedLockValue;
+            data.components.Add(comp);
         }
         if (dialogueTrigger != null)
         {
-            data.dialogueIsTriggered = dialogueTrigger.dialogueIsTriggered;
-            data.dialogueAlreadyActivatedObjects = dialogueTrigger.alreadyActivatedObjects;
-            data.dialogueAlreadyCheckedConditional = dialogueTrigger.alreadyCheckedConditional;
-            data.dialogueAlreadyDeactivatedObjects = dialogueTrigger.alreadyDeactivatedObjects;
-            data.dialogueAlreadyRemovedPlayeritems = dialogueTrigger.alreadyRemovedPlayeritems;
-            data.dialogueAlreadyGavePlayeritems = dialogueTrigger.alreadyGavePlayeritems;
+            var comp = new DialogueTriggerSaveData();
+            comp.dialogueIsTriggered = dialogueTrigger.dialogueIsTriggered;
+            comp.dialogueAlreadyActivatedObjects = dialogueTrigger.alreadyActivatedObjects;
+            comp.dialogueAlreadyCheckedConditional = dialogueTrigger.alreadyCheckedConditional;
+            comp.dialogueAlreadyDeactivatedObjects = dialogueTrigger.alreadyDeactivatedObjects;
+            comp.dialogueAlreadyRemovedPlayeritems = dialogueTrigger.alreadyRemovedPlayeritems;
+            comp.dialogueAlreadyGavePlayeritems = dialogueTrigger.alreadyGavePlayeritems;
+            data.components.Add(comp);
         }
         if (autoMoveZone != null)
         {
-            data.autoMoveZoneDirection = autoMoveZone.moveDirection;
+            var comp = new AutoMoveZoneSaveData();
+            comp.autoMoveZoneDirection = autoMoveZone.moveDirection;
+            data.components.Add(comp);
         }
         if (objectsManager != null)
         {
-            data.objectManagerAlreadyEnabled = objectsManager.alreadyEnabled;
-            data.objectManagerAlreadyCheckedLock = objectsManager.alreadyCheckedLock;
-            data.objectManagerAlreadyCheckedUnlock = objectsManager.alreadyCheckedUnlock;
+            var comp = new ObjectsManagerSaveData();
+            comp.objectsManagerAlreadyEnabled = objectsManager.alreadyEnabled;
+            comp.objectsManagerAlreadyCheckedLock = objectsManager.alreadyCheckedLock;
+            comp.objectsManagerAlreadyCheckedUnlock = objectsManager.alreadyCheckedUnlock;
+            data.components.Add(comp);
         }
         if (zoomEnviManager != null)
         {
-            data.zoomEnviManagerActivated = zoomEnviManager.activated;
+            var comp = new ZoomEnviManagerSaveData();
+            comp.zoomEnviManagerActivated = zoomEnviManager.activated;
+            data.components.Add(comp);
         }
         if (dialogueManager != null)
         {
-            data.dialogueManagerWasClicked = dialogueManager.wasClicked;
-            data.dialogueManagerOpen = dialogueManager.open;
-            data.dialogueManagerSkip = dialogueManager.skip;
-            data.dialogueManagerCanNext = dialogueManager.canNext;
-            data.dialogueManagerCanClick = dialogueManager.canClick;
-            data.dialogueManagerMainCharacterIsSpeaking = dialogueManager.mainCharacterIsSpeaking;
+            var comp = new DialogueManagerSaveData();
+            comp.dialogueManagerWasClicked = dialogueManager.wasClicked;
+            comp.dialogueManagerOpen = dialogueManager.open;
+            comp.dialogueManagerSkip = dialogueManager.skip;
+            comp.dialogueManagerCanNext = dialogueManager.canNext;
+            comp.dialogueManagerCanClick = dialogueManager.canClick;
+            comp.dialogueManagerMainCharacterIsSpeaking = dialogueManager.mainCharacterIsSpeaking;
+            data.components.Add(comp);
         }
         if (gameManager != null)
         {
-            data.gameManagerCanPause = gameManager.canPause;
-            data.gameManagerIsFocusing = gameManager.isFocusing;
-            data.gameManagerIsHidingUI = gameManager.isHidingUI;
-            data.gameManagerIsPaused = gameManager.isPaused;
+            var comp = new GameManagerSaveData();
+            comp.gameManagerCanPause = gameManager.canPause;
+            comp.gameManagerIsFocusing = gameManager.isFocusing;
+            comp.gameManagerIsHidingUI = gameManager.isHidingUI;
+            comp.gameManagerIsPaused = gameManager.isPaused;
+            data.components.Add(comp);
         }
 
         if (savePosition) data.position = transform.position;
@@ -95,77 +116,138 @@ public class ObjectState : MonoBehaviour
 
     public void RestoreState(ObjectSaveData data)
     {
-        InteractableObject interactable = GetComponent<InteractableObject>();
-        Collider2D col = GetComponent<Collider2D>();
-        ConditionalObject conditional = GetComponent<ConditionalObject>();
-        LockableObject lockable = GetComponent<LockableObject>();
-        DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
-        AutoMove autoMoveZone = GetComponent<AutoMove>();
-        ObjectsManager objectsManager = GetComponent<ObjectsManager>();
-        ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
-        DialogueManager dialogueManager = GetComponent<DialogueManager>();
-        GameManager gameManager = GetComponent<GameManager>();
+        foreach (var comp in data.components)
+        {
+            if (comp.type == "Interactable")
+            {
+                var interactable = GetComponent<InteractableObject>();
+                var compData = comp as InteractableSaveData;
 
-        if (interactable != null)
-        {
-            interactable.alreadyCheckedConditional = data.interactableAlreadyCheckedConditionals;
-            interactable.alreadyCheckedUnlock = data.interactableAlreadyCheckedUnlock;
-            interactable.alreadyCheckedLock = data.interactableAlreadyCheckedLock;
-        }
-        if (col != null)
-        {
-            col.enabled = data.colliderState;
-        }
-        if (conditional != null)
-        {
-            conditional.currentChecks = data.conditionalObjectChecks;
-        }
-        if (lockable != null)
-        {
-            lockable.isLockedAtStart = data.isLockedAtStart;
-            lockable.isAlreadyLocked = data.isAlreadyLocked;
-            lockable.currentChecks = data.lockableObjectChecks;
-            lockable.hasStoredLockValue = data.hasStoredLockValue;
-            lockable.storedLockValue = data.storedLockValue;
-        }
-        if (dialogueTrigger != null)
-        {
-            dialogueTrigger.dialogueIsTriggered = data.dialogueIsTriggered;
-            dialogueTrigger.alreadyActivatedObjects = data.dialogueAlreadyActivatedObjects;
-            dialogueTrigger.alreadyCheckedConditional = data.dialogueAlreadyCheckedConditional;
-            dialogueTrigger.alreadyDeactivatedObjects = data.dialogueAlreadyDeactivatedObjects;
-            dialogueTrigger.alreadyRemovedPlayeritems = data.dialogueAlreadyRemovedPlayeritems;
-            dialogueTrigger.alreadyGavePlayeritems = data.dialogueAlreadyGavePlayeritems;
-        }
-        if (autoMoveZone != null)
-        {
-            autoMoveZone.moveDirection = data.autoMoveZoneDirection;
-        }
-        if (objectsManager != null)
-        {
-            objectsManager.alreadyEnabled = data.objectManagerAlreadyEnabled;
-            objectsManager.alreadyCheckedLock = data.objectManagerAlreadyCheckedLock;
-            objectsManager.alreadyCheckedUnlock = data.objectManagerAlreadyCheckedUnlock;
-        }
-        if (zoomEnviManager != null)
-        {
-            zoomEnviManager.activated = data.zoomEnviManagerActivated;
-        }
-        if (dialogueManager != null)
-        {
-            dialogueManager.wasClicked = data.dialogueManagerWasClicked;
-            dialogueManager.open = data.dialogueManagerOpen;
-            dialogueManager.skip = data.dialogueManagerSkip;
-            dialogueManager.canNext = data.dialogueManagerCanNext;
-            dialogueManager.canClick = data.dialogueManagerCanClick;
-            dialogueManager.mainCharacterIsSpeaking = data.dialogueManagerMainCharacterIsSpeaking;
-        }
-        if (gameManager != null)
-        {
-            gameManager.canPause = data.gameManagerCanPause;
-            gameManager.isFocusing = data.gameManagerIsFocusing;
-            gameManager.isHidingUI = data.gameManagerIsHidingUI;
-            gameManager.isPaused = data.gameManagerIsPaused;
+                if (interactable != null && compData != null)
+                {
+                    interactable.alreadyCheckedConditional = compData.alreadyCheckedConditional;
+                    interactable.alreadyCheckedUnlock = compData.alreadyCheckedUnlock;
+                    interactable.alreadyCheckedLock = compData.alreadyCheckedLock;
+                }
+            }
+
+            if (comp.type == "Collider")
+            {
+                var col = GetComponent<Collider2D>();
+                var compData = comp as ColliderSaveData;
+
+                if (col != null && compData != null)
+                {
+                    col.enabled = compData.colliderState;
+                }
+            }
+
+            if (comp.type == "Conditional")
+            {
+                var conditional = GetComponent<ConditionalObject>();
+                var compData = comp as ConditionalSaveData;
+
+                if (conditional != null && compData != null)
+                {
+                    conditional.currentChecks = compData.conditionalObjectChecks;
+                }
+            }
+
+            if (comp.type == "Lockable")
+            {
+                var lockable = GetComponent<LockableObject>();
+                var compData = comp as LockableSaveData;
+
+                if (lockable != null && compData != null)
+                {
+                    lockable.isLockedAtStart = compData.isLockedAtStart;
+                    lockable.isAlreadyLocked = compData.isAlreadyLocked;
+                    lockable.currentChecks = compData.lockableObjectChecks;
+                    lockable.hasStoredLockValue = compData.hasStoredLockValue;
+                    lockable.storedLockValue = compData.storedLockValue;
+                }
+            }
+
+            if (comp.type == "DialogueTrigger")
+            {
+                var dialogueTrigger = GetComponent<DialogueTrigger>();
+                var compData = comp as DialogueTriggerSaveData;
+
+                if (dialogueTrigger != null && compData != null)
+                {
+                    dialogueTrigger.dialogueIsTriggered = compData.dialogueIsTriggered;
+                    dialogueTrigger.alreadyActivatedObjects = compData.dialogueAlreadyActivatedObjects;
+                    dialogueTrigger.alreadyCheckedConditional = compData.dialogueAlreadyDeactivatedObjects;
+                    dialogueTrigger.alreadyDeactivatedObjects = compData.dialogueAlreadyCheckedConditional;
+                    dialogueTrigger.alreadyRemovedPlayeritems = compData.dialogueAlreadyRemovedPlayeritems;
+                    dialogueTrigger.alreadyGavePlayeritems = compData.dialogueAlreadyGavePlayeritems;
+                }
+            }
+
+            if (comp.type == "AutoMoveZone")
+            {
+                var autoMove = GetComponent<AutoMove>();
+                var compData = comp as AutoMoveZoneSaveData;
+
+                if (autoMove != null && compData != null)
+                {
+                    autoMove.moveDirection = compData.autoMoveZoneDirection;
+                }
+            }
+
+            if (comp.type == "ObjectsManager")
+            {
+                var objectsManager = GetComponent<ObjectsManager>();
+                var compData = comp as ObjectsManagerSaveData;
+
+                if (objectsManager != null && compData != null)
+                {
+                    objectsManager.alreadyEnabled = compData.objectsManagerAlreadyEnabled;
+                    objectsManager.alreadyCheckedLock = compData.objectsManagerAlreadyCheckedUnlock;
+                    objectsManager.alreadyCheckedUnlock = compData.objectsManagerAlreadyCheckedLock;
+                }
+            }
+
+            if (comp.type == "ZoomEnviManager")
+            {
+                var zoom = GetComponent<ZoomEnviManager>();
+                var compData = comp as ZoomEnviManagerSaveData;
+
+                if (zoom != null && compData != null)
+                {
+                    zoom.activated = compData.zoomEnviManagerActivated;
+                }
+            }
+
+            if (comp.type == "DialogueManager")
+            {
+                var dialogueManager = GetComponent<DialogueManager>();
+                var compData = comp as DialogueManagerSaveData;
+
+                if (dialogueManager != null && compData != null)
+                {
+                    dialogueManager.wasClicked = compData.dialogueManagerWasClicked;
+                    dialogueManager.open = compData.dialogueManagerOpen;
+                    dialogueManager.skip = compData.dialogueManagerSkip;
+                    dialogueManager.canNext = compData.dialogueManagerCanNext;
+                    dialogueManager.canClick = compData.dialogueManagerCanClick;
+                    dialogueManager.mainCharacterIsSpeaking = compData.dialogueManagerMainCharacterIsSpeaking;
+                }
+            }
+
+            if (comp.type == "GameManager")
+            {
+                var gameManager = GetComponent<GameManager>();
+                var compData = comp as GameManagerSaveData;
+
+                if (gameManager != null && compData != null)
+                {
+                    gameManager.canPause = compData.gameManagerIsFocusing;
+                    gameManager.isFocusing = compData.gameManagerIsHidingUI;
+                    gameManager.isHidingUI = compData.gameManagerIsPaused;
+                    gameManager.isPaused = compData.gameManagerCanPause;
+                }
+            }
         }
 
         if (savePosition) transform.position = data.position;
