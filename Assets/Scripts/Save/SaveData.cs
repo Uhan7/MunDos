@@ -24,6 +24,11 @@ public class ObjectSaveData
     // Transform
     public Vector3 position;
 
+    // Interactable
+    public bool interactableAlreadyCheckedConditionals;
+    public bool interactableAlreadyCheckedUnlock;
+    public bool interactableAlreadyCheckedLock;
+
     // Collider
     public bool colliderState;
 
@@ -36,12 +41,6 @@ public class ObjectSaveData
     public int lockableObjectChecks;
     public bool hasStoredLockValue;
     public bool storedLockValue;
-
-    // Interactable
-    public bool interactableAlreadyCheckedConditionals;
-    public bool interactableAlreadyCheckedUnlock;
-    public bool interactableAlreadyCheckedLock;
-    public bool interactableIsFocusing;
 
     // DialogueTrigger
     public bool dialogueIsTriggered;
