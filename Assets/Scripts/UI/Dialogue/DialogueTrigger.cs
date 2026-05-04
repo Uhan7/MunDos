@@ -101,7 +101,11 @@ public class DialogueTrigger : MonoBehaviour
 
         else
         {
-            if (willFocus) Focus(false);
+            if (willFocus)
+            {
+                //print("ok now stop focusing!!!");
+                Focus(false);
+            }
         }
     }
 
@@ -221,6 +225,7 @@ public class DialogueTrigger : MonoBehaviour
         if (willFocus)
         {
             Focus(false);
+            print("ok now stop focusing!!!");
 
             ZoomEnviManager[] zoomCanvasScripts = FindObjectsByType<ZoomEnviManager>(FindObjectsSortMode.None);
             foreach (ZoomEnviManager zoomCanvasScript in zoomCanvasScripts)

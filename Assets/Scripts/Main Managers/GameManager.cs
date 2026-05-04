@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using NaughtyAttributes;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,10 +33,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip pauseCloseSFX;
 
     [Header("Flags")]
-    [HideInInspector] public bool isFocusing;
-    [HideInInspector] public bool isHidingUI;
-    [HideInInspector] public bool isPaused = false;
-    [HideInInspector] public bool canPause = true;
+    [SerializeField, ReadOnly] public bool isFocusing;
+    [SerializeField, ReadOnly] public bool isHidingUI;
+    [SerializeField, ReadOnly] public bool isPaused = false;
+    [SerializeField, ReadOnly] public bool canPause = true;
 
     [Header("Debug")]
     [SerializeField] private bool overrideDebugMode = false;
