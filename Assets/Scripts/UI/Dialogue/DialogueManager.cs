@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
 		InitializeComponents();
 	}
 
-    private void Start()
+    private void OnEnable()
     {
 		canClick = true;
     }
@@ -330,7 +330,7 @@ public class DialogueManager : MonoBehaviour
 
 	void InitializeDialogueValues(Dialogue dialogue)
     {
-        skip = false;
+		skip = false;
         canNext = false;
 
         nameText.text = dialogue.name;

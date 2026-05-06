@@ -94,7 +94,7 @@ public class ObjectState : MonoBehaviour
             comp.dialogueManagerOpen = dialogueManager.open;
             comp.dialogueManagerSkip = dialogueManager.skip;
             comp.dialogueManagerCanNext = dialogueManager.canNext;
-            comp.dialogueManagerCanClick = dialogueManager.canClick;
+            //comp.dialogueManagerCanClick = dialogueManager.canClick;
             comp.dialogueManagerMainCharacterIsSpeaking = dialogueManager.mainCharacterIsSpeaking;
             data.components.Add(comp);
         }
@@ -177,8 +177,8 @@ public class ObjectState : MonoBehaviour
                 {
                     dialogueTrigger.dialogueIsTriggered = compData.dialogueIsTriggered;
                     dialogueTrigger.alreadyActivatedObjects = compData.dialogueAlreadyActivatedObjects;
-                    dialogueTrigger.alreadyCheckedConditional = compData.dialogueAlreadyDeactivatedObjects;
-                    dialogueTrigger.alreadyDeactivatedObjects = compData.dialogueAlreadyCheckedConditional;
+                    dialogueTrigger.alreadyCheckedConditional = compData.dialogueAlreadyCheckedConditional;
+                    dialogueTrigger.alreadyDeactivatedObjects = compData.dialogueAlreadyDeactivatedObjects;
                     dialogueTrigger.alreadyRemovedPlayeritems = compData.dialogueAlreadyRemovedPlayeritems;
                     dialogueTrigger.alreadyGavePlayeritems = compData.dialogueAlreadyGavePlayeritems;
                 }
@@ -203,8 +203,8 @@ public class ObjectState : MonoBehaviour
                 if (objectsManager != null && compData != null)
                 {
                     objectsManager.alreadyEnabled = compData.objectsManagerAlreadyEnabled;
-                    objectsManager.alreadyCheckedLock = compData.objectsManagerAlreadyCheckedUnlock;
-                    objectsManager.alreadyCheckedUnlock = compData.objectsManagerAlreadyCheckedLock;
+                    objectsManager.alreadyCheckedLock = compData.objectsManagerAlreadyCheckedLock;
+                    objectsManager.alreadyCheckedUnlock = compData.objectsManagerAlreadyCheckedUnlock;
                 }
             }
 
@@ -230,7 +230,7 @@ public class ObjectState : MonoBehaviour
                     dialogueManager.open = compData.dialogueManagerOpen;
                     dialogueManager.skip = compData.dialogueManagerSkip;
                     dialogueManager.canNext = compData.dialogueManagerCanNext;
-                    dialogueManager.canClick = compData.dialogueManagerCanClick;
+                    //dialogueManager.canClick = compData.dialogueManagerCanClick;
                     dialogueManager.mainCharacterIsSpeaking = compData.dialogueManagerMainCharacterIsSpeaking;
                 }
             }
@@ -242,10 +242,10 @@ public class ObjectState : MonoBehaviour
 
                 if (gameManager != null && compData != null)
                 {
-                    gameManager.canPause = compData.gameManagerIsFocusing;
-                    gameManager.isFocusing = compData.gameManagerIsHidingUI;
-                    gameManager.isHidingUI = compData.gameManagerIsPaused;
-                    gameManager.isPaused = compData.gameManagerCanPause;
+                    gameManager.canPause = compData.gameManagerCanPause;
+                    gameManager.isFocusing = compData.gameManagerIsFocusing;
+                    gameManager.isHidingUI = compData.gameManagerIsHidingUI;
+                    gameManager.isPaused = compData.gameManagerIsPaused;
                 }
             }
         }
