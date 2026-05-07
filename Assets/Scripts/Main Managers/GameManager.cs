@@ -120,6 +120,9 @@ public class GameManager : MonoBehaviour
 
         TogglePauseBackground();
 
+        // Force the item zoom in to state 4: unzoom
+        playerInteractScript.ToggleStates(playerInteractScript.playerItemIndex, 4);
+
         audioSource.PlayOneShot(isPaused ? pauseOpenSFX : pauseCloseSFX);
 
         pauseMenuScript.active = !pauseMenuScript.active;

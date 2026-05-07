@@ -276,7 +276,105 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    
+    public void ToggleStates(int value, int state) // This is for OVERRIDING
+    {
+        //if (!canInput) return;
+        if (SelectValidItem(value) == false)
+        {
+            print("item name is blank, valid item: " + SelectValidItem(value));
+            return;
+        }
+
+        //value + 1 to offset Background
+        InventorySlot inventorySlot = inventorySlots.transform.GetChild(value + 1).GetComponent<InventorySlot>();
+        if (inventorySlot == null) Debug.LogError($"{this.gameObject.name}'s inventoryslot not correctly set");
+
+        //Select unselected item
+        if (state == 1)
+        {
+            if (gameManagerScript.isFocusing)
+            {
+                print("1 but is focusing");
+                return; // This is to not layer the zooms
+            }
+
+            isSelected = true;
+            activeObjectIndex = value;
+            WillUpdate(true);
+
+            print("1");
+        }
+
+        //Zoom in on valid selected item
+        else if (state == 2)
+        {
+            if (gameManagerScript.isFocusing)
+            {
+                print("2 but is focusing");
+                return; // This is to not layer the zooms
+            }
+
+            inventorySlot.SetZoomObject();
+            inventorySlot.SetZoomState(true);
+            inventorySlot.OnZoom();
+            isZoomed = true;
+            WillUpdate(true);
+
+            print("2");
+        }
+
+        //Cancel Zoom in and select other item
+        else if (state == 3)
+        {
+            if (gameManagerScript.isFocusing)
+            {
+                print("3 but is focusing");
+                return; // This is to not layer the zooms
+            }
+
+            inventorySlot.SetZoomObject();
+            inventorySlot.SetZoomState(false);
+            inventorySlot.OnZoom();
+            isZoomed = false;
+            activeObjectIndex = value;
+            WillUpdate(true);
+
+            print("3");
+        }
+
+        //Zoom out of same item
+        else if (state == 4)
+        {
+            inventorySlot.SetZoomState(false);
+            isZoomed = false;
+            isSelected = false;
+            GetComponent<Animator>().Play("object_fade_out_half");
+            WillUpdate(true);
+
+            print("4");
+        }
+
+        //Zoom out then select different item
+        else if (state == 5)// Zoom out of item, click another item
+        {
+            InventorySlot previous = inventorySlots.transform.GetChild(activeObjectIndex + 1).GetComponent<InventorySlot>();
+            if (previous == null) Debug.LogError($"{this.gameObject.name}'s previous not correctly set");
+
+            previous.SetZoomState(false);
+            //isSelected = false;
+            isZoomed = false;
+            activeObjectIndex = value;
+            WillUpdate(true);
+
+            print("5");
+        }
+        else
+        {
+            print("something else bro gg ur fucked");
+        }
+    }
+
+
     // Helper Functions --------------------------------------------------------
 
     void Interact()
