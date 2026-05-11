@@ -13915,7 +13915,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 118125071}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &118125066 stripped
 Transform:
@@ -13927,6 +13930,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 118125065}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &118125071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118125067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Attempt to open the sealed bottle.
+  guideText: The salakab might be of use to solving this mystery.
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
 --- !u!1 &119810939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -32059,7 +32078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1378671161854638220, guid: 453882e13cc734438aa890a4cc1a50f3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4531334058512182652, guid: 453882e13cc734438aa890a4cc1a50f3, type: 3}
       propertyPath: id
@@ -62351,34 +62370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1347750a-6e3b-43d5-8474-13456c708951
---- !u!1 &552551859 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8833811143810839446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
-  m_PrefabInstance: {fileID: 623050333}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &552551863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552551859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9bc402736e99d64ab8b5b76d5c37a5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timelineManager: {fileID: 1587999830}
-  slot1: {fileID: 88138647}
-  slot2: {fileID: 1168417288}
-  slot3: {fileID: 1375408660}
-  slot4: {fileID: 231810622}
-  slot5: {fileID: 406714781}
-  slot6: {fileID: 2101167429}
-  pastRibbon: {fileID: -5163055979498988310, guid: d5881d267fad28148a1d6b80ca9ad9b1, type: 3}
-  presentRibbon: {fileID: -5512593133159176374, guid: d5881d267fad28148a1d6b80ca9ad9b1, type: 3}
-  allSaveSlots: []
-  ribbonSprites: []
 --- !u!1 &553665139
 GameObject:
   m_ObjectHideFlags: 0
@@ -71392,6 +71383,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2953733179522344819, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2958064174473746565, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -71566,7 +71561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3458381924419999152, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3525349679690981018, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
@@ -74186,9 +74181,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3758517438507715606, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1371595500}
-    - targetCorrespondingSourceObject: {fileID: 8833811143810839446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 552551863}
     - targetCorrespondingSourceObject: {fileID: 4833936865449109946, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1158243820}
@@ -105455,6 +105447,7 @@ GameObject:
   - component: {fileID: 933276128}
   - component: {fileID: 933276130}
   - component: {fileID: 933276129}
+  - component: {fileID: 933276131}
   m_Layer: 0
   m_Name: 3
   m_TagString: Dialogue Zone
@@ -105582,6 +105575,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2524f9f2-7731-4260-948b-970835a23ce9
+--- !u!114 &933276131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933276125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Search for more clues.
+  guideText: "Everything doesn\u2019t quite add up. There must be some hidden information
+    we can find."
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
 --- !u!1 &933438279
 GameObject:
   m_ObjectHideFlags: 0
@@ -136892,6 +136902,7 @@ GameObject:
   - component: {fileID: 1249647470}
   - component: {fileID: 1249647472}
   - component: {fileID: 1249647471}
+  - component: {fileID: 1249647473}
   m_Layer: 0
   m_Name: 2
   m_TagString: Dialogue Zone
@@ -136991,6 +137002,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 19a238a7-f391-4a0f-8484-d915cca4681d
+--- !u!114 &1249647473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249647468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Distract the guards.
+  guideText: "Those guards won\u2019t give up. Perhaps there\u2019s a way to distract
+    them?"
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1001 &1249826965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139183,6 +139211,7 @@ GameObject:
   - component: {fileID: 1265304121}
   - component: {fileID: 1265304123}
   - component: {fileID: 1265304122}
+  - component: {fileID: 1265304124}
   m_Layer: 0
   m_Name: 4
   m_TagString: Dialogue Zone
@@ -139289,6 +139318,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 97f1bd3c-6338-4fde-8f7c-f9685daf2779
+--- !u!114 &1265304124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265304119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Investigate the camp of the past.
+  guideText: "After such an interesting encounter, it\u2019s time to get moving.
+    Let\u2019s check out the camp."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1001 &1265484003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -149320,6 +149366,7 @@ GameObject:
   - component: {fileID: 1368205560}
   - component: {fileID: 1368205562}
   - component: {fileID: 1368205561}
+  - component: {fileID: 1368205563}
   m_Layer: 0
   m_Name: Magic Book-D22
   m_TagString: Dialogue Zone
@@ -149420,6 +149467,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: d0d687a9-eb47-4518-b62b-beabd61d3616
+--- !u!114 &1368205563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368205558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Investigate the camp of the present.
+  guideText: "What a strange book\u2026 Santi\u2019s new acquaintance wants to know
+    more about where he found it."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1 &1368514941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 574081404839632423, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
@@ -152721,7 +152785,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1393043285}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1393043283 stripped
 Transform:
@@ -152733,6 +152800,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1393043282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1393043285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393043284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Find the right oil mixture!
+  guideText: The Antiquarian will be able to open the bottle, but needs the right
+    mixture. This will take a while.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1001 &1394401943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -166211,6 +166295,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1515050568}
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1515050573}
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!4 &1515050562 stripped
 Transform:
@@ -166316,6 +166403,23 @@ MonoBehaviour:
   isDone: 1
   beingRevised: 0
   notes: Add other notes here.
+--- !u!114 &1515050573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531502168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Investigate the camp of the present.
+  guideText: "What a strange book\u2026 Santi\u2019s new acquaintance wants to know
+    more about where he found it."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1001 &1515453576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167070,7 +167174,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1521833358}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &1521833356 stripped
 GameObject:
@@ -167082,6 +167189,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1521833355}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1521833358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521833356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: "Decipher Servillano\u2019s hidden message."
+  guideText: Everything is falling into place, but there is still work to be done.
+    Crack the code!
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1 &1521982919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -173302,6 +173426,7 @@ GameObject:
   - component: {fileID: 1583221803}
   - component: {fileID: 1583221806}
   - component: {fileID: 1583221805}
+  - component: {fileID: 1583221807}
   m_Layer: 0
   m_Name: '[Envi]-N6'
   m_TagString: Dialogue Zone
@@ -173402,6 +173527,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 116ad4da-d4a0-482c-9663-a14b9897ffb7
+--- !u!114 &1583221807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583221802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Open the Small Locked Chest.
+  guideText: Find things related to Servillano. There must be clues hidden around
+    the area to crack the code.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1001 &1584283441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -191195,6 +191337,7 @@ GameObject:
   - component: {fileID: 1771148429}
   - component: {fileID: 1771148431}
   - component: {fileID: 1771148430}
+  - component: {fileID: 1771148432}
   m_Layer: 0
   m_Name: 5
   m_TagString: Dialogue Zone
@@ -191298,6 +191441,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: bb66e362-35b4-4804-8fa1-0b573ed1545b
+--- !u!114 &1771148432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771148427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: The next step towards the truth.
+  guideText: Liezel said she wanted to read a manuscript left at her home, telling
+    Santi to continue exploring.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1 &1771711327
 GameObject:
   m_ObjectHideFlags: 0
@@ -203147,6 +203307,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1883680808}
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1883680812}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &1883680806 stripped
 GameObject:
@@ -203188,6 +203351,23 @@ MonoBehaviour:
   alreadyEnabled: 0
   alreadyCheckedLock: 0
   alreadyCheckedUnlock: 0
+--- !u!114 &1883680812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883680806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Find what the Antiquarian is asking for.
+  guideText: The Antiquarian needs oil and whatnot to open the bottle. Not all things
+    currently present, but surely oil survives time?
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
 --- !u!1 &1884410366
 GameObject:
   m_ObjectHideFlags: 0
