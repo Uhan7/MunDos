@@ -23,6 +23,7 @@ public class ObjectState : MonoBehaviour
         ObjectsManager objectsManager = GetComponent<ObjectsManager>();
         ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
+        QuestLogManager questLogManager = GetComponent<QuestLogManager>();
         GameManager gameManager = GetComponent<GameManager>();
 
         if (interactable != null)
@@ -55,8 +56,6 @@ public class ObjectState : MonoBehaviour
             comp.hasStoredLockValue = lockable.hasStoredLockValue;
             comp.storedLockValue = lockable.storedLockValue;
             data.components.Add(comp);
-
-            print("saved lockable");
         }
         if (dialogueTrigger != null)
         {
@@ -98,6 +97,13 @@ public class ObjectState : MonoBehaviour
             comp.dialogueManagerCanNext = dialogueManager.canNext;
             //comp.dialogueManagerCanClick = dialogueManager.canClick;
             comp.dialogueManagerMainCharacterIsSpeaking = dialogueManager.mainCharacterIsSpeaking;
+            data.components.Add(comp);
+        }
+        if (questLogManager != null)
+        {
+            var comp = new QuestLogSaveData();
+            comp.actualQuestTextData = questLogManager.actualQuestText.text;
+            comp.guideTextData = questLogManager.guideText.text;
             data.components.Add(comp);
         }
         if (gameManager != null)
@@ -160,9 +166,6 @@ public class ObjectState : MonoBehaviour
                 var lockable = GetComponent<LockableObject>();
                 var compData = comp as LockableSaveData;
 
-                Debug.Log(comp.GetType().FullName);
-                Debug.Log(comp is LockableSaveData);
-
                 if (lockable != null && compData != null)
                 {
                     lockable.isLockedAtStart = compData.isLockedAtStart;
@@ -170,8 +173,6 @@ public class ObjectState : MonoBehaviour
                     lockable.currentChecks = compData.lockableObjectChecks;
                     lockable.hasStoredLockValue = compData.hasStoredLockValue;
                     lockable.storedLockValue = compData.storedLockValue;
-
-                    print("loaded lockable");
                 }
             }
 
@@ -239,6 +240,18 @@ public class ObjectState : MonoBehaviour
                     dialogueManager.canNext = compData.dialogueManagerCanNext;
                     //dialogueManager.canClick = compData.dialogueManagerCanClick;
                     dialogueManager.mainCharacterIsSpeaking = compData.dialogueManagerMainCharacterIsSpeaking;
+                }
+            }
+
+            if (comp.type == "QuestLog")
+            {
+                var questLogManager = GetComponent<QuestLogManager>();
+                var compData = comp as QuestLogSaveData;
+
+                if (questLogManager != null && compData != null)
+                {
+                    questLogManager.actualQuestText.text = compData.actualQuestTextData;
+                    questLogManager.guideText.text = compData.guideTextData;
                 }
             }
 

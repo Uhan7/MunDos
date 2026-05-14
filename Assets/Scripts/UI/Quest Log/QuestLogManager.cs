@@ -1,19 +1,20 @@
 using UnityEngine;
 using TMPro;
+using NaughtyAttributes;
 
 public class QuestLogManager : MonoBehaviour
 {
     // Variables ---------------------------------------------------------------
 
     [Header("Text Fields")]
-    [SerializeField] private TextMeshProUGUI actualQuestText;
-    [SerializeField] private TextMeshProUGUI guideText;
+    [SerializeField] public TextMeshProUGUI actualQuestText; // For ObjectState.cs
+    [SerializeField] public TextMeshProUGUI guideText; // For ObjectState.cs
 
     [Header("Anim Reference")]
     [SerializeField] private GameObject questLogButton;
     [SerializeField] private DialogueManager dialogueManager; // To make quest log close once a dialogue starts
 
-        // Animator
+    // Animator
     private Animator animator;
     private Animator buttonAnimator;
     private bool isOpen = false;
