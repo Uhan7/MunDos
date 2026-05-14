@@ -10,7 +10,7 @@ public class LockableObject : MonoBehaviour
     [SerializeField] public int requiredChecks = 1;
 
     [Header("Counters")]
-    [ReadOnly, SerializeField] public int currentChecks = 0;
+    [ReadOnly, SerializeField] public int currentChecks = 0; // Used in ObjectState.cs
 
     [Header("Flags")]
     [HideInInspector] public bool isAlreadyLocked = false; // Used in ObjectState.cs
@@ -23,6 +23,14 @@ public class LockableObject : MonoBehaviour
         {
             Lock(isLockedAtStart);
             isAlreadyLocked = true;
+        }
+    }
+
+    private void Start()
+    {
+        if (hasStoredLockValue && currentChecks >= requiredChecks)
+        {
+            Lock(storedLockValue);
         }
     }
 

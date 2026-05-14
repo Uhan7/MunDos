@@ -55,6 +55,8 @@ public class ObjectState : MonoBehaviour
             comp.hasStoredLockValue = lockable.hasStoredLockValue;
             comp.storedLockValue = lockable.storedLockValue;
             data.components.Add(comp);
+
+            print("saved lockable");
         }
         if (dialogueTrigger != null)
         {
@@ -158,6 +160,9 @@ public class ObjectState : MonoBehaviour
                 var lockable = GetComponent<LockableObject>();
                 var compData = comp as LockableSaveData;
 
+                Debug.Log(comp.GetType().FullName);
+                Debug.Log(comp is LockableSaveData);
+
                 if (lockable != null && compData != null)
                 {
                     lockable.isLockedAtStart = compData.isLockedAtStart;
@@ -165,6 +170,8 @@ public class ObjectState : MonoBehaviour
                     lockable.currentChecks = compData.lockableObjectChecks;
                     lockable.hasStoredLockValue = compData.hasStoredLockValue;
                     lockable.storedLockValue = compData.storedLockValue;
+
+                    print("loaded lockable");
                 }
             }
 

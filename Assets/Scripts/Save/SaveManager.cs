@@ -45,7 +45,7 @@ public class SaveManager : MonoBehaviour
 
         // Physical Objects
         data.objectStates = new List<ObjectSaveData>();
-        foreach (ObjectState obj in FindObjectsOfType<ObjectState>(true)) data.objectStates.Add(obj.CaptureState());
+        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None)) data.objectStates.Add(obj.CaptureState());
 
         // Logical/Data
         data.players = new List<PlayerSaveData>();
@@ -116,7 +116,7 @@ public class SaveManager : MonoBehaviour
 
     ObjectState FindObjByID(string id)
     {
-        foreach (ObjectState obj in FindObjectsOfType<ObjectState>(true))
+        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None))
         {
             UniqueID uid = obj.GetComponent<UniqueID>();
             if (uid == null) print("null obj !!");
