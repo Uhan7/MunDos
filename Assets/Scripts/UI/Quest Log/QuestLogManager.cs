@@ -56,4 +56,10 @@ public class QuestLogManager : MonoBehaviour
         buttonAnimator.ResetTrigger("Flash");
         buttonAnimator.SetTrigger("Flash");
     }
+
+    public void OnDisable()
+    {
+        isOpen = false;
+        animator.SetBool("isOpen", isOpen);
+    }
 }
