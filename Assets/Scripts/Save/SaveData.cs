@@ -25,8 +25,7 @@ public class ObjectSaveData
     public Vector3 position;
 
     // Other Components
-    [SerializeReference]
-    public List<ComponentSaveData> components = new();
+    [SerializeReference] public List<ComponentSaveData> components = new();
 }
 
 [Serializable]

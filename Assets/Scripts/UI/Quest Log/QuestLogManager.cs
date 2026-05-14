@@ -53,8 +53,8 @@ public class QuestLogManager : MonoBehaviour
 
     public void FlashQuestButton()
     {
-        buttonAnimator.ResetTrigger("Flash");
-        buttonAnimator.SetTrigger("Flash");
+        if (buttonAnimator != null) buttonAnimator.ResetTrigger("Flash");
+        if (buttonAnimator != null) buttonAnimator.SetTrigger("Flash");
     }
 
     public void OnDisable()

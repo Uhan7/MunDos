@@ -2,9 +2,12 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using Unity.Cinemachine;
+using NaughtyAttributes;
 
 public class SaveManager : MonoBehaviour
 {
+    [SerializeField, ReadOnly] public static bool load_on_start = false;
+
     [Header("Constants")]
     [HideInInspector] private const string SAVE_KEY = "SAVE_DATA";
     [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
@@ -17,6 +20,8 @@ public class SaveManager : MonoBehaviour
     [Header("References")]
     [HideInInspector] private AudioSource sfxSource;
     [SerializeField] private TimelineManager timelineManager;
+    [SerializeField] private PauseMenuManager pauseMenuManagerPast;
+    [SerializeField] private PauseMenuManager pauseMenuManagerPresent;
     [SerializeField] private PlayerInteract pastPlayerInteract;
     [SerializeField] private PlayerInteract presentPlayerInteract;
     [SerializeField] private PlayerMove pastPlayerMove;
@@ -28,15 +33,10 @@ public class SaveManager : MonoBehaviour
 
     private void Awake()
     {
-        // LoadGame();
-        // Automatically load the game when it starts but maybe change soon..
-
         sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
+        if (load_on_start) LoadGame();
 
-        if (SettingsInfo.fromContinue)
-        {
-            LoadGame();
-        }
+        //if (SettingsInfo.fromContinue) LoadGame(); -> will temporarily replace this with the static shi on top
     }
 
     public void SaveGame()
@@ -70,7 +70,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadGame()
     {
-        sfxSource.PlayOneShot(loadSFX); // Plays first to let players know it loading
+        if (sfxSource != null) sfxSource.PlayOneShot(loadSFX); // Plays first to let players know it loading
 
         // If none, load normal
         if (!PlayerPrefs.HasKey(SAVE_KEY))
@@ -106,6 +106,12 @@ public class SaveManager : MonoBehaviour
 
         // Then Camera Cut
         StartCoroutine(RestoreBlend(brain, originalBlend));
+
+        // Just to make sure, set pause screen to off
+        pauseMenuManagerPast.PauseScreenOn();
+        pauseMenuManagerPast.PauseScreenOff();
+        pauseMenuManagerPresent.PauseScreenOn();
+        pauseMenuManagerPresent.PauseScreenOff();
 
         // Load Debug
         string json = PlayerPrefs.GetString(SAVE_KEY);
@@ -179,6 +185,11 @@ public class SaveManager : MonoBehaviour
     {
         yield return null; // wait 1 frame
         brain.DefaultBlend = original;
+    }
+
+    public void SetLoadOnStart(bool val)
+    {
+        load_on_start = val;
     }
 
     private void Update()

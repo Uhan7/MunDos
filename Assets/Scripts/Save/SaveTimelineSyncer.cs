@@ -16,12 +16,12 @@ public class SaveTimelineSyncer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        allSaveSlots.Add(slot1.GetComponent<SaveSlot>());
-        allSaveSlots.Add(slot2.GetComponent<SaveSlot>());
-        allSaveSlots.Add(slot3.GetComponent<SaveSlot>());
-        allSaveSlots.Add(slot4.GetComponent<SaveSlot>());
-        allSaveSlots.Add(slot5.GetComponent<SaveSlot>());
-        allSaveSlots.Add(slot6.GetComponent<SaveSlot>());
+        //allSaveSlots.Add(slot1.GetComponent<SaveSlot>());
+        //allSaveSlots.Add(slot2.GetComponent<SaveSlot>());
+        //allSaveSlots.Add(slot3.GetComponent<SaveSlot>());
+        //allSaveSlots.Add(slot4.GetComponent<SaveSlot>());
+        //allSaveSlots.Add(slot5.GetComponent<SaveSlot>());
+        //allSaveSlots.Add(slot6.GetComponent<SaveSlot>());
 
         slotHandler = GetComponent<SlotHandler>();
     }
@@ -44,11 +44,11 @@ public class SaveTimelineSyncer : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(SyncSlotUI());
+        //StartCoroutine(SyncSlotUI());
     }
 
     public void Sync()
     {
-        StartCoroutine(SyncSlotUI());
+        //StartCoroutine(SyncSlotUI());
     }
 }
