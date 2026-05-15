@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SettingsInfo.debugMode = overrideDebugMode;
+        if (overrideDebugMode) SettingsInfo.debugMode = overrideDebugMode;
 
         globalLight.SetActive(false);
         coolerLight.SetActive(true);

@@ -48,12 +48,18 @@ public class PauseMenuManager : MonoBehaviour
             Debug.LogError("Time and pause mismatch 1: [PauseScreenOn()] Trying to activate pause screen but time is paused.");
             active = true;
             EventBroadcaster.Instance.PostEvent(EventNames.TOGGLE_PAUSE_BG);
+
+            print("hello 1.1");
         }
         if (gameManager.canPause && !active)
         {
             gameManager.canPause = false;
             if (!SettingsInfo.timePaused) TogglePause();
+
+            print("hello 1.2");
         }
+
+        print($"hello 1.3: canPause: {gameManager.canPause} | active: {active} | timePaused: {SettingsInfo.timePaused}");
     }
 
     public void PauseScreenOff()
@@ -63,12 +69,18 @@ public class PauseMenuManager : MonoBehaviour
             Debug.LogError("Time and pause mismatch 2: [PauseScreenOff()] Trying to deactivate pause screen but time is already unpaused.");
             gameManager.canPause = true;
             TogglePause();
+
+            print("hello 2.1");
         }
         if (active && IsAllWindowsClosed())
         {
             gameManager.canPause = true;
             if (SettingsInfo.timePaused) TogglePause();
+
+            print("hello 2.2");
         }
+
+        print("hello 2.3");
     }
 
     public void toggleSettingsScreen()
