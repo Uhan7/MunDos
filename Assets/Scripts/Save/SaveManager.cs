@@ -166,7 +166,17 @@ public class SaveManager : MonoBehaviour
     {
         // Items
         playerInteract.playerItemIndex = data.playerItemIndex;
-        for (int i = 0; i < data.itemDatas.Count; i++) playerInteract.itemDatas[i] = new ItemData(data.itemDatas[i]);
+        for (int i = 0; i < data.itemDatas.Count; i++)
+        {
+            playerInteract.itemDatas[i] = new ItemData(data.itemDatas[i]);
+            playerInteract.itemDatas[i].objectsToInteractWith = new GameObject[playerInteract.itemDatas[i].objectIDsToInteractWith.Length];
+
+            // Replace each item's valid obj reference
+            for (int j = 0; j < playerInteract.itemDatas[i].objectIDsToInteractWith.Length; j++)
+            {
+                playerInteract.itemDatas[i].objectsToInteractWith[j] = FindObjByID(playerInteract.itemDatas[i].objectIDsToInteractWith[j]).gameObject;
+            }
+        }
 
         // Player Move
         playerMove.canInput = data.moveCanInput;
