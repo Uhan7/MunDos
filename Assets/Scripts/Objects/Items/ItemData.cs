@@ -9,7 +9,7 @@ public class ItemData
     public string itemName;
     public Sprite itemSprite;
     public Timeline timeline;
-    public GameObject[] objectsToInteractWith;
+    public GameObject[] objectsToInteractWith; // maybe replace dis wit ID?
 
     // Constructors
     public ItemData() {}

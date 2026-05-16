@@ -118,6 +118,8 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Game Loaded");
         Debug.Log("Loaded save size (chars): " + json.Length);
         Debug.Log("Loaded save size (bytes): " + System.Text.Encoding.UTF8.GetByteCount(json));
+
+        
     }
 
     ObjectState FindObjByID(string id)

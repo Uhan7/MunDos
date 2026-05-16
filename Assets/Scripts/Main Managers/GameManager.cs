@@ -53,12 +53,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SettingsInfo.debugMode = overrideDebugMode;
+        if (overrideDebugMode) SettingsInfo.debugMode = overrideDebugMode;
 
         globalLight.SetActive(false);
         coolerLight.SetActive(true);
 
-        Time.timeScale = 1;
+        if (SettingsInfo.fromContinue)
+        {
+            ResetAllPauseVars();
+        }
     }
 
     private void Update()
@@ -142,6 +145,30 @@ public class GameManager : MonoBehaviour
 
         SettingsInfo.timePaused = isPaused;
         Time.timeScale = isPaused ? 0 : 1;
+    }
+
+    public void ResetAllPauseVars()
+    {
+        SetComponents();
+
+        isPaused = false;
+        isFocusing = false;
+
+        dialogueHolderScript.canClick = true;
+
+        if (!dialogueHolderScript.open)
+        {
+            protagMoveScript.canMove = true;
+            protagMoveScript.canInput = true;
+        }
+
+        timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
+        playerInteractScript.canInput = (!isPaused);
+
+        if (!isFocusing) canPause = true;
+
+        SettingsInfo.timePaused = false;
+        Time.timeScale = 1;
     }
 
     void SetComponents()

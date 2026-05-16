@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Cinemachine;
 using NaughtyAttributes;
 
 public class TimelineManager : MonoBehaviour
@@ -109,6 +110,12 @@ public class TimelineManager : MonoBehaviour
             currentTimeline = 0;
         }
 
+        // Camera skip
+        var brain = Camera.main.GetComponent<CinemachineBrain>();
+        var originalBlend = brain.DefaultBlend;
+        brain.DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f);
+        StartCoroutine(RestoreBlend(brain, originalBlend));
+
         TimelineTransition();
     }
 
@@ -149,9 +156,15 @@ public class TimelineManager : MonoBehaviour
         fadeIn.volume = SettingsInfo.musicVol;
     }
 
-    // Helper (Get) Function --------------------------------------------------------
+    // Helper Functions --------------------------------------------------------
     public int GetCurrentTimeline() // Used in SlotHander
     {
         return currentTimeline;
+    }
+
+    IEnumerator RestoreBlend(CinemachineBrain brain, CinemachineBlendDefinition original)
+    {
+        yield return null; // wait 1 frame
+        brain.DefaultBlend = original;
     }
 }
