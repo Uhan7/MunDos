@@ -35,7 +35,7 @@ public class PlayerSaveData
     public Timeline protagTimeline;
 
     // Player Items
-    public List<ItemData> itemDatas;
+    [SerializeReference] public List<ItemData> itemDatas;
     public int playerItemIndex;
 
     // Player Movement Flags
