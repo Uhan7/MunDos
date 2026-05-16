@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
@@ -69,18 +70,12 @@ public class PauseMenuManager : MonoBehaviour
             Debug.LogError("Time and pause mismatch 2: [PauseScreenOff()] Trying to deactivate pause screen but time is already unpaused.");
             gameManager.canPause = true;
             TogglePause();
-
-            print("hello 2.1");
         }
         if (active && IsAllWindowsClosed())
         {
             gameManager.canPause = true;
             if (SettingsInfo.timePaused) TogglePause();
-
-            print("hello 2.2");
         }
-
-        print("hello 2.3");
     }
 
     public void toggleSettingsScreen()
