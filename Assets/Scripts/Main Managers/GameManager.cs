@@ -156,10 +156,16 @@ public class GameManager : MonoBehaviour
 
         dialogueHolderScript.canClick = true;
 
-        protagMoveScript.canMove = true;
-        protagMoveScript.canInput = true;
-        timelineManagerScript.canSwitch = true;
-        playerInteractScript.canInput = true;
+        if (!dialogueHolderScript.open)
+        {
+            protagMoveScript.canMove = true;
+            protagMoveScript.canInput = true;
+        }
+
+        timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
+        playerInteractScript.canInput = (!isPaused);
+
+        if (!isFocusing) canPause = true;
 
         SettingsInfo.timePaused = false;
         Time.timeScale = 1;
