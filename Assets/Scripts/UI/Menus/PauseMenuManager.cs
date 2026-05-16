@@ -20,6 +20,10 @@ public class PauseMenuManager : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        if (active)
+        {
+            PauseScreenOff();
+        }
     }
 
     void Update()
