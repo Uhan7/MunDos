@@ -17,6 +17,11 @@ public class UniqueID : MonoBehaviour
         id = Guid.NewGuid().ToString();
     }
 
+    public string GetID()
+    {
+        return id;
+    }
+
 
     /*
 

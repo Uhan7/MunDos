@@ -11,6 +11,12 @@ public class Item : MonoBehaviour
     {
         if (data.itemName == "") data.itemName = gameObject.name;
         if (data.itemSprite == null) data.itemSprite = GetComponent<SpriteRenderer>().sprite;
+
+        if (data.objectIDsToInteractWith.Length == 0) data.objectIDsToInteractWith = new string[data.objectsToInteractWith.Length];
+        for (int i = 0; i < data.objectsToInteractWith.Length; i++)
+        {
+            data.objectIDsToInteractWith[i] = data.objectsToInteractWith[i].GetComponent<UniqueID>().GetID();
+        }
     }
 
     public ItemData GetData()

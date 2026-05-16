@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 
@@ -9,7 +10,8 @@ public class ItemData
     public string itemName;
     public Sprite itemSprite;
     public Timeline timeline;
-    public GameObject[] objectsToInteractWith; // maybe replace dis wit ID?
+    public GameObject[] objectsToInteractWith;
+    public string[] objectIDsToInteractWith;
 
     // Constructors
     public ItemData() {}
@@ -20,5 +22,6 @@ public class ItemData
         itemSprite = other.itemSprite;
         timeline = other.timeline;
         objectsToInteractWith = other.objectsToInteractWith;
+        objectIDsToInteractWith = other.objectIDsToInteractWith;
     }
 }
