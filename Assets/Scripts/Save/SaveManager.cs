@@ -107,12 +107,6 @@ public class SaveManager : MonoBehaviour
         // Then Camera Cut
         StartCoroutine(RestoreBlend(brain, originalBlend));
 
-        // Just to make sure, set pause screen to off
-        pauseMenuManagerPast.PauseScreenOn();
-        pauseMenuManagerPast.PauseScreenOff();
-        pauseMenuManagerPresent.PauseScreenOn();
-        pauseMenuManagerPresent.PauseScreenOff();
-
         // Load Debug
         string json = PlayerPrefs.GetString(SAVE_KEY);
         Debug.Log("Game Loaded");
