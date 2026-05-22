@@ -42,6 +42,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject[] objectsToActivateAfter;
     [SerializeField] private GameObject[] objectsToDeactivateAfter;
     [SerializeField] private bool repeatable;
+    [SerializeField] private bool itemRepeatable;
     [SerializeField] private GameObject[] conditionalObjectsToCheckAfter;
     [SerializeField] private string[] playeritemNamesToRemove;
     [SerializeField] private Item[] playeritemsToGive;
@@ -254,6 +255,11 @@ public class DialogueTrigger : MonoBehaviour
         {
             alreadyActivatedObjects = false;
             alreadyDeactivatedObjects = false;
+        }
+        if (itemRepeatable)
+        {
+            alreadyGavePlayeritems = false;
+            alreadyRemovedPlayeritems = false;
         }
     }
 
