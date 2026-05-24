@@ -569,6 +569,12 @@ public class PlayerInteract : MonoBehaviour
 
         return true;
     }
+
+    public ItemData TryGetEquippedObject()
+    {
+        if (itemDatas[playerItemIndex].itemName == "") return null;
+        return itemDatas[playerItemIndex];
+    }
     void KeyPress(int index)
     {
         if (playerItemIndex == index && isSelected)

@@ -15,6 +15,7 @@ public class ObjectState : MonoBehaviour
         data.objectID = GetComponent<UniqueID>().ID;
 
         InteractableObject interactable = GetComponent<InteractableObject>();
+        //MultiInteractableObject multiInteractableObject = GetComponent<MultiInteractableObject>();
         Collider2D col = GetComponent<Collider2D>();
         ConditionalObject conditional = GetComponent<ConditionalObject>();
         LockableObject lockable = GetComponent<LockableObject>();
@@ -34,6 +35,13 @@ public class ObjectState : MonoBehaviour
             comp.alreadyCheckedLock = interactable.alreadyCheckedLock;
             data.components.Add(comp);
         }
+        //if (multiInteractableObject != null)
+        //{
+        //    var comp = new MultiInteractableSaveData();
+        //    comp.hasActivatedOnce = multiInteractableObject.hasActivatedOnce;
+        //    comp.interactionsCounter = multiInteractableObject.currentInteractions;
+        //    data.components.Add(comp);
+        //}
         if (col != null)
         {
             var comp = new ColliderSaveData();
@@ -138,6 +146,17 @@ public class ObjectState : MonoBehaviour
                     interactable.alreadyCheckedLock = compData.alreadyCheckedLock;
                 }
             }
+
+            //if (comp.type == "MultiInteractable"){
+            //    var multiInteractable = GetComponent<MultiInteractableObject>();
+            //    var compData = comp as MultiInteractableSaveData;
+
+            //    if (multiInteractable != null && compData != null)
+            //    {
+            //        multiInteractable.hasActivatedOnce = compData.hasActivatedOnce;
+            //        multiInteractable.currentInteractions = compData.interactionsCounter;
+            //    }
+            //}
 
             if (comp.type == "Collider")
             {
