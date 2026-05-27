@@ -52355,7 +52355,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1039793698}
+    m_TransformParent: {fileID: 610420516}
     m_Modifications:
     - target: {fileID: 142655698169154144, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_Color.a
@@ -52383,11 +52383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.1
+      value: 4.099997
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.8500004
+      value: -7.85
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52439,11 +52439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_Name
-      value: Guide Moves to Exit Right
+      value: Exit Right
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -73338,6 +73338,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4923956555869909511, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 21787368}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &610420515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 610420516}
+  m_Layer: 0
+  m_Name: Guide Moves To Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &610420516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610420515}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 172592383}
+  - {fileID: 1166916212}
+  m_Father: {fileID: 1039793698}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &610778764
 GameObject:
   m_ObjectHideFlags: 0
@@ -75246,7 +75279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -75268,6 +75301,10 @@ PrefabInstance:
       propertyPath: 'objectsToActivateAfter.Array.data[3]'
       value: 
       objectReference: {fileID: 1359238666}
+    - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1234776947}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
@@ -96048,11 +96085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -96061,7 +96098,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[1]'
       value: 
-      objectReference: {fileID: 1560234264}
+      objectReference: {fileID: 1166916213}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
@@ -110195,7 +110232,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2fb2d6bb554ea49f5aa7456854d31fc7, type: 3}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toDeactivateOnInteract.Array.size
@@ -123650,9 +123687,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1285265050}
+  - {fileID: 610420516}
   - {fileID: 1294969759}
-  - {fileID: 172592383}
-  - {fileID: 1166916212}
   - {fileID: 1560234265}
   m_Father: {fileID: 6546006}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -136196,7 +136232,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1039793698}
+    m_TransformParent: {fileID: 610420516}
     m_Modifications:
     - target: {fileID: 142655698169154144, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_Color.a
@@ -136224,11 +136260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.4
+      value: -4.400003
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.8500004
+      value: -7.85
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.z
@@ -136280,11 +136316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_Name
-      value: Guide Moves to Exit Left
+      value: Exit Left
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -144269,6 +144305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: L3-DZ4
       objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
@@ -144355,7 +144395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionText: 'Activated/Deactivated By:
 
-    Rommel Yard Entrance > Fake Door'
+    L3-DZ3/Rommel Yard Entrance >
+    Fake Door'
 --- !u!1 &1235294930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -180074,11 +180115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -180088,6 +180129,10 @@ PrefabInstance:
       propertyPath: 'objectsToActivateAfter.Array.data[1]'
       value: 
       objectReference: {fileID: 1560234264}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[2]'
+      value: 
+      objectReference: {fileID: 172592382}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
@@ -182307,12 +182352,13 @@ MonoBehaviour:
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter:
+  - {fileID: 610420515}
   - {fileID: 1647852715}
   - {fileID: 1176465109}
   - {fileID: 854744683}
   - {fileID: 1735905998}
-  - {fileID: 1294969760}
   - {fileID: 1296554561}
+  - {fileID: 1294969760}
   objectsToDeactivateAfter:
   - {fileID: 1560553174}
   - {fileID: 1479433618}
@@ -220591,7 +220637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: data.itemName
-      value: "Maid\u2019s Bread"
+      value: "L3 Maid\u2019s Bread"
       objectReference: {fileID: 0}
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: data.itemSprite
