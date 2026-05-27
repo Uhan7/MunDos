@@ -58753,9 +58753,6 @@ PrefabInstance:
       addedObject: {fileID: 267110390}
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1865344190}
-    - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 186213389}
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
@@ -100442,7 +100439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -100452,6 +100449,10 @@ PrefabInstance:
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
       objectReference: {fileID: 854744683}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[1]'
+      value: 
+      objectReference: {fileID: 247281393}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -131965,7 +131966,7 @@ PrefabInstance:
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 1865344189}
+      objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -182311,6 +182312,7 @@ MonoBehaviour:
   - {fileID: 854744683}
   - {fileID: 1735905998}
   - {fileID: 1294969760}
+  - {fileID: 1296554561}
   objectsToDeactivateAfter:
   - {fileID: 1560553174}
   - {fileID: 1479433618}
@@ -211998,113 +212000,6 @@ MonoBehaviour:
   alreadyEnabled: 0
   alreadyCheckedLock: 0
   alreadyCheckedUnlock: 0
---- !u!1001 &1865344188
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 475622503}
-    m_Modifications:
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -22.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741798054155553635, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: id
-      value: 08991ab7-4b5f-4f9d-89d3-3d3d5d1b8388
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404549752580450967, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: id
-      value: 3f573939-7647-4fe7-a925-1fc39c990b84
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: isSign
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: willFocus
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Santi asks for Liezel's help
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: objectsToActivateAfter.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'objectsToActivateAfter.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1928189434}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
-      value: 
-      objectReference: {fileID: 247281393}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'objectsToDeactivateAfter.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_Name
-      value: L3 Santi Asks Liezel's Help
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
---- !u!1 &1865344189 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 1865344188}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1865344190 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 1865344188}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1865608071
 GameObject:
   m_ObjectHideFlags: 0
@@ -220665,11 +220560,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
---- !u!1 &1928189434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2348691492092013971, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-  m_PrefabInstance: {fileID: 1928189433}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1928189435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
