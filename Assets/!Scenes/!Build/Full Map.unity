@@ -450,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.6
+      value: 36.1
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4040,7 +4040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &33004517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4109,7 +4109,6 @@ MonoBehaviour:
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter:
   - {fileID: 1906649471}
-  - {fileID: 577626226}
   objectsToDeactivateAfter: []
   repeatable: 0
   itemRepeatable: 0
@@ -10578,6 +10577,117 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3366223756827624116, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
   m_PrefabInstance: {fileID: 86423949}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &86451156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86451157}
+  - component: {fileID: 86451160}
+  - component: {fileID: 86451159}
+  - component: {fileID: 86451158}
+  m_Layer: 0
+  m_Name: 1 (12)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &86451157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86451156}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &86451158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86451156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &86451159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86451156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &86451160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86451156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character2: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(How though? Where can we use a phrase like that?)</i>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 735674081}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &86772459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27027,6 +27137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1961a21d-300f-49a9-84a5-99f252bfbdca
+--- !u!1 &210027530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+  m_PrefabInstance: {fileID: 1923523707}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &210876007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32398,6 +32513,118 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: a4f7de82-e343-4e65-8921-a00aa6398e14
+--- !u!1 &263915636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263915637}
+  - component: {fileID: 263915640}
+  - component: {fileID: 263915639}
+  - component: {fileID: 263915638}
+  m_Layer: 0
+  m_Name: 1 (6)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &263915637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263915636}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &263915638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263915636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &263915639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263915636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &263915640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263915636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character2: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(A really big fan of Rommel. Not even joking about the \u201Creally big
+      fan\u201D part.)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 2083098904}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &265100093
 GameObject:
   m_ObjectHideFlags: 0
@@ -32773,106 +33000,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasProperDialogue: 1
   containsSFX: 0
---- !u!1001 &267110388
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 475622503}
-    m_Modifications:
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -22.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741798054155553635, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: id
-      value: ea4a6b34-7d89-462a-9cab-defa9a73157e
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404549752580450967, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: id
-      value: 1822d62c-18bf-4bd6-bd90-3edcae8a832a
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: willFocus
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: nextDialogue
-      value: 
-      objectReference: {fileID: 1294692540}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: linksToOtherDialogue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: playClosingAnimation
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "(Tour Guide Interact) \nTour Guide says it\u2019s the Bakery\u2019s
-        anniversary and it has been booming for centuries (hinting player needs to
-        swap to Liezel\u2019s time)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_Name
-      value: L3 Tour Guide3 DZ
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1294692544}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
---- !u!1 &267110389 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 267110388}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &267110390 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 267110388}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &267338708
 GameObject:
   m_ObjectHideFlags: 0
@@ -36792,7 +36919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2741798054155553635, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: id
-      value: 84e6f9d1-6689-4053-8e9a-a1dbb0de1bb7
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3404549752580450967, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: id
@@ -36803,17 +36930,40 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: dialogue.sentences.Array.size
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 608199921}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: playClosingAnimation
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Santi and Liezel discuss about going back to Rommel\u2019s House/Museum
-        [12]"
+      value: <i>(Liezel, I might have something for you.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: Liezel mentions the Locked Safe With Arrows .
+      value: <i></i>
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -36821,7 +36971,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 608199925}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2040312698}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 783545972}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 513934831}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1854833978}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 263915637}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2083098905}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1662151128}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1595394147}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1071224591}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 577218670}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 86451157}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 735674082}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 749084856}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!1 &300146707 stripped
@@ -37848,7 +38040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37923,10 +38115,11 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: 0
+      insertIndex: -1
       addedObject: {fileID: 1617635742}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
@@ -37936,11 +38129,6 @@ PrefabInstance:
 --- !u!4 &308197096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 308197095}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &308197097 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 308197095}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &308617278
@@ -46183,9 +46371,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3054323939793633709, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1041133311}
-    - targetCorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 946784265}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5180201318165665747, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       insertIndex: -1
@@ -59087,6 +59272,9 @@ PrefabInstance:
       addedObject: {fileID: 1982764901}
     - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 946784265}
+    - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1296554570}
     - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
@@ -59106,9 +59294,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 681275048}
-    - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 267110390}
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 186213389}
@@ -63691,6 +63876,117 @@ MonoBehaviour:
   isDone: 1
   beingRevised: 0
   notes: Add other notes here.
+--- !u!1 &513934830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513934831}
+  - component: {fileID: 513934834}
+  - component: {fileID: 513934833}
+  - component: {fileID: 513934832}
+  m_Layer: 0
+  m_Name: 1 (4)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &513934831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513934830}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &513934832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513934830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &513934833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513934830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &513934834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513934830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character2: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(Nope. I just found out about it now from Anika.)</i>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1854833977}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &515946654 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8472339484363056781, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -70768,6 +71064,120 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &577218669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577218670}
+  - component: {fileID: 577218673}
+  - component: {fileID: 577218672}
+  - component: {fileID: 577218671}
+  m_Layer: 0
+  m_Name: 1 (11)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &577218670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577218669}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577218671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577218669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &577218672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577218669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &577218673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577218669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(A hero who does anything for his own goals no matter the price? I wonder
+      if he ever carried that ideology with good values...)</i>
+    - "<i>(That phrase may be of importance since it involves Se\xF1or Rommel. We
+      may need to look into this further.)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 86451156}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &577338384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73703,6 +74113,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1ee12ce0-ae37-43fa-9e6d-f1b30af7fcaa
+--- !u!1 &608199921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 608199925}
+  - component: {fileID: 608199924}
+  - component: {fileID: 608199923}
+  - component: {fileID: 608199922}
+  m_Layer: 0
+  m_Name: 1 (1)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &608199922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608199921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &608199923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608199921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &608199924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608199921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(Oh? What is it?)</i>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 608199921}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &608199925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608199921}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609863487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4923956555869909511, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -76056,7 +76577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -78262,7 +78783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.4909
+      value: -110.44444
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -80887,7 +81408,8 @@ MonoBehaviour:
   nextDialogueTime: 0.5
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 0
-  objectsToActivateAfter: []
+  objectsToActivateAfter:
+  - {fileID: 577626226}
   objectsToDeactivateAfter: []
   repeatable: 0
   itemRepeatable: 0
@@ -94817,6 +95339,121 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 6bc1ab9c-8d23-4945-8631-579f6d013ff9
+--- !u!1 &735674081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 735674082}
+  - component: {fileID: 735674085}
+  - component: {fileID: 735674084}
+  - component: {fileID: 735674083}
+  m_Layer: 0
+  m_Name: 1 (13)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &735674082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735674081}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735674083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735674081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &735674084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735674081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &735674085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735674081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(...the <b>Locked Safe with Arrows</b>. It must be. The phrase must be
+      applicable to Se\xF1or Rommel\u2019s belongings.)</i>"
+    - "<i>(Santi, if you are able, see if that phrase would be of use in the museum.
+      Meanwhile, I have to find out if this connects to anything in Se\xF1or Rommel\u2019s
+      house, which I hope it is.)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 749084855}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &735750485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5180201318165665747, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -96444,6 +97081,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 748160440}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &749084855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 749084856}
+  - component: {fileID: 749084859}
+  - component: {fileID: 749084858}
+  - component: {fileID: 749084857}
+  m_Layer: 0
+  m_Name: 1 (14)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &749084856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749084855}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749084857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749084855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &749084858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749084855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &749084859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749084855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character2: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(Okay. I\u2019ll see what I find.)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &751308787
 GameObject:
   m_ObjectHideFlags: 0
@@ -99726,6 +100474,118 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 783098222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &783545971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783545972}
+  - component: {fileID: 783545975}
+  - component: {fileID: 783545974}
+  - component: {fileID: 783545973}
+  m_Layer: 0
+  m_Name: 1 (3)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &783545972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783545971}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783545973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783545971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &783545974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783545971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &783545975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783545971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(Hm. I do, in fact. That is one quote that Se\xF1or Rommel ends almost
+      every speech with. Are you not familiar with it?)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 513934830}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &785005924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 558018613006898524, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -106912,7 +107772,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: delayTime
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: isOnEnable
@@ -108639,7 +109499,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   descriptionText: 'Activated/Deactivated By:
 
-    L3-DZ9 1/Celebrity Disappears'
+    L3-DZ9 1/Celebrity Disappears
+
+    Used
+    By Tour Guide 3'
 --- !u!1 &880185975
 GameObject:
   m_ObjectHideFlags: 0
@@ -115359,7 +116222,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1135707098}
+    m_TransformParent: {fileID: 475622511}
     m_Modifications:
     - target: {fileID: 1581249434304573448, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Enabled
@@ -115444,11 +116307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67
+      value: 50.000015
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -7.75
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -116446,7 +117309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
-      value: 'L3 Banner of free entrance '
+      value: L3 Museum Free Entrance Banner
       objectReference: {fileID: 0}
     - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_text
@@ -127023,6 +127886,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 9c4bf65f-b47f-4d9b-b333-5836d9167198
+--- !u!1 &1071224590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1071224591}
+  - component: {fileID: 1071224594}
+  - component: {fileID: 1071224593}
+  - component: {fileID: 1071224592}
+  m_Layer: 0
+  m_Name: 1 (10)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1071224591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071224590}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1071224592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071224590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1071224593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071224590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1071224594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071224590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character2: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(Anyway, Anika claims he\u2019s the true hero of Giyala.)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 577218669}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &1071308706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -132553,7 +133527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2034884095999480211, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_text
-      value: Tour Guide
+      value: Tour Guide (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2034884095999480211, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_fontSize
@@ -132569,7 +133543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2996970779733052554, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayerID
-      value: 167226983
+      value: 620356551
       objectReference: {fileID: 0}
     - target: {fileID: 3042647558974865226, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -132610,7 +133584,7 @@ PrefabInstance:
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 267110389}
+      objectReference: {fileID: 210027530}
     - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayer
       value: 12
@@ -133867,11 +134841,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1132048457}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1135707098 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3685750226987546460, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
-  m_PrefabInstance: {fileID: 370025941}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1135811197
 PrefabInstance:
@@ -139109,7 +140078,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: delayTime
-      value: 3.2
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: isOnEnable
@@ -150952,117 +151921,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1293883244}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1294692540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1294692544}
-  - component: {fileID: 1294692543}
-  - component: {fileID: 1294692542}
-  - component: {fileID: 1294692541}
-  m_Layer: 0
-  m_Name: 2
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1294692541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294692540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveActiveState: 1
-  savePosition: 0
---- !u!114 &1294692542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294692540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 4b32ca11-657e-4ce5-8594-d13f4d2c424d
---- !u!114 &1294692543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294692540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    character: {fileID: 21300000, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 0}
-    name: Default Name
-    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - Kinda like this!
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 0
-  deactivateAfter: 1
-  linksToOtherDialogue: 0
-  nextDialogue: {fileID: 0}
-  nextDialogueTime: 0.5
-  playClosingAnimation: 0
-  mainCharacterIsSpeaking: 1
-  objectsToActivateAfter: []
-  objectsToDeactivateAfter: []
-  repeatable: 0
-  itemRepeatable: 0
-  conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
-  playeritemsToGive: []
-  soundsToPlayBefore: []
-  soundsToPlayAfter: []
-  dialogueIsTriggered: 0
-  alreadyActivatedObjects: 0
-  alreadyDeactivatedObjects: 0
-  alreadyCheckedConditional: 0
-  alreadyRemovedPlayeritems: 0
-  alreadyGavePlayeritems: 0
---- !u!4 &1294692544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1294692540}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 267110390}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1294969758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151073,7 +151931,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: delayTime
-      value: 3.2
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: isOnEnable
@@ -184644,7 +185502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -185771,6 +186629,118 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: c37b0cf1-eec5-450a-88ef-fe94db2237e5
+--- !u!1 &1595394146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595394147}
+  - component: {fileID: 1595394150}
+  - component: {fileID: 1595394149}
+  - component: {fileID: 1595394148}
+  m_Layer: 0
+  m_Name: 1 (9)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1595394147
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595394146}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595394148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595394146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1595394149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595394146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1595394150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595394146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(An obsession with Se\xF1or Rommel. Does that mean his name has made a
+      mark in Sumpagita somehow?)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1071224590}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &1596745782
 GameObject:
   m_ObjectHideFlags: 0
@@ -187622,7 +188592,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 308197097}
+      objectReference: {fileID: 1645617392}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -187633,13 +188603,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Tour Guide (4) explains the history of Rommel and his heirs and tells
-        the story of the order in which they commemorated Rommel Lapuz [11]'
+      value: 'Alright, here we are!
+
+'
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: "The museum is dedicated to keeping records of the <i>Lapuz Family</i>,
+        who have contributed greatly to Giyala\u2019s growth ever since the end of
+        the Kulonium War."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[2]'
+      value: He was the leader of the Disidensiyang Giyala, who were local heroes
+        who protected Giyalans during the war.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 28430660}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -191356,6 +192346,117 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasProperDialogue: 1
   containsSFX: 0
+--- !u!1 &1662151127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1662151128}
+  - component: {fileID: 1662151131}
+  - component: {fileID: 1662151130}
+  - component: {fileID: 1662151129}
+  m_Layer: 0
+  m_Name: 1 (8)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1662151128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662151127}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1662151129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662151127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1662151130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662151127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1662151131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662151127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character2: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(Or maybe Anika\u2019s just...obsessed.)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1595394146}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &1662319153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3404748216267005459, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
@@ -211270,6 +212371,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: f82817c9-d4ae-4f2f-b7dc-47dc503518ff
+--- !u!1 &1854833977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854833978}
+  - component: {fileID: 1854833981}
+  - component: {fileID: 1854833980}
+  - component: {fileID: 1854833979}
+  m_Layer: 0
+  m_Name: 1 (5)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1854833978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854833977}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854833979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854833977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1854833980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854833977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1854833981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854833977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(Who is this Anika?)</i>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 263915636}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &1855343825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218398,6 +219610,10 @@ PrefabInstance:
       propertyPath: id
       value: c7606765-dc5c-4b37-98ab-ec5ee59dab54
       objectReference: {fileID: 0}
+    - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
       value: f0c74598-84fb-4a64-ba78-bad3af12164c
@@ -219341,11 +220557,11 @@ PrefabInstance:
       objectReference: {fileID: 1849662419}
     - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayer
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5224105977266933829, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SortingLayerID
-      value: 167226983
+      value: 620356551
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Name
@@ -235052,6 +236268,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 250fc51b-65ad-49d3-9539-411775d06acd
+--- !u!1 &2040312697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040312698}
+  - component: {fileID: 2040312701}
+  - component: {fileID: 2040312700}
+  - component: {fileID: 2040312699}
+  m_Layer: 0
+  m_Name: 1 (2)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2040312698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040312697}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2040312699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040312697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &2040312700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040312697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &2040312701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040312697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character2: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(Do you know about this phrase: \u201CNo matter the price?\u201D)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 783545971}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &2041105810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -239135,6 +240462,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 368646da-3dc4-4e2a-ab6c-e3955d4d37f0
+--- !u!1 &2083098904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2083098905}
+  - component: {fileID: 2083098908}
+  - component: {fileID: 2083098907}
+  - component: {fileID: 2083098906}
+  m_Layer: 0
+  m_Name: 1 (7)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2083098905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083098904}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300146708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2083098906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083098904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &2083098907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083098904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &2083098908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083098904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+    name: Liezel
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(I suppose Se\xF1or Rommel\u2019s charm reached some people of the future.)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1662151127}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &2085181068
 PrefabInstance:
   m_ObjectHideFlags: 0
