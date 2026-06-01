@@ -2163,6 +2163,201 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
   m_PrefabInstance: {fileID: 1813273668}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &19343376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 19343377}
+  - component: {fileID: 19343380}
+  - component: {fileID: 19343379}
+  - component: {fileID: 19343378}
+  m_Layer: 0
+  m_Name: 1 (17)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &19343377
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19343376}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19343378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19343376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &19343379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19343376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &19343380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19343376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'So? What do you say?
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 47563200}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!1 &20337568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 20337569}
+  - component: {fileID: 20337571}
+  - component: {fileID: 20337570}
+  m_Layer: 0
+  m_Name: Anika First Interact
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20337569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20337568}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1372461159}
+  - {fileID: 1751928191}
+  - {fileID: 214104490}
+  - {fileID: 387012834}
+  - {fileID: 1752184948}
+  - {fileID: 2067005233}
+  - {fileID: 685138882}
+  - {fileID: 2000751600}
+  - {fileID: 416374830}
+  - {fileID: 390635477}
+  - {fileID: 608136937}
+  - {fileID: 1082519376}
+  - {fileID: 1645065084}
+  - {fileID: 1414324491}
+  - {fileID: 1851873249}
+  - {fileID: 1455325840}
+  - {fileID: 2060031960}
+  - {fileID: 636746891}
+  - {fileID: 19343377}
+  - {fileID: 47563201}
+  - {fileID: 1836470906}
+  - {fileID: 131359883}
+  m_Father: {fileID: 475622503}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &20337570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20337568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &20337571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20337568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
 --- !u!1 &20452860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5471,6 +5666,117 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &47563200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 47563201}
+  - component: {fileID: 47563204}
+  - component: {fileID: 47563203}
+  - component: {fileID: 47563202}
+  m_Layer: 0
+  m_Name: 1 (18)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &47563201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47563200}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &47563202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47563200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &47563203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47563200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &47563204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47563200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Sure... I\u2019ll see what I can give you.\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1836470905}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &49434524
 GameObject:
   m_ObjectHideFlags: 0
@@ -16636,6 +16942,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 131275122}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &131359882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131359883}
+  - component: {fileID: 131359886}
+  - component: {fileID: 131359885}
+  - component: {fileID: 131359884}
+  m_Layer: 0
+  m_Name: 1 (20)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &131359883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131359882}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131359884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131359882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &131359885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131359882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &131359886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131359882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'Okay...
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 0
+  nextDialogue: {fileID: 0}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 0
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &131934559
 GameObject:
   m_ObjectHideFlags: 0
@@ -23963,6 +24382,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
   m_PrefabInstance: {fileID: 2041105810}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &187762706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187762710}
+  - component: {fileID: 187762709}
+  - component: {fileID: 187762708}
+  - component: {fileID: 187762707}
+  m_Layer: 0
+  m_Name: 1 (15)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &187762707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187762706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &187762708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187762706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &187762709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187762706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - <i>(That phrase... I think it could be a key to something...)</i>
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 300146707}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &187762710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187762706}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &188072215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27848,6 +28378,117 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4036036115289433780, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 727292745}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &214104489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214104490}
+  - component: {fileID: 214104493}
+  - component: {fileID: 214104492}
+  - component: {fileID: 214104491}
+  m_Layer: 0
+  m_Name: 1 (1)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &214104490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214104489}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214104491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214104489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &214104492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214104489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &214104493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214104489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Yep! I\u2019m talking to you!\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 387012833}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &214607621 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 558018613006898524, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -33235,6 +33876,123 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 23c70fab-2538-47a2-b63d-bd4d5379da51
+--- !u!1 &265291182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265291186}
+  - component: {fileID: 265291185}
+  - component: {fileID: 265291184}
+  - component: {fileID: 265291183}
+  m_Layer: 0
+  m_Name: 1 (2)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &265291183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265291182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &265291184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265291182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &265291185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265291182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<SFX_anika_giggles> <i>IT\u2019S THE GREAT SE\xD1OR ROMMEL\u2019S!</i>\r"
+    - "Oh, thank you\u2014 THANK YOU so much for finding this gem. I will surely
+      treasure it and bury it with me underground when my time comes."
+    - 'You should be named a hero of Giyala. At least...in my historical memory.
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1453288137}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove:
+  - L3 Rommel's Locket
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &265291186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265291182}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &265994352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5180201318165665747, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -38282,6 +39040,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2736fa2f-2db3-422d-90c3-ecd8793516fc
+--- !u!1 &305180941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305180945}
+  - component: {fileID: 305180944}
+  - component: {fileID: 305180943}
+  - component: {fileID: 305180942}
+  m_Layer: 0
+  m_Name: 1 (11)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &305180942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305180941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &305180943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305180941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &305180944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305180941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - Well, that locket does have him in it. They must have been close.
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 2060375290}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &305180945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305180941}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305338002
 GameObject:
   m_ObjectHideFlags: 0
@@ -40114,6 +40983,122 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 326087072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &326203792
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 946784266}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: Default Invalid Interact (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willStopMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "<i>(Jeez... Even the smell? The level of determination she has is crazy.
+        Well, she must be following her idol\u2019s footsteps after all.)</i>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: <i>(I should look for something more important than this, I guess.)</i>
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: id
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &326203793 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 326203792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &326203794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 326203792}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &326373872 stripped
 GameObject:
@@ -49179,6 +50164,117 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1586533369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &387012833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 387012834}
+  - component: {fileID: 387012837}
+  - component: {fileID: 387012836}
+  - component: {fileID: 387012835}
+  m_Layer: 0
+  m_Name: 1 (2)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &387012834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387012833}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387012835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387012833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &387012836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387012833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &387012837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387012833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Well, I, uh... He was just telling me about this statue\u2014\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1752184947}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &388935698
 GameObject:
   m_ObjectHideFlags: 0
@@ -49636,6 +50732,118 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 390545816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &390635476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 390635477}
+  - component: {fileID: 390635480}
+  - component: {fileID: 390635479}
+  - component: {fileID: 390635478}
+  m_Layer: 0
+  m_Name: 1 (8)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &390635477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390635476}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &390635478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390635476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &390635479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390635476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &390635480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390635476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "What exactly do you know that the tour guide doesn\u2019t? You might just
+      be lying to\u2014I don\u2019t know\u2014rob me.\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 608136936}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &392224216
 GameObject:
   m_ObjectHideFlags: 0
@@ -51975,6 +53183,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 727cf970-1251-4305-9a01-f1b2a1860f90
+--- !u!1 &409621158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 409621162}
+  - component: {fileID: 409621161}
+  - component: {fileID: 409621160}
+  - component: {fileID: 409621159}
+  m_Layer: 0
+  m_Name: 1 (9)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &409621159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409621158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &409621160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409621158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &409621161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409621158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "I\u2019ve heard of their leadership going hand in hand from Liez\u2014 I-I
+      mean the tour guide... That Giyala was in a stable position when they were
+      leading together.\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 819172190}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &409621162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409621158}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411643065 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 672892619309118441, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
@@ -52470,6 +53791,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5733273902596726346, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1036865644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &416374829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 416374830}
+  - component: {fileID: 416374833}
+  - component: {fileID: 416374832}
+  - component: {fileID: 416374831}
+  m_Layer: 0
+  m_Name: 1 (7)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &416374830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416374829}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416374831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416374829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &416374832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416374829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &416374833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416374829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Don\u2019t be one of them! Historical revisionism is going to be a threat
+      one day! The truth must remain in the right hands! Especially the legacy of
+      the great Se\xF1or Rommel!\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 390635476}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &417074343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58215,11 +59649,15 @@ PrefabInstance:
       objectReference: {fileID: 1594033574078802709, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "(There\u2019s so many people here...)\r\n"
+      value: "<i>(There\u2019s so many people here...)</i>\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: "<i>(Ugh... Can\u2019t... squeeze... through..! Man.)</i>\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58845,6 +60283,120 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &471759429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471759433}
+  - component: {fileID: 471759432}
+  - component: {fileID: 471759431}
+  - component: {fileID: 471759430}
+  m_Layer: 0
+  m_Name: 1 (14)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &471759430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471759429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &471759431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471759429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &471759432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471759429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'I believe I will be occupied for years to come because of this token! And
+      you have your reward! Remember: <b>No matter the price!</b>
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 187762706}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &471759433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471759429}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &471812850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -59909,13 +61461,13 @@ PrefabInstance:
       addedObject: {fileID: 1982764901}
     - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 946784265}
-    - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1296554570}
     - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1916245915}
+    - targetCorrespondingSourceObject: {fileID: 2185450633699629896, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946784265}
     - targetCorrespondingSourceObject: {fileID: 4642186121084181878, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 448479020}
@@ -59949,6 +61501,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 308197096}
+    - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 20337569}
     - targetCorrespondingSourceObject: {fileID: 687980191022354804, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1849662420}
@@ -61299,7 +62854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2741798054155553635, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: id
-      value: bd087e08-995f-49f3-b7d2-d01f94e66923
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3404549752580450967, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: id
@@ -61312,7 +62867,19 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 300146707}
+      objectReference: {fileID: 1231767094}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.name
+      value: Anika
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -61323,11 +62890,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Santi gives locket to Anika
+      value: '<SFX_anika_gasp> Is that...
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -61340,11 +62909,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playeritemNamesToRemove.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'playeritemNamesToRemove.Array.data[0]'
-      value: L3 Rommel's Locket
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -61352,7 +62921,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231767098}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 265291186}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1453288141}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1999848792}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1694168950}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1804104506}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1189905840}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 731410884}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 409621162}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 819172194}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 305180945}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2060375294}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 821778027}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 471759433}
+    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 187762710}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!1 &487027187 stripped
@@ -74762,6 +76376,121 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1ee12ce0-ae37-43fa-9e6d-f1b30af7fcaa
+--- !u!1 &608136936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 608136937}
+  - component: {fileID: 608136940}
+  - component: {fileID: 608136939}
+  - component: {fileID: 608136938}
+  m_Layer: 0
+  m_Name: 1 (9)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &608136937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608136936}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &608136938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608136936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &608136939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608136936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &608136940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608136936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'What?! No?! '
+    - "Even the great Se\xF1or Rommel did not rob anyone! <i>Except for Se\xF1or
+      Servillano\u2019s trust...and their circle of leaders, but... </i>no, I\u2019m
+      just someone who wants people to learn about the great Se\xF1or Rommel in full
+      authenticity!"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1082519375}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &608199921
 GameObject:
   m_ObjectHideFlags: 0
@@ -82937,6 +84666,120 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 633610755}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &636746890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636746891}
+  - component: {fileID: 636746894}
+  - component: {fileID: 636746893}
+  - component: {fileID: 636746892}
+  m_Layer: 0
+  m_Name: 1 (16)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &636746891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636746890}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &636746892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636746890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &636746893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636746890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &636746894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636746890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(I don\u2019t know if I can trust this girl. She\u2019s being weird.)</i>\r\n"
+    - '<i>(But then again... I need as much information as I can get to help Liezel...)</i>
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 19343376}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &638528636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89438,6 +91281,120 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 30099241-3e7d-4986-a749-86d2bdd456f3
+--- !u!1 &685138881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 685138882}
+  - component: {fileID: 685138885}
+  - component: {fileID: 685138884}
+  - component: {fileID: 685138883}
+  m_Layer: 0
+  m_Name: 1 (5)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &685138882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685138881}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &685138883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685138881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &685138884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685138881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &685138885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685138881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "There, good! Yes, I know about the Disidensya leaders from even before the
+      war, especially the great Se\xF1or Rommel!\r\n"
+    - " I mean she\u2019s not wrong at all, but she didn\u2019t even tell the story
+      about our great Se\xF1or Rommel\u2014only his descendants! People these days...\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 2000751599}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!114 &685251560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95405,6 +97362,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 05ef75d3-e402-40db-b5c1-2913c97ce8e8
+--- !u!1 &731410880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731410884}
+  - component: {fileID: 731410883}
+  - component: {fileID: 731410882}
+  - component: {fileID: 731410881}
+  m_Layer: 0
+  m_Name: 1 (8)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &731410881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731410880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &731410882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731410880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &731410883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731410880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Mhm yes... He\u2019s mentioned it on numerous occasions... That was the great
+      distinction of the great Se\xF1or Rommel to his fellow leaders, especially
+      Se\xF1or Servillano, his most trusted friend.\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 409621158}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &731410884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731410880}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &731797595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 558018613006898524, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -103692,6 +105762,119 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
   m_PrefabInstance: {fileID: 817818372}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &819172190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 819172194}
+  - component: {fileID: 819172193}
+  - component: {fileID: 819172192}
+  - component: {fileID: 819172191}
+  m_Layer: 0
+  m_Name: 1 (10)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &819172191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819172190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &819172192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819172190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &819172193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819172190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Some people say the great Se\xF1or Rommel and Se\xF1or Servillano had a big
+      misunderstanding that caused them to see each other as enemies in the end.
+      It\u2019s easy to believe that because of what happened.\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 305180941}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &819172194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819172190}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &819567278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3212531155966241246, guid: cab41bf5f90644f71a832ee33f684ad4, type: 3}
@@ -103818,6 +106001,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 56c05747-369c-4b7c-816a-55022be796c2
+--- !u!1 &821778023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 821778027}
+  - component: {fileID: 821778026}
+  - component: {fileID: 821778025}
+  - component: {fileID: 821778024}
+  m_Layer: 0
+  m_Name: 1 (13)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &821778024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821778023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &821778025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821778023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &821778026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821778023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'Um, what?
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 471759429}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &821778027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821778023}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &822060419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117265,13 +119561,63 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.38
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 1402032359}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Anika
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: '<SFX_anika_gasp> What is this?!
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2833380859695222293, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
-      value: fa4c2df8-ab98-43ca-bfad-4214f2a85b6c
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3042647558974865226, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
-      value: 61739854-9925-4cbc-b539-be7fd825154b
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 946784267}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Anika
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -117279,8 +119625,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'When player interacts with Anika, #1 Rommel Fan, her dialogue suggests
-        knowing a secret about Rommel (or something similar) '
+      value: 'Remember your priorities...
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -117368,11 +119715,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8639218030926213521, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
-      value: 6934ded5-2159-4c08-99a9-19893a64e5ef
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 1250406900}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: ...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1250406899}
+    - targetCorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1480949697}
+    - targetCorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1402032358}
+    - targetCorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270986643}
+    - targetCorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 326203793}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
@@ -117402,6 +119796,16 @@ PrefabInstance:
 --- !u!4 &946784265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 946784264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &946784266 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 946784264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &946784267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
   m_PrefabInstance: {fileID: 946784264}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &948187356
@@ -130798,6 +133202,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1082312056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1082519375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1082519376}
+  - component: {fileID: 1082519379}
+  - component: {fileID: 1082519378}
+  - component: {fileID: 1082519377}
+  m_Layer: 0
+  m_Name: 1 (10)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1082519376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082519375}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1082519377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082519375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1082519378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082519375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1082519379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082519375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(This guy\u2019s followers are just as suspicious as him...)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1645065083}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &1082530896
 GameObject:
   m_ObjectHideFlags: 0
@@ -141762,6 +144277,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1728874648817772044, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1287562268}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1189905836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189905840}
+  - component: {fileID: 1189905839}
+  - component: {fileID: 1189905838}
+  - component: {fileID: 1189905837}
+  m_Layer: 0
+  m_Name: 1 (7)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1189905837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189905836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1189905838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189905836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1189905839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189905836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<b>\u201CNo matter the price...\u201D</b>\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 731410880}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &1189905840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189905836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1192540374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -146942,6 +149568,120 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1467221505505082189, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1230985941}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1231767094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1231767098}
+  - component: {fileID: 1231767097}
+  - component: {fileID: 1231767096}
+  - component: {fileID: 1231767095}
+  m_Layer: 0
+  m_Name: 1 (1)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1231767095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231767094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1231767096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231767094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1231767097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231767094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - ' ... Hm?
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 265291182}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove:
+  - L3 Rommel's Locket
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &1231767098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231767094}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1231904198
 GameObject:
   m_ObjectHideFlags: 0
@@ -148776,6 +151516,121 @@ MonoBehaviour:
   isDone: 1
   beingRevised: 0
   notes: Add other notes here.
+--- !u!1001 &1250406898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 946784266}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: '[NPC]-D1 (1)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 1480949698}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Anika
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willStopMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "The great Se\xF1or Rommel is watching you from afar...\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: It stops the Protag, and usually spawns Protag Dialogue too.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: id
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &1250406899 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1250406898}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1250406900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1250406898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1255035944
 GameObject:
   m_ObjectHideFlags: 0
@@ -151063,6 +153918,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: b48df383-b79d-4375-a46e-c29b3991336b
+--- !u!1001 &1270986642
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 946784266}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: Default Invalid Interact (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 326203794}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Anika
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willStopMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "No, this doesn\u2019t smell anything like the great Se\xF1or Rommel!\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: id
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &1270986643 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1270986642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1270986644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1270986642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1271195140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4194965526789461352, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
@@ -161546,6 +164512,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: aaabc135-2806-4f57-9306-9e57dec3ef76
+--- !u!1001 &1372461158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 20337569}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 79.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_Name
+      value: Dialogue Zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 1751928190}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.name
+      value: Anika
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -3357108826423129954, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "What were you doing with that Tour Guide in front of our great Se\xF1or
+        Rommel?\r\n"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+--- !u!4 &1372461159 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+  m_PrefabInstance: {fileID: 1372461158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1372485199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165677,6 +168742,117 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parallaxCamera: {fileID: 1910284718}
   targetVirtualCamObject: {fileID: 1401833215}
+--- !u!1001 &1402032357
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 946784266}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: Default Invalid Interact (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 1270986644}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willStopMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playClosingAnimation
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "Isn\u2019t this what you need?\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: id
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &1402032358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1402032357}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1402032359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1402032357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1403110654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166581,6 +169757,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: d853721b-1e6a-48f1-a62f-21c0e365d7f1
+--- !u!1 &1414324490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414324491}
+  - component: {fileID: 1414324494}
+  - component: {fileID: 1414324493}
+  - component: {fileID: 1414324492}
+  m_Layer: 0
+  m_Name: 1 (12)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1414324491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414324490}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414324492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414324490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1414324493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414324490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1414324494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414324490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<i>(This guy\u2019s followers are just as suspicious as him...)</i>"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1851873248}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &1414882369 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -171162,6 +174449,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: f1dd2444-96de-4375-bbc9-e05747f5e900
+--- !u!1 &1453288137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453288141}
+  - component: {fileID: 1453288140}
+  - component: {fileID: 1453288139}
+  - component: {fileID: 1453288138}
+  m_Layer: 0
+  m_Name: 1 (3)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1453288138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453288137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1453288139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453288137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1453288140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453288137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'Haha... No, thank you.
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1999848788}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &1453288141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453288137}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1454200221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -171545,6 +174945,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0e83c674-5c25-4c8e-b1b4-b8151eafb5a2
+--- !u!1 &1455325839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1455325840}
+  - component: {fileID: 1455325843}
+  - component: {fileID: 1455325842}
+  - component: {fileID: 1455325841}
+  m_Layer: 0
+  m_Name: 1 (14)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1455325840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455325839}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455325841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455325839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1455325842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455325839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1455325843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455325839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<SFX_santi_sigh> <i>(Isn\u2019t it easier to just refer to him as Rommel?)</i>\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 2060031959}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &1456874102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173614,6 +177125,114 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1f9a3622-a6e1-4dc8-99de-6ade6fd41b0c
+--- !u!1001 &1480949696
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 946784266}
+    m_Modifications:
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: m_Name
+      value: '[NPC]-D2 (1)'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willFocus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willStopMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "<i>(I better look for something to trade with her... I\u2019m getting
+        more curious about what she actually has to offer.)</i>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: id
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!4 &1480949697 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1480949696}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1480949698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1480949696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1481278722
 GameObject:
   m_ObjectHideFlags: 0
@@ -190130,12 +193749,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1645617392}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.name
+      value: Tour Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: playClosingAnimation
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -192567,6 +196202,118 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1644612454}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1645065083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645065084}
+  - component: {fileID: 1645065087}
+  - component: {fileID: 1645065086}
+  - component: {fileID: 1645065085}
+  m_Layer: 0
+  m_Name: 1 (11)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1645065084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645065083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645065085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645065083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1645065086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645065083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1645065087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645065083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "I only follow the footsteps of the great Se\xF1or Rommel, young giyalan...
+      If you wish to know more about him, I can tell you.\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1414324490}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!4 &1645370846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 529777271901045648, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -198609,6 +202356,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 78c9e702-fba7-4713-a983-52934e9e2bbd
+--- !u!1 &1694168946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1694168950}
+  - component: {fileID: 1694168949}
+  - component: {fileID: 1694168948}
+  - component: {fileID: 1694168947}
+  m_Layer: 0
+  m_Name: 1 (5)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1694168947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694168946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1694168948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694168946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1694168949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694168946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'Exclusive phrases? Is it that special?
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1804104502}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &1694168950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694168946}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694947846
 GameObject:
   m_ObjectHideFlags: 0
@@ -204555,6 +208415,236 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 750040a2-42af-45bd-892b-f2cf40947b22
+--- !u!1 &1751928190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751928191}
+  - component: {fileID: 1751928194}
+  - component: {fileID: 1751928193}
+  - component: {fileID: 1751928192}
+  m_Layer: 0
+  m_Name: 1
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1751928191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751928190}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751928192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751928190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1751928193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751928190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1751928194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751928190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - 'Excuse me?
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 214104489}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!1 &1752184947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752184948}
+  - component: {fileID: 1752184951}
+  - component: {fileID: 1752184950}
+  - component: {fileID: 1752184949}
+  m_Layer: 0
+  m_Name: 1 (3)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1752184948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752184947}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1752184949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752184947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1752184950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752184947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1752184951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752184947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "This statue? You don\u2019t know about our great Se\xF1or Rommel? How come?
+      He literally saved Giyala. Even Se\xF1or Servillano couldn\u2019t match his
+      wits. \r\nSanti: Huh. You know about Servillano too?\r\n"
+    - 'Address them properly! Have you no respect for the greatest leaders of our
+      country?
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 2067005232}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &1755239728
 GameObject:
   m_ObjectHideFlags: 0
@@ -209117,6 +213207,125 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 8f6875c4-72ab-4ec9-861b-42ad53103472
+--- !u!1 &1804104502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804104506}
+  - component: {fileID: 1804104505}
+  - component: {fileID: 1804104504}
+  - component: {fileID: 1804104503}
+  m_Layer: 0
+  m_Name: 1 (6)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1804104503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804104502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1804104504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804104502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1804104505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804104502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "I swear, people have forgotten the significance of the great Se\xF1or Rommel\u2019s
+      finest words...\r\n"
+    - "If there was one ideology that marks the great Se\xF1or Rommel, it is the
+      fact that he clings to whatever he thinks is right. No excuses or detours.
+      Straight towards his goals.\r\n"
+    - 'If it was for the future of Giyala that he believed, he would have dropped
+      everything. <b>No matter the price.</b>
+
+'
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1189905836}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &1804104506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804104502}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805066339
 GameObject:
   m_ObjectHideFlags: 0
@@ -212440,6 +216649,118 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1836151829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1836470905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1836470906}
+  - component: {fileID: 1836470909}
+  - component: {fileID: 1836470908}
+  - component: {fileID: 1836470907}
+  m_Layer: 0
+  m_Name: 1 (19)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1836470906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836470905}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1836470907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836470905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1836470908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836470905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1836470909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836470905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Treat this as an offering to the great Se\xF1or Rommel and all the gratitude
+      he deserves from this country!"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 131359882}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &1837028363
 GameObject:
   m_ObjectHideFlags: 0
@@ -213762,19 +218083,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Alright, here we are!
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[1]'
       value: "The museum is dedicated to keeping records of the <i>Lapuz Family</i>,
         who have contributed greatly to Giyala\u2019s growth ever since the end of
         the Kulonium War."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: He was the leader of the Disidensiyang Giyala, who were local heroes
+        who protected Giyalans during the war.
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
@@ -214323,6 +218643,118 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: c95def10-c3e7-4876-9be1-ef662a048e8f
+--- !u!1 &1851873248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1851873249}
+  - component: {fileID: 1851873252}
+  - component: {fileID: 1851873251}
+  - component: {fileID: 1851873250}
+  m_Layer: 0
+  m_Name: 1 (13)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1851873249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851873248}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1851873250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851873248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1851873251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851873248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1851873252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851873248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "<shake> <i>Clever!</i> You\u2019re absorbing the intelligence and wit of the
+      great Se\xF1or Rommel...\r\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1455325839}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!114 &1854491397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234180,6 +238612,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 5c48d42d-5713-447a-b112-f7a79e56a880
+--- !u!1 &1999848788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999848792}
+  - component: {fileID: 1999848791}
+  - component: {fileID: 1999848790}
+  - component: {fileID: 1999848789}
+  m_Layer: 0
+  m_Name: 1 (4)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1999848789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999848788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1999848790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999848788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &1999848791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999848788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Anywho! As a reward for your invaluable contribution to our history, I will
+      now share with you one of the great Se\xF1or Rommel\u2019s favorite and exclusive
+      phrases...\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 1694168946}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &1999848792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999848788}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2000199700
 GameObject:
   m_ObjectHideFlags: 0
@@ -234296,6 +238841,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: dcc26f06-dd1a-4d3a-b142-667e63f7d104
+--- !u!1 &2000751599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000751600}
+  - component: {fileID: 2000751603}
+  - component: {fileID: 2000751602}
+  - component: {fileID: 2000751601}
+  m_Layer: 0
+  m_Name: 1 (6)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2000751600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000751599}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2000751601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000751599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &2000751602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000751599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &2000751603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000751599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "I didn\u2019t really ask for his story...\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 416374829}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1 &2001454411
 GameObject:
   m_ObjectHideFlags: 0
@@ -241801,6 +246457,231 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 9d7407ed-54e6-46f3-9041-19b5211a3f83
+--- !u!1 &2060031959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2060031960}
+  - component: {fileID: 2060031963}
+  - component: {fileID: 2060031962}
+  - component: {fileID: 2060031961}
+  m_Layer: 0
+  m_Name: 1 (15)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2060031960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060031959}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2060031961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060031959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &2060031962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060031959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &2060031963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060031959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Okay. Here\u2019s the catch. Give me something as worthy as the great Se\xF1or
+      Rommel and I will give you a part of his story that no one in this town will
+      know these days...\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 636746890}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!1 &2060375290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2060375294}
+  - component: {fileID: 2060375293}
+  - component: {fileID: 2060375292}
+  - component: {fileID: 2060375291}
+  m_Layer: 0
+  m_Name: 1 (12)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2060375291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060375290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &2060375292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060375290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &2060375293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060375290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.024
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "Huh... Interesting... Is Se\xF1or Servillano the reason why the great Se\xF1or
+      Rommel had no children?\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 821778023}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
+--- !u!4 &2060375294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060375290}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487027188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2063365588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242152,6 +247033,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
   m_PrefabInstance: {fileID: 2064025800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2067005232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067005233}
+  - component: {fileID: 2067005236}
+  - component: {fileID: 2067005235}
+  - component: {fileID: 2067005234}
+  m_Layer: 0
+  m_Name: 1 (4)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2067005233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067005232}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2067005234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067005232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &2067005235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067005232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &2067005236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067005232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - "...Se\xF1or Servillano then.\r\n"
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 685138881}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!114 &2068190096
 MonoBehaviour:
   m_ObjectHideFlags: 0
