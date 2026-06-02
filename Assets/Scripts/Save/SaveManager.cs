@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System.IO;
 using Unity.Cinemachine;
 using NaughtyAttributes;
 
 public class SaveManager : MonoBehaviour
 {
-    [SerializeField, ReadOnly] public static bool load_on_start = false;
-
     [Header("Constants")]
     [HideInInspector] private const string SAVE_KEY = "SAVE_DATA";
     [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
@@ -16,6 +15,7 @@ public class SaveManager : MonoBehaviour
     [Tooltip("Keybinds may not work properly."), SerializeField] private bool allowKeybinds;
     [SerializeField] private KeyCode saveKey = KeyCode.Alpha6;
     [SerializeField] private KeyCode loadKey = KeyCode.Alpha7;
+    [SerializeField] private KeyCode writeKey = KeyCode.Alpha8;
 
     [Header("References")]
     [HideInInspector] private AudioSource sfxSource;
@@ -31,14 +31,21 @@ public class SaveManager : MonoBehaviour
     [SerializeField] private AudioClip saveSFX;
     [SerializeField] private AudioClip loadSFX;
 
+    [Header("Save Stuff")]
+    [SerializeField, ReadOnly] public static bool load_on_start = false;
+    [SerializeField, ReadOnly] public static bool read_load_on_start = false;
+    [SerializeField, ReadOnly] public static TextAsset checkpointFile;
+
     private void Awake()
     {
         sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
         if (load_on_start) LoadGame();
+        if (read_load_on_start) ReadAndLoadSaveData(checkpointFile);
 
         //if (SettingsInfo.fromContinue) LoadGame(); -> will temporarily replace this with the static shi on top
     }
 
+    // Main Save/Load Functions ------------------------------------------------
     public void SaveGame()
     {
         SaveData data = new();
@@ -116,6 +123,88 @@ public class SaveManager : MonoBehaviour
         
     }
 
+    // Extra Save/Load Functions -----------------------------------------------
+    public void WriteSaveData()
+    {
+        SaveData data = new();
+
+        // Physical Objects
+        data.objectStates = new List<ObjectSaveData>();
+        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None)) data.objectStates.Add(obj.CaptureState());
+
+        // Logical/Data
+        data.players = new List<PlayerSaveData>();
+        data.players.Add(CapturePlayer(pastPlayerInteract, pastPlayerMove, Timeline.Past));
+        data.players.Add(CapturePlayer(presentPlayerInteract, presentPlayerMove, Timeline.Present));
+
+        // Progression Flags
+        data.timelineUnlocked = timelineManager.timelineUnlocked;
+        data.currentTimeline = timelineManager.currentTimeline;
+
+        string folderPath = Application.dataPath + "/Scripts/Save/Checkpoints";
+        if (!Directory.Exists(folderPath)) Debug.LogError("Folder named " + folderPath + " doesn't exist.");
+
+        string filePath = folderPath + "/[CHECKPOINT_NAME].json";
+        string json = JsonUtility.ToJson(data);
+
+        File.WriteAllText(filePath, json);
+
+        Debug.Log("Checkpoint saved!");
+
+        #if UNITY_EDITOR
+            UnityEditor.AssetDatabase.Refresh();
+        #endif
+    }
+
+    public void ReadAndLoadSaveData(TextAsset jsonFile)
+    {
+        // Debug things for safety check
+        if (jsonFile == null)
+        {
+            Debug.LogError("No checkpoint file!");
+            return;
+        }
+        Debug.Log("Loading Checkpoint : " + jsonFile.name);
+
+        string json = jsonFile.text;
+        SaveData data = JsonUtility.FromJson<SaveData>(json);
+
+        // Set up Camera Stuff
+        var brain = Camera.main.GetComponent<CinemachineBrain>();
+        var originalBlend = brain.DefaultBlend;
+        brain.DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f);
+
+        // Physical Objects
+        foreach (ObjectSaveData saved in data.objectStates)
+        {
+            ObjectState obj = FindObjByID(saved.objectID);
+            if (obj != null) obj.RestoreState(saved);
+        }
+
+        // Logical/Data
+        foreach (PlayerSaveData playerSaveData in data.players)
+        {
+            if (playerSaveData.protagTimeline == Timeline.Past) RestorePlayer(pastPlayerInteract, pastPlayerMove, playerSaveData);
+            else if (playerSaveData.protagTimeline == Timeline.Present) RestorePlayer(presentPlayerInteract, presentPlayerMove, playerSaveData);
+        }
+
+        // Progression Flags
+        timelineManager.timelineUnlocked = data.timelineUnlocked;
+        timelineManager.currentTimeline = data.currentTimeline;
+
+        // Then Camera Cut
+        StartCoroutine(RestoreBlend(brain, originalBlend));
+
+        // Debug
+        Debug.Log("Checkpoint successful! Skipped to " + jsonFile.name);
+    }
+
+    public void SetCheckpointFile(TextAsset file)
+    {
+        checkpointFile = file;
+    }
+
+    // Other Helper Functions --------------------------------------------------
     ObjectState FindObjByID(string id)
     {
         foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None))
@@ -198,8 +287,15 @@ public class SaveManager : MonoBehaviour
         load_on_start = val;
     }
 
+    public void SetReadLoadOnStart(bool val)
+    {
+        read_load_on_start = val;
+    }
+
     private void Update()
     {
+        if (Input.GetKeyDown(writeKey)) WriteSaveData();
+
         if (!allowKeybinds) return;
 
         if (Input.GetKeyDown(saveKey)) SaveGame();
