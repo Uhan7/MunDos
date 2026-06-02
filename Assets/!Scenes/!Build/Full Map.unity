@@ -2237,8 +2237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -2260,7 +2260,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 47563200}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -2312,6 +2312,8 @@ Transform:
   - {fileID: 214104490}
   - {fileID: 387012834}
   - {fileID: 1752184948}
+  - {fileID: 114901319}
+  - {fileID: 232585249}
   - {fileID: 2067005233}
   - {fileID: 685138882}
   - {fileID: 2000751600}
@@ -5740,8 +5742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -5750,7 +5752,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Sure... I\u2019ll see what I can give you.\r\n"
+    - "Sure... I\u2019ll see what I can give you."
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -5761,7 +5763,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1836470905}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -15163,6 +15165,117 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+--- !u!1 &114901318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114901319}
+  - component: {fileID: 114901322}
+  - component: {fileID: 114901321}
+  - component: {fileID: 114901320}
+  m_Layer: 0
+  m_Name: 1 (21)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &114901319
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114901318}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114901320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114901318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &114901321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114901318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &114901322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114901318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Santi
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - Huh. You know about Servillano too?
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 232585248}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 1
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &118125065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17022,8 +17135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -4670315504612068207, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -17032,9 +17145,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'Okay...
-
-'
+    - Okay...
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -17045,7 +17156,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 0}
   nextDialogueTime: 0.5
   playClosingAnimation: 0
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -24411,8 +24522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -24432,7 +24543,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 300146707}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -28393,8 +28504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -28414,7 +28525,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 387012833}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -30051,6 +30162,118 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5399668924918596102, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
   m_PrefabInstance: {fileID: 623050333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &232585248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232585249}
+  - component: {fileID: 232585252}
+  - component: {fileID: 232585251}
+  - component: {fileID: 232585250}
+  m_Layer: 0
+  m_Name: 1 (22)
+  m_TagString: Dialogue Zone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &232585249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232585248}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 77.6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 20337569}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232585250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232585248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &232585251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232585248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+--- !u!114 &232585252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232585248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+    name: Anika
+    soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
+    audioPitchOffset: 0
+    font: {fileID: 0}
+    textSpeed: 0.022
+    textPunctSpeed: 0.18
+    lettersUntilSFX: 3
+    sentences:
+    - Address them properly! Have you no respect for the greatest leaders of our
+      country?
+  startOnEnable: 1
+  startFromTrigger: 0
+  isSign: 0
+  willFocus: 1
+  willHideUI: 0
+  deactivateAfter: 1
+  linksToOtherDialogue: 1
+  nextDialogue: {fileID: 2067005232}
+  nextDialogueTime: 0.5
+  playClosingAnimation: 2
+  mainCharacterIsSpeaking: 0
+  objectsToActivateAfter: []
+  objectsToDeactivateAfter: []
+  repeatable: 0
+  itemRepeatable: 0
+  conditionalObjectsToCheckAfter: []
+  playeritemNamesToRemove: []
+  playeritemsToGive: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter: []
+  dialogueIsTriggered: 0
+  alreadyActivatedObjects: 0
+  alreadyDeactivatedObjects: 0
+  alreadyCheckedConditional: 0
+  alreadyRemovedPlayeritems: 0
+  alreadyGavePlayeritems: 0
 --- !u!1001 &233315704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33967,8 +34190,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -3357108826423129954, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -33977,12 +34200,10 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<SFX_anika_giggles> <i>IT\u2019S THE GREAT SE\xD1OR ROMMEL\u2019S!</i>\r"
-    - "Oh, thank you\u2014 THANK YOU so much for finding this gem. I will surely
-      treasure it and bury it with me underground when my time comes."
-    - 'You should be named a hero of Giyala. At least...in my historical memory.
-
-'
+    - "<SFX_anika_giggles><size=\"30\"><i>IT\u2019S THE GREAT SE\xD1OR ROMMEL\u2019S!</i><size=\"26\">\r"
+    - Oh, thank you- THANK YOU so much for finding this gem. I will surely treasure
+      it and bury it with me underground when my time comes.
+    - You should be named a hero of Giyala. At least...in my historical memory.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -33993,7 +34214,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1453288137}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -39131,8 +39352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -39152,7 +39373,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 2060375290}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -41083,7 +41304,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
@@ -41098,7 +41319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -48888,9 +49109,17 @@ PrefabInstance:
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character
       value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
       objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -50297,8 +50526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -50307,7 +50536,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Well, I, uh... He was just telling me about this statue\u2014\r\n"
+    - 'Well, I, uh... She was just telling me about this statue-
+
+'
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -50318,7 +50549,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1752184947}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -50865,8 +51096,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -860332198591883356, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -50876,7 +51107,7 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "What exactly do you know that the tour guide doesn\u2019t? You might just
-      be lying to\u2014I don\u2019t know\u2014rob me.\r\n"
+      be lying to\u2014<i>I don\u2019t know</i>\u2014rob me.\r\n"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -50887,7 +51118,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 608136936}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -53306,8 +53537,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -53316,9 +53547,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "I\u2019ve heard of their leadership going hand in hand from Liez\u2014 I-I
-      mean the tour guide... That Giyala was in a stable position when they were
-      leading together.\r\n"
+    - "I\u2019ve heard of their leadership going hand in hand from Liez- I- I mean
+      the tour guide... That Giyala was in a stable position when they were leading
+      together.\r"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -53329,7 +53560,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 819172190}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -53929,8 +54160,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -53940,8 +54171,9 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "Don\u2019t be one of them! Historical revisionism is going to be a threat
-      one day! The truth must remain in the right hands! Especially the legacy of
-      the great Se\xF1or Rommel!\r\n"
+      one day! "
+    - "The truth must remain in the right hands! Especially the legacy of the great
+      Se\xF1or Rommel!"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -53952,7 +54184,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 390635476}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -60374,8 +60606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -60385,9 +60617,7 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - 'I believe I will be occupied for years to come because of this token! And
-      you have your reward! Remember: <b>No matter the price!</b>
-
-'
+      you have your reward! Remember: <b>No matter the price!</b>'
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -60398,7 +60628,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 187762706}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -62904,11 +63134,11 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -62916,6 +63146,10 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playClosingAnimation
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -62927,9 +63161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: '<SFX_anika_gasp> Is that...
-
-'
+      value: <SFX_anika_gasp>Is that...
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -76636,8 +76868,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -76646,11 +76878,11 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'What?! No?! '
+    - 'What!? No!? '
     - "Even the great Se\xF1or Rommel did not rob anyone! <i>Except for Se\xF1or
-      Servillano\u2019s trust...and their circle of leaders, but... </i>no, I\u2019m
-      just someone who wants people to learn about the great Se\xF1or Rommel in full
-      authenticity!"
+      Servillano\u2019s trust... and their circle of leaders, but... </i>"
+    - "No, I\u2019m just someone who wants people to learn about the great Se\xF1or
+      Rommel in full authenticity!"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -76661,7 +76893,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1082519375}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -81351,7 +81583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.46229
+      value: -110.44444
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -84930,8 +85162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -84954,7 +85186,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 19343376}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -91575,8 +91807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -91586,9 +91818,10 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "There, good! Yes, I know about the Disidensya leaders from even before the
-      war, especially the great Se\xF1or Rommel!\r\n"
-    - " I mean she\u2019s not wrong at all, but she didn\u2019t even tell the story
-      about our great Se\xF1or Rommel\u2014only his descendants! People these days...\r\n"
+      war, especially the great Se\xF1or Rommel!"
+    - "I mean she\u2019s not wrong at all, but she didn\u2019t even tell the story
+      about our great Se\xF1or Rommel\u2014only his descendants! <i>People these
+      days...</i>\r"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -91599,7 +91832,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 2000751599}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -97791,8 +98024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -97803,7 +98036,7 @@ MonoBehaviour:
     sentences:
     - "Mhm yes... He\u2019s mentioned it on numerous occasions... "
     - "That was the great distinction of the great Se\xF1or Rommel to his fellow
-      leaders, especially Se\xF1or Servillano, his most trusted friend.\r\n"
+      leaders, especially Se\xF1or Servillano, his most trusted friend.\r"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -97814,7 +98047,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 409621158}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -100406,14 +100639,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
+      objectReference: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -106200,8 +106437,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -106211,8 +106448,8 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "Some people say the great Se\xF1or Rommel and Se\xF1or Servillano had a big
-      misunderstanding that caused them to see each other as enemies in the end.
-      It\u2019s easy to believe that because of what happened.\r\n"
+      misunderstanding that caused them to see each other as enemies in the end. "
+    - "It\u2019s easy to believe that because of what happened.\r\n"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -106223,7 +106460,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 305180941}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -106439,8 +106676,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: -4670315504612068207, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -106449,9 +106686,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'Um, what?
-
-'
+    - Um, what?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -106462,7 +106697,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 471759429}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -119952,11 +120187,11 @@ PrefabInstance:
     - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -119966,10 +120201,12 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: '<SFX_anika_gasp> What is this?!
-
-'
+      value: <SFX_anika_gasp> What is this?!
       objectReference: {fileID: 0}
     - target: {fileID: 2833380859695222293, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -119990,14 +120227,18 @@ PrefabInstance:
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: playClosingAnimation
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -120005,9 +120246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Remember your priorities...
-
-'
+      value: Remember your priorities...
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -120108,11 +120347,11 @@ PrefabInstance:
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -120123,7 +120362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: mainCharacterIsSpeaking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -133632,8 +133871,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -133653,7 +133892,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1645065083}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -144628,8 +144867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -144638,7 +144877,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<b>\u201CNo matter the price...\u201D</b>\r\n"
+    - "<b>\u201CNo matter the price...\u201D</b>\r"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -144649,7 +144888,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 731410880}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -149933,8 +150172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -149943,9 +150182,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ' ... Hm?
-
-'
+    - ' ... Hm?'
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -149956,7 +150193,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 265291182}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -151890,11 +152127,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -151904,12 +152141,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "The great Se\xF1or Rommel is watching you from afar...\r\n"
+      value: "The great Se\xF1or Rommel is watching you from afar..."
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -154292,11 +154533,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -154304,6 +154545,10 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -164771,11 +165016,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -3357108826423129954, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3357108826423129954, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
@@ -164783,6 +165028,10 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: playClosingAnimation
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -169020,11 +169269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Isn\u2019t this what you need?\r\n"
+      value: "Isn\u2019t this what you need?"
       objectReference: {fileID: 0}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
@@ -170023,8 +170272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -170033,7 +170282,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<i>(This guy\u2019s followers are just as suspicious as him...)</i>"
+    - "Surely, there\u2019s a catch-<cut>"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -170044,7 +170293,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1851873248}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -174719,8 +174968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: 1594033574078802709, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -174742,7 +174991,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1999848788}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -175230,8 +175479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: 1594033574078802709, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -175240,7 +175489,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<SFX_santi_sigh> <i>(Isn\u2019t it easier to just refer to him as Rommel?)</i>\r\n"
+    - "<SFX_santi_sigh><i>(Isn\u2019t it easier to just refer to him as Rommel?)</i>\r\n"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -175251,7 +175500,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 2060031959}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -177376,11 +177625,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 0
@@ -177391,7 +177640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -186939,14 +187188,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
+      objectReference: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -196444,8 +196697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -196454,7 +196707,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "I only follow the footsteps of the great Se\xF1or Rommel, young giyalan...
+    - "I only follow the footsteps of the great Se\xF1or Rommel, young Giyalan...
       If you wish to know more about him, I can tell you.\r\n"
   startOnEnable: 1
   startFromTrigger: 0
@@ -196466,7 +196719,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1414324490}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -202591,8 +202844,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -202601,9 +202854,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'Exclusive phrases? Is it that special?
-
-'
+    - Exclusive phrases? Is it that special?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -202614,7 +202865,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1804104502}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -208852,8 +209103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+    character: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -208875,7 +209126,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 214104489}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -208965,8 +209216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -208977,11 +209228,7 @@ MonoBehaviour:
     sentences:
     - "This statue? You don\u2019t know about our great Se\xF1or Rommel? How come?
       He literally saved Giyala. Even Se\xF1or Servillano couldn\u2019t match his
-      wits. \r\nSanti: Huh. You know about Servillano too?\r\n"
-    - 'Address them properly! Have you no respect for the greatest leaders of our
-      country?
-
-'
+      wits. \r\n"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -208989,10 +209236,10 @@ MonoBehaviour:
   willHideUI: 0
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  nextDialogue: {fileID: 2067005232}
+  nextDialogue: {fileID: 114901318}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -213629,8 +213876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -213640,14 +213887,12 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "I swear, people have forgotten the significance of the great Se\xF1or Rommel\u2019s
-      finest words...\r\n"
+      finest words...\r"
     - "If there was one ideology that marks the great Se\xF1or Rommel, it is the
       fact that he clings to whatever he thinks is right. No excuses or detours.
-      Straight towards his goals.\r\n"
-    - 'If it was for the future of Giyala that he believed, he would have dropped
+      Straight towards his goals.\r"
+    - If it was for the future of Giyala that he believed, he would have dropped
       everything. <b>No matter the price.</b>
-
-'
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -213658,7 +213903,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1189905836}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -217086,8 +217331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -217108,7 +217353,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 131359882}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -219080,8 +219325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -219090,8 +219335,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<shake> <i>Clever!</i> You\u2019re absorbing the intelligence and wit of the
-      great Se\xF1or Rommel...\r\r\n"
+    - "<shake><i>Clever!</i> You\u2019re absorbing the intelligence and wit of the
+      great Se\xF1or Rommel..."
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -219102,7 +219347,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1455325839}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -238962,8 +239207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -238985,7 +239230,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 1694168946}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -239206,8 +239451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -239227,7 +239472,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 416374829}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -246819,8 +247064,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -246831,7 +247076,7 @@ MonoBehaviour:
     sentences:
     - "Okay. Here\u2019s the catch. Give me something as worthy as the great Se\xF1or
       Rommel and I will give you a part of his story that no one in this town will
-      know these days...\r\n"
+      know these days..."
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -246842,7 +247087,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 636746890}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -246917,8 +247162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 5453050337825942149, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -1293936391025474623, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Anika
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -246928,7 +247173,7 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - "Huh... Interesting... Is Se\xF1or Servillano the reason why the great Se\xF1or
-      Rommel had no children?\r\n"
+      Rommel had no children?"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -246939,7 +247184,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 821778023}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
@@ -247395,8 +247640,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: -8301143672777514151, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
-    character2: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character: {fileID: -4670315504612068207, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    character2: {fileID: -4062768105565594953, guid: 4551b9b0ca3f36b498cfea661e9dc542, type: 3}
     name: Santi
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -247405,7 +247650,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "...Se\xF1or Servillano then.\r\n"
+    - "...Se\xF1or Servillano then.\r"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -247416,7 +247661,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 685138881}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
+  mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
   repeatable: 0
