@@ -12340,6 +12340,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f69590387d947b899f69ed1aedead9, type: 3}
+--- !u!114 &91359676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8984515142470249797, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+  m_PrefabInstance: {fileID: 623050333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &94946983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15439,6 +15450,7 @@ MonoBehaviour:
   guideText: The salakab might be of use to solving this mystery.
   passQuestOnActivate: 1
   passQuestOnDeactivate: 0
+  hasBeenActivated: 0
 --- !u!1 &119810939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -78788,6 +78800,10 @@ PrefabInstance:
       propertyPath: id
       value: aefb6175-6e7d-4cd2-ab96-beb9360877b0
       objectReference: {fileID: 0}
+    - target: {fileID: 672289219925290960, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartLoad
+      objectReference: {fileID: 0}
     - target: {fileID: 704818772451149546, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -78830,11 +78846,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 774192783185791475, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 806821265140743213, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -79128,6 +79144,10 @@ PrefabInstance:
       propertyPath: id
       value: 4958c807-20cd-41e0-bf03-222cbab15c05
       objectReference: {fileID: 0}
+    - target: {fileID: 1657609549506981761, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: loadingCircle
+      value: 
+      objectReference: {fileID: 91359676}
     - target: {fileID: 1659887317725467568, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -79172,6 +79192,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1851147604265046748, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 25fc9628eb2bf5e449afac4757507188, type: 2}
     - target: {fileID: 1867228146337779917, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
       value: e72c0b59-c797-4553-9abc-11c07fe83aba
@@ -80312,7 +80336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5066857228442181586, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5069753985328261862, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
@@ -80887,6 +80911,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2112100394}
     - target: {fileID: 6689740832303796706, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: sceneTransitioner
+      value: 
+      objectReference: {fileID: 1765690453}
+    - target: {fileID: 6689740832303796706, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: pastPlayerInteract
       value: 
       objectReference: {fileID: 1667822742}
@@ -81074,6 +81102,10 @@ PrefabInstance:
       propertyPath: id
       value: 55285f31-7df6-4a2a-a2d6-d43efea4a5ae
       objectReference: {fileID: 0}
+    - target: {fileID: 7021343816435611570, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartLoad
+      objectReference: {fileID: 0}
     - target: {fileID: 7023041247002012097, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
       value: c9b59bc2-f7be-4fea-aeec-71df86a86dff
@@ -81129,6 +81161,14 @@ PrefabInstance:
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203534927628435204, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203534927628435204, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7212895057337682574, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -81650,6 +81690,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -7.7393
       objectReference: {fileID: 0}
+    - target: {fileID: 8184228596256574142, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: data
+      value: 
+      objectReference: {fileID: 11400000, guid: 25fc9628eb2bf5e449afac4757507188, type: 2}
     - target: {fileID: 8216325217904314845, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
       value: 304b8e12-4503-4bcd-a10e-e29e9e96a01a
@@ -81847,6 +81891,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2063826154672905881, guid: aa96dc731578742beb561f37ee925e12, type: 3}
     - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_Color.a
+      value: 0.7372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735386932844029477, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -81886,6 +81934,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1587999832}
+    - target: {fileID: 8833811143810839446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8882724850137505948, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
       value: 9402e905-1906-45f1-ab8c-3167a7a616d0
@@ -117840,6 +117892,7 @@ MonoBehaviour:
     we can find."
   passQuestOnActivate: 1
   passQuestOnDeactivate: 0
+  hasBeenActivated: 0
 --- !u!1001 &934515397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150724,6 +150777,7 @@ MonoBehaviour:
     them?"
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &1249826965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153085,6 +153139,7 @@ MonoBehaviour:
     Let\u2019s check out the camp."
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!114 &1265584091 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1674147481024880380, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
@@ -163786,6 +163841,7 @@ MonoBehaviour:
     more about where he found it."
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1368514941 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 574081404839632423, guid: 4386d01b551da4f698264a58afb9317f, type: 3}
@@ -167254,6 +167310,7 @@ MonoBehaviour:
     mixture. This will take a while.
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &1394401943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -182550,6 +182607,7 @@ MonoBehaviour:
     more about where he found it."
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &1515453576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -183442,6 +183500,7 @@ MonoBehaviour:
     Crack the code!
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1521982919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -190171,6 +190230,7 @@ MonoBehaviour:
     the area to crack the code.
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &1584283441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209880,6 +209940,7 @@ MonoBehaviour:
     Santi to continue exploring.
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1771711327
 GameObject:
   m_ObjectHideFlags: 0
@@ -223321,6 +223382,7 @@ MonoBehaviour:
     currently present, but surely oil survives time?
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1884410366
 GameObject:
   m_ObjectHideFlags: 0

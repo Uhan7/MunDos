@@ -1,9 +1,11 @@
-using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
-using System.IO;
-using Unity.Cinemachine;
 using NaughtyAttributes;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+using Unity.Cinemachine;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class SaveManager : MonoBehaviour
     [Header("References")]
     [HideInInspector] private AudioSource sfxSource;
     [SerializeField] private TimelineManager timelineManager;
+    [SerializeField] private SceneTransitioner sceneTransitioner;
     [SerializeField] private PauseMenuManager pauseMenuManagerPast;
     [SerializeField] private PauseMenuManager pauseMenuManagerPresent;
     [SerializeField] private PlayerInteract pastPlayerInteract;
@@ -39,7 +42,7 @@ public class SaveManager : MonoBehaviour
     private void Awake()
     {
         sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
-        if (load_on_start) LoadGame();
+        if (load_on_start) StartCoroutine(LoadGame());
         if (read_load_on_start) ReadAndLoadSaveData(checkpointFile);
 
         //if (SettingsInfo.fromContinue) LoadGame(); -> will temporarily replace this with the static shi on top
@@ -75,7 +78,16 @@ public class SaveManager : MonoBehaviour
 
     }
 
-    public void LoadGame()
+    public void StartLoad()
+    {        
+        if (sceneTransitioner != null) sceneTransitioner.TriggerLoadingScreen();
+
+        StartCoroutine(LoadGame());
+
+    }
+
+    // If smth breaks in the loading, change this back to public void...
+    public IEnumerator LoadGame()
     {
         if (sfxSource != null) sfxSource.PlayOneShot(loadSFX); // Plays first to let players know it loading
 
@@ -83,7 +95,7 @@ public class SaveManager : MonoBehaviour
         if (!PlayerPrefs.HasKey(SAVE_KEY))
         {
             Debug.Log("No Save Found! Loading as normal.");
-            return;
+            yield return null;
         }
 
         SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(SAVE_KEY));
@@ -117,10 +129,13 @@ public class SaveManager : MonoBehaviour
         // Load Debug
         string json = PlayerPrefs.GetString(SAVE_KEY);
         Debug.Log("Game Loaded");
+
+        sceneTransitioner.EndLoadingScreen();
+
         Debug.Log("Loaded save size (chars): " + json.Length);
         Debug.Log("Loaded save size (bytes): " + System.Text.Encoding.UTF8.GetByteCount(json));
 
-        
+        yield return null;
     }
 
     // Extra Save/Load Functions -----------------------------------------------
@@ -299,6 +314,6 @@ public class SaveManager : MonoBehaviour
         if (!allowKeybinds) return;
 
         if (Input.GetKeyDown(saveKey)) SaveGame();
-        if (Input.GetKeyDown(loadKey)) LoadGame();
+        if (Input.GetKeyDown(loadKey)) StartCoroutine(LoadGame());
     }
 }

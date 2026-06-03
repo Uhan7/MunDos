@@ -32,6 +32,20 @@ public class SceneTransitioner : MonoBehaviour
         StartCoroutine(GoToScene());
     }
 
+    public void TriggerLoadingScreen()
+    {
+        transitionObject.SetActive(true);
+        transitionAnimator.SetBool("Fake", true);
+        transitionAnimator.SetBool("Loading", true);
+    }
+
+    public void EndLoadingScreen()
+    {
+        transitionAnimator.SetBool("Loading", false);
+        transitionAnimator.SetBool("Fake", false);
+        transitionObject.SetActive(false);
+    }
+
     private IEnumerator GoToScene()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
