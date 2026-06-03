@@ -34,6 +34,7 @@ public class SceneTransitioner : MonoBehaviour
 
     public void TriggerLoadingScreen()
     {
+        CheckReference();
         transitionObject.SetActive(true);
         transitionAnimator.SetBool("Fake", true);
         transitionAnimator.SetBool("Loading", true);
@@ -41,6 +42,7 @@ public class SceneTransitioner : MonoBehaviour
 
     public void EndLoadingScreen()
     {
+        CheckReference();   
         transitionAnimator.SetBool("Loading", false);
         transitionAnimator.SetBool("Fake", false);
         transitionObject.SetActive(false);
@@ -55,6 +57,14 @@ public class SceneTransitioner : MonoBehaviour
             float loadProgress = Mathf.Clamp01(asyncLoad.progress / 0.9f);
             loadingCircle.fillAmount = loadProgress;
             yield return null;
+        }
+    }
+
+    private void CheckReference()
+    {
+        if (transitionAnimator == null)
+        {
+            transitionAnimator = transitionObject.GetComponent<Animator>();
         }
     }
 

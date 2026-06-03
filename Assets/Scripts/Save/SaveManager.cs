@@ -130,7 +130,7 @@ public class SaveManager : MonoBehaviour
         string json = PlayerPrefs.GetString(SAVE_KEY);
         Debug.Log("Game Loaded");
 
-        sceneTransitioner.EndLoadingScreen();
+        if (sceneTransitioner != null) sceneTransitioner.EndLoadingScreen();
 
         Debug.Log("Loaded save size (chars): " + json.Length);
         Debug.Log("Loaded save size (bytes): " + System.Text.Encoding.UTF8.GetByteCount(json));
