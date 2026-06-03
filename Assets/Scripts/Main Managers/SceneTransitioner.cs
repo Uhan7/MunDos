@@ -2,11 +2,15 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneTransitioner : MonoBehaviour
 {
-    [Header("Extra Variables")]
+    [Header("Loading Screen")]
     [SerializeField] private GameObject transitionObject;
+    [SerializeField] private Image loadingCircle;
+
+    [Header("Variables")]
     [SerializeField] private float transitionDelay;
 
     [HideInInspector] private string sceneName;
@@ -34,6 +38,8 @@ public class SceneTransitioner : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
+            float loadProgress = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            loadingCircle.fillAmount = loadProgress;
             yield return null;
         }
     }
