@@ -1,6 +1,7 @@
-using UnityEngine;
-using TMPro;
 using NaughtyAttributes;
+using TMPro;
+using UnityEditor.PackageManager.Requests;
+using UnityEngine;
 
 public class QuestLogManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class QuestLogManager : MonoBehaviour
     [Header("Text Fields")]
     [SerializeField] public TextMeshProUGUI actualQuestText; // For ObjectState.cs
     [SerializeField] public TextMeshProUGUI guideText; // For ObjectState.cs
+    public QuestLogData data;
 
     [Header("Anim Reference")]
     [SerializeField] private GameObject questLogButton;
@@ -34,14 +36,30 @@ public class QuestLogManager : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        UpdateQuests();
+    }
+
     // Helper Functions --------------------------------------------------------
 
     public void ChangeQuest(string newQuest, string newGuide) // To be used by ProgressPoint.cs
     {
-        actualQuestText.text = newQuest;
-        guideText.text = newGuide;
+        data.actualQuestText = newQuest;
+        data.guideText = newGuide;
+
+        UpdateQuests();
 
         FlashQuestButton();
+    }
+
+    public void UpdateQuests()
+    {
+        if (actualQuestText.text != data.actualQuestText)
+        {
+            actualQuestText.text = data.actualQuestText;
+            guideText.text = data.guideText;
+        }
     }
 
         // UI Anims
