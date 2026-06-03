@@ -25,6 +25,7 @@ public class ObjectState : MonoBehaviour
         ZoomEnviManager zoomEnviManager = GetComponent<ZoomEnviManager>();
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
         QuestLogManager questLogManager = GetComponent<QuestLogManager>();
+        ProgressionPoint progressionPoint = GetComponent<ProgressionPoint>();
         GameManager gameManager = GetComponent<GameManager>();
 
         if (interactable != null)
@@ -112,6 +113,12 @@ public class ObjectState : MonoBehaviour
             var comp = new QuestLogSaveData();
             comp.actualQuestTextData = questLogManager.actualQuestText.text;
             comp.guideTextData = questLogManager.guideText.text;
+            data.components.Add(comp);
+        }
+        if (progressionPoint != null)
+        {
+            var comp = new ProgressionPointSaveData();
+            comp.hasBeenActivated = progressionPoint.hasBeenActivated;
             data.components.Add(comp);
         }
         if (gameManager != null)
@@ -269,8 +276,21 @@ public class ObjectState : MonoBehaviour
 
                 if (questLogManager != null && compData != null)
                 {
-                    questLogManager.actualQuestText.text = compData.actualQuestTextData;
-                    questLogManager.guideText.text = compData.guideTextData;
+                    questLogManager.ChangeQuest(compData.actualQuestTextData, compData.guideTextData);
+
+                    //questLogManager.actualQuestText.text = compData.actualQuestTextData;
+                    //questLogManager.guideText.text = compData.guideTextData;
+                }
+            }
+
+            if (comp.type == "ProgressionPoint")
+            {
+                var progressionPt = GetComponent<ProgressionPoint>();
+                var compData = comp as ProgressionPointSaveData;
+
+                if (progressionPt != null && compData != null)
+                {
+                    progressionPt.hasBeenActivated = compData.hasBeenActivated;
                 }
             }
 

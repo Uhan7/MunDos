@@ -27,7 +27,7 @@ public class ProgressionPoint : MonoBehaviour
     [SerializeField] private bool passQuestOnActivate = true;
     [SerializeField] private bool passQuestOnDeactivate;
 
-    private bool hasBeenActivated = false;
+    [HideInInspector] public bool hasBeenActivated = false;
 
 
 
