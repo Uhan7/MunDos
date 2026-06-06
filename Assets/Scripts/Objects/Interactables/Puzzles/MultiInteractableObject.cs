@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using NaughtyAttributes;
 using Unity.VisualScripting;
 using System;
+using System.Collections;
+using System.Linq.Expressions;
 
 
 // TODO: add to ObjectState
@@ -25,10 +27,12 @@ public class MultiInteractableObject : MonoBehaviour
 
     [Header("Properties")]
     [SerializeField] private bool onEnable;
-    [SerializeField] private bool onlyActivateOnce;
+    [SerializeField] private bool repeatable;
     [SerializeField] private bool resetStateAfter;
     [SerializeField] private bool deactivateAfter;
     [SerializeField] private bool hasCounter;
+    [SerializeField] private bool isFirstState; //prevents cascading of next state
+    [SerializeField] private bool isLastState; //prevents cascading of next state
 
     [Header("Properties")]
     [SerializeField] public bool hasActivatedOnce;
@@ -36,55 +40,61 @@ public class MultiInteractableObject : MonoBehaviour
 
     [SerializeField] private Collider2D triggerCol;
     [SerializeField] private PlayerInteract playerInteract;
-    [HideInInspector] public int currentInteractions = 0;
+    [SerializeField] public int currentInteractions = 0;
+    [SerializeField] private string equippedObjectName = "";
+    [SerializeField] private bool foundEquippedItem = false;
+    [SerializeField] private bool stateCheck = false;
 
-    public void Interact()
+    private void Awake()
     {
+        //if (!(isFirstState && isLastState))
+        //{
+        //    Debug.Log("become true a");
+        //    stateCheck = true;
+        //}
+        if (isFirstState || isLastState) {
+            stateCheck = false;
+        }
+    }
+    private void Interact()
+    {
+        Debug.Log("in interact");
+        bool firstFound = false;
         foreach (var itemGroup in items)
         {
-            ItemData itemData = itemGroup.item.GetComponent<ItemData>();
-            if (itemGroup == null || itemData == null) continue;
-            if (itemData.itemName == playerInteract.TryGetEquippedObject().itemName)
+            ItemData itemData = itemGroup.item.GetComponent<Item>().GetData();
+            if (itemGroup == null || itemData == null)
+            {
+                continue;
+            }
+            if (itemData.itemName == equippedObjectName)
             {
                 Debug.Log($"item names {itemData.itemName} | {playerInteract.TryGetEquippedObject().itemName} match");
+                itemGroup.hasActivated = true;
+                Debug.Log("become true b");
+                firstFound = true;
+                stateCheck = false;
+
                 SetAll(itemGroup.toActivate, true);
                 SetAll(itemGroup.toDeactivate, false);
-                itemGroup.hasActivated = true;
             }
             else
             {
                 Debug.Log($"item names {itemData.itemName} | {playerInteract.TryGetEquippedObject().itemName} dont match");
+                foundEquippedItem = false;
+                equippedObjectName = "";
             }
             
+        }
+        if (firstFound)
+        {
+            Reset();
         }
 
     }
 
-    private void Awake()
+    private void CheckCollisions()
     {
-        InitializeCache();
-    }
-
-    //private void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if (col.gameObject.tag != PROTAG_TAG) return;
-    //}
-
-    //private void OnTriggerExit2D(Collider2D col)
-    //{
-    //    if (col.gameObject.tag != PROTAG_TAG) return;
-    //}
-
-    private void InitializeCache()
-    {
-        //triggerCol = GetComponent<Collider2D>();
-
-    }
-
-    public void OnEnable()
-    {
-        if (!onEnable) return;
-
         Collider2D[] results = new Collider2D[10];
 
         ContactFilter2D filter = new ContactFilter2D();
@@ -95,20 +105,49 @@ public class MultiInteractableObject : MonoBehaviour
             Collider2D col = results[i];
             if (col.CompareTag(PROTAG_TAG))
             {
-                Debug.Log("found player");
                 playerInteract = col.GetComponent<PlayerInteract>();
                 if (!playerInteract)
                 {
-                    Debug.LogWarning("no player interact");
                 }
                 else
                 {
-                    Debug.Log($"found player with item {playerInteract.TryGetEquippedObject().itemName}");
+                    equippedObjectName = playerInteract.TryGetEquippedObject().itemName;
+                    Debug.Log($"found player with item {equippedObjectName}");
+                    foundEquippedItem = true;
                 }
             }
         }
-        Interact();
-        Reset();
+    }
+    
+
+
+    public void OnEnable()
+    {
+        if (!onEnable) return;
+        //if (!isFirstState && !isLastState)
+        //if (!isFirstState && !isLastState && !stateCheck)
+        if (((isFirstState || isLastState) && !stateCheck) || 
+            ((!isFirstState && !isLastState) && stateCheck))
+        {
+            Debug.Log("in if");
+            stateCheck = true;
+            gameObject.SetActive(false);
+        }
+
+        StartCoroutine(OnEnableCoroutine());
+    }
+
+    private IEnumerator OnEnableCoroutine()
+    {
+        yield return new WaitForSeconds(0.12f);
+        CheckCollisions();
+        if (foundEquippedItem)
+        {
+            Interact();
+        }
+        else
+        {
+        }
     }
     
     void SetAll(GameObject[] objects, bool value)
@@ -117,9 +156,9 @@ public class MultiInteractableObject : MonoBehaviour
 
         foreach (GameObject obj in objects)
         {
-            //Debug.Log($"activating {obj.name}");
             if (obj == null) continue;
             obj.SetActive(value);
+                
         }
     }
 
@@ -128,22 +167,30 @@ public class MultiInteractableObject : MonoBehaviour
         if (deactivateAfter)
         {
             gameObject.SetActive(false);
+            foundEquippedItem = false;
+        }
+        foreach (var itemGroup in items)
+        {
+            if (resetStateAfter && itemGroup.hasActivated)
+            {
+                SetAll(itemGroup.toActivate, false);
+                SetAll(itemGroup.toDeactivate, true);
+            }
+            if (repeatable && itemGroup.hasActivated)
+            {
+                itemGroup.hasActivated = false;
+            }
         }
         if (resetStateAfter){
-            foreach (var itemGroup in items)
-            {
-                if (itemGroup.hasActivated)
-                {
-                    SetAll(itemGroup.toActivate, false);
-                    SetAll(itemGroup.toDeactivate, true);
-                }
-                if (!onlyActivateOnce && itemGroup.hasActivated)
-                {
-                    itemGroup.hasActivated = false;
-                }
-            }
             currentInteractions = 0;
         }
-
+        if (repeatable)
+        {
+            stateCheck = false;
+        }
+        if (deactivateAfter)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
