@@ -913,9 +913,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SlotHandler, Assembly-CSharp
-        m_MethodName: SetContinue
+      - m_Target: {fileID: 2061279254}
+        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
+        m_MethodName: SetLoadOnStart
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2061279254}
+        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
+        m_MethodName: SetReadLoadOnStart
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1339,7 +1351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1347,10 +1359,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
@@ -1360,9 +1376,13 @@ PrefabInstance:
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 527699434}
+      objectReference: {fileID: 2061279254}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 527699434}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 839832342}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
@@ -1378,15 +1398,23 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetLoadOnStart
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SceneTransitionWrapper
+      value: SetReadLoadOnStart
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SceneTransitionWrapper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: SetContinue
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
@@ -1395,10 +1423,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SceneTransitioner, Assembly-CSharp
+      value: SaveManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SceneTransitioner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: SlotHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
@@ -1411,6 +1443,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
@@ -1419,6 +1455,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: Full Map
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
@@ -1431,6 +1471,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881414412414355923, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3793955778763570707, guid: 8ff2f6bdb39fced4b9df6315a9d11b51, type: 3}
@@ -3324,16 +3368,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 527699434}
-        m_TargetAssemblyTypeName: SceneTransitioner, Assembly-CSharp
-        m_MethodName: SceneTransitionWrapper
-        m_Mode: 5
+      - m_Target: {fileID: 2061279254}
+        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
+        m_MethodName: SetLoadOnStart
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Full Map
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2061279254}
@@ -3347,6 +3391,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 527699434}
+        m_TargetAssemblyTypeName: SceneTransitioner, Assembly-CSharp
+        m_MethodName: SceneTransitionWrapper
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Full Map
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &766098060
 MonoBehaviour:
@@ -6388,7 +6444,7 @@ MonoBehaviour:
         m_MethodName: SetCheckpointFile
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: f07d4ea321ab3459b808efcf7f01944b, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 921a238442dd143e3b5eeaf058fd4271, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6398,6 +6454,30 @@ MonoBehaviour:
       - m_Target: {fileID: 839832342}
         m_TargetAssemblyTypeName: SlotHandler, Assembly-CSharp
         m_MethodName: SetContinue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2061279254}
+        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
+        m_MethodName: SetLoadOnStart
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2061279254}
+        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
+        m_MethodName: SetReadLoadOnStart
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6417,19 +6497,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Full Map
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2061279254}
-        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
-        m_MethodName: SetReadLoadOnStart
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2080534466
 MonoBehaviour:
@@ -6616,7 +6684,7 @@ MonoBehaviour:
         m_MethodName: SetCheckpointFile
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4900000, guid: 42a53edefa4004345a3d27b1a4a1d40e, type: 3}
+          m_ObjectArgument: {fileID: 4900000, guid: 921a238442dd143e3b5eeaf058fd4271, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.TextAsset, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6626,6 +6694,30 @@ MonoBehaviour:
       - m_Target: {fileID: 839832342}
         m_TargetAssemblyTypeName: SlotHandler, Assembly-CSharp
         m_MethodName: SetContinue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2061279254}
+        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
+        m_MethodName: SetLoadOnStart
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2061279254}
+        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
+        m_MethodName: SetReadLoadOnStart
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6645,19 +6737,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Full Map
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2061279254}
-        m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
-        m_MethodName: SetReadLoadOnStart
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2101773579
 MonoBehaviour:
