@@ -83,6 +83,6 @@ public class pages_manager : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene(sceneNameToLoad);
+        GetComponent<SceneTransitioner>().SceneTransitionWrapper(sceneNameToLoad);
     }
 }
