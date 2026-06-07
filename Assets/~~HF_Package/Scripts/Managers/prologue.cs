@@ -12,6 +12,7 @@ public class prologue : MonoBehaviour
     [SerializeField] private KeyCode skipKey;
 
     [SerializeField] private string sceneToGoName;
+    [SerializeField] private SceneTransitioner sceneTransition;
 
     private float skipHoldTime = 3f;
     private float escapeHeldDuration = 0f;
@@ -101,6 +102,6 @@ public class prologue : MonoBehaviour
 
     void StartGame()
     {
-        SceneManager.LoadScene(sceneToGoName);
+        sceneTransition.SceneTransitionWrapper(sceneToGoName);
     }
 }
