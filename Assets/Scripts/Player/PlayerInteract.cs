@@ -416,14 +416,26 @@ public class PlayerInteract : MonoBehaviour
 
         for (int i = 0; i < itemDatas.Length - 1; i++)
         {
-            if (itemDatas[index].itemName != "")
+            Debug.Log($"item {i} {itemDatas[i].itemName}");
+            if (itemDatas[i].itemName == "")
             {
-                
-                index++;
-                if (index >= itemDatas.Length) index = 0;
+                return i;
             }
         }
+        if (index >= itemDatas.Length) index = 0;
         return index;
+    }
+
+    public void TrySelectNonEmptySlot()
+    {
+        int index = FindEmptySlot();
+        if (index > 0) index--;
+
+        Debug.Log($"try select non empty {index}");
+        if (index != -1)
+        {
+            SelectItem(index);
+        }
     }
 
     void PickupItem()

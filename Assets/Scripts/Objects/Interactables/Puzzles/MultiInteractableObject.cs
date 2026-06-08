@@ -1,10 +1,11 @@
-using UnityEngine;
-using UnityEngine.UI;
 using NaughtyAttributes;
-using Unity.VisualScripting;
+using NUnit.Framework.Interfaces;
 using System;
 using System.Collections;
 using System.Linq.Expressions;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
 
 
 // TODO: add to ObjectState
@@ -69,7 +70,7 @@ public class MultiInteractableObject : MonoBehaviour
             }
             if (itemData.itemName == equippedObjectName)
             {
-                Debug.Log($"item names {itemData.itemName} | {playerInteract.TryGetEquippedObject().itemName} match");
+                Debug.Log($"item names {itemData.itemName} | {equippedObjectName} match");
                 itemGroup.hasActivated = true;
                 Debug.Log("become true b");
                 firstFound = true;
@@ -78,23 +79,23 @@ public class MultiInteractableObject : MonoBehaviour
                 SetAll(itemGroup.toActivate, true);
                 SetAll(itemGroup.toDeactivate, false);
             }
-            else
-            {
-                Debug.Log($"item names {itemData.itemName} | {playerInteract.TryGetEquippedObject().itemName} dont match");
-                foundEquippedItem = false;
-                equippedObjectName = "";
-            }
             
         }
         if (firstFound)
         {
             Reset();
+        } 
+        else
+        {
+            foundEquippedItem = false;
+            equippedObjectName = "";
         }
 
     }
 
     private void CheckCollisions()
     {
+        Debug.Log("in check col");
         Collider2D[] results = new Collider2D[10];
 
         ContactFilter2D filter = new ContactFilter2D();
@@ -106,6 +107,7 @@ public class MultiInteractableObject : MonoBehaviour
             if (col.CompareTag(PROTAG_TAG))
             {
                 playerInteract = col.GetComponent<PlayerInteract>();
+                Debug.Log($"eqiuipeed item {equippedObjectName}");
                 if (!playerInteract)
                 {
                 }
@@ -134,7 +136,12 @@ public class MultiInteractableObject : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        StartCoroutine(OnEnableCoroutine());
+        //StartCoroutine(OnEnableCoroutine());
+        CheckCollisions();
+        if (foundEquippedItem)
+        {
+            Interact();
+        }
     }
 
     private IEnumerator OnEnableCoroutine()

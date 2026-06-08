@@ -209,13 +209,17 @@ public class DialogueTrigger : MonoBehaviour
 
     void RemovePlayerItems()
     {
-        foreach (string playeritemName in playeritemNamesToRemove) GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>().ClearItem(playeritemName);
+        Debug.Log("in removeplayeritem");
+        PlayerInteract playerInteract = GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>();
+        foreach (string playeritemName in playeritemNamesToRemove) playerInteract.ClearItem(playeritemName);
+        playerInteract.TrySelectNonEmptySlot();
         alreadyRemovedPlayeritems = true;
     }
 
     void GivePlayerItems()
     {
-        foreach (Item itemToGive in playeritemsToGive) GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>().GiveItem(itemToGive);
+        PlayerInteract playerInteract = GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>();
+        foreach (Item itemToGive in playeritemsToGive) playerInteract.GetComponent<PlayerInteract>().GiveItem(itemToGive);
         alreadyGavePlayeritems = true;
     }
 
@@ -226,7 +230,7 @@ public class DialogueTrigger : MonoBehaviour
         if (willFocus)
         {
             Focus(false);
-            print("ok now stop focusing!!!");
+            //print("ok now stop focusing!!!");
 
             ZoomEnviManager[] zoomCanvasScripts = FindObjectsByType<ZoomEnviManager>(FindObjectsSortMode.None);
             foreach (ZoomEnviManager zoomCanvasScript in zoomCanvasScripts)
