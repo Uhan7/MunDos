@@ -1,6 +1,8 @@
 using NaughtyAttributes;
 using TMPro;
-using UnityEditor.PackageManager.Requests;
+#if UNITY_EDITOR
+    using UnityEditor.PackageManager.Requests;
+#endif
 using UnityEngine;
 
 public class QuestLogManager : MonoBehaviour

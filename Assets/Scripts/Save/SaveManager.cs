@@ -267,6 +267,7 @@ public class SaveManager : MonoBehaviour
         for (int i = 0; i < data.itemDatas.Count; i++)
         {
             playerInteract.itemDatas[i] = new ItemData(data.itemDatas[i]);
+            playerInteract.itemDatas[i].itemSprite = ItemSpriteLookup.Instance.GetSprite(playerInteract.itemDatas[i].itemName);
             playerInteract.itemDatas[i].objectsToInteractWith = new GameObject[playerInteract.itemDatas[i].objectIDsToInteractWith.Length];
 
             // Replace each item's valid obj reference
