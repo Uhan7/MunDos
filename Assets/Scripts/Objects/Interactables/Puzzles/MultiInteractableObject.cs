@@ -32,9 +32,9 @@ public class MultiInteractableObject : MonoBehaviour
 
     [Header("Multi Interact")]
     [SerializeField] private bool onEnable;
-    [SerializeField] private bool repeatable;
-    [SerializeField] private bool resetStateAfter;
-    [SerializeField] private bool deactivateAfter;
+    [SerializeField] private bool repeatable; //Can interact again after ValidItem's items's hasActivated is true
+    [SerializeField] private bool resetStateAfter; //Any Activated will de deactivated
+    [SerializeField] private bool deactivateAfter; //gameobejct will deactivate after
     [SerializeField] private bool isFirstState; //prevents cascading of next state
     [SerializeField] private bool isLastState; //prevents cascading of previous state
 
@@ -52,7 +52,7 @@ public class MultiInteractableObject : MonoBehaviour
     [ShowIf("hasInteractionCounter")][SerializeField] private AudioClip[] soundsToPlayOnInteractionsNeeded;
 
     [Header("Flags")]
-    [ReadOnly][SerializeField] private bool stateCheck = false;
+    [ReadOnly][SerializeField] private bool stateCheck = false; //Ensures intended behaviour
     [ReadOnly][SerializeField] private bool foundEquippedItem = false;
     [ReadOnly][SerializeField] private string equippedObjectName = "";
     [ReadOnly][SerializeField] private bool hasActivatedOnce;
