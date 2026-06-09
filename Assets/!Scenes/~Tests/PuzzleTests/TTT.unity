@@ -421,6 +421,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCol: {fileID: 1589479616}
+  onEnable: 1
+  repeatable: 1
+  resetStateAfter: 0
+  deactivateAfter: 1
+  isFirstState: 0
+  isLastState: 1
+  hasInteractionCounter: 0
+  interactionCountsNeeded: 0
+  persistentCounter: 0
   items:
   - item: {fileID: 695407193}
     toActivate:
@@ -436,20 +446,16 @@ MonoBehaviour:
     - {fileID: 882474905}
     - {fileID: 1589479611}
     hasActivated: 0
-  onEnable: 1
-  repeatable: 1
-  resetStateAfter: 0
-  deactivateAfter: 1
-  hasCounter: 0
-  isFirstState: 0
-  isLastState: 1
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 1589479616}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
+  toActivateOnCountsReached: []
+  toDeactivateOnCountsReached: []
+  soundsToPlayOnInteraction: []
+  soundsToPlayOnInteractionsNeeded: []
   stateCheck: 0
+  foundEquippedItem: 0
+  equippedObjectName: 
+  hasActivatedOnce: 0
+  interactionCount: 0
+  playerInteract: {fileID: 0}
 --- !u!114 &103905744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,6 +796,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: O12 Bell Rope 2 (Correct State)
       objectReference: {fileID: 0}
+    - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_text
       value: Bell Rope
@@ -844,7 +854,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1521692188}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
@@ -876,6 +889,11 @@ MonoBehaviour:
 
     Bell Sack 1, Bellsack 3 / BellSack
     2'
+--- !u!61 &303251965 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 303251961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &383261036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1047,6 +1065,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCol: {fileID: 895401511}
+  onEnable: 1
+  repeatable: 1
+  resetStateAfter: 0
+  deactivateAfter: 1
+  isFirstState: 0
+  isLastState: 0
+  hasInteractionCounter: 0
+  interactionCountsNeeded: 0
+  persistentCounter: 0
   items:
   - item: {fileID: 695407193}
     toActivate:
@@ -1065,20 +1093,16 @@ MonoBehaviour:
     - {fileID: 895401505}
     - {fileID: 303251962}
     hasActivated: 0
-  onEnable: 1
-  repeatable: 1
-  resetStateAfter: 0
-  deactivateAfter: 1
-  hasCounter: 0
-  isFirstState: 0
-  isLastState: 0
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 895401511}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
+  toActivateOnCountsReached: []
+  toDeactivateOnCountsReached: []
+  soundsToPlayOnInteraction: []
+  soundsToPlayOnInteractionsNeeded: []
   stateCheck: 1
+  foundEquippedItem: 0
+  equippedObjectName: 
+  hasActivatedOnce: 0
+  interactionCount: 0
+  playerInteract: {fileID: 0}
 --- !u!114 &390556646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,6 +1766,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCol: {fileID: 2120533524}
+  onEnable: 1
+  repeatable: 1
+  resetStateAfter: 0
+  deactivateAfter: 1
+  isFirstState: 1
+  isLastState: 0
+  hasInteractionCounter: 0
+  interactionCountsNeeded: 0
+  persistentCounter: 0
   items:
   - item: {fileID: 695407193}
     toActivate:
@@ -1752,20 +1786,16 @@ MonoBehaviour:
     - {fileID: 2120533518}
     - {fileID: 701763466}
     hasActivated: 0
-  onEnable: 1
-  repeatable: 1
-  resetStateAfter: 0
-  deactivateAfter: 1
-  hasCounter: 0
-  isFirstState: 1
-  isLastState: 0
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 2120533524}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
+  toActivateOnCountsReached: []
+  toDeactivateOnCountsReached: []
+  soundsToPlayOnInteraction: []
+  soundsToPlayOnInteractionsNeeded: []
   stateCheck: 0
+  foundEquippedItem: 0
+  equippedObjectName: 
+  hasActivatedOnce: 0
+  interactionCount: 0
+  playerInteract: {fileID: 0}
 --- !u!114 &621658615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,6 +2365,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 303251963}
+    - targetCorrespondingSourceObject: {fileID: 597476029894353682, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1581993734}
     - targetCorrespondingSourceObject: {fileID: 8034374329919896082, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1126747111}
@@ -2791,10 +2824,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 390556648}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 895401507}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!1 &895401505 stripped
 GameObject:
@@ -2806,33 +2836,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 895401504}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &895401507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895401505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  onEnable: 0
-  repeatable: 0
-  resetStateAfter: 0
-  deactivateAfter: 0
-  hasCounter: 0
-  isFirstState: 0
-  isLastState: 0
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 0}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
-  stateCheck: 0
 --- !u!61 &895401511 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -3182,36 +3185,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - item: {fileID: 695407193}
-    toActivate:
-    - {fileID: 383261038}
-    - {fileID: 1589479611}
-    toDeactivate:
-    - {fileID: 1301515114}
-    hasActivated: 0
-  - item: {fileID: 266263854}
-    toActivate:
-    - {fileID: 895401505}
-    - {fileID: 303251962}
-    toDeactivate:
-    - {fileID: 1301515114}
-    - {fileID: 701763466}
-    hasActivated: 0
+  triggerCol: {fileID: 1301515120}
   onEnable: 1
   repeatable: 1
   resetStateAfter: 0
   deactivateAfter: 1
-  hasCounter: 0
   isFirstState: 0
   isLastState: 0
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 1301515120}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
+  hasInteractionCounter: 1
+  interactionCountsNeeded: 0
+  persistentCounter: 0
+  items: []
+  toActivateOnCountsReached: []
+  toDeactivateOnCountsReached: []
+  soundsToPlayOnInteraction: []
+  soundsToPlayOnInteractionsNeeded: []
   stateCheck: 1
+  foundEquippedItem: 0
+  equippedObjectName: 
+  hasActivatedOnce: 0
+  interactionCount: 0
+  playerInteract: {fileID: 0}
 --- !u!114 &1188984983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3380,10 +3374,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1188984985}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1301515116}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!1 &1301515114 stripped
 GameObject:
@@ -3395,33 +3386,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1301515113}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1301515116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301515114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  onEnable: 0
-  repeatable: 0
-  resetStateAfter: 0
-  deactivateAfter: 0
-  hasCounter: 0
-  isFirstState: 0
-  isLastState: 0
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 0}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
-  stateCheck: 0
 --- !u!61 &1301515120 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -4118,6 +4082,116 @@ MonoBehaviour:
   descriptionText: 'Activated/Deactivated By:
 
     O4 Padlock 2 Puzzle /'
+--- !u!1 &1521692187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521692188}
+  - component: {fileID: 1521692191}
+  - component: {fileID: 1521692190}
+  - component: {fileID: 1521692189}
+  m_Layer: 0
+  m_Name: Multi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1521692188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521692187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7, y: 0.09500027, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 303251963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1521692189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521692187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerCol: {fileID: 303251965}
+  onEnable: 1
+  repeatable: 0
+  resetStateAfter: 0
+  deactivateAfter: 1
+  isFirstState: 0
+  isLastState: 1
+  hasInteractionCounter: 1
+  interactionCountsNeeded: 5
+  persistentCounter: 0
+  items:
+  - item: {fileID: 695407193}
+    toActivate:
+    - {fileID: 882474905}
+    toDeactivate:
+    - {fileID: 1784660993}
+    hasActivated: 0
+  - item: {fileID: 266263854}
+    toActivate:
+    - {fileID: 1784660993}
+    - {fileID: 1301515114}
+    toDeactivate:
+    - {fileID: 882474905}
+    - {fileID: 1589479611}
+    hasActivated: 0
+  toActivateOnCountsReached:
+  - {fileID: 1581993733}
+  toDeactivateOnCountsReached:
+  - {fileID: 303251962}
+  soundsToPlayOnInteraction: []
+  soundsToPlayOnInteractionsNeeded: []
+  stateCheck: 0
+  foundEquippedItem: 0
+  equippedObjectName: 
+  hasActivatedOnce: 0
+  interactionCount: 0
+  playerInteract: {fileID: 0}
+--- !u!114 &1521692190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521692187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1521692191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521692187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
 --- !u!1001 &1554662769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4239,6 +4313,108 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   descriptionText: 'O8 Cabinet with a Rusty Padlock '
+--- !u!1001 &1581993732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 746208366}
+    m_Modifications:
+    - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_Name
+      value: O12 Bell Rope 3 (Solved State)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_text
+      value: Bell Rope
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_fontSize
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1581993735}
+  m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+--- !u!1 &1581993733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 1581993732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1581993734 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+  m_PrefabInstance: {fileID: 1581993732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1581993735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581993733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b3b713d3e9427d95225fc72ada10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: 'Activated/Deactivated By:
+
+    Bell Sack 1, Bellsack 3 / BellSack
+    2'
 --- !u!1001 &1589479609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4365,10 +4541,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 103905742}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1589479612}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!4 &1589479610 stripped
 Transform:
@@ -4380,33 +4553,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1589479609}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1589479612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589479611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  onEnable: 0
-  repeatable: 0
-  resetStateAfter: 0
-  deactivateAfter: 0
-  hasCounter: 0
-  isFirstState: 0
-  isLastState: 0
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 0}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
-  stateCheck: 0
 --- !u!61 &1589479616 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -5222,10 +5368,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 621658617}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2120533520}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
 --- !u!1 &2120533518 stripped
 GameObject:
@@ -5237,33 +5380,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 2120533517}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2120533520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2120533518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed15c1d40e306d3479784bb37095ca67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  onEnable: 0
-  repeatable: 0
-  resetStateAfter: 0
-  deactivateAfter: 0
-  hasCounter: 0
-  isFirstState: 0
-  isLastState: 0
-  hasActivatedOnce: 0
-  triggerCol: {fileID: 0}
-  playerInteract: {fileID: 0}
-  currentInteractions: 0
-  equippedObjectName: 
-  foundEquippedItem: 0
-  stateCheck: 0
 --- !u!61 &2120533524 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 3179571668371301381, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
