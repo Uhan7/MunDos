@@ -209,7 +209,6 @@ public class DialogueTrigger : MonoBehaviour
 
     void RemovePlayerItems()
     {
-        Debug.Log("in removeplayeritem");
         PlayerInteract playerInteract = GameObject.FindGameObjectWithTag(PROTAG_TAG).GetComponent<PlayerInteract>();
         foreach (string playeritemName in playeritemNamesToRemove) playerInteract.ClearItem(playeritemName);
         playerInteract.TrySelectNonEmptySlot();

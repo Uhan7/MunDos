@@ -198,7 +198,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if (gameManagerScript.isFocusing)
             {
-                print("1 but is focusing");
+                //print("1 but is focusing");
                 return; // This is to not layer the zooms
             }
 
@@ -206,14 +206,14 @@ public class PlayerInteract : MonoBehaviour
             activeObjectIndex = value;
             WillUpdate(true);
 
-            print("1");
+            //print("1");
         }
 
         //Zoom in on valid selected item
         else if (!isZoomed && isSelected && value == activeObjectIndex)
         {
             if (gameManagerScript.isFocusing){
-                print("2 but is focusing");
+                //print("2 but is focusing");
                 return; // This is to not layer the zooms
             }
 
@@ -223,14 +223,14 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = true;
             WillUpdate(true);
 
-            print("2");
+            //print("2");
         }
 
         //Cancel Zoom in and select other item
         else if (!isZoomed && isSelected && value != activeObjectIndex)
         {
             if (gameManagerScript.isFocusing){
-                print("3 but is focusing");
+                //print("3 but is focusing");
                 return; // This is to not layer the zooms
             }
 
@@ -241,7 +241,7 @@ public class PlayerInteract : MonoBehaviour
             activeObjectIndex = value;
             WillUpdate(true);
 
-            print("3");
+            //print("3");
         }
 
         //Zoom out of same item
@@ -253,7 +253,7 @@ public class PlayerInteract : MonoBehaviour
             GetComponent<Animator>().Play("object_fade_out_half");
             WillUpdate(true);
 
-            print("4");
+            //print("4");
         }
 
         //Zoom out then select different item
@@ -416,7 +416,7 @@ public class PlayerInteract : MonoBehaviour
 
         for (int i = 0; i < itemDatas.Length - 1; i++)
         {
-            Debug.Log($"item {i} {itemDatas[i].itemName}");
+            //Debug.Log($"item {i} {itemDatas[i].itemName}");
             if (itemDatas[i].itemName == "")
             {
                 return i;
@@ -431,7 +431,6 @@ public class PlayerInteract : MonoBehaviour
         int index = FindEmptySlot();
         if (index > 0) index--;
 
-        Debug.Log($"try select non empty {index}");
         if (index != -1)
         {
             SelectItem(index);
