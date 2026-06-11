@@ -42,7 +42,6 @@ public class MultiInteractableObject : MonoBehaviour
     [SerializeField] private bool hasInteractionCounter;
     [ShowIf("hasInteractionCounter")][SerializeField] private int interactionCountsNeeded;
     //[ShowIf("hasInteractionCounter")][SerializeField] private bool interactionCountNeedsItem;
-    [ShowIf("hasCohasInteractionCounterunter")][SerializeField] private bool persistentCounter;
 
     [Header("Interactions")]
     [HideIf("hasInteractionCounter")][SerializeField] ValidItem[] items;
@@ -61,7 +60,13 @@ public class MultiInteractableObject : MonoBehaviour
 
     private void Awake()
     {
-        if (isFirstState || isLastState) {
+        InitializeCache();
+    }
+
+    void InitializeCache()
+    {
+        if (isFirstState || isLastState)
+        {
             stateCheck = false;
         }
         sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
@@ -85,19 +90,19 @@ public class MultiInteractableObject : MonoBehaviour
 
     private void CounterInteract()
     {
-        if (interactionCount < interactionCountsNeeded)
+        if (interactionCount >= interactionCountsNeeded)
         {
+            hasActivatedOnce = true;
             foreach (AudioClip clip in soundsToPlayOnInteractionsNeeded) sfxSource.PlayOneShot(clip);
             SetAll(toActivateOnCountsReached, true);
-            SetAll(toDeactivateOnCountsReached, false);
-            Reset();
+            SetAll(toDeactivateOnCountsReached, false);   
         }
         else
         {
             foreach (AudioClip clip in soundsToPlayOnInteraction) sfxSource.PlayOneShot(clip);
             interactionCount++;
         }
-
+        Reset();
     }
 
     private void GetValidItemInteractions(List<ValidItem> matchedGroup) 
@@ -211,8 +216,13 @@ public class MultiInteractableObject : MonoBehaviour
                 itemGroup.hasActivated = false;
             }
         }
-        if (!persistentCounter){
-            interactionCount = 0;
+        if (hasInteractionCounter)
+        {
+            if (repeatable && hasActivatedOnce)
+            {
+                interactionCount = 0;
+                hasActivatedOnce = false;
+            }
         }
         if (repeatable)
         {
