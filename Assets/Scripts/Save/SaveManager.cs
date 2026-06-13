@@ -42,6 +42,9 @@ public class SaveManager : MonoBehaviour
     private void Awake()
     {
         sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
+
+        InitializeObjectStateDefaults();
+
         if (load_on_start) StartCoroutine(LoadGame());
         if (read_load_on_start) ReadAndLoadSaveData(checkpointFile);
 
@@ -55,7 +58,11 @@ public class SaveManager : MonoBehaviour
 
         // Physical Objects
         data.objectStates = new List<ObjectSaveData>();
-        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None)) data.objectStates.Add(obj.CaptureState());
+        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            ObjectSaveData objectData = obj.CaptureState();
+            if (objectData != null) data.objectStates.Add(objectData);
+        }
 
         // Logical/Data
         data.players = new List<PlayerSaveData>();
@@ -95,7 +102,7 @@ public class SaveManager : MonoBehaviour
         if (!PlayerPrefs.HasKey(SAVE_KEY))
         {
             Debug.Log("No Save Found! Loading as normal.");
-            yield return null;
+            yield break;
         }
 
         SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(SAVE_KEY));
@@ -145,7 +152,11 @@ public class SaveManager : MonoBehaviour
 
         // Physical Objects
         data.objectStates = new List<ObjectSaveData>();
-        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None)) data.objectStates.Add(obj.CaptureState());
+        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            ObjectSaveData objectData = obj.CaptureState();
+            if (objectData != null) data.objectStates.Add(objectData);
+        }
 
         // Logical/Data
         data.players = new List<PlayerSaveData>();
@@ -307,6 +318,16 @@ public class SaveManager : MonoBehaviour
     {
         read_load_on_start = val;
     }
+
+    private void InitializeObjectStateDefaults()
+    {
+        foreach (ObjectState obj in FindObjectsByType<ObjectState>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            obj.InitializeDefaultState();
+        }
+    }
+
+    // DEBUG UPDATE BULLSHIT ---------------------------------------------------
 
     private void Update()
     {

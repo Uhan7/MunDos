@@ -24,7 +24,7 @@ public class InventorySlot : MonoBehaviour
     bool test = false;
     private void Awake()
     {
-        if (gameObject.activeInHierarchy) InitializeComponents();
+        InitializeComponents();
     }
 
     private void OnEnable()

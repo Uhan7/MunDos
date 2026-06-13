@@ -20,9 +20,11 @@ public class ObjectSaveData
 
     // GameObject
     public bool isActive;
+    public bool changedActive;
 
     // Transform
     public Vector3 position;
+    public bool changedPosition;
 
     // Other Components
     [SerializeReference] public List<ComponentSaveData> components = new();
