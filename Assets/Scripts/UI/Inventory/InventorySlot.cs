@@ -21,7 +21,6 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private GameObject[] toActivateOnZoom;
     [SerializeField] private GameObject[] toDeactivateOnZoom;
 
-    bool test = false;
     private void Awake()
     {
         InitializeComponents();
@@ -51,7 +50,7 @@ public class InventorySlot : MonoBehaviour
     
     public void SetZoomObject()
     {
-        zoomObject.GetComponent<UnityEngine.UI.Image>().sprite = this.transform.GetChild(0).GetComponent<UnityEngine.UI.Image>().sprite;
+        zoomObject.GetComponent<Image>().sprite = this.transform.GetChild(0).GetComponent<Image>().sprite;
     }
     public void SetZoomState(bool value)
     {

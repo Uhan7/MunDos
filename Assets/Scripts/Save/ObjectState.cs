@@ -14,6 +14,8 @@ public class ObjectState : MonoBehaviour
     [HideInInspector] private Vector3 defaultPosition;
 
     private InteractableSaveData defaultInteractableData;
+    // -- multi interactable goes here --
+    private OilSaveData defaultOilData;
     private ColliderSaveData defaultColliderData;
     private ConditionalSaveData defaultConditionalData;
     private LockableSaveData defaultLockableData;
@@ -36,6 +38,8 @@ public class ObjectState : MonoBehaviour
 
         // "Save" at the start to set the default shihs
         defaultInteractableData = CaptureInteractableData();
+        // -- multi interactable goes here --
+        defaultOilData = CaptureOilData();
         defaultColliderData = CaptureColliderData();
         defaultConditionalData = CaptureConditionalData();
         defaultLockableData = CaptureLockableData();
@@ -71,6 +75,8 @@ public class ObjectState : MonoBehaviour
         }
 
         AddComponentDelta(data.components, CaptureInteractableData(), defaultInteractableData);
+        // -- multi interactable goes here --
+        AddComponentDelta(data.components, CaptureOilData(), defaultOilData);
         AddComponentDelta(data.components, CaptureColliderData(), defaultColliderData);
         AddComponentDelta(data.components, CaptureConditionalData(), defaultConditionalData);
         AddComponentDelta(data.components, CaptureLockableData(), defaultLockableData);
@@ -106,6 +112,9 @@ public class ObjectState : MonoBehaviour
 
     private bool ComponentDataEquals(ComponentSaveData A, ComponentSaveData B)
     {
+        // This part basically checks, did anything change from default?
+        // If yes, then consider that in the save json, if not, then IDGAF
+
         if (A == null || B == null) return A == B;
         if (A.type != B.type) return false;
 
@@ -114,6 +123,15 @@ public class ObjectState : MonoBehaviour
             return interactableA.alreadyCheckedConditional == interactableB.alreadyCheckedConditional
                 && interactableA.alreadyCheckedUnlock == interactableB.alreadyCheckedUnlock
                 && interactableA.alreadyCheckedLock == interactableB.alreadyCheckedLock;
+        }
+
+        // -- multi interactable goes here --
+
+        if (A is OilSaveData oilA && B is OilSaveData oilB)
+        {
+            return oilA.pH == oilB.pH
+                && oilA.salinity== oilB.salinity
+                && oilA.finished == oilB.finished;
         }
 
         if (A is ColliderSaveData colliderA && B is ColliderSaveData colliderB)
@@ -202,6 +220,20 @@ public class ObjectState : MonoBehaviour
         data.alreadyCheckedConditional = interactable.alreadyCheckedConditional;
         data.alreadyCheckedUnlock = interactable.alreadyCheckedUnlock;
         data.alreadyCheckedLock = interactable.alreadyCheckedLock;
+        return data;
+    }
+
+    // -- multi interactable goes here --
+
+    private OilSaveData CaptureOilData()
+    {
+        Oil oil = GetComponent<Oil>();
+        if (oil == null) return null;
+
+        var data = new OilSaveData();
+        data.pH = oil.pH;
+        data.salinity = oil.salinity;
+        data.finished = oil.finished;
         return data;
     }
 
@@ -371,6 +403,19 @@ public class ObjectState : MonoBehaviour
             //        multiInteractable.currentInteractions = compData.interactionsCounter;
             //    }
             //}
+
+            if (comp.type == "Oil")
+            {
+                var oil = GetComponent<Oil>();
+                var compData = comp as OilSaveData;
+
+                if (oil != null && compData != null)
+                {
+                    oil.pH = compData.pH;
+                    oil.salinity = compData.salinity;
+                    oil.finished = compData.finished;
+                }
+            }
 
             if (comp.type == "Collider")
             {

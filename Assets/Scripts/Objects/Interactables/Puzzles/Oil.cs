@@ -11,8 +11,6 @@ public class Oil : MonoBehaviour
     [HideIf("isFromPast")] [SerializeField] private float desiredSalinity;
     [HideIf("isFromPast")] [SerializeField] private float originalPH;
     [HideIf("isFromPast")] [SerializeField] private float originalSalinity;
-    [ReadOnly] [HideIf("isFromPast")] [SerializeField] private float pH;
-    [ReadOnly] [HideIf("isFromPast")] [SerializeField] private float salinity;
     [ShowIf("isFromPast")] [SerializeField] private Oil presentTimelineOil;
 
     [Header("Item Interact")]
@@ -27,8 +25,12 @@ public class Oil : MonoBehaviour
     [HideIf("isFromPast")] [SerializeField] private BoxCollider2D[] otherOils;
     [HideIf("isFromPast")] [SerializeField] private GameObject correctDZ;
 
+    [Header("Counters")]
+    [ReadOnly] [HideIf("isFromPast")] [SerializeField] public float pH;
+    [ReadOnly] [HideIf("isFromPast")] [SerializeField] public float salinity;
+
     [Header("Flags")]
-    [HideInInspector] private bool finished = false;
+    [HideInInspector] public bool finished = false;
 
     private void Start()
     {
