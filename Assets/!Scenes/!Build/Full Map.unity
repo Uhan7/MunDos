@@ -1096,18 +1096,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: -800736819685987722, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -1350,8 +1350,8 @@ PrefabInstance:
       objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "<i>(It is the bakery\u2019s bread. I do not have the \r\ntime to grab
-        a bite, unfortunately.) </i>"
+      value: "<i>(It is the bakery\u2019s bread. I do not have the time to grab a
+        bite, unfortunately.) </i>"
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -6224,18 +6224,14 @@ MonoBehaviour:
     sentences:
     - "A lot of things had to be rebuilt after the war\u2014the museum used to be
       the Lapuz Family Manor, but it was heavily damaged."
-    - 'Senator Lapuz decided mid-renovations to have it turned into a museum... Likely
+    - Senator Lapuz decided mid-renovations to have it turned into a museum... Likely
       as a publicity stunt to turn her reputation around. And it worked, funnily
       enough.
-
-'
     - "... Well, it\u2019s not funny if you really think about it, but at least I
-      have a job.\r\n"
-    - 'The third was a former mayor of Sumpagita, <b><i>Mayor Fidel Lapuz</i></b>,
-      who was known for travelling around the world, gathering information that he
-      could bring back for the sake of improving Sumpagita!
-
-'
+      have a job."
+    - The third was a former mayor of Sumpagita, <b><i>Mayor Fidel Lapuz</i></b>,
+      who was known for travelling around the world, gathering information to bring
+      back for Sumpagita!
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -6245,7 +6241,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1761074840}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -6918,7 +6914,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1598116452}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -8980,7 +8976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 216368989601859519, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 1213930492031628822, guid: 65000ea5f4823244181ad550091ee21c, type: 3}
+    character2: {fileID: 0}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 3eb1024c55ce8430ba259a61060f08e3, type: 3}
     audioPitchOffset: 0
@@ -12398,8 +12394,16 @@ PrefabInstance:
       value: c38844d1-1541-4571-8c2f-af5ac7c8f42a
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: its empty
+      value: It's the safe.
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -12413,6 +12417,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 6133988339138595216, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -14018,7 +14030,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 941254129}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -18288,6 +18300,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Mean Bakery Owner
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I don't need to give this to him.
+      objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Offset.y
       value: -2
@@ -18497,7 +18521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasProperDialogue: 0
+  hasProperDialogue: 1
   containsSFX: 0
 --- !u!1 &148361545 stripped
 GameObject:
@@ -24595,6 +24619,18 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I do not need to give this to her.
+      objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Offset.y
       value: -1.25
@@ -25115,7 +25151,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 479371388}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -37965,18 +38001,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4823957461606539837, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 7156418273310198113, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -38983,7 +39019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(Liezel, I might have something for you.)</i>
+      value: Liezel, I might have something for you.
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -39315,18 +39351,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: -3921962357827113515, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -46648,20 +46684,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 412535281}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &359254601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359254598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasProperDialogue: 1
-  containsSFX: 0
 --- !u!1 &359467161
 GameObject:
   m_ObjectHideFlags: 0
@@ -49072,7 +49094,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 877192772}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -50830,7 +50852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -50839,11 +50861,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: <i>(Only the kings and pawn-... Is that real gold?)</i>
+      value: <i>(Only the kings and pawn-... Is that real gold? Awfully wasteful
+        to buy a golden chess piece.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: <i>(Awfully wasteful to buy a golden chess piece.)</i>
+      value: <i>(Whoever was playing this golden king will be cornered by pawns and
+        the other king, if it keeps going left.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
@@ -54414,9 +54438,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1850936724}
-    - targetCorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 359254601}
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!4 &412535282 stripped
 Transform:
@@ -59862,6 +59883,18 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I don't need to give this to her.
+      objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Size.x
       value: 1.5
@@ -60255,7 +60288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -60432,6 +60465,18 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I don't need to give this to her.
+      objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Size.x
       value: 1.5
@@ -60479,6 +60524,39 @@ PrefabInstance:
     - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 5.9599996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Celebrity
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: 2882917043407416917, guid: 5366f99e84378f64aa316ed1afba5e7d, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Another endorsement job. At least I have heard this place is actually
+        <i>good</i> this time.
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -60567,6 +60645,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5552020753192407099, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+    - {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -60575,9 +60654,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 554223215}
-    - targetCorrespondingSourceObject: {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 462362718}
     - targetCorrespondingSourceObject: {fileID: 310680489855159974, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 462362717}
@@ -60598,11 +60674,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 310680489855159974, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
   m_PrefabInstance: {fileID: 462362713}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &462362716 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-  m_PrefabInstance: {fileID: 462362713}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &462362717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60610,20 +60681,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462362715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasProperDialogue: 0
-  containsSFX: 0
---- !u!114 &462362718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462362716}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
@@ -63566,9 +63623,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'Come. It is better if we speak in private.
-
-'
+    - Come. It is better if we speak in private.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -63824,7 +63879,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 516695445}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -63912,18 +63967,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: -3921962357827113515, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -67677,7 +67732,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(Nope. I just found out about it now from Anika.)</i>
+    - Nope. I just found out about it now from Anika.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -67925,18 +67980,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -68060,7 +68115,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1433571706}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -70762,7 +70817,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 480564571}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -72890,18 +72945,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 5513359351382692184, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: -4592621269909323117, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -78925,7 +78980,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(Oh? What is it?)</i>
+    - Oh? What is it?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -83553,7 +83608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.429245
+      value: -110.45255
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -86411,6 +86466,18 @@ PrefabInstance:
     - target: {fileID: 2034884095999480211, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_text
       value: Mean Bakery Owner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I don't need to give this to her.
       objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Offset.y
@@ -89387,8 +89454,17 @@ PrefabInstance:
       value: 42e7f235-cd5b-4698-9727-ebb48765962f
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: I'm stinky bread now
+      value: <i>(This horrible bread is still here. Perhaps the Bakery Owner is in
+        disbelief.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -89402,6 +89478,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: e46110c2-99be-45b3-81a9-de1a5319a955
@@ -92789,12 +92873,20 @@ PrefabInstance:
       value: 53a61b29-2593-416c-a738-1052e24add76
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -92803,11 +92895,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: <i>(Only the kings and pawn-... Is that real gold?)</i>
+      value: <i>(Only the kings and pawn-... Is that real gold? Awfully wasteful
+        to buy a golden chess piece.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: <i>(Awfully wasteful to buy a golden chess piece.)</i>
+      value: <i>(Whoever was playing this golden king will be cornered by pawns and
+        the other king, if it keeps going left.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
@@ -92826,6 +92920,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 97386a49-68da-4f07-be9e-92c2824dc06d
@@ -96104,8 +96206,16 @@ PrefabInstance:
       value: 2364819d-d480-484f-9236-be4f63a6e51d
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: lalala solving the puzzle
+      value: I guess I need to press the arrows in the right order somehow...
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -96126,7 +96236,7 @@ PrefabInstance:
     - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 3606627201376690057, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: Wrong code... I should go over the clues.
@@ -97218,6 +97328,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.46
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 618f5975-56c3-4ce8-b0ad-ffb0dcde7954
@@ -97916,7 +98034,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1995430379}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -105310,18 +105428,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 7156418273310198113, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -106202,8 +106320,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<i>(Hm. I do, in fact. That is one quote that Se\xF1or Rommel ends almost
-      every speech with. Are you not familiar with it?)</i>"
+    - "Hm. I do, in fact. That is one quote that Se\xF1or Rommel ends almost every
+      speech with. Are you not familiar with it?"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -106798,18 +106916,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 216368989601859519, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -116062,7 +116180,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1914222368}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -123116,7 +123234,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1944965195}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -124685,7 +124803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -126510,14 +126628,14 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -126535,6 +126653,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.58
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6133988339138595216, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -131000,7 +131126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -131012,10 +131138,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: '<i>And we are proud to say that no foul magic was used in its creation
+      value: <i>And we are proud to say that no foul magic was used in its creation
         either, haha! </i>
-
-'
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -136612,6 +136736,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 2b1b82eb-5537-4a3e-b527-5ca994c73aed
@@ -137750,18 +137882,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 584213497, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -145008,18 +145140,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 1594033574078802709, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 584213497, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -145296,7 +145428,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: "That is duly noted, Se\xF1or Rommel! I\u2019m sure they will. Once
-        we find Se\xF1or Servillano, should we inform him about this\u2014"
+        we find Se\xF1or Servillano, should we inform him about this-"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -148098,6 +148230,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1728874648817772044, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
   m_PrefabInstance: {fileID: 1287562268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1188971761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 658745413927944185, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+  m_PrefabInstance: {fileID: 1916245914}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189905836
 GameObject:
@@ -154023,18 +154160,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 6218737741704169448, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -158356,18 +158493,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 1485388185277433987, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: -800736819685987722, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -161715,18 +161852,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -164654,14 +164791,14 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -169291,18 +169428,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 584213497, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -176558,7 +176695,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 61312136}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -181808,7 +181945,7 @@ MonoBehaviour:
   nextDialogue: {fileID: 2085181069}
   nextDialogueTime: 2
   playClosingAnimation: 0
-  mainCharacterIsSpeaking: 1
+  mainCharacterIsSpeaking: 0
   objectsToActivateAfter:
   - {fileID: 817818373}
   - {fileID: 824001019}
@@ -185946,6 +186083,18 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I do not need to give this to her.
+      objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Offset.y
       value: -1.25
@@ -185969,6 +186118,38 @@ PrefabInstance:
     - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 6.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Madam Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Good afternoon.
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -186042,6 +186223,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 7475890661137794651, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     - {fileID: 5552020753192407099, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+    - {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -186053,9 +186235,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1512735611}
-    - targetCorrespondingSourceObject: {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1512735615}
     - targetCorrespondingSourceObject: {fileID: 310680489855159974, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1512735614}
@@ -186128,11 +186307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: d85ee33a-e956-4892-b2e9-14e7cc3e600f
---- !u!1 &1512735613 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-  m_PrefabInstance: {fileID: 1512735606}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1512735614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186140,20 +186314,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512735610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasProperDialogue: 0
-  containsSFX: 0
---- !u!114 &1512735615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1512735613}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
@@ -188130,18 +188290,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4670315504612068207, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 6218737741704169448, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -191095,18 +191255,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -193876,7 +194036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -193890,7 +194050,7 @@ PrefabInstance:
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: "<i>(Quite the statement, but it seems like it was not for show. There
         are quite a few big names in this crowd\u2014even that <b>Celebrity</b> that
-        has been all over the press lately.) </i>\r\n"
+        has been all over the press lately.)</i>\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -196051,7 +196211,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 53021594}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -200296,7 +200456,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 536036559}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -207152,18 +207312,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 1594033574078802709, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -209343,18 +209503,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 7156418273310198113, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -213630,7 +213790,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1963272187}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -222425,7 +222585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -222681,11 +222841,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 5513359351382692184, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: -4592621269909323117, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 0
@@ -223220,7 +223380,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(Who is this Anika?)</i>
+    - Who is this Anika?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -223844,6 +224004,18 @@ PrefabInstance:
     - target: {fileID: 2034884095999480211, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_fontSizeBase
       value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I do not need to give this to him.
       objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Offset.y
@@ -224637,7 +224809,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 374335729}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -224750,7 +224922,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 190429678}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -227058,6 +227230,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: L3 Locked Door to Study
       objectReference: {fileID: 0}
+    - target: {fileID: 7090292814008328854, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090292814008328854, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 7160167192419779546, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_text
       value: Locked Door to Study
@@ -229755,7 +229935,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 2072385360}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -231278,7 +231458,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 2072013164}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -231695,6 +231875,18 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I don't need to give this to her.
+      objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Offset.y
       value: -0.91
@@ -231724,17 +231916,28 @@ PrefabInstance:
       value: 5.8900003
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      propertyPath: playClosingAnimation
-      value: 2
+      propertyPath: dialogue.name
+      value: Santi
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      propertyPath: dialogue.sentences.Array.size
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: playClosingAnimation
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "The Tour Guide (3) says it\u2019s the bakery\u2019s anniversary and
-        it has been booming for a long time."
+      value: Can I get a refresher on the story you told me?
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -231747,7 +231950,7 @@ PrefabInstance:
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 1849662419}
+      objectReference: {fileID: 1188971761}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -231821,8 +232024,61 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Tour Guide
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -6412774339020565012, guid: ee489ea9654334b49bebfbb6cef6f549, type: 3}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: playClosingAnimation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "The first to commemorate Rommel Lapuz was Governor Luna Lapuz, the
+        one who had Rommel\u2019s tomb built and had a <u>hobby of sports shooting</u>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: "The second was Senator Mahalia Lapuz who first established the museum...
+        Yes, the \u201CSenator Cockfighter\u201D with the <u>chicken ring</u>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[2]'
+      value: "The third was Mayor Fidel Lapuz who erected Rommel\u2019s statue and
+        <u>loved to travel</u>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[3]'
+      value: "The last was Sir Teodoro Lapuz, the one that ensured Rommel\u2019s
+        name survived in educational and historical books and had a <u>penchant for
+        gold</u>."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[4]'
+      value: The family has quite a reputation, huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[5]'
+      value: The family has quite a reputation, huh?
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1581249434304573448, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -233213,6 +233469,18 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.33
       objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 2485826035075669559, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: I do not need to give this to him.
+      objectReference: {fileID: 0}
     - target: {fileID: 2647128321065593694, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_Offset.y
       value: -1.25
@@ -233244,6 +233512,35 @@ PrefabInstance:
     - target: {fileID: 3179571668371301381, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 6.6199994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: nextDialogue
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.character2
+      value: 
+      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: linksToOtherDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: mainCharacterIsSpeaking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: "Good day, miss! If you have business with Se\xF1or Rommel, please head
+        inside."
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -233317,6 +233614,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 7475890661137794651, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     - {fileID: 5552020753192407099, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+    - {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
@@ -233328,9 +233626,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8331292557632406016, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1923642413}
-    - targetCorrespondingSourceObject: {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1923642417}
     - targetCorrespondingSourceObject: {fileID: 310680489855159974, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1923642416}
@@ -233403,11 +233698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2699743c-880e-489b-ac0f-79cee29031ff
---- !u!1 &1923642415 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6454448339006013565, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
-  m_PrefabInstance: {fileID: 1923642408}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1923642416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233415,20 +233705,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923642412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasProperDialogue: 0
-  containsSFX: 0
---- !u!114 &1923642417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923642415}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
@@ -236067,7 +236343,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 2043764609}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -238546,7 +238822,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 106647014}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -242701,7 +242977,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 2086585705}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -245740,18 +246016,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -860332198591883356, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 3898147896683463673, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -248433,18 +248709,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 1594033574078802709, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 7156418273310198113, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -248839,18 +249115,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: -4823957461606539837, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: -3921962357827113515, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: mainCharacterIsSpeaking
@@ -249225,7 +249501,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<i>(Do you know about this phrase: \u201CNo matter the price?\u201D)</i>"
+    - "Do you know about this phrase: \u201CNo matter the price\u201D?"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -250317,7 +250593,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1903816900}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -252818,12 +253094,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -252832,11 +253116,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: <i>(Only the kings and pawn-... Is that real gold?)</i>
+      value: <i>(Only the kings and pawn-... Is that real gold? Awfully wasteful
+        to buy a golden chess piece.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: <i>(Awfully wasteful to buy a golden chess piece.)</i>
+      value: <i>(Whoever was playing this golden king will be cornered by pawns and
+        the other king, if it keeps going left.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
@@ -252855,6 +253141,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 
@@ -253431,7 +253725,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 1862907265}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -253547,7 +253841,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 713299542}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 0
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -254606,7 +254900,7 @@ MonoBehaviour:
   linksToOtherDialogue: 1
   nextDialogue: {fileID: 791666561}
   nextDialogueTime: 0.5
-  playClosingAnimation: 2
+  playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter: []
   objectsToDeactivateAfter: []
@@ -258179,18 +258473,18 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -5562468424120001742, guid: ce4d04f01b4184171825197de710c760, type: 3}
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
+      objectReference: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -261830,7 +262124,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 1
@@ -261866,6 +262160,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.49
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 6cb74a6a-9575-477c-ad26-49ea99ebe87d
@@ -262586,7 +262888,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 1
@@ -262625,6 +262927,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 07e0ab2c-def4-4db5-a48a-3051e5a5180b
@@ -263477,8 +263787,20 @@ PrefabInstance:
       value: b47ab022-f6d1-47a6-b43a-64c9317f5c75
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4833260855376239280, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Lets solve dis
+      value: Let's see what I can do...
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -263507,6 +263829,18 @@ PrefabInstance:
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_fontSizeBase
       value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: This item didn't do anything.
       objectReference: {fileID: 0}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
@@ -264338,7 +264672,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
       value: 1
@@ -264381,6 +264715,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.58
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6133988339138595216, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -265394,10 +265736,14 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -3387389256237283611, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
@@ -265412,7 +265758,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
       value: "<i>(Glad I didn\u2019t trust him, pocketing funds for yourself while
-        the rest of Giyala is suffering...)</i>"
+        the rest of Giyala is suffering... It\u2019s just...)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
@@ -265430,6 +265776,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.52
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: be8d9635-5979-41e8-8b9e-5acdb75f1acd
@@ -266850,6 +267204,18 @@ PrefabInstance:
       propertyPath: id
       value: 4ec3a0df-6c39-465d-b060-5ec845c72685
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Hmm...
+      objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: 'Portrait 1: Mayor who loved travelling'
@@ -266862,6 +267228,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.58
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6133988339138595216, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -267089,6 +267463,18 @@ PrefabInstance:
       propertyPath: id
       value: ae45f376-6afc-4371-a8e3-f6e7b19be632
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Hmm...
+      objectReference: {fileID: 0}
     - target: {fileID: 5689517657370756421, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -267105,6 +267491,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 58d9081d-5eca-4e54-903d-4eab7ff80546
@@ -267844,6 +268238,18 @@ PrefabInstance:
       propertyPath: id
       value: a9b44d0a-caaa-4d6d-9759-1ba513fa1c5d
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Hmm...
+      objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: 'Portrait 3: Head of Education who likes gold'
@@ -267856,6 +268262,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.52
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 5fabc45b-9645-4c29-947f-f338eac791e0
@@ -268184,8 +268598,20 @@ PrefabInstance:
       value: 72fbd45f-6dbe-447a-b18a-cb99b5db692c
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -3357108826423129954, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: puzzle is done
+      value: It opened!
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -268199,6 +268625,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.73
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 33589198-96be-4489-aebe-1de1237006a5
@@ -268562,10 +268996,10 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: playClosingAnimation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -268606,6 +269040,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.58
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 6bdccfb5-fafa-47e4-8c09-a756bac87373
@@ -269402,7 +269844,11 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 3
@@ -269437,6 +269883,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.49
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 050679b4-01cf-4858-9d76-fc605800a69a
@@ -269910,7 +270364,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 1
@@ -269945,6 +270399,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.52
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: dc6aeba5-dd20-461c-897a-2d71757a7443
@@ -270278,6 +270740,18 @@ PrefabInstance:
       propertyPath: id
       value: bad0db4c-35c9-444f-8ce5-b5263e65eb86
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: A journal...
+      objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Journal
@@ -270290,6 +270764,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.73
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 800374798371294830, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: dd4e9223-182c-474a-95ca-c811d1dcd84d
@@ -271265,7 +271747,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -4258627021580615586, guid: 7c50abb68975940c9a305e1136732385, type: 3}
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 2
@@ -271302,6 +271784,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 53415595-19b9-4fd9-872a-6f180e8e4cce
@@ -272625,6 +273115,18 @@ PrefabInstance:
       propertyPath: id
       value: 3ed2176c-7768-4333-9a53-f082bb3fb24d
       objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -4647140889497064379, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: playClosingAnimation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[0]'
+      value: Hmm...
+      objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: 'Portrait 2: Senator who like chickens/does cockfighting'
@@ -272637,6 +273139,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.49
       objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.name
+      value: Santi
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: -1077248894956463413, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 6422280081895110284, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: id
       value: 3939f55c-2262-43b9-a2fd-aa84d57a6b47
