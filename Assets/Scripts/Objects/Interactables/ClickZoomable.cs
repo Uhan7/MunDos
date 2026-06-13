@@ -182,6 +182,7 @@ public class ClickZoomable : MonoBehaviour
             //}
             button.OnPointerExit(null);
             button.interactable = true;
+            EventSystem.current.SetSelectedGameObject(null);
             Debug.Log($"resetting {obj.name} button {button.name} make interac {button.interactable}");
 
             //ExecuteEvents.Execute(button.gameObject, new BaseEventData(EventSystem.current), ExecuteEvents.deselectHandler);
