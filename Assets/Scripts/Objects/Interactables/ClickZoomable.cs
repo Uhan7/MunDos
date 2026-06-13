@@ -138,7 +138,14 @@ public class ClickZoomable : MonoBehaviour
             }
             else
             {
-               //Debug.Log("CZ: Fail puzzle. Resetting");
+                orderIndex = 0;
+                wrongPasswordInput = false;
+
+                SetAll(toActivateOnInvalidInteract, true);
+                SetAll(toDeactivateOnInvalidInteract, false);
+                inputOrder.Clear();
+
+                //Debug.Log("CZ: Fail puzzle. Resetting");
                 if (isSingleEnvi) ResetButtons();
                 else
                 {
@@ -148,15 +155,6 @@ public class ClickZoomable : MonoBehaviour
                         if (hasActivatedState) SetActiveState(obj, false);
                     }
                 }
-
-                orderIndex = 0;
-                wrongPasswordInput = false;
-
-                SetAll(toActivateOnInvalidInteract, true);
-                SetAll(toDeactivateOnInvalidInteract, false);
-                inputOrder.Clear();
-
-                
             }
         }
         else
@@ -182,10 +180,11 @@ public class ClickZoomable : MonoBehaviour
             //{
             //    canvasGroup.interactable = true;
             //}
+            button.OnPointerExit(null);
             button.interactable = true;
+            Debug.Log($"resetting {obj.name} button {button.name} make interac {button.interactable}");
 
             //ExecuteEvents.Execute(button.gameObject, new BaseEventData(EventSystem.current), ExecuteEvents.deselectHandler);
-            button.OnPointerExit(null);
         }
         Canvas.ForceUpdateCanvases();
     }
@@ -225,12 +224,6 @@ public class ClickZoomable : MonoBehaviour
             zoomEnviBackdrop.SetActive(false);
             zoomEnviImage.SetActive(false);
         }
-        
-        leaveCondition = false;
-        if (deactivateAfter)
-        {
-            this.gameObject.SetActive(false);
-        }
 
         if (disableInteractionAfter)
         {
@@ -249,6 +242,12 @@ public class ClickZoomable : MonoBehaviour
             }
         }
         hasFirstPress = false;
+
+        leaveCondition = false;
+        if (deactivateAfter)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
     
     void SetInteractableObjectOutline(GameObject obj, bool value)
