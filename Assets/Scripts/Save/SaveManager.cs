@@ -39,7 +39,7 @@ public class SaveManager : MonoBehaviour
     [SerializeField, ReadOnly] public static bool read_load_on_start = false;
     [SerializeField, ReadOnly] public static TextAsset checkpointFile;
 
-    private void Awake()
+    private void Start()
     {
         sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
 
@@ -86,10 +86,15 @@ public class SaveManager : MonoBehaviour
     }
 
     public void StartLoad()
-    {        
+    {
         if (sceneTransitioner != null) sceneTransitioner.TriggerLoadingScreen();
 
-        StartCoroutine(LoadGame());
+        //StartCoroutine(LoadGame());
+
+        // "Refresh" the shit instead and make it load on start, so that loading in-game will work
+        load_on_start = true;
+        read_load_on_start = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
 
@@ -141,6 +146,9 @@ public class SaveManager : MonoBehaviour
 
         Debug.Log("Loaded save size (chars): " + json.Length);
         Debug.Log("Loaded save size (bytes): " + System.Text.Encoding.UTF8.GetByteCount(json));
+
+        // Reset just in case
+        load_on_start = false;
 
         yield return null;
     }
@@ -223,6 +231,9 @@ public class SaveManager : MonoBehaviour
 
         // Debug
         Debug.Log("Checkpoint successful! Skipped to " + jsonFile.name);
+
+        // Reset just in case
+        read_load_on_start = false;
     }
 
     public void SetCheckpointFile(TextAsset file)
