@@ -47,6 +47,8 @@ public class MultiInteractableObject : MonoBehaviour
     [HideIf("hasInteractionCounter")][SerializeField] ValidItem[] items;
     [ShowIf("hasInteractionCounter")][SerializeField] private GameObject[] toActivateOnCountsReached;
     [ShowIf("hasInteractionCounter")][SerializeField] private GameObject[] toDeactivateOnCountsReached;
+    [ShowIf("hasInteractionCounter")][SerializeField] private GameObject[] toActivateOnCount;
+    [ShowIf("hasInteractionCounter")][SerializeField] private GameObject[] toDeactivateOnCount;
     [ShowIf("hasInteractionCounter")][SerializeField] private AudioClip[] soundsToPlayOnInteraction;
     [ShowIf("hasInteractionCounter")][SerializeField] private AudioClip[] soundsToPlayOnInteractionsNeeded;
 
@@ -100,6 +102,8 @@ public class MultiInteractableObject : MonoBehaviour
         else
         {
             foreach (AudioClip clip in soundsToPlayOnInteraction) sfxSource.PlayOneShot(clip);
+            SetAll(toActivateOnCount, true);
+            SetAll(toDeactivateOnCount, false);
             interactionCount++;
         }
         Reset();
