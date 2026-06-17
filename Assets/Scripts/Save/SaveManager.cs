@@ -138,6 +138,8 @@ public class SaveManager : MonoBehaviour
         // Then Camera Cut
         StartCoroutine(RestoreBlend(brain, originalBlend));
 
+        RestoreGameplayAfterLoad();
+
         // Load Debug
         string json = PlayerPrefs.GetString(SAVE_KEY);
         Debug.Log("Game Loaded");
@@ -229,6 +231,8 @@ public class SaveManager : MonoBehaviour
         // Then Camera Cut
         StartCoroutine(RestoreBlend(brain, originalBlend));
 
+        RestoreGameplayAfterLoad();
+
         // Debug
         Debug.Log("Checkpoint successful! Skipped to " + jsonFile.name);
 
@@ -318,6 +322,17 @@ public class SaveManager : MonoBehaviour
     {
         yield return null; // wait 1 frame
         brain.DefaultBlend = original;
+    }
+
+    private void RestoreGameplayAfterLoad()
+    {
+        foreach (GameManager gameManager in FindObjectsByType<GameManager>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+        {
+            gameManager.ResetAllPauseVars();
+        }
+
+        if (pauseMenuManagerPast != null) pauseMenuManagerPast.active = false;
+        if (pauseMenuManagerPresent != null) pauseMenuManagerPresent.active = false;
     }
 
     public void SetLoadOnStart(bool val)

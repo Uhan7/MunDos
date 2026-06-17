@@ -153,8 +153,19 @@ public class GameManager : MonoBehaviour
 
         isPaused = false;
         isFocusing = false;
+        isHidingUI = false;
 
         dialogueHolderScript.canClick = true;
+
+        foreach (GameObject obj in UIToHide)
+        {
+            Animator uiAnimator = obj.GetComponent<Animator>();
+            if (uiAnimator != null)
+            {
+                uiAnimator.ResetTrigger("FadeOut");
+                uiAnimator.SetTrigger("FadeIn");
+            }
+        }
 
         if (!dialogueHolderScript.open)
         {
@@ -164,8 +175,7 @@ public class GameManager : MonoBehaviour
 
         timelineManagerScript.canSwitch = (!isPaused && !isFocusing);
         playerInteractScript.canInput = (!isPaused);
-
-        if (!isFocusing) canPause = true;
+        canPause = true;
 
         SettingsInfo.timePaused = false;
         Time.timeScale = 1;
