@@ -119,6 +119,24 @@ public class LogScreen : MonoBehaviour
         scrollbar.value = 0;
     }
 
+    public List<string> GetStoredDialogues()
+    {
+        return new List<string>(storedDialogues);
+    }
+
+    // The load basically,, since gon be too tiring to reference errything in the object state
+    public void SetStoredDialogues(List<string> loadedDialogues)
+    {
+        if (storedDialogues != null) storedDialogues = new List<string>(loadedDialogues);
+        else storedDialogues = new List<string>();
+
+        fullLog.text = "";
+        foreach (string dialogueLine in storedDialogues)
+        {
+            fullLog.text += dialogueLine + "<size=\"26\">\n\n";
+        }
+    }
+
     private IEnumerator UpdateMostRecent()
     {
         yield return new WaitForEndOfFrame();

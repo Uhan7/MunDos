@@ -1,6 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+// ===============
+// For every new shit to add... read the TODOs
+// ===============
+
 [RequireComponent(typeof(UniqueID))]
 public class ObjectState : MonoBehaviour
 {
@@ -13,6 +17,7 @@ public class ObjectState : MonoBehaviour
     [HideInInspector] private bool defaultIsActive;
     [HideInInspector] private Vector3 defaultPosition;
 
+    // TODO 1: add the default savedata here (make sure u alrdy made savedata of the component separately)
     private InteractableSaveData defaultInteractableData;
     // -- multi interactable goes here --
     private OilSaveData defaultOilData;
@@ -24,6 +29,7 @@ public class ObjectState : MonoBehaviour
     private ObjectsManagerSaveData defaultObjectsManagerData;
     private ZoomEnviManagerSaveData defaultZoomEnviManagerData;
     private DialogueManagerSaveData defaultDialogueManagerData;
+    private DialogueLogSaveData defaultDialogueLogData;
     private QuestLogSaveData defaultQuestLogData;
     private ProgressionPointSaveData defaultProgressionPointData;
     private GameManagerSaveData defaultGameManagerData;
@@ -36,6 +42,7 @@ public class ObjectState : MonoBehaviour
         defaultIsActive = gameObject.activeSelf;
         defaultPosition = transform.position;
 
+        // TODO 2: capture the default data (it'll say doesnt exist, we will fill it later)
         // "Save" at the start to set the default shihs
         defaultInteractableData = CaptureInteractableData();
         // -- multi interactable goes here --
@@ -48,6 +55,7 @@ public class ObjectState : MonoBehaviour
         defaultObjectsManagerData = CaptureObjectsManagerData();
         defaultZoomEnviManagerData = CaptureZoomEnviManagerData();
         defaultDialogueManagerData = CaptureDialogueManagerData();
+        defaultDialogueLogData = CaptureDialogueLogData();
         defaultQuestLogData = CaptureQuestLogData();
         defaultProgressionPointData = CaptureProgressionPointData();
         defaultGameManagerData = CaptureGameManagerData();
@@ -74,6 +82,7 @@ public class ObjectState : MonoBehaviour
             data.position = transform.position;
         }
 
+        // TODO 3: Add the component delta to the new component (again it'll say not defined yet)
         AddComponentDelta(data.components, CaptureInteractableData(), defaultInteractableData);
         // -- multi interactable goes here --
         AddComponentDelta(data.components, CaptureOilData(), defaultOilData);
@@ -85,6 +94,7 @@ public class ObjectState : MonoBehaviour
         AddComponentDelta(data.components, CaptureObjectsManagerData(), defaultObjectsManagerData);
         AddComponentDelta(data.components, CaptureZoomEnviManagerData(), defaultZoomEnviManagerData);
         AddComponentDelta(data.components, CaptureDialogueManagerData(), defaultDialogueManagerData);
+        AddComponentDelta(data.components, CaptureDialogueLogData(), defaultDialogueLogData);
         AddComponentDelta(data.components, CaptureQuestLogData(), defaultQuestLogData);
         AddComponentDelta(data.components, CaptureProgressionPointData(), defaultProgressionPointData);
         AddComponentDelta(data.components, CaptureGameManagerData(), defaultGameManagerData);
@@ -114,6 +124,8 @@ public class ObjectState : MonoBehaviour
     {
         // This part basically checks, did anything change from default?
         // If yes, then consider that in the save json, if not, then IDGAF
+
+        // TODO 4: Now to the logic for comparing the values between the saved and the actual
 
         if (A == null || B == null) return A == B;
         if (A.type != B.type) return false;
@@ -189,6 +201,16 @@ public class ObjectState : MonoBehaviour
                 && dialogueManagerA.dialogueManagerMainCharacterIsSpeaking == dialogueManagerB.dialogueManagerMainCharacterIsSpeaking;
         }
 
+        if (A is DialogueLogSaveData dialogueLogA && B is DialogueLogSaveData dialogueLogB)
+        {
+            // A bit diff since this is a loong list of strings
+            if (dialogueLogA.storedDialogues.Count != dialogueLogB.storedDialogues.Count) return false;
+
+            for (int i = 0; i < dialogueLogA.storedDialogues.Count; i++) if (dialogueLogA.storedDialogues[i] != dialogueLogB.storedDialogues[i]) return false;
+
+            return true;
+        }
+
         if (A is QuestLogSaveData questLogA && B is QuestLogSaveData questLogB)
         {
             return questLogA.actualQuestTextData == questLogB.actualQuestTextData
@@ -210,6 +232,8 @@ public class ObjectState : MonoBehaviour
 
         return false;
     }
+
+    // TODO 5: Thennn create a capture function (You will reference the actual component, then "write" it to data)
 
     private InteractableSaveData CaptureInteractableData()
     {
@@ -332,6 +356,16 @@ public class ObjectState : MonoBehaviour
         return data;
     }
 
+    private DialogueLogSaveData CaptureDialogueLogData()
+    {
+        LogScreen dialogueLog = GetComponent<LogScreen>();
+        if (dialogueLog == null) return null;
+
+        var data = new DialogueLogSaveData();
+        data.storedDialogues = dialogueLog.GetStoredDialogues();
+        return data;
+    }
+
     private QuestLogSaveData CaptureQuestLogData()
     {
         QuestLogManager questLogManager = GetComponent<QuestLogManager>();
@@ -367,6 +401,9 @@ public class ObjectState : MonoBehaviour
     }
 
     // Ok after all that capturing is restoring... -----------------------------
+
+    // TODO 6: Then lastly create a restore for the component.
+    // AFTER THIS, all the red underlines that appeared earlier shud be gone
 
     public void RestoreState(ObjectSaveData data)
     {
@@ -518,6 +555,17 @@ public class ObjectState : MonoBehaviour
                     dialogueManager.canNext = compData.dialogueManagerCanNext;
                     //dialogueManager.canClick = compData.dialogueManagerCanClick;
                     dialogueManager.mainCharacterIsSpeaking = compData.dialogueManagerMainCharacterIsSpeaking;
+                }
+            }
+
+            if (comp.type == "DialogueLog")
+            {
+                var logScreen = GetComponent<LogScreen>();
+                var compData = comp as DialogueLogSaveData;
+
+                if (logScreen != null && compData != null)
+                {
+                    logScreen.SetStoredDialogues(compData.storedDialogues);
                 }
             }
 
