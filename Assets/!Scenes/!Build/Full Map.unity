@@ -41833,7 +41833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toDeactivateOnInteract.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
@@ -41855,6 +41855,10 @@ PrefabInstance:
       propertyPath: 'toDeactivateOnInteract.Array.data[2]'
       value: 
       objectReference: {fileID: 865383080}
+    - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'toDeactivateOnInteract.Array.data[3]'
+      value: 
+      objectReference: {fileID: 119105323}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnInvalidInteract.Array.data[0]'
       value: 
@@ -53739,6 +53743,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -53749,6 +53757,11 @@ PrefabInstance:
 --- !u!4 &397458374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+  m_PrefabInstance: {fileID: 397458373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &397458375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 397458373}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &398416505
@@ -112056,9 +112069,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3929998360153519, guid: 7768e6cd5d1d84ba3b1a2c94654bef5d, type: 3}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: "When Liezel approaches the Study Door, she hears shouting from within.
         She peers inside and\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: '[GAME ENDS HERE FOR Week 6 build]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -180700,6 +180721,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: willFocus
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
+      propertyPath: protagHoverable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
+      propertyPath: animateInOnHover
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
@@ -180717,7 +180746,7 @@ PrefabInstance:
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 458917280}
+      objectReference: {fileID: 397458375}
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -180753,6 +180782,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8939352166545856951, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1438900933}
+    - targetCorrespondingSourceObject: {fileID: 6975052512347578845, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1438900942}
   m_SourcePrefab: {fileID: 100100000, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
 --- !u!1 &1438900930 stripped
 GameObject:
@@ -180784,6 +180816,28 @@ MonoBehaviour:
   descriptionText: 'Activated/Deactivated By:
 
     O13 Bell Rope 2 (Correct State)'
+--- !u!95 &1438900942
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438900931}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b7b3665fda3c4836974c1e6700d3b0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1438905157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194300,6 +194354,26 @@ PrefabInstance:
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: I solved it
       objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: objectsToActivateAfter.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: objectsToDeactivateAfter.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'objectsToActivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 119105323}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1975717552}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[1]'
+      value: 
+      objectReference: {fileID: 812095381}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
       value: BellRope DZ
