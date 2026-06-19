@@ -32,6 +32,11 @@ public class SceneTransitioner : MonoBehaviour
         StartCoroutine(GoToScene());
     }
 
+    public void SceneTransitionWrapperNoLoad(string _sceneName)
+    {
+        SceneManager.LoadScene(_sceneName);
+    }
+
     public void TriggerLoadingScreen()
     {
         CheckReference();
@@ -54,7 +59,7 @@ public class SceneTransitioner : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
-            float loadProgress = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            float loadProgress = Mathf.Clamp01(asyncLoad.progress);
             loadingCircle.fillAmount = loadProgress;
             yield return null;
         }
