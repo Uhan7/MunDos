@@ -4,7 +4,10 @@ using System.Collections.Generic;
 
 public class SlotHandler : MonoBehaviour
 {
+    [Header("Main References")]
     [SerializeField] TimelineManager timelineManager;
+    [SerializeField] ThumbnailSlot thumbnailManager;
+    [SerializeField] GameObject protag;
     [SerializeField] GameObject slot1;
     [SerializeField] GameObject slot2;
     [SerializeField] GameObject slot3;
@@ -63,9 +66,14 @@ public class SlotHandler : MonoBehaviour
         allSaveSlots[selectedSlot].ribbon.SetActive(true);
         allSaveSlots[selectedSlot].slotIsFull = true;
 
+        // Set ribbon color
         int currentTimeline = timelineManager.GetCurrentTimeline();
         allSaveSlots[selectedSlot].timelineSaved = currentTimeline;
         allSaveSlots[selectedSlot].SetRibbon(ribbonSprites[currentTimeline]);
+
+        // Set thumbnail
+        int area = DetermineArea();
+        allSaveSlots[selectedSlot].SetScreenshot(thumbnailManager.GetScreenshot(currentTimeline, area));
 
         SaveDetails();
     }
@@ -79,6 +87,7 @@ public class SlotHandler : MonoBehaviour
         // TEMPORARY
         PlayerPrefs.SetInt("SAVE_SLOT_ISFULL", SettingsInfo.saveSlots[selectedSlot, 0]);
         PlayerPrefs.SetInt("SAVE_SLOT_TIMELINE", SettingsInfo.saveSlots[selectedSlot, 1]);
+        PlayerPrefs.SetInt("SAVE_SLOT_AREA", DetermineArea());
     }
 
     public void SetContinue(bool FromContinue)
@@ -98,6 +107,26 @@ public class SlotHandler : MonoBehaviour
                 Debug.Log("Ribbon png is null");
             }
             allSaveSlots[0].SetRibbon(ribbonSprites[allSaveSlots[0].timelineSaved]);
+            allSaveSlots[0].SetScreenshot(thumbnailManager.GetScreenshot(
+                allSaveSlots[0].timelineSaved,
+                PlayerPrefs.GetInt("SAVE_SLOT_AREA", 0)
+            ));
         }
+    }
+
+    private int DetermineArea()
+    {
+        int area = 0; // outpost
+        float pos = protag.transform.position.x;
+
+        if (pos > 29) // town
+        {
+            area = 2;
+        } else if (pos > -83) // forest
+        {
+            area = 1;
+        }
+
+        return area;
     }
 }
