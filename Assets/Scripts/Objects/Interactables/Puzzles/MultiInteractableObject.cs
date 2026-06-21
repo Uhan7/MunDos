@@ -92,7 +92,7 @@ public class MultiInteractableObject : MonoBehaviour
 
     private void CounterInteract()
     {
-        if (interactionCount >= interactionCountsNeeded)
+        if (interactionCount + 1 >= interactionCountsNeeded)
         {
             hasActivatedOnce = true;
             foreach (AudioClip clip in soundsToPlayOnInteractionsNeeded) sfxSource.PlayOneShot(clip);

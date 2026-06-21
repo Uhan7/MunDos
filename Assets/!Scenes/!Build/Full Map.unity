@@ -13408,7 +13408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playeritemNamesToRemove.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -13420,7 +13420,7 @@ PrefabInstance:
       objectReference: {fileID: 3107200581788249327}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'playeritemNamesToRemove.Array.data[0]'
-      value: 
+      value: L3 Hammer
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
@@ -71247,12 +71247,15 @@ MonoBehaviour:
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter:
   - {fileID: 8459581168769610833}
+  - {fileID: 3107200581788249327}
   objectsToDeactivateAfter:
   - {fileID: 8558570606358578487}
+  - {fileID: 1752257545}
   repeatable: 0
   itemRepeatable: 0
   conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
+  playeritemNamesToRemove:
+  - L3 Hammer
   playeritemsToGive: []
   soundsToPlayBefore: []
   soundsToPlayAfter: []
@@ -81198,7 +81201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_Name
-      value: L3 Cab
+      value: 'L3 Cabinet with a Rusty Padlock '
       objectReference: {fileID: 0}
     - target: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
@@ -87050,7 +87053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -89284,7 +89287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.423706
+      value: -110.44444
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -89404,7 +89407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7184926650228580693, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7191002545296393446, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
@@ -205501,6 +205504,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: playeritemNamesToRemove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -205508,6 +205515,10 @@ PrefabInstance:
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
       objectReference: {fileID: 119105323}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: 'playeritemNamesToRemove.Array.data[0]'
+      value: L3 Flag
+      objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
@@ -205544,11 +205555,6 @@ PrefabInstance:
 --- !u!4 &1550508627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 1550508626}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1550508628 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1550508626}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1550531812
@@ -229666,6 +229672,11 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!1 &1752257545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 581127286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1755239728
 GameObject:
   m_ObjectHideFlags: 0
@@ -282772,7 +282783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: data.itemName
-      value: Hammer
+      value: L3 Hammer
       objectReference: {fileID: 0}
     - target: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: data.itemSprite
@@ -282796,7 +282807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
-      value: O7 Hammer
+      value: L3 Hammer
       objectReference: {fileID: 0}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_IsActive
@@ -283281,7 +283292,7 @@ PrefabInstance:
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 691036856}
+      objectReference: {fileID: 212275115}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
@@ -285896,7 +285907,6 @@ MonoBehaviour:
     hasActivated: 0
   toActivateOnCountsReached:
   - {fileID: 234587215}
-  - {fileID: 1550508628}
   - {fileID: 1438900930}
   - {fileID: 36884399}
   - {fileID: 828128391}
@@ -287913,16 +287923,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toActivateOnValidInteract.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: toDeactivateOnValidInteract.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnValidInteract.Array.data[0]'
       value: 
-      objectReference: {fileID: 3107200581788249327}
+      objectReference: {fileID: 97456594}
     - target: {fileID: 4844786128696803958, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'toActivateOnValidInteract.Array.data[1]'
       value: 
@@ -287941,7 +287951,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4f898be53342c6e4a8c51e2982eaeefe, type: 3}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_Name
-      value: 'L3 Cabinet with a Rusty Padlock '
+      value: Envi
       objectReference: {fileID: 0}
     - target: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: m_IsActive
@@ -290966,12 +290976,12 @@ PrefabInstance:
       objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playeritemsToGive.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'playeritemsToGive.Array.data[0]'
       value: 
-      objectReference: {fileID: 1272924587616732544, guid: d62fb14b944ad524b9a163c94de71e2a, type: 3}
+      objectReference: {fileID: 8101148262501011942}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: <i>(I can remove a few rocks with this. That should make it lighter.)</i>
@@ -290982,7 +290992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: playeritemNamesToRemove.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -290994,7 +291004,7 @@ PrefabInstance:
       objectReference: {fileID: 3107200581788249327}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'playeritemNamesToRemove.Array.data[0]'
-      value: L3 Rock Bundle
+      value: L3 Flag
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
@@ -291433,7 +291443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_Name
-      value: O11 Rock Bundle
+      value: L3 Rock Bundle
       objectReference: {fileID: 0}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_IsActive
@@ -292685,7 +292695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8294653827920321254, guid: 9e46c7e569d11cc4c9c1f1110c1b29b2, type: 3}
       propertyPath: toDeactivate.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8294653827920321254, guid: 9e46c7e569d11cc4c9c1f1110c1b29b2, type: 3}
       propertyPath: 'toActivate.Array.data[0]'
