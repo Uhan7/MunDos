@@ -14,6 +14,9 @@ public class QuestLogManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI guideText; // For ObjectState.cs
     public QuestLogData data;
 
+    [Header("Key Inputs")]
+    [SerializeField] private KeyCode questLogKey;
+
     [Header("Anim Reference")]
     [SerializeField] private GameObject questLogButton;
     [SerializeField] private DialogueManager dialogueManager; // To make quest log close once a dialogue starts
@@ -36,6 +39,8 @@ public class QuestLogManager : MonoBehaviour
         {
             ToggleQuestLog();
         }
+
+        if (Input.GetKeyDown(questLogKey) && !SettingsInfo.timePaused) ToggleQuestLog();
     }
 
     private void OnEnable()
