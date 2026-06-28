@@ -87103,12 +87103,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 727292750}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[1]'
       value: 
@@ -128218,8 +128218,9 @@ MonoBehaviour:
   presentTimelineOil: {fileID: 1224110819}
   originalOrchidSapDZSentence: Original Orchid Sap Sentence.
   originalTubeDZSentence: Original Oil Tube Sentence.
-  originalHibiscusSapDZSentence: -pH | +Salinity
-  originalHibiscusPetalDZSentence: Reset Values.
+  originalHibiscusSapDZSentence: This <b>lowers the pH</b> and <b>raises the salinity</b>
+    of the oil.
+  originalHibiscusPetalDZSentence: Hmm... This should rebalance the pH and salinity.
   DZ: {fileID: 432709736}
   otherOils: []
   correctDZ: {fileID: 0}
@@ -164873,7 +164874,8 @@ MonoBehaviour:
   originalPH: 8.4
   originalSalinity: 0.74
   presentTimelineOil: {fileID: 0}
-  originalOrchidSapDZSentence: +pH | -Salinity
+  originalOrchidSapDZSentence: This should have <b>raised the pH</b> and <b>lowered
+    the salinity</b>.
   originalTubeDZSentence: 'Current pH: <b><oil_ph></b> | Current Salinity: <b><oil_salinity>%</b>
 
     Required
