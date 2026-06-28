@@ -64221,7 +64221,7 @@ Transform:
   m_GameObject: {fileID: 452540203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.835, y: 8.919998, z: 0}
+  m_LocalPosition: {x: 57.97, y: 8.919998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68431,6 +68431,7 @@ MonoBehaviour:
   objectsToActivateAfter: []
   objectsToDeactivateAfter:
   - {fileID: 1359238666}
+  - {fileID: 1234776947}
   repeatable: 0
   itemRepeatable: 0
   conditionalObjectsToCheckAfter: []
@@ -106511,9 +106512,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1126896940340997301, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: toActivateOnInteract.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126896940340997301, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: toDeactivateOnInteract.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1126896940340997301, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1234776947}
     - target: {fileID: 1126896940340997301, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: 'toDeactivateOnInteract.Array.data[2]'
       value: 
@@ -110305,7 +110314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.099993
+      value: 26.83
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -140013,7 +140022,7 @@ Transform:
   m_GameObject: {fileID: 1003276735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.835, y: -2, z: 0}
+  m_LocalPosition: {x: 58.25, y: -1.6305733, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -163530,7 +163539,7 @@ Transform:
   m_GameObject: {fileID: 1220661255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.335001, y: -2, z: 0}
+  m_LocalPosition: {x: 27.065004, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -166858,7 +166867,7 @@ MonoBehaviour:
   descriptionText: 'Activated/Deactivated By:
 
     L3-DZ3/Rommel Yard Entrance >
-    Fake Door'
+    Closed'
 --- !u!1 &1234891223
 GameObject:
   m_ObjectHideFlags: 0
@@ -192282,15 +192291,15 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+      objectReference: {fileID: 3898147896683463673, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: With magic, any object can be found as long as I have something that
-        it was once intertwined with...
+      value: "Why would Se\xF1or Rommel have burned these pages..? They do not seem
+        to be official documents."
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -214468,7 +214477,7 @@ Transform:
   m_GameObject: {fileID: 1610958735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.335, y: 8.919998, z: 0}
+  m_LocalPosition: {x: 27.63, y: 8.919998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -217876,7 +217885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.099998
+      value: 27.28
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -229573,7 +229582,7 @@ Transform:
   m_GameObject: {fileID: 1735905998}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: -6.5, z: 0}
+  m_LocalPosition: {x: 11.89, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -235232,11 +235241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60.09999
+      value: 59.224987
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.0694275
+      value: -5.7
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -242564,7 +242573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -242605,23 +242614,23 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[8]'
       value: 
-      objectReference: {fileID: 1896787432}
+      objectReference: {fileID: 500816339}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[9]'
       value: 
-      objectReference: {fileID: 1990945920}
+      objectReference: {fileID: 1045852002}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[10]'
       value: 
-      objectReference: {fileID: 500816339}
+      objectReference: {fileID: 1591812724}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[11]'
       value: 
-      objectReference: {fileID: 1045852002}
+      objectReference: {fileID: 1591812724}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[12]'
       value: 
-      objectReference: {fileID: 471180743}
+      objectReference: {fileID: 1591812724}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
@@ -263422,11 +263431,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
---- !u!1 &1990945920 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 1990945919}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1990945921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
@@ -273818,7 +273822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60.09999
+      value: 58.87
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_LocalPosition.y
