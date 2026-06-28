@@ -837,6 +837,7 @@ Transform:
   - {fileID: 1255887173}
   - {fileID: 1285162080}
   - {fileID: 1526293362}
+  - {fileID: 3176681355708661112}
   m_Father: {fileID: 161494522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5322877
@@ -11843,7 +11844,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1579444323}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Solomon Manuscript
@@ -131473,7 +131474,8 @@ MonoBehaviour:
   mainCharacterIsSpeaking: 1
   objectsToActivateAfter:
   - {fileID: 1491982629}
-  objectsToDeactivateAfter: []
+  objectsToDeactivateAfter:
+  - {fileID: 135957836780151493}
   repeatable: 0
   itemRepeatable: 0
   conditionalObjectsToCheckAfter: []
@@ -239547,7 +239549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -239560,7 +239562,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[1]'
       value: 
-      objectReference: {fileID: 670704465}
+      objectReference: {fileID: 135957836780151493}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
@@ -284023,6 +284025,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &135957836780151493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3176681355708661112}
+  - component: {fileID: 1368354957886290511}
+  - component: {fileID: 6184359755624844847}
+  - component: {fileID: 1015242756809142604}
+  m_Layer: 0
+  m_Name: Solomon Manuscript Decor
+  m_TagString: Envi
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &149224569548982113
 Transform:
   m_ObjectHideFlags: 0
@@ -284765,6 +284786,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 5b06bf4b-8cae-4dc9-a7dc-d869558c4ad0
+--- !u!114 &1015242756809142604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135957836780151493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
 --- !u!114 &1049842341513860620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285249,6 +285284,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2da93d91-7a36-440e-8cf3-f55057701168
+--- !u!212 &1368354957886290511
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135957836780151493}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 22122627
+  m_SortingLayer: 12
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: d2244fb51434c9346a45f3ec00926b89, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.05, y: 3.05}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!114 &1484688238267177539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287302,6 +287392,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 45f966cc-1345-4ad7-8449-11569a11add6
+--- !u!4 &3176681355708661112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135957836780151493}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.8200016, y: 7.3999987, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5322876}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3232352619006581586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291713,6 +291818,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveActiveState: 1
   savePosition: 0
+--- !u!114 &6184359755624844847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135957836780151493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 173ed900-48ca-4a5f-8a86-bbf860b4cb7a
 --- !u!4 &6265023336294108293
 Transform:
   m_ObjectHideFlags: 0
