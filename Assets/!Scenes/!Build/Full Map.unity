@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -89149,7 +89149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5441590207469459801, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: overrideDebugMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5441590207469459801, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: UIToHide.Array.size
@@ -89717,7 +89717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.43842
+      value: -110.44298
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -173085,11 +173085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 75.1
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4000001
+      value: -1.6500001
       objectReference: {fileID: 0}
     - target: {fileID: 5835760526340331820, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
@@ -178342,7 +178342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: isSign
@@ -182536,14 +182536,18 @@ MonoBehaviour:
   nextDialogueTime: 0.5
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
-  objectsToActivateAfter: []
+  objectsToActivateAfter:
+  - {fileID: 119105323}
   objectsToDeactivateAfter:
   - {fileID: 1366119235}
   - {fileID: 212275115}
+  - {fileID: 1975717552}
+  - {fileID: 812095381}
   repeatable: 0
   itemRepeatable: 0
   conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
+  playeritemNamesToRemove:
+  - L3 Flag
   playeritemsToGive: []
   soundsToPlayBefore: []
   soundsToPlayAfter: []
@@ -198242,11 +198246,11 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1491982628}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1491982634}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
       value: Solomon Manuscript
@@ -198559,6 +198563,8 @@ MonoBehaviour:
   - {fileID: 1407900340}
   - {fileID: 265100093}
   - {fileID: 1831714339}
+  - {fileID: 1491982634}
+  - {fileID: 1491982628}
   objectsToDeactivate: []
   objectsToLock: []
   objectsToUnlock: []
