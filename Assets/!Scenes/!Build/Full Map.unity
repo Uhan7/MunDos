@@ -89717,7 +89717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.44444
+      value: -110.44298
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -118536,7 +118536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: '[GAME ENDS HERE FOR Week 6 build]'
+      value: '[GAME ENDS HERE FOR Week 7 build]'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -242633,7 +242633,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[10]'
       value: 
-      objectReference: {fileID: 1896787432}
+      objectReference: {fileID: 1591812724}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[11]'
       value: 
@@ -248901,6 +248901,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4098032350123694507, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647750694612382870, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: m_Name
       value: Past Night Transition Activater
@@ -248912,6 +248920,14 @@ PrefabInstance:
     - target: {fileID: 7546022773180628751, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: m_Size.x
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7546022773180628751, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.sentences.Array.size
@@ -248936,6 +248952,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1896787433}
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1896787438}
   m_SourcePrefab: {fileID: 100100000, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
 --- !u!4 &1896787431 stripped
 Transform:
@@ -248962,6 +248981,33 @@ MonoBehaviour:
   descriptionText: 'Activated/Deactivated By:
 
     L3 Journal'
+--- !u!114 &1896787438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896787432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 1
+  lockAndUnlock: 0
+  delayTime: 0
+  resetAfter: 0
+  deactivateAfter: 0
+  repeatable: 0
+  objectsToActivate: []
+  objectsToDeactivate: []
+  objectsToLock: []
+  objectsToUnlock: []
+  alreadyEnabled: 0
+  alreadyCheckedLock: 0
+  alreadyCheckedUnlock: 0
 --- !u!1001 &1898999766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263435,6 +263481,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
