@@ -353,6 +353,11 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    public bool CheckSaveExists()
+    {
+        return (PlayerPrefs.HasKey(SAVE_KEY));
+    }
+
     // DEBUG UPDATE BULLSHIT ---------------------------------------------------
 
     private void Update()
