@@ -172,6 +172,10 @@ PrefabInstance:
       value: Default Dialogue
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: willHideUI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.name
       value: santa
       objectReference: {fileID: 0}
@@ -289,6 +293,10 @@ PrefabInstance:
     - target: {fileID: 558018613006898524, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 804437671070608610, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: zoomEnviBackdrop
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1114844297735305674, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -426,6 +434,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4333012323108693581, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1872227922}
+    - targetCorrespondingSourceObject: {fileID: 4333012323108693581, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1872227926}
   m_SourcePrefab: {fileID: 100100000, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
 --- !u!1001 &1418155426
 PrefabInstance:
@@ -1817,6 +1828,20 @@ MonoBehaviour:
   fadeOutDelay: 0
   fadeOutDuration: 0
   disableOnFadeOut: 0
+--- !u!114 &1872227926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872227917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47664dce52457459c96a074d3f18a24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+  disableOnFadeOut: 1
 --- !u!1 &1931765073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,7 +1995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d6152ed2b42471f98231de0d544311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInDuration: 1.5
+  fadeInDuration: 1
   fadeOutDelay: 0
   fadeOutDuration: 0
   disableOnFadeOut: 0
@@ -2024,6 +2049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47664dce52457459c96a074d3f18a24d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayTime: 1
+  disableOnFadeOut: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

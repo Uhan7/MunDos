@@ -202,7 +202,10 @@ public class DialogueTrigger : MonoBehaviour
         foreach (GameObject objs in objectsToDeactivateAfter)
         {
             if (objs == null) continue;
-            objs.SetActive(false);
+
+            // Other shi if it specifically have ingame cg component
+            if (objs.GetComponent<IngameCG>() != null) objs.GetComponent<IngameCG>().FadeOutWrapper();
+            else objs.SetActive(false);
         }
         alreadyDeactivatedObjects = true;
     }
