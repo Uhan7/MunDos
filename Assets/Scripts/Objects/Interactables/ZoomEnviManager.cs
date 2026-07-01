@@ -22,7 +22,7 @@ public class ZoomEnviManager : MonoBehaviour
 
     public void ActivateZoomedEnvi() // used in InteractableObject.cs
     {
-        zoomEnviBackdrop.SetActive(true);
+        if (zoomEnviBackdrop != null) zoomEnviBackdrop.SetActive(true);
         zoomEnviImage.SetActive(true);
 
         activated = true;
@@ -34,7 +34,7 @@ public class ZoomEnviManager : MonoBehaviour
     public void DeactivateZoomedEnvi() // used in InteractableObject.cs
     {
         //print("deactivate zoom called");
-        zoomEnviBackdrop.SetActive(false);
+        if (zoomEnviBackdrop != null) zoomEnviBackdrop.SetActive(false);
         zoomEnviImage.SetActive(false);
 
         activated = false;
