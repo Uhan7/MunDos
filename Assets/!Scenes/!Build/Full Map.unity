@@ -176240,6 +176240,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: dfe16d79f99047d49a2eea3049a2838f, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: lockInteractableObject
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: lockOnValidInteractOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: soundsToPlay.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -176252,6 +176260,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: b5e9bd5fd5c6b41128a64957aff53a73, type: 3}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: objectsToLockCheck.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: objectsToUnlockCheck.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -176259,6 +176271,10 @@ PrefabInstance:
       propertyPath: toActivateOnInteract.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      propertyPath: 'objectsToLockCheck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1308070780}
     - target: {fileID: 8088371559307097873, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: toDeactivateOnInteract.Array.size
       value: 0
@@ -176409,6 +176425,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1308070781}
+    - targetCorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1308070785}
     - targetCorrespondingSourceObject: {fileID: 8426081892716971861, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 628289663}
@@ -176506,6 +176525,24 @@ MonoBehaviour:
   descriptionText: 'Activated/Deactivated By:
 
     Tree with Theban Symbol "M" (1)'
+--- !u!114 &1308070785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308070780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2a8149384a1458982a68981414a177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLockedAtStart: 0
+  requiredChecks: 1
+  currentChecks: 0
+  isAlreadyLocked: 0
+  hasStoredLockValue: 0
+  storedLockValue: 0
 --- !u!1 &1308439090
 GameObject:
   m_ObjectHideFlags: 0
