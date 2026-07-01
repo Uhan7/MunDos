@@ -59,6 +59,6 @@ public class ImageFader : MonoBehaviour
         }
 
         // Ensure final alpha is exactly set
-        image.color = new Color(color.r, color.g, color.b, endAlpha);
+        // image.color = new Color(color.r, color.g, color.b, endAlpha);
     }
 }
