@@ -18998,8 +18998,11 @@ MonoBehaviour:
   nextDialogueTime: 0.5
   playClosingAnimation: 0
   mainCharacterIsSpeaking: 1
-  objectsToActivateAfter: []
-  objectsToDeactivateAfter: []
+  objectsToActivateAfter:
+  - {fileID: 5811765240717333249}
+  objectsToDeactivateAfter:
+  - {fileID: 4060541269711509722}
+  - {fileID: 7792594930357534735}
   repeatable: 0
   itemRepeatable: 0
   conditionalObjectsToCheckAfter: []
@@ -42796,9 +42799,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 296934750}
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 296934749}
     - targetCorrespondingSourceObject: {fileID: 5182794977236136498, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1123277250}
@@ -42822,33 +42822,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 296934746}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &296934749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296934748}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 1
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!95 &296934750
 Animator:
   serializedVersion: 7
@@ -43389,142 +43362,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3c6ab11d-5fb8-40b8-817c-ec3a1545f20f
---- !u!1001 &301166628
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1024388366}
-    m_Modifications:
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2741798054155553635, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: id
-      value: 9b1f5044-8fd1-43d0-8472-b19375f2ea4d
-      objectReference: {fileID: 0}
-    - target: {fileID: 3404549752580450967, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: id
-      value: 1bbf556c-9c1f-4148-96bd-65c14c13c186
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: willFocus
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: nextDialogue
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: dialogue.soundToPlay
-      value: 
-      objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: linksToOtherDialogue
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: playClosingAnimation
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: " Maid (1) apologizes for the smell as Rommel has been burning things
-        at the Fireplace with Ashes recently, [6]\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: objectsToActivateAfter.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'objectsToActivateAfter.Array.data[0]'
-      value: 
-      objectReference: {fileID: 840954062}
-    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: 'objectsToActivateAfter.Array.data[1]'
-      value: 
-      objectReference: {fileID: 210876008}
-    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_Name
-      value: delete?
-      objectReference: {fileID: 0}
-    - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1916368246}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 301166631}
-  m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
---- !u!1 &301166629 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 301166628}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &301166630 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-  m_PrefabInstance: {fileID: 301166628}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &301166631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 301166629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasProperDialogue: 0
-  containsSFX: 0
 --- !u!1001 &301343141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47510,7 +47347,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate:
   - {fileID: 1925745182}
@@ -52217,7 +52054,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate: []
   objectsToLock: []
@@ -52812,7 +52649,7 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: nextDialogue
       value: 
-      objectReference: {fileID: 301166629}
+      objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: nextDialogueTime
       value: 2
@@ -53890,11 +53727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -159.9
+      value: -162
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4000001
+      value: -1.6500001
       objectReference: {fileID: 0}
     - target: {fileID: 6210358329791219743, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -60445,7 +60282,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1591824287}
   - {fileID: 2082934236}
@@ -63112,10 +62949,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 431219142}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &431219140 stripped
 Transform:
@@ -63127,33 +62961,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 431219139}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &431219142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431219141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 1
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &431410534
 GameObject:
   m_ObjectHideFlags: 0
@@ -64639,7 +64446,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate:
   - {fileID: 657180646}
@@ -65607,7 +65414,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 1
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate: []
   objectsToLock: []
@@ -66713,10 +66520,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 463921841}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &463921839 stripped
 Transform:
@@ -66728,33 +66532,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 463921838}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &463921841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 463921840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 1
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!114 &464919261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76611,10 +76388,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 533076698}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &533076696 stripped
 GameObject:
@@ -76626,33 +76400,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 533076695}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &533076698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533076696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &533387901 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7642793347172762807, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
@@ -88684,7 +88431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -100336,8 +100083,8 @@ MonoBehaviour:
   lockAndUnlock: 0
   delayTime: 0.5
   resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
+  deactivateAfter: 1
+  repeatable: 1
   objectsToActivate:
   - {fileID: 670704464}
   objectsToDeactivate: []
@@ -103968,10 +103715,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 695260732}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &695260730 stripped
 Transform:
@@ -103983,33 +103727,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 695260729}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &695260732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695260731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &695339471
 GameObject:
   m_ObjectHideFlags: 0
@@ -119758,7 +119475,7 @@ PrefabInstance:
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: 'objectsToActivate.Array.data[0]'
       value: 
-      objectReference: {fileID: 301166629}
+      objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: 'objectsToDeactivate.Array.data[0]'
       value: 
@@ -120834,7 +120551,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate: []
   objectsToLock: []
@@ -132925,7 +132642,7 @@ MonoBehaviour:
   delayTime: 3.75
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 659636023}
   - {fileID: 741176008}
@@ -133316,8 +133033,8 @@ MonoBehaviour:
   lockAndUnlock: 1
   delayTime: 0
   resetAfter: 0
-  deactivateAfter: 1
-  repeatable: 0
+  deactivateAfter: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate: []
   objectsToLock: []
@@ -140961,10 +140678,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 988407847}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &988407845 stripped
 GameObject:
@@ -140976,33 +140690,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 988407844}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &988407847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988407845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1001 &989657908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142710,11 +142397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.7
+      value: -53.8
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4000001
+      value: -1.6500001
       objectReference: {fileID: 0}
     - target: {fileID: 6210358329791219743, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -144469,8 +144156,6 @@ Transform:
   m_Children:
   - {fileID: 840954063}
   - {fileID: 210876009}
-  - {fileID: 301166630}
-  - {fileID: 1653184186}
   m_Father: {fileID: 68075677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1024388367
@@ -147165,7 +146850,7 @@ MonoBehaviour:
   delayTime: 2.5
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1843589644}
   objectsToDeactivate:
@@ -157323,10 +157008,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1135811200}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1135811198 stripped
 Transform:
@@ -157338,33 +157020,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1135811197}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1135811200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135811199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 1
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &1136313427
 GameObject:
   m_ObjectHideFlags: 0
@@ -158865,7 +158520,7 @@ Transform:
   m_GameObject: {fileID: 1145975719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -159.90001, y: -1.4000001, z: -10}
+  m_LocalPosition: {x: -162, y: -1.6500001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -161135,10 +160790,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1171409099}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1171409097 stripped
 Transform:
@@ -161150,33 +160802,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1171409096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1171409099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171409098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 1
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &1172525844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -161381,7 +161006,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate: []
   objectsToLock: []
@@ -162681,8 +162306,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: deactivateAfter
+      propertyPath: repeatable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
+      propertyPath: deactivateAfter
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: activateAndDeactivate
@@ -166344,7 +165973,7 @@ MonoBehaviour:
   delayTime: 0.5
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 671806217}
   objectsToDeactivate: []
@@ -174341,10 +173970,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1264415203}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1264415201 stripped
 Transform:
@@ -174356,33 +173982,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1264415200}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1264415203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264415202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &1265304119
 GameObject:
   m_ObjectHideFlags: 0
@@ -177159,6 +176758,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
+      propertyPath: repeatable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
       propertyPath: deactivateAfter
       value: 1
       objectReference: {fileID: 0}
@@ -178292,10 +177895,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1302392710}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &1302392708 stripped
 GameObject:
@@ -178307,33 +177907,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1302392707}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1302392710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302392708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &1303262028
 GameObject:
   m_ObjectHideFlags: 0
@@ -179136,8 +178709,8 @@ MonoBehaviour:
   lockAndUnlock: 0
   delayTime: 0.5
   resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
+  deactivateAfter: 1
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate:
   - {fileID: 1491982629}
@@ -185035,7 +184608,7 @@ PrefabInstance:
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[2]'
       value: 
-      objectReference: {fileID: 1653184185}
+      objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: conditionalObjectsToCheckAfter.Array.size
       value: 0
@@ -188548,10 +188121,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1381953865}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1381953863 stripped
 Transform:
@@ -188563,33 +188133,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1381953862}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1381953865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381953864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1001 &1383420678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -188832,10 +188375,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1384076648}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1384076646 stripped
 Transform:
@@ -188847,33 +188387,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1384076645}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1384076648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384076647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &1384385301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
@@ -189753,7 +189266,7 @@ PrefabInstance:
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[2]'
       value: 
-      objectReference: {fileID: 1653184185}
+      objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: conditionalObjectsToCheckAfter.Array.size
       value: 0
@@ -196784,10 +196297,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1447025692}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1447025690 stripped
 Transform:
@@ -196799,33 +196309,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1447025689}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1447025692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447025691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 1
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!114 &1447027542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202293,7 +201776,7 @@ MonoBehaviour:
   delayTime: 0.5
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1407900340}
   - {fileID: 265100093}
@@ -206348,7 +205831,7 @@ MonoBehaviour:
   delayTime: 0.1
   resetAfter: 0
   deactivateAfter: 1
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1515050563}
   objectsToDeactivate: []
@@ -207680,7 +207163,7 @@ MonoBehaviour:
   delayTime: 0.5
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1861791882}
   - {fileID: 1201575093}
@@ -210156,7 +209639,7 @@ MonoBehaviour:
   delayTime: 0.5
   resetAfter: 0
   deactivateAfter: 1
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1550390007}
   - {fileID: 1491982629}
@@ -216078,7 +215561,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1606790599}
   objectsToDeactivate: []
@@ -219074,10 +218557,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1621934578}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1621934576 stripped
 Transform:
@@ -219089,33 +218569,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1621934575}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1621934578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621934577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 1
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1001 &1623479438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -222195,129 +221648,6 @@ MonoBehaviour:
   alreadyEnabled: 0
   alreadyCheckedLock: 0
   alreadyCheckedUnlock: 0
---- !u!1001 &1653184184
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1024388366}
-    m_Modifications:
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: delayTime
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: isOnEnable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: lockAndUnlock
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: deactivateAfter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: activateAndDeactivate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: objectsToUnlock.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: objectsToActivate.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: 'objectsToUnlock.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: 'objectsToUnlock.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: objectsToDeactivate.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: 'objectsToActivate.Array.data[0]'
-      value: 
-      objectReference: {fileID: 301166629}
-    - target: {fileID: 1534501200210616043, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: 'objectsToDeactivate.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2064025802}
-    - target: {fileID: 2348691492092013971, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_Name
-      value: Maid1 Speak
-      objectReference: {fileID: 0}
-    - target: {fileID: 2348691492092013971, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010647767150175281, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-      propertyPath: id
-      value: 2be20687-6d8a-4d95-8f3c-d79ce0e684b8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
---- !u!1 &1653184185 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2348691492092013971, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-  m_PrefabInstance: {fileID: 1653184184}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1653184186 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5186593200432863493, guid: 770eee3767cc78c408f124041cb0e817, type: 3}
-  m_PrefabInstance: {fileID: 1653184184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1654879580
 GameObject:
   m_ObjectHideFlags: 0
@@ -250090,9 +249420,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1863029034}
-    - targetCorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1863029033}
     - targetCorrespondingSourceObject: {fileID: 5182794977236136498, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1447830168}
@@ -250116,33 +249443,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8545380165161031538, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1863029030}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1863029033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863029031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 1
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!95 &1863029034
 Animator:
   serializedVersion: 7
@@ -251597,10 +250897,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1873261169}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &1873261167 stripped
 GameObject:
@@ -251612,33 +250909,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1873261166}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1873261169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873261167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &1875116317 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3900017614526389615, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -253042,7 +252312,7 @@ MonoBehaviour:
   delayTime: 0.25
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate: []
   objectsToLock: []
@@ -257618,133 +256888,6 @@ MonoBehaviour:
   descriptionText: 'Activated/Deactivated By:
 
     L3 Tour Guide 4 Move to Statue'
---- !u!1 &1916368245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1916368246}
-  - component: {fileID: 1916368249}
-  - component: {fileID: 1916368248}
-  - component: {fileID: 1916368247}
-  - component: {fileID: 1916368250}
-  m_Layer: 0
-  m_Name: end
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1916368246
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916368245}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 301166630}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1916368247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916368245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveActiveState: 1
-  savePosition: 0
---- !u!114 &1916368248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916368245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: bbc2bb68-2e5b-4f60-a7f7-aa8fe00c54a3
---- !u!114 &1916368249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916368245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    character: {fileID: 21300000, guid: 96eb344a6948b4d6d9857fbd42887954, type: 3}
-    character2: {fileID: 0}
-    name: Default Name
-    soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - " then Maid (1) leaves to the Foyer [6]\r"
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 0
-  deactivateAfter: 1
-  linksToOtherDialogue: 0
-  nextDialogue: {fileID: 0}
-  nextDialogueTime: 0.5
-  playClosingAnimation: 0
-  mainCharacterIsSpeaking: 1
-  objectsToActivateAfter:
-  - {fileID: 0}
-  objectsToDeactivateAfter: []
-  repeatable: 0
-  itemRepeatable: 0
-  conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
-  playeritemsToGive: []
-  soundsToPlayBefore: []
-  soundsToPlayAfter: []
-  dialogueIsTriggered: 0
-  alreadyActivatedObjects: 0
-  alreadyDeactivatedObjects: 0
-  alreadyCheckedConditional: 0
-  alreadyRemovedPlayeritems: 0
-  alreadyGavePlayeritems: 0
---- !u!114 &1916368250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916368245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824899b788b474bb19e28a7bd7f877ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasProperDialogue: 0
-  containsSFX: 0
 --- !u!1 &1917104890
 GameObject:
   m_ObjectHideFlags: 0
@@ -259740,7 +258883,7 @@ MonoBehaviour:
   delayTime: 0
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate: []
   objectsToDeactivate:
   - {fileID: 1962046892}
@@ -276717,7 +275860,7 @@ MonoBehaviour:
   delayTime: 0.1
   resetAfter: 0
   deactivateAfter: 0
-  repeatable: 0
+  repeatable: 1
   objectsToActivate:
   - {fileID: 1997235631}
   - {fileID: 302174766}
@@ -288534,10 +287677,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2137759943}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &2137759941 stripped
 GameObject:
@@ -288549,33 +287689,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 2137759940}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2137759943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137759941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnEnable: 1
-  isTrigger: 0
-  activateAndDeactivate: 0
-  lockAndUnlock: 0
-  delayTime: 0
-  resetAfter: 0
-  deactivateAfter: 0
-  repeatable: 0
-  objectsToActivate: []
-  objectsToDeactivate: []
-  objectsToLock: []
-  objectsToUnlock: []
-  alreadyEnabled: 0
-  alreadyCheckedLock: 0
-  alreadyCheckedUnlock: 0
 --- !u!1 &2139612663
 GameObject:
   m_ObjectHideFlags: 0
