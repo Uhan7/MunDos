@@ -10,7 +10,8 @@ using UnityEngine.SceneManagement;
 public class SaveManager : MonoBehaviour
 {
     [Header("Constants")]
-    [HideInInspector] private const string SAVE_KEY = "SAVE_DATA";
+    [HideInInspector] private const string SAVE_1_KEY = "SAVE_DATA_1";
+    [HideInInspector] private const string SAVE_2_KEY = "SAVE_DATA_2";
     [HideInInspector] private const string SFX_SOURCE_NAME = "SFX Source";
 
     [Header("Keycodes (Debug)")]
@@ -39,6 +40,9 @@ public class SaveManager : MonoBehaviour
     [SerializeField, ReadOnly] public static bool read_load_on_start = false;
     [SerializeField, ReadOnly] public static TextAsset checkpointFile;
 
+    [Header("Actual Save File")]
+    [HideInInspector] private string SAVE_KEY = "SAVE_DATA_1"; // Default to save 1
+
     private void Start()
     {
         sfxSource = GameObject.Find(SFX_SOURCE_NAME).GetComponent<AudioSource>();
@@ -55,6 +59,10 @@ public class SaveManager : MonoBehaviour
     public void SaveGame()
     {
         SaveData data = new();
+
+        // Select Save Slot
+        if (SettingsInfo.selectedSaveSlot == 0) SAVE_KEY = SAVE_1_KEY;
+        else if (SettingsInfo.selectedSaveSlot == 1) SAVE_KEY = SAVE_2_KEY;
 
         // Physical Objects
         data.objectStates = new List<ObjectSaveData>();
@@ -102,6 +110,10 @@ public class SaveManager : MonoBehaviour
     public IEnumerator LoadGame()
     {
         if (sfxSource != null) sfxSource.PlayOneShot(loadSFX); // Plays first to let players know it loading
+
+        // Select Save Slot
+        if (SettingsInfo.selectedSaveSlot == 0) SAVE_KEY = SAVE_1_KEY;
+        else if (SettingsInfo.selectedSaveSlot == 1) SAVE_KEY = SAVE_2_KEY;
 
         // If none, load normal
         if (!PlayerPrefs.HasKey(SAVE_KEY))
@@ -156,6 +168,15 @@ public class SaveManager : MonoBehaviour
     }
 
     // Extra Save/Load Functions -----------------------------------------------
+    //public void ChangeSaveFile(int saveFile)
+    //{
+    //    if (saveFile == 1) SAVE_KEY = SAVE_1_KEY;
+    //    else if (saveFile == 2) SAVE_KEY = SAVE_2_KEY;
+    //    else Debug.LogError("Error on ChangeSaveFile()! Incorrect save key!");
+
+    //    Debug.Log($"Current Save File: {saveFile}");
+    //}
+
     public void WriteSaveData()
     {
         SaveData data = new();

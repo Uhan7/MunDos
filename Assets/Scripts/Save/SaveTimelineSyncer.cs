@@ -7,10 +7,10 @@ public class SaveTimelineSyncer : MonoBehaviour
     [SerializeField] SlotHandler slotHandler;
     [SerializeField] GameObject slot1;
     [SerializeField] GameObject slot2;
-    [SerializeField] GameObject slot3;
-    [SerializeField] GameObject slot4;
-    [SerializeField] GameObject slot5;
-    [SerializeField] GameObject slot6;
+    //[SerializeField] GameObject slot3;
+    //[SerializeField] GameObject slot4;
+    //[SerializeField] GameObject slot5;
+    //[SerializeField] GameObject slot6;
 
     private List<SaveSlot> allSaveSlots = new List<SaveSlot>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created

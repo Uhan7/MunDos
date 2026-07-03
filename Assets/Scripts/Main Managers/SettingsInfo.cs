@@ -14,5 +14,6 @@ public static class SettingsInfo
 
     // Save slot information (bigger array is for when we have more than one)
     //public static int[,] saveSlots = new int[6, 2];
-    public static int[,] saveSlots = new int[1, 2];
+    public static int selectedSaveSlot = 0;
+    public static int[,] saveSlots = new int[2, 2];
 }
