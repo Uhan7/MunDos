@@ -10796,6 +10796,7 @@ GameObject:
   - component: {fileID: 72054967}
   - component: {fileID: 72054966}
   - component: {fileID: 72054965}
+  - component: {fileID: 72054969}
   m_Layer: 0
   m_Name: 14
   m_TagString: Dialogue Zone
@@ -10903,6 +10904,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2085181071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72054969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72054964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Look for where Rommel could have burned something.
+  guideText: Rommel seems confident in letting Liezel roam around his abode, but
+    has he truly hidden all there would be to see?
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &73479498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1728874648817772044, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
@@ -11986,7 +12005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100836808320417522, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9211805081898885604, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
@@ -45945,6 +45964,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasProperDialogue: 1
   containsSFX: 0
+--- !u!114 &302500206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302500202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Talk to the Antiquarian again.
+  guideText: The oil has been acquired! What else could be needed?
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
+  hasBeenActivated: 0
 --- !u!1 &305180941
 GameObject:
   m_ObjectHideFlags: 0
@@ -59975,7 +60011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1378671161854638220, guid: 453882e13cc734438aa890a4cc1a50f3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4531334058512182652, guid: 453882e13cc734438aa890a4cc1a50f3, type: 3}
       propertyPath: id
@@ -68814,6 +68850,7 @@ GameObject:
   - component: {fileID: 461775314}
   - component: {fileID: 461775313}
   - component: {fileID: 461775312}
+  - component: {fileID: 461775315}
   m_Layer: 0
   m_Name: Solved
   m_TagString: Dialogue Zone
@@ -68916,6 +68953,25 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!114 &461775315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461775310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Explore the Town Hall and find a way to distract the guards.
+  guideText: "The guards are tough, but something loud and urgent should be able
+    to get their attention. Once the guards are out of the way, access to Rommel\u2019s
+    House would be open."
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
+  hasBeenActivated: 0
 --- !u!1 &462237165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -72144,6 +72200,7 @@ GameObject:
   - component: {fileID: 479371392}
   - component: {fileID: 479371391}
   - component: {fileID: 479371390}
+  - component: {fileID: 479371393}
   m_Layer: 0
   m_Name: 9
   m_TagString: Dialogue Zone
@@ -72245,6 +72302,24 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!114 &479371393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479371388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Talk to Rommel in his living room.
+  guideText: Liezel manages to strike a conversation with Rommel, but something already
+    feels off.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &479607347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95428,7 +95503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.45454
+      value: -110.47001
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -107468,6 +107543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Start Auto Move
       objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -117857,7 +117936,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 753067227}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &753067225 stripped
 Transform:
@@ -117869,6 +117951,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 753067224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &753067227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753067226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Confront Rommel.
+  guideText: The Town Bell is rung and everyone should be alarmed. The leaders must
+    all be together by now. If this important meeting drags the future of Giyala
+    with it, there is no time to lose.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &753837357
 GameObject:
   m_ObjectHideFlags: 0
@@ -122094,7 +122195,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 796322145}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &796322143 stripped
 Transform:
@@ -122106,6 +122210,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 796322142}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &796322145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796322144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Find the way to unlock the padlock.
+  guideText: Normally, the Town Hall should be open to all. However, with multiple
+    disturbances, security is expected to be raised.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &796417309
 GameObject:
   m_ObjectHideFlags: 0
@@ -160321,6 +160443,7 @@ GameObject:
   - component: {fileID: 1100449001}
   - component: {fileID: 1100449000}
   - component: {fileID: 1100448999}
+  - component: {fileID: 1100449002}
   m_Layer: 0
   m_Name: 3
   m_TagString: Dialogue Zone
@@ -160420,6 +160543,25 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!114 &1100449002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100448997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: "Continue investigating Rommel\u2019s house."
+  guideText: "Having found what she is certain is relevant evidence, Liezel decides
+    to pursue a search for more information. Meanwhile, Santi wonders what Rommel\u2019s
+    house has become in the present."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1101005732
 GameObject:
   m_ObjectHideFlags: 0
@@ -176154,7 +176296,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1224514467}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1224514465 stripped
 Transform:
@@ -176166,6 +176311,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1224514464}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1224514467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224514466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Find a way to open the Locked Safe.
+  guideText: "Liezel finds a locked safe in Rommel\u2019s home, with the lock composed
+    of directional arrows. She suspects Rommel\u2019s journal may be within."
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
+  hasBeenActivated: 0
 --- !u!1 &1225476390
 GameObject:
   m_ObjectHideFlags: 0
@@ -177087,7 +177250,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1229759428}
-  - component: {fileID: 1229759432}
   - component: {fileID: 1229759431}
   - component: {fileID: 1229759430}
   - component: {fileID: 1229759429}
@@ -177195,52 +177357,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1229759432
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1229759427}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -8.614304, y: -0.5500001}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 74.82, y: 2.5318184}
-    newSize: {x: 74.82, y: 2.5318184}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 1
-  m_AutoTiling: 0
-  m_Size: {x: 57.928604, y: 2.49}
-  m_EdgeRadius: 0
 --- !u!1001 &1229922864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178634,7 +178750,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.42877197, y: -0.5500001}
+  m_Offset: {x: 9.3, y: -0.34}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -178644,7 +178760,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 1
   m_AutoTiling: 0
-  m_Size: {x: 99.41228, y: 2.49}
+  m_Size: {x: 228.99, y: 2.49}
   m_EdgeRadius: 0
 --- !u!1001 &1238002214
 PrefabInstance:
@@ -199016,8 +199132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questText: Find the right oil mixture!
-  guideText: The Antiquarian will be able to open the bottle, but needs the right
-    mixture. This will take a while.
+  guideText: The Antiquarian says to open the bottle, it needs the right oil mixture.
+    This will take a while.
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
   hasBeenActivated: 0
@@ -211399,7 +211515,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1487764728}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &1487764726 stripped
 GameObject:
@@ -211411,6 +211530,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1487764725}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1487764728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487764726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Give the oil mixture to the Antiquarian.
+  guideText: Santi should ask the Antiquarian what to do next.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1490282593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 344345995962506679, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
@@ -214240,6 +214376,7 @@ GameObject:
   - component: {fileID: 1502184158}
   - component: {fileID: 1502184157}
   - component: {fileID: 1502184156}
+  - component: {fileID: 1502184160}
   m_Layer: 0
   m_Name: 3
   m_TagString: Dialogue Zone
@@ -214289,7 +214426,7 @@ MonoBehaviour:
   dialogue:
     character: {fileID: -800736819685987722, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     character2: {fileID: 0}
-    name: Leizel
+    name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
     font: {fileID: 0}
@@ -214342,6 +214479,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1971553577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1502184160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502184155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Follow the guards.
+  guideText: "The encoded messages revealed \u201CGiyala falls by his betrayal\u201D,
+    but a commotion about another magic attack quickly draws attention..."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1503547912
 GameObject:
   m_ObjectHideFlags: 0
@@ -225624,7 +225779,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587227693}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1587227691 stripped
 Transform:
@@ -225636,6 +225794,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1587227690}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587227693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587227692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Investigate the museum with Santi.
+  guideText: "The letter seems to imply that something was hidden in the walls of
+    Rommel\u2019s house. With Liezel deep in thought, Santi decides to look into
+    what\u2019s left in his time."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1587861041
 GameObject:
   m_ObjectHideFlags: 0
@@ -229748,7 +229925,6 @@ GameObject:
   - component: {fileID: 1625608750}
   - component: {fileID: 1625608749}
   - component: {fileID: 1625608748}
-  - component: {fileID: 1625608751}
   m_Layer: 0
   m_Name: Town Edge Transition Floor
   m_TagString: Floor
@@ -229853,52 +230029,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1625608751
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625608746}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.42877197, y: -0.5500001}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 74.82, y: 2.5318184}
-    newSize: {x: 74.82, y: 2.5318184}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 1
-  m_AutoTiling: 0
-  m_Size: {x: 99.41228, y: 2.49}
-  m_EdgeRadius: 0
 --- !u!1 &1628076009
 GameObject:
   m_ObjectHideFlags: 0
@@ -237728,6 +237858,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6578602712689706575, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 302500205}
+    - targetCorrespondingSourceObject: {fileID: 6578602712689706575, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 302500206}
     - targetCorrespondingSourceObject: {fileID: 4923956555869909511, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2032014190}
@@ -252213,7 +252346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: cab41bf5f90644f71a832ee33f684ad4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7529831067461262313, guid: cab41bf5f90644f71a832ee33f684ad4, type: 3}
       propertyPath: id
@@ -265539,6 +265672,7 @@ GameObject:
   - component: {fileID: 1883328029}
   - component: {fileID: 1883328028}
   - component: {fileID: 1883328027}
+  - component: {fileID: 1883328030}
   m_Layer: 0
   m_Name: 1 (3)
   m_TagString: Dialogue Zone
@@ -265639,6 +265773,25 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!114 &1883328030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883328025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: "Find a way to get into Rommel\u2019s House."
+  guideText: "After learning about Rommel\u2019s plans, the \u201Cimportant\u201D
+    meeting of the Disidensya leaders becomes unsettling. Rommel must have his reasons,
+    but whatever they are, he must be confronted before any possible harm is done."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &1883680805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266701,6 +266854,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      propertyPath: dialogue.character
+      value: 
+      objectReference: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
@@ -266710,7 +266871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Let there be night
+      value: "Night falls upon Giyala\u2026 It\u2019s now or never."
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -266751,6 +266912,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1896787433}
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1896787434}
   m_SourcePrefab: {fileID: 100100000, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
 --- !u!4 &1896787431 stripped
 Transform:
@@ -266777,6 +266941,24 @@ MonoBehaviour:
   descriptionText: 'Activated/Deactivated By:
 
     L3 Journal'
+--- !u!114 &1896787434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896787432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: "Return to Rommel\u2019s house."
+  guideText: It's the night of the meeting. What are the chances it might be easy
+    to get into Rommel's abode again?
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
+  hasBeenActivated: 0
 --- !u!1 &1898042590
 GameObject:
   m_ObjectHideFlags: 0
@@ -278639,7 +278821,7 @@ PrefabInstance:
       objectReference: {fileID: 295796178}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.name
-      value: Leizel
+      value: Liezel
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.character
@@ -282179,20 +282361,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      propertyPath: dialogue.name
+      value: Liezel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: startOnEnable
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+      objectReference: {fileID: 3606627201376690057, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(I should probably head back to the house)</i>
+      value: <i>(I should <b>return home</b> and wait until the meeting later tonight.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -282209,7 +282395,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990945922}
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!1 &1990945920 stripped
 GameObject:
@@ -282221,6 +282410,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1990945919}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990945922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990945920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Return to Liezel's house.
+  guideText: With time dwindling, now is the time to act. But first... Wait until
+    the time of the meeting.
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
+  hasBeenActivated: 0
 --- !u!1 &1991276834
 GameObject:
   m_ObjectHideFlags: 0
@@ -283814,7 +284021,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.55}
+  m_Offset: {x: 4.7, y: -0.55}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -283824,7 +284031,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 1
   m_AutoTiling: 0
-  m_Size: {x: 103.44, y: 2.49}
+  m_Size: {x: 113.23, y: 2.49}
   m_EdgeRadius: 0
 --- !u!114 &1998555822
 MonoBehaviour:
@@ -299755,6 +299962,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2112845377}
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2112845378}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &2112845375 stripped
 Transform:
@@ -299794,6 +300004,24 @@ MonoBehaviour:
   alreadyEnabled: 0
   alreadyCheckedLock: 0
   alreadyCheckedUnlock: 0
+--- !u!114 &2112845378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112845376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Look for nearby hibiscus and orchids, then talk to the Antiquarian again.
+  guideText: Liezel said she saw hibiscus, and Santi knows there are orchids in a
+    nearby tree.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &2113488627
 GameObject:
   m_ObjectHideFlags: 0
