@@ -10414,22 +10414,29 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 2
+      propertyPath: playeritemsToGive.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'playeritemsToGive.Array.data[0]'
+      value: 
+      objectReference: {fileID: 345427063}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "There\u2019s this weird rock in a bottle and a note."
+      value: ASDFASDFASDFSADFASDFSDAF
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: "The rock is\u2026 glowing. Just faintly though, like it\u2019s low
-        in power... "
+      value: "There\u2019s this weird rock in a bottle and a note."
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: "<i>(The lid\u2019s so corroded that I can just pop it open. Let\u2019s
-        see what\u2019s inside.)</i>"
+      value: "The rock is\u2026 glowing. Just faintly though, like it\u2019s low
+        in power... "
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -10454,7 +10461,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2005687840}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &75503138 stripped
 Transform:
@@ -17114,7 +17124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -17131,7 +17141,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[2]'
       value: 
-      objectReference: {fileID: 345427062}
+      objectReference: {fileID: 1525932374}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[3]'
       value: 
@@ -40594,6 +40604,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 216964482}
+    - targetCorrespondingSourceObject: {fileID: 7138684813146398196, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1702370747}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8426081892716971861, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       insertIndex: -1
@@ -49211,6 +49224,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
   m_PrefabInstance: {fileID: 345427060}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &345427063 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2064214224646224916, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
+  m_PrefabInstance: {fileID: 345427060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345427062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2035a028de1cb49c4ac0434a14bfbaa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &346357856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123153,7 +123177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -123166,7 +123190,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1702370746}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
       value: 6975adfd-3a3b-4f69-997f-1df6c5e394a0
@@ -151971,9 +151995,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: playeritemsToGive.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'playeritemsToGive.Array.data[0]'
+      value: 
+      objectReference: {fileID: 345427063}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: "<SFX_santi_wondering>There\u2019s this weird rock in a bottle and a
@@ -151986,7 +152018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -151995,7 +152027,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
       value: 
-      objectReference: {fileID: 216964481}
+      objectReference: {fileID: 1702370746}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[1]'
       value: 
@@ -228483,6 +228515,126 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1702274576}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1702370746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1702370747}
+  - component: {fileID: 1702370751}
+  - component: {fileID: 1702370750}
+  - component: {fileID: 1702370749}
+  - component: {fileID: 1702370748}
+  - component: {fileID: 1702370752}
+  m_Layer: 0
+  m_Name: '[CG] Kulonium Bottle'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1702370747
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702370746}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1352305750}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1702370748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702370746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveActiveState: 1
+  savePosition: 0
+--- !u!114 &1702370749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702370746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: ba630ad3-d24f-450a-9080-8982f04dc7e1
+--- !u!114 &1702370750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702370746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 4089166359852995411, guid: 9aeae40a985a7497fa69c162716781f3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1702370751
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702370746}
+  m_CullTransparentMesh: 1
+--- !u!114 &1702370752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702370746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47664dce52457459c96a074d3f18a24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+  fadeIn: 1
+  disableOnFadeOut: 1
 --- !u!1001 &1702979932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -270385,6 +270537,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 75503137}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2005687840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005687839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b3b713d3e9427d95225fc72ada10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: 'I GOT NO IDEA IF THIS IS THE OUTDATED OR NOT
+
+    so if I have
+    2 sealed bottles then we kno why'
 --- !u!1001 &2007007448
 PrefabInstance:
   m_ObjectHideFlags: 0

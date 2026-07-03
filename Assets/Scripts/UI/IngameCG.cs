@@ -7,6 +7,7 @@ public class IngameCG : MonoBehaviour
     private Image image;
 
     [SerializeField] private float delayTime;
+    [SerializeField] private bool fadeIn = false;
     [SerializeField] private bool disableOnFadeOut = true;
 
     private void Awake()
@@ -14,9 +15,19 @@ public class IngameCG : MonoBehaviour
         image = GetComponent<Image>();
     }
 
+    private void Start()
+    {
+        if (fadeIn) StartCoroutine(FadeInSequence());
+    }
+
     public void FadeOutWrapper()
     {
         StartCoroutine(FadeOutSequence());
+    }
+
+    private IEnumerator FadeInSequence()
+    {
+        yield return StartCoroutine(FadeImage(0f, 1f, delayTime));
     }
 
     private IEnumerator FadeOutSequence()

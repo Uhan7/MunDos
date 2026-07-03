@@ -1841,6 +1841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 1
+  fadeIn: 0
   disableOnFadeOut: 1
 --- !u!1 &1931765073
 GameObject:
@@ -1955,7 +1956,6 @@ GameObject:
   - component: {fileID: 2018968640}
   - component: {fileID: 2018968643}
   - component: {fileID: 2018968642}
-  - component: {fileID: 2018968641}
   - component: {fileID: 2018968644}
   m_Layer: 0
   m_Name: '[Envi] Image'
@@ -1983,22 +1983,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2018968641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018968639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32d6152ed2b42471f98231de0d544311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeInDuration: 1
-  fadeOutDelay: 0
-  fadeOutDuration: 0
-  disableOnFadeOut: 0
 --- !u!114 &2018968642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,6 +2034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 1
+  fadeIn: 1
   disableOnFadeOut: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
