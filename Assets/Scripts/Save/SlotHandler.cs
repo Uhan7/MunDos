@@ -131,20 +131,60 @@ public class SlotHandler : MonoBehaviour
                 PlayerPrefs.GetInt("SAVE_SLOT_1_AREA", 0)
             ));
         }
+
+        LoadSlotMetadataUI();
     }
 
-    // Hardcoded slop below !!! IDGAF
     public void SaveSlotMetadata()
     {
         int s = SettingsInfo.selectedSaveSlot;
 
-        allSaveSlots[s].transform.Find("Location Label").GetComponent<TextMeshProUGUI>().text = "Last Location:";
-        allSaveSlots[s].transform.Find("Playtime Label").GetComponent<TextMeshProUGUI>().text = "Total Playtime:";
-        allSaveSlots[s].transform.Find("Progression Label").GetComponent<TextMeshProUGUI>().text = "Progression:";
+        PlayerPrefs.SetString($"SAVE_SLOT_{s}_LOCATION", DetermineAreaString());
+        PlayerPrefs.SetFloat($"SAVE_SLOT_{s}_PLAYTIME", FindFirstObjectByType<SaveManager>().currentPlaytime);
+        PlayerPrefs.SetString($"SAVE_SLOT_{s}_PROGRESSION", "[LAST LOCATION]");
 
-        allSaveSlots[s].transform.Find("Location Value").GetComponent<TextMeshProUGUI>().text = DetermineAreaString();
-        allSaveSlots[s].transform.Find("Playtime Value").GetComponent<TextMeshProUGUI>().text = "Last Location";
-        allSaveSlots[s].transform.Find("Progression Value").GetComponent<TextMeshProUGUI>().text = "Last Location";
+        PlayerPrefs.Save();
+
+        LoadSingleSlotMetadataUI(s);
+    }
+
+    private void LoadSlotMetadataUI()
+    {
+        LoadSingleSlotMetadataUI(0);
+        LoadSingleSlotMetadataUI(1);
+    }
+
+    // hardcoded slop !! lOLOLOLOL!!! FUCK 1!!!!
+    private void LoadSingleSlotMetadataUI(int s)
+    {
+        TextMeshProUGUI locationLabel = allSaveSlots[s].transform.Find("Location Label").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI playtimeLabel = allSaveSlots[s].transform.Find("Playtime Label").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI progressionLabel = allSaveSlots[s].transform.Find("Progression Label").GetComponent<TextMeshProUGUI>();
+
+        TextMeshProUGUI locationValue = allSaveSlots[s].transform.Find("Location Value").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI playtimeValue = allSaveSlots[s].transform.Find("Playtime Value").GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI progressionValue = allSaveSlots[s].transform.Find("Progression Value").GetComponent<TextMeshProUGUI>();
+
+        if (!allSaveSlots[s].slotIsFull)
+        {
+            locationLabel.text = "";
+            playtimeLabel.text = "";
+            progressionLabel.text = "";
+
+            locationValue.text = "<size=26><i>This is an empty save file</i></size>"; // da default
+            playtimeValue.text = "";
+            progressionValue.text = "";
+            return;
+        }
+
+        locationLabel.text = "Last Location:";
+        playtimeLabel.text = "Total Playtime:";
+        progressionLabel.text = "Progression:";
+
+        locationValue.text = PlayerPrefs.GetString($"SAVE_SLOT_{s}_LOCATION", "<size=26><i>This is an empty save file</i></size>");
+        playtimeValue.text = DeterminePlaytime(PlayerPrefs.GetFloat($"SAVE_SLOT_{s}_PLAYTIME", 0f));
+        if (PlayerPrefs.GetFloat($"SAVE_SLOT_{s}_PLAYTIME", 0f) <= 0f) playtimeValue.text = "";
+        progressionValue.text = PlayerPrefs.GetString($"SAVE_SLOT_{s}_PROGRESSION", "");
     }
 
     private int DetermineArea()
@@ -186,5 +226,15 @@ public class SlotHandler : MonoBehaviour
         area += locationArea;
 
         return area;
+    }
+
+    private string DeterminePlaytime(float secondsFloat)
+    {
+        int totalSeconds = Mathf.FloorToInt(secondsFloat);
+        int hours = totalSeconds / 3600;
+        int minutes = (totalSeconds % 3600) / 60;
+        int seconds = totalSeconds % 60;
+
+        return $"{hours:00}:{minutes:00}:{seconds:00}";
     }
 }
