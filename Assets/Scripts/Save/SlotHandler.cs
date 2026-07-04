@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class SlotHandler : MonoBehaviour
 {
@@ -77,6 +79,7 @@ public class SlotHandler : MonoBehaviour
         allSaveSlots[SettingsInfo.selectedSaveSlot].SetScreenshot(thumbnailManager.GetScreenshot(currentTimeline, area));
 
         SaveDetails();
+        SaveSlotMetadata();
     }
 
     // Saves slot information to player prefs
@@ -130,6 +133,20 @@ public class SlotHandler : MonoBehaviour
         }
     }
 
+    // Hardcoded slop below !!! IDGAF
+    public void SaveSlotMetadata()
+    {
+        int s = SettingsInfo.selectedSaveSlot;
+
+        allSaveSlots[s].transform.Find("Location Label").GetComponent<TextMeshProUGUI>().text = "Last Location:";
+        allSaveSlots[s].transform.Find("Playtime Label").GetComponent<TextMeshProUGUI>().text = "Total Playtime:";
+        allSaveSlots[s].transform.Find("Progression Label").GetComponent<TextMeshProUGUI>().text = "Progression:";
+
+        allSaveSlots[s].transform.Find("Location Value").GetComponent<TextMeshProUGUI>().text = DetermineAreaString();
+        allSaveSlots[s].transform.Find("Playtime Value").GetComponent<TextMeshProUGUI>().text = "Last Location";
+        allSaveSlots[s].transform.Find("Progression Value").GetComponent<TextMeshProUGUI>().text = "Last Location";
+    }
+
     private int DetermineArea()
     {
         int area = 0; // outpost
@@ -142,6 +159,31 @@ public class SlotHandler : MonoBehaviour
         {
             area = 1;
         }
+
+        return area;
+    }
+
+    private string DetermineAreaString()
+    {
+        string area = "";
+
+        if (timelineManager.GetCurrentTimeline() == 0) area += "Past ";
+        else if (timelineManager.GetCurrentTimeline() == 1) area += "Present ";
+
+        string locationArea = "";
+        locationArea += "DG Outpost"; // outpost
+        float pos = protag.transform.position.x;
+
+        if (pos > 29) // town
+        {
+            locationArea += "Town";
+        }
+        else if (pos > -83) // forest
+        {
+            locationArea += "Forest";
+        }
+
+        area += locationArea;
 
         return area;
     }

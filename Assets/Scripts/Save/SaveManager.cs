@@ -39,6 +39,7 @@ public class SaveManager : MonoBehaviour
     [SerializeField, ReadOnly] public static bool load_on_start = false;
     [SerializeField, ReadOnly] public static bool read_load_on_start = false;
     [SerializeField, ReadOnly] public static TextAsset checkpointFile;
+    [HideInInspector] public float currentPlaytime;
 
     [Header("Actual Save File")]
     [HideInInspector] private string SAVE_KEY = "SAVE_DATA_1"; // Default to save 1
@@ -53,6 +54,13 @@ public class SaveManager : MonoBehaviour
         if (read_load_on_start) ReadAndLoadSaveData(checkpointFile);
 
         //if (SettingsInfo.fromContinue) LoadGame(); -> will temporarily replace this with the static shi on top
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(writeKey)) WriteSaveData();
+
+        if (!SettingsInfo.timePaused) currentPlaytime += Time.deltaTime;
     }
 
     // Main Save/Load Functions ------------------------------------------------
@@ -90,7 +98,6 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Game Saved!");
         Debug.Log("Save size (chars): " + json.Length);
         Debug.Log("Save size (bytes): " + System.Text.Encoding.UTF8.GetByteCount(json));
-
     }
 
     public void StartLoad()
@@ -381,13 +388,11 @@ public class SaveManager : MonoBehaviour
 
     // DEBUG UPDATE BULLSHIT ---------------------------------------------------
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(writeKey)) WriteSaveData();
+    //private void Update()
+    //{
+    //    if (!allowKeybinds) return;
 
-        if (!allowKeybinds) return;
-
-        if (Input.GetKeyDown(saveKey)) SaveGame();
-        if (Input.GetKeyDown(loadKey)) StartCoroutine(LoadGame());
-    }
+    //    if (Input.GetKeyDown(saveKey)) SaveGame();
+    //    if (Input.GetKeyDown(loadKey)) StartCoroutine(LoadGame());
+    //}
 }
