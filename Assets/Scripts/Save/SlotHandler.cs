@@ -141,7 +141,7 @@ public class SlotHandler : MonoBehaviour
 
         PlayerPrefs.SetString($"SAVE_SLOT_{s}_LOCATION", DetermineAreaString());
         PlayerPrefs.SetFloat($"SAVE_SLOT_{s}_PLAYTIME", FindFirstObjectByType<SaveManager>().currentPlaytime);
-        PlayerPrefs.SetString($"SAVE_SLOT_{s}_PROGRESSION", "[LAST LOCATION]");
+        PlayerPrefs.SetString($"SAVE_SLOT_{s}_PROGRESSION", DetermineProgressionPercent());
 
         PlayerPrefs.Save();
 
@@ -236,5 +236,22 @@ public class SlotHandler : MonoBehaviour
         int seconds = totalSeconds % 60;
 
         return $"{hours:00}:{minutes:00}:{seconds:00}";
+    }
+
+    private string DetermineProgressionPercent()
+    {
+        ProgressionPoint[] allProgressionPoints = FindObjectsByType<ProgressionPoint>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
+        int total = allProgressionPoints.Length;
+        if (total <= 0) return "0%";
+
+        int done = 0;
+        for (int i = 0; i < allProgressionPoints.Length; i++)
+        {
+            if (allProgressionPoints[i].hasBeenActivated) done++;
+        }
+
+        float percent = (float)done / total * 100f;
+        return percent.ToString("F2") + "%";
     }
 }
