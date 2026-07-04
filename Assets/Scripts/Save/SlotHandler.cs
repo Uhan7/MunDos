@@ -141,7 +141,7 @@ public class SlotHandler : MonoBehaviour
 
         PlayerPrefs.SetString($"SAVE_SLOT_{s}_LOCATION", DetermineAreaString());
         PlayerPrefs.SetFloat($"SAVE_SLOT_{s}_PLAYTIME", FindFirstObjectByType<SaveManager>().currentPlaytime);
-        PlayerPrefs.SetString($"SAVE_SLOT_{s}_PROGRESSION", "[LAST LOCATION]");
+        PlayerPrefs.SetString($"SAVE_SLOT_{s}_PROGRESSION", DetermineProgressionPercent());
 
         PlayerPrefs.Save();
 
@@ -167,11 +167,11 @@ public class SlotHandler : MonoBehaviour
 
         if (!allSaveSlots[s].slotIsFull)
         {
-            locationLabel.text = "";
+            locationLabel.text = "<size=26><i>This is an empty save file</i></size>"; // da default
             playtimeLabel.text = "";
             progressionLabel.text = "";
 
-            locationValue.text = "<size=26><i>This is an empty save file</i></size>"; // da default
+            locationValue.text = "";
             playtimeValue.text = "";
             progressionValue.text = "";
             return;
@@ -181,7 +181,7 @@ public class SlotHandler : MonoBehaviour
         playtimeLabel.text = "Total Playtime:";
         progressionLabel.text = "Progression:";
 
-        locationValue.text = PlayerPrefs.GetString($"SAVE_SLOT_{s}_LOCATION", "<size=26><i>This is an empty save file</i></size>");
+        locationValue.text = PlayerPrefs.GetString($"SAVE_SLOT_{s}_LOCATION", "");
         playtimeValue.text = DeterminePlaytime(PlayerPrefs.GetFloat($"SAVE_SLOT_{s}_PLAYTIME", 0f));
         if (PlayerPrefs.GetFloat($"SAVE_SLOT_{s}_PLAYTIME", 0f) <= 0f) playtimeValue.text = "";
         progressionValue.text = PlayerPrefs.GetString($"SAVE_SLOT_{s}_PROGRESSION", "");
@@ -211,16 +211,16 @@ public class SlotHandler : MonoBehaviour
         else if (timelineManager.GetCurrentTimeline() == 1) area += "Present ";
 
         string locationArea = "";
-        locationArea += "DG Outpost"; // outpost
+        locationArea = "DG Outpost"; // outpost
         float pos = protag.transform.position.x;
 
         if (pos > 29) // town
         {
-            locationArea += "Town";
+            locationArea = "Town";
         }
         else if (pos > -83) // forest
         {
-            locationArea += "Forest";
+            locationArea = "Forest";
         }
 
         area += locationArea;
@@ -236,5 +236,22 @@ public class SlotHandler : MonoBehaviour
         int seconds = totalSeconds % 60;
 
         return $"{hours:00}:{minutes:00}:{seconds:00}";
+    }
+
+    private string DetermineProgressionPercent()
+    {
+        ProgressionPoint[] allProgressionPoints = FindObjectsByType<ProgressionPoint>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
+        int total = allProgressionPoints.Length;
+        if (total <= 0) return "0%";
+
+        int done = 0;
+        for (int i = 0; i < allProgressionPoints.Length; i++)
+        {
+            if (allProgressionPoints[i].hasBeenActivated) done++;
+        }
+
+        float percent = (float)done / total * 100f;
+        return percent.ToString("F2") + "%";
     }
 }
