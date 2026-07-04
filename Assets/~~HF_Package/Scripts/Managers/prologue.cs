@@ -50,6 +50,8 @@ public class prologue : MonoBehaviour
 
         bool holdingEscape = Input.GetKey(skipKey);
 
+        if (skipKey == KeyCode.None) return;
+
         if (holdingEscape)
         {
             skippingText.SetActive(true);

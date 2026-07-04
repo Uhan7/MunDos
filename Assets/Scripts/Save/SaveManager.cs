@@ -39,7 +39,7 @@ public class SaveManager : MonoBehaviour
     [SerializeField, ReadOnly] public static bool load_on_start = false;
     [SerializeField, ReadOnly] public static bool read_load_on_start = false;
     [SerializeField, ReadOnly] public static TextAsset checkpointFile;
-    [HideInInspector] public float currentPlaytime;
+    [HideInInspector] public float currentPlaytime = 0f;
 
     [Header("Actual Save File")]
     [HideInInspector] private string SAVE_KEY = "SAVE_DATA_1"; // Default to save 1
@@ -90,6 +90,9 @@ public class SaveManager : MonoBehaviour
         data.currentTimeline = timelineManager.currentTimeline;
 
         sfxSource.PlayOneShot(saveSFX); // Plays last to let players know it saved
+
+        // Playtime
+        data.totalPlayTime = currentPlaytime;
 
         // Actual Save
         string json = JsonUtility.ToJson(data);
@@ -158,6 +161,9 @@ public class SaveManager : MonoBehaviour
         StartCoroutine(RestoreBlend(brain, originalBlend));
 
         RestoreGameplayAfterLoad();
+
+        // Playtime
+        currentPlaytime = data.totalPlayTime;
 
         // Load Debug
         string json = PlayerPrefs.GetString(SAVE_KEY);
