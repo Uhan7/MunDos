@@ -167,8 +167,9 @@ public class ObjectState : MonoBehaviour
 
         if (A is DialogueTriggerSaveData dialogueTriggerA && B is DialogueTriggerSaveData dialogueTriggerB)
         {
-            return dialogueTriggerA.dialogueIsTriggered == dialogueTriggerB.dialogueIsTriggered
-                && dialogueTriggerA.dialogueAlreadyActivatedObjects == dialogueTriggerB.dialogueAlreadyActivatedObjects
+            return
+                //dialogueTriggerA.dialogueIsTriggered == dialogueTriggerB.dialogueIsTriggered &&
+                dialogueTriggerA.dialogueAlreadyActivatedObjects == dialogueTriggerB.dialogueAlreadyActivatedObjects
                 && dialogueTriggerA.dialogueAlreadyCheckedConditional == dialogueTriggerB.dialogueAlreadyCheckedConditional
                 && dialogueTriggerA.dialogueAlreadyDeactivatedObjects == dialogueTriggerB.dialogueAlreadyDeactivatedObjects
                 && dialogueTriggerA.dialogueAlreadyRemovedPlayeritems == dialogueTriggerB.dialogueAlreadyRemovedPlayeritems
@@ -301,7 +302,7 @@ public class ObjectState : MonoBehaviour
         if (dialogueTrigger == null) return null;
 
         var data = new DialogueTriggerSaveData();
-        data.dialogueIsTriggered = dialogueTrigger.dialogueIsTriggered;
+        //data.dialogueIsTriggered = dialogueTrigger.dialogueIsTriggered;
         data.dialogueAlreadyActivatedObjects = dialogueTrigger.alreadyActivatedObjects;
         data.dialogueAlreadyCheckedConditional = dialogueTrigger.alreadyCheckedConditional;
         data.dialogueAlreadyDeactivatedObjects = dialogueTrigger.alreadyDeactivatedObjects;
@@ -498,7 +499,9 @@ public class ObjectState : MonoBehaviour
 
                 if (dialogueTrigger != null && compData != null)
                 {
-                    dialogueTrigger.dialogueIsTriggered = compData.dialogueIsTriggered;
+                    //dialogueTrigger.dialogueIsTriggered = compData.dialogueIsTriggered;
+                    dialogueTrigger.dialogueIsTriggered = false; // FORCE
+
                     dialogueTrigger.alreadyActivatedObjects = compData.dialogueAlreadyActivatedObjects;
                     dialogueTrigger.alreadyCheckedConditional = compData.dialogueAlreadyCheckedConditional;
                     dialogueTrigger.alreadyDeactivatedObjects = compData.dialogueAlreadyDeactivatedObjects;
