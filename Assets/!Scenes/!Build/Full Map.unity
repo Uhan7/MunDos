@@ -148609,6 +148609,14 @@ PrefabInstance:
       value: 1884af4d-0b3c-415a-9d1c-4ca8ef282b88
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: checksConditionalObject
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: checkOnValidInteractOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: unlockInteractableObject
       value: 1
       objectReference: {fileID: 0}
@@ -148629,6 +148637,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: conditionalObjectsToCheck.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: toActivateOnValidInteract.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -148640,6 +148652,10 @@ PrefabInstance:
       propertyPath: toDeactivateOnValidInteract.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'conditionalObjectsToCheck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7792594930357534735}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'toActivateOnValidInteract.Array.data[0]'
       value: 
@@ -242074,7 +242090,7 @@ PrefabInstance:
       objectReference: {fileID: 4060541269711509722}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: conditionalObjectsToCheckAfter.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'conditionalObjectsToCheckAfter.Array.data[0]'
@@ -335982,6 +335998,7 @@ GameObject:
   - component: {fileID: 8791927979712305264}
   - component: {fileID: 8791927979712305265}
   - component: {fileID: 8791927979712305266}
+  - component: {fileID: 8791927979712305267}
   m_Layer: 0
   m_Name: L3 Portraits2 (Pre Puzzle)
   m_TagString: Untagged
@@ -339125,6 +339142,19 @@ MonoBehaviour:
   alreadyEnabled: 0
   alreadyCheckedLock: 0
   alreadyCheckedUnlock: 0
+--- !u!114 &8791927979712305267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792594930357534735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69b3b713d3e9427d95225fc72ada10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: cnoditional checked by 4 portraits AND anika locket
 --- !u!4 &8826101085010377891
 Transform:
   m_ObjectHideFlags: 0
