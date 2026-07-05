@@ -281,7 +281,7 @@ public class PlayerInteract : MonoBehaviour
         //if (!canInput) return;
         if (SelectValidItem(value) == false)
         {
-            print("item name is blank, valid item: " + SelectValidItem(value));
+            // print("item name is blank, valid item: " + SelectValidItem(value));
             return;
         }
 
@@ -294,15 +294,12 @@ public class PlayerInteract : MonoBehaviour
         {
             if (gameManagerScript.isFocusing)
             {
-                print("1 but is focusing");
                 return; // This is to not layer the zooms
             }
 
             isSelected = true;
             activeObjectIndex = value;
             WillUpdate(true);
-
-            print("1");
         }
 
         //Zoom in on valid selected item
@@ -310,7 +307,6 @@ public class PlayerInteract : MonoBehaviour
         {
             if (gameManagerScript.isFocusing)
             {
-                print("2 but is focusing");
                 return; // This is to not layer the zooms
             }
 
@@ -320,7 +316,6 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = true;
             WillUpdate(true);
 
-            print("2");
         }
 
         //Cancel Zoom in and select other item
@@ -328,7 +323,6 @@ public class PlayerInteract : MonoBehaviour
         {
             if (gameManagerScript.isFocusing)
             {
-                print("3 but is focusing");
                 return; // This is to not layer the zooms
             }
 
@@ -338,8 +332,6 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
-
-            print("3");
         }
 
         //Zoom out of same item
@@ -350,8 +342,6 @@ public class PlayerInteract : MonoBehaviour
             isSelected = false;
             GetComponent<Animator>().Play("object_fade_out_half");
             WillUpdate(true);
-
-            print("4");
         }
 
         //Zoom out then select different item
@@ -365,8 +355,6 @@ public class PlayerInteract : MonoBehaviour
             isZoomed = false;
             activeObjectIndex = value;
             WillUpdate(true);
-
-            print("5");
         }
         else
         {

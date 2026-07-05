@@ -157,7 +157,7 @@ public class DialogueTrigger : MonoBehaviour
         if (soundsToPlayBefore.Length > 0) foreach (AudioClip clip in soundsToPlayBefore) sfxSource.PlayOneShot(clip);
         StartCoroutine(dialogueHolder.StartDialogue(dialogue));
 
-        // print(gameObject.name + " is speaking!!! listen, look, and listen and learn");
+        Debug.Log(gameObject.name + " is speaking!!! listen, look, and listen and learn", gameObject);
     }
 
     void WaitForOtherDialogue()
