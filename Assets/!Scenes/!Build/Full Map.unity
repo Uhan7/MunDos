@@ -14913,7 +14913,8 @@ MonoBehaviour:
   playeritemsToGive: []
   soundsToPlayBefore:
   - {fileID: 8300000, guid: a040193c52eb541d89932ffa11905195, type: 3}
-  soundsToPlayAfter: []
+  soundsToPlayAfter:
+  - {fileID: 8300000, guid: d756e7d03f92a465691b2bb9dc8d5c22, type: 3}
   dialogueIsTriggered: 0
   alreadyActivatedObjects: 0
   alreadyDeactivatedObjects: 0
@@ -16837,6 +16838,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5182794977236136498, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
   m_PrefabInstance: {fileID: 1224110813}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &104786044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+  m_PrefabInstance: {fileID: 1559853678}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &105340852 stripped
 Transform:
@@ -19246,7 +19252,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 16907682bff5949bba18fca2538db172, type: 3}
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: toActivateOnInteract.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: toDeactivateOnInteract.Array.size
@@ -19260,6 +19266,10 @@ PrefabInstance:
       propertyPath: 'toActivateOnInteract.Array.data[1]'
       value: 
       objectReference: {fileID: 727292752}
+    - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
+      propertyPath: 'toActivateOnInteract.Array.data[2]'
+      value: 
+      objectReference: {fileID: 104786044}
     - target: {fileID: 8687977851861183332, guid: e15804824ab1b4a6cb648afe157d085b, type: 3}
       propertyPath: 'toDeactivateOnInteract.Array.data[1]'
       value: 
@@ -52373,6 +52383,7 @@ GameObject:
   - component: {fileID: 337674614}
   - component: {fileID: 337674613}
   - component: {fileID: 337674612}
+  - component: {fileID: 337674617}
   m_Layer: 0
   m_Name: West
   m_TagString: Untagged
@@ -52482,6 +52493,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 361603030}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 06ef4866f3bb94872906ff3a64a48d0e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &337674615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52520,6 +52543,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337674610}
   m_CullTransparentMesh: 1
+--- !u!114 &337674617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337674610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 361603030}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: a2a1d3b23536a4281b1999254e7ce882, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &337818501
 GameObject:
   m_ObjectHideFlags: 0
@@ -60106,7 +60158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.08
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -123211,7 +123263,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: linksToOtherDialogue
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: playClosingAnimation
@@ -161415,9 +161467,9 @@ MonoBehaviour:
   conditionalObjectsToCheckAfter: []
   playeritemNamesToRemove: []
   playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 8300000, guid: d756e7d03f92a465691b2bb9dc8d5c22, type: 3}
-  soundsToPlayAfter: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter:
+  - {fileID: 8300000, guid: 0ce1869300c6549f3a311b9f9fdd3c7b, type: 3}
   dialogueIsTriggered: 0
   alreadyActivatedObjects: 0
   alreadyDeactivatedObjects: 0
@@ -186008,6 +186060,7 @@ GameObject:
   - component: {fileID: 1199708751}
   - component: {fileID: 1199708750}
   - component: {fileID: 1199708749}
+  - component: {fileID: 1199708755}
   m_Layer: 0
   m_Name: North
   m_TagString: Untagged
@@ -186098,6 +186151,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 361603030}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 06ef4866f3bb94872906ff3a64a48d0e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1199708752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186155,6 +186220,35 @@ RectTransform:
   m_AnchoredPosition: {x: -3, y: 159.8}
   m_SizeDelta: {x: 103.2, y: 312}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1199708755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199708748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 361603030}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: a2a1d3b23536a4281b1999254e7ce882, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1199742745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -200902,9 +200996,9 @@ MonoBehaviour:
   conditionalObjectsToCheckAfter: []
   playeritemNamesToRemove: []
   playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 8300000, guid: 0ce1869300c6549f3a311b9f9fdd3c7b, type: 3}
-  soundsToPlayAfter: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter:
+  - {fileID: 8300000, guid: b40de7bf1e5754df7acc996b94fb4c3c, type: 3}
   dialogueIsTriggered: 0
   alreadyActivatedObjects: 0
   alreadyDeactivatedObjects: 0
@@ -206229,7 +206323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.08
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 8545380165161031538, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -209468,9 +209562,9 @@ MonoBehaviour:
   playeritemNamesToRemove:
   - L3 Flag
   playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 8300000, guid: d115036839dc24d448e3c6150f6be9e2, type: 3}
-  soundsToPlayAfter: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter:
+  - {fileID: 8300000, guid: bdb70d40a1db749a08ebe9bc18b9c9cd, type: 3}
   dialogueIsTriggered: 0
   alreadyActivatedObjects: 0
   alreadyDeactivatedObjects: 0
@@ -211826,6 +211920,7 @@ MonoBehaviour:
   toDeactivate:
   - {fileID: 4135946765584331206}
   - {fileID: 521820422}
+  - {fileID: 7792594930357534735}
   toActivateOnInvalidInteract:
   - {fileID: 21379622}
   toDeactivateOnInvalidInteract: []
@@ -257686,6 +257781,7 @@ GameObject:
   - component: {fileID: 1702114862}
   - component: {fileID: 1702114861}
   - component: {fileID: 1702114860}
+  - component: {fileID: 1702114866}
   m_Layer: 0
   m_Name: East
   m_TagString: Untagged
@@ -257776,6 +257872,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 361603030}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 06ef4866f3bb94872906ff3a64a48d0e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1702114863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257833,6 +257941,35 @@ RectTransform:
   m_AnchoredPosition: {x: 122.81, y: 48.5}
   m_SizeDelta: {x: 315.2, y: 127.2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1702114866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702114859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 361603030}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: a2a1d3b23536a4281b1999254e7ce882, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1702154560
 GameObject:
   m_ObjectHideFlags: 0
@@ -259531,9 +259668,9 @@ MonoBehaviour:
   conditionalObjectsToCheckAfter: []
   playeritemNamesToRemove: []
   playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 8300000, guid: b40de7bf1e5754df7acc996b94fb4c3c, type: 3}
-  soundsToPlayAfter: []
+  soundsToPlayBefore: []
+  soundsToPlayAfter:
+  - {fileID: 8300000, guid: d115036839dc24d448e3c6150f6be9e2, type: 3}
   dialogueIsTriggered: 0
   alreadyActivatedObjects: 0
   alreadyDeactivatedObjects: 0
@@ -278866,7 +279003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToActivateAfter.Array.data[0]'
@@ -278990,6 +279127,14 @@ PrefabInstance:
       objectReference: {fileID: 2026345707}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'objectsToDeactivateAfter.Array.data[16]'
+      value: 
+      objectReference: {fileID: 461121571}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[17]'
+      value: 
+      objectReference: {fileID: 1772997179}
+    - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      propertyPath: 'objectsToDeactivateAfter.Array.data[18]'
       value: 
       objectReference: {fileID: 3562820}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
@@ -299690,6 +299835,7 @@ GameObject:
   - component: {fileID: 1976505076}
   - component: {fileID: 1976505075}
   - component: {fileID: 1976505074}
+  - component: {fileID: 1976505080}
   m_Layer: 0
   m_Name: South
   m_TagString: Untagged
@@ -299780,6 +299926,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 361603030}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 06ef4866f3bb94872906ff3a64a48d0e, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1976505077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299837,6 +299995,35 @@ RectTransform:
   m_AnchoredPosition: {x: 2.69, y: -63}
   m_SizeDelta: {x: 103.2, y: 312}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1976505080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976505073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 361603030}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: a2a1d3b23536a4281b1999254e7ce882, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1977002303
 GameObject:
   m_ObjectHideFlags: 0
