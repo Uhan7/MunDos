@@ -52,16 +52,22 @@ public class QuestLogManager : MonoBehaviour
 
     public void ChangeQuest(string newQuest, string newGuide) // To be used by ProgressPoint.cs
     {
-        data.actualQuestText = newQuest;
-        data.guideText = newGuide;
+        if (data != null)
+        {
+            data.actualQuestText = newQuest;
+            data.guideText = newGuide;
+        }
 
-        UpdateQuests();
+        actualQuestText.text = newQuest;
+        guideText.text = newGuide;
 
         FlashQuestButton();
     }
 
     public void UpdateQuests()
     {
+        if (data == null) return;
+
         if (actualQuestText.text != data.actualQuestText)
         {
             actualQuestText.text = data.actualQuestText;
