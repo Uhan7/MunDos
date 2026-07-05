@@ -9,6 +9,7 @@ public class camera_shake : MonoBehaviour
     [SerializeField] private float shakeDuration = 0.5f;
     [SerializeField] private AnimationCurve strengthCurve;
     [SerializeField] private float strengthMultiplier = 1f;
+    [SerializeField] private bool dontResetToZero;
 
     private void OnEnable()
     {
@@ -64,7 +65,10 @@ public class camera_shake : MonoBehaviour
         }
 
         // 5) Reset to zero so it stops
-        perlin.FrequencyGain = 0f;
-        perlin.AmplitudeGain = 0f;
+        if (!dontResetToZero)
+        {
+            perlin.FrequencyGain = 0f;
+            perlin.AmplitudeGain = 0f;
+        }
     }
 }
