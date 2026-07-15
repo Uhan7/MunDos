@@ -45,7 +45,7 @@ public class ObjectsManager : MonoBehaviour
             if (objectsToUnlock.Length > 0) StartCoroutine(UnlockAfterTime(delayTime));
         }
 
-        alreadyEnabled = true;
+        //alreadyEnabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -95,12 +95,16 @@ public class ObjectsManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         foreach (var obj in objectsToActivate) obj.SetActive(true);
+
+        alreadyEnabled = true;
     }
 
     IEnumerator DeactivateAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
         foreach (var obj in objectsToDeactivate) obj.SetActive(false);
+
+        alreadyEnabled = true;
     }
 
     IEnumerator DestroyAfterTime(float time)
@@ -109,6 +113,8 @@ public class ObjectsManager : MonoBehaviour
         foreach (var obj in objectsToDeactivate) Destroy(obj);
 
         gameObject.SetActive(false);
+
+        alreadyEnabled = true;
     }
 
     IEnumerator LockAfterTime(float time)
@@ -134,7 +140,9 @@ public class ObjectsManager : MonoBehaviour
                 lockObjectScript.Lock(true);
             }
         }
+
         alreadyCheckedLock = true;
+        alreadyEnabled = true;
     }
 
     IEnumerator UnlockAfterTime(float time)
@@ -160,7 +168,9 @@ public class ObjectsManager : MonoBehaviour
                 lockObjectScript.Lock(false);
             }
         }
+
         alreadyCheckedUnlock = true;
+        alreadyEnabled = true;
     }
 
     // ----------- Helper Functions -----------
