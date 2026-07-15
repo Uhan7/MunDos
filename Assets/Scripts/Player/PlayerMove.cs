@@ -14,7 +14,9 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Inputs")]
     [SerializeField] private KeyCode moveLeftKey = KeyCode.A;
+    [SerializeField] private KeyCode moveLeftKeyAlt = KeyCode.LeftArrow;
     [SerializeField] private KeyCode moveRightKey = KeyCode.D;
+    [SerializeField] private KeyCode moveRightKeyAlt = KeyCode.RightArrow;
     //[SerializeField] private KeyCode walkKey = KeyCode.LeftShift;
     //[SerializeField] private KeyCode jumpKey = KeyCode.Space;
 
@@ -73,14 +75,15 @@ public class PlayerMove : MonoBehaviour
             //print("ova here");
             getMoveLeftKey = false;
             getMoveRightKey = false;
+            
             //isWalking = false;
             //jumpIsQueued = false;
         }
 
         if (!canInput) return;
 
-        getMoveLeftKey = Input.GetKey(moveLeftKey);
-        getMoveRightKey = Input.GetKey(moveRightKey);
+        getMoveLeftKey = Input.GetKey(moveLeftKey) || Input.GetKey(moveLeftKeyAlt);
+        getMoveRightKey = Input.GetKey(moveRightKey) || Input.GetKey(moveRightKeyAlt);
         //isWalking = Input.GetKey(walkKey);
 
         //if (Input.GetKeyDown(jumpKey) && floorCheckerScript.onGround) jumpIsQueued = true;
