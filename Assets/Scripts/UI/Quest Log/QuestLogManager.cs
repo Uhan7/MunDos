@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System.Collections;
 using TMPro;
 #if UNITY_EDITOR
     using UnityEditor.PackageManager.Requests;
@@ -8,6 +9,9 @@ using UnityEngine;
 public class QuestLogManager : MonoBehaviour
 {
     // Variables ---------------------------------------------------------------
+
+    [Header("Constants")]
+    [HideInInspector] private const float CHARACTERS_PER_SECOND = 10f;
 
     [Header("Text Fields")]
     [SerializeField] public TextMeshProUGUI actualQuestText; // For ObjectState.cs
@@ -31,6 +35,7 @@ public class QuestLogManager : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         buttonAnimator = questLogButton.GetComponent<Animator>();
+        //StartCoroutine(AutoShowQuestLog(actualQuestText.text.Length, guideText.text.Length));
     }
 
     private void Update()
@@ -46,6 +51,7 @@ public class QuestLogManager : MonoBehaviour
     private void OnEnable()
     {
         UpdateQuests();
+        
     }
 
     // Helper Functions --------------------------------------------------------
@@ -80,6 +86,26 @@ public class QuestLogManager : MonoBehaviour
     {
         isOpen = !isOpen;
         animator.SetBool("isOpen", isOpen);
+    }
+
+    public void ShowQuestLog(bool isOpen)
+    {
+        this.isOpen = isOpen;
+        animator.SetBool("isOpen", this.isOpen);
+    }
+
+    public void AutoShowQuestLog(int questTextLength, int guideTextLength)
+    {
+        StartCoroutine(AutoShowQuestLogCoroutine(questTextLength, guideTextLength));
+    }
+
+    private IEnumerator AutoShowQuestLogCoroutine(int questTextLength, int guideTextLength)
+    {
+        yield return new WaitForSeconds(.8f);
+        ShowQuestLog(true);
+        float totalCharacters = questTextLength + guideTextLength + CHARACTERS_PER_SECOND;
+        yield return new WaitForSeconds(totalCharacters / CHARACTERS_PER_SECOND);
+        ShowQuestLog(false);
     }
 
     public void FlashQuestButton()

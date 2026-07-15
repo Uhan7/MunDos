@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ProgressionPoint : MonoBehaviour
@@ -44,15 +45,19 @@ public class ProgressionPoint : MonoBehaviour
         {
             PassQuestDetails();
             hasBeenActivated = true;
+            
+            if (passQuestOnActivate)
+                questLogManager.AutoShowQuestLog(questText.Length, guideText.Length);
         }
     }
-
     private void OnDisable()
     {
         if (passQuestOnDeactivate && !hasBeenActivated)
         {
             PassQuestDetails();
             hasBeenActivated = true;
+            if (passQuestOnDeactivate)
+                questLogManager.AutoShowQuestLog(questText.Length, guideText.Length);
         }
     }
 
