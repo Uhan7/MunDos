@@ -305242,6 +305242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Forest-Town Transition
       objectReference: {fileID: 0}
+    - target: {fileID: 5994212485817288540, guid: cab41bf5f90644f71a832ee33f684ad4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7529831067461262313, guid: cab41bf5f90644f71a832ee33f684ad4, type: 3}
       propertyPath: id
       value: 77d93433-a842-4863-82ee-f069ceb0dabf
@@ -307100,6 +307104,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: bd375c4d-05ba-48ea-8ed5-7de393ad785d
+--- !u!1 &1997036355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1997036357}
+  - component: {fileID: 1997036356}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1997036356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997036355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: 
+  guideText: 
+  passQuestOnActivate: 1
+  passQuestOnDeactivate: 0
+  hasBeenActivated: 0
+--- !u!4 &1997036357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997036355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -173.84, y: -38.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1997235629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343620,3 +343673,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1776628955}
   - {fileID: 623050333}
+  - {fileID: 1997036357}
