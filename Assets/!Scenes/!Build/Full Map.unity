@@ -41202,6 +41202,7 @@ GameObject:
   - component: {fileID: 247533287}
   - component: {fileID: 247533286}
   - component: {fileID: 247533285}
+  - component: {fileID: 247533288}
   m_Layer: 0
   m_Name: Solved Puzzle
   m_TagString: Dialogue Zone
@@ -41303,6 +41304,39 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!114 &247533288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247533283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 0
+  lockAndUnlock: 1
+  delayTime: 0.5
+  resetAfter: 0
+  deactivateAfter: 0
+  repeatable: 0
+  objectsToActivate: []
+  objectsToDeactivate: []
+  objectsToLock:
+  - {fileID: 171842989958359821}
+  - {fileID: 7039153252229882393}
+  - {fileID: 1065120098257635764}
+  - {fileID: 1730901728}
+  - {fileID: 1290755423}
+  - {fileID: 2040849348}
+  objectsToUnlock: []
+  alreadyEnabled: 0
+  alreadyCheckedLock: 0
+  alreadyCheckedUnlock: 0
 --- !u!1 &247601191
 GameObject:
   m_ObjectHideFlags: 0
@@ -102589,7 +102623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.44922
+      value: -110.4358
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -202525,6 +202559,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 947abf05-20aa-4d36-aea3-9a86fb78c0d9
+--- !u!1 &1290755423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 4785150895162546107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1291817259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7521595815238237608, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -265312,6 +265351,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: b6ea831f-db55-4082-949e-7baae1ee2d0c
+--- !u!1 &1730901728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
+  m_PrefabInstance: {fileID: 8753628652838095184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1732582564
 GameObject:
   m_ObjectHideFlags: 0
