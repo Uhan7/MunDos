@@ -1656,9 +1656,9 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 5865463505797322737, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "<i>(It is the bakery\u2019s bread that is currently being offered for
-        free taste testing. I do not have the time to grab a bite, unfortunately.)
-        </i>"
+      value: "<SFX_liezel_concerned><i>(It is the bakery\u2019s bread that is currently
+        being offered for free taste testing. I do not have the time to grab a bite,
+        unfortunately.) </i>"
       objectReference: {fileID: 0}
     - target: {fileID: 6133988339138595216, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_IsActive
@@ -5529,9 +5529,11 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - '... '
-    - 'Ew, this is disgusting! I cannot believe I waited all day for such garbage. '
+    - '<SFX_celebrity_disgusted>Ew, this is disgusting! I cannot believe I waited
+      all day for such garbage. '
     - You can count on me never returning to this establishment!
-    - 'For a business like this to stoop to such harsh and untrue marketing... '
+    - '<SFX_celebrity_disappointed>For a business like this to stoop to such harsh
+      and untrue marketing... '
     - 'Hmph, nobody can be trusted these days. '
   startOnEnable: 1
   startFromTrigger: 0
@@ -7042,7 +7044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 3898147896683463673, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 8542942596475193917, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -7051,9 +7053,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(Hm... he is quite sensitive about this topic. Maybe I should talk about
-      something else? I still have not gotten any information about Servillano nor
-      Lorena from him.)</i>
+    - <SFX_liezel_concerned><i>(Hm... he is quite sensitive about this topic. Maybe
+      I should talk about something else? I still have not gotten any information
+      about Servillano nor Lorena from him.)</i>
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -8564,8 +8566,9 @@ PrefabInstance:
       objectReference: {fileID: 687841272}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Thank you madame... Also, please don\u2019t tell Master Rommel of our
-        conversation please? I don\u2019t want to go searching for a job again..."
+      value: "<SFX_maid_chuckle>Thank you madame... Also, please don\u2019t tell
+        Master Rommel of our conversation please? I don\u2019t want to go searching
+        for a job again..."
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -10659,118 +10662,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
   m_PrefabInstance: {fileID: 563638099}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &67332747
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 67332751}
-  - component: {fileID: 67332750}
-  - component: {fileID: 67332749}
-  - component: {fileID: 67332748}
-  m_Layer: 0
-  m_Name: 14
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &67332748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67332747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveActiveState: 1
-  savePosition: 0
---- !u!114 &67332749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67332747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 154e67c4-7cc1-4da4-ac09-2c013b3574fe
---- !u!114 &67332750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67332747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
-    name: Liezel
-    soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - "Oh? Do you write as well, Se\xF1or Rommel?"
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 0
-  deactivateAfter: 1
-  linksToOtherDialogue: 1
-  nextDialogue: {fileID: 448910093}
-  nextDialogueTime: 0.5
-  playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
-  objectsToActivateAfter: []
-  objectsToDeactivateAfter: []
-  repeatable: 0
-  itemRepeatable: 0
-  conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
-  playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 0}
-  soundsToPlayAfter: []
-  dialogueIsTriggered: 0
-  alreadyActivatedObjects: 0
-  alreadyDeactivatedObjects: 0
-  alreadyCheckedConditional: 0
-  alreadyRemovedPlayeritems: 0
-  alreadyGavePlayeritems: 0
---- !u!4 &67332751
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67332747}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 368706688}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &67368126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6584715439278868687, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
@@ -11897,7 +11788,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(It is not unusual for a leader of a resistance group to burn correspondences...)</i>
+    - <SFX_liezel_thinking><i>(It is not unusual for a leader of a resistance group
+      to burn correspondences...)</i>
     - <i>(If I can get my hands on remnants of what he burned, I may be able to use
       magic to find things they were connected to.)</i>
     - <i>(Ha... Using magic in his house after he said something like that would
@@ -14860,7 +14752,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ' Finally, I can try it! '
+    - '<SFX_celebrity_laugh>Finally, I can try it! '
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -17569,7 +17461,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Was there anything particularly noteworthy with this journal?
+      value: '<SFX_liezel_questioning>Was there anything particularly noteworthy
+        with this journal?
 
 '
       objectReference: {fileID: 0}
@@ -27643,13 +27536,13 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "A-Ah! Looks like the Se\xF1or has left already... You are free to stay here,
-      madame!"
+    - "<SFX_maid_chuckle>A-Ah! Looks like the Se\xF1or has left already... You are
+      free to stay here, madame!"
     - 'We sincerely apologize for the smell... '
     - "Se\xF1or Rommel has been using the fireplace to burn things lately, and we
       haven't completely aired out the room yet, hehe..."
-    - 'A-Anyway, I will be at the foyer! Please feel free to come to me if you have
-      any requests, madame! '
+    - '<SFX_maid_affirmative>A-Anyway, I will be at the foyer! Please feel free to
+      come to me if you have any requests, madame! '
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -29210,11 +29103,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: 8542942596475193917, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+      objectReference: {fileID: -7750899072097997529, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -31817,7 +31710,7 @@ PrefabInstance:
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+      objectReference: {fileID: 3509205833081167070, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -31923,7 +31816,7 @@ PrefabInstance:
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+      objectReference: {fileID: -7754955159967531763, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -32305,7 +32198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 287589697425042588, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -32314,7 +32207,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(He appears rather suspicious of me. Was I too forward?)</i>
+    - <SFX_liezel_wondering><i>(He appears rather suspicious of me. Was I too forward?)</i>
     - <i>(...Or does he have reason not to trust someone associated with Servillano
       now?)</i>
     - <i>(I need to be more careful.)</i>
@@ -33168,7 +33061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 3898147896683463673, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -6660678931002154567, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -33177,12 +33070,13 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(He speaks of kulonium and the kapisanan as if they are the real enemy.
-      What made him oppose them so strongly? Is he only blaming them to protect whatever
-      the Disidensiya is planning?)</i>
-    - <i>(Does he think kulonium will eventually take over Giyala? How is that outcome
+    - <SFX_liezel_concerned><i>(He speaks of salakab and the kapisanan as if they
+      are the real enemy. What made him oppose them so strongly? Is he only blaming
+      them to protect whatever the Disidensiya is planning?)</i>
+    - <i>(Does he think salakab will eventually take over Giyala? How is that outcome
       any different from a government that drives its country to chaos in secret?)</i>
-    - "Is it not also inhumane to hide from the people one serves? \r"
+    - <SFX_liezel_frustrated>Is it not also inhumane to hide from the people one
+      serves?
     - When the majority of people experience inexplicable events, one would rely
       on the highest models of governance...
     - "...and yet we gain no answers\u2014only more questions. There <i>must</i>
@@ -40425,7 +40319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -6660678931002154567, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -40434,8 +40328,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Is this meeting about our current situation? If so... might I request for
-      a seat in it? \r\n"
+    - <SFX_liezel_questioning>Is this meeting about our current situation? If so...
+      might I request for a seat in it?
     - Not that my presence is required, but you may need someone to write the minutes
       of your meeting.
   startOnEnable: 1
@@ -41759,7 +41653,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: -250688299215181856, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -42286,7 +42180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 287589697425042588, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -42295,7 +42189,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - That makes sense. Servillano usually talks about his life in poetry.
+    - <SFX_liezel_happy>That makes sense. Servillano usually talks about his life
+      in poetry.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -47958,7 +47853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+    character2: {fileID: 3181439596608479953, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     name: Madam Guard
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -48524,119 +48419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: b7e07402-12d0-47ed-a617-029bbb8932f7
---- !u!1 &298066407
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 298066411}
-  - component: {fileID: 298066410}
-  - component: {fileID: 298066409}
-  - component: {fileID: 298066408}
-  m_Layer: 0
-  m_Name: 17
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &298066408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298066407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveActiveState: 1
-  savePosition: 0
---- !u!114 &298066409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298066407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 65b636e7-96e3-4281-be0a-0f4b39204584
---- !u!114 &298066410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298066407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
-    name: Rommel
-    soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - Unfortunately, my time cannot be spared until tomorrow night. I have an important
-      meeting to attend.
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 0
-  deactivateAfter: 1
-  linksToOtherDialogue: 1
-  nextDialogue: {fileID: 244074086}
-  nextDialogueTime: 0.5
-  playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
-  objectsToActivateAfter: []
-  objectsToDeactivateAfter: []
-  repeatable: 0
-  itemRepeatable: 0
-  conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
-  playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 0}
-  soundsToPlayAfter: []
-  dialogueIsTriggered: 0
-  alreadyActivatedObjects: 0
-  alreadyDeactivatedObjects: 0
-  alreadyCheckedConditional: 0
-  alreadyRemovedPlayeritems: 0
-  alreadyGavePlayeritems: 0
---- !u!4 &298066411
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298066407}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 368706688}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298571866
 GameObject:
   m_ObjectHideFlags: 0
@@ -52686,7 +52468,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - But it could still be related to how he is our person of interest, right?
+    - <SFX_santi_wondering>But it could still be related to how he is our person
+      of interest, right?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -59185,18 +58968,6 @@ PrefabInstance:
       addedObject: {fileID: 1386022382}
     - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 67332751}
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 448910097}
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 734843685}
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 298066411}
-    - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 244074090}
     - targetCorrespondingSourceObject: {fileID: 1317018446988142921, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       insertIndex: -1
@@ -60803,7 +60574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1936605001038225399, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -60812,7 +60583,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ...Make it quick.
+    - <SFX_rommel_sigh>...Make it quick.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -61081,9 +60852,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "I fear... This letter goes deeper than that. He bears a deep hatred
-        for whoever he is calling \u201Cthose hypocrites\u201D. Enough to convince
-        him to listen to the Congregation"
+      value: "<SFX_liezel_concerned>I fear... This letter goes deeper than that.
+        He bears a deep hatred for whoever he is calling <i>\u201Cthose hypocrites\u201D</i>.
+        Enough to convince him to listen to the Congregation"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -63201,8 +62972,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(Well, I suppose they are not far off, but I needed no magic for that.)
-      </i>
+    - <SFX_liezel_happy><i>(Well, I suppose they are not far off, but I needed no
+      magic for that.) </i>
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -64375,7 +64146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6218737741704169448, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1952990783192674019, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -64384,9 +64155,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - For that, I respect you. I have hope that one day, our visions will still align
-      by the end of existing conflicts and we could be writing history alongside
-      each other.
+    - <SFX_rommel_affirmative>For that, I respect you. I have hope that one day,
+      our visions will still align by the end of existing conflicts and we could
+      be writing history alongside each other.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -72497,7 +72268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1141164961430653431, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -72506,8 +72277,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "That is too much for your standing. I am talking about a <i>private</i> meeting\u2014more
-      intimate than what we are having as of the moment. "
+    - "<SFX_rommel_concerned>That is too much for your standing. I am talking about
+      a <i>private</i> meeting\u2014more confidential than what we are having as
+      of the moment. "
     - "Only the Disidensiya leaders are participating as their opinions and plans
       about the current situation of our country contribute to my proposition. \r\n"
     - Their approval is most important to new possible arrangements.
@@ -72545,118 +72317,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448898305}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 368706688}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &448910093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 448910097}
-  - component: {fileID: 448910096}
-  - component: {fileID: 448910095}
-  - component: {fileID: 448910094}
-  m_Layer: 0
-  m_Name: 15
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &448910094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448910093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveActiveState: 1
-  savePosition: 0
---- !u!114 &448910095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448910093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: ebf811d3-3f2b-4f00-a464-de887070ad3f
---- !u!114 &448910096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448910093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    character: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
-    name: Rommel
-    soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - When necessary. As a leader, it is required of me most of the time.
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 0
-  deactivateAfter: 1
-  linksToOtherDialogue: 1
-  nextDialogue: {fileID: 734843681}
-  nextDialogueTime: 0.5
-  playClosingAnimation: 2
-  mainCharacterIsSpeaking: 0
-  objectsToActivateAfter: []
-  objectsToDeactivateAfter: []
-  repeatable: 0
-  itemRepeatable: 0
-  conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
-  playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 0}
-  soundsToPlayAfter: []
-  dialogueIsTriggered: 0
-  alreadyActivatedObjects: 0
-  alreadyDeactivatedObjects: 0
-  alreadyCheckedConditional: 0
-  alreadyRemovedPlayeritems: 0
-  alreadyGavePlayeritems: 0
---- !u!4 &448910097
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448910093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -77740,7 +77400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 7156418273310198113, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1141164961430653431, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -77749,8 +77409,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'Information of which should remain in the hands of people who can handle such
-      unstable conditions to prevent probable chaos. '
+    - '<SFX_rommel_frustrated>Information of which should remain in the hands of
+      people who can handle such unstable conditions to prevent probable chaos. '
     - Confidentiality is important to maintain peace until plans are proven safe
       to be distributed among the uninformed.
   startOnEnable: 1
@@ -77876,7 +77536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1952990783192674019, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -77885,7 +77545,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - Come. It is better if we speak in private.
+    - <SFX_rommel_normal>Come. It is better if we speak in private.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -78442,7 +78102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -8014650123398086607, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -78451,7 +78111,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'I have seen Servillano including your name in papers quite a few times. '
+    - '<SFX_rommel_normal>I have seen Servillano including your name in papers quite
+      a few times. '
     - Despite that, your relationship is unfamiliar to me. It is on him that we have
       never had the chance to meet.
   startOnEnable: 1
@@ -86005,7 +85666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: It has worked out for us so far, has it not?
+      value: <SFX_liezel_wondering>It has worked out for us so far, has it not?
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -91951,7 +91612,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+      objectReference: {fileID: 3181439596608479953, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -99906,11 +99567,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: 1936605001038225399, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: -3805686453083613921, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -104832,7 +104493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -5965006033291984940, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -105676,14 +105337,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Oh...?
-
-'
+      value: <SFX_liezel_questioning>Oh...?
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: "<i>(Is that a burnt spot? It\u2019s somehow soft and hard at the same
-        time... Though, I don\u2019t want to refuse such an effort...)</i>"
+      value: "<SFX_liezel_concerned><i>(Is that a burnt spot? It\u2019s somehow soft
+        and hard at the same time... Though, I don\u2019t want to refuse such an
+        effort...)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
@@ -105874,7 +105534,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - W-Waaait!!! Oh no, what happened to this bread!?
+    - <SFX_bakery_owner_concerned>W-Waaait!!! Oh no, what happened to this bread!?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -107143,13 +106803,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "\u201C<b>The secrets of these walls are hidden behind the faces of
-        frauds</b>. You do not have my fealty, but I will do what must be done. This
-        country will no longer be sullied by those hypocrites.\u201D"
+      value: "<dim>\u201C<b>The secrets of these walls are hidden behind the faces
+        of frauds</b>. You do not have my fealty, but I will do what must be done.
+        This country will no longer be sullied by those hypocrites.\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: '... That is all. '
+      value: '<SFX_liezel_wondering>... That is all. '
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
@@ -109268,9 +108928,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'I am indeed.
-
-'
+    - "I am indeed. <SFX_liezel_questioning>Do you write as well, Se\xF1or Rommel?"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -109512,9 +109170,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - You have a point. His hidden agenda may have left some footprints. Fortunately,
-      he gave me access to his house, so I may be able to learn more about him this
-      way.
+    - <SFX_liezel_wondering>You have a point. His hidden agenda may have left some
+      footprints. Fortunately, he gave me access to his house, so I may be able to
+      learn more about him this way.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -111556,7 +111214,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Be careful\u2026 They might become suspicious of you.\r\n"
+    - "<SFX_santi_concerned>Be careful\u2026 They might become suspicious of you."
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -113564,18 +113222,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(Oh, a chess board. Looks like the game got cut off before it could
-        finish.)</i>
+      value: <SFX_liezel_questioning><i>(Oh, a chess board. Looks like the game got
+        cut off before it could finish.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: <i>(Only the kings and pawn-... Is that real gold? Awfully wasteful
-        to buy a golden chess piece.)</i>
+      value: <SFX_liezel_concerned><i>(Only the kings and pawn-... Is that real gold?
+        Awfully wasteful to buy a golden chess piece.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: <i>(Whoever was playing this golden king will be cornered by pawns and
-        the other king, if it keeps going left.)</i>
+      value: <SFX_liezel_wondering><i>(Whoever was playing this golden king will
+        be cornered by pawns and the other king, if it keeps going left.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
@@ -118968,7 +118626,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: '<i>(This chicken coop has been here for a long time.) </i>
+      value: '<SFX_liezel_wondering><i>(This chicken coop has been here for a long
+        time.) </i>
 
 '
       objectReference: {fileID: 0}
@@ -123244,118 +122903,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: f5878b78-5bd8-48f1-9b1a-b1b8641526d9
---- !u!1 &734843681
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 734843685}
-  - component: {fileID: 734843684}
-  - component: {fileID: 734843683}
-  - component: {fileID: 734843682}
-  m_Layer: 0
-  m_Name: 16
-  m_TagString: Dialogue Zone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &734843682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734843681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417df57f3039143fc9309704014acbde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveActiveState: 1
-  savePosition: 0
---- !u!114 &734843683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734843681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa39f76d44d4a4cc9abfa8f3a798476e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 94e3190e-517a-4d18-b50a-622e7697a71a
---- !u!114 &734843684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734843681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a586b723e969462a991b263e7dd4cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
-    name: Liezel
-    soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
-    audioPitchOffset: 0
-    font: {fileID: 0}
-    textSpeed: 0.024
-    textPunctSpeed: 0.18
-    lettersUntilSFX: 3
-    sentences:
-    - I see.
-  startOnEnable: 1
-  startFromTrigger: 0
-  isSign: 0
-  willFocus: 1
-  willHideUI: 0
-  deactivateAfter: 1
-  linksToOtherDialogue: 1
-  nextDialogue: {fileID: 298066407}
-  nextDialogueTime: 0.5
-  playClosingAnimation: 2
-  mainCharacterIsSpeaking: 1
-  objectsToActivateAfter: []
-  objectsToDeactivateAfter: []
-  repeatable: 0
-  itemRepeatable: 0
-  conditionalObjectsToCheckAfter: []
-  playeritemNamesToRemove: []
-  playeritemsToGive: []
-  soundsToPlayBefore:
-  - {fileID: 0}
-  soundsToPlayAfter: []
-  dialogueIsTriggered: 0
-  alreadyActivatedObjects: 0
-  alreadyDeactivatedObjects: 0
-  alreadyCheckedConditional: 0
-  alreadyRemovedPlayeritems: 0
-  alreadyGavePlayeritems: 0
---- !u!4 &734843685
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734843681}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 368706688}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &735674081
 GameObject:
   m_ObjectHideFlags: 0
@@ -140498,8 +140045,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "He probably doesn\u2019t trust you enough. Maybe we can get more information
-      indirectly? Other people may know him more than himself..."
+    - "<SFX_santi_concerned>He probably doesn\u2019t trust you enough. Maybe we can
+      get more information indirectly? Other people may know him more than himself..."
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -142404,7 +141951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -142413,8 +141960,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Excuse my sudden interference, but I have come here for matters that involve
-      my line of work. \r\n"
+    - "<SFX_liezel_concerned>Excuse my sudden interference, but I have come here
+      for matters that involve my line of work. \r\n"
     - I would turn to Servillano for this, but he is not available as of the moment.
       Perhaps you have the knowledge that I could have gotten from him?
   startOnEnable: 1
@@ -145423,7 +144970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'The Congregation? Like the CWS?
+      value: '<SFX_santi_questioning>The Congregation? Like the CWS?
 
 '
       objectReference: {fileID: 0}
@@ -147430,11 +146977,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: (These guns are in pristine condition. Rommel must really like sharpshooting.)
+      value: <SFX_liezel_wondering>(These guns are in pristine condition. Rommel
+        must really like sharpshooting.)
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: (Wait... This handle looks crusty.)
+      value: <SFX_liezel_questioning>(Wait... This handle looks worn.)
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -148117,7 +147665,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: 9028902922429437729, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -148418,7 +147966,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - Yeah? How did it go with that guy?
+    - <SFX_santi_questioning>Yeah? How did it go with that guy?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -153336,8 +152884,9 @@ MonoBehaviour:
     lettersUntilSFX: 3
     sentences:
     - As they have the right to be, but I cannot let that deter me.
-    - 'Let us think of an alternate way in, perhaps we can distract the guards once
-      more. Santi, I recall you were quite helpful in that regard last time. '
+    - '<SFX_liezel_thinking>Let us think of an alternate way in, perhaps we can distract
+      the guards once more. Santi, I recall you were quite helpful in that regard
+      last time. '
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -153585,7 +153134,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: 4035594220737335730, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -159171,8 +158720,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - That would be good. I would have to remind you to be cautious as well. This
-      place does not seem to be safe at all.
+    - <SFX_liezel_wondering>That would be good. I would have to remind you to be
+      cautious as well. This place does not seem to be safe at all.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -165652,12 +165201,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: <i>(Hm-? Why is there a red mark <b>north</b> of Giyala? Is there something
-        important there?)</i>
+      value: <SFX_liezel_questioning><i>(Hm-? Why is there a red mark <b>north</b>
+        of Giyala? Is there something important there?)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: <i>(Treasure...? Haha, probably not.) </i>
+      value: <SFX_liezel_happy><i>(Treasure...? Haha, probably not.) </i>
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -166030,7 +165579,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: -3805686453083613921, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -166185,8 +165734,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Not really, but I did find its red cover appealing. I didn\u2019t want
-        to pry inside my master\u2019s thoughts though...\r\n"
+      value: "<SFX_maid_thinking>Not really, but I did find its red cover appealing.
+        I didn\u2019t want to pry inside my master\u2019s thoughts though...\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -168067,7 +167616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: -3921962357827113515, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 287589697425042588, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -176079,7 +175628,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - We would not know unless we were to see it. Let us keep investigating.
+    - <SFX_liezel_concerned>We would not know unless we were to see it. Let us keep
+      investigating.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -181707,7 +181257,7 @@ PrefabInstance:
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -183501,11 +183051,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: -6726360502607892852, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: 4035594220737335730, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -188004,7 +187554,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: This letter... It is stamped with a seal of the Congregation!
+      value: <SFX_liezel_shock_gasp>This letter... It is stamped with a seal of the
+        Congregation!
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -190715,11 +190266,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: 1141164961430653431, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: -151450610197451066, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -191959,11 +191510,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: 9028902922429437729, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -192328,8 +191879,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
-      value: I always love eating the pastries from the local bakery. So, I decided
-        to make one myself!
+      value: <SFX_maid_chuckle>I always love eating the pastries from the local bakery.
+        So, I decided to make one myself!
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
@@ -206794,8 +206345,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "<i>(... Was the maid\u2019s bread really so bad to warrant such a reaction...?
-      I was expecting a little displeasure, at best.) </i>"
+    - "<SFX_liezel_wondering><i>(... Was the maid\u2019s bread really so bad to warrant
+      such a reaction...? I was expecting a little displeasure, at best.) </i>"
     - "<i>(It made that Celebrity leave in a hurry. She must be embarrassed\u2014she
       was supposed to be endorsing the product, after all.)</i>"
   startOnEnable: 1
@@ -207293,8 +206844,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Expectedly, I am being barred entrance from Rommel\u2019s residence
-        because of the meeting.\r\n"
+      value: "<SFX_liezel_concerned>Expectedly, I am being barred entrance from Rommel\u2019s
+        residence because of the meeting.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -208339,7 +207890,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: 8542942596475193917, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -208354,7 +207905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Se\xF1or Rommel! If I may have a moment of your time...\r\n"
+      value: "Se\xF1or Rommel! If I may have a moment of your time...\r"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -215171,7 +214722,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: -151450610197451066, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -216171,7 +215722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -3375429940956555887, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -216180,8 +215731,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "While I believe that writing is a way to express our truest emotions, as we
-      would do so during our younger days, Servillano\u2019s way of using it is unconventional."
+    - <SFX_rommel_affirmative>When necessary. As a leader, it is required of me most
+      of the time. Unfortunately, my time cannot be spared until tomorrow night.
+      I have an important meeting to attend.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -216189,7 +215741,7 @@ MonoBehaviour:
   willHideUI: 0
   deactivateAfter: 1
   linksToOtherDialogue: 1
-  nextDialogue: {fileID: 67332747}
+  nextDialogue: {fileID: 244074086}
   nextDialogueTime: 0.5
   playClosingAnimation: 2
   mainCharacterIsSpeaking: 0
@@ -222313,7 +221865,7 @@ PrefabInstance:
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+      objectReference: {fileID: -113776002870788311, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -228091,8 +227643,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - I know, but his poetry is not an answer to a better future. <i>I still wonder
-      why he must invite these distractions.</i>
+    - <SFX_rommel_thinking>I know, but his poetry is not an answer to a better future.
+      <i>I still wonder why he must invite these distractions.</i>
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -228689,7 +228241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -6726360502607892852, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -230013,7 +229565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -8014650123398086607, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -230022,9 +229574,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ...
-    - ... I can guarantee you nothing. Perhaps your kulonium...may be more of an
-      assistance to you than me.
+    - <SFX_rommel_concerned>...
+    - <SFX_rommel_sigh>... I can guarantee you nothing. Perhaps your kulonium...may
+      be more of an assistance to you than me.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -235671,8 +235223,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Well, I spoke to him earlier, and it feels as if something otherworldly
-        struck him. Like, he is not himself...?
+      value: <SFX_liezel_wondering>Well, I spoke to him earlier, and it feels as
+        if something otherworldly struck him. Like, he is not himself...?
       objectReference: {fileID: 0}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
@@ -240486,9 +240038,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "I am not quite sure that I acquired the information that we need. He seems
-      to only be bothered by Servillano\u2019s current behavior and his hate for
-      magic..."
+    - "<SFX_liezel_concerned>I am not quite sure that I acquired the information
+      that we need. He seems to only be bothered by Servillano\u2019s current behavior
+      and his hate for magic..."
     - They seem to be correlated somehow, but we must stay out of personal matters.
   startOnEnable: 1
   startFromTrigger: 0
@@ -241813,7 +241365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(This feels a bit laughably cruel.)</i>
+      value: <SFX_liezel_happy><i>(This feels a bit laughably cruel.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -242501,7 +242053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'The current population of Sumpagita, <b>117</b>.
+      value: '<SFX_liezel_wondering>The current population of Sumpagita, <b>117</b>.
 
 '
       objectReference: {fileID: 0}
@@ -243185,7 +242737,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(It is indeed strange...)</i>
+    - <SFX_liezel_thinking><i>(It is indeed strange...)</i>
     - <i>(If he is the intelligent person that Servillano always talks about, then
       allowing me in his private home must be something he accounted for. I will
       be cautious.)</i>
@@ -244883,7 +244435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(My magic led me to... these torn pages.)</i>
+      value: <SFX_liezel_questioning><i>(My magic led me to... these torn pages.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -244893,8 +244445,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: "The other half of the passage has been torn... Oh, but there\u2019s
-        more."
+      value: "<SFX_liezel_wondering>The other half of the passage has been torn...
+        Oh, but there\u2019s more."
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[3]'
@@ -244918,8 +244470,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[7]'
-      value: It cuts off there. Whatever his plans were, Servillano must not have
-        approved, judging by the state of things now.
+      value: <SFX_liezel_wondering>It cuts off there. Whatever his plans were, Servillano
+        must not have approved, judging by the state of things now.
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: objectsToDeactivateAfter.Array.size
@@ -245499,9 +245051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'But where does this lead us?
-
-'
+      value: <SFX_santi_concerned>But where does this lead us?
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -245509,8 +245059,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[2]'
-      value: "<i>(No reply...? Maybe I can continue with my investigation first.
-        The letter <b>must be hinting at something</b>.\u201D)</i>"
+      value: "<SFX_santi_questioning_discovery><i>(No reply...? Maybe I can continue
+        with my investigation first. The letter <b>must be hinting at something</b>.\u201D)</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -246282,7 +245832,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "But won\u2019t he see it\u2019s been tampered with?"
+      value: "<SFX_santi_concerned>But won\u2019t he see it\u2019s been tampered
+        with?"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -246773,7 +246324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Sorry, the question may be too personal for your-<cut>
+      value: <SFX_liezel_concerned>Sorry, the question may be too personal for your-<cut>
       objectReference: {fileID: 0}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
@@ -250808,9 +250359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: '...
-
-'
+      value: <SFX_maid_thinking>...
       objectReference: {fileID: 0}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
@@ -251426,8 +250975,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "He\u2019s a little careless for letting you in his house... You must have
-      been so obvious asking for a spot in their meeting."
+    - "<SFX_santi_questioning_discovery>He\u2019s a little careless for letting you
+      in his house... You must have been so obvious asking for a spot in their meeting."
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -256524,7 +256073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1936605001038225399, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -256533,7 +256082,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ...
+    - <SFX_rommel_concerned>...
     - 'We have been in agreement for so long that I sometimes forget how he thinks...
 
 '
@@ -257392,7 +256941,8 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(These guns are in pristine condition. Rommel must really like sharpshooting.)</i>
+      value: <SFX_liezel_wondering><i>(These guns are in pristine condition. Rommel
+        must really like sharpshooting.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5790941259824625341, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: m_text
@@ -258718,8 +258268,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: With magic, any object can be found as long as I have something that
-        it was once intertwined with...
+      value: <SFX_liezel_wondering>With magic, any object can be found as long as
+        I have something that it was once intertwined with...
       objectReference: {fileID: 0}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -259438,7 +258988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -259447,7 +258997,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - Has he ever written his thoughts to you instead?
+    - <SFX_liezel_wondering>Has he ever written his thoughts to you instead?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -260468,7 +260018,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+      objectReference: {fileID: -4675364897407507551, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -266193,9 +265743,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "No no. I also sensed something weird with Master Rommel. I don\u2019t
-        mean to be malicious against him, but every night, as I\u2019m about to end
-        my shift... "
+      value: "<SFX_maid_concerned>No no. I also sensed something weird with Master
+        Rommel. I don\u2019t mean to be malicious against him, but every night, as
+        I\u2019m about to end my shift... "
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -267016,7 +266566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1141164961430653431, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -267025,14 +266575,15 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'Magic attacks? You turn to your leaders for occurrences involving magic? '
-    - "If this magic can somehow do more benefit than harm, then the Kapisanan would
-      not have opposed the Disidensiya years ago. \r\n"
+    - '<SFX_rommel_frustrated>Magic attacks? You turn to your leaders for occurrences
+      involving magic? '
+    - If this magic can somehow do more benefit than harm, then the Kapisanan would
+      not have opposed the Disidensiya years ago.
     - "Proof of its harm is apparent in Servillano\u2019s shift in judgement. It
       is untimely. Unreasonable."
     - "What these rocks can do or have done are out of the Disidensiya\u2019s hands.
       The Kapisanan is not one to trust either. It is something that you or the likes
-      of your dear sister would never understand.\r\n"
+      of your dear sister would never understand."
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -267303,7 +266854,7 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+      objectReference: {fileID: 2540480877716619799, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -271228,11 +270779,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: 2565187981333354206, guid: 9fdd9942abc7c18419bbbcc2e7fc18ae, type: 3}
+      objectReference: {fileID: -7754955159967531763, guid: e32ea859a76b9204fa63719f010620ec, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -278040,8 +277591,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - Maybe you can find the other half of those passages? He might have written
-      everything down.
+    - <SFX_santi_questioning>Maybe you can find the other half of those passages?
+      He might have written everything down.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -284417,7 +283968,7 @@ PrefabInstance:
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: 9028902922429437729, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -284534,7 +284085,7 @@ PrefabInstance:
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: -250688299215181856, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -285359,7 +284910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 584213497, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -7935966087659051556, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -285368,7 +284919,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - ...
+    - <SFX_rommel_frustrated>...
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -287957,7 +287508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6218737741704169448, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -287966,8 +287517,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Of course. I am but a mere writer who does only what is best for Giyala\u2019s
-      history.\r\n"
+    - "<SFX_liezel_happy>Of course. I am but a mere writer who does only what is
+      best for Giyala\u2019s history.\r\n"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -288259,7 +287810,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 9041903786073183966, guid: 09fbf670f6b1442b3895d0264e1b949c, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Se\xF1or Rommel\u2019s study seems to be locked...\r\n"
+      value: "<SFX_liezel_wondering>Se\xF1or Rommel\u2019s study seems to be locked...\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -288838,8 +288389,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "I\u2019m pretty sure I didn\u2019t do much, but okay. I\u2019ll try to look
-      for ideas on my end again.\r\n"
+    - "<SFX_santi_sigh>I\u2019m pretty sure I didn\u2019t do much, but okay. I\u2019ll
+      try to look for ideas on my end again.\r\n"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -292304,7 +291855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 584213497, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -8014650123398086607, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -292313,7 +291864,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Many times. \r\n"
+    - '<SFX_rommel_sigh>Many times. '
     - 'When we did not know each other well enough yet, he used to talk to me through
       letters that our peers send to me. '
     - That habit of his was kept until he started abstaining from decisions our fellow
@@ -293605,7 +293156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1141164961430653431, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -293614,8 +293165,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - 'And why should I listen to someone who addresses Servillano as if he is not
-      your leader?
+    - '<SFX_rommel_thinking>And why should I listen to someone who addresses Servillano
+      as if he is not your leader?
 
 '
   startOnEnable: 1
@@ -294689,8 +294240,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - If I'm thinking of the right place, I think it's been turned into a museum
-      or something. I can check it out.
+    - <SFX_santi_thinking>If I'm thinking of the right place, I think it's been turned
+      into a museum or something. I can check it out.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -296107,7 +295658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 584213497, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: 2069893085192945066, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -8014650123398086607, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -296116,8 +295667,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - He is not one to use his tongue for conversation. One would understand him
-      by the look in his eyes. Well, that is my personal experience.
+    - <SFX_rommel_sigh>He is not one to use his tongue for conversation. One would
+      understand him by the look in his eyes. Well, that is my personal experience.
     - 'He almost never speaks his thoughts in full. These days, however, I admit
       that it has been getting more and more difficult to talk to him.
 
@@ -296628,7 +296179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 1936605001038225399, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Rommel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -296637,9 +296188,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - My limited time is being wasted by all this unnecessary talk. I must leave
-      you to your own agenda, although I would have to decline your requests about
-      the meeting.
+    - <SFX_rommel_sigh>My limited time is being wasted by all this unnecessary talk.
+      I must leave you to your own agenda, although I would have to decline your
+      requests about the meeting.
     - 'You can be writing something much easier for the masses to absorb than what
       our meeting can offer. '
     - 'As a compromise, I am allowing you to get any information that you need from
@@ -296647,8 +296198,8 @@ MonoBehaviour:
       them to be.
 
 '
-    - I would only remind you to know your boundaries. You must know what is appropriate
-      and what is not, I assume?
+    - <SFX_rommel_clearing_throat>I would only remind you to know your boundaries.
+      You must know what is appropriate and what is not, I assume?
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -299543,7 +299094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: -3921962357827113515, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 287589697425042588, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -299552,7 +299103,7 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Even you, Se\xF1or Rommel? \r\n"
+    - "<SFX_liezel_questioning>Even you, Se\xF1or Rommel? \r\n"
     - Whenever we meet, he speaks of you highly. He even praises your contribution
       to the Disidensiya. How come it has been difficult for you to talk?
   startOnEnable: 1
@@ -299966,7 +299517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 6555668280622217898, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: -1688287168362419083, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -299975,8 +299526,8 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - <i>(From what Santi and I have learned, Servillano used poetry to guide the
-      people he trusted.)</i>
+    - <SFX_liezel_thinking><i>(From what Santi and I have learned, Servillano used
+      poetry to guide the people he trusted.)</i>
     - <i>(Warnings. Controversial opinions. He did that for the sake of Giyala. Rommel
       must already be mistrustful of his closest friend.)</i>
   startOnEnable: 1
@@ -312374,7 +311925,8 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <i>(... This quite honestly looks like it would give me food poisoning.)</i>
+      value: <SFX_liezel_concerned><i>(... This quite honestly looks like it would
+        give me food poisoning.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -313353,7 +312905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "Hello there, may I ask something?\r"
+      value: <SFX_liezel_questioning>Hello there, may I ask something?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3392612049195102056, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
+      propertyPath: 'dialogue.sentences.Array.data[1]'
+      value: Hello there, may I ask something?
       objectReference: {fileID: 0}
     - target: {fileID: 3517015953674005397, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: id
@@ -313473,10 +313029,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: 'Morn-... I mean, good afternoon madame. Welcome again, to the household.
-        What can I do for you? Are you feeling peckish?
-
-'
+      value: <SFX_maid_chuckle>Morn-... I mean, good afternoon madame. Welcome again,
+        to the household. What can I do for you? Are you feeling peckish?
       objectReference: {fileID: 0}
     - target: {fileID: 9197020353560056044, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: objectsToActivateAfter.Array.size
@@ -317411,7 +316965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Wrong? Whatever do you mean madame?
+      value: <SFX_maid_questioning>Wrong? Whatever do you mean madame?
       objectReference: {fileID: 0}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
@@ -319168,8 +318722,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "I don\u2019t understand. Is there actually something hidden in his
-        walls?"
+      value: "<SFX_santi_wondering>I don\u2019t understand. Is there actually something
+        hidden in his walls?"
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -320959,8 +320513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    character: {fileID: 216368989601859519, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character: {fileID: -800736819685987722, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
+    character2: {fileID: -6660678931002154567, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -320969,8 +320523,9 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "Apologies for the misunderstanding, Se\xF1or Rommel. My name is Liezel, Servillano\u2019s
-      sister-in-law. I suppose he has mentioned my name in passing?"
+    - "<SFX_liezel_shock_gasp>Apologies for the misunderstanding, Se\xF1or Rommel.
+      My name is Liezel, Servillano\u2019s sister-in-law. I suppose he has mentioned
+      my name in passing?"
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
@@ -322235,7 +321790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: Santi?
+      value: <SFX_liezel_wondering>Santi?
       objectReference: {fileID: 0}
     - target: {fileID: 5994212485817288540, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: m_Name
@@ -323388,11 +322943,11 @@ PrefabInstance:
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+      objectReference: {fileID: 8542942596475193917, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.character2
       value: 
-      objectReference: {fileID: -9193526133086150671, guid: 8a99ade55222e0f47b39d037a9303499, type: 3}
+      objectReference: {fileID: 678336328874572357, guid: 88c3dda4678e3854bb7b754494f2bc3a, type: 3}
     - target: {fileID: 8439490232393766861, guid: 2e6185c7e5dbb4c4989dcb38e25cdcb4, type: 3}
       propertyPath: dialogue.soundToPlay
       value: 
@@ -325433,7 +324988,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: "... I\u2019ll be taking my leave, have a good day.\r\n"
+      value: "<SFX_liezel_concerned>... I\u2019ll be taking my leave, have a good
+        day.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 9032494519262131888, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: id
@@ -330991,7 +330547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     character: {fileID: 1011711402038377536, guid: 5d7a500b15e65d3499df83ac5f56ef87, type: 3}
-    character2: {fileID: -1329520365918380838, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
+    character2: {fileID: 287589697425042588, guid: 18b983b6af9e3e840bf005f9f12452ae, type: 3}
     name: Liezel
     soundToPlay: {fileID: 8300000, guid: 1cfd43b09479e4b35a0341f36b492e9b, type: 3}
     audioPitchOffset: 0
@@ -331000,12 +330556,12 @@ MonoBehaviour:
     textPunctSpeed: 0.18
     lettersUntilSFX: 3
     sentences:
-    - "I am...hoping for that as well. Se\xF1or Rommel, before you leave, may I have
-      one more request?"
-    - 'If you encounter Servillano or Lorena during your travels, please write to
-      me and let me know of their well-being. '
-    - The sudden silence of a once fruitful home is something one would not wish
-      to experience. I quite miss their company.
+    - "<SFX_liezel_questioning>I am...hoping for that as well. Se\xF1or Rommel, before
+      you leave, may I have one more request?"
+    - '<SFX_liezel_concerned>If you encounter Servillano or Lorena, please write
+      to me and let me know of their well-being. '
+    - The sudden silence of a once lively home is something one would not wish to
+      experience. I quite miss their company.
   startOnEnable: 1
   startFromTrigger: 0
   isSign: 0
