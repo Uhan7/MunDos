@@ -4993,6 +4993,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 30783675}
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 30783676}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!1 &30783673 stripped
 GameObject:
@@ -5018,6 +5021,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasProperDialogue: 1
   containsSFX: 0
+--- !u!114 &30783676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30783673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: "Decipher Servillano\u2019s hidden message."
+  guideText: Once all <b><u>five<b><u> symbols are lit, Liezel should <u>take another
+    look at the manuscript in her house and the encoded messages</u>.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &31584701
 GameObject:
   m_ObjectHideFlags: 0
@@ -17731,6 +17752,7 @@ GameObject:
   - component: {fileID: 107072106}
   - component: {fileID: 107072108}
   - component: {fileID: 107072107}
+  - component: {fileID: 107072109}
   m_Layer: 0
   m_Name: 6
   m_TagString: Dialogue Zone
@@ -17841,6 +17863,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: ec2eecfd-297b-492e-ab76-85527bbc4346
+--- !u!114 &107072109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107072104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Explore the building.
+  guideText: "Now that the guards are gone, Liezel is free to investigate the Outpost\u2019s
+    main building."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &108135841
 GameObject:
   m_ObjectHideFlags: 0
@@ -21490,6 +21530,7 @@ GameObject:
   - component: {fileID: 131359886}
   - component: {fileID: 131359885}
   - component: {fileID: 131359884}
+  - component: {fileID: 131359887}
   m_Layer: 0
   m_Name: 1 (20)
   m_TagString: Dialogue Zone
@@ -21589,6 +21630,24 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!114 &131359887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131359882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Give Anika something that belonged to Rommel.
+  guideText: Look around nearby for something sufficiently Rommel-related to give
+    to the strange fanatic. She might know something.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &131853424
 GameObject:
   m_ObjectHideFlags: 0
@@ -102648,7 +102707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.4358
+      value: -110.4497
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -108278,7 +108337,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 641771548}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &641771546 stripped
 Transform:
@@ -108290,6 +108352,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 641771545}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &641771548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641771547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Dip the kulonium bottle into the oil puddle.
+  guideText: The Antiquarian has confirmed Santi managed to get the oil just right!
+    Dipping the bottle into it now should open it.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &642067106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -125132,6 +125212,7 @@ GameObject:
   - component: {fileID: 749084859}
   - component: {fileID: 749084858}
   - component: {fileID: 749084857}
+  - component: {fileID: 749084860}
   m_Layer: 0
   m_Name: 1 (14)
   m_TagString: Dialogue Zone
@@ -125231,6 +125312,25 @@ MonoBehaviour:
   alreadyCheckedConditional: 0
   alreadyRemovedPlayeritems: 0
   alreadyGavePlayeritems: 0
+--- !u!114 &749084860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749084855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: "Find out where the phrase <b>\u201CNo matter the price\u201D</b> can
+    be used."
+  guideText: "Anika's words ring deep. The phrase must have some significance somewhere,
+    perhaps Santi and Liezel ought to go back to Rommel\u2019s place and investigate."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1001 &750516401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132003,7 +132103,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 805328703}
   m_SourcePrefab: {fileID: 100100000, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
 --- !u!1 &805328701 stripped
 GameObject:
@@ -132015,6 +132118,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1317018446988142921, guid: a27c50b6b538a42eaa4899948f125870, type: 3}
   m_PrefabInstance: {fileID: 805328700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &805328703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805328701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Peacefully disperse the crowd.
+  guideText: Desperate times occasionally call for some scheming. If the bakery never
+    became popular, surely Santi would no longer be blocked?
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &806743280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2056137909235263251, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
@@ -139698,6 +139819,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
   m_PrefabInstance: {fileID: 1827289732}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &855341332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855341331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Distract the guards.
+  guideText: Liezel thinks she can use the emblem to distract the guards back at
+    the Outpost.
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!114 &856473101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152668,8 +152807,7 @@ PrefabInstance:
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
       value: <SFX_liezel_wondering><i>(This is the way to the town, I do not have
-        business there now. I need to go <b><u>west</u>, towards the outpost past
-        the forest</b>.)</i>
+        business there now.)</i>
       objectReference: {fileID: 0}
     - target: {fileID: 4746459191129394785, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
       propertyPath: 'objectsToSpawnAfter.Array.data[0]'
@@ -236835,8 +236973,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questText: "Decipher Servillano\u2019s hidden message."
-  guideText: Everything is falling into place, but there is still work to be done.
-    Crack the code!
+  guideText: The salakab in Santi's possession can <u>reveal hidden symbols</u> in
+    the forest. Liezel may find that these symbols look familiar...
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
   hasBeenActivated: 0
@@ -244539,8 +244677,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questText: Open the Small Locked Chest.
-  guideText: Find things <b><u>related to Servillano</u></b>. There must be clues
-    hidden around the outpost to crack the code.
+  guideText: "Find things <b><u>related to Servillano</u></b>. There must be clues
+    hidden in and around the Outpost. There also seems to be something weird with
+    the shed in Santi\u2019s time."
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
   hasBeenActivated: 0
@@ -279175,7 +279314,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8777538983239148827, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 855341332}
   m_SourcePrefab: {fileID: 100100000, guid: e03ab5007ef7b460e9e1351d398246ac, type: 3}
 --- !u!4 &1827289733 stripped
 Transform:
@@ -290540,7 +290682,7 @@ PrefabInstance:
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.character
       value: 
-      objectReference: {fileID: -860332198591883356, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
+      objectReference: {fileID: 9208313597369501676, guid: 4c74d9b45011c0a4cb33179b186c1f73, type: 3}
     - target: {fileID: 5654484641697981369, guid: 0d0aec03b4a2e4eebac4d306d494957c, type: 3}
       propertyPath: dialogue.textSpeed
       value: 0.022
@@ -297547,7 +297689,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1935894091}
   m_SourcePrefab: {fileID: 100100000, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
 --- !u!4 &1935894089 stripped
 Transform:
@@ -297559,6 +297704,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5994212485817288540, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
   m_PrefabInstance: {fileID: 1935894088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1935894091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935894090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6f74db22f4d4ef9b71a9c4a3326bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questText: Distract the guards.
+  guideText: "Liezel found a patch of dirt that seemed to have something buried within.
+    Perhaps the outpost\u2019s shed has a tool for this."
+  passQuestOnActivate: 0
+  passQuestOnDeactivate: 1
+  hasBeenActivated: 0
 --- !u!1 &1937240523
 GameObject:
   m_ObjectHideFlags: 0
