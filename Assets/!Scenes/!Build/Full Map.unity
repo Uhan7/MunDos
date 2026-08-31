@@ -7328,6 +7328,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: a86d9350-e527-49d0-a21d-1cf34c6120ae
+--- !u!4 &45340506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4036036115289433780, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+  m_PrefabInstance: {fileID: 1456874102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &45560937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92266,6 +92271,7 @@ MonoBehaviour:
   - {fileID: 1038916713}
   - {fileID: 1662702315}
   - {fileID: 417074345}
+  - {fileID: 1780700836}
   toActivateOnInvalidInteract:
   - {fileID: 1094393975}
   toDeactivateOnInvalidInteract: []
@@ -100031,7 +100037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 833549399826348343, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 854673879621835734, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -101307,7 +101313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3924468680107003354, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: orthographic size
-      value: 11.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3925284497444749162, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
@@ -102365,11 +102371,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -110.4358
+      value: 63.74
       objectReference: {fileID: 0}
     - target: {fileID: 6862620250787185816, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5
+      value: -40.84
       objectReference: {fileID: 0}
     - target: {fileID: 6874854958939825576, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
@@ -156652,6 +156658,7 @@ MonoBehaviour:
   isTeleporter: 0
   toActivateOnInteract:
   - {fileID: 1605272177}
+  - {fileID: 1780700836}
   toDeactivateOnInteract: []
   conditionalObjectsToCheck: []
   checkOnValidInteractOnly: 0
@@ -227270,6 +227277,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1374662697952293845, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 591733726}
+    - targetCorrespondingSourceObject: {fileID: 4036036115289433780, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1780700835}
     - targetCorrespondingSourceObject: {fileID: 748031695511442356, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1178097186}
@@ -272262,6 +272272,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 513e6b84-8814-4680-acc8-1a6f0187b814
+--- !u!1001 &1780700834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 45340506}
+    m_Modifications:
+    - target: {fileID: 335974633835001987, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_Name
+      value: Puzzle Blocker Locked Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 335974633835001987, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 62.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+--- !u!4 &1780700835 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 571382709613988549, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+  m_PrefabInstance: {fileID: 1780700834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1780700836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 335974633835001987, guid: 60dbd31c0b0a648f8bcb818bc7084fb9, type: 3}
+  m_PrefabInstance: {fileID: 1780700834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1780826613
 GameObject:
   m_ObjectHideFlags: 0
