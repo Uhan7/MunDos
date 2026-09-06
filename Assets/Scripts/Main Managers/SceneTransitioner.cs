@@ -50,7 +50,7 @@ public class SceneTransitioner : MonoBehaviour
         CheckReference();   
         transitionAnimator.SetBool("Loading", false);
         transitionAnimator.SetBool("Fake", false);
-        transitionObject.SetActive(false);
+        //transitionObject.SetActive(false); -> Removed this,, so that we can use fade
     }
 
     private IEnumerator GoToScene()
