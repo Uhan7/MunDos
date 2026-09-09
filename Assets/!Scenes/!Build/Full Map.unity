@@ -8433,7 +8433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <start_dim>Thank you.
+      value: Thank you.
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -11030,6 +11030,10 @@ PrefabInstance:
       propertyPath: id
       value: 49866322-9e71-471c-9171-fd5d93ca72bd
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6197119671359380216, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
       value: 1b323a91-36b7-48a9-b46e-04a3bb7e685c
@@ -12812,6 +12816,10 @@ PrefabInstance:
     - target: {fileID: 6060051740849589867, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
       value: 07b4e5d8-198e-48f2-920c-0731d768b6e1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6197119671359380216, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
@@ -16816,7 +16824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 198.06
+      value: 193.24
       objectReference: {fileID: 0}
     - target: {fileID: 5801283235565151041, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16829,6 +16837,10 @@ PrefabInstance:
     - target: {fileID: 6060051740849589867, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
       value: 50b7d8d4-f3f1-4de8-8026-8f4fbf580c0e
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6185488602561542524, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_Size.x
@@ -21125,6 +21137,10 @@ PrefabInstance:
       propertyPath: id
       value: f57b7e8a-0a91-45bc-849f-c500d0ed9995
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: 63d11eb8-f859-45fe-99ce-e2c18ba6ecfa
@@ -21428,6 +21444,7 @@ GameObject:
   - component: {fileID: 131359885}
   - component: {fileID: 131359884}
   - component: {fileID: 131359887}
+  - component: {fileID: 131359888}
   m_Layer: 0
   m_Name: 1 (20)
   m_TagString: Dialogue Zone
@@ -21545,6 +21562,34 @@ MonoBehaviour:
   passQuestOnActivate: 0
   passQuestOnDeactivate: 1
   hasBeenActivated: 0
+--- !u!114 &131359888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131359882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45428930790f84611ab66305ddff77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnEnable: 1
+  isTrigger: 0
+  activateAndDeactivate: 0
+  lockAndUnlock: 1
+  delayTime: 0.25
+  resetAfter: 0
+  deactivateAfter: 0
+  repeatable: 0
+  objectsToActivate: []
+  objectsToDeactivate: []
+  objectsToLock: []
+  objectsToUnlock:
+  - {fileID: 1285038431}
+  alreadyEnabled: 0
+  alreadyCheckedLock: 0
+  alreadyCheckedUnlock: 0
 --- !u!1 &131853424
 GameObject:
   m_ObjectHideFlags: 0
@@ -24738,8 +24783,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: '<SFX_liezel_happy><end_dim>Haha, you are a truly kind soul, my friend
-        from the future. '
+      value: <end_dim><SFX_liezel_happy>Haha, you are a truly kind soul, my friend
+        from the future.
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -25824,6 +25869,10 @@ PrefabInstance:
     - target: {fileID: 6060051740849589867, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
       value: 580b5be1-6da7-4b2a-8e45-562b7b46e7fc
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6185488602561542524, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_Sprite
@@ -28632,6 +28681,10 @@ PrefabInstance:
       propertyPath: id
       value: e264153a-d2d6-4f4a-9eaa-10c799e09bb7
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: 785cdaa7-ca89-4284-b214-fbb337dd9013
@@ -30736,6 +30789,10 @@ PrefabInstance:
       propertyPath: id
       value: 27cee5ba-35d1-42b8-836b-a06cfa0cba5f
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6173437226632343235, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -32620,6 +32677,10 @@ PrefabInstance:
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.6500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6210358329791219743, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51774,6 +51835,10 @@ PrefabInstance:
       propertyPath: id
       value: 7b8681bf-5f72-4f20-bee0-34cf38ec74eb
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: 557bf02c-4be7-424c-b215-9aeeed9ea8a8
@@ -60062,6 +60127,10 @@ PrefabInstance:
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.6500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6210358329791219743, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -89325,7 +89394,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5336392643312973195, guid: b3b31ec0f39014e70a08226d71a2e964, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -101689,6 +101759,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4710708020719195731, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4721797733589782967, guid: 274c9a5472f364315a69c0cf3fbb53b5, type: 3}
       propertyPath: id
       value: 039bd623-4ef9-4de7-91ec-7465d2fa20de
@@ -107580,6 +107654,10 @@ PrefabInstance:
     - target: {fileID: 6060051740849589867, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
       value: f8f284b7-b44b-4133-ba7f-08bf251a5582
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6185488602561542524, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_Sprite
@@ -121486,6 +121564,10 @@ PrefabInstance:
     - target: {fileID: 6060051740849589867, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
       value: 55a84ce6-a89b-4c42-8463-51dd3bac323a
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6197119671359380216, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
@@ -151071,7 +151153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: objectsToUnlockCheck.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4844786128696803958, guid: b344d6e93f1d24655a8a05fd4f9c94ec, type: 3}
       propertyPath: toActivateOnInteract.Array.size
@@ -159184,7 +159266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[0]'
-      value: <SFX_santi_concerned>...
+      value: <start_dim><SFX_santi_concerned>...
       objectReference: {fileID: 0}
     - target: {fileID: 8439490232393766861, guid: f8e102a253b7a4c509f8ea79c303fd6a, type: 3}
       propertyPath: 'dialogue.sentences.Array.data[1]'
@@ -159752,6 +159834,10 @@ PrefabInstance:
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.6500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6210358329791219743, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -163211,6 +163297,10 @@ PrefabInstance:
     - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: FollowOffset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6173437226632343235, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
@@ -178591,6 +178681,10 @@ PrefabInstance:
       propertyPath: id
       value: d8c0aad2-b139-4d7f-8d24-53e5cdcd4e0e
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6173437226632343235, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -182696,7 +182790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 1, y: 2.5, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -202257,6 +202351,10 @@ PrefabInstance:
       propertyPath: id
       value: 59b270e7-4493-4de4-99be-3f205ebb813f
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6173437226632343235, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -203674,6 +203772,10 @@ PrefabInstance:
     - target: {fileID: 5801283235565151041, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 9.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6210358329791219743, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -206544,6 +206646,10 @@ PrefabInstance:
     - target: {fileID: 5346052441404196808, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: e3fe680c-3aff-472a-8a3c-1ae4cf3b7fd1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
@@ -216668,7 +216774,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: -1
   m_Sprite: {fileID: -1008518266734327710, guid: 893c0da96d473be439d6a9173d84a885, type: 3}
-  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -218661,6 +218767,10 @@ PrefabInstance:
     - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: FollowOffset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6210358329791219743, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -224880,7 +224990,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 1, y: 2.5, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -227475,6 +227585,10 @@ PrefabInstance:
     - target: {fileID: 6060051740849589867, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: id
       value: 5528aea3-6033-4a33-b264-55a6caedaf98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6173437226632343235, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_IsActive
@@ -233349,7 +233463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 1, y: 2.5, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -236731,6 +236845,10 @@ PrefabInstance:
     - target: {fileID: 5346052441404196808, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: fffa8157-1526-4ff6-8f71-8cf539c6ec65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
@@ -261010,6 +261128,10 @@ PrefabInstance:
       propertyPath: id
       value: 850e5229-4fdc-492a-a774-fe661cca85e8
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6185488602561542524, guid: 8f3fddeaf32e34ed4b766fa1cdcc8e4c, type: 3}
       propertyPath: m_Size.x
       value: 11.58
@@ -262294,6 +262416,10 @@ PrefabInstance:
     - target: {fileID: 5346052441404196808, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: ebf22ec4-a9b8-4893-a3a7-898193eb4532
+      objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
@@ -297059,7 +297185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286626165191592584, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6959246366473897018, guid: ca24d0769a93545f3a4a5b0dc2a1ae26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -299424,7 +299550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 1, y: 2.5, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -311082,6 +311208,10 @@ PrefabInstance:
       propertyPath: id
       value: 33c5cb59-d185-4689-af3b-880693baf2b5
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: 8d225408-2324-4c9b-bf69-62eea5850012
@@ -317177,7 +317307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 1, y: 2.5, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -328836,6 +328966,10 @@ PrefabInstance:
       propertyPath: id
       value: 24d08a7e-81b9-4768-9bf1-e815cdc0b1ca
       objectReference: {fileID: 0}
+    - target: {fileID: 6156592630284094434, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
+      propertyPath: TrackerSettings.PositionDamping.y
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6686633912490292091, guid: c3e5d7ebb0e8140a6997db60d06789d0, type: 3}
       propertyPath: id
       value: 92d52ec0-2ae8-4338-978f-caa55614781b
@@ -334454,7 +334588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 1, y: 2.5, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
