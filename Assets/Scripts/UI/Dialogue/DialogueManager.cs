@@ -315,44 +315,6 @@ public class DialogueManager : MonoBehaviour
 		StopAllCoroutines();
     }
 
-	public void ResetAfterLoad()
-	{
-		StopAllCoroutines();
-
-		wasClicked = false;
-		open = false;
-		skip = false;
-		canNext = false;
-		canClick = true;
-		playClosingAnimation = false;
-
-		if (sentences != null)
-		{
-			sentences.Clear();
-		}
-
-		if (dialogueText != null)
-		{
-			dialogueText.text = "";
-		}
-
-		if (nextIndicator != null)
-		{
-			nextIndicator.SetActive(false);
-		}
-
-		if (anim != null)
-		{
-			anim.SetBool("Open", false);
-			anim.SetBool("FullClose", false);
-		}
-
-		if (dSource != null)
-		{
-			dSource.Stop();
-		}
-	}
-
 	void FinishSentence()
     {
 		nextIndicator.SetActive(true);
