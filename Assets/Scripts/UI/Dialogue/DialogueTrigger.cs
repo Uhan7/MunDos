@@ -26,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
     };
 
     [Header("Properties")]
-    [SerializeField] private bool startOnEnable;
+    [SerializeField] public bool startOnEnable; // Used in ObjectState
     [SerializeField] private bool startFromTrigger;
     [SerializeField] private bool isSign;
     [SerializeField] private bool willFocus;

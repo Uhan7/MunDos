@@ -360,6 +360,11 @@ public class SaveManager : MonoBehaviour
 
     private void RestoreGameplayAfterLoad()
     {
+        foreach (DialogueManager dialogueManager in FindObjectsByType<DialogueManager>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+        {
+            dialogueManager.ResetAfterLoad();
+        }
+
         foreach (GameManager gameManager in FindObjectsByType<GameManager>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
         {
             gameManager.ResetAllPauseVars();

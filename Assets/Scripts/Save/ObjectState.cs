@@ -614,7 +614,11 @@ public class ObjectState : MonoBehaviour
 
         if (data.changedActive)
         {
-            gameObject.SetActive(data.isActive);
+            DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+
+            // This part SHUD remove the empty dialogues on load...
+            if (dialogueTrigger != null && dialogueTrigger.startOnEnable && data.isActive) gameObject.SetActive(false);
+            else gameObject.SetActive(data.isActive);
         }
     }
 }
