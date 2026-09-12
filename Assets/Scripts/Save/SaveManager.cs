@@ -139,6 +139,15 @@ public class SaveManager : MonoBehaviour
         var originalBlend = brain.DefaultBlend;
         brain.DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f);
 
+        // Disable inactive objects first
+        foreach (ObjectSaveData saved in data.objectStates)
+        {
+            if (!saved.changedActive || saved.isActive) continue;
+
+            ObjectState obj = FindObjByID(saved.objectID);
+            if (obj != null) obj.gameObject.SetActive(false);
+        }
+
         // Physical Objects
         foreach (ObjectSaveData saved in data.objectStates)
         {
@@ -243,6 +252,15 @@ public class SaveManager : MonoBehaviour
         var brain = Camera.main.GetComponent<CinemachineBrain>();
         var originalBlend = brain.DefaultBlend;
         brain.DefaultBlend = new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f);
+
+        // Disable inactive objects first
+        foreach (ObjectSaveData saved in data.objectStates)
+        {
+            if (!saved.changedActive || saved.isActive) continue;
+
+            ObjectState obj = FindObjByID(saved.objectID);
+            if (obj != null) obj.gameObject.SetActive(false);
+        }
 
         // Physical Objects
         foreach (ObjectSaveData saved in data.objectStates)
