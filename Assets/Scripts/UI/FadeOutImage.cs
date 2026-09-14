@@ -13,6 +13,6 @@ public class FadeOutImage : MonoBehaviour
 
         image.CrossFadeAlpha(0.0f, fadeDuration, false);
 
-        if (removeAfter) Destroy(gameObject, fadeDuration+10f);
+        if (removeAfter) Destroy(this, fadeDuration+10f);
     }
 }
