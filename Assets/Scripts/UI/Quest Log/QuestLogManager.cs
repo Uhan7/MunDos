@@ -74,11 +74,8 @@ public class QuestLogManager : MonoBehaviour
     {
         if (data == null) return;
 
-        if (actualQuestText.text != data.actualQuestText)
-        {
-            actualQuestText.text = data.actualQuestText;
-            guideText.text = data.guideText;
-        }
+        actualQuestText.text = data.actualQuestText;
+        guideText.text = data.guideText;
     }
 
         // UI Anims
