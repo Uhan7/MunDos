@@ -9,18 +9,13 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        if (data.itemName == "") data.itemName = gameObject.name;
-        if (data.itemSprite == null) data.itemSprite = GetComponent<SpriteRenderer>().sprite;
-
-        if (data.objectIDsToInteractWith.Length == 0) data.objectIDsToInteractWith = new string[data.objectsToInteractWith.Length];
-        for (int i = 0; i < data.objectsToInteractWith.Length; i++)
-        {
-            data.objectIDsToInteractWith[i] = data.objectsToInteractWith[i].GetComponent<UniqueID>().GetID();
-        }
+        PrepareData();
     }
 
     public ItemData GetData()
     {
+        // Inactive items can be given directly to the player before Start runs.
+        PrepareData();
         ItemData copy = new ItemData(data);
 
         if (copy.itemName == "") copy.itemName = gameObject.name;
@@ -30,6 +25,22 @@ public class Item : MonoBehaviour
         Debug.Log($"{gameObject.name} | ItemData instance ID: {data.GetHashCode()}");
 
         return copy;
+    }
+
+    private void PrepareData()
+    {
+        if (data.itemName == "") data.itemName = gameObject.name;
+        if (data.itemSprite == null) data.itemSprite = GetComponent<SpriteRenderer>().sprite;
+
+        if (data.objectIDsToInteractWith.Length != data.objectsToInteractWith.Length)
+        {
+            data.objectIDsToInteractWith = new string[data.objectsToInteractWith.Length];
+        }
+
+        for (int i = 0; i < data.objectsToInteractWith.Length; i++)
+        {
+            data.objectIDsToInteractWith[i] = data.objectsToInteractWith[i].GetComponent<UniqueID>().GetID();
+        }
     }
 
     public void PickedUp()
